@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quilla
 
-## Getting Started
+**A smarter way to prepare for the Philippine Civil Service Examination.**
 
-First, run the development server:
+Quilla is a learning platform for Civil Service Examination (CSE) candidates. It is designed to do more than provide another collection of practice questions: it helps learners identify weak concepts, practice them at the right time, and understand every mistake they make.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Quilla supports both the **Professional** and **Subprofessional** levels.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Quilla is an independent learning platform. It is not affiliated with, endorsed by, or connected to the Philippine Civil Service Commission. Quilla does not host leaked or actual CSE questions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Why Quilla exists
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Reviewing is most effective when it is active and focused. Quilla is built around five learning principles:
 
-## Learn More
+- **Retrieval practice:** learn by answering, not only rereading.
+- **Spaced repetition:** revisit weak concepts before they fade.
+- **Useful feedback:** understand why an answer is correct or incorrect.
+- **Adaptive difficulty:** receive questions that match and stretch your ability.
+- **Concept-level mastery:** see exactly what you know and what still needs work.
 
-To learn more about Next.js, take a look at the following resources:
+The goal is simple: replace guesswork with a clear, personalized path toward exam readiness.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Your Quilla journey
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1. Choose your CSE level
 
-## Deploy on Vercel
+Start by selecting the exam you are preparing for: Professional or Subprofessional. You can also add a target exam date so Quilla can shape your study plan around the time you have available.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Take a diagnostic assessment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Your first assessment samples every subject in your chosen level. Instead of giving you only a pass-or-fail result, Quilla turns your answers into a mastery map that highlights your current strengths and learning gaps.
+
+### 3. Follow your daily study plan
+
+Quilla uses your diagnostic results, upcoming reviews, target date, and exam coverage to recommend what to study each day. Every activity includes a reason, so you always know why it matters.
+
+### 4. Strengthen weak concepts
+
+Adaptive practice prioritizes concepts that need attention. As you improve, the difficulty changes with you. Concepts return through spaced review, with weaker material appearing sooner and stronger material appearing less often.
+
+### 5. Simulate the real exam
+
+Timed mock exams follow the coverage and pace of your selected CSE level. During the exam, you work without immediate feedback. After submitting, you receive your score, subject breakdown, and concept-level results.
+
+### 6. Learn from every answer
+
+Review mode shows your answer, the correct answer, a full explanation, and the concept being tested. You can flag questions to revisit and move directly into focused practice for concepts that caused difficulty.
+
+### 7. Track your readiness
+
+Your readiness score combines concept mastery, recent mock-exam performance, and review consistency. It is accompanied by a subject breakdown and your weakest concepts, so the number is always explainable and actionable.
+
+## Study modes
+
+| Mode | Best used for |
+| --- | --- |
+| **Diagnostic** | Establishing your starting point and unlocking personalized guidance |
+| **Today's Review** | Completing concepts that are due for spaced repetition |
+| **Adaptive Practice** | Improving weak areas with difficulty that adjusts to your performance |
+| **Mock Exam** | Practicing under realistic time and coverage constraints |
+| **Review Mode** | Understanding mistakes and turning exam results into the next study steps |
+
+## Exam coverage
+
+Both levels cover:
+
+- General Information
+- Verbal Ability in English and Filipino
+- Numerical Ability
+
+The **Professional** level also includes Analytical Ability. The **Subprofessional** level includes Clerical Ability instead.
+
+| Exam level | Total items | Test proper | Examination Day Questionnaire | Time limit |
+| --- | ---: | ---: | ---: | ---: |
+| Professional | 170 | 150 | 20 | 3 hours 10 minutes |
+| Subprofessional | 165 | 145 | 20 | 2 hours 40 minutes |
+
+The reference passing rating for both levels is **80%**. Quilla uses this for mock-exam feedback while also showing the subject and concept details behind your result.
+
+## A trustworthy question bank
+
+Questions in Quilla are organized by subject, topic, concept, level, and difficulty. Published questions include explanations and go through quality checks before they can appear in practice or mock exams.
+
+Learners will also be able to contribute original questions. Contributions must include an explanation and source information where required, and they are reviewed before publication. Users can report unclear, incorrect, duplicate, or potentially copyrighted content for further review.
+
+## Built for steady progress
+
+Quilla focuses on personal improvement rather than competition. Progress views include daily practice streaks, subject mastery, due reviews, and readiness trends—without speed-based leaderboards.
+
+Exam attempts are designed to autosave, and the experience is intended to be keyboard accessible and usable across modern devices. English is the interface language for the first release, with support for both English and Filipino question content.
+
+## Project status
+
+Quilla is currently in active development. The foundation is in place, and the learning, exam, contribution, and administration experiences described above will be introduced progressively.
