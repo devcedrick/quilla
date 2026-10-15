@@ -1,0 +1,2 @@
+npm run test:unit
+npx lint-staged

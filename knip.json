@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "ignoreFiles": ["components/ui/button.tsx", "lib/utils.ts"],
+  "ignoreDependencies": [
+    "@base-ui/react",
+    "@gsap/react",
+    "class-variance-authority",
+    "cn",
+    "gsap",
+    "lucide-react"
+  ]
+}
