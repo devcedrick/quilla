@@ -1,0 +1,57 @@
+name: Agent Task
+description: A task sized for an AI agent
+title: "[Agent] "
+labels:
+  - agent-ready
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this is done?
+      placeholder: Describe the desired outcome, not only the implementation steps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Provide Given/When/Then scenarios or a concrete checklist.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_plan
+    attributes:
+      label: Test Plan
+      description: Which tests prove this works?
+      placeholder: List automated checks, manual verification, and important failure cases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: likely_files
+    attributes:
+      label: Likely Files
+      description: Which files or directories should the agent touch?
+      placeholder: List likely paths, or state that discovery is required.
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What must not change? Which architectural, security, or product boundaries apply?
+      placeholder: Include compatibility requirements, protected areas, and required approvals.
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: What does this task explicitly not cover?
+      placeholder: List adjacent work that should remain untouched.
+    validations:
+      required: true
