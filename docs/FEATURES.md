@@ -6,11 +6,63 @@ This document describes Quilla's planned product features from the user's point 
 
 The initial product supports Professional and Subprofessional Philippine Civil Service Examination preparation. Paid plans, live tutoring, native mobile apps, social feeds, and other civil-service eligibility exams are outside the initial scope.
 
-## 1. Account, authentication, and onboarding
+## 1. Public landing page and guided entry
 
 ### Problem
 
-Learners need a secure account so Quilla can preserve their exam level, progress, attempts, mastery, and study schedule across sessions and devices.
+First-time visitors need to understand what Quilla does, why its learning approach is useful, which CSE levels it supports, and what to do next before they will create an account. A static explanation is easy to ignore, while animation without a clear narrative can distract from the decision to begin.
+
+### User story
+
+As a visitor, I want an engaging, guided introduction to Quilla so I can understand how it will help me prepare, trust its limitations, and confidently start my learning journey. As a returning learner, I want the same entry point to recognize me and lead me back to my next meaningful action.
+
+### Edge cases
+
+- A signed-in learner opens the public home page instead of the application dashboard.
+- JavaScript is delayed, fails to load, or GSAP is unavailable.
+- The visitor prefers reduced motion or uses an assistive technology.
+- A low-powered device, narrow viewport, slow connection, or browser resize cannot sustain the full animation treatment.
+- Fonts, images, or dynamic content load after scroll positions have been calculated.
+- The visitor navigates away during a timeline or pinned scroll sequence.
+- Authentication is temporarily unavailable after the visitor selects the primary call to action.
+- A search crawler or link preview requests the page without running client-side code.
+
+### Non-goals
+
+- Using dark patterns, artificial urgency, misleading testimonials, or guaranteed-exam-result claims to increase registration.
+- Implying affiliation with or endorsement by the Philippine Civil Service Commission.
+- Hiding essential information, navigation, or calls to action behind animation completion.
+- Requiring motion, pointer input, or a particular scroll behavior to understand or use the page.
+- Adding continuous decorative motion, autoplay audio, or animation that competes with reading and decision-making.
+- Duplicating the authenticated dashboard or exposing personalized learner data on the public page.
+- Collecting landing-page conversion analytics in the initial release.
+- Introducing a future analytics provider, identifier, consent interface, or event beyond the contract in [ADR 0002](ADR/0002-defer-landing-page-analytics.md) without a separate human-approved product and architecture decision.
+
+### Definition of done
+
+- The landing page presents a clear value proposition, supported exam levels, the diagnostic-to-guidance learning journey, adaptive learner-initiated review, mock exams, repeatable post-exam review, and the non-affiliation disclaimer.
+- The narrative guides visitors through a purposeful sequence: hero and primary action, how Quilla works, supported CSE levels, learning benefits, trust and content-integrity commitments, and a final call to action.
+- The primary call to action starts account creation or onboarding, a secondary action explains how Quilla works, and sign-in remains easy to find without competing with the primary path.
+- Signed-in learners receive a state-aware action such as continuing onboarding, taking the diagnostic, or resuming study instead of being asked to register again.
+- Coordinated hero entrances and multi-step reveals use GSAP timelines with readable labels and shared defaults; independent simple hover, focus, and color transitions remain CSS-based.
+- Scroll-driven storytelling uses GSAP ScrollTrigger only where motion improves comprehension. Scroll-linked timelines place ScrollTrigger on the top-level animation, avoid unnecessary pinning, and refresh after layout-affecting content loads.
+- GSAP runs only in the smallest necessary client components. React animations use `useGSAP` with scoped refs or selectors, context-safe deferred callbacks, and automatic cleanup when components update or unmount.
+- Responsive and reduced-motion variants use `gsap.matchMedia()`. With `prefers-reduced-motion: reduce`, the page removes scrubbing, parallax, long travel, and nonessential sequencing while preserving all content and actions.
+- Core copy, semantic structure, navigation, and calls to action are server-rendered and usable before animation initialization; delayed or failed JavaScript leaves a complete, readable page.
+- Animations favor transforms and opacity, batch equivalent reveals, avoid layout-thrashing properties, limit simultaneous active tweens, and stop or clean up when off-screen or after navigation.
+- Focus order, keyboard operation, screen-reader reading order, headings, landmarks, contrast, and visible focus remain correct regardless of visual animation order.
+- The layout is tested across supported viewport sizes and representative low-powered mobile hardware so animation does not introduce horizontal overflow, content flashes, layout shifts, scroll traps, or blocked interaction.
+- Page metadata and crawlable copy accurately describe Quilla without presenting planned capabilities as already available.
+- The initial release has no landing-conversion provider, SDK, visitor identifier, analytics cookie, event emission, consent interface, retained event data, baseline, or numerical conversion target.
+- Landing-page navigation, account registration, and onboarding are verified through deterministic journey and accessibility tests without depending on analytics.
+- The provider-neutral future funnel contract is `landing_viewed -> landing_primary_cta_selected -> account_registration_completed -> onboarding_started`; [ADR 0002](ADR/0002-defer-landing-page-analytics.md) defines each event and the approval required before collection can begin.
+- If conversion analytics is approved later, event delivery never blocks navigation, account creation, or onboarding, and measurement and experiments preserve the accessibility, privacy, legal, performance, and content-integrity requirements above.
+
+## 2. Account, authentication, and onboarding
+
+### Problem
+
+Learners need a secure account so Quilla can preserve their exam level, progress, attempts, mastery, and personalized study guidance across sessions and devices.
 
 ### User story
 
@@ -38,11 +90,11 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 - New accounts receive the `user` role by default.
 - Preferred level and valid target exam date are persisted.
 - First-time users are directed to the diagnostic after choosing a level.
-- Personalized plans and readiness are unavailable until the diagnostic is submitted.
+- Personalized study guidance and readiness are unavailable until the diagnostic is submitted.
 - Backend authorization is enforced independently of client-side routing.
 - Suspended users cannot take exams or contribute questions.
 
-## 2. Diagnostic assessment
+## 3. Diagnostic assessment
 
 ### Problem
 
@@ -50,7 +102,7 @@ Without a baseline, learners do not know which concepts deserve attention, and Q
 
 ### User story
 
-As a learner starting Quilla, I want an assessment across my exam coverage so I can see a mastery map and receive an initial study plan without being labeled as having passed or failed.
+As a learner starting Quilla, I want an assessment across my exam coverage so I can see a mastery map and receive initial study guidance without being labeled as having passed or failed.
 
 ### Edge cases
 
@@ -74,11 +126,11 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - Each subject receives at least three items, or the diagnostic is blocked with an actionable coverage warning.
 - The target difficulty mix is approximately 50% easy, 35% medium, and 15% hard.
 - Progress is autosaved and submission is idempotent.
-- Submission creates initial mastery records for tested concepts, initializes review schedules, and generates a study plan.
+- Submission creates initial mastery records for tested concepts, initializes adaptive review priorities, and generates personalized study guidance.
 - Untested concepts are clearly marked, and content gaps are visible to admins.
 - Results present a mastery overview without pass/fail wording.
 
-## 3. Concept mastery tracking
+## 4. Concept mastery tracking
 
 ### Problem
 
@@ -113,43 +165,45 @@ As a learner, I want my performance tracked by concept so I can understand exact
 - Duplicate submissions cannot double-count answers.
 - Learner views show concept status, confidence, attempt count, and recent direction.
 
-## 4. Spaced-repetition review queue
+## 5. Adaptive spaced-review recommendations
 
 ### Problem
 
-Learners forget material when review is based on convenience instead of timing. Weak concepts need to return sooner, while strong concepts should consume less study time.
+Learners benefit when each review reflects what they are most likely to forget, but fixed review dates and overdue backlogs can turn useful guidance into pressure. Weak concepts should be more likely to return in the learner's next session, while strong concepts should consume less study time.
 
 ### User story
 
-As a learner, I want Quilla to tell me what is due today and adjust future review dates based on my answers so I can retain knowledge efficiently.
+As a learner, I want Quilla to recommend what to review whenever I choose to start a session and explain which areas I should expect, so I can study at my own pace while still benefiting from adaptive review.
 
 ### Edge cases
 
-- A due concept has fewer published questions than the session requires.
+- A high-priority concept has fewer published questions than the learner's chosen session length requires.
 - Multiple reviews of the same concept are submitted close together.
-- The learner misses several days and accumulates a large queue.
-- The user's timezone changes.
-- A question becomes flagged or archived after entering the queue.
+- The learner returns after a long period without reviewing.
+- The learner's timezone changes or device clock is inaccurate.
+- A question becomes flagged or archived after its concept is recommended.
 - A concept has graduated but is later answered incorrectly in another mode.
 
 ### Non-goals
 
 - Guaranteeing a specific official-exam score.
 - Serving unpublished, archived, or excluded questions to fill a quota.
-- Scheduling by individual question in the initial design; scheduling is concept-based.
-- Allowing intervals outside the configured safety bounds.
+- Maintaining adaptive review state for individual questions in the initial design; recommendations are concept-based.
+- Presenting a recommendation as an appointment, deadline, overdue task, or required backlog.
+- Penalizing a learner for starting review sessions less frequently than Quilla recommends.
 
 ### Definition of done
 
-- Today's Review lists active concepts whose `next_review_at` is due in the learner's effective timezone.
-- New schedules begin with a one-day interval.
-- Correct performance lengthens intervals and incorrect performance shortens them.
-- Intervals never exceed 60 days, and ease factors remain between 1.3 and 2.8.
-- Completing a review updates mastery and the next schedule exactly once.
+- Learners can start a review session at any time and choose its length within supported limits.
+- Before a session starts, Quilla previews the concepts likely to appear and gives a human-readable reason for each recommendation without promising exact questions.
+- Session recommendations are calculated when requested from concept mastery, confidence, prior recall, question difficulty, elapsed time since relevant practice, eligible content, and the learner's selected filters.
+- Weaker or less confidently retained concepts receive higher priority, while consistently demonstrated concepts appear less often.
+- A long gap may change recommendation priority but never creates overdue work, required catch-up, or a blocked learning experience.
+- Completing a review updates mastery and adaptive recommendation state exactly once.
 - Coverage-limited concepts serve only eligible available items and clearly explain the limitation.
-- Backlogs are prioritized without creating an unmanageable single session.
+- Recommendations respect the learner's chosen session length and never expand into an unmanageable catch-up session.
 
-## 5. Adaptive practice
+## 6. Adaptive practice
 
 ### Problem
 
@@ -157,13 +211,13 @@ Generic practice wastes time on content that is too easy, too hard, already mast
 
 ### User story
 
-As a learner, I want to choose what and how long to practice while Quilla prioritizes due and weak concepts and adjusts difficulty as I perform.
+As a learner, I want to choose what and how long to practice while Quilla prioritizes recommended and weak concepts and adjusts difficulty as I perform.
 
 ### Edge cases
 
 - The selected filters produce too few eligible questions.
 - A concept has no unserved question left in the session.
-- Due-review priorities conflict with the learner's chosen subject filters.
+- Adaptive review priorities conflict with the learner's chosen subject filters.
 - Two correct or incorrect answers span different concepts.
 - The learner changes an answer before submission.
 - Challenge mode is selected when there are too few hard questions.
@@ -179,13 +233,13 @@ As a learner, I want to choose what and how long to practice while Quilla priori
 ### Definition of done
 
 - Learners can select level, subjects, optional concepts, and session length.
-- Generation prioritizes due reviews, then low mastery, then blueprint weight within selected filters.
+- Generation prioritizes adaptive review recommendations, then low mastery, then blueprint weight within selected filters.
 - No question repeats within a session.
 - Two consecutive correct answers step difficulty up when eligible content exists; two incorrect answers step it down.
 - Challenge mode fixes the target difficulty to hard and clearly reports coverage limits.
-- Submission records answer history and updates mastery and review schedules.
+- Submission records answer history and updates mastery and adaptive review state.
 
-## 6. Timed mock exams
+## 7. Timed mock exams
 
 ### Problem
 
@@ -224,15 +278,15 @@ As a learner, I want to take a timed exam that follows my level's blueprint so I
 - Unanswered scored items count as incorrect.
 - Results show overall score, pass/fail against the blueprint reference, and subject and concept breakdowns.
 
-## 7. Post-exam review
+## 8. Post-exam review and history
 
 ### Problem
 
-A score alone does not teach. Learners need to understand each mistake and connect it to the concept they should practice next.
+A score alone does not teach. Learners need to understand each mistake, connect it to the concept they should practice next, and return to that learning record whenever they want to review it again.
 
 ### User story
 
-As a learner who completed an exam, I want to review the exact questions I saw, compare answers, read explanations, and practice weak concepts.
+As a learner who completed an exam, I want to review the exact questions I saw, compare answers, read explanations, and practice weak concepts immediately or whenever I revisit the attempt later.
 
 ### Edge cases
 
@@ -240,25 +294,31 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - A source citation or distractor rationale is unavailable.
 - The learner did not answer a question.
 - A flagged-for-later action is repeated.
+- The learner returns to a submitted attempt long after completing it.
 - The learner tries to open another user's attempt.
 
 ### Non-goals
 
 - Revealing answers before an attempt is submitted.
+- Treating review as a one-time results screen that is available only immediately after submission.
 - Reconstructing review content from the latest question version.
 - Allowing review actions to change the submitted score.
 - Making distractor rationales mandatory when they were not available in the served version.
 
 ### Definition of done
 
-- Review is accessible only to the attempt owner or an authorized admin.
+- Submitted attempts remain discoverable in the learner's attempt history and can be reopened for review any number of times whenever the learner chooses while the historical attempt is retained.
+- Review is accessible only to the attempt owner or an authorized admin, including on later visits.
+- Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
+- Leaving and reopening a review preserves the same submitted result and does not consume or invalidate review access.
+- Viewing a historical review does not update mastery or adaptive recommendation state; only newly submitted answers from a separate eligible activity can do so.
 - Every item uses the exact served question-version snapshot.
 - Review shows the learner's answer, correct answer, explanation, concept, and source citation where applicable.
 - Available distractor rationales are shown without fabricating missing content.
 - Learners can flag and unflag an item idempotently.
 - Concept links start an eligible focused-practice flow.
 
-## 8. Personalized daily study plan
+## 9. Personalized study guidance
 
 ### Problem
 
@@ -266,34 +326,34 @@ Learners often know they should study but not what to do next, how much to do, o
 
 ### User story
 
-As a learner, I want a short, explainable plan for today so I can spend my available time on the activities most likely to improve my readiness.
+As a learner, I want short, explainable guidance whenever I am ready to study so I can spend my available time on the activities most likely to improve my readiness.
 
 ### Edge cases
 
 - The learner has no target date.
 - The target date is fewer than 30 days away or has passed.
-- The learner skips a day or completes work outside the plan.
-- Due reviews exceed the learner's reasonable daily workload.
+- The learner returns after a gap or completes work outside the current guidance.
+- Recommended reviews exceed the learner's chosen session length or available time.
 - A recommended concept has insufficient eligible questions.
-- The plan is regenerated after partial completion.
+- The guidance is regenerated after partial completion.
 
 ### Non-goals
 
-- Creating a rigid calendar that punishes missed days.
+- Creating a rigid calendar, assigning mandatory study dates, or punishing inactivity.
 - Recommending content unrelated to the selected level.
 - Hiding why an activity was selected.
-- Promising that plan completion guarantees passing.
+- Promising that completing the guidance guarantees passing.
 
 ### Definition of done
 
-- One plan per learner per date is generated after the diagnostic.
-- Plans consider due reviews, low mastery, blueprint weight, and target exam date.
-- Plans without a target date remain balanced.
-- Plans within 30 days of the target prioritize high-weight weak concepts and compressed review needs.
+- Current guidance is available after the diagnostic and is regenerated on demand or after relevant learning activity.
+- Guidance considers adaptive review priorities, low mastery, blueprint weight, the learner's available time, and an optional target exam date.
+- Guidance without a target date remains balanced and does not impose an artificial calendar.
+- Guidance requested within 30 days of the target recommends high-weight weak concepts and more focused review without creating mandatory sessions.
 - Every item includes activity type, scope, item count or duration estimate, and a human-readable rationale.
-- Completing or skipping an item is persisted and informs regeneration without erasing completed work.
+- Completing, dismissing, or replacing a recommendation informs regeneration without erasing completed work or lowering readiness solely because it was not followed.
 
-## 9. Readiness score
+## 10. Readiness score
 
 ### Problem
 
@@ -322,13 +382,13 @@ As a learner, I want an explainable readiness score with a confidence range and 
 ### Definition of done
 
 - Readiness is unavailable until the diagnostic is submitted.
-- The score combines blueprint-weighted concept mastery, recent mock performance, and review compliance.
+- The score combines blueprint-weighted concept mastery, recent mock performance, and demonstrated recall in learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
 - The view includes a confidence range, subject breakdown, weakest concepts, and plain-language explanation.
 - Low evidence produces visibly low confidence.
 - The score is computed from source data; any cache is invalidated by relevant updates.
 - Changing level recomputes applicable analytics without deleting prior mastery.
 
-## 10. Streaks and progress visualization
+## 11. Streaks and progress visualization
 
 ### Problem
 
@@ -362,7 +422,7 @@ As a learner, I want to see study consistency and mastery progress so I can reco
 - Empty and regressed states are communicated honestly and accessibly.
 - Visualizations include text equivalents and do not rely on color alone.
 
-## 11. Question contribution
+## 12. Question contribution
 
 ### Problem
 
@@ -400,7 +460,7 @@ As a learner, I want to contribute an original practice question, track its revi
 - Self-review is blocked, including when the contributor is an admin.
 - Status changes notify the contributor, and published content credits them according to policy.
 
-## 12. Question reporting and personal flags
+## 13. Question reporting and personal flags
 
 ### Problem
 
@@ -436,7 +496,7 @@ As a learner, I want to flag a question for my own review or report a possible e
 - Auto-flagged questions are excluded from new sessions when that policy is enabled.
 - Admins can dismiss or resolve reports with an auditable action.
 
-## 13. Notifications
+## 14. Notifications
 
 ### Problem
 
@@ -470,7 +530,7 @@ As a user, I want in-app and appropriate email notifications for actions that re
 - Users can mark notifications read and links re-check authorization.
 - Admins can configure supported email event types and versioned templates.
 
-## 14. Admin question bank and moderation
+## 15. Admin question bank and moderation
 
 ### Problem
 
@@ -506,7 +566,7 @@ As an admin, I want to manage questions and contributions through explicit state
 - Bulk actions validate each item and report partial failures without bypassing permissions.
 - Every mutation records actor, action, entity, before state, after state, and time.
 
-## 15. Admin blueprints and reference data
+## 16. Admin blueprints and reference data
 
 ### Problem
 
@@ -542,7 +602,7 @@ As an admin, I want to manage levels, subjects, subtopics, concepts, and exam bl
 - Only a valid blueprint can be activated, and attempts retain an immutable configuration snapshot.
 - Gap reporting shows concepts with zero or low published-item counts.
 
-## 16. Admin user management, settings, and audit log
+## 17. Admin user management, settings, and audit log
 
 ### Problem
 
@@ -578,7 +638,7 @@ As an admin, I want to manage users and system settings and inspect a complete a
 - Every admin mutation appears in a filterable, append-only audit log.
 - Audit exports enforce authorization, minimize sensitive data, and handle large result sets safely.
 
-## 17. Learning and question analytics
+## 18. Learning and question analytics
 
 ### Problem
 
@@ -606,7 +666,7 @@ As an admin, I want aggregate learning and item-quality analytics so I can prior
 
 ### Definition of done
 
-- Admins can view hardest concepts, review compliance, coverage gaps, and question performance.
+- Admins can view hardest concepts, aggregate review engagement and outcomes, coverage gaps, and question performance without treating recommendation adherence as compliance.
 - Item statistics include served count, answer count, correct rate, average time, and discrimination where supported.
 - Metrics distinguish question versions or clearly define aggregation behavior.
 - Low-sample results display confidence warnings and do not trigger definitive conclusions.
@@ -642,6 +702,6 @@ The following remain intentionally unresolved and require explicit product decis
 - whether preferred level is fixed during onboarding or selectable per attempt;
 - weighting of questions applicable to both levels;
 - minimum sample size for reliable mastery;
-- whether review scheduling will later include question-level schedules;
+- whether adaptive review recommendations will later include question-level state;
 - whether Examination Day Questionnaire items appear in mock exams;
-- final mastery update formula and spaced-repetition tuning.
+- final mastery update formula and adaptive review-priority tuning.
