@@ -1,9 +1,60 @@
-name: Agent Task
-description: A task sized for an AI agent
-title: "[Agent] "
-labels:
-  - agent-ready
+name: Planned Issue
+description: An epic or an independently deliverable sub-issue
+title: "[E## / S##.#] "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Planning marker
+
+        Replace the title placeholder with either `[E01]` for an epic or `[S01.1]` for a sub-issue. Do not leave both formats in the submitted title.
+
+        The Planning ID provides the sequence marker. When choosing work, take the earliest Planning ID marked **Ready now**. Complete **Decision required** issues before their dependents, and do not start **Blocked** issues until every `Blocked by` issue is closed.
+
+        Apply the `epic` label to an `E##` issue. Apply `agent-ready` to an `S##.#` issue only when it is fully specified and can be completed independently.
+
+  - type: input
+    id: planning_id
+    attributes:
+      label: Planning ID
+      description: Stable identifier from the feature plan. Use E## for an epic or S##.# for a sub-issue.
+      placeholder: S05.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: workflow_state
+    attributes:
+      label: Workflow State
+      description: Indicates whether this issue can be started now.
+      options:
+        - Ready now
+        - Decision required
+        - Blocked
+        - Epic / tracking only
+    validations:
+      required: true
+
+  - type: input
+    id: parent_epic
+    attributes:
+      label: Parent Epic
+      description: Link the parent epic, or write "None" for an epic or standalone task.
+      placeholder: "#5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List the issue relationships that determine when this task can start. Every referenced dependency must be a real issue.
+      placeholder: |
+        Blocked by: #46, #49
+        Blocks: #50
+    validations:
+      required: true
+
   - type: textarea
     id: goal
     attributes:
