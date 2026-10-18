@@ -13,6 +13,7 @@ import {
   Sparkles,
   Target,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -98,12 +99,14 @@ export function LandingPage() {
             href="#top"
             aria-label="Quilla home"
           >
-            <span
+            <Image
               aria-hidden="true"
-              className="grid size-9 rotate-2 place-items-center rounded-lg border-2 border-foreground bg-accent font-heading text-xl font-black shadow-[3px_3px_0_var(--color-foreground)] transition-transform group-hover:-rotate-2"
-            >
-              Q
-            </span>
+              alt=""
+              className="size-10 rotate-2 rounded-full border-2 border-foreground shadow-[3px_3px_0_var(--color-foreground)] transition-transform group-hover:-rotate-2"
+              height={40}
+              src="/brand/kuwi/kuwi-mark.svg"
+              width={40}
+            />
             <span className="font-heading text-[1.65rem] font-black tracking-[-0.04em]">
               Quilla
             </span>
@@ -158,11 +161,7 @@ export function LandingPage() {
           aria-labelledby="hero-title"
           className="paper-grid relative isolate overflow-hidden border-b border-foreground/15"
         >
-          <div
-            aria-hidden="true"
-            className="absolute -right-24 top-10 -z-10 size-72 rounded-full border-[40px] border-accent/45 sm:right-4 sm:size-96"
-          />
-          <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:pb-24 lg:pt-20">
             <div className="max-w-3xl">
               <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-card/80 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.18em]">
                 <Sparkles aria-hidden="true" className="size-4 text-primary" />
@@ -208,76 +207,103 @@ export function LandingPage() {
 
             <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:justify-self-end">
               <div
-                aria-hidden="true"
-                className="absolute -left-5 -top-5 size-24 rotate-6 rounded-2xl bg-accent/75"
-              />
-              <article className="relative rotate-[-1deg] rounded-[2rem] border-2 border-foreground bg-card p-5 shadow-[10px_12px_0_var(--color-ink-shadow)] sm:p-7">
-                <div className="flex items-start justify-between gap-4 border-b-2 border-foreground/15 pb-5">
-                  <div>
-                    <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
-                      Your study loop
-                    </p>
-                    <h2 className="mt-1 font-heading text-3xl font-black tracking-[-0.035em]">
-                      Learn what comes next.
-                    </h2>
+                className="relative z-20 flex min-h-44 items-end justify-center sm:min-h-52 lg:justify-end lg:pr-7"
+                data-testid="kuwi-stage"
+              >
+                <div
+                  aria-hidden="true"
+                  className="absolute bottom-0 right-1/2 size-52 translate-x-1/2 rounded-full border-[30px] border-accent/45 sm:size-64 sm:border-[36px] lg:right-0 lg:translate-x-0"
+                />
+                <Image
+                  aria-hidden="true"
+                  alt=""
+                  className="relative z-10 h-auto w-44 translate-y-6 sm:w-56 sm:translate-y-8 lg:w-64"
+                  data-testid="kuwi-hero"
+                  height={1150}
+                  priority
+                  src="/brand/kuwi/kuwi-hero.svg"
+                  width={1368}
+                />
+              </div>
+              <div className="relative z-10">
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-5 -top-5 size-24 rotate-6 rounded-2xl bg-accent/75"
+                />
+                <article
+                  className="relative rotate-[-1deg] rounded-[2rem] border-2 border-foreground bg-card p-5 shadow-[10px_12px_0_var(--color-ink-shadow)] sm:p-7"
+                  data-testid="study-loop-card"
+                >
+                  <div className="flex items-start justify-between gap-4 border-b-2 border-foreground/15 pb-5">
+                    <div>
+                      <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
+                        Your study loop
+                      </p>
+                      <h2 className="mt-1 font-heading text-3xl font-black tracking-[-0.035em]">
+                        Learn what comes next.
+                      </h2>
+                    </div>
+                    <span className="rounded-full border border-foreground/20 bg-accent px-3 py-1 text-xs font-extrabold uppercase tracking-wider">
+                      Focused
+                    </span>
                   </div>
-                  <span className="rounded-full border border-foreground/20 bg-accent px-3 py-1 text-xs font-extrabold uppercase tracking-wider">
-                    Focused
-                  </span>
-                </div>
 
-                <ol className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {[
-                    ["01", "Diagnose", "See the starting point"],
-                    ["02", "Focus", "Choose what matters"],
-                    ["03", "Practice", "Strengthen the concept"],
-                    ["04", "Review", "Learn from the result"],
-                  ].map(([number, itemTitle, description], index) => (
-                    <li
-                      key={itemTitle}
-                      className={cn(
-                        "rounded-2xl border border-foreground/15 p-4",
-                        index === 1
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-background",
-                      )}
-                    >
-                      <div className="flex items-center justify-between gap-3">
-                        <span className="font-heading text-2xl font-black">
-                          {number}
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          className={cn(
-                            "size-3 rounded-full border-2",
-                            index === 1
-                              ? "border-primary-foreground bg-accent"
-                              : "border-foreground/40",
-                          )}
-                        />
-                      </div>
-                      <p className="mt-5 font-extrabold">{itemTitle}</p>
-                      <p
+                  <ol className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {[
+                      ["01", "Diagnose", "See the starting point"],
+                      ["02", "Focus", "Choose what matters"],
+                      ["03", "Practice", "Strengthen the concept"],
+                      ["04", "Review", "Learn from the result"],
+                    ].map(([number, itemTitle, description], index) => (
+                      <li
+                        key={itemTitle}
                         className={cn(
-                          "mt-1 text-sm leading-6",
+                          "rounded-2xl border border-foreground/15 p-4",
                           index === 1
-                            ? "text-primary-foreground/80"
-                            : "text-muted-foreground",
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-background",
                         )}
                       >
-                        {description}
-                      </p>
-                    </li>
-                  ))}
-                </ol>
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="font-heading text-2xl font-black">
+                            {number}
+                          </span>
+                          <span
+                            aria-hidden="true"
+                            className={cn(
+                              "size-3 rounded-full border-2",
+                              index === 1
+                                ? "border-primary-foreground bg-accent"
+                                : "border-foreground/40",
+                            )}
+                          />
+                        </div>
+                        <p className="mt-5 font-extrabold">{itemTitle}</p>
+                        <p
+                          className={cn(
+                            "mt-1 text-sm leading-6",
+                            index === 1
+                              ? "text-primary-foreground/80"
+                              : "text-muted-foreground",
+                          )}
+                        >
+                          {description}
+                        </p>
+                      </li>
+                    ))}
+                  </ol>
 
-                <div className="mt-5 flex items-center gap-3 rounded-2xl border border-dashed border-foreground/30 bg-accent/25 p-4">
-                  <Target aria-hidden="true" className="size-5 text-primary" />
-                  <p className="text-sm font-bold">
-                    One result should always point to a useful next action.
-                  </p>
-                </div>
-              </article>
+                  <div className="mt-5 flex items-center gap-3 rounded-2xl border border-dashed border-foreground/30 bg-accent/25 p-4">
+                    <Target
+                      aria-hidden="true"
+                      className="size-5 text-primary"
+                    />
+                    <p className="text-sm font-bold">
+                      One result should always point to a useful next action.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </section>
@@ -595,12 +621,14 @@ export function LandingPage() {
               href="#top"
               aria-label="Back to the top of Quilla home"
             >
-              <span
+              <Image
                 aria-hidden="true"
-                className="grid size-8 place-items-center rounded-lg border-2 border-foreground bg-accent font-heading text-lg font-black"
-              >
-                Q
-              </span>
+                alt=""
+                className="size-9 rounded-full border-2 border-foreground"
+                height={36}
+                src="/brand/kuwi/kuwi-mark.svg"
+                width={36}
+              />
               <span className="font-heading text-xl font-black">Quilla</span>
             </a>
             <p className="mt-3 max-w-lg text-sm leading-6 text-muted-foreground">
