@@ -104,14 +104,14 @@ export function LandingPage() {
             >
               Q
             </span>
-            <span className="font-heading text-2xl font-black tracking-[-0.04em]">
+            <span className="font-heading text-[1.65rem] font-black tracking-[-0.04em]">
               Quilla
             </span>
           </a>
 
           <nav
             aria-label="Primary navigation"
-            className="order-3 flex w-full flex-wrap items-center gap-x-5 gap-y-1 border-t border-foreground/10 pt-3 text-sm font-semibold md:order-none md:ml-auto md:w-auto md:border-0 md:pt-0"
+            className="order-3 flex w-full flex-wrap items-center gap-x-5 gap-y-1 border-t border-foreground/10 pt-3 text-base font-bold md:order-none md:ml-auto md:w-auto md:border-0 md:pt-0"
           >
             <a
               className="min-h-11 content-center rounded-md underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
@@ -135,14 +135,14 @@ export function LandingPage() {
 
           <div className="ml-auto flex items-center gap-2 md:ml-0">
             <Link
-              className="inline-flex min-h-11 items-center rounded-full px-3 text-sm font-bold underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              className="inline-flex min-h-11 items-center rounded-full px-3 text-base font-bold underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               href="/sign-in"
               prefetch={false}
             >
               Sign in
             </Link>
             <Link
-              className={cn(primaryLink, "hidden sm:inline-flex")}
+              className={cn(primaryLink, "hidden text-base sm:inline-flex")}
               href="/sign-up"
               prefetch={false}
             >
