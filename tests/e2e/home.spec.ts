@@ -114,6 +114,34 @@ test.describe("Quilla landing page", () => {
         'script[src*="analytics"], script[src*="plausible"], script[src*="posthog"]',
       ),
     ).toHaveCount(0);
+    const kuwi = page.getByTestId("kuwi-hero");
+    await expect(kuwi).toBeVisible();
+    await expect(kuwi).toHaveAttribute("alt", "");
+    await expect(kuwi).toHaveJSProperty("complete", true);
+    expect(
+      await kuwi.evaluate((image: HTMLImageElement) => image.naturalWidth),
+    ).toBeGreaterThan(0);
+
+    const headerBox = await page.locator("header").boundingBox();
+    const kuwiBox = await kuwi.boundingBox();
+    const studyLoopBox = await page
+      .getByTestId("study-loop-card")
+      .boundingBox();
+
+    expect(headerBox).not.toBeNull();
+    expect(kuwiBox).not.toBeNull();
+    expect(studyLoopBox).not.toBeNull();
+
+    if (headerBox && kuwiBox && studyLoopBox) {
+      const kuwiBottom = kuwiBox.y + kuwiBox.height;
+
+      expect(kuwiBox.y).toBeGreaterThanOrEqual(
+        headerBox.y + headerBox.height + 24,
+      );
+      expect(kuwiBottom).toBeGreaterThan(studyLoopBox.y);
+      expect(kuwiBottom).toBeLessThanOrEqual(studyLoopBox.y + 48);
+    }
+
     expect(analyticsRequests).toEqual([]);
   });
 
@@ -163,6 +191,7 @@ test.describe("Quilla landing page", () => {
         .getByRole("link", { name: "Create your account", exact: true })
         .last(),
     ).toBeVisible();
+    await expect(page.getByTestId("kuwi-hero")).toBeVisible();
   });
 });
 
@@ -192,5 +221,6 @@ test.describe("Quilla landing page without JavaScript", () => {
         "Quilla is an independent learning platform. It is not affiliated with, endorsed by, or connected to the Philippine Civil Service Commission.",
       ),
     ).toBeVisible();
+    await expect(page.getByTestId("kuwi-hero")).toBeVisible();
   });
 });
