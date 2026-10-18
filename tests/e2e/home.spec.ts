@@ -170,6 +170,52 @@ test.describe("Quilla landing page", () => {
     ).toBeFocused();
   });
 
+  test("keeps tablet account actions aligned with the brand", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 768, height: 1024 });
+    await page.goto("/");
+
+    const header = page.locator("header");
+    const brand = header.getByRole("link", { name: "Quilla home" });
+    const authActions = page.getByTestId("header-auth-actions");
+
+    await expect(page.getByTestId("primary-navigation")).toBeHidden();
+    await expect(
+      authActions.getByRole("link", { name: "Sign in", exact: true }),
+    ).toBeVisible();
+    await expect(
+      authActions.getByRole("link", {
+        name: "Create your account",
+        exact: true,
+      }),
+    ).toBeVisible();
+
+    const headerBox = await header.boundingBox();
+    const brandBox = await brand.boundingBox();
+    const authBox = await authActions.boundingBox();
+
+    expect(headerBox).not.toBeNull();
+    expect(brandBox).not.toBeNull();
+    expect(authBox).not.toBeNull();
+
+    if (headerBox && brandBox && authBox) {
+      const brandCenter = brandBox.y + brandBox.height / 2;
+      const authCenter = authBox.y + authBox.height / 2;
+
+      expect(Math.abs(brandCenter - authCenter)).toBeLessThanOrEqual(2);
+      expect(authBox.x).toBeGreaterThan(brandBox.x + brandBox.width);
+      expect(headerBox.height).toBeLessThanOrEqual(84);
+    }
+
+    const dimensions = await page.evaluate(() => ({
+      clientWidth: document.documentElement.clientWidth,
+      scrollWidth: document.documentElement.scrollWidth,
+    }));
+
+    expect(dimensions.scrollWidth).toBeLessThanOrEqual(dimensions.clientWidth);
+  });
+
   test("does not overflow a narrow mobile viewport", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
@@ -180,6 +226,19 @@ test.describe("Quilla landing page", () => {
     }));
 
     expect(dimensions.scrollWidth).toBeLessThanOrEqual(dimensions.clientWidth);
+    await expect(page.getByTestId("primary-navigation")).toBeHidden();
+
+    const heroEyebrow = page.getByTestId("hero-eyebrow");
+    await expect(heroEyebrow).toBeVisible();
+    await expect(heroEyebrow).toHaveCSS("white-space", "nowrap");
+
+    const eyebrowBox = await heroEyebrow.boundingBox();
+    expect(eyebrowBox).not.toBeNull();
+    if (eyebrowBox) {
+      expect(eyebrowBox.height).toBeLessThanOrEqual(40);
+      expect(eyebrowBox.width).toBeLessThan(dimensions.clientWidth - 40);
+    }
+
     await expect(
       page.getByRole("heading", {
         level: 1,

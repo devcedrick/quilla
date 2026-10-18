@@ -114,7 +114,8 @@ export function LandingPage() {
 
           <nav
             aria-label="Primary navigation"
-            className="order-3 flex w-full flex-wrap items-center gap-x-5 gap-y-1 border-t border-foreground/10 pt-3 text-base font-bold md:order-none md:ml-auto md:w-auto md:border-0 md:pt-0"
+            className="order-3 hidden w-full flex-wrap items-center gap-x-5 gap-y-1 border-t border-foreground/10 pt-3 text-base font-bold lg:order-none lg:ml-auto lg:flex lg:w-auto lg:border-0 lg:pt-0"
+            data-testid="primary-navigation"
           >
             <a
               className="min-h-11 content-center rounded-md underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
@@ -136,7 +137,10 @@ export function LandingPage() {
             </a>
           </nav>
 
-          <div className="ml-auto flex items-center gap-2 md:ml-0">
+          <div
+            className="ml-auto flex items-center gap-2 lg:ml-0"
+            data-testid="header-auth-actions"
+          >
             <Link
               className="inline-flex min-h-11 items-center rounded-full px-3 text-base font-bold underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               href="/sign-in"
@@ -163,8 +167,14 @@ export function LandingPage() {
         >
           <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:pb-24 lg:pt-20">
             <div className="max-w-3xl">
-              <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-card/80 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.18em]">
-                <Sparkles aria-hidden="true" className="size-4 text-primary" />
+              <p
+                className="mb-5 inline-flex max-w-full items-center gap-1.5 whitespace-nowrap rounded-full border border-foreground/20 bg-card/80 px-2.5 py-2 text-[0.6875rem] font-extrabold uppercase leading-none tracking-[0.04em] sm:gap-2 sm:px-3 sm:text-xs sm:leading-normal sm:tracking-[0.18em]"
+                data-testid="hero-eyebrow"
+              >
+                <Sparkles
+                  aria-hidden="true"
+                  className="size-3.5 shrink-0 text-primary sm:size-4"
+                />
                 CSE review, with a clear direction
               </p>
               <h1
