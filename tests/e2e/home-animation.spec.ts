@@ -404,4 +404,45 @@ test.describe("Quilla landing-page motion", () => {
     await expect(page.locator(".pin-spacer")).toHaveCount(0);
     expect(pageErrors).toEqual([]);
   });
+
+  test("rebuilds responsive motion contexts without recursive cleanup", async ({
+    page,
+  }) => {
+    const pageErrors: string[] = [];
+    page.on("pageerror", (error) => pageErrors.push(error.message));
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto("/");
+
+    const root = page.getByTestId("landing-motion-root");
+    await expect(root).toHaveAttribute("data-motion-mode", "desktop");
+
+    const responsiveModes = [
+      { height: 844, mode: "mobile", width: 390 },
+      { height: 900, mode: "tablet", width: 900 },
+      { height: 900, mode: "desktop", width: 1440 },
+      { height: 844, mode: "mobile", width: 390 },
+      { height: 900, mode: "desktop", width: 1440 },
+    ] as const;
+
+    for (const viewport of responsiveModes) {
+      await page.evaluate(() =>
+        window.scrollTo({ behavior: "instant", top: 0 }),
+      );
+      await page.setViewportSize({
+        height: viewport.height,
+        width: viewport.width,
+      });
+      await expect(root).toHaveAttribute("data-motion-ready", "true");
+      await expect(root).toHaveAttribute("data-motion-mode", viewport.mode);
+      await seekSectionProgress(page, "journey", 0.5);
+    }
+
+    await page
+      .getByRole("link", { name: "Sign in", exact: true })
+      .first()
+      .click();
+    await expect(page).toHaveURL(/\/sign-in$/);
+    expect(pageErrors).toEqual([]);
+  });
 });

@@ -93,17 +93,17 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
   const rootRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
-    (_context, contextSafe) => {
+    (_context, reactContextSafe) => {
       const root = rootRef.current;
 
-      if (!root || !contextSafe) {
+      if (!root || !reactContextSafe) {
         return;
       }
 
       let cancelled = false;
       const frameIds = new Set<number>();
       const media = gsap.matchMedia();
-      const refresh = contextSafe(() => ScrollTrigger.refresh());
+      const refresh = reactContextSafe(() => ScrollTrigger.refresh());
       const scheduleRefresh = () => {
         const frameId = window.requestAnimationFrame(() => {
           frameIds.delete(frameId);
@@ -113,7 +113,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
         });
         frameIds.add(frameId);
       };
-      const onWindowLoad = contextSafe(scheduleRefresh);
+      const onWindowLoad = reactContextSafe(scheduleRefresh);
 
       if (document.readyState === "complete") {
         scheduleRefresh();
@@ -122,7 +122,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
       }
 
       if (document.fonts) {
-        const onFontsReady = contextSafe(() => {
+        const onFontsReady = reactContextSafe(() => {
           if (!cancelled) {
             scheduleRefresh();
           }
@@ -140,7 +140,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             "(min-width: 640px) and (max-width: 1023px) and (prefers-reduced-motion: no-preference)",
           reduceMotion: "(prefers-reduced-motion: reduce)",
         },
-        (mediaContext) => {
+        (mediaContext, mediaContextSafe) => {
           const conditions = mediaContext.conditions as MotionConditions;
           const sections = gsap.utils.toArray<HTMLElement>(
             root.querySelectorAll(motionSectionSelector),
@@ -153,6 +153,17 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             delete section.dataset.motionState;
           });
           delete root.dataset.motionReady;
+
+          if (!mediaContextSafe) {
+            root.dataset.motionMode = "fallback";
+            root.dataset.motionReady = "true";
+            return;
+          }
+
+          const runInMediaContext = <Arguments extends unknown[], Result>(
+            callback: (...arguments_: Arguments) => Result,
+          ) =>
+            mediaContextSafe(callback) as (...arguments_: Arguments) => Result;
 
           if (conditions.reduceMotion) {
             root.dataset.motionMode = "reduced";
@@ -186,23 +197,23 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             start: string,
             end: string,
           ) => {
-            const onEnter = contextSafe(() => {
+            const onEnter = runInMediaContext(() => {
               promoteTargets(targets);
               setSectionState(section, "active");
             });
-            const onLeave = contextSafe(() => {
+            const onLeave = runInMediaContext(() => {
               releaseTargets(targets);
               setSectionState(section, "complete");
             });
-            const onEnterBack = contextSafe(() => {
+            const onEnterBack = runInMediaContext(() => {
               promoteTargets(targets);
               setSectionState(section, "active");
             });
-            const onLeaveBack = contextSafe(() => {
+            const onLeaveBack = runInMediaContext(() => {
               releaseTargets(targets);
               setSectionState(section, "prepared");
             });
-            const onUpdate = contextSafe((trigger: ScrollTrigger) => {
+            const onUpdate = runInMediaContext((trigger: ScrollTrigger) => {
               section.dataset.motionProgress = trigger.progress.toFixed(3);
             });
             const timeline = gsap.timeline({
@@ -249,23 +260,23 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                 ...heroCard,
                 ...heroUnderline,
               ];
-              const onEnter = contextSafe(() => {
+              const onEnter = runInMediaContext(() => {
                 promoteTargets(heroTargets);
                 setSectionState(hero, "active");
               });
-              const onLeave = contextSafe(() => {
+              const onLeave = runInMediaContext(() => {
                 releaseTargets(heroTargets);
                 setSectionState(hero, "complete");
               });
-              const onEnterBack = contextSafe(() => {
+              const onEnterBack = runInMediaContext(() => {
                 promoteTargets(heroTargets);
                 setSectionState(hero, "active");
               });
-              const onLeaveBack = contextSafe(() => {
+              const onLeaveBack = runInMediaContext(() => {
                 releaseTargets(heroTargets);
                 setSectionState(hero, "settled");
               });
-              const onUpdate = contextSafe((trigger: ScrollTrigger) => {
+              const onUpdate = runInMediaContext((trigger: ScrollTrigger) => {
                 hero.dataset.motionProgress = trigger.progress.toFixed(3);
               });
               const heroTimeline = gsap.timeline({
