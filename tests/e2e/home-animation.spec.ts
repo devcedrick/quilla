@@ -121,9 +121,92 @@ async function readTransformValue(locator: Locator) {
 }
 
 test.describe("Quilla landing-page motion", () => {
+  test("reveals the hero without scrolling and scrubs section titles early", async ({
+    page,
+  }) => {
+    const errors: string[] = [];
+    page.on("pageerror", (error) => errors.push(error.message));
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto("/");
+    const hero = page.locator('[data-motion-section="hero"]');
+    const title = page.getByRole("heading", {
+      level: 1,
+      name: "Turn every practice session into your next best study step.",
+    });
+    await expect(title).toBeVisible();
+    await expect(hero).toHaveAttribute("data-text-state", "complete");
+    expect(await page.evaluate(() => window.scrollY)).toBe(0);
+    await expect(title.locator(".motion-text-word")).not.toHaveCount(0);
+    const highlightWidths = await title.evaluate((element) => ({
+      phrase: element
+        .querySelector("[data-text-accent]")!
+        .getBoundingClientRect().width,
+      underline: element
+        .querySelector('[data-motion-target="hero-underline"]')!
+        .getBoundingClientRect().width,
+    }));
+    expect(highlightWidths.underline).toBeGreaterThan(
+      highlightWidths.phrase * 0.95,
+    );
+    for (const id of [
+      "journey-title",
+      "levels-title",
+      "benefits-title",
+      "trust-title",
+      "final-cta-title",
+    ]) {
+      const heading = page.locator(`#${id}`);
+      const seek = async (ratio: number) => {
+        await heading.evaluate((element, position) => {
+          let top = 0;
+          let ancestor: HTMLElement | null = element as HTMLElement;
+          while (ancestor) {
+            top += ancestor.offsetTop;
+            ancestor = ancestor.offsetParent as HTMLElement | null;
+          }
+          window.scrollTo({
+            top: top - window.innerHeight * position,
+            behavior: "instant",
+          });
+        }, ratio);
+      };
+      await seek(0.92);
+      await expect
+        .poll(async () =>
+          Number(await heading.getAttribute("data-text-progress")),
+        )
+        .toBeLessThan(0.03);
+      await seek(0.79);
+      await expect
+        .poll(async () =>
+          Number(await heading.getAttribute("data-text-progress")),
+        )
+        .toBeGreaterThan(0.35);
+      await seek(0.66);
+      await expect
+        .poll(async () =>
+          Number(await heading.getAttribute("data-text-progress")),
+        )
+        .toBeGreaterThan(0.98);
+      await seek(0.79);
+      await expect
+        .poll(async () =>
+          Number(await heading.getAttribute("data-text-progress")),
+        )
+        .toBeLessThan(0.65);
+    }
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await expect(
+      page.locator(".motion-text-word, .motion-text-line-mask"),
+    ).toHaveCount(0);
+    await expect(title).toBeVisible();
+    expect(errors).toEqual([]);
+  });
+
   test("scrubs the complete desktop story forward and backward without flicker", async ({
     page,
   }) => {
+    test.setTimeout(60_000);
     const pageErrors: string[] = [];
     page.on("pageerror", (error) => pageErrors.push(error.message));
     await page.setViewportSize({ width: 1440, height: 900 });

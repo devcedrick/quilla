@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { type ReactNode, useRef } from "react";
 
+import { createLandingTextMotion } from "./landing-text-motion";
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const motionTargetSelector = "[data-motion-target]";
@@ -98,6 +100,7 @@ function startsBelowViewport(section: HTMLElement) {
 
 export function LandingAnimation({ children }: { children: ReactNode }) {
   const rootRef = useRef<HTMLDivElement>(null);
+  const entrancePlayedRef = useRef(false);
 
   useGSAP(
     (_context, reactContextSafe) => {
@@ -153,6 +156,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             root.querySelectorAll(motionSectionSelector),
           );
           const ownedTimelines: gsap.core.Timeline[] = [];
+          let disposeTextMotion: (() => void) | undefined;
 
           clearAnimatedStyles(root);
           sections.forEach((section) => {
@@ -174,6 +178,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             mediaContextSafe(callback) as (...arguments_: Arguments) => Result;
 
           if (conditions.reduceMotion) {
+            entrancePlayedRef.current = true;
             root.dataset.motionMode = "reduced";
             root.dataset.motionReady = "true";
 
@@ -248,6 +253,14 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
           };
 
           try {
+            disposeTextMotion = createLandingTextMotion(root, {
+              mobile: profile.mode === "mobile",
+              desktop: profile.mode === "desktop",
+              entrancePlayed: entrancePlayedRef.current,
+              onEntranceComplete: () => {
+                entrancePlayedRef.current = true;
+              },
+            });
             const hero = getSection(root, "hero");
             if (hero) {
               const heroCopy = [
@@ -405,11 +418,6 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                     y: profile.vertical * 0.6,
                   },
                   0,
-                )
-                .to(
-                  heroUnderline,
-                  { scaleX: 1.06, transformOrigin: "left center" },
-                  0,
                 );
 
               ownedTimelines.push(heroTimeline, floatTimeline, orbitTimeline);
@@ -428,7 +436,6 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
               const targets = [...intro, ...items];
 
               if (startsBelowViewport(journey)) {
-                gsap.set(intro, { opacity: 0.45, y: profile.vertical * 0.8 });
                 gsap.set(items, {
                   ...(animateCardOpacity ? { opacity: 0.28 } : {}),
                   scale: profile.scale,
@@ -439,19 +446,17 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                   targets,
                   "clamp(top 88%)",
                   getSectionEnd("clamp(bottom 38%)"),
-                )
-                  .to(intro, { duration: 0.28, opacity: 1, y: 0 }, 0)
-                  .to(
-                    items,
-                    {
-                      duration: 0.7,
-                      ...(animateCardOpacity ? { opacity: 1 } : {}),
-                      scale: 1,
-                      stagger: 0.12,
-                      y: 0,
-                    },
-                    0.16,
-                  );
+                ).to(
+                  items,
+                  {
+                    duration: 0.7,
+                    ...(animateCardOpacity ? { opacity: 1 } : {}),
+                    scale: 1,
+                    stagger: 0.12,
+                    y: 0,
+                  },
+                  0.16,
+                );
               } else {
                 journey.dataset.motionState = "settled";
               }
@@ -465,7 +470,6 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
               const targets = [...intro, ...shared, ...cards];
 
               if (startsBelowViewport(levels)) {
-                gsap.set(intro, { opacity: 0.45, y: profile.vertical * 0.7 });
                 gsap.set(shared, {
                   ...(animateCardOpacity ? { opacity: 0.32 } : {}),
                   scale: profile.scale,
@@ -485,7 +489,6 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                   "clamp(top 86%)",
                   getSectionEnd("clamp(bottom 42%)"),
                 )
-                  .to(intro, { duration: 0.24, opacity: 1, y: 0 }, 0)
                   .to(
                     shared,
                     {
@@ -520,7 +523,6 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
               const targets = [...intro, ...cards];
 
               if (startsBelowViewport(benefits)) {
-                gsap.set(intro, { opacity: 0.45, y: profile.vertical * 0.7 });
                 cards.forEach((card, index) => {
                   gsap.set(card, {
                     ...(animateCardOpacity ? { opacity: 0.25 } : {}),
@@ -536,19 +538,17 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                   targets,
                   "clamp(top 86%)",
                   getSectionEnd("clamp(bottom 42%)"),
-                )
-                  .to(intro, { duration: 0.28, opacity: 1, y: 0 }, 0)
-                  .to(
-                    cards,
-                    {
-                      duration: 0.68,
-                      ...(animateCardOpacity ? { opacity: 1 } : {}),
-                      scale: 1,
-                      stagger: 0.12,
-                      y: 0,
-                    },
-                    0.18,
-                  );
+                ).to(
+                  cards,
+                  {
+                    duration: 0.68,
+                    ...(animateCardOpacity ? { opacity: 1 } : {}),
+                    scale: 1,
+                    stagger: 0.12,
+                    y: 0,
+                  },
+                  0.18,
+                );
               } else {
                 benefits.dataset.motionState = "settled";
               }
@@ -561,7 +561,6 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
               const targets = [...intro, ...items];
 
               if (startsBelowViewport(trust)) {
-                gsap.set(intro, { opacity: 0.5, y: profile.vertical * 0.6 });
                 gsap.set(items, {
                   ...(animateCardOpacity ? { opacity: 0.24 } : {}),
                   scale: profile.scale,
@@ -572,19 +571,17 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                   targets,
                   "clamp(top 86%)",
                   getSectionEnd("clamp(bottom 42%)"),
-                )
-                  .to(intro, { duration: 0.3, opacity: 1, y: 0 }, 0)
-                  .to(
-                    items,
-                    {
-                      duration: 0.72,
-                      ...(animateCardOpacity ? { opacity: 1 } : {}),
-                      scale: 1,
-                      stagger: 0.12,
-                      y: 0,
-                    },
-                    0.16,
-                  );
+                ).to(
+                  items,
+                  {
+                    duration: 0.72,
+                    ...(animateCardOpacity ? { opacity: 1 } : {}),
+                    scale: 1,
+                    stagger: 0.12,
+                    y: 0,
+                  },
+                  0.16,
+                );
               } else {
                 trust.dataset.motionState = "settled";
               }
@@ -613,6 +610,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             root.dataset.motionMode = profile.mode;
             root.dataset.motionReady = "true";
           } catch {
+            disposeTextMotion?.();
             ownedTimelines.forEach((timeline) => timeline.kill());
             clearAnimatedStyles(root);
             sections.forEach((section) => {
@@ -625,6 +623,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
           }
 
           return () => {
+            disposeTextMotion?.();
             sections.forEach((section) => {
               delete section.dataset.motionLoopState;
               delete section.dataset.motionProgress;

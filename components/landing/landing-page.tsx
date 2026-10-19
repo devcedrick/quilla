@@ -178,15 +178,21 @@ export function LandingPage() {
                   aria-hidden="true"
                   className="size-3.5 shrink-0 text-primary sm:size-4"
                 />
-                CSE review, with a clear direction
+                <span className="inline-block" data-motion-text="hero-eyebrow">
+                  CSE review, with a clear direction
+                </span>
               </p>
               <h1
                 id="hero-title"
                 className="max-w-4xl font-heading text-5xl font-black leading-[0.98] tracking-[-0.055em] text-balance sm:text-6xl lg:text-7xl"
                 data-motion-target="hero-title"
+                data-motion-text="hero-title"
               >
                 Turn every practice session into your next{" "}
-                <span className="relative inline-block text-primary">
+                <span
+                  className="relative inline-block text-primary"
+                  data-text-accent
+                >
                   best study step.
                   <span
                     aria-hidden="true"
@@ -198,6 +204,7 @@ export function LandingPage() {
               <p
                 className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9"
                 data-motion-target="hero-summary"
+                data-motion-text="hero-summary"
               >
                 Quilla is designed to help Professional and Subprofessional
                 Civil Service Examination candidates find weak concepts,
@@ -275,7 +282,10 @@ export function LandingPage() {
                       <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
                         Your study loop
                       </p>
-                      <h2 className="mt-1 font-heading text-3xl font-black tracking-[-0.035em]">
+                      <h2
+                        className="mt-1 font-heading text-3xl font-black tracking-[-0.035em]"
+                        data-motion-text="hero-card-title"
+                      >
                         Learn what comes next.
                       </h2>
                     </div>
@@ -359,6 +369,7 @@ export function LandingPage() {
                 <p className="section-kicker">How Quilla works</p>
                 <h2
                   id="journey-title"
+                  data-motion-text="section-title"
                   className="mt-3 max-w-2xl font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
                 >
                   From first diagnostic to focused review.
@@ -422,6 +433,7 @@ export function LandingPage() {
               <p className="section-kicker">The right exam coverage</p>
               <h2
                 id="levels-title"
+                data-motion-text="section-title"
                 className="mt-3 font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 One goal. Two distinct CSE levels.
@@ -523,6 +535,7 @@ export function LandingPage() {
               <p className="section-kicker">Built for learning</p>
               <h2
                 id="benefits-title"
+                data-motion-text="section-title"
                 className="mt-3 font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 Review should tell you what to do next.
@@ -584,6 +597,7 @@ export function LandingPage() {
               </p>
               <h2
                 id="trust-title"
+                data-motion-text="section-title"
                 className="mt-4 max-w-2xl font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 Preparation you can use with confidence.
@@ -657,6 +671,7 @@ export function LandingPage() {
               <p className="section-kicker">Make practice count</p>
               <h2
                 id="final-cta-title"
+                data-motion-text="section-title"
                 className="mx-auto mt-3 max-w-3xl font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 Start with clarity. Keep building from there.
