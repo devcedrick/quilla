@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
+import { LandingAnimation } from "@/components/landing/landing-animation";
 import { cn } from "@/lib/utils";
 
 const primaryLink =
@@ -84,7 +85,7 @@ const sharedCoverage = [
 
 export function LandingPage() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-background text-foreground">
+    <LandingAnimation>
       <a
         className="fixed left-4 top-4 z-50 -translate-y-24 rounded-full bg-foreground px-4 py-3 text-sm font-bold text-background transition-transform focus:translate-y-0 focus:outline-2 focus:outline-offset-4 focus:outline-ring"
         href="#main-content"
@@ -164,38 +165,55 @@ export function LandingPage() {
           id="top"
           aria-labelledby="hero-title"
           className="paper-grid relative isolate overflow-hidden border-b border-foreground/15"
+          data-motion-section="hero"
         >
           <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-12 lg:pb-24 lg:pt-20">
             <div className="max-w-3xl">
               <p
                 className="mb-5 inline-flex max-w-full items-center gap-1.5 whitespace-nowrap rounded-full border border-foreground/20 bg-card/80 px-2.5 py-2 text-[0.6875rem] font-extrabold uppercase leading-none tracking-[0.04em] sm:gap-2 sm:px-3 sm:text-xs sm:leading-normal sm:tracking-[0.18em]"
+                data-motion-target="hero-eyebrow"
                 data-testid="hero-eyebrow"
               >
                 <Sparkles
                   aria-hidden="true"
                   className="size-3.5 shrink-0 text-primary sm:size-4"
                 />
-                CSE review, with a clear direction
+                <span className="inline-block" data-motion-text="hero-eyebrow">
+                  CSE review, with a clear direction
+                </span>
               </p>
               <h1
                 id="hero-title"
                 className="max-w-4xl font-heading text-5xl font-black leading-[0.98] tracking-[-0.055em] text-balance sm:text-6xl lg:text-7xl"
+                data-motion-target="hero-title"
+                data-motion-text="hero-title"
               >
                 Turn every practice session into your next{" "}
-                <span className="relative inline-block text-primary">
+                <span
+                  className="relative inline-block text-primary"
+                  data-text-accent
+                >
                   best study step.
                   <span
                     aria-hidden="true"
                     className="absolute -bottom-1 left-0 -z-10 h-3 w-full -rotate-1 rounded-full bg-accent sm:h-4"
+                    data-motion-target="hero-underline"
                   />
                 </span>
               </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9">
+              <p
+                className="mt-7 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-9"
+                data-motion-target="hero-summary"
+                data-motion-text="hero-summary"
+              >
                 Quilla is designed to help Professional and Subprofessional
                 Civil Service Examination candidates find weak concepts,
                 practice with purpose, and understand every mistake.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div
+                className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+                data-motion-target="hero-actions"
+              >
                 <Link className={primaryLink} href="/sign-up" prefetch={false}>
                   Create your account
                   <ArrowRight aria-hidden="true" className="size-4" />
@@ -205,7 +223,10 @@ export function LandingPage() {
                   <ArrowDown aria-hidden="true" className="size-4" />
                 </a>
               </div>
-              <p className="mt-5 flex max-w-xl items-start gap-2 text-sm leading-6 text-muted-foreground">
+              <p
+                className="mt-5 flex max-w-xl items-start gap-2 text-sm leading-6 text-muted-foreground"
+                data-motion-target="hero-note"
+              >
                 <CircleCheck
                   aria-hidden="true"
                   className="mt-0.5 size-4 shrink-0 text-primary"
@@ -218,27 +239,39 @@ export function LandingPage() {
             <div className="relative mx-auto w-full max-w-xl lg:mx-0 lg:justify-self-end">
               <div
                 className="relative z-20 flex min-h-44 items-end justify-center sm:min-h-52 lg:justify-end lg:pr-7"
+                data-motion-target="hero-stage"
                 data-testid="kuwi-stage"
               >
                 <div
                   aria-hidden="true"
                   className="absolute bottom-0 right-1/2 size-52 translate-x-1/2 rounded-full border-[30px] border-accent/45 sm:size-64 sm:border-[36px] lg:right-0 lg:translate-x-0"
-                />
-                <Image
-                  aria-hidden="true"
-                  alt=""
-                  className="relative z-10 h-auto w-44 translate-y-6 sm:w-56 sm:translate-y-8 lg:w-64"
-                  data-testid="kuwi-hero"
-                  height={1150}
-                  priority
-                  src="/brand/kuwi/kuwi-hero.svg"
-                  width={1368}
-                />
+                  data-motion-target="hero-orbit"
+                >
+                  <span
+                    className="pointer-events-none absolute -inset-3 rounded-full"
+                    data-motion-loop="hero-orbit"
+                  >
+                    <span className="absolute left-1/2 top-0 size-3 -translate-x-1/2 rounded-full border-2 border-foreground bg-accent shadow-[2px_2px_0_var(--color-ink-shadow)] sm:size-4" />
+                  </span>
+                </div>
+                <div className="relative z-10" data-motion-loop="hero-kuwi">
+                  <Image
+                    aria-hidden="true"
+                    alt=""
+                    className="h-auto w-44 translate-y-6 sm:w-56 sm:translate-y-8 lg:w-64"
+                    data-testid="kuwi-hero"
+                    height={1150}
+                    priority
+                    src="/brand/kuwi/kuwi-hero.svg"
+                    width={1368}
+                  />
+                </div>
               </div>
-              <div className="relative z-10">
+              <div className="relative z-10" data-motion-target="hero-card">
                 <div
                   aria-hidden="true"
                   className="absolute -left-5 -top-5 size-24 rotate-6 rounded-2xl bg-accent/75"
+                  data-motion-loop="hero-accent"
                 />
                 <article
                   className="relative rotate-[-1deg] rounded-[2rem] border-2 border-foreground bg-card p-5 shadow-[10px_12px_0_var(--color-ink-shadow)] sm:p-7"
@@ -249,7 +282,10 @@ export function LandingPage() {
                       <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
                         Your study loop
                       </p>
-                      <h2 className="mt-1 font-heading text-3xl font-black tracking-[-0.035em]">
+                      <h2
+                        className="mt-1 font-heading text-3xl font-black tracking-[-0.035em]"
+                        data-motion-text="hero-card-title"
+                      >
                         Learn what comes next.
                       </h2>
                     </div>
@@ -322,13 +358,18 @@ export function LandingPage() {
           id="how-it-works"
           aria-labelledby="journey-title"
           className="scroll-mt-6 border-b border-foreground/15 bg-card py-20 sm:py-28"
+          data-motion-section="journey"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div
+              className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end"
+              data-motion-target="journey-intro"
+            >
               <div>
                 <p className="section-kicker">How Quilla works</p>
                 <h2
                   id="journey-title"
+                  data-motion-text="section-title"
                   className="mt-3 max-w-2xl font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
                 >
                   From first diagnostic to focused review.
@@ -349,6 +390,7 @@ export function LandingPage() {
                   <li
                     key={step.number}
                     className="group relative min-h-64 overflow-hidden rounded-[1.75rem] border border-foreground/15 bg-background p-6 sm:p-8"
+                    data-motion-target="journey-item"
                   >
                     <span
                       aria-hidden="true"
@@ -384,12 +426,14 @@ export function LandingPage() {
           id="exam-levels"
           aria-labelledby="levels-title"
           className="scroll-mt-6 border-b border-foreground/15 bg-secondary py-20 sm:py-28"
+          data-motion-section="levels"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl" data-motion-target="levels-intro">
               <p className="section-kicker">The right exam coverage</p>
               <h2
                 id="levels-title"
+                data-motion-text="section-title"
                 className="mt-3 font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 One goal. Two distinct CSE levels.
@@ -400,7 +444,10 @@ export function LandingPage() {
               </p>
             </div>
 
-            <div className="mt-12 rounded-[1.75rem] border border-foreground/15 bg-card p-6 sm:p-8">
+            <div
+              className="mt-12 rounded-[1.75rem] border border-foreground/15 bg-card p-6 sm:p-8"
+              data-motion-target="levels-shared"
+            >
               <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
                 Shared coverage
               </p>
@@ -421,7 +468,10 @@ export function LandingPage() {
             </div>
 
             <div className="mt-5 grid gap-5 lg:grid-cols-2">
-              <article className="rounded-[1.75rem] border-2 border-primary bg-primary p-7 text-primary-foreground sm:p-9">
+              <article
+                className="rounded-[1.75rem] border-2 border-primary bg-primary p-7 text-primary-foreground sm:p-9"
+                data-motion-target="levels-card"
+              >
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary-foreground/75">
                     CSE level
@@ -443,7 +493,10 @@ export function LandingPage() {
                 </p>
               </article>
 
-              <article className="rounded-[1.75rem] border-2 border-foreground bg-card p-7 shadow-[7px_8px_0_var(--color-ink-shadow)] sm:p-9">
+              <article
+                className="rounded-[1.75rem] border-2 border-foreground bg-card p-7 shadow-[7px_8px_0_var(--color-ink-shadow)] sm:p-9"
+                data-motion-target="levels-card"
+              >
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">
                     CSE level
@@ -475,12 +528,14 @@ export function LandingPage() {
           id="why-quilla"
           aria-labelledby="benefits-title"
           className="scroll-mt-6 border-b border-foreground/15 bg-background py-20 sm:py-28"
+          data-motion-section="benefits"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl" data-motion-target="benefits-intro">
               <p className="section-kicker">Built for learning</p>
               <h2
                 id="benefits-title"
+                data-motion-text="section-title"
                 className="mt-3 font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 Review should tell you what to do next.
@@ -502,6 +557,7 @@ export function LandingPage() {
                       "rounded-[1.75rem] border border-foreground/15 p-6 sm:p-8",
                       index === 1 ? "bg-accent/55" : "bg-card",
                     )}
+                    data-motion-target="benefits-card"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="grid size-12 place-items-center rounded-2xl bg-primary text-primary-foreground">
@@ -528,15 +584,20 @@ export function LandingPage() {
           id="content-integrity"
           aria-labelledby="trust-title"
           className="scroll-mt-6 bg-foreground py-20 text-background sm:py-28"
+          data-motion-section="trust"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:px-12">
-            <div className="lg:sticky lg:top-8">
+            <div
+              className="lg:sticky lg:top-8"
+              data-motion-target="trust-intro"
+            >
               <p className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.2em] text-accent">
                 <ShieldCheck aria-hidden="true" className="size-5" />
                 Trust and content integrity
               </p>
               <h2
                 id="trust-title"
+                data-motion-text="section-title"
                 className="mt-4 max-w-2xl font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 Preparation you can use with confidence.
@@ -548,7 +609,10 @@ export function LandingPage() {
             </div>
 
             <div className="grid gap-4">
-              <article className="rounded-[1.75rem] border border-background/20 bg-background/5 p-6 sm:p-8">
+              <article
+                className="rounded-[1.75rem] border border-background/20 bg-background/5 p-6 sm:p-8"
+                data-motion-target="trust-item"
+              >
                 <FileCheck2 aria-hidden="true" className="size-7 text-accent" />
                 <h3 className="mt-5 font-heading text-2xl font-black">
                   Original practice, not shortcuts
@@ -559,7 +623,10 @@ export function LandingPage() {
                   understanding without compromising exam integrity.
                 </p>
               </article>
-              <article className="rounded-[1.75rem] border border-background/20 bg-background/5 p-6 sm:p-8">
+              <article
+                className="rounded-[1.75rem] border border-background/20 bg-background/5 p-6 sm:p-8"
+                data-motion-target="trust-item"
+              >
                 <BookOpenCheck
                   aria-hidden="true"
                   className="size-7 text-accent"
@@ -573,7 +640,10 @@ export function LandingPage() {
                   learning moment.
                 </p>
               </article>
-              <article className="rounded-[1.75rem] border border-accent/55 bg-accent p-6 text-accent-foreground sm:p-8">
+              <article
+                className="rounded-[1.75rem] border border-accent/55 bg-accent p-6 text-accent-foreground sm:p-8"
+                data-motion-target="trust-item"
+              >
                 <ShieldCheck aria-hidden="true" className="size-7" />
                 <h3 className="mt-5 font-heading text-2xl font-black">
                   Independent by design
@@ -591,12 +661,17 @@ export function LandingPage() {
         <section
           aria-labelledby="final-cta-title"
           className="paper-grid border-b border-foreground/15 py-20 sm:py-28"
+          data-motion-section="cta"
         >
           <div className="mx-auto max-w-5xl px-5 text-center sm:px-8">
-            <div className="rounded-[2rem] border-2 border-foreground bg-card px-6 py-12 shadow-[9px_10px_0_var(--color-ink-shadow)] sm:px-12 sm:py-16">
+            <div
+              className="rounded-[2rem] border-2 border-foreground bg-card px-6 py-12 shadow-[9px_10px_0_var(--color-ink-shadow)] sm:px-12 sm:py-16"
+              data-motion-target="cta-card"
+            >
               <p className="section-kicker">Make practice count</p>
               <h2
                 id="final-cta-title"
+                data-motion-text="section-title"
                 className="mx-auto mt-3 max-w-3xl font-heading text-4xl font-black leading-tight tracking-[-0.045em] text-balance sm:text-5xl"
               >
                 Start with clarity. Keep building from there.
@@ -651,6 +726,6 @@ export function LandingPage() {
           </p>
         </div>
       </footer>
-    </div>
+    </LandingAnimation>
   );
 }
