@@ -8,6 +8,7 @@ import { type ReactNode, useRef } from "react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const motionTargetSelector = "[data-motion-target]";
+const motionLoopSelector = "[data-motion-loop]";
 const motionSectionSelector = "[data-motion-section]";
 const animatedProperties = "transform,transformOrigin,opacity,willChange";
 
@@ -39,9 +40,15 @@ function getTargets(section: HTMLElement, name: string) {
   );
 }
 
+function getLoopTargets(section: HTMLElement, name: string) {
+  return gsap.utils.toArray<HTMLElement>(
+    section.querySelectorAll(`[data-motion-loop="${name}"]`),
+  );
+}
+
 function clearAnimatedStyles(root: HTMLElement) {
   const targets = gsap.utils.toArray<HTMLElement>(
-    root.querySelectorAll(motionTargetSelector),
+    root.querySelectorAll(`${motionTargetSelector}, ${motionLoopSelector}`),
   );
 
   if (targets.length > 0) {
@@ -149,6 +156,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
 
           clearAnimatedStyles(root);
           sections.forEach((section) => {
+            delete section.dataset.motionLoopState;
             delete section.dataset.motionProgress;
             delete section.dataset.motionState;
           });
@@ -172,6 +180,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             return () => {
               clearAnimatedStyles(root);
               sections.forEach((section) => {
+                delete section.dataset.motionLoopState;
                 delete section.dataset.motionProgress;
                 delete section.dataset.motionState;
               });
@@ -252,6 +261,14 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
               const heroOrbit = getTargets(hero, "hero-orbit");
               const heroCard = getTargets(hero, "hero-card");
               const heroUnderline = getTargets(hero, "hero-underline");
+              const heroKuwiLoop = getLoopTargets(hero, "hero-kuwi");
+              const heroOrbitLoop = getLoopTargets(hero, "hero-orbit");
+              const heroAccentLoop = getLoopTargets(hero, "hero-accent");
+              const heroLoopTargets = [
+                ...heroKuwiLoop,
+                ...heroOrbitLoop,
+                ...heroAccentLoop,
+              ];
               const heroTargets = [
                 ...heroCopy,
                 ...heroActions,
@@ -260,20 +277,85 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                 ...heroCard,
                 ...heroUnderline,
               ];
+              const loopTravel =
+                profile.mode === "desktop"
+                  ? 8
+                  : profile.mode === "tablet"
+                    ? 6
+                    : 4;
+              const floatTimeline = gsap
+                .timeline({
+                  defaults: { ease: "sine.inOut" },
+                  paused: true,
+                  repeat: -1,
+                  yoyo: true,
+                })
+                .to(
+                  heroKuwiLoop,
+                  {
+                    duration: profile.mode === "mobile" ? 3.2 : 2.8,
+                    rotation:
+                      profile.mode === "desktop"
+                        ? 1.2
+                        : profile.mode === "tablet"
+                          ? 0.7
+                          : 0,
+                    y: -loopTravel,
+                  },
+                  0,
+                )
+                .to(
+                  heroAccentLoop,
+                  {
+                    duration: profile.mode === "mobile" ? 3.8 : 3.4,
+                    rotation: profile.mode === "desktop" ? 10 : 8,
+                    scale: profile.mode === "desktop" ? 1.04 : 1.025,
+                    y: -loopTravel * 0.5,
+                  },
+                  0.35,
+                );
+              const orbitTimeline = gsap
+                .timeline({ paused: true, repeat: -1 })
+                .to(heroOrbitLoop, {
+                  duration: profile.mode === "mobile" ? 18 : 14,
+                  ease: "none",
+                  rotation: 360,
+                  transformOrigin: "center center",
+                });
+              const heroLoopTimelines = [floatTimeline, orbitTimeline];
+              const setHeroLoopState = (playing: boolean) => {
+                heroLoopTimelines.forEach((timeline) => {
+                  if (playing) {
+                    timeline.play();
+                  } else {
+                    timeline.pause();
+                  }
+                });
+                if (playing) {
+                  gsap.set(heroLoopTargets, { willChange: "transform" });
+                } else {
+                  releaseTargets(heroLoopTargets);
+                }
+                hero.dataset.motionLoopState = playing ? "running" : "paused";
+              };
               const onEnter = runInMediaContext(() => {
                 promoteTargets(heroTargets);
+                setHeroLoopState(true);
                 setSectionState(hero, "active");
               });
               const onLeave = runInMediaContext(() => {
                 releaseTargets(heroTargets);
+                setHeroLoopState(false);
                 setSectionState(hero, "complete");
               });
               const onEnterBack = runInMediaContext(() => {
                 promoteTargets(heroTargets);
+                setHeroLoopState(true);
                 setSectionState(hero, "active");
               });
               const onLeaveBack = runInMediaContext(() => {
                 releaseTargets(heroTargets);
+                setHeroLoopState(true);
                 setSectionState(hero, "settled");
               });
               const onUpdate = runInMediaContext((trigger: ScrollTrigger) => {
@@ -330,7 +412,11 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
                   0,
                 );
 
-              ownedTimelines.push(heroTimeline);
+              ownedTimelines.push(heroTimeline, floatTimeline, orbitTimeline);
+              const heroBounds = hero.getBoundingClientRect();
+              setHeroLoopState(
+                heroBounds.bottom > 0 && heroBounds.top < window.innerHeight,
+              );
               hero.dataset.motionProgress = "0.000";
               hero.dataset.motionState = "settled";
             }
@@ -530,6 +616,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
             ownedTimelines.forEach((timeline) => timeline.kill());
             clearAnimatedStyles(root);
             sections.forEach((section) => {
+              delete section.dataset.motionLoopState;
               delete section.dataset.motionProgress;
               section.dataset.motionState = "settled";
             });
@@ -539,6 +626,7 @@ export function LandingAnimation({ children }: { children: ReactNode }) {
 
           return () => {
             sections.forEach((section) => {
+              delete section.dataset.motionLoopState;
               delete section.dataset.motionProgress;
               delete section.dataset.motionState;
             });

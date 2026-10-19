@@ -239,22 +239,32 @@ export function LandingPage() {
                   aria-hidden="true"
                   className="absolute bottom-0 right-1/2 size-52 translate-x-1/2 rounded-full border-[30px] border-accent/45 sm:size-64 sm:border-[36px] lg:right-0 lg:translate-x-0"
                   data-motion-target="hero-orbit"
-                />
-                <Image
-                  aria-hidden="true"
-                  alt=""
-                  className="relative z-10 h-auto w-44 translate-y-6 sm:w-56 sm:translate-y-8 lg:w-64"
-                  data-testid="kuwi-hero"
-                  height={1150}
-                  priority
-                  src="/brand/kuwi/kuwi-hero.svg"
-                  width={1368}
-                />
+                >
+                  <span
+                    className="pointer-events-none absolute -inset-3 rounded-full"
+                    data-motion-loop="hero-orbit"
+                  >
+                    <span className="absolute left-1/2 top-0 size-3 -translate-x-1/2 rounded-full border-2 border-foreground bg-accent shadow-[2px_2px_0_var(--color-ink-shadow)] sm:size-4" />
+                  </span>
+                </div>
+                <div className="relative z-10" data-motion-loop="hero-kuwi">
+                  <Image
+                    aria-hidden="true"
+                    alt=""
+                    className="h-auto w-44 translate-y-6 sm:w-56 sm:translate-y-8 lg:w-64"
+                    data-testid="kuwi-hero"
+                    height={1150}
+                    priority
+                    src="/brand/kuwi/kuwi-hero.svg"
+                    width={1368}
+                  />
+                </div>
               </div>
               <div className="relative z-10" data-motion-target="hero-card">
                 <div
                   aria-hidden="true"
                   className="absolute -left-5 -top-5 size-24 rotate-6 rounded-2xl bg-accent/75"
+                  data-motion-loop="hero-accent"
                 />
                 <article
                   className="relative rotate-[-1deg] rounded-[2rem] border-2 border-foreground bg-card p-5 shadow-[10px_12px_0_var(--color-ink-shadow)] sm:p-7"

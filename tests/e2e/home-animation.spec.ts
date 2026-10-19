@@ -114,6 +114,12 @@ async function readTransform(locator: Locator) {
   });
 }
 
+async function readTransformValue(locator: Locator) {
+  return locator.evaluate(
+    (element) => window.getComputedStyle(element).transform,
+  );
+}
+
 test.describe("Quilla landing-page motion", () => {
   test("scrubs the complete desktop story forward and backward without flicker", async ({
     page,
@@ -148,6 +154,11 @@ test.describe("Quilla landing-page motion", () => {
 
     for (const progress of [0, 0.08, 0.16, 0.24, 0.32, 0.4]) {
       await seekSectionProgress(page, "journey", progress);
+      await expectProgress(
+        journey,
+        Math.max(0, progress - 0.015),
+        Math.min(1, progress + 0.03),
+      );
       opacitySamples.push(await readOpacity(firstJourneyStep));
     }
 
@@ -237,6 +248,39 @@ test.describe("Quilla landing-page motion", () => {
     );
   });
 
+  test("loops the hero accents while visible and pauses them off-screen", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto("/");
+
+    const hero = page.locator('[data-motion-section="hero"]');
+    const kuwiLoop = hero.locator('[data-motion-loop="hero-kuwi"]');
+    const orbitLoop = hero.locator('[data-motion-loop="hero-orbit"]');
+    const initialKuwiTransform = await readTransformValue(kuwiLoop);
+    const initialOrbitTransform = await readTransformValue(orbitLoop);
+
+    await expect(hero).toHaveAttribute("data-motion-loop-state", "running");
+    await expect
+      .poll(() => readTransformValue(kuwiLoop))
+      .not.toBe(initialKuwiTransform);
+    await expect
+      .poll(() => readTransformValue(orbitLoop))
+      .not.toBe(initialOrbitTransform);
+
+    await seekSectionProgress(page, "hero", 1);
+    await expect(hero).toHaveAttribute("data-motion-loop-state", "paused");
+    const pausedTransform = await readTransformValue(kuwiLoop);
+    await page.waitForTimeout(250);
+    expect(await readTransformValue(kuwiLoop)).toBe(pausedTransform);
+
+    await seekSectionProgress(page, "hero", 0.5);
+    await expect(hero).toHaveAttribute("data-motion-loop-state", "running");
+    await expect
+      .poll(() => readTransformValue(kuwiLoop))
+      .not.toBe(pausedTransform);
+  });
+
   test("keeps every motion target static when reduced motion is requested", async ({
     page,
   }) => {
@@ -248,7 +292,7 @@ test.describe("Quilla landing-page motion", () => {
     await expect(root).toHaveAttribute("data-motion-mode", "reduced");
 
     const motionStyles = await page
-      .locator("[data-motion-target]")
+      .locator("[data-motion-target], [data-motion-loop]")
       .evaluateAll((elements) =>
         elements.map((element) => {
           const htmlElement = element as HTMLElement;
@@ -278,6 +322,10 @@ test.describe("Quilla landing-page motion", () => {
       });
       await expect(section).not.toHaveAttribute("data-motion-state", /.+/);
     }
+
+    await expect(
+      page.locator('[data-motion-section="hero"]'),
+    ).not.toHaveAttribute("data-motion-loop-state", /.+/);
 
     const startPreparing = page.getByRole("link", { name: "Start preparing" });
     await expect(startPreparing).toBeVisible();
