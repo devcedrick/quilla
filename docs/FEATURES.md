@@ -75,7 +75,8 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 - A suspended account attempts to start an exam or submit content.
 - A user's session expires during a saved activity.
 - An admin is also a learner and must retain one identity with role-aware access.
-- Personalized features are requested before the diagnostic is complete.
+- Personalized features are requested for a level whose diagnostic is incomplete, even though the other level has a submitted diagnostic.
+- The learner changes preferred level while a diagnostic or mock exam is active.
 
 ### Non-goals
 
@@ -88,9 +89,13 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 
 - Users can register, sign in, sign out, and recover access through the configured identity provider.
 - New accounts receive the `user` role by default.
-- Preferred level and valid target exam date are persisted.
-- First-time users are directed to the diagnostic after choosing a level.
-- Personalized study guidance and readiness are unavailable until the diagnostic is submitted.
+- Onboarding persists Professional or Subprofessional as the learner's changeable preferred level and an optional valid target exam date. Learners with no saved preference must complete level selection.
+- First-time users are directed to the diagnostic for their chosen level.
+- The preferred level supplies future attempt defaults and the default dashboard context. Each new attempt shows its selected level for explicit confirmation before starting; selecting another level for one attempt does not change the preference.
+- Learners can change their preference after onboarding. The change explains that history and mastery are retained and that the newly preferred level requires its own submitted diagnostic to unlock guidance and readiness; the optional target date is preserved.
+- Personalized study guidance and readiness are unavailable for a level until that learner submits a diagnostic for that level. Returning to a previously assessed level retains its diagnostic eligibility.
+- Changing preference never changes an active attempt's level, served questions, blueprint snapshot, saved answers, or deadline; resume and submission use the attempt's stored context.
+- [ADR 0003](ADR/0003-exam-level-selection-policy.md) defines the level-selection policy and transitions.
 - Backend authorization is enforced independently of client-side routing.
 - Suspended users cannot take exams or contribute questions.
 
@@ -126,7 +131,9 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - Each subject receives at least three items, or the diagnostic is blocked with an actionable coverage warning.
 - The target difficulty mix is approximately 50% easy, 35% medium, and 15% hard.
 - Progress is autosaved and submission is idempotent.
-- Submission creates initial mastery records for tested concepts, initializes adaptive review priorities, and generates personalized study guidance.
+- Diagnostic completion is tracked per learner and level. Shared mastery or a submitted diagnostic for the other level does not satisfy this requirement.
+- Submission unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
+- Submission creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. Retaking a diagnostic preserves prior evidence, and submission retries cannot double-count it.
 - Untested concepts are clearly marked, and content gaps are visible to admins.
 - Results present a mastery overview without pass/fail wording.
 
@@ -159,7 +166,9 @@ As a learner, I want my performance tracked by concept so I can understand exact
 ### Definition of done
 
 - Only submitted answers update mastery.
-- Every update is associated with the question version and concept served during the attempt.
+- Every update retains the originating attempt, its level, and the question version and canonical concept served during the attempt.
+- Mastery evidence belongs to the learner and canonical concept. Evidence for the same concept genuinely shared by both levels is reused across levels; distinct concepts, including level-specific concepts, remain separate.
+- Changing preferred level or submitting another diagnostic never deletes or resets prior mastery evidence. Shared evidence does not unlock another level's diagnostic-dependent features.
 - Mastery remains between 0 and 1, and confidence grows with meaningful sample size.
 - Status is derived consistently as unseen, learning, familiar, proficient, or mastered.
 - Duplicate submissions cannot double-count answers.
@@ -233,6 +242,7 @@ As a learner, I want to choose what and how long to practice while Quilla priori
 ### Definition of done
 
 - Learners can select level, subjects, optional concepts, and session length.
+- The level initially defaults to the learner's preference and is explicitly confirmed for each new attempt without updating that preference. All subject and concept filters must be eligible for the attempt's selected level.
 - Generation prioritizes adaptive review recommendations, then low mastery, then blueprint weight within selected filters.
 - No question repeats within a session.
 - Two consecutive correct answers step difficulty up when eligible content exists; two incorrect answers step it down.
@@ -270,6 +280,7 @@ As a learner, I want to take a timed exam that follows my level's blueprint so I
 ### Definition of done
 
 - Exams are generated from an active blueprint using only eligible published question versions.
+- Each new mock exam explicitly confirms its level, initially defaulting to the learner's preference, and stores that level with its immutable blueprint snapshot. Later preference changes do not alter the attempt or transfer its score to the other level.
 - Professional exams exclude Clerical Ability; Subprofessional exams exclude Analytical Ability.
 - Subject distribution, difficulty mix, randomization, time limit, and passing reference come from an immutable blueprint snapshot.
 - The server is authoritative for timing and auto-submits expired attempts.
@@ -308,6 +319,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 ### Definition of done
 
 - Submitted attempts remain discoverable in the learner's attempt history and can be reopened for review any number of times whenever the learner chooses while the historical attempt is retained.
+- History identifies each attempt's original level and preserves its served snapshots across preference changes; the current preference does not hide attempts from the other level.
 - Review is accessible only to the attempt owner or an authorized admin, including on later visits.
 - Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
 - Leaving and reopening a review preserves the same submitted result and does not consume or invalidate review access.
@@ -346,7 +358,8 @@ As a learner, I want short, explainable guidance whenever I am ready to study so
 
 ### Definition of done
 
-- Current guidance is available after the diagnostic and is regenerated on demand or after relevant learning activity.
+- Guidance is available for a requested level only after the learner submits that level's diagnostic and is regenerated on demand or after relevant learning activity. The dashboard defaults to the preferred level and clearly identifies the level being viewed.
+- Guidance uses the requested level's coverage and blueprint and applicable shared concept evidence. Changing preference selects a different level context without deleting prior evidence or bypassing that level's diagnostic gate.
 - Guidance considers adaptive review priorities, low mastery, blueprint weight, the learner's available time, and an optional target exam date.
 - Guidance without a target date remains balanced and does not impose an artificial calendar.
 - Guidance requested within 30 days of the target recommends high-weight weak concepts and more focused review without creating mandatory sessions.
@@ -381,12 +394,12 @@ As a learner, I want an explainable readiness score with a confidence range and 
 
 ### Definition of done
 
-- Readiness is unavailable until the diagnostic is submitted.
-- The score combines blueprint-weighted concept mastery, recent mock performance, and demonstrated recall in learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
+- Readiness is unavailable for a requested level until the learner submits that level's diagnostic, even when shared mastery or another level's diagnostic exists.
+- The score uses the requested level's coverage and blueprint and combines applicable concept mastery (including genuinely shared evidence), recent mock performance from that same level, and demonstrated recall in eligible learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
 - The view includes a confidence range, subject breakdown, weakest concepts, and plain-language explanation.
 - Low evidence produces visibly low confidence.
 - The score is computed from source data; any cache is invalidated by relevant updates.
-- Changing level recomputes applicable analytics without deleting prior mastery.
+- Changing the viewed level recomputes applicable analytics without deleting prior mastery or transferring level-specific mock scores. Relevant submissions refresh affected derived guidance and readiness views, including both levels when shared concept evidence changes, while preserving each level's diagnostic gate.
 
 ## 11. Streaks and progress visualization
 
@@ -683,9 +696,10 @@ These requirements apply to every feature above:
 - **Security:** authorize every backend operation, validate every public input, rate-limit abuse-prone workflows, and follow OWASP guidance.
 - **Privacy:** comply with the Philippine Data Privacy Act, minimize personal data, and support appropriate export and deletion requests.
 - **Auditability:** log every admin mutation with durable actor and entity identifiers.
-- **Historical integrity:** preserve the question and blueprint versions used by submitted and in-progress attempts.
+- **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context.
 - **Content integrity:** never serve unpublished, archived, or policy-excluded questions.
 - **Level integrity:** never serve Clerical Ability to Professional exams or Analytical Ability to Subprofessional exams.
+- **Level context:** the profile preference supplies defaults; each attempt owns its immutable level; diagnostic completion belongs to a learner and level; mastery evidence belongs to a learner and canonical concept, with provenance retained. Apply [ADR 0003](ADR/0003-exam-level-selection-policy.md) consistently across learning features.
 - **Language:** use English for the initial interface while allowing English and Filipino question content.
 - **Legal:** display the non-affiliation disclaimer and prohibit leaked or actual CSE questions.
 
@@ -699,7 +713,6 @@ The following remain intentionally unresolved and require explicit product decis
 - whether a second reviewer is required beyond self-review prevention;
 - retention and resume window for abandoned attempts;
 - whether contributor rankings will ever be introduced;
-- whether preferred level is fixed during onboarding or selectable per attempt;
 - weighting of questions applicable to both levels;
 - minimum sample size for reliable mastery;
 - whether adaptive review recommendations will later include question-level state;
