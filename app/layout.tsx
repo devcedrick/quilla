@@ -3,6 +3,8 @@ import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "./ConvexClientProvider";
+import { getClerkConfiguration } from "@/lib/auth/configuration.server";
+import { authRoutes } from "@/lib/auth/routes";
 
 const geistSans = Manrope({
   variable: "--font-manrope",
@@ -25,12 +27,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { publishableKey } = getClerkConfiguration();
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClerkProvider>
+        <ClerkProvider
+          publishableKey={publishableKey}
+          signInUrl={authRoutes.signIn}
+          signUpUrl={authRoutes.signUp}
+          signInFallbackRedirectUrl={authRoutes.dashboard}
+          signUpFallbackRedirectUrl={authRoutes.dashboard}
+          afterSignOutUrl={authRoutes.home}
+        >
           <ConvexClientProvider>{children}</ConvexClientProvider>
         </ClerkProvider>
       </body>
