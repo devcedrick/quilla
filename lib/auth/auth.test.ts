@@ -64,7 +64,7 @@ describe("return destinations", () => {
 
 describe("Clerk configuration", () => {
   const valid = {
-    publishableKey: "pk_test_cXVpbGxhLmFjY291bnRzLmRldiQ=",
+    publishableKey: `pk_test_${Buffer.from("unit-test.example.invalid$").toString("base64")}`,
     secretKey: "sk_test_synthetic_only",
   };
   it("returns public configuration only", () => {
