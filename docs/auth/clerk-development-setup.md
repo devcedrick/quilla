@@ -1,6 +1,23 @@
 # Clerk development setup
 
-This runbook supports [S02.2.1 / #77](https://github.com/devcedrick/quilla/issues/77) and the account-flow implementation in [S02.2 / #21](https://github.com/devcedrick/quilla/issues/21). It documents development configuration and evidence, not a claim that Quilla's account journeys are implemented. [FEATURES](../FEATURES.md#2-account-authentication-and-onboarding) remains the product source of truth.
+This runbook supports completed [S02.2.1 / #77](https://github.com/devcedrick/quilla/issues/77) and the account-flow implementation in [S02.2 / #21](https://github.com/devcedrick/quilla/issues/21). It distinguishes configuration evidence from application journey verification. [FEATURES](../FEATURES.md#2-account-authentication-and-onboarding) remains the product source of truth, and [ADR 0004](../ADR/0004-account-session-boundaries.md) defines account/session boundaries.
+
+## Account routes and verification
+
+The account implementation adds public `/sign-in` and `/sign-up` routes with Clerk-managed email verification and password recovery. Active sessions continue to `/dashboard`; sign-out returns to `/`. The dashboard is an account-status placeholder, not a learner profile or onboarding implementation. `/admin` remains unavailable to authenticated users until Quilla roles exist.
+
+Use `npm run test:e2e -- --project=auth` for provider-backed account tests. The Playwright setup project checks that injected credentials target development and that public signing keys match before obtaining a Testing Token or creating synthetic accounts. Missing/live credentials fail the setup. Authentication projects disable retained traces, screenshots, videos, and saved session-state files, and fixture cleanup is restricted to unique test identities. Local configuration loading preserves injected CI variables.
+
+The default test origin remains port 3100. For a targeted smoke pass against development, start `npm run dev` on port 3000, then run `PLAYWRIGHT_PORT=3000` in the test process environment with `npm run test:e2e -- --project=auth --grep "public pages"` (PowerShell: set `$env:PLAYWRIGHT_PORT = "3000"` first, then remove that override afterward). The test runner reuses an existing local server; CI does not. Preserve the original dated evidence below rather than treating it as a claim that new browser checks passed; record current command outcomes in the implementation handoff.
+
+### S02.2 local validation — 2026-10-21
+
+- Lint, typecheck, Knip, changed-file Prettier checks, production build, and whitespace checks passed. Unit tests passed: 37 tests across two files.
+- The complete production-mode Playwright suite on port 3100 passed: 23 tests, including development credential validation, account journeys, two-user isolation, real session revocation, and existing landing/no-JavaScript coverage.
+- The targeted port-3000 development smoke passed. Additional development checks passed for password sign-in with a protected-page return query, password recovery with old-password rejection, and blocked browser-provider loading.
+- Synthetic fixture cleanup completed without reported errors. No auth trace, screenshot, video, or saved session-state files were retained. Known token-bearing warnings from Clerk's testing helper are redacted while unrelated diagnostics and assertion failures remain visible.
+- A local pass/fail scan found no configured server-secret value in repository files or public build assets. This targeted check is not a substitute for the PR's security scans and human authentication-boundary review.
+- Remote CI and human review have not run for this uncommitted implementation. The dependency audit is not clean; the pre-existing advisory and its scope are triaged below. No production deployment or Dashboard settings change was performed.
 
 ## Confirmed configuration
 
@@ -105,15 +122,15 @@ The fixed test email-code behavior is documented in [Clerk's test-address guide]
 
 ## Troubleshooting and reversal
 
-| Symptom                                        | Action                                                                                                                                                                                |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Missing or rejected credentials                | Check variable names and development-instance provenance privately. Record mismatch without logging values; request a separate approved correction instead of rotating automatically. |
-| Forms require more than email/password         | Supply required first and last names. Report other requirements; do not disable them silently.                                                                                        |
-| An 8-character password is rejected            | Inspect length and other existing password rules; use a strong generated test password rather than disabling protections.                                                             |
-| Test sign-up is challenged or rejected         | Verify reserved-address restrictions and the Playwright Testing Token setup. Keep bot protection enabled.                                                                             |
-| Quilla `/sign-in` or `/sign-up` is unavailable | The current skeleton lacks these routes; implement #21. Do not treat a missing route as proof of a Clerk configuration fault.                                                         |
-| A localhost redirect fails                     | Verify the actual port, development keys, and #21's route/fallback configuration before changing instance settings.                                                                   |
-| CI passes an old landing test                  | That does not validate key pairing or registration. Await explicit provider-backed assertions from #21.                                                                               |
+| Symptom                                        | Action                                                                                                                                                                                           |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Missing or rejected credentials                | Check variable names and development-instance provenance privately. Record mismatch without logging values; request a separate approved correction instead of rotating automatically.            |
+| Forms require more than email/password         | Supply required first and last names. Report other requirements; do not disable them silently.                                                                                                   |
+| An 8-character password is rejected            | Inspect length and other existing password rules; use a strong generated test password rather than disabling protections.                                                                        |
+| Test sign-up is challenged or rejected         | Verify reserved-address restrictions and the Playwright Testing Token setup. Keep bot protection enabled.                                                                                        |
+| Quilla `/sign-in` or `/sign-up` is unavailable | Confirm the S02.2 account-route implementation is present in the running checkout and restart/rebuild that version. Do not treat an old skeleton's missing route as a Clerk configuration fault. |
+| A localhost redirect fails                     | Verify the actual port, development keys, and #21's route/fallback configuration before changing instance settings.                                                                              |
+| CI passes an old landing test                  | That does not validate key pairing or registration. Await explicit provider-backed assertions from #21.                                                                                          |
 
 The maintainer reported **minimum password length: 15 → 8**, explicitly retaining 8, and subsequently confirmed **Google sign-up/sign-in: On → Off** for the MVP. Required names remained in place. Reversal would require a new explicit maintainer decision and corresponding documentation and fixture updates; do not restore 15 or re-enable Google during implementation. The agent performed no Dashboard changes, credential rotation, production changes, CI edits, or user-account changes for this document.
 
@@ -122,3 +139,9 @@ The maintainer reported **minimum password length: 15 → 8**, explicitly retain
 Format and check only this file with the installed Prettier and run `git diff --check`. Review all status claims against the maintainer report and actual verification results; inspect the change for credentials and private data.
 
 This documentation-only change adds no runtime code, dependencies, schemas, or deployment configuration. Lint, typecheck, unit tests, Knip, build, and browser tests are not required to demonstrate its behavior and may be recorded as not run for this change. Registration/recovery E2E verification cannot be claimed until #21 supplies those routes and tests. Human review, a focused PR, and applicable CI checks remain part of delivery; this document alone does not close #77.
+
+The paragraph above records the original #77 documentation delivery. The S02.2 runtime change requires lint, typecheck, unit tests, Knip, build, and E2E verification, with actual results reported in its handoff.
+
+### Existing dependency advisory
+
+During S02.2 dependency setup, `npm audit` reported nine high-severity findings rooted in `braces` ([GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm)) and its tooling dependents, including `micromatch`, `fast-glob`, shadcn/registry/ts-morph, and Next's ESLint configuration. All nine affected package versions match the baseline lockfile before this change. The reported issue concerns stack exhaustion on deeply nested glob patterns; the new authentication code does not accept user-provided glob patterns. This is an existing tooling finding, not a clean audit. Do not use npm's proposed incompatible shadcn/ESLint downgrades or `npm audit fix --force`; remediation needs a separate compatible dependency update. No broad allowlist is introduced.

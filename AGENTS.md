@@ -120,6 +120,7 @@ Quilla is a web-based learning platform for people preparing for the Philippine 
 
 ## Git and review workflow
 
+- Use conventional branch names in the form `<type>/<short-kebab-case-description>`, with prefixes such as `feat/`, `fix/`, `docs/`, `refactor/`, `test/`, `chore/`, or `ci/`. Do not use `codex/` or agent-, tool-, or personal-name prefixes. For example: `feat/s02-2-clerk-account-flows`.
 - Every change must be delivered through a focused pull request linked to an issue.
 - Never push directly to `main`, bypass branch protection, force-push a shared branch, or merge your own pull request.
 - Do not use `--no-verify` to bypass Husky, commitlint, lint-staged, or other repository safeguards.

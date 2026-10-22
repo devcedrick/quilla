@@ -1,7 +1,10 @@
 import { defineConfig, devices } from "@playwright/test";
+import { loadEnvConfig } from "@next/env";
+
+loadEnvConfig(process.cwd());
 
 const hostname = "localhost";
-const port = 3100;
+const port = Number(process.env.PLAYWRIGHT_PORT ?? 3100);
 const baseURL = `http://${hostname}:${port}`;
 
 export default defineConfig({
@@ -17,8 +20,26 @@ export default defineConfig({
   },
   projects: [
     {
+      name: "auth-setup",
+      testMatch: /auth\.setup\.ts/,
+      use: { trace: "off", screenshot: "off", video: "off" },
+    },
+    {
       name: "chromium",
+      testIgnore: /auth\.(spec|setup)\.ts/,
       use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      name: "auth",
+      testMatch: /auth\.spec\.ts/,
+      dependencies: ["auth-setup"],
+      workers: 1,
+      use: {
+        ...devices["Desktop Chrome"],
+        trace: "off",
+        screenshot: "off",
+        video: "off",
+      },
     },
   ],
   webServer: {
