@@ -2,7 +2,7 @@
 
 import { AuthPageShell } from "./auth-page-shell";
 
-export function AccountError({ reset }: { reset: () => void }) {
+export function AccountError({ retry }: { retry: () => void }) {
   return (
     <AuthPageShell title="Account access is unavailable">
       <div className="space-y-5">
@@ -10,7 +10,7 @@ export function AccountError({ reset }: { reset: () => void }) {
           We could not verify account access. Please try again or return home.
         </p>
         <button
-          onClick={reset}
+          onClick={retry}
           className="min-h-11 rounded-full bg-primary px-5 py-3 text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
         >
           Try again
