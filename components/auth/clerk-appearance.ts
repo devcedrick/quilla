@@ -1,0 +1,147 @@
+import type { SignIn } from "@clerk/nextjs";
+import type { ComponentProps } from "react";
+
+const focus = { outline: "2px solid var(--primary)", outlineOffset: "3px" };
+
+/** Auth-only appearance. Clerk continues to own all controls and flow states. */
+export const clerkAppearance = {
+  variables: {
+    colorPrimary: "var(--primary)",
+    colorForeground: "var(--foreground)",
+    colorMutedForeground: "var(--muted-foreground)",
+    colorBackground: "var(--card)",
+    colorInput: "var(--background)",
+    colorInputForeground: "var(--foreground)",
+    colorBorder: "var(--border)",
+    colorDanger: "var(--destructive)",
+    colorRing: "var(--primary)",
+    fontFamily: "var(--font-manrope), sans-serif",
+    fontFamilyButtons: "var(--font-manrope), sans-serif",
+    fontSize: "1rem",
+    borderRadius: "0.625rem",
+  },
+  elements: {
+    rootBox: { width: "100%", maxWidth: "100%" },
+    cardBox: {
+      width: "100%",
+      maxWidth: "100%",
+      boxShadow: "none",
+      border: "none",
+      overflow: "visible",
+    },
+    card: {
+      padding: "0",
+      background: "transparent",
+      boxShadow: "none",
+      border: "none",
+      width: "100%",
+      rowGap: "1.75rem",
+    },
+    headerTitle: {
+      fontFamily: "var(--font-fraunces), serif",
+      fontSize: "2rem",
+      fontWeight: 600,
+      lineHeight: 1.2,
+      letterSpacing: "-0.035em",
+      color: "var(--foreground)",
+      textAlign: "left",
+    },
+    header: { gap: "0.625rem", marginBottom: "0", textAlign: "left" },
+    headerSubtitle: {
+      color: "var(--muted-foreground)",
+      fontSize: "0.875rem",
+      lineHeight: 1.7,
+      textAlign: "left",
+    },
+    form: { rowGap: "1.25rem" },
+    formFieldLabel: {
+      color: "var(--foreground)",
+      fontWeight: 600,
+      fontSize: "0.8125rem",
+    },
+    formFieldInput: {
+      // Text-field sizing must not stretch Clerk's recovery checkbox/radios.
+      "&:not([type=checkbox]):not([type=radio])": {
+        minHeight: "3rem",
+        background: "var(--background)",
+        // Preserve field boundaries across Clerk/Tailwind's cascade layers.
+        borderWidth: "1px !important",
+        borderStyle: "solid !important",
+        borderColor:
+          "color-mix(in oklch, var(--muted-foreground) 70%, var(--card)) !important",
+        borderRadius: "0.625rem",
+        boxShadow: "none !important",
+        padding: "0.75rem 0.875rem",
+        fontSize: "0.9375rem",
+      },
+      "&:focus": { ...focus, boxShadow: "none !important" },
+      "&:focus-visible": { ...focus, boxShadow: "none !important" },
+    },
+    formButtonPrimary: {
+      minHeight: "3rem",
+      borderRadius: "0.625rem",
+      border: "none",
+      fontWeight: 700,
+      fontSize: "0.9375rem",
+      background: "var(--primary)",
+      backgroundImage: "none",
+      color: "var(--primary-foreground)",
+      boxShadow: "none !important",
+      transition: "background-color 150ms",
+      "&:hover": {
+        background: "var(--foreground)",
+        backgroundImage: "none",
+        boxShadow: "none !important",
+      },
+      "&:focus": { boxShadow: "none !important", backgroundImage: "none" },
+      "&:focus-visible": {
+        ...focus,
+        boxShadow: "none !important",
+        backgroundImage: "none",
+      },
+      "&:active": { boxShadow: "none !important", backgroundImage: "none" },
+      "&:disabled": {
+        opacity: 0.65,
+        boxShadow: "none !important",
+        cursor: "not-allowed",
+      },
+      "@media (prefers-reduced-motion: reduce)": {
+        transition: "none",
+        "&:hover": { transition: "none" },
+        "&:focus": { transition: "none" },
+        "&:focus-visible": { transition: "none" },
+        "&:active": { transition: "none" },
+      },
+    },
+    footer: {
+      background: "transparent",
+      backgroundImage: "none",
+      padding: "1.5rem 0 0",
+      border: "none",
+    },
+    footerActionText: {
+      color: "var(--muted-foreground)",
+      fontSize: "0.8125rem",
+    },
+    footerActionLink: {
+      color: "var(--primary)",
+      textDecoration: "underline",
+      textUnderlineOffset: "3px",
+      "&:focus-visible": focus,
+    },
+    formResendCodeLink: { color: "var(--primary)", "&:focus-visible": focus },
+    otpCodeFieldInput: {
+      background: "var(--background)",
+      borderWidth: "1px !important",
+      borderStyle: "solid !important",
+      borderColor:
+        "color-mix(in oklch, var(--muted-foreground) 70%, var(--card)) !important",
+      color: "var(--foreground)",
+      boxShadow: "none !important",
+      "&:focus-visible": focus,
+    },
+    alert: { borderRadius: "0.75rem", border: "1px solid var(--destructive)" },
+    alertText: { color: "var(--foreground)", lineHeight: 1.6 },
+    formFieldErrorText: { color: "var(--destructive)", lineHeight: 1.6 },
+  },
+} satisfies NonNullable<ComponentProps<typeof SignIn>["appearance"]>;

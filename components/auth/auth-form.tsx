@@ -8,6 +8,7 @@ import {
   SignUp,
 } from "@clerk/nextjs";
 import { authRoutes } from "@/lib/auth/routes";
+import { clerkAppearance } from "./clerk-appearance";
 
 export function AuthForm({
   mode,
@@ -19,12 +20,23 @@ export function AuthForm({
   const signInUrl = `${authRoutes.signIn}?${new URLSearchParams({ redirect_url: destination })}`;
   const signUpUrl = `${authRoutes.signUp}?${new URLSearchParams({ redirect_url: destination })}`;
   return (
-    <div className="flex min-h-48 justify-center" data-testid="auth-form">
+    <div
+      className="flex min-h-48 w-full min-w-0 justify-center"
+      data-testid="auth-form"
+    >
       <ClerkLoading>
-        <p role="status">Loading secure account form…</p>
+        <p
+          role="status"
+          className="w-full rounded-xl border border-border bg-background p-5 leading-relaxed text-muted-foreground"
+        >
+          Loading secure account form…
+        </p>
       </ClerkLoading>
       <ClerkFailed>
-        <p role="alert">
+        <p
+          role="alert"
+          className="w-full rounded-xl border border-destructive bg-background p-5 leading-relaxed"
+        >
           The account service could not load. Check your connection and reload
           this page to try again.
         </p>
@@ -32,6 +44,7 @@ export function AuthForm({
       <ClerkLoaded>
         {mode === "sign-in" ? (
           <SignIn
+            appearance={clerkAppearance}
             routing="path"
             path={authRoutes.signIn}
             withSignUp={false}
@@ -41,6 +54,7 @@ export function AuthForm({
           />
         ) : (
           <SignUp
+            appearance={clerkAppearance}
             routing="path"
             path={authRoutes.signUp}
             signInUrl={signInUrl}

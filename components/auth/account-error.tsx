@@ -11,7 +11,7 @@ export function AccountError({ retry }: { retry: () => void }) {
         </p>
         <button
           onClick={retry}
-          className="min-h-11 rounded-full bg-primary px-5 py-3 text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+          className="min-h-11 rounded-xl bg-primary px-5 py-3 font-semibold text-primary-foreground transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none"
         >
           Try again
         </button>

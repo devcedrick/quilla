@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 
 import vtracer
@@ -11,6 +12,7 @@ ASSETS = {
     "kuwi-mark-source.png": "kuwi-mark.svg",
     "kuwi-mark-mono-source.png": "kuwi-mark-mono.svg",
     "kuwi-lockup-horizontal-source.png": "kuwi-lockup-horizontal.svg",
+    "kuwi-auth-welcome-source.png": "kuwi-auth-welcome.svg",
 }
 
 # This profile keeps full eight-bit color precision and disables curve
@@ -31,9 +33,13 @@ CONFIG = vtracer.Config(
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Trace approved Kuwi source artwork.")
+    parser.add_argument("--asset", choices=ASSETS, help="Trace only this source PNG.")
+    args = parser.parse_args()
+    selected = {args.asset: ASSETS[args.asset]} if args.asset else ASSETS
     OUTPUT_DIRECTORY.mkdir(parents=True, exist_ok=True)
 
-    for source_name, output_name in ASSETS.items():
+    for source_name, output_name in selected.items():
         source = SOURCE_DIRECTORY / source_name
         output = OUTPUT_DIRECTORY / output_name
         CONFIG.convert_file(str(source), str(output))

@@ -65,7 +65,7 @@ As a visitor, I want an engaging, guided introduction to Quilla so I can underst
 - Clerk's public `/sign-in` and `/sign-up` routes own account registration, required first/last names, email-code verification, password sign-in, and recovery. The approved development configuration uses an eight-character minimum and excludes Google authentication; [the setup runbook](auth/clerk-development-setup.md) records the exact settings and evidence.
 - Authenticated sessions initially continue to a minimal `/dashboard` with sign-out. This destination does not imply profiles, exam-level onboarding, diagnostics, or personalized study features are implemented.
 - Protected account content performs server-side session checks and handles session loss on the client. The reserved `/admin` subtree exposes no administrative features until Quilla role enforcement exists. [ADR 0004](ADR/0004-account-session-boundaries.md) defines these boundaries.
-- Basic accessible auth pages ship with the session flows; final branding and persisted learner-state landing actions remain separate work.
+- Account pages use Quilla's existing paper/ink/marigold tokens, Fraunces/Manrope typography, and the approved welcoming Kuwi variant. Desktop authentication uses one rounded split-screen surface with an inset ink-blue welcome panel and integrated cream form area; smaller screens prioritize the form with a compact brand row. Clerk's prebuilt step headings and verification/recovery controls retain their behavior; dashboard and error surfaces inherit compact branding without implying learning features are available. Persisted learner-state landing actions remain separate work.
 
 ### Problem
 

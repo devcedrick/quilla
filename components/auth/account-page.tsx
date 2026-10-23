@@ -19,6 +19,7 @@ export function AccountPage({
 }) {
   return (
     <AuthPageShell
+      layout="auth"
       title={mode === "sign-in" ? "Welcome back" : "Create your Quilla account"}
     >
       <Suspense
