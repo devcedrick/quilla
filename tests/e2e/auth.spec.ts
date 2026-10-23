@@ -90,6 +90,78 @@ async function enterCode(page: Page) {
 }
 
 test.describe("Clerk account flows", () => {
+  for (const mode of ["sign-in", "sign-up"] as const) {
+    test(`${mode} skeleton stays usable while the provider loads and yields to the form`, async ({
+      page,
+    }) => {
+      test.setTimeout(60000);
+      await page.emulateMedia({ reducedMotion: "reduce" });
+      let holding = true;
+      const held: Route[] = [];
+      await page.route(
+        (url) =>
+          url.hostname.endsWith(".accounts.dev") &&
+          /\.(js|mjs)$/.test(url.pathname),
+        (route) => {
+          if (holding) held.push(route);
+          else return route.continue();
+        },
+      );
+      try {
+        await page.goto(`/${mode}`, { waitUntil: "domcontentloaded" });
+        // Next streaming can briefly retain the previous fallback in a hidden
+        // container while the provider's identical fallback hydrates.
+        const skeleton = page.locator(
+          '[data-testid="auth-form-skeleton"]:visible',
+        );
+        await expect(skeleton).toHaveCount(1);
+        await expect(skeleton).toBeVisible();
+        await expect(skeleton).toHaveAttribute("role", "status");
+        await expect(skeleton.locator("[data-skeleton-field]")).toHaveCount(
+          mode === "sign-in" ? 1 : 4,
+        );
+        await expect(
+          skeleton.locator("input, button, a, [tabindex]"),
+        ).toHaveCount(0);
+        await expect(
+          skeleton.locator('[aria-hidden="true"]').first(),
+        ).toHaveCSS("animation-name", "none");
+        for (const width of [390, 768, 1440]) {
+          await page.setViewportSize({ width, height: 1000 });
+          expect(
+            await page.evaluate(
+              () =>
+                document.documentElement.scrollWidth <=
+                document.documentElement.clientWidth,
+            ),
+          ).toBe(true);
+          await expect(
+            page.getByRole("link", { name: "Back to home", exact: true }),
+          ).toBeVisible();
+          if (width !== 768)
+            await captureAuthEvidence(page, `skeleton-${mode}-${width}`);
+        }
+        await page.emulateMedia({ reducedMotion: "no-preference" });
+        await expect(
+          skeleton.locator('[aria-hidden="true"]').first(),
+        ).toHaveCSS("animation-name", "pulse");
+        holding = false;
+        await Promise.all(held.splice(0).map((route) => route.continue()));
+        await expect(page.getByLabel(/email address/i)).toBeVisible({
+          timeout: 30000,
+        });
+        await expect(skeleton).toHaveCount(0);
+        if (mode === "sign-up")
+          await expect(page.getByLabel(/first name/i)).toBeVisible();
+      } finally {
+        holding = false;
+        await Promise.all(
+          held.splice(0).map((route) => route.abort().catch(() => {})),
+        );
+      }
+    });
+  }
+
   test("Rive loads from this origin and yields to reduced motion", async ({
     page,
   }) => {
@@ -405,6 +477,35 @@ test.describe("Clerk account flows", () => {
         await page.goto(`/${route}`);
         await page.waitForFunction(() => window.Clerk?.loaded);
         await expect(page.getByLabel(/email address/i)).toBeVisible();
+        const switchLink = page.getByRole("link", {
+          name: route === "sign-in" ? "Sign up" : "Sign in",
+          exact: true,
+        });
+        await expect(switchLink).toBeVisible();
+        const switchRow = page
+          .locator(".cl-footerAction")
+          .filter({ has: switchLink });
+        await expect(switchRow).toHaveCSS("align-items", "baseline");
+        await expect(switchRow).toHaveCSS("justify-content", "center");
+        const alignment = await switchRow.evaluate((row) => {
+          const text = row.querySelector(".cl-footerActionText")!;
+          const link = row.querySelector(".cl-footerActionLink")!;
+          const textStyle = getComputedStyle(text);
+          const linkStyle = getComputedStyle(link);
+          return {
+            textSize: textStyle.fontSize,
+            linkSize: linkStyle.fontSize,
+            textLine: textStyle.lineHeight,
+            linkLine: linkStyle.lineHeight,
+            topDifference: Math.abs(
+              text.getBoundingClientRect().top -
+                link.getBoundingClientRect().top,
+            ),
+          };
+        });
+        expect(alignment.textSize).toBe(alignment.linkSize);
+        expect(alignment.textLine).toBe(alignment.linkLine);
+        expect(alignment.topDifference).toBeLessThanOrEqual(1);
         await expect(
           page.getByRole("navigation", { name: "Account navigation" }),
         ).toHaveCount(0);

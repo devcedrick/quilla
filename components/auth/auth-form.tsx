@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import { authRoutes } from "@/lib/auth/routes";
 import { clerkAppearance } from "./clerk-appearance";
+import { AuthFormSkeleton } from "./auth-form-skeleton";
 
 export function AuthForm({
   mode,
@@ -25,12 +26,7 @@ export function AuthForm({
       data-testid="auth-form"
     >
       <ClerkLoading>
-        <p
-          role="status"
-          className="w-full rounded-xl border border-border bg-background p-5 leading-relaxed text-muted-foreground"
-        >
-          Loading secure account form…
-        </p>
+        <AuthFormSkeleton mode={mode} />
       </ClerkLoading>
       <ClerkFailed>
         <p
@@ -44,6 +40,7 @@ export function AuthForm({
       <ClerkLoaded>
         {mode === "sign-in" ? (
           <SignIn
+            fallback={<AuthFormSkeleton mode={mode} />}
             appearance={clerkAppearance}
             routing="path"
             path={authRoutes.signIn}
@@ -54,6 +51,7 @@ export function AuthForm({
           />
         ) : (
           <SignUp
+            fallback={<AuthFormSkeleton mode={mode} />}
             appearance={clerkAppearance}
             routing="path"
             path={authRoutes.signUp}

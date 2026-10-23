@@ -4,25 +4,30 @@ import { AuthPageShell } from "./auth-page-shell";
 import { AuthForm } from "./auth-form";
 import { clerkAppearance } from "./clerk-appearance";
 import { WelcomeMascot } from "./welcome-mascot";
+import { AuthFormSkeleton } from "./auth-form-skeleton";
 
 const provider = vi.hoisted(() => ({
-  state: "loaded" as "loaded" | "loading" | "failed",
+  state: "loaded" as "loaded" | "loading" | "failed" | "mounting",
   signIn: vi.fn(),
   signUp: vi.fn(),
 }));
 vi.mock("@clerk/nextjs", () => ({
   ClerkLoaded: ({ children }: { children: React.ReactNode }) =>
-    provider.state === "loaded" ? children : null,
+    provider.state === "loaded" || provider.state === "mounting"
+      ? children
+      : null,
   ClerkLoading: ({ children }: { children: React.ReactNode }) =>
     provider.state === "loading" ? children : null,
   ClerkFailed: ({ children }: { children: React.ReactNode }) =>
     provider.state === "failed" ? children : null,
   SignIn: (props: Record<string, unknown>) => {
     provider.signIn(props);
+    if (provider.state === "mounting") return props.fallback as React.ReactNode;
     return <div>Managed sign-in form</div>;
   },
   SignUp: (props: Record<string, unknown>) => {
     provider.signUp(props);
+    if (provider.state === "mounting") return props.fallback as React.ReactNode;
     return <div>Managed sign-up form</div>;
   },
 }));
@@ -119,6 +124,19 @@ describe("account branding", () => {
       ],
     ).toMatchObject({ minHeight: "3rem", padding: "0.75rem 0.875rem" });
   });
+  it("aligns account-switch text and links on a shared, wrapping baseline", () => {
+    expect(clerkAppearance.elements.footerAction).toMatchObject({
+      alignItems: "baseline",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      columnGap: "0.25rem",
+    });
+    const { footerActionText: text, footerActionLink: link } =
+      clerkAppearance.elements;
+    expect(text.fontSize).toBe(link.fontSize);
+    expect(text.lineHeight).toBe(link.lineHeight);
+    expect(link).toMatchObject({ padding: 0, textDecoration: "underline" });
+  });
 
   it.each(["sign-in", "sign-up"] as const)(
     "applies shared appearance without changing %s routing",
@@ -130,6 +148,10 @@ describe("account branding", () => {
       expect(called).toHaveBeenCalledExactlyOnceWith(
         expect.objectContaining({
           appearance: clerkAppearance,
+          fallback: expect.objectContaining({
+            type: AuthFormSkeleton,
+            props: { mode },
+          }),
           routing: "path",
           path: `/${mode}`,
           forceRedirectUrl: "/dashboard?from=exam",
@@ -154,6 +176,22 @@ describe("account branding", () => {
       expect(html).not.toContain("Managed sign-in form");
       expect(provider.signIn).not.toHaveBeenCalled();
       expect(provider.signUp).not.toHaveBeenCalled();
+      expect(html.includes('data-testid="auth-form-skeleton"')).toBe(
+        state === "loading",
+      );
+    },
+  );
+  it.each(["sign-in", "sign-up"] as const)(
+    "keeps a skeleton while the loaded provider mounts %s",
+    (mode) => {
+      provider.state = "mounting";
+      const html = renderToStaticMarkup(
+        <AuthForm mode={mode} destination="/dashboard" />,
+      );
+      expect(html).toContain('data-testid="auth-form-skeleton"');
+      expect(html).toContain(`data-mode="${mode}"`);
+      expect(html).not.toContain("Managed sign-");
+      expect(html).not.toContain("<input");
     },
   );
 });
