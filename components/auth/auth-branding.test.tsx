@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { AuthPageShell } from "./auth-page-shell";
 import { AuthForm } from "./auth-form";
 import { clerkAppearance } from "./clerk-appearance";
+import { WelcomeMascot } from "./welcome-mascot";
 
 const provider = vi.hoisted(() => ({
   state: "loaded" as "loaded" | "loading" | "failed",
@@ -58,17 +59,19 @@ describe("account branding", () => {
       expect(html).toContain('alt=""');
       expect(html).toContain('aria-hidden="true"');
       expect(html.includes("kuwi-auth-welcome.svg")).toBe(layout === "auth");
-      expect(html.includes('aria-label="Pause mascot animation"')).toBe(
-        layout === "auth",
-      );
-      if (layout === "auth") {
-        expect(html).toContain('data-testid="kuwi-eyelid-near"');
-        expect(html).toContain('data-testid="kuwi-eyelid-far"');
-        expect(html).toContain('viewBox="0 0 1368 1150"');
-        expect(html).not.toContain("auth-kuwi-float");
-      }
     },
   );
+
+  it("server-renders the approved pose without animation layers or controls", () => {
+    const html = renderToStaticMarkup(<WelcomeMascot />);
+    expect(html).toContain('src="/brand/kuwi/kuwi-auth-welcome.svg"');
+    expect(html).toContain('alt=""');
+    expect(html).toContain('aria-hidden="true"');
+    expect(html).not.toContain("<style");
+    expect(html).not.toContain("<svg");
+    expect(html).not.toContain("<button");
+    expect(html).not.toContain("animation");
+  });
 
   it("defaults to compact without welcome copy on account/status surfaces", () => {
     const html = renderToStaticMarkup(

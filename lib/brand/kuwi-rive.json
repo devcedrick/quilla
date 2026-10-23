@@ -1,0 +1,17 @@
+{
+  "src": "/brand/kuwi/rive/kuwi-auth.riv",
+  "fallback": "/brand/kuwi/kuwi-auth-welcome.svg",
+  "artboard": "Kuwi Auth",
+  "stateMachine": "AccountIdle",
+  "width": 1368,
+  "height": 1150,
+  "mode": "native-mesh-wave-blink",
+  "timeline": "Welcome wave and blink",
+  "fps": 60,
+  "duration": 384,
+  "waveIntervalSeconds": 3.2,
+  "blinkIntervalSeconds": 6.4,
+  "runtimeVersion": "2.45.1",
+  "wasm": "/brand/kuwi/rive/runtime-2.45.1.wasm",
+  "wasmFallback": "/brand/kuwi/rive/runtime-2.45.1-fallback.wasm"
+}

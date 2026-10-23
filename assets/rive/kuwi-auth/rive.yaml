@@ -1,0 +1,5 @@
+name: kuwi-auth
+main: Kuwi Auth
+logs:
+  file: build/rive.log
+  problems: build/problems.log

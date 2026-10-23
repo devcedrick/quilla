@@ -1,5 +1,5 @@
 import { clerk, setupClerkTestingToken } from "@clerk/testing/playwright";
-import type { Page } from "@playwright/test";
+import type { Page, Route } from "@playwright/test";
 import { randomBytes } from "node:crypto";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -90,6 +90,196 @@ async function enterCode(page: Page) {
 }
 
 test.describe("Clerk account flows", () => {
+  test("Rive loads from this origin and yields to reduced motion", async ({
+    page,
+  }) => {
+    const runtimeRequests: string[] = [];
+    page.on("request", (request) => {
+      if (/\.wasm(?:\?|$)|\.riv(?:\?|$)/.test(request.url()))
+        runtimeRequests.push(request.url());
+    });
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto("/sign-in");
+    const root = page.getByTestId("kuwi-rive");
+    await expect(root).toHaveAttribute("data-rive-state", "ready", {
+      timeout: 15000,
+    });
+    const canvas = root.locator("canvas");
+    await expect(canvas).toBeVisible();
+    const playback = page.getByTestId("kuwi-playback");
+    await expect(playback).toHaveAttribute("data-playing", "true");
+    // Read decorative pixels only; do not retain an authentication screenshot.
+    const fingerprint = () =>
+      canvas.evaluate((element: HTMLCanvasElement) => {
+        const pixels = element
+          .getContext("2d")!
+          .getImageData(0, 0, element.width, element.height).data;
+        let hash = 0;
+        for (let i = 0; i < pixels.length; i++)
+          hash = (Math.imul(hash, 31) + pixels[i]) | 0;
+        return hash;
+      });
+    const firstFrame = await fingerprint();
+    await expect.poll(fingerprint, { timeout: 5000 }).not.toBe(firstFrame);
+    await expect(root.getByRole("button")).toHaveCount(0);
+    // Exercise visibility events without relying on headless tab policy.
+    await page.evaluate(() => {
+      Object.defineProperty(document, "hidden", {
+        configurable: true,
+        value: true,
+      });
+      document.dispatchEvent(new Event("visibilitychange"));
+    });
+    await expect(playback).toHaveAttribute("data-playing", "false");
+    await page.evaluate(
+      () =>
+        new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        ),
+    );
+    const pausedFrame = await fingerprint();
+    await page.waitForTimeout(250); // Measure the hidden-page pause, not provider readiness.
+    expect(await fingerprint()).toBe(pausedFrame);
+    await page.evaluate(() => {
+      Reflect.deleteProperty(document, "hidden");
+      document.dispatchEvent(new Event("visibilitychange"));
+    });
+    await expect(playback).toHaveAttribute("data-playing", "true");
+    await expect.poll(fingerprint, { timeout: 5000 }).not.toBe(pausedFrame);
+    expect(
+      await canvas.evaluate((element: HTMLCanvasElement) => {
+        const context = element.getContext("2d");
+        if (!context || !element.width || !element.height) return false;
+        return context
+          .getImageData(0, 0, element.width, element.height)
+          .data.some((value, index) => index % 4 === 3 && value > 0);
+      }),
+    ).toBe(true);
+    expect(runtimeRequests.some((url) => url.endsWith(".riv"))).toBe(true);
+    expect(runtimeRequests.some((url) => url.endsWith(".wasm"))).toBe(true);
+    expect(
+      runtimeRequests.every(
+        (url) => new URL(url).origin === new URL(page.url()).origin,
+      ),
+    ).toBe(true);
+    await page.waitForFunction(() => window.Clerk?.loaded);
+    await expect(page.getByLabel(/email address/i)).toBeVisible();
+    await captureAuthEvidence(page, "rive-auth-desktop");
+    // The runtime updates inline canvas pixels on a ResizeObserver callback.
+    // Its CSS display size must follow the container immediately, not overflow
+    // the mobile page while waiting for that framebuffer update.
+    await page.setViewportSize({ width: 390, height: 844 });
+    const geometry = await page.evaluate(() => {
+      const root = document.querySelector('[data-testid="kuwi-rive"]')!;
+      const canvas = root.querySelector("canvas")!;
+      return {
+        pageWidth: document.documentElement.clientWidth,
+        scrollWidth: document.documentElement.scrollWidth,
+        canvasWidth: canvas.getBoundingClientRect().width,
+        rootWidth: root.getBoundingClientRect().width,
+      };
+    });
+    expect(geometry.scrollWidth).toBeLessThanOrEqual(geometry.pageWidth);
+    expect(geometry.canvasWidth).toBeLessThanOrEqual(geometry.rootWidth);
+    await captureAuthEvidence(page, "rive-auth-mobile");
+    await page.setViewportSize({ width: 390, height: 400 });
+    await expect(page.getByLabel(/email address/i)).toBeVisible();
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await expect
+      .poll(() =>
+        root.evaluate((element) => element.getBoundingClientRect().bottom),
+      )
+      .toBeLessThanOrEqual(0);
+    await expect(playback).toHaveAttribute("data-playing", "false");
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await expect(playback).toHaveAttribute("data-playing", "true");
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await expect(root).toHaveAttribute("data-rive-state", "fallback");
+    await expect(canvas).toHaveCount(0);
+    await expect(
+      page.locator('img[src$="kuwi-auth-welcome.svg"]'),
+    ).toBeVisible();
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await expect(root).toHaveAttribute("data-rive-state", "ready", {
+      timeout: 15000,
+    });
+    await page.getByRole("link", { name: "Back to home", exact: true }).click();
+    await expect(page).toHaveURL("/");
+    // Next Cache Components can retain inactive pages in a hidden Activity.
+    await expect(page.getByTestId("kuwi-rive")).toBeHidden();
+  });
+
+  test("reduced motion never downloads Rive assets", async ({ page }) => {
+    const requests: string[] = [];
+    page.on("request", (request) => {
+      if (/\.wasm(?:\?|$)|\.riv(?:\?|$)/.test(request.url()))
+        requests.push(request.url());
+    });
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto("/sign-up");
+    await page.waitForFunction(() => window.Clerk?.loaded);
+    await expect(page.getByTestId("kuwi-rive")).toHaveAttribute(
+      "data-rive-state",
+      "fallback",
+    );
+    await expect(
+      page.locator('img[src$="kuwi-auth-welcome.svg"]'),
+    ).toBeVisible();
+    await expect(page.getByTestId("kuwi-rive").locator("canvas")).toHaveCount(
+      0,
+    );
+    expect(requests).toEqual([]);
+  });
+
+  for (const failure of ["asset", "wasm", "timeout"] as const) {
+    test(`Rive ${failure} failure retains the static mascot and working form`, async ({
+      page,
+    }) => {
+      await page.emulateMedia({ reducedMotion: "no-preference" });
+      const heldRequests: Route[] = [];
+      await page.route(
+        failure !== "wasm"
+          ? "**/brand/kuwi/rive/kuwi-auth.riv"
+          : "**/brand/kuwi/rive/*.wasm",
+        (route) => {
+          if (failure === "timeout") heldRequests.push(route);
+          else return route.abort();
+        },
+      );
+      await page.goto("/sign-in");
+      await expect(page.getByTestId("kuwi-rive")).toHaveAttribute(
+        "data-rive-state",
+        "failed",
+        { timeout: 15000 },
+      );
+      await expect(
+        page.locator('img[src$="kuwi-auth-welcome.svg"]'),
+      ).toBeVisible();
+      await expect(page.getByTestId("kuwi-rive").locator("canvas")).toHaveCount(
+        0,
+      );
+      await page.waitForFunction(() => window.Clerk?.loaded);
+      await expect(page.getByLabel(/email address/i)).toBeVisible();
+      for (const request of heldRequests) await request.abort().catch(() => {});
+    });
+  }
+
+  test("without JavaScript the approved SVG remains visible", async ({
+    browser,
+  }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    try {
+      const page = await context.newPage();
+      await page.goto("/sign-in");
+      await expect(
+        page.locator('img[src$="kuwi-auth-welcome.svg"]'),
+      ).toBeVisible();
+      await expect(page.locator("canvas")).toHaveCount(0);
+    } finally {
+      await context.close();
+    }
+  });
+
   test.describe.configure({ timeout: 60000 });
   test("account typography, contrast, and text reflow use the brand tokens", async ({
     page,
@@ -272,51 +462,20 @@ test.describe("Clerk account flows", () => {
         const mascot = page.locator('img[src$="kuwi-auth-welcome.svg"]');
         await expect(mascot).toHaveAttribute("alt", "");
         await expect(mascot).toHaveAttribute("aria-hidden", "true");
-        await page.emulateMedia({ reducedMotion: "no-preference" });
-        await expect(mascot).toHaveCSS("animation-name", "none");
-        await expect(mascot).toHaveCSS("transform", "none");
-        const eyelids = page.locator(".auth-kuwi-eyelid");
-        await expect(eyelids).toHaveCount(2);
-        for (const eyelid of await eyelids.all()) {
-          await expect(eyelid).toHaveCSS("animation-name", "auth-kuwi-blink");
-          await expect(eyelid).toHaveCSS("animation-duration", "6.4s");
-          await expect(eyelid).toHaveCSS(
-            "animation-iteration-count",
-            "infinite",
-          );
-        }
-        // Sample actual open/closed frames without waiting for a wall-clock blink.
-        for (const [time, transform] of [
-          [6144, "matrix(1, 0, 0, 1, 0, 0)"],
-          [0, "matrix(1, 0, 0, 0, 0, 0)"],
-        ] as const) {
-          await eyelids.evaluateAll((groups, currentTime) => {
-            for (const group of groups) {
-              const animation = group.getAnimations()[0];
-              animation.pause();
-              animation.currentTime = currentTime;
-            }
-          }, time);
-          for (const eyelid of await eyelids.all()) {
-            await expect(eyelid).toHaveCSS("transform", transform);
-          }
+        for (const preference of ["no-preference", "reduce"] as const) {
+          await page.emulateMedia({ reducedMotion: preference });
+          await expect(mascot).toHaveCSS("animation-name", "none");
           await expect(mascot).toHaveCSS("transform", "none");
+          expect(
+            await mascot.evaluate((image) => image.getAnimations().length),
+          ).toBe(0);
         }
-        await eyelids.evaluateAll((groups) => {
-          for (const group of groups) group.getAnimations()[0].play();
-        });
-        await page
-          .getByRole("button", { name: "Pause mascot animation", exact: true })
-          .click();
-        for (const eyelid of await eyelids.all()) {
-          await expect(eyelid).toHaveCSS("animation-play-state", "paused");
-        }
-        await page
-          .getByRole("button", { name: "Resume mascot animation", exact: true })
-          .click();
-        for (const eyelid of await eyelids.all()) {
-          await expect(eyelid).toHaveCSS("animation-play-state", "running");
-        }
+        await expect(
+          page.locator(".auth-kuwi-eyelid, .auth-kuwi-wing"),
+        ).toHaveCount(0);
+        await expect(
+          page.getByRole("button", { name: /mascot animation/i }),
+        ).toHaveCount(0);
         expect(
           await page.evaluate(
             () =>
@@ -343,20 +502,6 @@ test.describe("Clerk account flows", () => {
           page.getByRole("button", { name: "Continue", exact: true }),
         ).toHaveCSS("box-shadow", "none");
         await page.emulateMedia({ reducedMotion: "reduce" });
-        await expect(mascot).toHaveCSS("animation-name", "none");
-        for (const eyelid of await eyelids.all()) {
-          await expect(eyelid).toHaveCSS("animation-name", "none");
-          await expect(eyelid).toHaveCSS(
-            "transform",
-            "matrix(1, 0, 0, 0, 0, 0)",
-          );
-        }
-        await expect(
-          page.getByRole("button", {
-            name: "Pause mascot animation",
-            exact: true,
-          }),
-        ).toBeHidden();
         await expect(
           page.getByRole("button", { name: "Continue", exact: true }),
         ).toHaveCSS("transition-duration", "0s");
@@ -604,6 +749,7 @@ test.describe("Clerk account flows", () => {
     await page.goto("/sign-in");
     await clerk.signIn({ page, emailAddress: account.email });
     await page.goto("/dashboard");
+    await page.waitForFunction(() => window.Clerk?.loaded);
     await expect(page.getByTestId("account-status")).toBeVisible();
     const anonymousContext = await browser.newContext({
       baseURL: new URL(page.url()).origin,
@@ -619,6 +765,10 @@ test.describe("Clerk account flows", () => {
         emailAddress: secondAccount.email,
       });
       await anonymous.goto("/dashboard");
+      // A full navigation boots this context's provider again. Await its real
+      // readiness within the existing test deadline, then keep the unchanged
+      // protected-content and user-isolation assertions below.
+      await anonymous.waitForFunction(() => window.Clerk?.loaded);
       await expect(anonymous.getByTestId("account-status")).toBeVisible();
       expect(await page.evaluate(() => window.Clerk.user?.id)).toBe(account.id);
       expect(await anonymous.evaluate(() => window.Clerk.user?.id)).toBe(
@@ -629,6 +779,7 @@ test.describe("Clerk account flows", () => {
         .click();
       await expect(anonymous).toHaveURL(/\/$/);
       await page.reload();
+      await page.waitForFunction(() => window.Clerk?.loaded);
       await expect(page.getByTestId("account-status")).toBeVisible();
     } finally {
       await anonymousContext.close();
