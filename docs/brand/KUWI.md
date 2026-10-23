@@ -73,7 +73,7 @@ PNG's exact dimensions. A vector trace cannot be mathematically identical to
 the antialiased raster input, so the measured values are used instead of a
 claim of 100% equivalence.
 
-To trace all four vector assets from the committed source PNGs:
+To trace all vector assets from the committed source PNGs:
 
 ```powershell
 python scripts/trace-kuwi-assets.py
@@ -85,3 +85,30 @@ changes remain reproducible and reviewable.
 
 The character reference sheet and raster sources are documentation assets;
 they are not requested by the landing page at runtime.
+
+## Account welcome variant — S02.2.2
+
+The maintainer approved the **third candidate** on **2026-10-23** ("I like the 3rd one."). It is a grounded, right-facing welcoming-guide pose with one open wing. The Q-tail's terminal points lower-right rather than mirroring the brand mark. The landing hero, marks, lockup, and application icons are unchanged.
+
+- Source: `sources/kuwi-auth-welcome-source.png`, 1368 × 1150 RGBA, 839,768 bytes, genuine transparency.
+- Runtime: `public/brand/kuwi/kuwi-auth-welcome.svg`, 355,774 bytes, path-based artwork with no embedded raster.
+- The native-size RGBA comparison measured **99.0492% normalized mean-channel similarity** after rendering with Sharp. This is a reproduction metric, not a claim of pixel identity or a substitute for inspecting the silhouette, alpha edges, and Q-tail at display sizes.
+- Created with the built-in image-generation tool, using the approved hero PNG and character reference sheet. The first two candidates had a mirrored tail and were not adopted. The approved third candidate is retained unchanged as the source PNG.
+
+Generation brief: create one transparent full-body Kuwi for the left panel of the account pages, body slightly turned toward the right-hand form, both feet grounded, a gentle smile, one open welcoming wing, and the other wing relaxed. Preserve the approved blue/cream/marigold palette, swept crown, deep-ink outlines, proportions, vector-friendly shading, and readable clockwise Q-tail. No props, clothing, text, backgrounds, government imagery, or exam-success symbolism.
+
+The final edit prompt was:
+
+> Edit this image with ONE specific change: HORIZONTALLY FLIP ONLY THE YELLOW LOOP-SHAPED TAIL on the LEFT side of the bird, within that tail's own bounding box. Do NOT flip the blue bird, face, body, feet, crown or outstretched wing. Keep the tail located on the left of the bird, but mirror ONLY that yellow tail shape and its dark outline so its small pointed flourish is now at the LOWER RIGHT of the loop, pointing down and right, like the diagonal stroke of a normal capital letter Q. Right now that flourish is at the LOWER LEFT pointing left, which is wrong; it must visibly move to the LOWER RIGHT. Keep the loop's center genuinely transparent. Let the small lower-right flourish project visibly below/beside the resting wing so it is not hidden. Keep the rest of the illustration unchanged: the bird faces RIGHT, its rightward welcoming wing stays extended on the viewer's RIGHT, both feet stay grounded, same expression, style, palette, shading, proportions and framing. One single character cutout, genuine transparent alpha background. No new objects, text, background, signatures or watermarks.
+
+The committed source, not a fresh generation, is the reproducible input to the pinned tracing profile. Trace only this asset without rewriting the others:
+
+```powershell
+python scripts/trace-kuwi-assets.py --asset kuwi-auth-welcome-source.png
+```
+
+With no selector the script traces all five source assets. Unknown selectors fail before tracing. Run the selector regression tests with `python -B -m unittest discover -s scripts` in the same environment containing `vtracer==1.0.0a4`.
+
+The illustration is decorative (`alt=""`, `aria-hidden="true"`). Following the maintainer's layout-reference feedback, desktop auth pages place Kuwi over a marigold disc in an inset ink-blue panel within one rounded split-screen surface. Below 1024 px it becomes a small accent in the brand row; dashboard and account-error surfaces keep the compact, non-promotional shell. The approved illustration itself has not changed. Essential instructions remain in HTML and Clerk's accessible controls.
+
+The [Rive runbook](RIVE.md) describes the local CLI project, reproducible native image-mesh rig, and browser integration. Kuwi automatically makes a shoulder-anchored wave every 3.2 seconds and blinks every 6.4 seconds, with body, feet, and clockwise Q-tail grounded. The source PNG and static SVG are unchanged. Native vertex keyframes deform the approved pixels; this is not a separated vector/skeletal rig or the removed CSS/clipped-image puppet. Playback buttons are intentionally absent; visibility pausing and reduced-motion/static fallbacks keep this decoration independent of account access.

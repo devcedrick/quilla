@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { Suspense } from "react";
 
 import { AuthForm } from "./auth-form";
+import { AuthFormSkeleton } from "./auth-form-skeleton";
 import { AuthPageShell } from "./auth-page-shell";
 import { safeReturnTo } from "@/lib/auth/routes";
 import { readSession } from "@/lib/auth/session.server";
@@ -19,11 +20,10 @@ export function AccountPage({
 }) {
   return (
     <AuthPageShell
+      layout="auth"
       title={mode === "sign-in" ? "Welcome back" : "Create your Quilla account"}
     >
-      <Suspense
-        fallback={<p role="status">Preparing secure account access…</p>}
-      >
+      <Suspense fallback={<AuthFormSkeleton mode={mode} />}>
         <AccountContent mode={mode} searchParams={searchParams} />
       </Suspense>
     </AuthPageShell>
