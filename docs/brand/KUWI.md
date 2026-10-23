@@ -110,3 +110,7 @@ python scripts/trace-kuwi-assets.py --asset kuwi-auth-welcome-source.png
 With no selector the script traces all five source assets. Unknown selectors fail before tracing. Run the selector regression tests with `python -B -m unittest discover -s scripts` in the same environment containing `vtracer==1.0.0a4`.
 
 The illustration is decorative (`alt=""`, `aria-hidden="true"`). Following the maintainer's layout-reference feedback, desktop auth pages place Kuwi over a marigold disc in an inset ink-blue panel within one rounded split-screen surface. Below 1024 px it becomes a small accent in the brand row; dashboard and account-error surfaces keep the compact, non-promotional shell. The approved illustration itself has not changed. Essential instructions remain in HTML and Clerk's accessible controls.
+
+### Blink rig
+
+`components/auth/welcome-mascot.tsx` owns an additive SVG eyelid layer aligned to the source's 1368 × 1150 coordinate space. Two cream eyelid shapes and closed-eye ink curves briefly cover the eyes every 6.4 seconds; neither the traced asset nor the source PNG is modified. The body, feet, tail, and backdrop stay still. CSS scales only these eyelid groups from their top edge, with pause/resume support and open, static eyes under reduced motion. The rig is code-owned and does not belong in VTracer output; retracing the approved source leaves it intact. Replacing or reframing the source artwork requires realigning and visually checking both eyelids.

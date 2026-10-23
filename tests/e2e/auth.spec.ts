@@ -240,6 +240,13 @@ test.describe("Clerk account flows", () => {
         await expect(
           page.locator('[data-account-layout="auth"]'),
         ).toBeVisible();
+        await expect(page.locator('[data-account-layout="auth"]')).toHaveClass(
+          /paper-grid/,
+        );
+        await expect(page.locator('[data-account-layout="auth"]')).toHaveCSS(
+          "background-size",
+          "32px 32px, 32px 32px",
+        );
         // Clerk owns the visible step heading; the shell title remains available
         // to assistive technology without duplicating the large form headline.
         await expect(page.locator("#account-title")).toHaveClass(/sr-only/);
@@ -265,6 +272,51 @@ test.describe("Clerk account flows", () => {
         const mascot = page.locator('img[src$="kuwi-auth-welcome.svg"]');
         await expect(mascot).toHaveAttribute("alt", "");
         await expect(mascot).toHaveAttribute("aria-hidden", "true");
+        await page.emulateMedia({ reducedMotion: "no-preference" });
+        await expect(mascot).toHaveCSS("animation-name", "none");
+        await expect(mascot).toHaveCSS("transform", "none");
+        const eyelids = page.locator(".auth-kuwi-eyelid");
+        await expect(eyelids).toHaveCount(2);
+        for (const eyelid of await eyelids.all()) {
+          await expect(eyelid).toHaveCSS("animation-name", "auth-kuwi-blink");
+          await expect(eyelid).toHaveCSS("animation-duration", "6.4s");
+          await expect(eyelid).toHaveCSS(
+            "animation-iteration-count",
+            "infinite",
+          );
+        }
+        // Sample actual open/closed frames without waiting for a wall-clock blink.
+        for (const [time, transform] of [
+          [6144, "matrix(1, 0, 0, 1, 0, 0)"],
+          [0, "matrix(1, 0, 0, 0, 0, 0)"],
+        ] as const) {
+          await eyelids.evaluateAll((groups, currentTime) => {
+            for (const group of groups) {
+              const animation = group.getAnimations()[0];
+              animation.pause();
+              animation.currentTime = currentTime;
+            }
+          }, time);
+          for (const eyelid of await eyelids.all()) {
+            await expect(eyelid).toHaveCSS("transform", transform);
+          }
+          await expect(mascot).toHaveCSS("transform", "none");
+        }
+        await eyelids.evaluateAll((groups) => {
+          for (const group of groups) group.getAnimations()[0].play();
+        });
+        await page
+          .getByRole("button", { name: "Pause mascot animation", exact: true })
+          .click();
+        for (const eyelid of await eyelids.all()) {
+          await expect(eyelid).toHaveCSS("animation-play-state", "paused");
+        }
+        await page
+          .getByRole("button", { name: "Resume mascot animation", exact: true })
+          .click();
+        for (const eyelid of await eyelids.all()) {
+          await expect(eyelid).toHaveCSS("animation-play-state", "running");
+        }
         expect(
           await page.evaluate(
             () =>
@@ -291,6 +343,20 @@ test.describe("Clerk account flows", () => {
           page.getByRole("button", { name: "Continue", exact: true }),
         ).toHaveCSS("box-shadow", "none");
         await page.emulateMedia({ reducedMotion: "reduce" });
+        await expect(mascot).toHaveCSS("animation-name", "none");
+        for (const eyelid of await eyelids.all()) {
+          await expect(eyelid).toHaveCSS("animation-name", "none");
+          await expect(eyelid).toHaveCSS(
+            "transform",
+            "matrix(1, 0, 0, 0, 0, 0)",
+          );
+        }
+        await expect(
+          page.getByRole("button", {
+            name: "Pause mascot animation",
+            exact: true,
+          }),
+        ).toBeHidden();
         await expect(
           page.getByRole("button", { name: "Continue", exact: true }),
         ).toHaveCSS("transition-duration", "0s");

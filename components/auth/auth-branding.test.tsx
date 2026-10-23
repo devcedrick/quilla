@@ -41,6 +41,7 @@ describe("account branding", () => {
         </AuthPageShell>,
       );
       expect(html).toContain(`data-account-layout="${layout}"`);
+      expect(html).toContain('class="paper-grid ');
       expect(html).toContain('href="#main-content"');
       expect(html).toContain('id="main-content"');
       expect(html).toContain('href="/"');
@@ -57,6 +58,15 @@ describe("account branding", () => {
       expect(html).toContain('alt=""');
       expect(html).toContain('aria-hidden="true"');
       expect(html.includes("kuwi-auth-welcome.svg")).toBe(layout === "auth");
+      expect(html.includes('aria-label="Pause mascot animation"')).toBe(
+        layout === "auth",
+      );
+      if (layout === "auth") {
+        expect(html).toContain('data-testid="kuwi-eyelid-near"');
+        expect(html).toContain('data-testid="kuwi-eyelid-far"');
+        expect(html).toContain('viewBox="0 0 1368 1150"');
+        expect(html).not.toContain("auth-kuwi-float");
+      }
     },
   );
 
@@ -86,7 +96,6 @@ describe("account branding", () => {
     expect(auth).toMatch(/id="account-title" class="[^"]*sr-only/);
     expect(compact).not.toMatch(/id="account-title" class="[^"]*sr-only/);
     expect(auth).not.toContain("border-2");
-    expect(auth).not.toContain("paper-grid");
     expect(auth).not.toContain("A little focus. A fresh beginning.");
     expect(auth).toMatch(
       /data-testid="auth-mascot-backdrop" class="[^"]*aspect-square/,

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { WelcomeMascot } from "./welcome-mascot";
 
 const accountLink =
   "inline-flex min-h-11 items-center rounded-md text-xs font-semibold text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none";
@@ -39,7 +40,7 @@ export function AuthPageShell({
   const isAuth = layout === "auth";
   return (
     <div
-      className="flex min-h-dvh flex-col bg-background px-3 py-4 font-sans text-foreground sm:px-6 sm:py-6 lg:px-10 lg:py-8"
+      className="paper-grid flex min-h-dvh flex-col bg-background px-3 py-4 font-sans text-foreground sm:px-6 sm:py-6 lg:px-10 lg:py-8"
       data-account-layout={layout}
     >
       <a
@@ -93,14 +94,7 @@ export function AuthPageShell({
                 data-testid="auth-mascot-backdrop"
                 className="pointer-events-none absolute top-1/2 left-1/2 -z-10 hidden aspect-square w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent lg:block"
               />
-              <Image
-                src="/brand/kuwi/kuwi-auth-welcome.svg"
-                width={1368}
-                height={1150}
-                alt=""
-                aria-hidden="true"
-                className="relative h-auto w-full lg:py-4"
-              />
+              <WelcomeMascot />
             </div>
             <div className="hidden pb-1 lg:block lg:text-primary-foreground">
               <h2 className="max-w-sm font-heading text-5xl font-semibold leading-[1.08] tracking-[-0.04em] xl:text-[3.5rem]">
