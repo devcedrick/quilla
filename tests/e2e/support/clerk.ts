@@ -83,6 +83,32 @@ export async function verifyDevelopmentKeys() {
   }
 }
 
+export async function verifyConvexTemplate() {
+  try {
+    const api = developmentClerk();
+    let offset = 0;
+    while (true) {
+      const page = await api.jwtTemplates.list({ limit: 100, offset });
+      const template = page.data.find((item) => item.name === "convex");
+      if (template) {
+        if (!("aud" in template.claims) || template.claims.aud !== "convex") {
+          throw new Error("Unexpected audience");
+        }
+        return;
+      }
+      offset += page.data.length;
+      if (page.data.length === 0 || offset >= page.totalCount) break;
+    }
+  } catch {
+    throw new Error(
+      "Could not verify the development Clerk convex JWT template (provider details redacted).",
+    );
+  }
+  throw new Error(
+    "Auth tests require a development Clerk JWT template named convex with audience convex. See docs/auth/clerk-development-setup.md; no settings were changed.",
+  );
+}
+
 type Identity = {
   email: string;
   firstName: string;
@@ -108,7 +134,7 @@ export const test = base.extend<Fixtures>({
   ],
   identity: async ({}, provide) => {
     // Also enforce the guard in fixture workers (including a --no-deps run).
-    verifiedDevelopment ??= verifyDevelopmentKeys();
+    verifiedDevelopment ??= verifyDevelopmentKeys().then(verifyConvexTemplate);
     await verifiedDevelopment;
     // Each base address is unique even if subaddress restrictions change later.
     const identity = {

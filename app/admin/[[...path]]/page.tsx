@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { requireSession } from "@/lib/auth/session.server";
+import { readAccountAccess } from "@/lib/auth/account-access.server";
+import { SessionBoundary } from "@/components/auth/session-boundary";
+import { ApplicationAccessBoundary } from "@/components/auth/application-access-boundary";
+import { AuthPageShell } from "@/components/auth/auth-page-shell";
 
 export default function ReservedAdminPage() {
   return (
@@ -11,7 +14,18 @@ export default function ReservedAdminPage() {
 }
 
 async function ReservedAdminContent() {
-  await requireSession("/admin");
-  // Authentication alone never grants an admin role. #22 must add authorization.
-  return notFound();
+  const { clerkUserId, access } = await readAccountAccess("/admin");
+  if (access.status === "active") {
+    // Users are denied; admins remain unavailable until administrative UI ships.
+    // Future admin data functions must independently call requireAdmin(ctx).
+    if (access.role !== "admin") return notFound();
+    return notFound();
+  }
+  return (
+    <AuthPageShell title="Your Quilla account">
+      <SessionBoundary userId={clerkUserId}>
+        <ApplicationAccessBoundary />
+      </SessionBoundary>
+    </AuthPageShell>
+  );
 }

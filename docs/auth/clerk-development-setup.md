@@ -79,12 +79,12 @@ Dashboard labels may move; consult [Clerk's email/password setup](https://clerk.
 
 Keep actual values in the ignored root `.env.local` or an approved secret store. Never put values in this runbook, issues, PRs, screenshots, shell command arguments, or test output.
 
-| Variable                            | Consumer and requirement                                                                                                                             |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Quilla's browser/server Clerk integration; must start with `pk_test_` for development tests                                                          |
-| `CLERK_SECRET_KEY`                  | Server and test setup only; must start with `sk_test_` for development tests; never expose through `NEXT_PUBLIC_*`                                   |
-| `NEXT_PUBLIC_CONVEX_URL`            | Existing Quilla provider and E2E server build; preserve the configured development endpoint                                                          |
-| `CLERK_JWT_ISSUER_DOMAIN`           | Existing Convex authentication configuration; not evidence that the two Clerk keys are paired; no Convex changes or deployment are part of this task |
+| Variable                            | Consumer and requirement                                                                                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Quilla's browser/server Clerk integration; must start with `pk_test_` for development tests                                                                   |
+| `CLERK_SECRET_KEY`                  | Server and test setup only; must start with `sk_test_` for development tests; never expose through `NEXT_PUBLIC_*`                                            |
+| `NEXT_PUBLIC_CONVEX_URL`            | Existing Quilla provider and E2E server build; preserve the configured development endpoint                                                                   |
+| `CLERK_JWT_ISSUER_DOMAIN`           | Convex deployment authentication configuration; must match the Clerk JWT issuer. S02.3 requires deployed profile functions; see the integration section below |
 
 Do not rotate keys, replace secrets, or edit CI as part of a verification check. The two Clerk prefixes alone do not establish that both credentials belong to the same instance.
 
@@ -140,7 +140,45 @@ Format and check only this file with the installed Prettier and run `git diff --
 
 This documentation-only change adds no runtime code, dependencies, schemas, or deployment configuration. Lint, typecheck, unit tests, Knip, build, and browser tests are not required to demonstrate its behavior and may be recorded as not run for this change. Registration/recovery E2E verification cannot be claimed until #21 supplies those routes and tests. Human review, a focused PR, and applicable CI checks remain part of delivery; this document alone does not close #77.
 
-The paragraph above records the original #77 documentation delivery. The S02.2 runtime change requires lint, typecheck, unit tests, Knip, build, and E2E verification, with actual results reported in its handoff.
+The paragraph above records the original #77 documentation delivery. Runtime account changes require lint, typecheck, unit tests, Knip, build, and E2E verification, with actual results reported in their handoff.
+
+## S02.3: Clerk-to-Convex application access
+
+The profile implementation adds application authorization without changing the approved Clerk registration policy. Profiles are created on first protected visit, not by a signup webhook. They store the verified canonical identity key, role, and account status—not copied names or email. Onboarding remains #23; audit logging and administrative management remain #24/#25. See [ADR 0006](../ADR/0006-application-profiles-and-authorization.md).
+
+### Integration prerequisites and safe verification
+
+1. Privately confirm the web application's `NEXT_PUBLIC_CONVEX_URL` and the CLI's `CONVEX_DEPLOYMENT` name refer to the same approved development deployment. Never deploy merely because a local environment file exists. Confirm there is no production deploy-key override.
+2. In the intended Clerk development instance, verify a JWT template named **convex** exists using [Convex's Clerk setup](https://docs.convex.dev/auth/clerk). Its audience must be `convex`; its issuer must correspond to the instance used by the browser and match the deployment's `CLERK_JWT_ISSUER_DOMAIN`. Configuration corrections require separate explicit approval; do not alter settings to make a test pass.
+3. `CLERK_JWT_ISSUER_DOMAIN` is consumed in the Convex deployment, not supplied by browser props or the CI web-server environment. It must be a valid HTTPS issuer origin. Missing/invalid configuration errors name the variable without echoing its value. The existing auth provider continues checking audience `convex`.
+4. After approval for the exact development target, push the schema/functions with supported Convex tooling and regenerate bindings. Do not hand-edit generated files. A web build alone does not deploy the functions.
+5. With a synthetic development account, obtain `session.getToken({ template: "convex" })` in memory, then call `users.currentAccess` with that token. Report only success/failure; never print tokens, decoded claims, issuer values, or provider responses. A valid Clerk session does not by itself prove Convex authentication works.
+6. Visit `/dashboard`. First access creates an active `user`; reload must retain the same application profile ID. Repeated sign-in must not change role or status. Verify unauthenticated requests reveal no protected payload and two synthetic identities obtain different profiles.
+7. Exercise suspended/admin states in the in-memory tests, not through a newly exposed management endpoint. Suspended accounts see a notice and sign-out without sign-in loops. Admin UI remains unavailable. Production admin provisioning and status changes are deliberately not included.
+
+No CI workflow changes are needed: the web server already receives the public Convex URL; the existing Convex deployment separately needs the issuer configuration and deployed functions. Validate the CI endpoint privately before running account journeys against it. Keep auth traces, screenshots, videos, and saved session state disabled.
+
+Clerk fixture cleanup removes only recorded synthetic identities. Minimal synthetic Convex profiles can remain in the approved development instance because account-deletion synchronization and administrative cleanup are not implemented. Do not add an unaudited delete function or enumerate/delete unrelated profiles. Record this footprint in the verification handoff.
+
+### Account-access troubleshooting
+
+- Clerk succeeds but Quilla access fails: verify the development target, deployed `users` functions, JWT template name/audience, and issuer pairing. Report sanitized pass/fail results only; do not rotate keys or enable Google.
+- A new profile is loading: wait for Convex authentication and the bootstrap mutation. Failed bootstrap offers an explicit retry; do not permit learning content before the server reauthorizes the created profile.
+- A suspended account cannot open `/dashboard`: this is intentional. Keep public navigation/sign-out available and handle status changes through future audit-backed administrative controls.
+- A signed-in admin receives not-found at `/admin`: administrative functionality is still unimplemented; role assignment does not create an admin dashboard.
+
+### Dependency audit during S02.3
+
+On 2026-10-24, npm reported seven advisories (one critical, five high, one moderate), including critical reports for Next.js 16.4.0. Next's production build emitted its security-upgrade warning and stopped the first invocation; a retry can continue without fixing the vulnerability. This is not a clean security audit. All reported affected package versions match `origin/main`'s lockfile: Next.js, shadcn/registry, body-parser, fast-uri, undici, and the nested Zod copies. No automatic dependency upgrade or broad allowlist is part of S02.3. A separate compatible security update is strongly recommended before release; passing functional tests does not resolve these advisories.
+
+### S02.3 verification handoff (2026-10-25)
+
+- Deployed the users schema and profile functions only to the explicitly approved development deployment `perceptive-dodo-136` in project `quilla`. No Clerk Dashboard settings, credentials, CI workflows, or production deployment were changed.
+- Lint, application and Convex strict typechecks, all 124 unit tests, Knip, changed-file formatting, and whitespace checks passed. Production build passed after the security notice's first-invocation stop; the warning remains unresolved. Independent authorization review found no actionable defects.
+- The port-3100 browser run finished with 32 passes and eight failures. Seven failures were protected-account journeys blocked by a missing Clerk `convex` JWT template; a read-only development-instance check confirmed its absence and the approved Convex endpoint pairing. The unchanged mobile-motion test also failed in the full run but passed when rerun alone. Assertions were not weakened.
+- Port-3000 no-JavaScript landing smoke passed. The targeted auth smoke now fails explicitly at the JWT prerequisite, before creating synthetic account fixtures; the dependent protected-flow test did not run.
+- Redacted Gitleaks scanning found no leaks in tracked/non-ignored source. An initial full-directory scan included ignored local environment/build/test artifacts and reported findings; no broad allowlist was added. Installed dependencies are excluded by the scanner's existing defaults.
+- Completion remains blocked on the maintainer creating the development `convex` JWT template with audience `convex`, followed by fresh protected-flow verification on both ports. Human authorization-boundary review and green CI remain required. Commit and PR delivery are tracked separately from this dated verification checkpoint.
 
 ### Existing dependency advisory
 

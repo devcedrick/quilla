@@ -20,11 +20,16 @@ export async function readSession() {
   }
 }
 
-export async function requireSession(returnTo: string) {
+export async function requireVerifiedSession(returnTo: string) {
   const session = await readSession();
   if (!hasActiveSession(session) || !session.userId) {
     const requested = (await headers()).get("x-quilla-return-to") ?? returnTo;
     redirect(signInDestination(requested));
   }
+  return { ...session, userId: session.userId };
+}
+
+export async function requireSession(returnTo: string) {
+  const session = await requireVerifiedSession(returnTo);
   return { userId: session.userId };
 }
