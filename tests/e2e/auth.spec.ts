@@ -6,6 +6,28 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { AccountError } from "@/components/auth/account-error";
 import { developmentClerk, expect, test } from "./support/clerk";
 import { captureAuthEvidence } from "./support/auth-evidence";
+import { ConvexHttpClient } from "convex/browser";
+import { api } from "@/convex/_generated/api";
+
+async function currentApplicationAccess(page: Page) {
+  // Keep the synthetic identity token in memory only, outside assertion payloads.
+  try {
+    const token = await page.evaluate(() =>
+      window.Clerk.session?.getToken({ template: "convex" }),
+    );
+    if (!token || !process.env.NEXT_PUBLIC_CONVEX_URL)
+      throw new Error("Missing test configuration");
+    const client = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL, {
+      logger: false,
+    });
+    client.setAuth(token);
+    return await client.query(api.users.currentAccess, {});
+  } catch {
+    throw new Error(
+      "Synthetic account application-access verification failed (details redacted).",
+    );
+  }
+}
 
 async function checkAccountViewports(
   page: Page,
@@ -90,6 +112,23 @@ async function enterCode(page: Page) {
 }
 
 test.describe("Clerk account flows", () => {
+  test("first protected access creates a stable default profile across reloads", async ({
+    page,
+    account,
+  }) => {
+    await page.goto("/sign-in");
+    await clerk.signIn({ page, emailAddress: account.email });
+    await page.goto("/dashboard");
+    await expect(page.getByTestId("account-status")).toBeVisible();
+    const first = await currentApplicationAccess(page);
+    expect(first.status).toBe("active");
+    if (first.status !== "active")
+      throw new Error("Expected active synthetic profile");
+    expect(first.role).toBe("user");
+    await page.reload();
+    await expect(page.getByTestId("account-status")).toBeVisible();
+    expect(await currentApplicationAccess(page)).toEqual(first);
+  });
   for (const mode of ["sign-in", "sign-up"] as const) {
     test(`${mode} skeleton stays usable while the provider loads and yields to the form`, async ({
       page,
@@ -875,6 +914,13 @@ test.describe("Clerk account flows", () => {
       expect(await anonymous.evaluate(() => window.Clerk.user?.id)).toBe(
         secondAccount.id,
       );
+      const firstAccess = await currentApplicationAccess(page);
+      const secondAccess = await currentApplicationAccess(anonymous);
+      expect(firstAccess.status).toBe("active");
+      expect(secondAccess.status).toBe("active");
+      if (firstAccess.status !== "active" || secondAccess.status !== "active")
+        throw new Error("Expected isolated active synthetic profiles");
+      expect(firstAccess.userId).not.toBe(secondAccess.userId);
       await anonymous
         .getByRole("button", { name: "Sign out", exact: true })
         .click();

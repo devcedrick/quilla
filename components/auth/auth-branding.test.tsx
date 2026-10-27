@@ -1,5 +1,8 @@
-import { renderToStaticMarkup } from "react-dom/server";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+// @vitest-environment happy-dom
+import { act } from "react";
+import { createRoot, hydrateRoot, type Root } from "react-dom/client";
+import { renderToStaticMarkup, renderToString } from "react-dom/server";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { AuthPageShell } from "./auth-page-shell";
 import { AuthForm } from "./auth-form";
 import { clerkAppearance } from "./clerk-appearance";
@@ -32,11 +35,73 @@ vi.mock("@clerk/nextjs", () => ({
   },
 }));
 
+let mountedRoot: Root | undefined;
+async function renderClientForm(
+  mode: "sign-in" | "sign-up",
+  destination = "/dashboard",
+) {
+  const container = document.createElement("div");
+  document.body.append(container);
+  await act(async () => {
+    mountedRoot = createRoot(container);
+    mountedRoot.render(<AuthForm mode={mode} destination={destination} />);
+  });
+  return container.innerHTML;
+}
+
 describe("account branding", () => {
   beforeEach(() => {
+    Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
     vi.clearAllMocks();
     provider.state = "loaded";
   });
+  afterEach(async () => {
+    await act(async () => mountedRoot?.unmount());
+    mountedRoot = undefined;
+    document.body.replaceChildren();
+  });
+
+  it.each(["sign-in", "sign-up"] as const)(
+    "server-renders only the stable %s skeleton even if Clerk is already loaded",
+    (mode) => {
+      const html = renderToString(
+        <AuthForm mode={mode} destination="/dashboard" />,
+      );
+      expect(html).toContain('data-testid="auth-form-skeleton"');
+      expect(provider.signIn).not.toHaveBeenCalled();
+      expect(provider.signUp).not.toHaveBeenCalled();
+    },
+  );
+
+  it.each(["sign-in", "sign-up"] as const)(
+    "hydrates %s without a mismatch when Clerk loads before the browser's first render",
+    async (mode) => {
+      provider.state = "loading";
+      const container = document.createElement("div");
+      container.innerHTML = renderToString(
+        <AuthForm mode={mode} destination="/dashboard" />,
+      );
+      document.body.append(container);
+      expect(
+        container.querySelector('[data-testid="auth-form-skeleton"]'),
+      ).not.toBeNull();
+      // This reproduces the race: server saw loading, browser already sees loaded.
+      provider.state = "loaded";
+      const recoverableError = vi.fn();
+      await act(async () => {
+        mountedRoot = hydrateRoot(
+          container,
+          <AuthForm mode={mode} destination="/dashboard" />,
+          { onRecoverableError: recoverableError },
+        );
+      });
+      expect(recoverableError).not.toHaveBeenCalled();
+      expect(container.textContent).toContain(`Managed ${mode} form`);
+      expect(
+        container.querySelector('[data-testid="auth-form-skeleton"]'),
+      ).toBeNull();
+    },
+  );
 
   it.each(["auth", "compact"] as const)(
     "keeps navigation and legal content in the %s shell",
@@ -140,10 +205,8 @@ describe("account branding", () => {
 
   it.each(["sign-in", "sign-up"] as const)(
     "applies shared appearance without changing %s routing",
-    (mode) => {
-      renderToStaticMarkup(
-        <AuthForm mode={mode} destination="/dashboard?from=exam" />,
-      );
+    async (mode) => {
+      await renderClientForm(mode, "/dashboard?from=exam");
       const called = mode === "sign-in" ? provider.signIn : provider.signUp;
       expect(called).toHaveBeenCalledExactlyOnceWith(
         expect.objectContaining({
@@ -165,11 +228,9 @@ describe("account branding", () => {
 
   it.each(["loading", "failed"] as const)(
     "keeps %s state accessible without rendering credential controls",
-    (state) => {
+    async (state) => {
       provider.state = state;
-      const html = renderToStaticMarkup(
-        <AuthForm mode="sign-in" destination="/dashboard" />,
-      );
+      const html = await renderClientForm("sign-in");
       expect(html).toContain(
         `role="${state === "loading" ? "status" : "alert"}"`,
       );
@@ -183,11 +244,9 @@ describe("account branding", () => {
   );
   it.each(["sign-in", "sign-up"] as const)(
     "keeps a skeleton while the loaded provider mounts %s",
-    (mode) => {
+    async (mode) => {
       provider.state = "mounting";
-      const html = renderToStaticMarkup(
-        <AuthForm mode={mode} destination="/dashboard" />,
-      );
+      const html = await renderClientForm(mode);
       expect(html).toContain('data-testid="auth-form-skeleton"');
       expect(html).toContain(`data-mode="${mode}"`);
       expect(html).not.toContain("Managed sign-");

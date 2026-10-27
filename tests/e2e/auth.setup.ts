@@ -1,9 +1,11 @@
 import { clerkSetup } from "@clerk/testing/playwright";
 import { test } from "@playwright/test";
-import { verifyDevelopmentKeys } from "./support/clerk";
+import { verifyConvexTemplate, verifyDevelopmentKeys } from "./support/clerk";
 
 test("validate development credentials and obtain testing token", async () => {
   await verifyDevelopmentKeys();
+  // Fail before synthetic fixture creation rather than timing out at dashboard access.
+  await verifyConvexTemplate();
   try {
     await clerkSetup({
       publishableKey: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
