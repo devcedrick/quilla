@@ -1,6 +1,5 @@
 import {
   ArrowDown,
-  ArrowRight,
   BookOpenCheck,
   BrainCircuit,
   Check,
@@ -14,13 +13,10 @@ import {
   Target,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 import { LandingAnimation } from "@/components/landing/landing-animation";
+import { LandingAccountActions } from "./landing-account-actions";
 import { cn } from "@/lib/utils";
-
-const primaryLink =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-[0_5px_0_var(--color-ink-shadow)] transition-[transform,box-shadow,background-color] hover:-translate-y-0.5 hover:bg-primary/92 hover:shadow-[0_7px_0_var(--color-ink-shadow)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring active:translate-y-0 active:shadow-[0_3px_0_var(--color-ink-shadow)]";
 
 const secondaryLink =
   "inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-foreground/25 bg-background/75 px-5 py-3 text-sm font-bold text-foreground transition-colors hover:border-foreground/45 hover:bg-card focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring";
@@ -142,20 +138,7 @@ export function LandingPage() {
             className="ml-auto flex items-center gap-2 lg:ml-0"
             data-testid="header-auth-actions"
           >
-            <Link
-              className="inline-flex min-h-11 items-center rounded-full px-3 text-base font-bold underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-              href="/sign-in"
-              prefetch={false}
-            >
-              Sign in
-            </Link>
-            <Link
-              className={cn(primaryLink, "hidden text-base sm:inline-flex")}
-              href="/sign-up"
-              prefetch={false}
-            >
-              Create your account
-            </Link>
+            <LandingAccountActions placement="header" />
           </div>
         </div>
       </header>
@@ -214,10 +197,7 @@ export function LandingPage() {
                 className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
                 data-motion-target="hero-actions"
               >
-                <Link className={primaryLink} href="/sign-up" prefetch={false}>
-                  Create your account
-                  <ArrowRight aria-hidden="true" className="size-4" />
-                </Link>
+                <LandingAccountActions placement="hero" />
                 <a className={secondaryLink} href="#how-it-works">
                   See how it works
                   <ArrowDown aria-hidden="true" className="size-4" />
@@ -676,23 +656,7 @@ export function LandingPage() {
               >
                 Start with clarity. Keep building from there.
               </h2>
-              <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-                Create your account to begin the path toward a more focused,
-                explainable CSE review routine.
-              </p>
-              <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                <Link className={primaryLink} href="/sign-up" prefetch={false}>
-                  Start preparing
-                  <ArrowRight aria-hidden="true" className="size-4" />
-                </Link>
-                <Link
-                  className={secondaryLink}
-                  href="/sign-in"
-                  prefetch={false}
-                >
-                  I already have an account
-                </Link>
-              </div>
+              <LandingAccountActions placement="closing" />
             </div>
           </div>
         </section>

@@ -11,20 +11,29 @@ import { api } from "@/convex/_generated/api";
 
 async function currentApplicationAccess(page: Page) {
   // Keep the synthetic identity token in memory only, outside assertion payloads.
+  let stage = "token";
   try {
+    // Landing actions can arrive from SSR before the browser SDK is ready.
+    // Observe readiness before asking the synthetic session for a token.
+    await page.waitForFunction(
+      () => window.Clerk?.loaded && Boolean(window.Clerk.session),
+    );
     const token = await page.evaluate(() =>
       window.Clerk.session?.getToken({ template: "convex" }),
     );
-    if (!token || !process.env.NEXT_PUBLIC_CONVEX_URL)
+    if (!token) throw new Error("Missing identity token");
+    stage = "configuration";
+    if (!process.env.NEXT_PUBLIC_CONVEX_URL)
       throw new Error("Missing test configuration");
     const client = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL, {
       logger: false,
     });
     client.setAuth(token);
+    stage = "query";
     return await client.query(api.users.currentAccess, {});
   } catch {
     throw new Error(
-      "Synthetic account application-access verification failed (details redacted).",
+      `Synthetic account application-access verification failed at ${stage} (details redacted).`,
     );
   }
 }
@@ -112,6 +121,70 @@ async function enterCode(page: Page) {
 }
 
 test.describe("Clerk account flows", () => {
+  test("landing recognizes sessions without bootstrapping profiles or sharing decisions", async ({
+    page,
+    account,
+    browser,
+  }) => {
+    await page.goto("/");
+    await clerk.signIn({ page, emailAddress: account.email });
+    await expect(
+      page.getByRole("link", { name: "Go to your dashboard", exact: true }),
+    ).toHaveCount(3);
+    expect((await currentApplicationAccess(page)).status).toBe(
+      "missing_profile",
+    );
+    for (const width of [390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.reload({ waitUntil: "domcontentloaded" });
+      await expect(
+        page.getByRole("link", { name: "Go to your dashboard", exact: true }),
+      ).toHaveCount(3);
+      await expect(
+        page.getByRole("link", { name: "Create your account", exact: true }),
+      ).toHaveCount(0);
+      expect(
+        await page.evaluate(
+          () =>
+            document.documentElement.scrollWidth <=
+            document.documentElement.clientWidth,
+        ),
+      ).toBe(true);
+    }
+    expect((await currentApplicationAccess(page)).status).toBe(
+      "missing_profile",
+    );
+    // A separate anonymous request must not inherit the authenticated SSR decision.
+    const anonymous = await browser.newContext();
+    try {
+      const other = await anonymous.newPage();
+      await setupClerkTestingToken({ page: other });
+      await other.goto("/", { waitUntil: "domcontentloaded" });
+      await expect(
+        other.getByRole("link", { name: "Start preparing", exact: true }),
+      ).toHaveAttribute("href", "/sign-up");
+      await expect(
+        other.getByRole("link", { name: "Go to your dashboard", exact: true }),
+      ).toHaveCount(0);
+      await page
+        .locator('[data-motion-target="hero-actions"]')
+        .getByRole("link", { name: "Go to your dashboard", exact: true })
+        .click();
+      await expect(page).toHaveURL(/\/dashboard$/);
+      await expect(page.getByTestId("account-status")).toBeVisible();
+      expect((await currentApplicationAccess(page)).status).toBe("active");
+      await page.getByRole("button", { name: "Sign out", exact: true }).click();
+      await expect(page).toHaveURL(/\/$/);
+      await expect(
+        page.getByRole("link", { name: "Start preparing", exact: true }),
+      ).toHaveAttribute("href", "/sign-up");
+      await page.goBack();
+      await expect(page.getByTestId("account-status")).toHaveCount(0);
+    } finally {
+      await anonymous.close();
+    }
+  });
+
   test("first protected access creates a stable default profile across reloads", async ({
     page,
     account,
@@ -751,6 +824,10 @@ test.describe("Clerk account flows", () => {
     });
     expect(users.data[0]?.firstName).toBe(identity.firstName);
     expect(users.data[0]?.lastName).toBe(identity.lastName);
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+    await expect(
+      page.getByRole("link", { name: "Go to your dashboard", exact: true }),
+    ).toHaveCount(3);
   });
 
   test("password sign-in, authenticated auth-page redirect, sign-out, and back navigation", async ({
