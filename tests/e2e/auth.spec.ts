@@ -123,6 +123,8 @@ async function enterCode(page: Page) {
 async function completeOnboarding(page: Page) {
   await expect(page).toHaveURL(/\/onboarding$/);
   await page.getByRole("radio", { name: /^Professional\b/ }).check();
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await page.getByRole("button", { name: "Skip for now", exact: true }).click();
   await page
     .getByRole("button", {
       name: "Save and view diagnostic next steps",

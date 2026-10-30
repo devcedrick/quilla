@@ -18,9 +18,7 @@ for (const level of ["Professional", "Subprofessional"]) {
     const radios = page.getByRole("radio");
     await expect(radios.nth(0)).not.toBeChecked();
     await expect(radios.nth(1)).not.toBeChecked();
-    await page
-      .getByRole("button", { name: "Save and view diagnostic next steps" })
-      .click();
+    await page.getByRole("button", { name: "Continue", exact: true }).click();
     await expect(
       page.getByText("Choose an exam level.", { exact: true }),
     ).toBeVisible();
@@ -33,9 +31,15 @@ for (const level of ["Professional", "Subprofessional"]) {
     await page
       .getByRole("radio", { name: new RegExp(`^${level} Includes`) })
       .check();
+    await expect(page.getByLabel("Target exam date (optional)")).toHaveCount(0);
+    await page.getByRole("button", { name: "Continue", exact: true }).click();
+    await expect(
+      page.getByRole("heading", { name: "Have a date in mind?", exact: true }),
+    ).toBeFocused();
+    await expect(page.getByRole("radio")).toHaveCount(0);
     await page.getByLabel("Target exam date (optional)").fill("2000-01-01");
     await page
-      .getByRole("button", { name: "Save and view diagnostic next steps" })
+      .getByRole("button", { name: "Review setup", exact: true })
       .click();
     await expect(
       page.getByText("Choose today or a future date (Philippine time).", {
@@ -43,6 +47,25 @@ for (const level of ["Professional", "Subprofessional"]) {
       }),
     ).toBeVisible();
     await page.getByLabel("Target exam date (optional)").fill("2099-12-01");
+    await page
+      .getByRole("button", { name: "Review setup", exact: true })
+      .click();
+    await expect(
+      page.getByRole("heading", {
+        name: "A steady start, made yours.",
+        exact: true,
+      }),
+    ).toBeFocused();
+    await expect(page.getByLabel("Target exam date (optional)")).toHaveCount(0);
+    await page
+      .getByRole("button", { name: "Change target date", exact: true })
+      .click();
+    await expect(page.getByLabel("Target exam date (optional)")).toHaveValue(
+      "2099-12-01",
+    );
+    await page
+      .getByRole("button", { name: "Review setup", exact: true })
+      .click();
     for (const width of [390, 768, 1440]) {
       await page.setViewportSize({ width, height: 1000 });
       expect(
@@ -85,10 +108,11 @@ for (const level of ["Professional", "Subprofessional"]) {
     await page
       .getByRole("link", { name: "Go to your dashboard", exact: true })
       .click();
-    await expect(page.locator("time")).toHaveAttribute(
-      "datetime",
-      "2099-12-01",
-    );
+    await expect(
+      page
+        .getByRole("region", { name: "Preparation status", exact: true })
+        .locator("time"),
+    ).toHaveAttribute("datetime", "2099-12-01");
     await page.reload();
     await expect(
       page.getByRole("heading", { name: `${level} preparation`, exact: true }),
@@ -124,10 +148,11 @@ for (const level of ["Professional", "Subprofessional"]) {
         exact: true,
       }),
     ).toBeVisible();
-    await expect(page.locator("time")).toHaveAttribute(
-      "datetime",
-      "2099-12-01",
-    );
+    await expect(
+      page
+        .getByRole("region", { name: "Preparation status", exact: true })
+        .locator("time"),
+    ).toHaveAttribute("datetime", "2099-12-01");
     await page
       .getByRole("link", { name: "Edit preparation preferences" })
       .click();

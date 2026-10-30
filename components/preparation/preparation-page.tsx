@@ -18,7 +18,10 @@ const titles = {
 
 export function PreparationPage({ kind }: { kind: PreparationPageKind }) {
   return (
-    <AuthPageShell title={titles[kind]}>
+    <AuthPageShell
+      title={titles[kind]}
+      layout={kind === "onboarding" ? "setup" : "compact"}
+    >
       <Suspense fallback={<p role="status">Checking preparation access…</p>}>
         <PreparationResource kind={kind} />
       </Suspense>
