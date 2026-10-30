@@ -17,7 +17,7 @@ export default clerkMiddleware(
     );
     const response = NextResponse.next({ request: { headers } });
     if (
-      /^\/(dashboard|admin|sign-in|sign-up)(\/|$)/.test(
+      /^\/(dashboard|admin|sign-in|sign-up|onboarding|diagnostic|account\/preferences)(\/|$)/.test(
         request.nextUrl.pathname,
       )
     ) {

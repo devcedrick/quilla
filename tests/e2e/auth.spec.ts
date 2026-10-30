@@ -120,6 +120,27 @@ async function enterCode(page: Page) {
     .fill("424242");
 }
 
+async function completeOnboarding(page: Page) {
+  await expect(page).toHaveURL(/\/onboarding$/);
+  await page.getByRole("radio", { name: /^Professional\b/ }).check();
+  await page.getByRole("button", { name: "Continue", exact: true }).click();
+  await page.getByRole("button", { name: "Skip for now", exact: true }).click();
+  await page
+    .getByRole("button", {
+      name: "Save and view diagnostic next steps",
+      exact: true,
+    })
+    .click();
+  await expect(page).toHaveURL(/\/diagnostic$/);
+  await expect(
+    page.getByText("The assessment is not available yet.", { exact: false }),
+  ).toBeVisible();
+  await page
+    .getByRole("link", { name: "Go to your dashboard", exact: true })
+    .click();
+  await expect(page).toHaveURL(/\/dashboard$/);
+}
+
 test.describe("Clerk account flows", () => {
   test("landing recognizes sessions without bootstrapping profiles or sharing decisions", async ({
     page,
@@ -170,8 +191,11 @@ test.describe("Clerk account flows", () => {
         .locator('[data-motion-target="hero-actions"]')
         .getByRole("link", { name: "Go to your dashboard", exact: true })
         .click();
-      await expect(page).toHaveURL(/\/dashboard$/);
-      await expect(page.getByTestId("account-status")).toBeVisible();
+      await completeOnboarding(page);
+      // Next retains the diagnostic route hidden during dashboard navigation.
+      await expect(
+        page.getByTestId("account-status").filter({ visible: true }),
+      ).toBeVisible();
       expect((await currentApplicationAccess(page)).status).toBe("active");
       await page.getByRole("button", { name: "Sign out", exact: true }).click();
       await expect(page).toHaveURL(/\/$/);
@@ -192,15 +216,19 @@ test.describe("Clerk account flows", () => {
     await page.goto("/sign-in");
     await clerk.signIn({ page, emailAddress: account.email });
     await page.goto("/dashboard");
-    await expect(page.getByTestId("account-status")).toBeVisible();
+    await expect(page).toHaveURL(/\/onboarding$/);
     const first = await currentApplicationAccess(page);
     expect(first.status).toBe("active");
     if (first.status !== "active")
       throw new Error("Expected active synthetic profile");
     expect(first.role).toBe("user");
     await page.reload();
-    await expect(page.getByTestId("account-status")).toBeVisible();
+    await expect(page).toHaveURL(/\/onboarding$/);
     expect(await currentApplicationAccess(page)).toEqual(first);
+    await completeOnboarding(page);
+    await expect(
+      page.getByTestId("account-status").filter({ visible: true }),
+    ).toBeVisible();
   });
   for (const mode of ["sign-in", "sign-up"] as const) {
     test(`${mode} skeleton stays usable while the provider loads and yields to the form`, async ({
@@ -802,8 +830,11 @@ test.describe("Clerk account flows", () => {
     await expect(other).toHaveURL(/\/sign-in/);
     await other.close();
     await enterCode(page);
-    await expect(page).toHaveURL(/\/dashboard$/, { timeout: 30000 });
-    await expect(page.getByTestId("account-status")).toBeVisible();
+    await expect(page).toHaveURL(/\/onboarding$/, { timeout: 30000 });
+    await completeOnboarding(page);
+    await expect(
+      page.getByTestId("account-status").filter({ visible: true }),
+    ).toBeVisible();
     // The provider's email lookup can become visible after session creation.
     // Wait for this exact synthetic identity before checking persisted names.
     await expect
@@ -832,7 +863,7 @@ test.describe("Clerk account flows", () => {
 
   test("password sign-in, authenticated auth-page redirect, sign-out, and back navigation", async ({
     page,
-    account,
+    preparedAccount: account,
   }) => {
     await page.goto("/dashboard?from=password-login");
     await expect(page).toHaveURL(/\/sign-in\?/);
@@ -891,7 +922,7 @@ test.describe("Clerk account flows", () => {
 
   test("password recovery completes and invalidates the old password", async ({
     page,
-    account,
+    preparedAccount: account,
   }) => {
     await page.goto("/sign-in");
     await page.getByLabel(/email address/i).fill(account.email);
@@ -939,7 +970,7 @@ test.describe("Clerk account flows", () => {
 
   test("safe return destinations survive login and malicious destinations cannot escape the app", async ({
     page,
-    account,
+    preparedAccount: account,
   }) => {
     await page.goto(
       "/sign-in?redirect_url=https%3A%2F%2Fevil.example%2Fdashboard",
@@ -959,7 +990,7 @@ test.describe("Clerk account flows", () => {
 
   test("isolated sessions cannot reuse another user's server payload", async ({
     page,
-    account,
+    preparedAccount: account,
     secondAccount,
     browser,
   }) => {
@@ -1012,7 +1043,7 @@ test.describe("Clerk account flows", () => {
 
   test("revoking the actual disposable session removes account access", async ({
     page,
-    account,
+    preparedAccount: account,
   }) => {
     test.setTimeout(120000);
     await page.goto("/sign-in");

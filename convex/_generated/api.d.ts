@@ -8,7 +8,10 @@
  * @module
  */
 
+import type * as learning from "../learning.js";
 import type * as lib_auth from "../lib/auth.js";
+import type * as lib_learning from "../lib/learning.js";
+import type * as lib_preparation from "../lib/preparation.js";
 import type * as lib_userAccess from "../lib/userAccess.js";
 import type * as users from "../users.js";
 
@@ -19,7 +22,10 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  learning: typeof learning;
   "lib/auth": typeof lib_auth;
+  "lib/learning": typeof lib_learning;
+  "lib/preparation": typeof lib_preparation;
   "lib/userAccess": typeof lib_userAccess;
   users: typeof users;
 }>;

@@ -20,6 +20,18 @@ vi.mock("next/headers", () => ({ headers: mocks.headers }));
 import { readSession, requireSession } from "./session.server";
 
 describe("return destinations", () => {
+  it.each(["/onboarding", "/account/preferences", "/diagnostic"])(
+    "allows the exact preparation route %s",
+    (destination) => {
+      expect(safeReturnTo(`${destination}?from=account#form`)).toBe(
+        `${destination}?from=account#form`,
+      );
+      expect(safeReturnTo(`${destination}/unexpected`)).toBe("/dashboard");
+      expect(safeReturnTo(`https://evil.example${destination}`)).toBe(
+        "/dashboard",
+      );
+    },
+  );
   it("preserves known relative destinations including query and fragment", () => {
     expect(safeReturnTo("/dashboard?from=exam#account")).toBe(
       "/dashboard?from=exam#account",

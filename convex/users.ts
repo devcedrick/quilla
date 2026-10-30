@@ -1,6 +1,12 @@
-import { ConvexError } from "convex/values";
+import { ConvexError, v } from "convex/values";
 import { mutation, query } from "./_generated/server";
-import { findUserByIdentity, requireIdentity } from "./lib/auth";
+import {
+  findUserByIdentity,
+  requireIdentity,
+  requireActiveUser,
+} from "./lib/auth";
+import { examLevel, preferencesResult } from "./lib/preparation";
+import { manilaDate, targetDateError } from "../lib/preparation";
 import { activeAccess, currentAccessResult } from "./lib/userAccess";
 
 export const ensureCurrentUser = mutation({
@@ -43,5 +49,50 @@ export const currentAccess = query({
     if (!user) return { status: "missing_profile" as const };
     if (user.status !== "active") return { status: "suspended" as const };
     return { status: "active" as const, userId: user._id, role: user.role };
+  },
+});
+
+export const currentPreferences = query({
+  args: {},
+  returns: preferencesResult,
+  handler: async (ctx) => {
+    const user = await requireActiveUser(ctx);
+    return {
+      preferredLevel: user.preferredLevel ?? null,
+      targetExamDate: user.targetExamDate ?? null,
+    };
+  },
+});
+
+export const savePreferences = mutation({
+  args: {
+    preferredLevel: examLevel,
+    targetExamDate: v.optional(v.union(v.string(), v.null())),
+  },
+  returns: preferencesResult,
+  handler: async (ctx, args) => {
+    const user = await requireActiveUser(ctx);
+    if (typeof args.targetExamDate === "string") {
+      const error = targetDateError(
+        args.targetExamDate,
+        manilaDate(Date.now()),
+      );
+      if (error)
+        throw new ConvexError({ code: "INVALID_TARGET_DATE", message: error });
+    }
+    const changes = {
+      preferredLevel: args.preferredLevel,
+      ...(args.targetExamDate !== undefined
+        ? { targetExamDate: args.targetExamDate ?? undefined }
+        : {}),
+    };
+    await ctx.db.patch("users", user._id, changes);
+    return {
+      preferredLevel: args.preferredLevel,
+      targetExamDate:
+        args.targetExamDate === undefined
+          ? (user.targetExamDate ?? null)
+          : args.targetExamDate,
+    };
   },
 });

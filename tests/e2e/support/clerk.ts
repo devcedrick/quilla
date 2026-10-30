@@ -2,6 +2,8 @@ import { createClerkClient } from "@clerk/backend";
 import { setupClerkTestingToken } from "@clerk/testing/playwright";
 import { test as base, expect } from "@playwright/test";
 import { randomBytes, randomUUID } from "node:crypto";
+import { ConvexHttpClient } from "convex/browser";
+import { api as applicationApi } from "@/convex/_generated/api";
 
 // Clerk's routing helper can log full provider URLs when a context closes during
 // a retry. Those URLs may include development-session tokens; retain only a
@@ -119,6 +121,7 @@ type Fixtures = {
   testingToken: void;
   identity: Identity;
   account: Identity & { id: string };
+  preparedAccount: Identity & { id: string };
   secondAccount: Identity & { id: string };
 };
 
@@ -187,6 +190,10 @@ export const test = base.extend<Fixtures>({
     }
     await provide({ ...identity, id });
   },
+  preparedAccount: async ({ account }, provide) => {
+    await prepareSyntheticAccount(account.id);
+    await provide(account);
+  },
   secondAccount: async ({ account }, provide) => {
     const api = developmentClerk();
     const email = `quilla-${randomUUID()}+clerk_test@example.com`;
@@ -205,6 +212,7 @@ export const test = base.extend<Fixtures>({
       );
     }
     try {
+      await prepareSyntheticAccount(id);
       await provide({ ...account, email, id });
     } finally {
       try {
@@ -219,3 +227,46 @@ export const test = base.extend<Fixtures>({
 });
 
 export { expect };
+
+/** Only called with a fixture ID recorded by this module, never real users. */
+async function prepareSyntheticAccount(userId: string) {
+  const endpoint = process.env.NEXT_PUBLIC_CONVEX_URL;
+  if (
+    !endpoint ||
+    !/^perceptive-dodo-136(?:\.[a-z0-9-]+)?\.convex\.cloud$/.test(
+      new URL(endpoint).hostname,
+    )
+  ) {
+    throw new Error(
+      "Prepared fixtures require the explicitly approved Quilla development deployment.",
+    );
+  }
+  const clerkApi = developmentClerk();
+  let sessionId: string | undefined;
+  try {
+    const session = await clerkApi.sessions.createSession({ userId });
+    sessionId = session.id;
+    const token = await clerkApi.sessions.getToken(sessionId, "convex");
+    const client = new ConvexHttpClient(endpoint, { logger: false });
+    client.setAuth(token.jwt);
+    // Exercise the same public, identity-derived operations as the application.
+    await client.mutation(applicationApi.users.ensureCurrentUser, {});
+    await client.mutation(applicationApi.users.savePreferences, {
+      preferredLevel: "professional",
+    });
+  } catch {
+    throw new Error(
+      "Synthetic preparation fixture failed (provider details redacted).",
+    );
+  } finally {
+    if (sessionId) {
+      try {
+        await clerkApi.sessions.revokeSession(sessionId);
+      } catch {
+        throw new Error(
+          "Synthetic fixture session cleanup failed (details redacted).",
+        );
+      }
+    }
+  }
+}
