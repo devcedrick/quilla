@@ -1,7 +1,11 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { ReactElement, ReactNode } from "react";
-import { PreparationResource } from "@/components/preparation/preparation-page";
+import {
+  PreparationPage,
+  PreparationResource,
+} from "@/components/preparation/preparation-page";
+import { PreparationSkeleton } from "@/components/preparation/preparation-skeleton";
 import AdminPage from "@/app/admin/[[...path]]/page";
 
 const mocks = vi.hoisted(() => ({
@@ -34,6 +38,13 @@ vi.mock("@/components/auth/sign-out", () => ({
 }));
 
 describe("protected resource server rendering", () => {
+  it.each(["dashboard", "onboarding", "preferences", "diagnostic"] as const)(
+    "uses the neutral branded streaming fallback for %s",
+    (kind) => {
+      const boundary = PreparationPage({ kind }).props.children;
+      expect(boundary.props.fallback.type).toBe(PreparationSkeleton);
+    },
+  );
   beforeEach(() => {
     vi.resetAllMocks();
     mocks.notFound.mockImplementation(() => {

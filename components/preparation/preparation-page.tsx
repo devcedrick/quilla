@@ -6,6 +6,7 @@ import { ApplicationAccessBoundary } from "@/components/auth/application-access-
 import { readPreparationAccess } from "@/lib/auth/account-access.server";
 import { authRoutes } from "@/lib/auth/routes";
 import { PreparationContent } from "./preparation-content";
+import { PreparationSkeleton } from "./preparation-skeleton";
 
 export type PreparationPageKind =
   "dashboard" | "onboarding" | "preferences" | "diagnostic";
@@ -19,7 +20,7 @@ const titles = {
 export function PreparationPage({ kind }: { kind: PreparationPageKind }) {
   return (
     <AuthPageShell title={titles[kind]} layout="preparation">
-      <Suspense fallback={<p role="status">Checking preparation access…</p>}>
+      <Suspense fallback={<PreparationSkeleton />}>
         <PreparationResource kind={kind} />
       </Suspense>
     </AuthPageShell>
