@@ -283,6 +283,18 @@ Learners need realistic practice with full coverage and time pressure to underst
 
 As a learner, I want to take a timed exam that follows my level's blueprint so I can rehearse realistic conditions and receive an honest result.
 
+### Initial mock-blueprint policy
+
+The initial immutable mock blueprints are `cse-professional-2027-v1` and `cse-subprofessional-2027-v1`. They use eight paired set families: each family shares a 105-item core, adds five Professional-only Numerical items, and supplies separate 40-item Analytical and Clerical modules. This yields eight complete 150-item Professional mocks and eight complete 145-item Subprofessional mocks from at least 1,520 unique canonical questions.
+
+The initial mocks exclude the unscored 20-item Examinee Descriptive Questionnaire. Professional mocks use a 168-minute limit and a 120-of-150 passing reference; Subprofessional mocks use 141 minutes and a 116-of-145 passing reference. These are Quilla preparation policies derived from the official structure, not claims about CSC's rating methodology or guarantees of eligibility.
+
+Each set targets a 30/50/20 easy/medium/hard mix using fixed subject, language, and difficulty cells. Verbal Ability contains 25 English and 25 Filipino items. Every applicable canonical concept appears at least once per family. Shared-core questions may appear in both level variants of the same family, but canonical questions cannot repeat across family numbers and receive no extra score or weight because they are shared.
+
+Neither initial blueprint may activate until a dry run proves that all eight paired families satisfy the complete coverage contract. After activation, a difficulty shortage may relax only to the nearest difficulty within the same subject, preferring easier on a tie. Level, subject, language, and concept requirements never relax; unresolved shortages block generation with an actionable report.
+
+[ADR 0008](ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md) records the decision. The complete identifier, taxonomy, allocation, coverage, shortage, and source-version contract is [Initial CSE Taxonomy and Mock-Exam Blueprints](exams/cse-taxonomy-and-blueprints.md).
+
 ### Edge cases
 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.
@@ -291,7 +303,7 @@ As a learner, I want to take a timed exam that follows my level's blueprint so I
 - The same submission reaches the server more than once.
 - A question is edited or archived while the attempt is active.
 - Unanswered items remain at timeout.
-- Examination Day Questionnaire items are enabled later but must remain unscored.
+- Examinee Descriptive Questionnaire items are enabled later but must remain unscored.
 
 ### Non-goals
 
@@ -309,7 +321,7 @@ As a learner, I want to take a timed exam that follows my level's blueprint so I
 - Subject distribution, difficulty mix, randomization, time limit, and passing reference come from an immutable blueprint snapshot.
 - The server is authoritative for timing and auto-submits expired attempts.
 - Progress is autosaved and can survive a browser interruption without extending the deadline.
-- Difficulty may be relaxed when a blueprint cell is short; if coverage remains insufficient, start is blocked with an actionable message.
+- Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
 - Unanswered scored items count as incorrect.
 - Results show overall score, pass/fail against the blueprint reference, and subject and concept breakdowns.
 
@@ -605,6 +617,14 @@ As an admin, I want to manage questions and contributions through explicit state
 
 ## 16. Admin blueprints and reference data
 
+### Initial reference-data policy
+
+The initial taxonomy is `cse-taxonomy-2027-v1`. It uses stable identifiers for both levels, five subjects, three difficulties, two question languages, product-defined subtopics, and the 19 canonical concepts in the official CSC scope. General Information, Verbal Ability, and Numerical Ability are shared; Analytical Ability is Professional only; Clerical Ability is Subprofessional only.
+
+Official CSC facts and Quilla-authored policy values remain distinguishable. Maintainers review every applicable official announcement and advisory before each exam cycle and before initial blueprint activation. A changed official fact or material product-policy change creates a new immutable taxonomy or blueprint version; an unchanged annual review is recorded without manufacturing a new version. Existing attempt snapshots are never rewritten.
+
+The authoritative initial contract is [Initial CSE Taxonomy and Mock-Exam Blueprints](exams/cse-taxonomy-and-blueprints.md), governed by [ADR 0008](ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md).
+
 ### Problem
 
 Exam structure and content taxonomy must be centrally managed and validated so practice remains aligned with each CSE level as coverage evolves.
@@ -731,14 +751,11 @@ These requirements apply to every feature above:
 
 The following remain intentionally unresolved and require explicit product decisions before their dependent work is finalized:
 
-- minimum published-question coverage required per level and concept;
 - whether contributions are visible before approval;
 - final report threshold and auto-exclusion policy;
 - whether a second reviewer is required beyond self-review prevention;
 - retention and resume window for abandoned attempts;
 - whether contributor rankings will ever be introduced;
-- weighting of questions applicable to both levels;
 - minimum sample size for reliable mastery;
 - whether adaptive review recommendations will later include question-level state;
-- whether Examination Day Questionnaire items appear in mock exams;
 - final mastery update formula and adaptive review-priority tuning.

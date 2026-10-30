@@ -52,13 +52,13 @@ Your readiness score combines concept mastery, recent mock-exam performance, and
 
 ## Study modes
 
-| Mode | Best used for |
-| --- | --- |
-| **Diagnostic** | Establishing your starting point and unlocking personalized guidance |
-| **Today's Review** | Completing concepts that are due for spaced repetition |
-| **Adaptive Practice** | Improving weak areas with difficulty that adjusts to your performance |
-| **Mock Exam** | Practicing under realistic time and coverage constraints |
-| **Review Mode** | Understanding mistakes and turning exam results into the next study steps |
+| Mode                  | Best used for                                                             |
+| --------------------- | ------------------------------------------------------------------------- |
+| **Diagnostic**        | Establishing your starting point and unlocking personalized guidance      |
+| **Today's Review**    | Completing concepts that are due for spaced repetition                    |
+| **Adaptive Practice** | Improving weak areas with difficulty that adjusts to your performance     |
+| **Mock Exam**         | Practicing under realistic time and coverage constraints                  |
+| **Review Mode**       | Understanding mistakes and turning exam results into the next study steps |
 
 ## Exam coverage
 
@@ -70,12 +70,16 @@ Both levels cover:
 
 The **Professional** level also includes Analytical Ability. The **Subprofessional** level includes Clerical Ability instead.
 
-| Exam level | Total items | Test proper | Examination Day Questionnaire | Time limit |
-| --- | ---: | ---: | ---: | ---: |
-| Professional | 170 | 150 | 20 | 3 hours 10 minutes |
-| Subprofessional | 165 | 145 | 20 | 2 hours 40 minutes |
+| Exam level      | Latest official structural total | Test proper | Examinee Descriptive Questionnaire | Full-session limit |
+| --------------- | -------------------------------: | ----------: | ---------------------------------: | -----------------: |
+| Professional    |                              170 |         150 |                                 20 | 3 hours 10 minutes |
+| Subprofessional |                              165 |         145 |                                 20 | 2 hours 40 minutes |
 
-The reference passing rating for both levels is **80%**. Quilla uses this for mock-exam feedback while also showing the subject and concept details behind your result.
+The official reference passing rating for both levels is **80%**. The current [CSC examination announcement](https://csc.gov.ph/examination-advisories/examination-announcement-no-06-s-2026-career-service-examination-pen-and-paper-test-for-professional-and-sub-professional-levels-14-march-2027) supplies the 2027 scope and passing grade. [Examination Advisory No. 02, s. 2026](https://csc.gov.ph/phocadownload/userupload/erpo/advisories/2026/ExamAdvisory_2026_02_School%20Assignment%20Impt%20Reminders%20for%2008%20March%202026%20CSE-PPT%20Sgd.pdf) is the latest available official source for the item and time breakdown shown above; those structural figures must be revalidated against all applicable 2027 issuances before blueprint activation. Quilla is not affiliated with or endorsed by the Philippine Civil Service Commission.
+
+The planned initial Quilla mock blueprint is deliberately narrower than the official full session: it includes only the 150 or 145 scored test-proper items and omits the 20-item Examinee Descriptive Questionnaire. It uses proportionally scaled limits of 168 minutes for Professional and 141 minutes for Subprofessional, with practice-feedback references of 120/150 and 116/145. These are Quilla preparation policies, not claims about CSC's rating methodology or guarantees of eligibility.
+
+Before the mock feature can be activated, the planned initial corpus must support eight non-overlapping paired set families—eight complete mocks per level—from at least 1,520 unique canonical questions. See the [initial taxonomy and blueprint contract](docs/exams/cse-taxonomy-and-blueprints.md) for the approved subject, language, difficulty, coverage, and versioning policy. This policy is planned behavior and must not be read as a claim that the mock runtime or corpus is already shipped.
 
 ## A trustworthy question bank
 
