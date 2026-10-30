@@ -1,21 +1,17 @@
 "use client";
 import { Component, useEffect, useState, type ReactNode } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useQuery, useConvexAuth } from "convex/react";
 import { api } from "@/convex/_generated/api";
-import { SignOut } from "@/components/auth/sign-out";
 import {
   AccountAccessFailure,
   AccountAccessPending,
 } from "@/components/auth/account-access-status";
 import { authRoutes } from "@/lib/auth/routes";
-import { levelLabels, type PreparationPreferences } from "@/lib/preparation";
+import type { PreparationPreferences } from "@/lib/preparation";
 import type { PreparationPageKind } from "./preparation-page";
 import { PreparationForm } from "./preparation-form";
-
-const linkClass =
-  "inline-flex min-h-11 items-center rounded-lg text-primary font-bold underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring";
+import { PreparationOverview } from "./preparation-overview";
 
 class PreferenceErrorBoundary extends Component<
   { children: ReactNode; retry: () => void },
@@ -93,66 +89,12 @@ function LivePreparationContent({
   if (!preferences.preferredLevel) return <AccountAccessPending />;
   const level = preferences.preferredLevel;
   return (
-    <section aria-label="Preparation status" className="space-y-6">
-      <p className="font-bold" data-testid="account-status">
-        You are signed in.
-      </p>
-      <div className="rounded-xl border border-border bg-background p-5 space-y-3">
-        <h2 className="font-heading text-2xl font-bold">
-          {levelLabels[level]} preparation
-        </h2>
-        <p>
-          {preferences.targetExamDate ? (
-            <>
-              Target exam date:{" "}
-              <time dateTime={preferences.targetExamDate}>
-                {preferences.targetExamDate}
-              </time>
-            </>
-          ) : (
-            "No target exam date set."
-          )}
-        </p>
-        <Link
-          className={linkClass}
-          href={authRoutes.preferences}
-          prefetch={false}
-        >
-          Edit preparation preferences
-        </Link>
-      </div>
-      {kind === "diagnostic" && (
-        <p>
-          A diagnostic will help identify strengths and learning gaps for your
-          chosen level. The assessment is not available yet.
-        </p>
-      )}
-      {kind === "dashboard" && (
-        <p>
-          Diagnostics and personalized study features are not available yet.
-        </p>
-      )}
+    <PreparationOverview
+      kind={kind}
+      preferences={{ ...preferences, preferredLevel: level }}
+    >
       <LearningLock level={level} />
-      <p>
-        {level === "professional"
-          ? "Professional includes Analytical Ability and excludes Clerical Ability."
-          : "Subprofessional includes Clerical Ability and excludes Analytical Ability."}
-      </p>
-      <Link
-        className={linkClass}
-        href={
-          kind === "dashboard" ? authRoutes.diagnostic : authRoutes.dashboard
-        }
-        prefetch={false}
-      >
-        {kind === "dashboard"
-          ? "View diagnostic next steps"
-          : "Go to your dashboard"}
-      </Link>
-      <div>
-        <SignOut />
-      </div>
-    </section>
+    </PreparationOverview>
   );
 }
 
@@ -165,7 +107,7 @@ function LearningLock({
   return (
     <p
       role="status"
-      className="rounded-xl border border-border bg-background p-4 text-sm leading-relaxed"
+      className="min-w-0 text-sm leading-relaxed text-muted-foreground"
     >
       {!access
         ? "Checking learning access…"

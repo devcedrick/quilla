@@ -41,10 +41,16 @@ vi.mock("next/link", () => ({
   default: ({
     href,
     children,
+    onClick,
   }: {
     href: string;
     children: React.ReactNode;
-  }) => <a href={href}>{children}</a>,
+    onClick?: () => void;
+  }) => (
+    <a href={href} onClick={onClick}>
+      {children}
+    </a>
+  ),
 }));
 vi.mock("@/components/auth/sign-out", () => ({
   SignOut: () => <button>Sign out</button>,
@@ -138,6 +144,7 @@ describe("preparation form", () => {
       targetExamDate: "2020-01-01",
     });
     await choose("subprofessional");
+    await reviewSetup();
     await submit();
     expect(mocks.save).not.toHaveBeenCalled();
     await act(async () =>
@@ -156,6 +163,7 @@ describe("preparation form", () => {
       preferredLevel: "professional",
       targetExamDate: "2099-01-01",
     });
+    await submit();
     await act(async () =>
       view.root
         .findByProps({ type: "date" })
@@ -172,6 +180,7 @@ describe("preparation form", () => {
         />,
       ),
     );
+    await submit();
     await submit();
     expect(mocks.save).toHaveBeenCalledWith({
       preferredLevel: "professional",
@@ -289,6 +298,59 @@ describe("preparation form", () => {
     );
     expect(JSON.stringify(view.toJSON())).toContain("Choose a valid date");
     expect(mocks.replace).not.toHaveBeenCalled();
+  });
+  it("starts editing with saved choices and never saves intermediate steps", async () => {
+    await renderForm(true, {
+      preferredLevel: "subprofessional",
+      targetExamDate: "2099-12-01",
+    });
+    expect(
+      view.root.findByProps({ value: "subprofessional" }).props.checked,
+    ).toBe(true);
+    expect(view.root.findAllByProps({ type: "date" })).toHaveLength(0);
+    expect(
+      view.root
+        .findAllByType("a")
+        .some(
+          (link) =>
+            link.props.children === "Cancel" &&
+            link.props.href === "/dashboard",
+        ),
+    ).toBe(true);
+    await submit();
+    expect(view.root.findByProps({ type: "date" }).props.value).toBe(
+      "2099-12-01",
+    );
+    await clickButton("Remove target date");
+    expect(JSON.stringify(view.toJSON())).toContain("No target date for now");
+    expect(mocks.save).not.toHaveBeenCalled();
+    await submit();
+    expect(mocks.save).toHaveBeenCalledWith({
+      preferredLevel: "subprofessional",
+      targetExamDate: null,
+    });
+    expect(mocks.replace).toHaveBeenCalledWith("/dashboard");
+  });
+  it("discards an editing draft on Cancel even if Next retains the hidden route", async () => {
+    await renderForm(true, {
+      preferredLevel: "professional",
+      targetExamDate: "2099-12-01",
+    });
+    await choose("subprofessional");
+    await reviewSetup();
+    const cancel = view.root
+      .findAllByType("a")
+      .find((link) => link.props.children === "Cancel")!;
+    await act(async () => cancel.props.onClick());
+    expect(view.root.findByProps({ value: "professional" }).props.checked).toBe(
+      true,
+    );
+    expect(view.root.findAllByProps({ type: "date" })).toHaveLength(0);
+    await submit();
+    expect(view.root.findByProps({ type: "date" }).props.value).toBe(
+      "2099-12-01",
+    );
+    expect(mocks.save).not.toHaveBeenCalled();
   });
 });
 

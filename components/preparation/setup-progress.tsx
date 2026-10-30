@@ -16,23 +16,44 @@ const steps = [
   },
 ];
 
-export function SetupProgress({ step }: { step: number }) {
+export function SetupProgress({
+  step,
+  editing = false,
+}: {
+  step: number;
+  editing?: boolean;
+}) {
   return (
     <aside className="flex flex-col rounded-t-[1.7rem] bg-primary px-6 py-5 text-primary-foreground lg:rounded-tr-none lg:rounded-l-[1.7rem] lg:p-8">
       <div className="hidden lg:block">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">
-          A steady start
+          {editing ? "Room for change" : "A steady start"}
         </p>
         <p className="mt-4 font-heading text-3xl leading-tight">
-          One small step
-          <br />
-          at a time.
+          {editing ? (
+            <>
+              Your plans.
+              <br />
+              Your pace.
+            </>
+          ) : (
+            <>
+              One small step
+              <br />
+              at a time.
+            </>
+          )}
         </p>
         <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">
-          A few choices to make Quilla feel more like your own.
+          {editing
+            ? "Keep your preparation in step with the plans you have today."
+            : "A few choices to make Quilla feel more like your own."}
         </p>
       </div>
-      <nav aria-label="Setup progress" className="lg:mt-10">
+      <nav
+        aria-label={editing ? "Preference steps" : "Setup progress"}
+        className="lg:mt-10"
+      >
         <ol className="grid grid-cols-3 gap-2 lg:grid-cols-1 lg:gap-7">
           {steps.map((item, index) => (
             <li
@@ -82,7 +103,9 @@ export function SetupProgress({ step }: { step: number }) {
         />
         <p className="text-sm leading-relaxed">Your pace. Your next chapter.</p>
         <p className="mt-2 text-xs leading-relaxed text-primary-foreground/85">
-          Nothing is saved until you confirm your setup.
+          {editing
+            ? "Your current preferences stay as they are until you save."
+            : "Nothing is saved until you confirm your setup."}
         </p>
       </div>
     </aside>

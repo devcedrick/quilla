@@ -103,7 +103,7 @@ describe("account branding", () => {
     },
   );
 
-  it.each(["auth", "compact", "setup"] as const)(
+  it.each(["auth", "compact", "preparation"] as const)(
     "keeps navigation and legal content in the %s shell",
     (layout) => {
       const html = renderToStaticMarkup(

@@ -35,10 +35,10 @@ export function AuthPageShell({
 }: {
   title: string;
   children: ReactNode;
-  layout?: "auth" | "compact" | "setup";
+  layout?: "auth" | "compact" | "preparation";
 }) {
   const isAuth = layout === "auth";
-  const isSetup = layout === "setup";
+  const isPreparation = layout === "preparation";
   return (
     <div
       className="paper-grid flex min-h-dvh flex-col bg-background px-3 py-4 font-sans text-foreground sm:px-6 sm:py-6 lg:px-10 lg:py-8"
@@ -68,7 +68,7 @@ export function AuthPageShell({
             ? "grid max-w-[76rem] rounded-[2rem] border border-foreground/8 bg-card p-2 shadow-[0_24px_80px_-32px_color-mix(in_oklch,var(--foreground)_25%,transparent)] lg:grid-cols-2 lg:rounded-[2.25rem]"
             : cn(
                 "rounded-[1.75rem] border border-foreground/10 bg-card shadow-[0_16px_60px_-28px_color-mix(in_oklch,var(--foreground)_20%,transparent)]",
-                isSetup ? "max-w-[64rem]" : "max-w-lg p-7 sm:p-10",
+                isPreparation ? "max-w-[64rem]" : "max-w-lg p-7 sm:p-10",
               ),
         )}
       >
@@ -117,7 +117,7 @@ export function AuthPageShell({
           aria-labelledby="account-title"
           className={cn(
             "min-w-0",
-            isSetup && "p-6 sm:p-8 has-[form]:p-0",
+            isPreparation && "p-6 sm:p-8 has-[[data-preparation-panel]]:p-0",
             isAuth &&
               "flex flex-col px-5 pt-3 pb-5 sm:px-10 sm:pb-8 lg:px-12 lg:pt-5 xl:px-16",
           )}
@@ -142,7 +142,7 @@ export function AuthPageShell({
               id="account-title"
               className={cn(
                 "font-heading font-semibold tracking-[-0.035em]",
-                isAuth || isSetup
+                isAuth || isPreparation
                   ? "sr-only"
                   : "mb-6 text-3xl leading-tight sm:text-4xl",
               )}
@@ -151,7 +151,7 @@ export function AuthPageShell({
             </h1>
             {children}
           </div>
-          {!isAuth && !isSetup && (
+          {!isAuth && !isPreparation && (
             <nav
               aria-label="Account navigation"
               className={cn(

@@ -36,6 +36,23 @@ const stepCopy = [
       "Take a moment to check your choices. You can always update them from your account.",
   },
 ];
+const editingStepCopy = [
+  {
+    title: "A change of direction?",
+    description:
+      "Choose your preferred exam level. Changes apply to future defaults, not your past progress.",
+  },
+  {
+    title: "Keep your plans up to date.",
+    description:
+      "Keep your target date, choose a new one, or remove it. A date is always optional.",
+  },
+  {
+    title: "Ready to update your preferences?",
+    description:
+      "Check your choices before saving. Your current preferences stay in place until you confirm.",
+  },
+];
 
 const inputClass =
   "w-full min-h-11 rounded-xl border border-border bg-background px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:opacity-60";
@@ -50,7 +67,7 @@ export function PreparationForm({
   onSavingChange?: (saving: boolean) => void;
 }) {
   // The parent is keyed by verified profile ID; query refreshes preserve dirty input.
-  const [original] = useState(initialPreferences);
+  const [original, setOriginal] = useState(initialPreferences);
   const [level, setLevel] = useState<ExamLevel | "">(
     original.preferredLevel ?? "",
   );
@@ -64,6 +81,7 @@ export function PreparationForm({
   }>({});
   const [pending, setPending] = useState(false);
   const [step, setStep] = useState(0);
+  const copy = (editing ? editingStepCopy : stepCopy)[step];
   const stepHeading = useRef<HTMLHeadingElement>(null);
   const movedStep = useRef(false);
   useEffect(() => {
@@ -73,6 +91,16 @@ export function PreparationForm({
     movedStep.current = true;
     setErrors({});
     setStep(next);
+  }
+  function discardDraft() {
+    // Next may retain this route while hidden. Cancel must not revive its draft.
+    setOriginal(initialPreferences);
+    setLevel(initialPreferences.preferredLevel ?? "");
+    setDate(initialPreferences.targetExamDate ?? "");
+    setAcknowledged(false);
+    setErrors({});
+    movedStep.current = false;
+    setStep(0);
   }
   const inFlight = useRef(false);
   const levelRef = useRef<HTMLInputElement>(null);
@@ -86,7 +114,7 @@ export function PreparationForm({
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (inFlight.current) return;
-    if (!editing && step === 0) {
+    if (step === 0) {
       if (!level) {
         setErrors({ level: "Choose an exam level." });
         levelRef.current?.focus();
@@ -101,23 +129,23 @@ export function PreparationForm({
     const nextErrors = {
       ...(!level ? { level: "Choose an exam level." } : {}),
       ...(dateError ? { date: dateError } : {}),
-      ...(changingLevel && !acknowledged
+      ...(step === 2 && changingLevel && !acknowledged
         ? { acknowledgement: "Confirm that you understand the level change." }
         : {}),
     };
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) {
       if (!level) {
-        if (!editing) setStep(0);
+        setStep(0);
         requestAnimationFrame(() => levelRef.current?.focus());
       } else if (dateError) {
-        if (!editing) setStep(1);
+        setStep(1);
         requestAnimationFrame(() => dateRef.current?.focus());
       } else confirmationRef.current?.focus();
       return;
     }
     if (!level) return;
-    if (!editing && step === 1) {
+    if (step === 1) {
       goToStep(2);
       return;
     }
@@ -146,7 +174,7 @@ export function PreparationForm({
           : { form: "Your preferences could not be saved. Please try again." },
       );
       if (invalidDate) {
-        if (!editing) setStep(1);
+        setStep(1);
         requestAnimationFrame(() => dateRef.current?.focus());
       } else requestAnimationFrame(() => alertRef.current?.focus());
       inFlight.current = false;
@@ -158,44 +186,29 @@ export function PreparationForm({
     <form
       onSubmit={submit}
       noValidate
-      className={
-        editing ? "space-y-6" : "grid lg:grid-cols-[17rem_minmax(0,1fr)]"
-      }
+      className="grid lg:grid-cols-[17rem_minmax(0,1fr)]"
+      data-preparation-panel=""
       aria-busy={pending}
     >
-      {!editing && <SetupProgress step={step} />}
-      <div
-        className={
-          editing
-            ? "space-y-6"
-            : "flex min-w-0 flex-col p-6 sm:p-8 lg:min-h-[40rem] lg:p-10"
-        }
-      >
-        {!editing && (
-          <header className="mb-8">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Step {step + 1} of 3
-            </p>
-            <h2
-              ref={stepHeading}
-              tabIndex={-1}
-              className="max-w-lg rounded-md font-heading text-3xl leading-[1.15] font-semibold tracking-tight outline-none sm:text-4xl"
-            >
-              {stepCopy[step].title}
-            </h2>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              {stepCopy[step].description}
-            </p>
-          </header>
-        )}
-        <div className={editing ? "space-y-6" : "flex-1 space-y-6"}>
-          {editing && (
-            <p className="text-muted-foreground leading-relaxed">
-              Choose the CSE level you want to prepare for. Your preference
-              supplies future defaults; each attempt will confirm its own level.
-            </p>
-          )}
-          {(editing || step === 0) && (
+      <SetupProgress step={step} editing={editing} />
+      <div className="flex min-w-0 flex-col p-6 sm:p-8 lg:min-h-[40rem] lg:p-10">
+        <header className="mb-8">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
+            Step {step + 1} of 3
+          </p>
+          <h2
+            ref={stepHeading}
+            tabIndex={-1}
+            className="max-w-lg rounded-md font-heading text-3xl leading-[1.15] font-semibold tracking-tight outline-none sm:text-4xl"
+          >
+            {copy.title}
+          </h2>
+          <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
+            {copy.description}
+          </p>
+        </header>
+        <div className="flex-1 space-y-6">
+          {step === 0 && (
             <fieldset
               disabled={pending}
               aria-describedby={
@@ -252,14 +265,12 @@ export function PreparationForm({
               )}
             </fieldset>
           )}
-          {(editing || step === 1) && (
+          {step === 1 && (
             <div className="space-y-3">
-              {!editing && (
-                <CalendarDays
-                  aria-hidden="true"
-                  className="mb-5 size-12 rounded-xl bg-accent/35 p-2.5 text-foreground"
-                />
-              )}
+              <CalendarDays
+                aria-hidden="true"
+                className="mb-5 size-12 rounded-xl bg-accent/35 p-2.5 text-foreground"
+              />
               <label htmlFor="target-exam-date" className="font-bold block">
                 Target exam date (optional)
               </label>
@@ -293,7 +304,7 @@ export function PreparationForm({
               )}
             </div>
           )}
-          {!editing && step === 2 && (
+          {step === 2 && (
             <div className="space-y-5">
               <dl className="divide-y divide-border rounded-2xl border border-border bg-background px-5">
                 <div className="py-5">
@@ -334,12 +345,13 @@ export function PreparationForm({
                 </div>
               </dl>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Next, you’ll see what a diagnostic will help with. Assessments
-                are not available yet.
+                {editing
+                  ? "Only your preparation preferences will change. Your progress and history stay as they are."
+                  : "Next, you’ll see what a diagnostic will help with. Assessments are not available yet."}
               </p>
             </div>
           )}
-          {changingLevel && (
+          {step === 2 && changingLevel && (
             <div className="rounded-xl border border-primary/30 bg-background p-4 space-y-3">
               <p className="text-sm leading-relaxed">
                 Changing your preferred level affects future defaults only. Your
@@ -384,21 +396,9 @@ export function PreparationForm({
           )}
           {pending && <p role="status">Saving your preferences…</p>}
         </div>
-        <div
-          className={
-            editing
-              ? "space-y-4"
-              : "mt-8 space-y-5 border-t border-border/60 pt-6"
-          }
-        >
-          <div
-            className={
-              editing
-                ? "space-y-4"
-                : "flex flex-col-reverse gap-3 sm:flex-row sm:items-center"
-            }
-          >
-            {!editing && step > 0 && (
+        <div className="mt-8 space-y-5 border-t border-border/60 pt-6">
+          <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center">
+            {step > 0 && (
               <button
                 type="button"
                 disabled={pending}
@@ -414,19 +414,19 @@ export function PreparationForm({
               disabled={pending}
               className="inline-flex w-full min-h-11 items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring disabled:opacity-60 motion-reduce:transition-none"
             >
-              {editing
-                ? "Save preferences"
-                : step === 0
-                  ? "Continue"
-                  : step === 1
-                    ? "Review setup"
+              {step === 0
+                ? "Continue"
+                : step === 1
+                  ? editing
+                    ? "Review changes"
+                    : "Review setup"
+                  : editing
+                    ? "Save preferences"
                     : "Save and view diagnostic next steps"}
-              {!editing && (
-                <ArrowRight aria-hidden="true" className="size-4 shrink-0" />
-              )}
+              <ArrowRight aria-hidden="true" className="size-4 shrink-0" />
             </button>
           </div>
-          {!editing && step === 1 && (
+          {step === 1 && (
             <button
               type="button"
               disabled={pending}
@@ -436,27 +436,36 @@ export function PreparationForm({
               }}
               className="mx-auto flex min-h-11 items-center rounded-md text-sm font-semibold text-muted-foreground underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:opacity-60"
             >
-              Skip for now
+              {editing && original.targetExamDate
+                ? "Remove target date"
+                : "Skip for now"}
             </button>
           )}
-          {editing && (
-            <Link
-              className="inline-flex min-h-11 items-center text-primary underline underline-offset-4"
-              href={authRoutes.dashboard}
-              prefetch={false}
-            >
-              Cancel
-            </Link>
-          )}
-          <div
-            className={
-              !editing
-                ? "flex items-center justify-between border-t border-border/60 pt-4 text-sm text-muted-foreground"
-                : undefined
-            }
-          >
-            {!editing && <span>You can take your time.</span>}
-            <SignOut variant={!editing ? "text" : "button"} />
+          {editing &&
+            (pending ? (
+              <span
+                aria-disabled="true"
+                className="inline-flex min-h-11 items-center text-sm text-muted-foreground"
+              >
+                Cancel
+              </span>
+            ) : (
+              <Link
+                className="inline-flex min-h-11 items-center text-primary underline underline-offset-4"
+                href={authRoutes.dashboard}
+                onClick={discardDraft}
+                prefetch={false}
+              >
+                Cancel
+              </Link>
+            ))}
+          <div className="flex items-center justify-between gap-4 border-t border-border/60 pt-4 text-sm text-muted-foreground">
+            <span>
+              {editing
+                ? "Changes save only when you confirm."
+                : "You can take your time."}
+            </span>
+            <SignOut variant="text" />
           </div>
         </div>
       </div>

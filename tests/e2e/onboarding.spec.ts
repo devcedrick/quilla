@@ -1,10 +1,33 @@
 import { clerk } from "@clerk/testing/playwright";
+import type { Page } from "@playwright/test";
 import { expect, test } from "./support/clerk";
 
 test.use({ trace: "off", screenshot: "off", video: "off" });
 // This journey performs bootstrap, setup, reload, and two persisted edits.
 // Keep individual provider/form assertions intact while budgeting the full flow.
 test.setTimeout(180000);
+
+async function checkPreparationLayout(page: Page) {
+  for (const width of [390, 768, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    expect(
+      await page.evaluate(
+        () =>
+          document.documentElement.scrollWidth <=
+          document.documentElement.clientWidth,
+      ),
+    ).toBe(true);
+    const composition = page
+      .getByTestId("account-composition")
+      .filter({ visible: true });
+    const shell = await composition.boundingBox();
+    const panel = await composition
+      .locator("[data-preparation-panel]")
+      .boundingBox();
+    expect(Math.abs(shell!.width - panel!.width)).toBeLessThanOrEqual(4);
+    if (width === 1440) expect(shell!.width).toBeGreaterThan(900);
+  }
+}
 
 for (const level of ["Professional", "Subprofessional"]) {
   test(`onboards ${level}, retains preferences and keeps diagnostics locked`, async ({
@@ -117,6 +140,7 @@ for (const level of ["Professional", "Subprofessional"]) {
     await expect(
       page.getByRole("heading", { name: `${level} preparation`, exact: true }),
     ).toBeVisible();
+    await checkPreparationLayout(page);
     await page.goto("/onboarding");
     await expect(page).toHaveURL(/\/dashboard$/, { timeout: 30000 });
     await page
@@ -127,6 +151,20 @@ for (const level of ["Professional", "Subprofessional"]) {
     await page
       .getByRole("radio", { name: new RegExp(`^${nextLevel} Includes`) })
       .check();
+    await checkPreparationLayout(page);
+    await page.getByRole("button", { name: "Continue", exact: true }).click();
+    await expect(page.getByLabel("Target exam date (optional)")).toHaveValue(
+      "2099-12-01",
+    );
+    await page
+      .getByRole("button", { name: "Review changes", exact: true })
+      .click();
+    await expect(
+      page.getByRole("heading", {
+        name: "Ready to update your preferences?",
+        exact: true,
+      }),
+    ).toBeFocused();
     await page
       .getByRole("button", { name: "Save preferences", exact: true })
       .click();
@@ -156,7 +194,34 @@ for (const level of ["Professional", "Subprofessional"]) {
     await page
       .getByRole("link", { name: "Edit preparation preferences" })
       .click();
+    await page
+      .getByRole("radio", { name: new RegExp(`^${level} Includes`) })
+      .check();
+    await page.getByRole("button", { name: "Continue", exact: true }).click();
+    await page.getByLabel("Target exam date (optional)").fill("2099-12-02");
+    await page
+      .getByRole("button", { name: "Review changes", exact: true })
+      .click();
+    await page.getByRole("link", { name: "Cancel", exact: true }).click();
+    await expect(
+      page.getByRole("heading", {
+        name: `${nextLevel} preparation`,
+        exact: true,
+      }),
+    ).toBeVisible();
+    await expect(
+      page
+        .getByRole("region", { name: "Preparation status", exact: true })
+        .locator("time"),
+    ).toHaveAttribute("datetime", "2099-12-01");
+    await page
+      .getByRole("link", { name: "Edit preparation preferences" })
+      .click();
+    await page.getByRole("button", { name: "Continue", exact: true }).click();
     await page.getByLabel("Target exam date (optional)").fill("");
+    await page
+      .getByRole("button", { name: "Review changes", exact: true })
+      .click();
     await page
       .getByRole("button", { name: "Save preferences", exact: true })
       .click();
