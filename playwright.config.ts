@@ -26,12 +26,12 @@ export default defineConfig({
     },
     {
       name: "chromium",
-      testIgnore: /auth\.(spec|setup)\.ts/,
+      testIgnore: /auth\.(spec|setup)\.ts|onboarding\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
     {
       name: "auth",
-      testMatch: /auth\.spec\.ts/,
+      testMatch: /(?:auth|onboarding)\.spec\.ts/,
       dependencies: ["auth-setup"],
       workers: 1,
       use: {
