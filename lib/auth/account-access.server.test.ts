@@ -10,9 +10,47 @@ vi.mock("./session.server", () => ({ requireVerifiedSession: mocks.session }));
 vi.mock("convex/nextjs", () => ({ fetchQuery: mocks.query }));
 
 import { api } from "@/convex/_generated/api";
-import { readAccountAccess } from "./account-access.server";
+import {
+  readAccountAccess,
+  readPreparationAccess,
+} from "./account-access.server";
 
 describe("server application access", () => {
+  it("reads preferences only after active authorization, forwarding the token without exposing it", async () => {
+    mocks.session.mockResolvedValue({
+      userId: "clerk-a",
+      getToken: mocks.token,
+    });
+    mocks.token.mockResolvedValue("synthetic-identity-token");
+    mocks.query
+      .mockResolvedValueOnce({
+        status: "active",
+        userId: "profile-a",
+        role: "user",
+      })
+      .mockResolvedValueOnce({
+        preferredLevel: "professional",
+        targetExamDate: null,
+      });
+    const result = await readPreparationAccess("/onboarding");
+    expect(result).toMatchObject({
+      preferences: { preferredLevel: "professional", targetExamDate: null },
+    });
+    expect(mocks.query.mock.calls[1]).toEqual([
+      api.users.currentPreferences,
+      {},
+      { token: "synthetic-identity-token" },
+    ]);
+    expect(result).not.toHaveProperty("token");
+  });
+  it.each(["missing_profile", "suspended"])(
+    "never reads preferences for %s",
+    async (status) => {
+      mocks.query.mockResolvedValue({ status });
+      await readPreparationAccess("/onboarding");
+      expect(mocks.query).toHaveBeenCalledTimes(1);
+    },
+  );
   beforeEach(() => {
     vi.resetAllMocks();
     mocks.session.mockResolvedValue({

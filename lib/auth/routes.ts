@@ -3,6 +3,9 @@ export const authRoutes = {
   signIn: "/sign-in",
   signUp: "/sign-up",
   dashboard: "/dashboard",
+  onboarding: "/onboarding",
+  preferences: "/account/preferences",
+  diagnostic: "/diagnostic",
 } as const;
 
 /** Only known application destinations are valid after authentication. */
@@ -37,7 +40,10 @@ export function safeReturnTo(value: unknown, origin?: string): string {
       path === "/dashboard" ||
       path.startsWith("/dashboard/") ||
       path === "/admin" ||
-      path.startsWith("/admin/")
+      path.startsWith("/admin/") ||
+      path === authRoutes.onboarding ||
+      path === authRoutes.preferences ||
+      path === authRoutes.diagnostic
     )) {
       return authRoutes.dashboard;
     }
