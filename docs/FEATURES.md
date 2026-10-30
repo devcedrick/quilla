@@ -581,6 +581,26 @@ As a user, I want in-app and appropriate email notifications for actions that re
 
 ## 15. Admin question bank and moderation
 
+### Shared reference contract
+
+S19.1 defines an offline versioned JSON corpus with separately stored immutable
+references for passages, tables, graphs, and diagrams. Each question version may
+link to one exact reference version containing ordered text, table, and PNG/WebP
+image blocks. References belong to one family/module and do not increase question
+counts or scores. Shared-core references may serve both variants of their family.
+
+Questions sharing a reference may be selected and placed separately; each must
+bring its complete reference and remain answerable without another question's
+answer. Item-range directions derive from actual attempt positions. Future
+attempts preserve question versions, reference versions, and asset checksums;
+adopting a changed reference requires a new question version. Images require
+accessible equivalent content. Serving queries withhold answers and explanations
+until authorized review. These runtime guarantees remain planned behavior.
+
+See [the authoring contract](content/exam-set-corpus.md) and
+[ADR 0009](ADR/0009-immutable-shared-question-references.md). S19.1 provides offline
+validation only; it does not implement import, publication, storage, or rendering.
+
 ### Problem
 
 High-quality exams require a controlled workflow for creating, classifying, reviewing, versioning, publishing, monitoring, and retiring questions.
