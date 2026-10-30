@@ -619,7 +619,7 @@ As an admin, I want to manage questions and contributions through explicit state
 
 ### Initial reference-data policy
 
-The initial taxonomy is `cse-taxonomy-2027-v1`. It uses stable identifiers for both levels, five subjects, three difficulties, two question languages, product-defined subtopics, and the 19 canonical concepts in the official CSC scope. General Information, Verbal Ability, and Numerical Ability are shared; Analytical Ability is Professional only; Clerical Ability is Subprofessional only.
+The initial taxonomy is `cse-taxonomy-2027-v1`. It uses stable identifiers for both levels, five subjects, three difficulties, two question languages, product-defined subtopics, and ten canonical concepts aligned with the maintainer-supplied preparation reference. The reference headings are organizational input rather than official CSC facts. General Information, Verbal Ability, and Numerical Ability are shared; Analytical Ability is Professional only; Clerical Ability is Subprofessional only. Spelling remains a Clerical concept even though the reference groups it with idiomatic expressions and grammar.
 
 Official CSC facts and Quilla-authored policy values remain distinguishable. Maintainers review every applicable official announcement and advisory before each exam cycle and before initial blueprint activation. A changed official fact or material product-policy change creates a new immutable taxonomy or blueprint version; an unchanged annual review is recorded without manufacturing a new version. Existing attempt snapshots are never rewritten.
 

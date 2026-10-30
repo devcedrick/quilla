@@ -27,11 +27,14 @@ Adopt the versioned reference contract in
 The initial identifiers are `cse-taxonomy-2027-v1`,
 `cse-professional-2027-v1`, and `cse-subprofessional-2027-v1`.
 
-The taxonomy uses the 19 leaves in the official CSC scope as canonical concepts,
-grouped into product-defined subtopics. General Information, Verbal Ability, and
-Numerical Ability are shared. Analytical Ability is Professional only; Clerical
-Ability is Subprofessional only. Stable identifiers, rather than display labels,
-are the downstream source of identity.
+The taxonomy uses ten canonical concepts aligned with the maintainer-supplied
+preparation reference, grouped into product-defined subtopics and mapped to the
+official CSC subject boundaries. The reference is organizational input, not an
+official source. General Information, Verbal Ability, and Numerical Ability are
+shared. Analytical Ability is Professional only; Clerical Ability is
+Subprofessional only. Spelling is separated from the reference's combined
+grammar-and-spelling heading to preserve that Clerical boundary. Stable
+identifiers, rather than display labels, are the downstream source of identity.
 
 The initial corpus is certified as eight paired families. Each family combines a
 105-item shared core with a five-item Professional Numerical extension, a
@@ -98,8 +101,8 @@ versioned follow-up decisions rather than silent edits.
   transparent proportional scaling instead.
 - **Reuse the diagnostic 50/35/15 difficulty target:** The mock blueprint instead
   emphasizes medium difficulty with the approved 30/50/20 editorial mix.
-- **Create a detailed proprietary concept hierarchy now:** The official scope
-  leaves provide a smaller, traceable starting taxonomy that can be superseded
+- **Create a detailed proprietary concept hierarchy now:** The reference-aligned
+  headings provide a smaller, traceable starting taxonomy that can be superseded
   when content and learner evidence justify finer concepts.
 - **Activate as soon as one complete exam exists:** This would present a thin
   corpus as launch-ready and would not satisfy the eight-family content policy.

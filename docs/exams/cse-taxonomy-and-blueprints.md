@@ -54,31 +54,30 @@ versioned calibration policy.
 
 ### Subjects, subtopics, and concepts
 
-The 19 canonical concepts correspond to the leaves in the official examination
-scope. Quilla groups them into product-defined subtopics without splitting the
-official leaves into finer mastery concepts in this version.
+The initial canonical concepts follow the content headings in the
+maintainer-supplied preparation reference reviewed 30 October 2026. The reference
+is an organizational input, not official CSC material or evidence of official
+subject weights. Quilla normalizes the headings into stable identities and maps
+them to the official subject boundaries.
 
-| Subject ID            | Applicability        | Subtopic ID                     | Concept ID                              | Display label                                                                        |
-| --------------------- | -------------------- | ------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
-| `general_information` | Shared               | `civic_foundations`             | `philippine_constitution`               | Philippine Constitution                                                              |
-| `general_information` | Shared               | `public_service_ethics`         | `ra_6713`                               | Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713) |
-| `general_information` | Shared               | `peace_and_rights`              | `peace_and_human_rights`                | Peace and human-rights issues and concepts                                           |
-| `general_information` | Shared               | `environmental_stewardship`     | `environment_management_and_protection` | Environment management and protection                                                |
-| `verbal_ability`      | Shared               | `vocabulary`                    | `word_meaning`                          | Word meaning                                                                         |
-| `verbal_ability`      | Shared               | `grammar_and_usage`             | `sentence_completion`                   | Sentence completion                                                                  |
-| `verbal_ability`      | Shared               | `grammar_and_usage`             | `error_recognition`                     | Error recognition                                                                    |
-| `verbal_ability`      | Shared               | `grammar_and_usage`             | `sentence_structure`                    | Sentence structure                                                                   |
-| `verbal_ability`      | Shared               | `discourse_and_comprehension`   | `paragraph_organization`                | Paragraph organization                                                               |
-| `verbal_ability`      | Shared               | `discourse_and_comprehension`   | `reading_comprehension`                 | Reading comprehension                                                                |
-| `numerical_ability`   | Shared               | `arithmetic`                    | `basic_operations`                      | Basic operations                                                                     |
-| `numerical_ability`   | Shared               | `sequences`                     | `number_sequence`                       | Number sequence                                                                      |
-| `numerical_ability`   | Shared               | `arithmetic`                    | `word_problems`                         | Word problems                                                                        |
-| `analytical_ability`  | Professional only    | `analogical_reasoning`          | `word_analogy`                          | Word analogy                                                                         |
-| `analytical_ability`  | Professional only    | `formal_and_abstract_reasoning` | `symbolic_logic_and_abstract_reasoning` | Symbolic logic and abstract reasoning                                                |
-| `analytical_ability`  | Professional only    | `critical_reasoning`            | `assumptions_and_conclusions`           | Identifying assumptions and drawing conclusions                                      |
-| `analytical_ability`  | Professional only    | `data_reasoning`                | `data_interpretation`                   | Data interpretation                                                                  |
-| `clerical_ability`    | Subprofessional only | `records_management`            | `filing`                                | Filing                                                                               |
-| `clerical_ability`    | Subprofessional only | `language_accuracy`             | `spelling`                              | Spelling                                                                             |
+The reference combines idiomatic expressions, grammar, and spelling in one
+heading. Quilla separates `spelling` into Clerical Ability so Professional exams
+cannot receive Subprofessional-only Clerical coverage. The EDQ heading is not a
+mastery concept because the initial blueprint excludes that unscored
+questionnaire.
+
+| Subject ID            | Applicability        | Subtopic ID                     | Concept ID                                           | Reference-aligned display label                       |
+| --------------------- | -------------------- | ------------------------------- | ---------------------------------------------------- | ----------------------------------------------------- |
+| `general_information` | Shared               | `civic_and_general_information` | `philippine_constitution_general_information_events` | Philippine Constitutions, General Information, Events |
+| `verbal_ability`      | Shared               | `vocabulary`                    | `vocabulary_questions`                               | Vocabulary Questions                                  |
+| `verbal_ability`      | Shared               | `grammar_and_usage`             | `idiomatic_expressions_and_correct_grammar`          | Idiomatic Expressions and Correct Grammar             |
+| `verbal_ability`      | Shared               | `reading`                       | `reading_comprehension_test`                         | Reading Comprehension Test                            |
+| `verbal_ability`      | Shared               | `discourse`                     | `paragraph_organization_test_questions`              | Paragraph Organization Test Questions Civil Service   |
+| `numerical_ability`   | Shared               | `numerical_reasoning`           | `numerical_reasoning`                                | Numerical Reasoning                                   |
+| `analytical_ability`  | Professional only    | `data_reasoning`                | `graphs_charts_and_data`                             | Graphs / Charts / Data                                |
+| `analytical_ability`  | Professional only    | `logic_and_analogy`             | `word_analogy_and_logic_test`                        | Word Analogy and Logic Test                           |
+| `clerical_ability`    | Subprofessional only | `clerical_operations`           | `clerical_operations`                                | Clerical Operations                                   |
+| `clerical_ability`    | Subprofessional only | `language_accuracy`             | `spelling`                                           | Spelling                                              |
 
 General Information, Numerical Ability, Analytical Ability, and Clerical Ability
 items are English in the initial blueprint. Verbal Ability uses both English and
