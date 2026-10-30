@@ -1,0 +1,72 @@
+[
+  {
+    "assetId": "f01-seedlings-chart",
+    "path": "assets/seedlings.png",
+    "mediaType": "image/png",
+    "sha256": "597ce4af3a922d0a604cff4bb75fe604d218992b6dd584cd4eca9210001f273b",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "assetId": "f01-nursery-composition-image",
+    "path": "assets/nursery-composition.png",
+    "mediaType": "image/png",
+    "sha256": "7d9f90551515a5726392ca6d792c35b97f3abdc448f678b823a0ac9b5c91e604",
+    "width": 1942,
+    "height": 809,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "assetId": "f01-river-patrol-image",
+    "path": "assets/river-patrol.png",
+    "mediaType": "image/png",
+    "sha256": "571b9410dd5e9b020ccec5f2f77f487524c719a8f60252fb538bb580f730d928",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "assetId": "f01-club-allocations-image",
+    "path": "assets/club-allocations.png",
+    "mediaType": "image/png",
+    "sha256": "894c39ba6e1afb8fc43b87aa47f8f2717af02be97562c0a52879024f2709552b",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "assetId": "f01-nursery-allocations-image",
+    "path": "assets/nursery-allocations.png",
+    "mediaType": "image/png",
+    "sha256": "bf6f38ec9535918cdb8e149aa0e91efbdae16403cb3c1ac6db364a7615db25bb",
+    "width": 1374,
+    "height": 1145,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  }
+]

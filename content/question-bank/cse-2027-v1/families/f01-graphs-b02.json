@@ -1,0 +1,902 @@
+[
+  {
+    "questionId": "f01-graphs-b02-21",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many morning visits did the clinic record on Thursday?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "40"
+      },
+      {
+        "choiceId": "b",
+        "text": "50"
+      },
+      {
+        "choiceId": "c",
+        "text": "60"
+      },
+      {
+        "choiceId": "d",
+        "text": "100"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Thursday’s morning bar is labelled 60.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-clinic-visits",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-22",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many total visits did the clinic record on Tuesday?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "30"
+      },
+      {
+        "choiceId": "b",
+        "text": "50"
+      },
+      {
+        "choiceId": "c",
+        "text": "60"
+      },
+      {
+        "choiceId": "d",
+        "text": "90"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Tuesday had 30 morning and 30 afternoon visits, giving 60.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-clinic-visits",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-23",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the simplest ratio of morning to afternoon visits on Wednesday?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "3:5"
+      },
+      {
+        "choiceId": "b",
+        "text": "5:3"
+      },
+      {
+        "choiceId": "c",
+        "text": "5:2"
+      },
+      {
+        "choiceId": "d",
+        "text": "8:3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Wednesday’s ratio is 50:30; dividing both terms by 10 gives 5:3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-clinic-visits",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-24",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Thursday’s total visits were approximately what percentage of Monday’s total?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "60%"
+      },
+      {
+        "choiceId": "b",
+        "text": "140%"
+      },
+      {
+        "choiceId": "c",
+        "text": "150%"
+      },
+      {
+        "choiceId": "d",
+        "text": "166.67%"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Thursday totalled 60 + 40 = 100; Monday totalled 40 + 20 = 60. Thus 100/60 × 100 ≈ 166.67%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-clinic-visits",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-25",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Suppose 10 Tuesday visits were reclassified from afternoon to morning, with all daily totals unchanged. Approximately what percentage of all four days’ visits would then be morning visits?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "60%"
+      },
+      {
+        "choiceId": "b",
+        "text": "63.33%"
+      },
+      {
+        "choiceId": "c",
+        "text": "66.67%"
+      },
+      {
+        "choiceId": "d",
+        "text": "70%"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Originally morning visits totalled 40 + 30 + 50 + 60 = 180. Reclassification raises this to 190. All visits total 60 + 60 + 80 + 100 = 300; 190/300 × 100 ≈ 63.33%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-clinic-visits",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-26",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many cubic metres less water was used on Wednesday than on Tuesday?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "10"
+      },
+      {
+        "choiceId": "b",
+        "text": "20"
+      },
+      {
+        "choiceId": "c",
+        "text": "30"
+      },
+      {
+        "choiceId": "d",
+        "text": "40"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Tuesday used 120 and Wednesday 90; the decrease is 30 cubic metres.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-water-use",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-27",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What was the mean daily water use over the five days, in cubic metres?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "110"
+      },
+      {
+        "choiceId": "b",
+        "text": "115"
+      },
+      {
+        "choiceId": "c",
+        "text": "120"
+      },
+      {
+        "choiceId": "d",
+        "text": "125"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "100 + 120 + 90 + 150 + 140 = 600. The mean is 600/5 = 120 cubic metres.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-water-use",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-28",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Between which consecutive days was the greatest percentage increase in water use?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Monday and Tuesday"
+      },
+      {
+        "choiceId": "b",
+        "text": "Tuesday and Wednesday"
+      },
+      {
+        "choiceId": "c",
+        "text": "Wednesday and Thursday"
+      },
+      {
+        "choiceId": "d",
+        "text": "Thursday and Friday"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Monday to Tuesday increased 20%; Wednesday to Thursday increased 60/90 × 100 ≈ 66.67%. The other transitions decreased.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-water-use",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-29",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What fraction of the five-day water total was used on Thursday and Friday together?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "7/15"
+      },
+      {
+        "choiceId": "b",
+        "text": "29/60"
+      },
+      {
+        "choiceId": "c",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "d",
+        "text": "3/5"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Thursday and Friday used 150 + 140 = 290 of the total 600 cubic metres. The fraction 290/600 simplifies to 29/60.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-water-use",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-30",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A sixth day is added. To make the six-day mean exactly 130 cubic metres, how much water must be used on that sixth day?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "150"
+      },
+      {
+        "choiceId": "b",
+        "text": "160"
+      },
+      {
+        "choiceId": "c",
+        "text": "170"
+      },
+      {
+        "choiceId": "d",
+        "text": "180"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The first five days total 600. Six days averaging 130 must total 780, so the sixth day requires 780 − 600 = 180 cubic metres.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-water-use",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-31",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which category receives the smallest share of the project budget?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Health"
+      },
+      {
+        "choiceId": "b",
+        "text": "Transport"
+      },
+      {
+        "choiceId": "c",
+        "text": "Education"
+      },
+      {
+        "choiceId": "d",
+        "text": "Parks"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Parks has 15%, the smallest of the four shares.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-project-budget",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-32",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How much more money is allocated to Health than to Parks?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "PHP 36,000"
+      },
+      {
+        "choiceId": "b",
+        "text": "PHP 48,000"
+      },
+      {
+        "choiceId": "c",
+        "text": "PHP 60,000"
+      },
+      {
+        "choiceId": "d",
+        "text": "PHP 96,000"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The difference is 40% − 15% = 25% of PHP 240,000, or PHP 60,000.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-project-budget",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-33",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the combined allocation for Education and Parks?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "PHP 72,000"
+      },
+      {
+        "choiceId": "b",
+        "text": "PHP 84,000"
+      },
+      {
+        "choiceId": "c",
+        "text": "PHP 96,000"
+      },
+      {
+        "choiceId": "d",
+        "text": "PHP 108,000"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Education and Parks receive 20% + 15% = 35%. Multiplying PHP 240,000 by 0.35 gives PHP 84,000.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-project-budget",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-34",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the simplest ratio of the Health allocation to the Transport allocation?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "5:8"
+      },
+      {
+        "choiceId": "b",
+        "text": "3:2"
+      },
+      {
+        "choiceId": "c",
+        "text": "8:5"
+      },
+      {
+        "choiceId": "d",
+        "text": "4:1"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Both amounts share the same total, so the ratio is 40:25 = 8:5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-project-budget",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-35",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "If 10% of Transport’s allocation is transferred to Health, while the overall budget stays fixed, what percentage of the entire budget would Health then receive?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "42.5%"
+      },
+      {
+        "choiceId": "b",
+        "text": "44%"
+      },
+      {
+        "choiceId": "c",
+        "text": "45%"
+      },
+      {
+        "choiceId": "d",
+        "text": "50%"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Transport has 25% of the whole. Ten percent of that allocation is 2.5% of the whole, or PHP 6,000. Health becomes 40% + 2.5% = 42.5%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-project-budget",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-36",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many packs were delivered to District D?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "80"
+      },
+      {
+        "choiceId": "b",
+        "text": "90"
+      },
+      {
+        "choiceId": "c",
+        "text": "100"
+      },
+      {
+        "choiceId": "d",
+        "text": "108"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Four districts averaging 90 delivered packs total 360. A, B, and C total 72 + 90 + 108 = 270, leaving 90 for D.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-relief-packs",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-37",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many fewer packs than planned were delivered to District A?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "8"
+      },
+      {
+        "choiceId": "b",
+        "text": "10"
+      },
+      {
+        "choiceId": "c",
+        "text": "12"
+      },
+      {
+        "choiceId": "d",
+        "text": "18"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "District A planned 80 and received 72, giving a shortfall of 8.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-relief-packs",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-38",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What percentage of all planned packs was delivered across the four districts?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "80%"
+      },
+      {
+        "choiceId": "b",
+        "text": "85%"
+      },
+      {
+        "choiceId": "c",
+        "text": "90%"
+      },
+      {
+        "choiceId": "d",
+        "text": "95%"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The mean gives total deliveries of 4 × 90 = 360. Planned packs total 80 + 100 + 120 + 100 = 400. Thus 360/400 × 100 = 90%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-relief-packs",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-39",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How many times as many packs were delivered to District C as to District A?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "1.2"
+      },
+      {
+        "choiceId": "b",
+        "text": "1.25"
+      },
+      {
+        "choiceId": "c",
+        "text": "1.5"
+      },
+      {
+        "choiceId": "d",
+        "text": "1.8"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "District C received 108 and A received 72. The ratio 108/72 equals 1.5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-relief-packs",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b02-40",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The remaining undelivered packs will be purchased at PHP 15 each, with a delivery charge equal to 10% of their purchase cost. How much is needed to complete the planned deliveries?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "PHP 540"
+      },
+      {
+        "choiceId": "b",
+        "text": "PHP 600"
+      },
+      {
+        "choiceId": "c",
+        "text": "PHP 660"
+      },
+      {
+        "choiceId": "d",
+        "text": "PHP 720"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Planned deliveries total 400 packs; the mean establishes 360 delivered. The 40 missing packs cost 40 × PHP 15 = PHP 600. Adding a 10% delivery charge gives PHP 660.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-b02-relief-packs",
+      "referenceVersion": 1
+    }
+  }
+]

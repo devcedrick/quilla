@@ -1,0 +1,862 @@
+[
+  {
+    "questionId": "f01-graphs-b01-01",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Refer to the nursery records. Eight native trees from May were reserved for a school nursery. How many of May’s native trees remained for other recipients?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "18"
+      },
+      {
+        "choiceId": "b",
+        "text": "22"
+      },
+      {
+        "choiceId": "c",
+        "text": "30"
+      },
+      {
+        "choiceId": "d",
+        "text": "38"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "May had 50 seedlings. Native trees were 50 × 0.60 = 30; after reserving 8, 22 remained.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-nursery-composition",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-02",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Refer to the nursery records. Twelve of June’s locally raised seedlings went to a school. How many locally raised seedlings went to other recipients?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "24"
+      },
+      {
+        "choiceId": "b",
+        "text": "33"
+      },
+      {
+        "choiceId": "c",
+        "text": "45"
+      },
+      {
+        "choiceId": "d",
+        "text": "48"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "June had 60 seedlings. Locally raised seedlings were 60 × 0.75 = 45; 45 − 12 = 33.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-nursery-composition",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-03",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many times as many seedlings were distributed in June as in January?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "2"
+      },
+      {
+        "choiceId": "b",
+        "text": "2.5"
+      },
+      {
+        "choiceId": "c",
+        "text": "3"
+      },
+      {
+        "choiceId": "d",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "June’s 60 divided by January’s 20 is 3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-04",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the ratio of May seedlings to February seedlings, expressed in simplest whole-number form?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "3:5"
+      },
+      {
+        "choiceId": "b",
+        "text": "5:3"
+      },
+      {
+        "choiceId": "c",
+        "text": "5:2"
+      },
+      {
+        "choiceId": "d",
+        "text": "10:3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The ratio is 50:30, which simplifies to 5:3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-05",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many more seedlings were distributed in June than in May?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "5"
+      },
+      {
+        "choiceId": "b",
+        "text": "10"
+      },
+      {
+        "choiceId": "c",
+        "text": "15"
+      },
+      {
+        "choiceId": "d",
+        "text": "20"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "June had 60 and May had 50, so the difference is 10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-06",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the absolute difference between the March and April distributions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "5"
+      },
+      {
+        "choiceId": "b",
+        "text": "10"
+      },
+      {
+        "choiceId": "c",
+        "text": "15"
+      },
+      {
+        "choiceId": "d",
+        "text": "20"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "March had 40 and April had 35; the absolute difference is 5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-07",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A volunteer group supplied 8 of January’s seedlings. If its contribution in June was the same proportion of the monthly total, how many did it supply in June?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "16"
+      },
+      {
+        "choiceId": "b",
+        "text": "20"
+      },
+      {
+        "choiceId": "c",
+        "text": "24"
+      },
+      {
+        "choiceId": "d",
+        "text": "32"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The group supplied 8/20 = 40% in January. At the same proportion in June, 0.40 × 60 = 24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-08",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A donor provided 12 of February’s seedlings. If the donor supplied the same percentage of May’s seedlings, how many did the donor supply in May?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "15"
+      },
+      {
+        "choiceId": "b",
+        "text": "18"
+      },
+      {
+        "choiceId": "c",
+        "text": "20"
+      },
+      {
+        "choiceId": "d",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The February share is 12/30 = 40%. Forty percent of 50 is 20.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-09",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Between which consecutive months was the largest increase in the number of seedlings distributed?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "January to February"
+      },
+      {
+        "choiceId": "b",
+        "text": "February to March"
+      },
+      {
+        "choiceId": "c",
+        "text": "April to May"
+      },
+      {
+        "choiceId": "d",
+        "text": "May to June"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The consecutive changes are +10, +10, −5, +15, and +10. April to May is the largest increase, at 15.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-10",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Between which consecutive months was the largest percentage increase relative to the earlier month?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "January to February"
+      },
+      {
+        "choiceId": "b",
+        "text": "February to March"
+      },
+      {
+        "choiceId": "c",
+        "text": "April to May"
+      },
+      {
+        "choiceId": "d",
+        "text": "May to June"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The increases relative to the earlier month are 50%, about 33.3%, about 42.9%, and 20% (March to April decreased). The largest is January to February.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-11",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many seedlings were distributed altogether in January and February?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "40"
+      },
+      {
+        "choiceId": "b",
+        "text": "45"
+      },
+      {
+        "choiceId": "c",
+        "text": "50"
+      },
+      {
+        "choiceId": "d",
+        "text": "60"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "20 + 30 = 50 seedlings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-12",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many seedlings were distributed altogether in May and June?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "90"
+      },
+      {
+        "choiceId": "b",
+        "text": "100"
+      },
+      {
+        "choiceId": "c",
+        "text": "110"
+      },
+      {
+        "choiceId": "d",
+        "text": "120"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "50 + 60 = 110 seedlings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-13",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What was the mean monthly distance patrolled from January through April, in kilometres?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "32"
+      },
+      {
+        "choiceId": "b",
+        "text": "34"
+      },
+      {
+        "choiceId": "c",
+        "text": "36"
+      },
+      {
+        "choiceId": "d",
+        "text": "40"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The total was 24 + 32 + 48 + 40 = 144 km. The mean over four months was 144/4 = 36 km.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-river-patrol",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-14",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What was the mean monthly distance patrolled from March through June, in kilometres?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "48"
+      },
+      {
+        "choiceId": "b",
+        "text": "52"
+      },
+      {
+        "choiceId": "c",
+        "text": "54"
+      },
+      {
+        "choiceId": "d",
+        "text": "56"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The total was 48 + 40 + 56 + 72 = 216 km; 216/4 = 54 km.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-river-patrol",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-15",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In which month did the distance patrolled fall compared with the immediately preceding month?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "February"
+      },
+      {
+        "choiceId": "b",
+        "text": "March"
+      },
+      {
+        "choiceId": "c",
+        "text": "April"
+      },
+      {
+        "choiceId": "d",
+        "text": "June"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "April’s 40 km is lower than March’s 48 km. Every other month-to-month change is an increase.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-river-patrol",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-16",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "By approximately what percentage did the distance patrolled decrease from March to April?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "8%"
+      },
+      {
+        "choiceId": "b",
+        "text": "12.5%"
+      },
+      {
+        "choiceId": "c",
+        "text": "16.67%"
+      },
+      {
+        "choiceId": "d",
+        "text": "20%"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The decrease was 48 − 40 = 8 km. Relative to March, 8/48 × 100 is approximately 16.67%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-river-patrol",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-17",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "June’s distance patrolled was what percentage of January’s distance?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "200%"
+      },
+      {
+        "choiceId": "b",
+        "text": "250%"
+      },
+      {
+        "choiceId": "c",
+        "text": "300%"
+      },
+      {
+        "choiceId": "d",
+        "text": "400%"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "72/24 × 100 = 300%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-river-patrol",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-18",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "May’s distance patrolled was approximately what percentage of March’s distance?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "85.71%"
+      },
+      {
+        "choiceId": "b",
+        "text": "110%"
+      },
+      {
+        "choiceId": "c",
+        "text": "116.67%"
+      },
+      {
+        "choiceId": "d",
+        "text": "150%"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "56/48 × 100 is approximately 116.67%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-river-patrol",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-19",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Refer to the school club allocation table. How many seedlings did Nature Club receive?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "12"
+      },
+      {
+        "choiceId": "b",
+        "text": "15"
+      },
+      {
+        "choiceId": "c",
+        "text": "18"
+      },
+      {
+        "choiceId": "d",
+        "text": "20"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The mean of 15 for three clubs implies a total of 45 seedlings. Nature Club received 45 − 12 − 18 = 15.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-club-allocations",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-20",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Refer to the nursery allocation table. What percentage of all available seedlings went to West nursery?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "20%"
+      },
+      {
+        "choiceId": "b",
+        "text": "25%"
+      },
+      {
+        "choiceId": "c",
+        "text": "30%"
+      },
+      {
+        "choiceId": "d",
+        "text": "40%"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The four nurseries received 4 × 10 = 40 seedlings. West received 40 − 5 − 8 − 12 = 15. This is 15/60 × 100 = 25% of all available seedlings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    },
+    "reference": {
+      "referenceId": "f01-nursery-allocations",
+      "referenceVersion": 1
+    }
+  }
+]

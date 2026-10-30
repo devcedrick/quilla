@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "corpusId": "cse-2027-v1",
+  "revision": 3,
+  "taxonomyId": "cse-taxonomy-2027-v1",
+  "blueprintIds": ["cse-professional-2027-v1", "cse-subprofessional-2027-v1"],
+  "questionFiles": [
+    "families/f01-graphs-b01.json",
+    "families/f01-graphs-b02.json"
+  ],
+  "referenceFiles": [
+    "references/f01-graphs-b01.json",
+    "references/f01-graphs-b02.json"
+  ],
+  "assetFiles": [
+    "references/f01-graphs-assets.json",
+    "references/f01-graphs-b02-assets.json"
+  ]
+}
