@@ -6,9 +6,24 @@ network access, or Convex deployment is needed. Policy comes from
 [ADR 0008](../ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md) and the
 [taxonomy and blueprint contract](../exams/cse-taxonomy-and-blueprints.md).
 
+## Current seeding policy versus the legacy validator
+
+[ADR 0013](../ADR/0013-seeding-families-and-pooled-exam-selection.md) supersedes
+the paired-exam family interpretation. Each seed family has 270 unique authored
+questions: 40 General, 50 Verbal, 60 Numerical, 80 Analytical, and 40 Clerical.
+Eight families yield 2,160 unique questions. Family 01 is complete for seeding;
+exams draw from all eligible published families combined, subject to their own
+quotas. See [seeding families](seeding-families.md) for completion and reuse rules.
+
+The commands and format below describe existing v1 tooling, not implementation
+of the new policy. Replace its paired-family release gate with separate seed-count
+and pooled-blueprint checks for v3 selection. Do not change stored content or
+claim publication simply to make the obsolete family gate pass.
+
 ## Files and commands
 
-The eventual corpus lives under `content/question-bank/cse-2027-v1/`. Keep its
+The manifest-backed corpus currently lives under `content/question-bank/cse-2027-v1/`,
+with additional finalized seed content in `cse-2027-v2/`. Keep a corpus
 manifest at the root, question arrays in `families/`, reference arrays in
 `references/`, asset metadata arrays alongside them, and binary images in
 `assets/`. These files contain answer keys: never place them in `public/`, import
@@ -20,13 +35,46 @@ node scripts/validate-question-bank.mjs --manifest content/question-bank/cse-202
 node scripts/validate-question-bank.mjs --manifest content/question-bank/cse-2027-v1/manifest.json --mode release --json
 ```
 
-Draft mode validates declared content and reports incomplete coverage. Release
-mode requires eight complete paired families. Neither mode substitutes difficulty
+The legacy validator's draft mode validates declared content and reports incomplete
+coverage. Its release mode still requires eight paired exam families under the
+superseded v1 contract; that is not a current seeding-completion check.
+Neither mode substitutes difficulty
 cells or publishes questions. Exit codes: 0 means no validation errors; 1 means
 invalid content; 2 means invocation, unsafe path, or filesystem access failure.
 Malformed JSON is invalid content (1). Output includes errors/warnings with file,
 record ID, rule, expected/actual values, distributions, and per-family coverage.
 Warnings include exact duplicate candidates requiring editorial adjudication.
+
+## Pending taxonomy v2: Data Sufficiency
+
+[ADR 0011](../ADR/0011-numerical-data-sufficiency.md) and the
+[taxonomy addition](../exams/cse-taxonomy-and-blueprints.md#approved-addition-numerical-data-sufficiency)
+approve `data_sufficiency` as a second shared Numerical Ability concept, under
+subtopic `numerical_reasoning`. This is distinct from the existing concept with
+the same name as that subtopic. Under ADR 0013, each generated exam must contain
+Data Sufficiency within its shared Numerical selection from the pooled bank,
+inside the existing exam counts and difficulty cells.
+
+The current offline policy and corpus manifest still use taxonomy v1; this
+documentation change does not make the validator accept the new concept. Adopt
+taxonomy v2, pooled v3 blueprint identifiers, tests, and corpus metadata together before
+including these records. Taxonomy v2 does not by itself change JSON format
+version 1. Do not retag computation questions as Data Sufficiency or rewrite
+historical versions merely to meet coverage. New items require two consistent
+statements, five full-text sufficiency outcomes with stable choice IDs, and
+explanations evaluating each statement separately and then together.
+
+### Pending v2 Clerical grouping
+
+[ADR 0012](../ADR/0012-clerical-alphabetizing-and-spelling.md) adds
+`alphabetizing` and groups the retained `spelling` concept under subtopic
+`clerical_operations`, subject `clerical_ability`. The general
+`clerical_operations` concept remains. All are English, Subprofessional-only
+Clerical items; the existing 40-item total and 12/20/8 cells do not change.
+The current v1 validator still expects `language_accuracy` for Spelling and does
+not accept Alphabetizing. Do not retag v1 records in place. V2 adoption must
+synchronize policy, tests, and versioned classifications while preserving
+historical question versions and Spelling concept identity.
 
 ## Format version 1
 
@@ -92,8 +140,9 @@ Question array example (synthetic content only):
 ```
 
 All illustrated question fields are required except `reference`. `questionId`
-identifies both the canonical question and its assignment in this release; it
-cannot recur across families. Each module accepts only its approved subjects.
+identifies the canonical question. Its `family` is seed provenance, not an exam
+assignment. It cannot count as a new unique question in another seed family, but
+an eligible version may be selected in different attempts. Each module accepts only its approved subjects.
 Module IDs are `shared-core`, `professional-numerical`, `analytical`, `clerical`.
 Shared-core applicability is the ordered array shown above. Clerical applicability
 is `["subprofessional"]`; the other two modules use `["professional"]`.
@@ -106,6 +155,36 @@ Provenance requires `kind` (`original`, `licensed`, or `synthetic`), `author`,
 evidence, mandatory for licensed material). Human review must verify substantive
 explanations, factual citations, licensing, proposed difficulty, and originality.
 Synthetic content is only a fixture/example and must not become the product bank.
+
+## Choice identity and display order
+
+`choiceId` is a stable identity within a question version, not a displayed answer
+letter. For example, a choice with ID `c` can appear as visible A in an attempt;
+`correctChoiceId: "c"` still identifies that same answer. Do not rename choice IDs
+to match shuffled positions. Choice IDs remain local to the exact question version.
+
+The authored JSON array supplies source order. The planned assessment backend
+generates a random permutation for each eligible newly served item, stores the
+ordered choice IDs with the attempt, and serves that order to the interface.
+The interface derives visible letters from positions. It must reuse the saved
+order on navigation, refresh, resume, and review. Answers submit choice IDs and
+the backend scores them against the immutable served question version. Correct
+IDs and explanations are withheld until authorized feedback/review.
+
+Consequently, a C-heavy distribution of stored correct IDs is not by itself a
+content defect once this runtime behavior exists. It remains a serving concern
+until then. Random shuffling does not promise an exactly balanced A–D distribution
+in each exam, and authoring does not require ten stored keys per letter.
+
+Prefer position-independent options. Ordered numerical options may be shuffled
+when their meaning is unchanged. Options referring to other letters or relative
+positions require preserved order or an editorial rewrite. Future lifecycle work
+must explicitly record shuffle eligibility in immutable versions before serving;
+do not add an unsupported field to this v1 JSON format. The offline validator
+does not currently prove order independence or implement randomization.
+
+See [ADR 0010](../ADR/0010-assessment-choice-order-and-scoring.md). This policy
+does not resolve separate originality, difficulty, or blueprint-coverage findings.
 
 ## Shared passages, tables, and graphs
 
@@ -151,7 +230,7 @@ Several questions may link to one exact reference version. They may appear
 separately and each must display the full reference. Do not hardcode "For items
 18–20"; future rendering derives any range from actual attempt positions. A
 question must not require another question's answer. References/assets never
-count toward the 1,520-question minimum or earn scores.
+count toward the current 2,160-unique-question seeding plan or earn scores.
 
 ## Checksums and handoff
 

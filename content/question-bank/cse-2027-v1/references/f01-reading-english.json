@@ -1,0 +1,134 @@
+[
+  {
+    "referenceId": "f01-reading-english-01-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "The Shared Tool Room",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The residents call their tool-sharing arrangement stewardship. In their handbook, the word means caring for something entrusted to you so that another person can use it later. Borrowers clean each tool, report damage, and return it on time. They do not become its owners. A drill left dirty in a locked cupboard is safely stored, but the handbook says storage alone is not enough."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-02-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An Evening Service",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A neighbourhood advice desk originally closed at four in the afternoon. Several residents wrote that they worked until five and could never reach it before closing. The coordinator considered buying more chairs, but the room already had spare seats. Instead, the desk moved its opening and closing times two hours later. The number of advisers stayed the same."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Stated reason; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-03-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "After the Argument",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Her patience was a bridge.\nWe crossed it one word at a time,\nfrom separate ends of an argument\nto a table where we could listen."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify a metaphor in original verse; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-04-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An Open Meeting",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "In this committee’s handbook, transparency means making the reasons for a decision available for others to examine. It does not mean publishing every piece of personal information discussed at a meeting. The handbook therefore asks members to release the decision and its reasons while removing private contact details. It distinguishes openness about the committee’s work from exposure of information that does not explain the decision."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a defined idea and its boundary; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-05-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "A Different Stop",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The travelling library’s old stop was beside the market, and readers said they liked its shade. When repairs closed the only road wide enough for the library van to reach that stop, the driver proposed using a nearby covered court. Some traders worried that the change meant the service had lost readers. The librarian explained that borrowing had remained steady and that the court would be used only until the road reopened."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-06-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "The Workshop",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The workshop is a doorway,\nnot a promise of a prize.\nBeyond it wait unfamiliar tools\nand work we have not tried."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a metaphor using surrounding lines; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  }
+]

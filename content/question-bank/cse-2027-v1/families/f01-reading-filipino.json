@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f01-reading-filipino-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Saan nais dumiretso ni Rami pagkatapos makausap ang guro?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sa kantina"
+      },
+      {
+        "choiceId": "b",
+        "text": "Sa silid ng mga mapa"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sa silid ng guro"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sa labas ng paaralan"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Malinaw na sinabi sa talata na nais ni Rami na dumiretso sa silid ng mga mapa. Mamaya pa ang pagpunta sa kantina. Ang bangko ay pansamantalang hintayan lamang habang sarado pa ang silid.",
+    "reference": {
+      "referenceId": "f01-reading-filipino-01-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Hanapin ang tahasang binanggit na patutunguhan; image 3, question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-filipino-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Alin ang HINDI kasama sa napagkasunduang plano para sa Sabado?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Pagtitipon ng mga tuyong dahon"
+      },
+      {
+        "choiceId": "b",
+        "text": "Paglalagay ng pangalan sa mga bagong tanim"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pagpipintura sa bakod"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pagtatala ng mga sirang bangko"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang pagpipintura sa bakod ay ipinagpaliban para sa susunod na buwan. Ang tatlong iba pang pagpipilian ang mismong nakalistang gawain para sa Sabado. Hindi ibig sabihin na masama ang pagpipintura; hindi lamang ito kasama sa takdang plano.",
+    "reference": {
+      "referenceId": "f01-reading-filipino-02-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Tukuyin ang hindi kabilang ayon sa teksto; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-filipino-03",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Anong lugar ang nais pagtagalan ng nagsasalita sa tula?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sa tanghalan"
+      },
+      {
+        "choiceId": "b",
+        "text": "Sa palaruan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sa tindahan"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sa silid-aklatan"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Tahasang binanggit sa unang taludtod ang silid-aklatan. Ang mesa, ilaw, at aklat ay mga detalyeng kaugnay ng paglagi roon. Walang pahayag na nais niyang magtagal sa ibang lugar sa mga pagpipilian.",
+    "reference": {
+      "referenceId": "f01-reading-filipino-03-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Tahasang patutunguhan o nais na lugar sa orihinal na tula; image 3, question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-filipino-04",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling pahayag ang HINDI naaayon sa talata?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Lahat ng isinumiteng larawan ay tiyak na maisasama sa eksibit"
+      },
+      {
+        "choiceId": "b",
+        "text": "Hanggang tatlong larawan ang maaaring isumite ng isang kasapi"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sa Lunes ipapaskil ang mga napiling larawan"
+      },
+      {
+        "choiceId": "d",
+        "text": "Ibabalik ang mga larawang hindi mapipili"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Hindi lahat ng isinumiteng larawan ay tiyak na maisasama: isa lamang ang pipiliin mula sa bawat kasapi, kahit hanggang tatlo ang maaaring isumite. Ang iba pang pahayag ay tuwirang nakasaad sa talata.",
+    "reference": {
+      "referenceId": "f01-reading-filipino-04-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Suriin ang hindi suportadong pangkalahatang pahayag; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-filipino-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling paliwanag ang pinakasuportado ng mga detalye sa talata tungkol sa nabawasang pagbabalik upang magtanong?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Nabawasan ang bilang ng gripo"
+      },
+      {
+        "choiceId": "b",
+        "text": "Nalaman na ng mga pumipila ang tuntunin bago pa makarating sa unahan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Dumami ang tauhang sumasagot sa unahan"
+      },
+      {
+        "choiceId": "d",
+        "text": "Itinigil na ng himpilan ang pamimigay ng tubig"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ang paalala at mga halimbawa ay nasa pasukan, kaya maaaring malaman ng mga tao ang tuntunin bago pumila hanggang sa unahan. Ito ang pinakasuportadong paliwanag. Walang idinagdag na gripo o tauhan, at hindi sinabing itinigil ang serbisyo.",
+    "reference": {
+      "referenceId": "f01-reading-filipino-05-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Pangangatwirang sanhi batay sa detalye; image 1, passage A question 1, extended in Filipino. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-filipino-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang pinakamakatwirang hinuha tungkol sa paraan ni Lira?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Nais niyang pumili ng isang salaysay na papalit sa iba pang bersiyon"
+      },
+      {
+        "choiceId": "b",
+        "text": "Itinuturing niyang patunay ng katumpakan ang pagkakakilala sa nagsalaysay"
+      },
+      {
+        "choiceId": "c",
+        "text": "Nais niyang mapanatili ang pinagmulan at pagkakaiba ng mga salaysay"
+      },
+      {
+        "choiceId": "d",
+        "text": "Nais niyang ituring na tiyak ang detalye kapag nabanggit ito ng higit sa isang residente"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang pagtatala kung sino ang nagsabi ng bawat sagot at ang pagpapanatiling magkahiwalay sa mga alaalang hindi nagtutugma ay sumusuporta sa pag-iingat sa pinagmulan at pagkakaiba ng mga salaysay. Hindi sinabing pumili siya ng isang bersiyong papalit sa iba. Ang pagkakakilala sa nagsalaysay ay tala ng pinagmulan, hindi patunay na tama ang salaysay. Wala ring tuntuning nagsasabing tiyak na ang isang detalye kapag nabanggit ito ng higit sa isang residente. Ang mga ito ay dagdag na palagay tungkol sa pagpili o pagpapatunay na hindi ibinigay sa talata.",
+    "reference": {
+      "referenceId": "f01-reading-filipino-06-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Hinuha sa layunin batay sa kilos ng tauhan; extension of the supplied comprehension formats. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  }
+]

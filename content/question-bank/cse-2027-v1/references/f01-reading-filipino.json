@@ -1,0 +1,134 @@
+[
+  {
+    "referenceId": "f01-reading-filipino-01-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Bago Magsimula ang Klase",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Maagang dumating si Rami sa paaralan upang isauli ang kagamitang hiniram niya. Pagkatapos niyang makausap ang guro, nais niyang dumiretso sa silid ng mga mapa upang makita ang bagong talaan ng mga lumang ruta. Sinabi niyang sa kantina na lamang siya pupunta pagkatapos. Hindi pa bukas ang silid ng mga mapa, kaya naupo muna siya sa bangko sa labas nito."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Hanapin ang tahasang binanggit na patutunguhan; image 3, question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-02-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Plano sa Munting Liwasan",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa pagpupulong, tatlong gawain ang isinama ng pangkat sa plano para sa Sabado: tipunin ang mga tuyong dahon, lagyan ng pangalan ang mga bagong tanim, at itala ang mga sirang bangko upang maipagbigay-alam sa tanggapan. Iminungkahi rin ni Mila na pinturahan ang bakod, ngunit ipinagpaliban iyon para sa susunod na buwan. Napagkasunduang huwag munang dagdagan ang gawain sa Sabado."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Tukuyin ang hindi kabilang ayon sa teksto; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-03-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Sa Aking Paglalakad",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa silid-aklatan ko nais magtagal,\nsa mesang may ilaw at tahimik na sulok.\nDoon ko bubuksan ang aklat na dala,\nhabang ang hapon ay marahang lumilipas."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Tahasang patutunguhan o nais na lugar sa orihinal na tula; image 3, question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-04-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Ang Paghahanda ng Eksibit",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Nagtakda ang samahan ng dalawang araw para sa pagtanggap ng mga larawang isasama sa eksibit. Maaaring magsumite ang bawat kasapi ng hanggang tatlong larawan, ngunit isa lamang ang pipiliin mula sa bawat kasapi. Ipapaskil ang mga napili sa Lunes. Sinabi ng tagapangasiwa na ang hindi mapiling larawan ay ibabalik; hindi ito awtomatikong magiging pag-aari ng samahan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Suriin ang hindi suportadong pangkalahatang pahayag; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-05-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Sa Himpilan ng Tubig",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Mahaba ang pila sa himpilan ng tubig kahit sapat ang mga gripo. Napansin ni Bea na paulit-ulit na bumabalik sa unahan ang mga tao upang itanong kung anong lalagyan ang maaaring gamitin. Naglagay siya ng malinaw na paalala sa pasukan at nagpakita ng mga halimbawa ng pinapayagang lalagyan. Kinabukasan, bihira nang may bumalik upang magtanong. Hindi nagdagdag ng gripo o tauhan ang himpilan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Pangangatwirang sanhi batay sa detalye; image 1, passage A question 1, extended in Filipino. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-06-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga Lumang Daan",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa halip na gumuhit agad ng bagong mapa ng kanilang baryo, kinausap ni Lira ang matatandang residente. Itinanong niya kung saan dating dumaraan ang sapa at kung aling mga daan ang may lumang pangalan. Isinulat niya ang magkakaibang sagot at nilagyan ng tala kung sino ang nagsabi ng bawat isa. Hindi niya pinilit na pag-isahin ang mga alaalang hindi nagtutugma."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Hinuha sa layunin batay sa kilos ng tauhan; extension of the supplied comprehension formats. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  }
+]

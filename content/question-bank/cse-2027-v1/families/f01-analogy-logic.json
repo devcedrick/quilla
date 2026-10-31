@@ -1,0 +1,1634 @@
+[
+  {
+    "questionId": "f01-analogy-logic-01",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Letters are shifted one place forward in the alphabet, with Z wrapping to A: LAMP becomes MBNQ. What does ROAD become?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "SPBE"
+      },
+      {
+        "choiceId": "b",
+        "text": "QNZC"
+      },
+      {
+        "choiceId": "c",
+        "text": "SPAD"
+      },
+      {
+        "choiceId": "d",
+        "text": "TQCF"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Move each letter forward once: R→S, O→P, A→B, D→E. The result is SPBE.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 51; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-02",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A code shifts the first letter forward 1 place, the second 2, the third 3, and the fourth 4, wrapping after Z. For example, FISH becomes GKVL. Which original word produces AKQG?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "ZJNC"
+      },
+      {
+        "choiceId": "b",
+        "text": "ZINC"
+      },
+      {
+        "choiceId": "c",
+        "text": "YINC"
+      },
+      {
+        "choiceId": "d",
+        "text": "ZIMC"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Decode by reversing each shift. A−1 wraps to Z, K−2 gives I, Q−3 gives N, and G−4 gives C. The original word is ZINC.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 51; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-03",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the synonym analogy: BRIEF : CONCISE :: COURTEOUS : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "distant"
+      },
+      {
+        "choiceId": "b",
+        "text": "formal"
+      },
+      {
+        "choiceId": "c",
+        "text": "polite"
+      },
+      {
+        "choiceId": "d",
+        "text": "silent"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Brief and concise have similar meanings. Courteous similarly means polite; being formal, silent, or distant does not necessarily mean being courteous.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 52; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-04",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Complete the analogy: MITIGATE : ALLEVIATE :: EXACERBATE : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "anticipate"
+      },
+      {
+        "choiceId": "b",
+        "text": "examine"
+      },
+      {
+        "choiceId": "c",
+        "text": "tolerate"
+      },
+      {
+        "choiceId": "d",
+        "text": "aggravate"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Mitigate and alleviate both mean to make something less severe. Exacerbate and aggravate both mean to make something worse. Preserve the synonym relationship rather than choosing an opposite.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 52; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-05",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the pair matching the valued quality-to-role relationship in CURIOSITY : RESEARCHER.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "impartiality : mediator"
+      },
+      {
+        "choiceId": "b",
+        "text": "ticket : passenger"
+      },
+      {
+        "choiceId": "c",
+        "text": "salary : employee"
+      },
+      {
+        "choiceId": "d",
+        "text": "harvest : farmer"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Curiosity is a quality useful to a researcher. Impartiality is likewise a quality useful to a mediator. The other pairs concern a document, payment, or product rather than a quality.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 53; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-06",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the pair matching VIGILANCE : LOOKOUT, where the first word names an essential quality exercised in the second role.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "applause : performer"
+      },
+      {
+        "choiceId": "b",
+        "text": "discretion : confidential adviser"
+      },
+      {
+        "choiceId": "c",
+        "text": "profit : customer"
+      },
+      {
+        "choiceId": "d",
+        "text": "verdict : witness"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "A lookout exercises vigilance by watching carefully. A confidential adviser exercises discretion by handling sensitive information carefully. Applause, profit, and a verdict are not personal qualities.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 53; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-07",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the characteristic-disposition analogy: PEACEMAKER : CONCILIATION :: REBEL : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "precision"
+      },
+      {
+        "choiceId": "b",
+        "text": "hospitality"
+      },
+      {
+        "choiceId": "c",
+        "text": "defiance"
+      },
+      {
+        "choiceId": "d",
+        "text": "patience"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "A peacemaker seeks conciliation, or the settling of disagreements. A rebel is associated with defiance, or resistance to authority.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 54; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-08",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Complete the analogy linking a person to the tendency expressed by that description: PERFECTIONIST : EXACTINGNESS :: FATALIST : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "curiosity about causes"
+      },
+      {
+        "choiceId": "b",
+        "text": "commitment to reform"
+      },
+      {
+        "choiceId": "c",
+        "text": "confidence in personal control"
+      },
+      {
+        "choiceId": "d",
+        "text": "acceptance of inevitability"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "A perfectionist insists on exacting standards. A fatalist regards events as inevitable. This does not mean every person fits a stereotype; the analogy concerns the meanings of the descriptions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 54; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-09",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which pair has the same synonym relationship as EVIDENT : OBVIOUS?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "fragile : delicate"
+      },
+      {
+        "choiceId": "b",
+        "text": "narrow : spacious"
+      },
+      {
+        "choiceId": "c",
+        "text": "rapid : delayed"
+      },
+      {
+        "choiceId": "d",
+        "text": "smooth : jagged"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Evident and obvious both mean clear or readily apparent. Fragile and delicate can both describe something easily damaged. Each other pair contrasts meanings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 55; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-10",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the synonym pair matching HINDER : OBSTRUCT.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "inspect : approve"
+      },
+      {
+        "choiceId": "b",
+        "text": "conceal : hide"
+      },
+      {
+        "choiceId": "c",
+        "text": "collect : distribute"
+      },
+      {
+        "choiceId": "d",
+        "text": "warn : punish"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "To hinder is to obstruct or impede. To conceal is to hide. Inspecting does not necessarily mean approving, and warning does not mean punishing.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 55; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-11",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the opposite-meaning analogy: ABUNDANT : SCARCE :: FLEXIBLE : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "elastic"
+      },
+      {
+        "choiceId": "b",
+        "text": "supple"
+      },
+      {
+        "choiceId": "c",
+        "text": "rigid"
+      },
+      {
+        "choiceId": "d",
+        "text": "adaptable"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Abundant and scarce are opposites. Flexible and rigid are opposites too. Elastic, supple, and adaptable are related to flexibility instead.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 56; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-12",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair follows the antonym relationship in TEMPORARY : PERMANENT?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "optional : discretionary"
+      },
+      {
+        "choiceId": "b",
+        "text": "uncertain : doubtful"
+      },
+      {
+        "choiceId": "c",
+        "text": "quiet : subdued"
+      },
+      {
+        "choiceId": "d",
+        "text": "voluntary : compulsory"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Temporary contrasts with permanent. Voluntary, done by choice, contrasts with compulsory, required. The other options contain similar meanings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 56; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-13",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the enclosing-cover analogy: ENVELOPE : LETTER :: CASE : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "violin"
+      },
+      {
+        "choiceId": "b",
+        "text": "music"
+      },
+      {
+        "choiceId": "c",
+        "text": "concert"
+      },
+      {
+        "choiceId": "d",
+        "text": "bowing"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "An envelope encloses a letter. A case can likewise enclose a violin. The other choices are not the physical object enclosed by that case.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 57; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-14",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which pair matches PEEL : FRUIT, with the first naming a natural outer covering of the second?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "branch : tree"
+      },
+      {
+        "choiceId": "b",
+        "text": "shell : egg"
+      },
+      {
+        "choiceId": "c",
+        "text": "root : soil"
+      },
+      {
+        "choiceId": "d",
+        "text": "seed : orchard"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "A peel is the outer covering of a fruit. A shell is the outer covering of an egg. The alternatives describe parts or locations without that outer-covering relationship.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 57; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-15",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the activity-to-intended-result analogy: REHEARSE : PREPAREDNESS :: PRACTISE : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "equipment"
+      },
+      {
+        "choiceId": "b",
+        "text": "competition"
+      },
+      {
+        "choiceId": "c",
+        "text": "proficiency"
+      },
+      {
+        "choiceId": "d",
+        "text": "instruction"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Rehearsing aims to build preparedness. Practising aims to build proficiency, or skill. The relationship is an intended result, not a guarantee of success.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 58; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-16",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair matching INVESTIGATE : ESTABLISH FACTS, where the second phrase is the purpose of the first action.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "decorate : occupy space"
+      },
+      {
+        "choiceId": "b",
+        "text": "postpone : finish early"
+      },
+      {
+        "choiceId": "c",
+        "text": "borrow : transfer ownership"
+      },
+      {
+        "choiceId": "d",
+        "text": "proofread : detect textual errors"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "An investigation aims to establish facts. Proofreading aims to detect textual errors. Borrowing does not transfer ownership, and postponing does not aim at finishing early.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 58; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-17",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the place-to-goods-sold analogy: FLORIST SHOP : BOUQUETS :: STATIONERY SHOP : ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "notebooks"
+      },
+      {
+        "choiceId": "b",
+        "text": "appointments"
+      },
+      {
+        "choiceId": "c",
+        "text": "haircuts"
+      },
+      {
+        "choiceId": "d",
+        "text": "vegetables"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "A florist shop sells bouquets. A stationery shop similarly sells notebooks. The relationship concerns goods sold, not services or unrelated products.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 59; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-18",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair matches GRAIN DEPOT : GRAIN, specifically as a storage facility and what it holds?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "orchard : apples"
+      },
+      {
+        "choiceId": "b",
+        "text": "reservoir : water"
+      },
+      {
+        "choiceId": "c",
+        "text": "restaurant : diners"
+      },
+      {
+        "choiceId": "d",
+        "text": "quarry : stone"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "A grain depot stores grain. A reservoir stores water. An orchard grows fruit and a quarry is an extraction site; those are different relationships.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 59; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-19",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which word is closest in meaning to a single LEVEL of seats in a stadium?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "aisle"
+      },
+      {
+        "choiceId": "b",
+        "text": "gate"
+      },
+      {
+        "choiceId": "c",
+        "text": "tier"
+      },
+      {
+        "choiceId": "d",
+        "text": "spectator"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "A tier is one level in a series of rows or levels. An aisle is a passage, a gate is an entrance, and a spectator is a person.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 60; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-20",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In the phrase \"a segment of the route,\" which replacement for SEGMENT most nearly preserves the meaning?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "destination"
+      },
+      {
+        "choiceId": "b",
+        "text": "direction"
+      },
+      {
+        "choiceId": "c",
+        "text": "vehicle"
+      },
+      {
+        "choiceId": "d",
+        "text": "section"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "A segment is a distinct part or section. A destination is an endpoint, a direction indicates orientation, and a vehicle is a means of travel.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 60; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-21",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five runners stand front to rear as Arin, Belen, Ciro, Dena, Eno. Eno moves to the front. Ciro then moves immediately behind Eno. Arin leaves the line. Everyone else keeps their relative order. Who is third from the front now?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Belen"
+      },
+      {
+        "choiceId": "b",
+        "text": "Ciro"
+      },
+      {
+        "choiceId": "c",
+        "text": "Dena"
+      },
+      {
+        "choiceId": "d",
+        "text": "Eno"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Track one move at a time: Eno, Arin, Belen, Ciro, Dena; then Eno, Ciro, Arin, Belen, Dena. Removing Arin leaves Eno, Ciro, Belen, Dena. Belen is third.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 61; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-22",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five files R, S, T, U, V began in an unknown order. First U moved from second position to the end. Then T moved from fourth position to the front. The final order is T, R, V, S, U. What file was originally third?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R"
+      },
+      {
+        "choiceId": "b",
+        "text": "V"
+      },
+      {
+        "choiceId": "c",
+        "text": "S"
+      },
+      {
+        "choiceId": "d",
+        "text": "U"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Undo the last move by returning T to fourth: R, V, S, T, U. Undo U moving from second to the end: remove U and put it second, obtaining R, U, V, S, T. The original third file was V. Replaying both moves gives the stated final order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 61; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-23",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A permit is checked before it is stamped. A payment is recorded before a receipt is printed. Is it certain that stamping happens before receipt printing?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Yes, it must"
+      },
+      {
+        "choiceId": "b",
+        "text": "No, printing must come first"
+      },
+      {
+        "choiceId": "c",
+        "text": "It cannot be determined"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The statements order checking and stamping within one pair, and payment and printing within another. Nothing links the pairs, so either stamping or receipt printing could happen first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 62; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-24",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four tasks P, Q, R, S occur once each. P is before Q, R is before S, and Q is before S. Which statement must be true in every valid schedule?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R is before P"
+      },
+      {
+        "choiceId": "b",
+        "text": "Q is before R"
+      },
+      {
+        "choiceId": "c",
+        "text": "P is the first task"
+      },
+      {
+        "choiceId": "d",
+        "text": "S is the last task"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P precedes Q, and Q precedes S, so P also precedes S. R precedes S directly. Thus all other tasks precede S, making S last. P and R can exchange their relative positions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 62; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-25",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Tower A is taller than Tower B. Tower C is taller than Tower A. Is the statement \"Tower B is taller than Tower C\" true, false, or undetermined?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "False"
+      },
+      {
+        "choiceId": "b",
+        "text": "True"
+      },
+      {
+        "choiceId": "c",
+        "text": "Undetermined"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The order is C taller than A taller than B. B therefore cannot be taller than C.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 63; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-26",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "On the same route, train L takes less time than train M, and train N takes less time than train L. All times are positive. Which conclusion is certain?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "M is fastest"
+      },
+      {
+        "choiceId": "b",
+        "text": "N takes less time than M"
+      },
+      {
+        "choiceId": "c",
+        "text": "L takes more time than M"
+      },
+      {
+        "choiceId": "d",
+        "text": "N and M take equal time"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "N takes less time than L, which takes less time than M. Chaining those comparisons shows N takes less time than M.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 63; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-27",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The organisers said, \"Attendance at the free repair workshop was unexpectedly high.\" What expectation is directly indicated by that wording?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The workshop would be cancelled"
+      },
+      {
+        "choiceId": "b",
+        "text": "All attendees would pay"
+      },
+      {
+        "choiceId": "c",
+        "text": "Attendance would be lower than it was"
+      },
+      {
+        "choiceId": "d",
+        "text": "Every participant would be a mechanic"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Calling the attendance unexpectedly high compares the actual turnout with a lower expectation. It says nothing about cancellation, payment, or participants’ occupations.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 64; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-28",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A team predicted 40–60 visitors and fewer than 10 requests for follow-up help. It later described 90 visitors and 25 follow-up requests as \"surprisingly high on both measures.\" Which pair of prior beliefs is consistent with that description? I. Visitor numbers would not exceed 60. II. Follow-up requests would be below 10. III. Every visitor would request help.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "I only"
+      },
+      {
+        "choiceId": "b",
+        "text": "II and III only"
+      },
+      {
+        "choiceId": "c",
+        "text": "I and III only"
+      },
+      {
+        "choiceId": "d",
+        "text": "I and II only"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The stated predictions support I and II. Ninety exceeds the predicted visitor range, and 25 exceeds the predicted request count. III conflicts with expecting fewer than 10 requests among 40–60 visitors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 64; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-29",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "All archived records are indexed. No indexed record is publicly accessible. Which conclusion must follow?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "No archived record is publicly accessible"
+      },
+      {
+        "choiceId": "b",
+        "text": "All nonpublic records are archived"
+      },
+      {
+        "choiceId": "c",
+        "text": "Some archived records are public"
+      },
+      {
+        "choiceId": "d",
+        "text": "Every indexed record is archived"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Archived records belong to the indexed group, and that whole group is excluded from public access. Therefore archived records cannot be public. The reverse membership claims do not follow.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 65; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-30",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every emergency vehicle has a radio. Vehicle K has a radio. Which conclusion about K is justified from these statements alone?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "K must be an emergency vehicle"
+      },
+      {
+        "choiceId": "b",
+        "text": "K may or may not be an emergency vehicle"
+      },
+      {
+        "choiceId": "c",
+        "text": "K cannot be an emergency vehicle"
+      },
+      {
+        "choiceId": "d",
+        "text": "Every vehicle with a radio is an emergency vehicle"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The rule says emergency vehicles have radios, not that only emergency vehicles have radios. K could be an emergency vehicle or another kind of vehicle with a radio.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 65; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-31",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "One staff member has badge number 417. No other staff member has that badge number. How many staff members have badge number 417?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Zero"
+      },
+      {
+        "choiceId": "b",
+        "text": "At least two"
+      },
+      {
+        "choiceId": "c",
+        "text": "Exactly one"
+      },
+      {
+        "choiceId": "d",
+        "text": "It cannot be determined"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The first statement establishes one holder. The second rules out any additional holders. Together they establish exactly one.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 66; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-32",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Among six applicants, exactly one speaks both Cebuano and Japanese. Which statement must be true?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The other five speak neither language"
+      },
+      {
+        "choiceId": "b",
+        "text": "All six speak Cebuano"
+      },
+      {
+        "choiceId": "c",
+        "text": "Exactly one speaks any language"
+      },
+      {
+        "choiceId": "d",
+        "text": "Five applicants do not speak both languages"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Exactly one has both language abilities, so the remaining five do not have both. They may still speak one language or neither; the statements do not specify which.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 66; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-33",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A safety bulletin repeatedly portrays accidents as unavoidable and tells readers that precautions make no difference. Which description best combines those two messages?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It encourages fear together with helplessness"
+      },
+      {
+        "choiceId": "b",
+        "text": "It proves all precautions are ineffective"
+      },
+      {
+        "choiceId": "c",
+        "text": "It shows that readers cause accidents"
+      },
+      {
+        "choiceId": "d",
+        "text": "It teaches readers an effective safety procedure"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The bulletin pairs a threatening picture of accidents with a claim that action cannot help. This communicates danger and helplessness; it does not prove the claim or explain an effective procedure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 67; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-34",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "After reading an alarmist notice, surveyed residents reported both greater worry about flooding and less confidence that preparation would help. No comparison group or earlier measurements were available. Which conclusion stays within the evidence?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The notice caused every resident to stop preparing"
+      },
+      {
+        "choiceId": "b",
+        "text": "The respondents reported greater worry and reduced confidence, but the notice’s causal effect is not established"
+      },
+      {
+        "choiceId": "c",
+        "text": "Flood preparation has no practical value"
+      },
+      {
+        "choiceId": "d",
+        "text": "All residents were previously confident"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The survey records reports of greater worry and reduced confidence. Reduced confidence does not necessarily mean low confidence. Without earlier measurements or a comparison group, the survey cannot establish that the notice caused a change, nor what every resident believed or whether preparation actually helps.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 67; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-35",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A council is considering a rule that would allow new market stalls only after a safety inspection. Which statement accurately reflects the proposal?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Every existing stall has failed inspection"
+      },
+      {
+        "choiceId": "b",
+        "text": "All market stalls are currently prohibited"
+      },
+      {
+        "choiceId": "c",
+        "text": "Permission for new stalls would depend on a safety inspection"
+      },
+      {
+        "choiceId": "d",
+        "text": "The proposed rule is already in force"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The proposal ties permission for new stalls to inspection. Considering a rule does not mean it is already law, and nothing is stated about existing stalls or their inspection results.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 68; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-36",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An initial draft would allow evening classes only in buildings with emergency lighting. A revised draft keeps that condition and adds a requirement for an on-site supervisor. Which statement describes the revised draft accurately?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Emergency lighting is no longer required"
+      },
+      {
+        "choiceId": "b",
+        "text": "A supervisor alone is enough for permission"
+      },
+      {
+        "choiceId": "c",
+        "text": "All buildings are now eligible"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both emergency lighting and an on-site supervisor would be required"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The revision keeps the original lighting condition and adds a supervisor condition, so both are required. Adding this condition cannot expand eligibility and may narrow it. Eligibility would stay the same if every previously eligible building already had a supervisor. Neither draft is described as approved.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 68; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-37",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every red crate in a warehouse contains tools. Every blue crate contains paper. Do these facts establish that every crate contains either tools or paper?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "No; crates of other colours may contain something else"
+      },
+      {
+        "choiceId": "b",
+        "text": "Yes; the two rules cover every possible crate"
+      },
+      {
+        "choiceId": "c",
+        "text": "No; blue crates must also contain tools"
+      },
+      {
+        "choiceId": "d",
+        "text": "Yes; tools and paper are the same category"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The rules describe red and blue crates but do not say those are the only colours. Another crate could contain something else, so the proposed universal conclusion is not established.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 69; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-38",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every red parcel is fragile. No fragile parcel is stored outdoors. At least one parcel is stored outdoors. Which conclusion must be true?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Every non-red parcel is outdoors"
+      },
+      {
+        "choiceId": "b",
+        "text": "At least one outdoor parcel is not red"
+      },
+      {
+        "choiceId": "c",
+        "text": "No parcel is red"
+      },
+      {
+        "choiceId": "d",
+        "text": "Every indoor parcel is fragile"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "At least one outdoor parcel exists. The second premise states that none of the parcels actually stored outdoors is fragile. Since every red parcel is fragile, that outdoor parcel is not red. This follows from the stated facts without assuming that a storage rule is obeyed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 69; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-39",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two tickets cost the same as three tokens. Four tokens cost the same as one pass. All unit prices are positive. Which statement must be true?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "One ticket costs more than one pass"
+      },
+      {
+        "choiceId": "b",
+        "text": "One ticket and one pass cost the same"
+      },
+      {
+        "choiceId": "c",
+        "text": "One ticket costs less than one pass"
+      },
+      {
+        "choiceId": "d",
+        "text": "Prices cannot be compared"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "One ticket costs 3/2 = 1.5 token units. A pass costs 4 token units. With positive prices, 1.5 token units costs less than 4, so a ticket is cheaper.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 70; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-40",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three notebooks cost the same as two pens. Five pens cost the same as two folders. All unit prices are positive. What is the ratio of the cost of one notebook to the cost of one folder?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "2:3"
+      },
+      {
+        "choiceId": "b",
+        "text": "3:5"
+      },
+      {
+        "choiceId": "c",
+        "text": "5:6"
+      },
+      {
+        "choiceId": "d",
+        "text": "4:15"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Let a pen cost one unit. A notebook costs 2/3 unit, while a folder costs 5/2 units. The ratio is (2/3):(5/2). Multiplying both parts by 6 gives 4:15.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 70; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+      ]
+    }
+  }
+]

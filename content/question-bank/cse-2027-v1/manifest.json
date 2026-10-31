@@ -1,0 +1,34 @@
+{
+  "formatVersion": 1,
+  "corpusId": "cse-2027-v1",
+  "revision": 18,
+  "taxonomyId": "cse-taxonomy-2027-v1",
+  "blueprintIds": ["cse-professional-2027-v1", "cse-subprofessional-2027-v1"],
+  "questionFiles": [
+    "families/f01-graphs-b01.json",
+    "families/f01-graphs-b02.json",
+    "families/f01-analogy-logic.json",
+    "families/f01-vocabulary-english.json",
+    "families/f01-vocabulary-filipino.json",
+    "families/f01-grammar-english.json",
+    "families/f01-grammar-filipino.json",
+    "families/f01-reading-english.json",
+    "families/f01-reading-filipino.json",
+    "families/f01-paragraph-english.json",
+    "families/f01-paragraph-filipino.json",
+    "families/f01-numerical.json",
+    "families/f01-clerical-operations.json"
+  ],
+  "referenceFiles": [
+    "references/f01-graphs-b01.json",
+    "references/f01-graphs-b02.json",
+    "references/f01-reading-english.json",
+    "references/f01-reading-filipino.json",
+    "references/f01-paragraph-english.json",
+    "references/f01-paragraph-filipino.json"
+  ],
+  "assetFiles": [
+    "references/f01-graphs-assets.json",
+    "references/f01-graphs-b02-assets.json"
+  ]
+}

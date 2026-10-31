@@ -1,0 +1,260 @@
+[
+  {
+    "questionId": "f01-grammar-english-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In formal written English, choose the quoted part that contains an error. Choose “No error” if every part is acceptable. Sentence: No one in the records unit were absent from Monday’s briefing.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "No one"
+      },
+      {
+        "choiceId": "b",
+        "text": "in the records unit"
+      },
+      {
+        "choiceId": "c",
+        "text": "were absent"
+      },
+      {
+        "choiceId": "d",
+        "text": "from Monday’s briefing"
+      },
+      {
+        "choiceId": "e",
+        "text": "No error"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "No one is singular, so it takes was, not were, in this statement. The phrase in the records unit does not change the subject’s number. Corrected sentence: No one in the records unit was absent from Monday’s briefing.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 1; singular indefinite subject. Task identifying-errors. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In formal written English, choose the quoted part that contains an error. Choose “No error” if every part is acceptable. Sentence: Both the coordinator and the volunteers checks the equipment before each drill.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both the coordinator and the volunteers"
+      },
+      {
+        "choiceId": "b",
+        "text": "checks"
+      },
+      {
+        "choiceId": "c",
+        "text": "the equipment"
+      },
+      {
+        "choiceId": "d",
+        "text": "before each drill"
+      },
+      {
+        "choiceId": "e",
+        "text": "No error"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The subject joins the coordinator and the volunteers with both ... and, making it plural. Use check rather than checks: Both the coordinator and the volunteers check the equipment before each drill.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 4; compound subject joined by and. Task identifying-errors. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-03",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In formal written English, choose the quoted part that contains an error. Choose “No error” if every part is acceptable. Sentence: The curator’s report includes photographs of the newly restored paintings.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The curator’s report"
+      },
+      {
+        "choiceId": "b",
+        "text": "includes"
+      },
+      {
+        "choiceId": "c",
+        "text": "photographs"
+      },
+      {
+        "choiceId": "d",
+        "text": "of the newly restored paintings"
+      },
+      {
+        "choiceId": "e",
+        "text": "No error"
+      }
+    ],
+    "correctChoiceId": "e",
+    "explanation": "There is no error. The singular noun report takes includes. Curator’s correctly marks one curator’s possession, photographs is the object, and newly correctly modifies restored. Do not change includes to include because paintings is not the subject.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 6; recognise a correct sentence. Task identifying-errors. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the word that correctly completes the sentence. The volunteers labelled ___ equipment before lending it to the team.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "they’re"
+      },
+      {
+        "choiceId": "b",
+        "text": "there"
+      },
+      {
+        "choiceId": "c",
+        "text": "there’s"
+      },
+      {
+        "choiceId": "d",
+        "text": "their"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Their is the possessive determiner showing whose equipment it is. They’re means they are, there indicates a place, and there’s means there is or there has. None can replace the possessive their here.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 2, correct usage item 4; possessive their versus homophones. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the word that correctly completes the sentence. The caretaker agreed ___ unlock the storage room at dawn.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "to"
+      },
+      {
+        "choiceId": "b",
+        "text": "too"
+      },
+      {
+        "choiceId": "c",
+        "text": "two"
+      },
+      {
+        "choiceId": "d",
+        "text": "then"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Agreed is followed here by the to-infinitive: agreed to unlock. Too means also or excessively, two is a number, and then does not supply the required infinitive marker.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 2, correct usage item 3; infinitive to. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-06",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the phrasal verb that means postpone and correctly completes the sentence. Rather than continue with contaminated samples, the team decided to ___ the inspection until replacement samples arrived.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "put out"
+      },
+      {
+        "choiceId": "b",
+        "text": "put through"
+      },
+      {
+        "choiceId": "c",
+        "text": "put off"
+      },
+      {
+        "choiceId": "d",
+        "text": "put up"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Put off means postpone, so it fits a decision to conduct the inspection later. Put out, put through, and put up have different meanings; they do not express postponing the inspection in this sentence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 3, correct usage items 34–37; context-appropriate phrasal verb; new verb/particle example. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  }
+]

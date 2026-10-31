@@ -1,0 +1,289 @@
+[
+  {
+    "questionId": "f01-vocabulary-english-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Despite repeated warnings about the broken alarm, the caretaker remained APATHETIC. Which word is closest in meaning to APATHETIC?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "indifferent"
+      },
+      {
+        "choiceId": "b",
+        "text": "attentive"
+      },
+      {
+        "choiceId": "c",
+        "text": "anxious"
+      },
+      {
+        "choiceId": "d",
+        "text": "enthusiastic"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Apathetic means showing little interest or concern. Indifferent fits the caretaker’s lack of response. Attentive and enthusiastic suggest engagement, while anxious suggests worry.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 1, synonym item 1; target apathetic; task synonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-english-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Before approving the grant, the committee was COGNIZANT of the restrictions on how the money could be spent. Choose the closest meaning of COGNIZANT.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "uncertain"
+      },
+      {
+        "choiceId": "b",
+        "text": "aware"
+      },
+      {
+        "choiceId": "c",
+        "text": "critical"
+      },
+      {
+        "choiceId": "d",
+        "text": "forgetful"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Cognizant means aware of or having knowledge of something. The committee knew about the restrictions. Being critical means judging something, not merely knowing about it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 1, synonym item 2; target cognizant; task synonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-english-03",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The archive issued an EPHEMERAL access code that expired after thirty seconds. Which phrase is closest in meaning to EPHEMERAL?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "widely shared"
+      },
+      {
+        "choiceId": "b",
+        "text": "difficult to remember"
+      },
+      {
+        "choiceId": "c",
+        "text": "short-lived"
+      },
+      {
+        "choiceId": "d",
+        "text": "repeatedly renewed"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ephemeral describes something that lasts only a short time. The code’s thirty-second lifetime makes short-lived the best answer. Nothing says it was shared, hard to remember, or renewed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 1, synonym item 4; target ephemeral; task synonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-english-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Digitising millions of unsorted records became a GARGANTUAN task for the small archive team. What does GARGANTUAN mean here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "routine"
+      },
+      {
+        "choiceId": "b",
+        "text": "secret"
+      },
+      {
+        "choiceId": "c",
+        "text": "inexpensive"
+      },
+      {
+        "choiceId": "d",
+        "text": "enormous"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Gargantuan means extremely large. Here it describes the scale of the task, not its secrecy, cost, or familiarity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 2, synonym item 6; target gargantuan; task synonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-english-05",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The technician’s BRUSQUE reply dismissed the visitor’s question without an explanation. Which word is most nearly opposite in meaning to BRUSQUE here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "courteous"
+      },
+      {
+        "choiceId": "b",
+        "text": "hesitant"
+      },
+      {
+        "choiceId": "c",
+        "text": "precise"
+      },
+      {
+        "choiceId": "d",
+        "text": "gruff"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Brusque describes an abruptly blunt or discourteous manner. Courteous means polite and considerate, providing the clearest opposite. Hesitant concerns uncertainty, and precise concerns accuracy; neither guarantees politeness. Gruff describes a rough manner and is closer to brusque.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 3, antonym item 3; target brusque; task antonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-english-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "During the budget review, Inez gave a CANDID account of the mistakes she had made. Which word is most nearly opposite in meaning to CANDID here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "detailed"
+      },
+      {
+        "choiceId": "b",
+        "text": "evasive"
+      },
+      {
+        "choiceId": "c",
+        "text": "impartial"
+      },
+      {
+        "choiceId": "d",
+        "text": "truthful"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Candid means open and honest in this context. Evasive describes avoiding a direct or frank account and provides the clearest opposite. Detailed concerns how much information an account contains, while impartial concerns freedom from bias; neither is the opposite of honesty. Truthful supports the meaning of candid.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 3, antonym item 4; target candid; task antonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-english-07",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Mara was ECSTATIC when the missing notebooks containing her research were recovered. Which word is most nearly opposite in meaning to ECSTATIC?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "astonished"
+      },
+      {
+        "choiceId": "b",
+        "text": "apprehensive"
+      },
+      {
+        "choiceId": "c",
+        "text": "dejected"
+      },
+      {
+        "choiceId": "d",
+        "text": "elated"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ecstatic means intensely happy. Dejected means unhappy or dispirited and is the clearest opposite. Astonished means greatly surprised, which can accompany either happiness or distress. Apprehensive describes worry about what may happen rather than unhappiness itself. Elated is close in meaning to ecstatic.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 4, antonym item 6; target ecstatic; task antonym. See vocabulary-family01-ledger.md."
+      ]
+    }
+  }
+]

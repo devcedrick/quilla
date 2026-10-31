@@ -1,0 +1,1642 @@
+[
+  {
+    "questionId": "f01-numerical-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Evaluate 36 ÷ 6 + 4 × 3.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "18"
+      },
+      {
+        "choiceId": "b",
+        "text": "30"
+      },
+      {
+        "choiceId": "c",
+        "text": "36"
+      },
+      {
+        "choiceId": "d",
+        "text": "15"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Do division and multiplication first: 36 ÷ 6 = 6 and 4 × 3 = 12. Then add 6 + 12 = 18.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original order of operations problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is 5/6 − 1/4 in simplest form?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "b",
+        "text": "7/12"
+      },
+      {
+        "choiceId": "c",
+        "text": "2/3"
+      },
+      {
+        "choiceId": "d",
+        "text": "4/2"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Use a common denominator of 12: 5/6 = 10/12 and 1/4 = 3/12. Subtract to get 7/12.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original unlike fractions problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-03",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Evaluate 2.4 × 0.35.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "8.4"
+      },
+      {
+        "choiceId": "b",
+        "text": "0.084"
+      },
+      {
+        "choiceId": "c",
+        "text": "0.84"
+      },
+      {
+        "choiceId": "d",
+        "text": "0.75"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Multiply 24 × 35 = 840. The factors have three decimal places altogether, so the product is 0.840, or 0.84.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original decimal multiplication problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is 18% of 250?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "4.5"
+      },
+      {
+        "choiceId": "b",
+        "text": "32"
+      },
+      {
+        "choiceId": "c",
+        "text": "55"
+      },
+      {
+        "choiceId": "d",
+        "text": "45"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Convert 18% to 0.18, then multiply: 0.18 × 250 = 45.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original percent of a quantity problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Sixty-three is 70% of what number?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "90"
+      },
+      {
+        "choiceId": "b",
+        "text": "44.1"
+      },
+      {
+        "choiceId": "c",
+        "text": "100"
+      },
+      {
+        "choiceId": "d",
+        "text": "93"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Let the whole be x. Since 0.70x = 63, divide by 0.70: x = 90.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original finding the whole problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-06",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Express the ratio 3/4 : 5/6 using the smallest whole numbers.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "5:8"
+      },
+      {
+        "choiceId": "b",
+        "text": "9:10"
+      },
+      {
+        "choiceId": "c",
+        "text": "10:9"
+      },
+      {
+        "choiceId": "d",
+        "text": "3:5"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Multiply both terms by 12: (3/4) × 12 = 9 and (5/6) × 12 = 10. The ratio is 9:10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original fractional ratio problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-07",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the nonnegative square root of 0.0081?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "0.9"
+      },
+      {
+        "choiceId": "b",
+        "text": "0.009"
+      },
+      {
+        "choiceId": "c",
+        "text": "0.09"
+      },
+      {
+        "choiceId": "d",
+        "text": "0.81"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Because 0.09 × 0.09 = 0.0081, the nonnegative square root is 0.09.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original decimal square root problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-08",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Evaluate −4² + (−3)². The first minus sign is outside the square.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "25"
+      },
+      {
+        "choiceId": "b",
+        "text": "7"
+      },
+      {
+        "choiceId": "c",
+        "text": "−25"
+      },
+      {
+        "choiceId": "d",
+        "text": "−7"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The first term is −(4 × 4) = −16. The second is (−3) × (−3) = 9. Therefore −16 + 9 = −7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original signed powers problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-09",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A sequence increases by the same amount each time: 7, 12, 17, 22, __. What comes next?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "27"
+      },
+      {
+        "choiceId": "b",
+        "text": "26"
+      },
+      {
+        "choiceId": "c",
+        "text": "29"
+      },
+      {
+        "choiceId": "d",
+        "text": "32"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Each term increases by 5. Add 5 to 22 to get 27.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original constant-difference sequence problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-10",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For every integer n, which expression is always odd?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "2n"
+      },
+      {
+        "choiceId": "b",
+        "text": "2n + 1"
+      },
+      {
+        "choiceId": "c",
+        "text": "n + 1"
+      },
+      {
+        "choiceId": "d",
+        "text": "n²"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The number 2n is even for every integer n. Adding 1 makes it odd. The other expressions can be even.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original integer parity problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-11",
+    "version": 1,
+    "family": 1,
+    "module": "professional-numerical",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which expression is equal to 7(20 + 3) by the distributive property?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "140 + 3"
+      },
+      {
+        "choiceId": "b",
+        "text": "7 × 20 × 3"
+      },
+      {
+        "choiceId": "c",
+        "text": "140 + 21"
+      },
+      {
+        "choiceId": "d",
+        "text": "27 + 10"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Multiply 7 by each term inside the parentheses: 7 × 20 + 7 × 3 = 140 + 21.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original distributive property problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-12",
+    "version": 1,
+    "family": 1,
+    "module": "professional-numerical",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Evaluate 5⁰ + 2³.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "8"
+      },
+      {
+        "choiceId": "b",
+        "text": "13"
+      },
+      {
+        "choiceId": "c",
+        "text": "33"
+      },
+      {
+        "choiceId": "d",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Any nonzero number raised to zero equals 1. Also, 2³ = 8. Their sum is 9.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original zero exponent problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-13",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A ribbon is 3 1/2 metres long. Three pieces, each 5/8 metre long, are cut from it. How much ribbon remains?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "1 5/8 m"
+      },
+      {
+        "choiceId": "b",
+        "text": "2 7/8 m"
+      },
+      {
+        "choiceId": "c",
+        "text": "1 7/8 m"
+      },
+      {
+        "choiceId": "d",
+        "text": "2 1/8 m"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The pieces use 3 × 5/8 = 15/8 m. The original length is 28/8 m, leaving 13/8 m = 1 5/8 m.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original mixed-number remainder problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-14",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "After a 15% discount, a bag costs PHP 680. What was its price before the discount?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "PHP 782"
+      },
+      {
+        "choiceId": "b",
+        "text": "PHP 800"
+      },
+      {
+        "choiceId": "c",
+        "text": "PHP 578"
+      },
+      {
+        "choiceId": "d",
+        "text": "PHP 850"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The sale price is 85% of the original. Divide PHP 680 by 0.85 to recover PHP 800; adding 15% to 680 would use the wrong base.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original reverse discount problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-15",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Six practice scores have a mean of 74. A score of 58 is replaced by 82. What is the new mean?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "74"
+      },
+      {
+        "choiceId": "b",
+        "text": "76"
+      },
+      {
+        "choiceId": "c",
+        "text": "78"
+      },
+      {
+        "choiceId": "d",
+        "text": "82"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The total increases by 82 − 58 = 24. Spread across six scores, that adds 24 ÷ 6 = 4 to the mean. The new mean is 78.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original replacing a score problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-16",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Twelve learners have a mean score of 70, and another eighteen have a mean of 80. What is the mean score of all thirty learners?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "75"
+      },
+      {
+        "choiceId": "b",
+        "text": "74"
+      },
+      {
+        "choiceId": "c",
+        "text": "78"
+      },
+      {
+        "choiceId": "d",
+        "text": "76"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Use the group totals, not the mean of the two means: (12 × 70 + 18 × 80) ÷ 30 = 2,280 ÷ 30 = 76.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original weighted mean problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-17",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A grant of PHP 360 is divided among three projects in the ratio 5:7:8. How much does the project with seven shares receive?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "PHP 126"
+      },
+      {
+        "choiceId": "b",
+        "text": "PHP 140"
+      },
+      {
+        "choiceId": "c",
+        "text": "PHP 18"
+      },
+      {
+        "choiceId": "d",
+        "text": "PHP 252"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "There are 5 + 7 + 8 = 20 shares. Each is PHP 360 ÷ 20 = PHP 18. Seven shares are PHP 126.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original sharing in a ratio problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-18",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A vehicle travels at a constant 72 km/h for 35 minutes. How far does it travel?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "35 km"
+      },
+      {
+        "choiceId": "b",
+        "text": "42 km"
+      },
+      {
+        "choiceId": "c",
+        "text": "50.4 km"
+      },
+      {
+        "choiceId": "d",
+        "text": "84 km"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Convert the time to hours: 35/60 hour. Distance = 72 × 35/60 = 42 km.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original speed and time units problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-19",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Mira walks at 1.5 m/s for 4 minutes, then runs at 3 m/s for 90 seconds. What total distance does she cover?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "276 m"
+      },
+      {
+        "choiceId": "b",
+        "text": "540 m"
+      },
+      {
+        "choiceId": "c",
+        "text": "630 m"
+      },
+      {
+        "choiceId": "d",
+        "text": "990 m"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Four minutes is 240 seconds, so she walks 1.5 × 240 = 360 m. She runs 3 × 90 = 270 m. Together these are 630 m.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original two-stage journey problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-20",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Ari is three times as old as Ben now. Six years ago, their ages added up to 36 years. How old is Ben now?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "9 years"
+      },
+      {
+        "choiceId": "b",
+        "text": "15 years"
+      },
+      {
+        "choiceId": "c",
+        "text": "18 years"
+      },
+      {
+        "choiceId": "d",
+        "text": "12 years"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Let Ben be b now, so Ari is 3b. Six years ago their sum was (b − 6) + (3b − 6) = 36. Thus 4b = 48 and b = 12.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original ages at different times problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-21",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rectangle has length 3 metres more than twice its width. Its perimeter is 54 metres. What is its area?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "152 m²"
+      },
+      {
+        "choiceId": "b",
+        "text": "216 m²"
+      },
+      {
+        "choiceId": "c",
+        "text": "64 m²"
+      },
+      {
+        "choiceId": "d",
+        "text": "171 m²"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Let width be w and length be 2w + 3. Then 2(w + 2w + 3) = 54, giving w = 8 and length = 19. Area = 8 × 19 = 152 m².",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original perimeter to area problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-22",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the sum of all odd integers from 31 through 59, including both endpoints?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "630"
+      },
+      {
+        "choiceId": "b",
+        "text": "675"
+      },
+      {
+        "choiceId": "c",
+        "text": "720"
+      },
+      {
+        "choiceId": "d",
+        "text": "1,350"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "There are (59 − 31) ÷ 2 + 1 = 15 terms. Their mean is (31 + 59) ÷ 2 = 45, so their sum is 15 × 45 = 675.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original arithmetic-series sum problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-23",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The successive increases in this sequence are 1², 2², 3², 4², and so on: 2, 3, 7, 16, 32, __. What is the next term?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "48"
+      },
+      {
+        "choiceId": "b",
+        "text": "56"
+      },
+      {
+        "choiceId": "c",
+        "text": "57"
+      },
+      {
+        "choiceId": "d",
+        "text": "64"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The next increase is 5² = 25. Add it to 32: 32 + 25 = 57.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original changing differences problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-24",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Starting with 6, a sequence alternates between multiplying by 3 and subtracting 2: 6, 18, 16, 48, 46, 138, __. What comes next?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "140"
+      },
+      {
+        "choiceId": "b",
+        "text": "414"
+      },
+      {
+        "choiceId": "c",
+        "text": "134"
+      },
+      {
+        "choiceId": "d",
+        "text": "136"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The last step multiplied 46 by 3. The next step subtracts 2, giving 138 − 2 = 136.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original alternating operations problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-25",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A shop sells 35% of its original notebooks. It then sets aside 13 damaged notebooks, leaving 117 usable notebooks. How many notebooks were there originally?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "200"
+      },
+      {
+        "choiceId": "b",
+        "text": "180"
+      },
+      {
+        "choiceId": "c",
+        "text": "220"
+      },
+      {
+        "choiceId": "d",
+        "text": "334"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "After the sale, 117 + 13 = 130 notebooks remained. These were 65% of the original stock. Divide 130 by 0.65 to get 200.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original remaining stock problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-26",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A tank is 3/8 full. Adding 45 litres makes it 3/4 full. What is its capacity?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "60 L"
+      },
+      {
+        "choiceId": "b",
+        "text": "120 L"
+      },
+      {
+        "choiceId": "c",
+        "text": "90 L"
+      },
+      {
+        "choiceId": "d",
+        "text": "135 L"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The added water fills 3/4 − 3/8 = 3/8 of the tank. Therefore capacity = 45 ÷ (3/8) = 120 litres.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original capacity from a change in fraction problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-27",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In a hypothetical savings problem, PHP 24,000 earns simple interest at 4.5% per year. How much interest does it earn in 8 months?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "PHP 1,080"
+      },
+      {
+        "choiceId": "b",
+        "text": "PHP 7,200"
+      },
+      {
+        "choiceId": "c",
+        "text": "PHP 720"
+      },
+      {
+        "choiceId": "d",
+        "text": "PHP 864"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Use I = Prt, with time in years: 24,000 × 0.045 × (8/12) = PHP 720. This is interest only, not the final balance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original simple interest problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-28",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which value of x satisfies −3x + 7 > 22?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "6"
+      },
+      {
+        "choiceId": "b",
+        "text": "5"
+      },
+      {
+        "choiceId": "c",
+        "text": "−5"
+      },
+      {
+        "choiceId": "d",
+        "text": "−6"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Subtract 7: −3x > 15. Divide by −3 and reverse the sign: x < −5. Of the listed values, only −6 works.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original negative-coefficient inequality problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-29",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A packing machine fills 12 boxes in 45 minutes at a constant rate. For a new run, it needs 10 minutes of setup before filling 20 boxes. How long does that run take, including setup?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "85 minutes"
+      },
+      {
+        "choiceId": "b",
+        "text": "75 minutes"
+      },
+      {
+        "choiceId": "c",
+        "text": "65 minutes"
+      },
+      {
+        "choiceId": "d",
+        "text": "100 minutes"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Filling one box takes 45 ÷ 12 minutes. Twenty take 20 × 45/12 = 75 minutes. Add the 10-minute setup for 85 minutes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original production plus setup problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-30",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Twelve litres of a 30% dye mixture are diluted with water to make a 20% mixture. Assuming volumes add, how much water is added?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "4 L"
+      },
+      {
+        "choiceId": "b",
+        "text": "6 L"
+      },
+      {
+        "choiceId": "c",
+        "text": "8 L"
+      },
+      {
+        "choiceId": "d",
+        "text": "18 L"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "There are 12 × 0.30 = 3.6 litres of dye. At 20%, the final volume is 3.6 ÷ 0.20 = 18 litres. Add 18 − 12 = 6 litres of water.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original diluting a mixture problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-31",
+    "version": 1,
+    "family": 1,
+    "module": "professional-numerical",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four identical printers produce 600 pages in 5 minutes. At the same individual rate, how long will six printers take to produce 1,440 pages?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "6 minutes"
+      },
+      {
+        "choiceId": "b",
+        "text": "12 minutes"
+      },
+      {
+        "choiceId": "c",
+        "text": "8 minutes"
+      },
+      {
+        "choiceId": "d",
+        "text": "10 minutes"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Each printer makes 600 ÷ (4 × 5) = 30 pages per minute. Six make 180 per minute, so 1,440 ÷ 180 = 8 minutes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original combined machine rates problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-32",
+    "version": 1,
+    "family": 1,
+    "module": "professional-numerical",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The mean of 6, 10, 14, and x equals x. What is x?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "7.5"
+      },
+      {
+        "choiceId": "b",
+        "text": "12"
+      },
+      {
+        "choiceId": "c",
+        "text": "30"
+      },
+      {
+        "choiceId": "d",
+        "text": "10"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Write (6 + 10 + 14 + x)/4 = x. Then 30 + x = 4x, so 30 = 3x and x = 10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original unknown equals its mean problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-33",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A seller pays PHP 840 for an item, marks it up by 25%, then gives a 20% discount on the marked price. A platform keeps 5% of the discounted selling price. Compared with the cost, what is the seller’s net result?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "5% loss"
+      },
+      {
+        "choiceId": "b",
+        "text": "5% gain"
+      },
+      {
+        "choiceId": "c",
+        "text": "No gain or loss"
+      },
+      {
+        "choiceId": "d",
+        "text": "20% loss"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The marked price is 840 × 1.25 = PHP 1,050. After the discount it is PHP 840. The seller receives 95% of that, or PHP 798. The PHP 42 loss is 42/840 = 5% of cost.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original markup, discount, and fee problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-34",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A vessel contains 40 litres of a 25% concentrate mixture. Eight litres of the well-mixed liquid are removed and replaced with 8 litres of water. After mixing again, 10 litres are removed and replaced with 10 litres of pure concentrate. Assuming volumes add, what is the final concentrate percentage?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "35%"
+      },
+      {
+        "choiceId": "b",
+        "text": "40%"
+      },
+      {
+        "choiceId": "c",
+        "text": "45%"
+      },
+      {
+        "choiceId": "d",
+        "text": "50%"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Initially there are 10 litres of concentrate. Removing one fifth leaves 8 litres in 40 litres. The next removal takes one quarter of those 8 litres, leaving 6. Adding 10 litres of concentrate gives 16 in 40 litres: 40%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original repeated mixture replacement problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-35",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Working alone at constant rates, A completes a job in 6 hours and B in 9 hours. They work together for 2 hours, then B leaves. How much additional time does A need to finish?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "1 hour 40 minutes"
+      },
+      {
+        "choiceId": "b",
+        "text": "4 hours 40 minutes"
+      },
+      {
+        "choiceId": "c",
+        "text": "2 hours 40 minutes"
+      },
+      {
+        "choiceId": "d",
+        "text": "3 hours 20 minutes"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Together they complete 1/6 + 1/9 = 5/18 of the job per hour. In 2 hours they finish 5/9, leaving 4/9. A needs (4/9) ÷ (1/6) = 8/3 hours, or 2 hours 40 minutes, after B leaves.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original work with a change in workers problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-36",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A courier travels 60 km outward at 40 km/h and returns along the same 60 km route at 60 km/h. There is also a 30-minute stop between the trips. What is the average speed for the entire journey, including the stop?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "48 km/h"
+      },
+      {
+        "choiceId": "b",
+        "text": "50 km/h"
+      },
+      {
+        "choiceId": "c",
+        "text": "45 km/h"
+      },
+      {
+        "choiceId": "d",
+        "text": "40 km/h"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Total distance is 120 km. Travel takes 60/40 + 60/60 = 2.5 hours; the stop adds 0.5 hour. Divide 120 km by 3 hours to get 40 km/h.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original average speed including a stop problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-37",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Of 80 club members, 45 joined art, 38 joined music, and 32 joined drama. Twenty joined both art and music, 18 both art and drama, and 16 both music and drama. Each pair count includes the 10 members who joined all three. How many joined none of the three?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "9"
+      },
+      {
+        "choiceId": "b",
+        "text": "19"
+      },
+      {
+        "choiceId": "c",
+        "text": "29"
+      },
+      {
+        "choiceId": "d",
+        "text": "1"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Add the three group counts, subtract the pair overlaps, then add back the triple overlap: 45 + 38 + 32 − 20 − 18 − 16 + 10 = 71 members in at least one group. Therefore 80 − 71 = 9 joined none.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original three overlapping groups problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-38",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "What is the smallest integer greater than 100 that is divisible by 4, leaves remainder 2 when divided by 5, and leaves remainder 3 when divided by 7?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "152"
+      },
+      {
+        "choiceId": "b",
+        "text": "192"
+      },
+      {
+        "choiceId": "c",
+        "text": "132"
+      },
+      {
+        "choiceId": "d",
+        "text": "112"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Divisibility by 4 and remainder 2 on division by 5 give 112, 132, 152, 172, 192, ... above 100. Their remainders on division by 7 are 0, 6, 5, 4, 3. The first that meets all three conditions is 192.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original simultaneous remainder constraints problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-39",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A parcel service charges PHP 80 for up to 5 kg, plus PHP 18 for each additional 2 kg or part of 2 kg. A parcel’s charge is PHP 152. Its packaging weighs 1.2 kg, and its contents weigh a whole number of kilograms. What is the greatest possible weight of the contents?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "10 kg"
+      },
+      {
+        "choiceId": "b",
+        "text": "12 kg"
+      },
+      {
+        "choiceId": "c",
+        "text": "11 kg"
+      },
+      {
+        "choiceId": "d",
+        "text": "13 kg"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The extra charge is 152 − 80 = PHP 72, or four started 2-kg blocks. Thus total parcel weight is greater than 11 kg and at most 13 kg. Subtracting 1.2 kg gives contents greater than 9.8 kg and at most 11.8 kg. The greatest whole-number weight is 11 kg.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original started-block shipping fee problem. See numerical-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-numerical-40",
+    "version": 1,
+    "family": 1,
+    "module": "professional-numerical",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A workshop originally sold 80 tickets: adult tickets at PHP 120 and student tickets at PHP 75. Later, five adult tickets were fully refunded. After these refunds and a PHP 150 processing expense, net receipts were PHP 7,500. How many adult tickets had originally been sold?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "45"
+      },
+      {
+        "choiceId": "b",
+        "text": "55"
+      },
+      {
+        "choiceId": "c",
+        "text": "60"
+      },
+      {
+        "choiceId": "d",
+        "text": "50"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Restore the expense and refunds to recover original sales: 7,500 + 150 + 5 × 120 = PHP 8,250. If all 80 tickets were student tickets, revenue would be PHP 6,000. Each adult ticket adds PHP 45, so (8,250 − 6,000) ÷ 45 = 50 adult tickets were originally sold.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Numerical reference image batch; original ticket receipts after refunds problem. See numerical-family01-ledger.md."
+      ]
+    }
+  }
+]

@@ -1,0 +1,260 @@
+[
+  {
+    "questionId": "f01-grammar-filipino-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang bahaging may maling gamit sa pormal na Filipino. Piliin ang “Walang mali” kung wasto ang lahat. Pangungusap: Ipinadala ng Lira ang mga punla sa kooperatiba.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Ipinadala"
+      },
+      {
+        "choiceId": "b",
+        "text": "ng Lira"
+      },
+      {
+        "choiceId": "c",
+        "text": "ang mga punla"
+      },
+      {
+        "choiceId": "d",
+        "text": "sa kooperatiba"
+      },
+      {
+        "choiceId": "e",
+        "text": "Walang mali"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ni ang ginagamit bago ang pang-isahang pangalang pantao na gumaganap sa kilos sa ganitong pangungusap. Kaya ni Lira, hindi ng Lira. Wasto: Ipinadala ni Lira ang mga punla sa kooperatiba. Hindi mali ang ng sa lahat ng gamit; halimbawa, maaari ang ng magsasaka para sa pangngalang pambalana.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 4, pagkilala sa mali item 1; ni versus ng before a personal name. Task identifying-errors. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-filipino-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang bahaging may maling gamit sa pormal na Filipino. Piliin ang “Walang mali” kung wasto ang lahat. Pangungusap: Si Omar at Pia ang naatasang magtala ng mga dumalo sa pagsasanay.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "ang naatasang magtala"
+      },
+      {
+        "choiceId": "b",
+        "text": "ng mga dumalo"
+      },
+      {
+        "choiceId": "c",
+        "text": "sa pagsasanay"
+      },
+      {
+        "choiceId": "d",
+        "text": "Si Omar at Pia"
+      },
+      {
+        "choiceId": "e",
+        "text": "Walang mali"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Dalawang taong may tiyak na pangalan ang tinutukoy, kaya Sina ang pantukoy sa halip na Si. Wasto: Sina Omar at Pia ang naatasang magtala ng mga dumalo sa pagsasanay. Hindi ang ang o ng sa ibang bahagi ang kailangang palitan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 4, pagkilala sa mali item 2; plural personal marker sina. Task identifying-errors. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-filipino-03",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang bahaging may maling gamit sa pormal na Filipino. Piliin ang “Walang mali” kung wasto ang lahat. Pangungusap: Gumawa nang karatula ang mga mag-aaral para sa paligsahan.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "nang karatula"
+      },
+      {
+        "choiceId": "b",
+        "text": "Gumawa"
+      },
+      {
+        "choiceId": "c",
+        "text": "ang mga mag-aaral"
+      },
+      {
+        "choiceId": "d",
+        "text": "para sa paligsahan"
+      },
+      {
+        "choiceId": "e",
+        "text": "Walang mali"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Karatula ang bagay na ginawa, kaya ng karatula ang kailangan. Hindi ito pang-abay na nagsasaad kung paano ginawa ang kilos. Wasto: Gumawa ng karatula ang mga mag-aaral para sa paligsahan. Maaaring gamitin ang nang sa gumawa nang maingat, dahil maingat ang paraan ng paggawa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 4, pagkilala sa mali item 3; ng for the object versus nang. Task identifying-errors. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-filipino-04",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Piliin ang salitang angkop sa patlang. Ang ___ ng drayber na dagdagan ang ilaw sa terminal ay sinuri ng lupon.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "makiusap"
+      },
+      {
+        "choiceId": "b",
+        "text": "ipakiusap"
+      },
+      {
+        "choiceId": "c",
+        "text": "pakiusap"
+      },
+      {
+        "choiceId": "d",
+        "text": "pakiusapan"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Pakiusap ang angkop sa buong kayariang Ang pakiusap ng drayber na dagdagan ang ilaw sa terminal ay sinuri ng lupon. Dito, ang sinusuri ng lupon ay ang kahilingan ng drayber. Ang makiusap, ipakiusap, at pakiusapan ay mga anyong pandiwa na hindi umaangkop sa natitirang kayarian at kahulugang ito nang walang ibang pagbabago. Hindi nangangahulugang pangngalan lamang ang maaaring sumunod sa ang; maaari rin ang pariralang pandiwa, gaya ng Ang makiusap nang magalang ay mabuti.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 6, wastong gamit item 3; noun pakiusap versus related verb forms. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-filipino-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang pangatnig na nagsasaad ng kondisyong dapat matupad. Ibibigay lamang ang sertipiko ___ makumpleto ang pagsasanay.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "bagaman"
+      },
+      {
+        "choiceId": "b",
+        "text": "ngunit"
+      },
+      {
+        "choiceId": "c",
+        "text": "sapagkat"
+      },
+      {
+        "choiceId": "d",
+        "text": "kung"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Kung ang nagpapahayag ng kondisyon: kailangang makumpleto ang pagsasanay upang maibigay ang sertipiko. Ang bagaman ay nagsasaad ng pagsalungat sa inaasahan, ngunit ay panalungat, at sapagkat ay nagbibigay ng dahilan, hindi ng hinihinging kondisyon.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 7, wastong gamit item 16; conditional conjunction. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-filipino-06",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang angkop na salita. Sinuri ___ mabuti ng tagapangasiwa ang bawat bote bago ito nilagyan ng etiketa.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "nang"
+      },
+      {
+        "choiceId": "b",
+        "text": "ng"
+      },
+      {
+        "choiceId": "c",
+        "text": "ni"
+      },
+      {
+        "choiceId": "d",
+        "text": "nina"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nang ang ginagamit upang iugnay ang kilos na sinuri sa paraan nitong mabuti: sinuri nang mabuti. Hindi ng mabuti ang kailangan dahil hindi mabuti ang bagay na sinusuri; bawat bote ang sinusuri. Ang ni at nina ay mga pantukoy sa pangalan ng tao.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 7, wastong gamit item 20; nang/ng distinction, new manner rather than time context. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  }
+]

@@ -125,6 +125,45 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 
 ## 3. Diagnostic assessment
 
+### Shared assessment choice-order policy
+
+The following planned contract applies to diagnostics, adaptive practice, timed
+mock exams, and learner-initiated review sessions that serve questions. It does
+not claim that assessment generation or choice shuffling is already implemented.
+
+- A choice's stable `choiceId` identifies its content within an immutable question
+  version. Its stored array position and ID spelling (including `a`, `b`, `c`, or
+  `d`) do not establish its displayed answer letter.
+- On first serving an eligible question in an attempt, the backend generates and
+  persists a random permutation of its choice IDs. The interface renders that
+  saved order and derives visible A–F labels from positions. Refresh, navigation,
+  resume, and historical review reuse the same order; rendering never reshuffles
+  an already served item. Adaptive sessions apply this when each new item is served.
+- Answers submit the selected stable choice ID. The backend verifies attempt
+  ownership and membership in the served question's choices, then scores against
+  the exact served version's correct choice ID. Client-provided letters, indices,
+  correctness claims, and permutations are not authoritative.
+- Active-assessment responses omit correct choice IDs, answer keys, and
+  explanations until the activity's authorized feedback/review stage. The client
+  does not need the correct choice to shuffle or display options.
+- Order-dependent choices, such as "both A and B" or "all of the above", must
+  retain their authored order unless rewritten and independently validated for
+  shuffling. Eligibility must be explicitly represented and validated in future
+  question-version/lifecycle work; the initial corpus JSON contract does not yet
+  define a shuffle-policy field. Do not infer an exemption from fragile text matching.
+- Use an unbiased permutation for eligible choices. Randomization removes a fixed
+  authored-position bias but does not guarantee equal correct-answer counts per
+  displayed letter in any one attempt. Exact A–D balancing is not a requirement.
+
+Acceptance tests must prove that reordered choices retain their correct scoring,
+saved orders survive refresh/resume/review, invalid choice IDs are rejected,
+exempt items retain their order, and active responses do not leak answer keys.
+Randomization tests should use controlled randomness and permutation invariants,
+not flaky expectations about one small sample's answer-letter distribution.
+
+See [ADR 0010](ADR/0010-assessment-choice-order-and-scoring.md) and the
+[corpus authoring guide](content/exam-set-corpus.md#choice-identity-and-display-order).
+
 ### Problem
 
 Without a baseline, learners do not know which concepts deserve attention, and Quilla cannot provide meaningful personalization.
@@ -269,6 +308,7 @@ As a learner, I want to choose what and how long to practice while Quilla priori
 - The level initially defaults to the learner's preference and is explicitly confirmed for each new attempt without updating that preference. All subject and concept filters must be eligible for the attempt's selected level.
 - Generation prioritizes adaptive review recommendations, then low mastery, then blueprint weight within selected filters.
 - No question repeats within a session.
+- Served questions follow the shared assessment choice-order policy in section 3.
 - Two consecutive correct answers step difficulty up when eligible content exists; two incorrect answers step it down.
 - Challenge mode fixes the target difficulty to hard and clearly reports coverage limits.
 - Submission records answer history and updates mastery and adaptive review state.
@@ -285,15 +325,21 @@ As a learner, I want to take a timed exam that follows my level's blueprint so I
 
 ### Initial mock-blueprint policy
 
-The initial immutable mock blueprints are `cse-professional-2027-v1` and `cse-subprofessional-2027-v1`. They use eight paired set families: each family shares a 105-item core, adds five Professional-only Numerical items, and supplies separate 40-item Analytical and Clerical modules. This yields eight complete 150-item Professional mocks and eight complete 145-item Subprofessional mocks from at least 1,520 unique canonical questions.
+Under [ADR 0013](ADR/0013-seeding-families-and-pooled-exam-selection.md), a seeding family is an authoring batch, not an exam set. Each of eight families contains 270 unique questions: 40 General Information, 50 Verbal, 60 Numerical, 80 Analytical, and 40 Clerical, for 2,160 unique questions overall. Family 01 is complete for seeding by maintainer confirmation; Families 02–08 use the same subject totals. It need not independently match an exam's item counts or difficulty cells.
+
+Each mock randomly selects eligible published versions from all seed families combined, subject to the exam blueprint, without a single-family or equal-family quota. Professional retains 20 General, 50 Verbal, 40 Numerical, and 40 Analytical items (150 total); Subprofessional retains 20 General, 50 Verbal, 35 Numerical, and 40 Clerical items (145 total). The new pooled selection contract uses `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`, with `cse-taxonomy-2027-v2`. Historical v1/v2 policies and attempts are preserved. Runtime and validator adoption remain pending.
 
 The initial mocks exclude the unscored 20-item Examinee Descriptive Questionnaire. Professional mocks use a 168-minute limit and a 120-of-150 passing reference; Subprofessional mocks use 141 minutes and a 116-of-145 passing reference. These are Quilla preparation policies derived from the official structure, not claims about CSC's rating methodology or guarantees of eligibility.
 
-Each set targets a 30/50/20 easy/medium/hard mix using fixed subject, language, and difficulty cells. Verbal Ability contains 25 English and 25 Filipino items. Every applicable canonical concept appears at least once per family. Shared-core questions may appear in both level variants of the same family, but canonical questions cannot repeat across family numbers and receive no extra score or weight because they are shared.
+Each generated exam targets a 30/50/20 easy/medium/hard mix using fixed subject, language, and difficulty cells. Verbal contains 25 English and 25 Filipino items. Every applicable concept appears at least once per generated exam. A canonical question has one seed-family origin, but may appear in different attempts across eligible levels; it cannot appear twice inside one attempt. Different exams need not be disjoint. New seeding still targets honest difficulty proportions, but family completion is separate from pooled exam feasibility and never justifies inflated labels.
 
-Neither initial blueprint may activate until a dry run proves that all eight paired families satisfy the complete coverage contract. After activation, a difficulty shortage may relax only to the nearest difficulty within the same subject, preferring easier on a tie. Level, subject, language, and concept requirements never relax; unresolved shortages block generation with an actionable report.
+Activation requires integration of the planned eight 270-question seed families and a dry run proving each level's exam can be assembled from the combined eligible published pool. It does not require eight simultaneously disjoint exam pairs or an exam from each seed family. Pooled shortages can block exam readiness without reopening a completed family. After activation, difficulty fallback remains within the same subject, nearest difficulty first and easier on a tie. Level, subject, language, and concept requirements never relax; unresolved shortages block generation with an actionable report.
 
-[ADR 0008](ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md) records the decision. The complete identifier, taxonomy, allocation, coverage, shortage, and source-version contract is [Initial CSE Taxonomy and Mock-Exam Blueprints](exams/cse-taxonomy-and-blueprints.md).
+[ADR 0008](ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md) records the historical paired-family policy; ADR 0013 supersedes its family, corpus-size, and assembly rules. The current contract is [Initial CSE Taxonomy and Mock-Exam Blueprints](exams/cse-taxonomy-and-blueprints.md). [Seeding families](content/seeding-families.md) defines authoring completion and the Family 01 inventory.
+
+[ADR 0011](ADR/0011-numerical-data-sufficiency.md) adds shared concept Data Sufficiency (`data_sufficiency`). Under ADR 0013, each generated exam includes it in the 35-item shared Numerical selection from the pooled bank; Numerical Reasoning retains its concept minimum. Numerical exam totals and difficulty cells do not change. No additional fixed concept split is selected. Existing metadata and validator code are not migrated by this documentation.
+
+[ADR 0012](ADR/0012-clerical-alphabetizing-and-spelling.md) adds Alphabetizing (`alphabetizing`) and groups Spelling (`spelling`) under Clerical Operations (`clerical_operations`). Both are English and Subprofessional only. Spelling retains its identity and historical classifications. The general Clerical Operations concept remains; the minimum applies to all three per generated Subprofessional exam under ADR 0013, without changing the 40-item exam total or 12/20/8 cells. No additional fixed concept quota is selected. Validator and pooled selection support remain pending.
 
 ### Edge cases
 
@@ -319,6 +365,7 @@ Neither initial blueprint may activate until a dry run proves that all eight pai
 - Each new mock exam explicitly confirms its level, initially defaulting to the learner's preference, and stores that level with its immutable blueprint snapshot. Later preference changes do not alter the attempt or transfer its score to the other level.
 - Professional exams exclude Clerical Ability; Subprofessional exams exclude Analytical Ability.
 - Subject distribution, difficulty mix, randomization, time limit, and passing reference come from an immutable blueprint snapshot.
+- Choice display and scoring follow section 3's shared assessment choice-order policy; saved choice order is part of the served item snapshot.
 - The server is authoritative for timing and auto-submits expired attempts.
 - Progress is autosaved and can survive a browser interruption without extending the deadline.
 - Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
@@ -361,6 +408,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - Leaving and reopening a review preserves the same submitted result and does not consume or invalidate review access.
 - Viewing a historical review does not update mastery or adaptive recommendation state; only newly submitted answers from a separate eligible activity can do so.
 - Every item uses the exact served question-version snapshot.
+- Review preserves the original displayed choice order and answer-letter mapping under section 3's shared assessment choice-order policy.
 - Review shows the learner's answer, correct answer, explanation, concept, and source citation where applicable.
 - Available distractor rationales are shown without fabricating missing content.
 - Learners can flag and unflag an item idempotently.

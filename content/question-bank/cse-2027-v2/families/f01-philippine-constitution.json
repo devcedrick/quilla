@@ -1,0 +1,1682 @@
+[
+  {
+    "questionId": "f01-philippine-constitution-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A student wants to read the Constitution's opening statement of national aspirations before studying its numbered articles. Which part should the student consult?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Preamble"
+      },
+      {
+        "choiceId": "b",
+        "text": "Bill of Rights"
+      },
+      {
+        "choiceId": "c",
+        "text": "Transitory Provisions"
+      },
+      {
+        "choiceId": "d",
+        "text": "Amendments or Revisions"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The Preamble introduces the Constitution and states the people's purposes and aspirations. The Bill of Rights protects particular rights; the other choices concern transition or constitutional change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Preamble. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a civics discussion, students ask where all Philippine government authority ultimately comes from under the Constitution. Which answer is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The armed forces"
+      },
+      {
+        "choiceId": "b",
+        "text": "The Supreme Court"
+      },
+      {
+        "choiceId": "c",
+        "text": "The people"
+      },
+      {
+        "choiceId": "d",
+        "text": "The Congress alone"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article II, Section 1 places sovereignty in the people, from whom government authority comes. No single branch or institution is the ultimate source of that authority.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article II, Section 1. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-03",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which relationship between civilian and military authority is expressly established by the Constitution?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Military authority prevails during every national election."
+      },
+      {
+        "choiceId": "b",
+        "text": "Civilian authority is always supreme over the military."
+      },
+      {
+        "choiceId": "c",
+        "text": "Civilian and military authorities alternate in supremacy."
+      },
+      {
+        "choiceId": "d",
+        "text": "Military authority prevails whenever Congress is in recess."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article II, Section 3 establishes civilian supremacy over the military at all times. Neither an election nor a congressional recess reverses that constitutional relationship.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article II, Section 3. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A chart must show the constitutionally prescribed full membership of the Senate, rather than the number of currently occupied seats. What number belongs in the chart?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "12"
+      },
+      {
+        "choiceId": "b",
+        "text": "18"
+      },
+      {
+        "choiceId": "c",
+        "text": "30"
+      },
+      {
+        "choiceId": "d",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article VI, Section 2 prescribes twenty-four Senators elected at large. Vacancies do not change that constitutional full membership.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 2. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A lesson divides national governmental powers into legislative, executive, and judicial functions. In whom does the Constitution vest executive power?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The President of the Philippines"
+      },
+      {
+        "choiceId": "b",
+        "text": "The President of the Senate"
+      },
+      {
+        "choiceId": "c",
+        "text": "The Chief Justice"
+      },
+      {
+        "choiceId": "d",
+        "text": "The Speaker of the House"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article VII, Section 1 vests executive power in the President of the Philippines. The other officials lead legislative chambers or the Judiciary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Section 1. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-06",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which institutional arrangement receives judicial power under the Constitution?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Congress and its standing committees"
+      },
+      {
+        "choiceId": "b",
+        "text": "The Department of Justice and all prosecutors"
+      },
+      {
+        "choiceId": "c",
+        "text": "One Supreme Court and lower courts established by law"
+      },
+      {
+        "choiceId": "d",
+        "text": "The Office of the President and the Cabinet"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article VIII, Section 1 vests judicial power in one Supreme Court and lower courts that may be established by law. Prosecutors and executive officials do not replace that court structure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VIII, Section 1. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-07",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An orientation for new government employees must identify the Constitution's basic characterization of public office. Which description should it use?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A personal entitlement of the officeholder"
+      },
+      {
+        "choiceId": "b",
+        "text": "A public trust"
+      },
+      {
+        "choiceId": "c",
+        "text": "A private contract with voters"
+      },
+      {
+        "choiceId": "d",
+        "text": "A hereditary privilege"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article XI, Section 1 describes public office as a public trust and requires accountability to the people. Holding office does not create a private or hereditary entitlement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XI, Section 1. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-08",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A museum label needs the name of the national language expressly designated in the Constitution. Which entry is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "English"
+      },
+      {
+        "choiceId": "b",
+        "text": "Spanish"
+      },
+      {
+        "choiceId": "c",
+        "text": "Arabic"
+      },
+      {
+        "choiceId": "d",
+        "text": "Filipino"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article XIV, Section 6 designates Filipino as the national language. This is distinct from the rules on official and auxiliary languages in Section 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XIV, Sections 6–7. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-09",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under Article XV, which institution does the State recognize as the foundation of the nation?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The Filipino family"
+      },
+      {
+        "choiceId": "b",
+        "text": "The municipality"
+      },
+      {
+        "choiceId": "c",
+        "text": "The political party"
+      },
+      {
+        "choiceId": "d",
+        "text": "The business corporation"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article XV, Section 1 recognizes the Filipino family as the foundation of the nation. Section 2 separately describes marriage as the foundation of the family.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XV, Sections 1–2. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-10",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which group consists entirely of the independent Constitutional Commissions listed in Article IX-A?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Civil Service Commission, Commission on Human Rights, Commission on Audit"
+      },
+      {
+        "choiceId": "b",
+        "text": "Commission on Elections, Office of the Ombudsman, Civil Service Commission"
+      },
+      {
+        "choiceId": "c",
+        "text": "Civil Service Commission, Commission on Elections, Commission on Audit"
+      },
+      {
+        "choiceId": "d",
+        "text": "Commission on Audit, Judicial and Bar Council, Commission on Human Rights"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article IX-A, Section 1 lists the Civil Service Commission, Commission on Elections, and Commission on Audit. Other constitutionally created bodies are not part of that particular three-commission list.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article IX-A, Section 1. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-11",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A foreign national acquires Philippine citizenship through a naturalization process completed in accordance with law. Which constitutional citizenship category directly covers this person?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A citizen solely because of Philippine residence"
+      },
+      {
+        "choiceId": "b",
+        "text": "A person naturalized in accordance with law"
+      },
+      {
+        "choiceId": "c",
+        "text": "A citizen solely because of a Philippine visa"
+      },
+      {
+        "choiceId": "d",
+        "text": "A person elected to Philippine citizenship by Congress without a legal process"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article IV, Section 1(4) recognizes persons naturalized in accordance with law as citizens. Mere residence or possession of a visa does not itself satisfy that category.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article IV, Section 1(4). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-12",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A diagram must distinguish the Chief Justice from the Associate Justices in the Supreme Court's full constitutional composition. Which arrangement is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "One Chief Justice and twelve Associate Justices"
+      },
+      {
+        "choiceId": "b",
+        "text": "One Chief Justice and fifteen Associate Justices"
+      },
+      {
+        "choiceId": "c",
+        "text": "Two Chief Justices and thirteen Associate Justices"
+      },
+      {
+        "choiceId": "d",
+        "text": "One Chief Justice and fourteen Associate Justices"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article VIII, Section 4(1) provides for one Chief Justice and fourteen Associate Justices, giving fifteen Members in the full Court.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VIII, Section 4(1). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-13",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Assume the government's lawful taking of a privately owned lot for a public road is otherwise valid. An official says no compensation is needed because the project benefits everyone. Which constitutional rule answers that claim?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Public use removes the owner's right to compensation."
+      },
+      {
+        "choiceId": "b",
+        "text": "Compensation is required only when the owner is a citizen."
+      },
+      {
+        "choiceId": "c",
+        "text": "The owner may be paid only if the project later earns revenue."
+      },
+      {
+        "choiceId": "d",
+        "text": "Private property taken for public use requires just compensation."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article III, Section 9 requires just compensation when private property is taken for public use. A public benefit is not a substitute for payment, and the text does not limit this protection to citizens.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article III, Section 9. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-14",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An application seeks a judicial search warrant. A police officer asks the judge to sign it solely because the officer has already declared that probable cause exists. Which assessment best follows Article III, Section 2?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The officer's determination replaces the judge's personal determination."
+      },
+      {
+        "choiceId": "b",
+        "text": "The judge must personally determine probable cause and the warrant must particularly describe the place and things covered."
+      },
+      {
+        "choiceId": "c",
+        "text": "A senator may make the required judicial determination instead."
+      },
+      {
+        "choiceId": "d",
+        "text": "The judge may omit particular descriptions if the police promise to act carefully."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article III, Section 2 requires a judge's personal determination of probable cause and a particular description of the place to be searched and persons or things to be seized. An officer's assertion alone does not replace those constitutional safeguards. This item concerns a judicial warrant, not exceptions permitting warrantless action.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article III, Section 2. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-15",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A proposed voting rule would require every voter to own land and pass a reading test, even when the person meets the constitutional age and residence requirements and is not otherwise disqualified by law. How does Article V address the proposal?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both added requirements are prohibited."
+      },
+      {
+        "choiceId": "b",
+        "text": "Only the land requirement is permitted."
+      },
+      {
+        "choiceId": "c",
+        "text": "Only the reading test is permitted."
+      },
+      {
+        "choiceId": "d",
+        "text": "Both are permitted if imposed uniformly."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article V, Section 1 prohibits literacy, property, or other substantive requirements for suffrage. Applying such requirements equally does not make them permissible.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article V, Section 1. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-16",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three children were born in 2004. Mira was born abroad to a Filipino mother and a foreign father. Noel was born abroad to a Filipino father and a foreign mother. Luis was born in the Philippines to two foreign parents. Parental citizenship is stated as of each child's birth. Considering citizenship by parentage under Article IV, Section 1(2) alone, which children qualify?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mira only"
+      },
+      {
+        "choiceId": "b",
+        "text": "Noel and Luis only"
+      },
+      {
+        "choiceId": "c",
+        "text": "Mira and Noel only"
+      },
+      {
+        "choiceId": "d",
+        "text": "Mira, Noel, and Luis"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article IV, Section 1(2) recognizes citizenship through either a Filipino father or a Filipino mother. Mira and Noel therefore qualify regardless of their foreign birthplaces. Luis's Philippine birthplace alone does not satisfy this parentage provision because neither parent was Filipino. The question assesses this route at birth, not possible later naturalization or loss of citizenship.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article IV, Section 1(2). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-17",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A person became a Philippine citizen only through naturalization as an adult. The person is 45, can read and write, is a registered voter, and meets the Senate's residence requirement. Which constitutional qualification for Senator remains unmet?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The minimum age"
+      },
+      {
+        "choiceId": "b",
+        "text": "Natural-born citizenship"
+      },
+      {
+        "choiceId": "c",
+        "text": "Voter registration"
+      },
+      {
+        "choiceId": "d",
+        "text": "Literacy"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article VI, Section 3 requires a Senator to be a natural-born citizen. Article IV, Section 2 distinguishes citizenship from birth without an act to acquire or perfect it from the adult naturalization described here. The stated age and other qualifications do not cure that deficiency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article IV, Section 2; Article VI, Section 3. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-18",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Assume every person listed is a natural-born citizen, a registered voter, and able to read and write. Ages are measured on election day and residence is continuous Philippine residence immediately before it. Who meets both the constitutional age and residence requirements for President?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A person aged 39 with 15 years of residence"
+      },
+      {
+        "choiceId": "b",
+        "text": "A person aged 41 with 9 years of residence"
+      },
+      {
+        "choiceId": "c",
+        "text": "A person aged 38 with 10 years of residence"
+      },
+      {
+        "choiceId": "d",
+        "text": "A person aged 40 with 10 years of residence"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article VII, Section 2 requires age at least forty on election day and at least ten years of Philippine residence immediately before the election. Only the 40-year-old with ten years of residence meets both thresholds.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Section 2. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-19",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A natural-born, literate registered voter is 26 on election day and seeks a district seat in the House. The candidate has resided in that district for only eight months immediately before the election. Which assessment follows the Constitution?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The candidate satisfies age but falls short of the district residence requirement."
+      },
+      {
+        "choiceId": "b",
+        "text": "The candidate satisfies residence but falls short of age."
+      },
+      {
+        "choiceId": "c",
+        "text": "The candidate satisfies both because six months is sufficient."
+      },
+      {
+        "choiceId": "d",
+        "text": "District candidates have no constitutional residence requirement."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article VI, Section 6 requires a district representative to be at least twenty-five on election day and to have resided in the district for at least one year immediately before it. Eight months is insufficient. The stated exception for party-list representatives does not apply to this district candidacy.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 6. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-20",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A revenue bill originates in the House of Representatives and is then sent to the Senate. A student says the Senate must accept its text unchanged because of the House-origination rule. Which correction is accurate?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The Senate must reject every revenue bill originating in the House."
+      },
+      {
+        "choiceId": "b",
+        "text": "The bill should have originated exclusively in the Senate."
+      },
+      {
+        "choiceId": "c",
+        "text": "The Senate may propose or concur with amendments despite the House-origination requirement."
+      },
+      {
+        "choiceId": "d",
+        "text": "The President must write all amendments before either chamber may act."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article VI, Section 24 requires revenue bills to originate in the House but expressly permits the Senate to propose or concur with amendments. Origination does not mean exclusive control of every later version.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 24. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-21",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a simplified constitutional allocation exercise, assume the House has 240 district seats and all remaining seats are party-list seats. If the full party-list share specified in Article VI, Section 5(2) is allocated, how many party-list seats must be added? This is not a calculation of current election results.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "48"
+      },
+      {
+        "choiceId": "b",
+        "text": "60"
+      },
+      {
+        "choiceId": "c",
+        "text": "80"
+      },
+      {
+        "choiceId": "d",
+        "text": "300"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article VI, Section 5(2) assigns party-list representatives twenty percent of total House membership, including party-list seats. If p seats are added, p/(240 + p) = 0.20, so 0.80p = 48 and p = 60. The total is then 300, of which 60 is twenty percent. Taking twenty percent of district seats gives 48 and uses the wrong denominator; 300 is total membership, not the added seats. This exercise assumes allocation of the full constitutional share, not the statutory party-list election formula.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 5(2). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-22",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Congress is in session. A Senator claims Article VI, Section 11 prevents arrest for any offense whatsoever during that period. Which response correctly states the provision's limit?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The privilege applies only to offenses punishable by no more than six years of imprisonment."
+      },
+      {
+        "choiceId": "b",
+        "text": "The privilege applies to all offenses during the Senator's entire term."
+      },
+      {
+        "choiceId": "c",
+        "text": "The privilege applies only when Congress is in recess."
+      },
+      {
+        "choiceId": "d",
+        "text": "The privilege applies only to offenses punishable by more than six years of imprisonment."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article VI, Section 11 limits the in-session arrest privilege to offenses punishable by not more than six years of imprisonment. It is not blanket immunity from arrest or criminal responsibility.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 11. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-23",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A reviewer says the Constitution requires Congress to develop a regressive tax system because taxes must be uniform and equitable. Which correction follows Article VI, Section 28(1)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Congress must exempt every person who earns wages."
+      },
+      {
+        "choiceId": "b",
+        "text": "Uniformity prohibits any tax legislation."
+      },
+      {
+        "choiceId": "c",
+        "text": "Equity requires every taxpayer to pay the same peso amount."
+      },
+      {
+        "choiceId": "d",
+        "text": "Congress is directed to evolve a progressive system of taxation."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article VI, Section 28(1) combines uniformity and equity with a direction to Congress to evolve a progressive tax system. It does not require a regressive system, identical peso payments, or the elimination of taxes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 28(1). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-24",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For an amnesty unrelated to election-law offenses, an official proposes using the President's signature as the sole constitutional approval. Which option states the minimum congressional concurrence required by Article VII, Section 19?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "At least two-thirds of all Members of the Senate"
+      },
+      {
+        "choiceId": "b",
+        "text": "A majority of the Members of Congress present at the vote, even if fewer than a majority of all Members concur"
+      },
+      {
+        "choiceId": "c",
+        "text": "A majority of all Members of Congress"
+      },
+      {
+        "choiceId": "d",
+        "text": "At least two-thirds of all Members of Congress"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article VII, Section 19 requires concurrence of a majority of all Members of Congress for amnesty. A majority merely of those present may fall short of that full-membership threshold. Two-thirds of the Senate is not the specified approving body and threshold; two-thirds of all Congress would exceed, rather than state, the minimum required here. Election-law offenses are excluded because Article IX-C, Section 5 adds a favorable COMELEC recommendation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Section 19; Article IX-C, Section 5. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-25",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The President appoints the incumbent Vice-President to a Cabinet position. Which statement correctly identifies the constitutional confirmation requirement for that appointment?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It requires consent of the Commission on Appointments, as for an ordinary appointment of an executive department head."
+      },
+      {
+        "choiceId": "b",
+        "text": "It requires no confirmation."
+      },
+      {
+        "choiceId": "c",
+        "text": "It requires confirmation by a majority of all Members of each chamber of Congress, voting separately."
+      },
+      {
+        "choiceId": "d",
+        "text": "It requires concurrence of at least two-thirds of all Members of the Senate."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article VII, Section 3 expressly permits the incumbent Vice-President to be appointed to the Cabinet without confirmation. The ordinary department-head appointment rule in Section 16 does not override that express exception. Confirmation by both chambers voting separately concerns a vacancy in the vice-presidency under Section 9, not this Cabinet appointment; two-thirds Senate concurrence is the treaty rule in Section 21.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Sections 3, 9, 16, and 21. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-26",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A city mayor completes three consecutive full terms in the same office without interruption. The mayor wants to run immediately for a fourth consecutive term. Which constitutional rule applies?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only two consecutive terms are permitted for every local official."
+      },
+      {
+        "choiceId": "b",
+        "text": "Local officials may serve indefinitely if each election is contested."
+      },
+      {
+        "choiceId": "c",
+        "text": "The three-term rule applies only to barangay officials."
+      },
+      {
+        "choiceId": "d",
+        "text": "The fourth consecutive term is barred by the three-consecutive-term limit."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article X, Section 8 gives elective local officials other than barangay officials three-year terms and limits them to three consecutive terms. The facts specify three full, uninterrupted terms in the same office; no disputed interruption is involved.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article X, Section 8. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-27",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A student groups agricultural land, forest land, mineral land, and national parks together as automatically available for private acquisition. Which correction reflects Article XII, Section 3?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only agricultural lands of the public domain may be classified as alienable; the label does not itself dispose of a particular parcel."
+      },
+      {
+        "choiceId": "b",
+        "text": "Only forest lands may be classified as alienable."
+      },
+      {
+        "choiceId": "c",
+        "text": "Only national parks may be classified as alienable."
+      },
+      {
+        "choiceId": "d",
+        "text": "Every public-domain classification is automatically alienable."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article XII, Section 3 limits alienable public-domain lands to agricultural lands. This is a constitutional limit on classification, not a finding that every agricultural parcel has been declared alienable or is available for transfer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XII, Section 3. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-28",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Consider a corporation organized under Philippine law that seeks authorization to operate an enterprise assumed to be a public utility under applicable law. Filipino citizens own only 55% of its capital. On that stated ownership fact, which constitutional requirement is unmet?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A requirement that Filipinos own no more than 40%"
+      },
+      {
+        "choiceId": "b",
+        "text": "A requirement that foreign investors own at least 50%"
+      },
+      {
+        "choiceId": "c",
+        "text": "A requirement that Filipinos own at least 60%"
+      },
+      {
+        "choiceId": "d",
+        "text": "A requirement that every public utility be entirely government-owned"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article XII, Section 11 requires at least sixty-percent Filipino capital ownership for a Philippine-law corporation authorized to operate a public utility. Fifty-five percent is insufficient. The stem expressly assumes public-utility status; not every public service has that status.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XII, Section 11. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-29",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A qualified applicant for a civil right is told to pass a religious test before exercising that right. Which constitutional response is most direct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The test is valid if no fee is charged."
+      },
+      {
+        "choiceId": "b",
+        "text": "No religious test may be required for exercising civil or political rights."
+      },
+      {
+        "choiceId": "c",
+        "text": "The test is valid if several religions prepare it."
+      },
+      {
+        "choiceId": "d",
+        "text": "The test becomes valid after approval by a local majority."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article III, Section 5 prohibits religious tests for exercising civil or political rights. The prohibition does not disappear because the test is free, locally popular, or prepared by several religious groups.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article III, Section 5. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-30",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A draft summary says Article XIV makes both elementary and high school attendance compulsory for every school-age child. Which replacement accurately distinguishes compulsory education from free public education?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only high school education is compulsory, and neither level must be free."
+      },
+      {
+        "choiceId": "b",
+        "text": "Both levels are compulsory, but only high school must be free."
+      },
+      {
+        "choiceId": "c",
+        "text": "Elementary education is compulsory, but public education need not be free."
+      },
+      {
+        "choiceId": "d",
+        "text": "Elementary education is compulsory; the State must maintain free public education at elementary and high school levels."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article XIV, Section 2(2) expressly makes elementary education compulsory for children of school age and provides for free public elementary and high school education. Those are different requirements; the text does not say high school attendance is compulsory.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XIV, Section 2(2). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-31",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A court has already determined that a government agent obtained a private communication in violation of Article III, Section 3. A party argues it may still be admitted in an administrative proceeding because that is not a criminal trial. What follows from Section 3(2)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It is inadmissible for any purpose in any proceeding."
+      },
+      {
+        "choiceId": "b",
+        "text": "It is admissible in every noncriminal proceeding."
+      },
+      {
+        "choiceId": "c",
+        "text": "It is admissible whenever the agent acted without payment."
+      },
+      {
+        "choiceId": "d",
+        "text": "It is admissible if the administrative body, rather than a court, receives it."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article III, Section 3(2) makes evidence obtained in violation of Section 3 or Section 2 inadmissible for any purpose in any proceeding. The stem establishes the violation, so no unresolved privacy exception is being assumed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article III, Section 3(2). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-32",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A tax was levied solely for a specified public project. That purpose has been fulfilled, and a balance remains. What does Article VI, Section 29(3) require for the balance?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It must remain in the special fund forever."
+      },
+      {
+        "choiceId": "b",
+        "text": "It may be distributed personally to collecting officers."
+      },
+      {
+        "choiceId": "c",
+        "text": "It must be transferred to the Government's general funds."
+      },
+      {
+        "choiceId": "d",
+        "text": "It must automatically be refunded to all residents regardless of who paid."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article VI, Section 29(3) restricts a special-purpose tax fund to its stated purpose. When the purpose is fulfilled or abandoned, any remaining balance goes to the Government's general funds, rather than remaining permanently earmarked.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 29(3). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-33",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A non-appropriation bill originated in a House with 300 Members and was vetoed. Assume the Senate has 24 Members, all seats in both chambers are filled, both chambers reconsider, and all other procedural requirements are met. The House records 205 votes to override and the Senate records 15. What is the result under Article VI, Section 27(1)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The override succeeds because the combined yes votes exceed two-thirds of combined membership."
+      },
+      {
+        "choiceId": "b",
+        "text": "The override fails because the Senate needs 16 votes, even though the House has exceeded its required 200."
+      },
+      {
+        "choiceId": "c",
+        "text": "The override fails because the House needs 225 votes, even though the Senate has enough."
+      },
+      {
+        "choiceId": "d",
+        "text": "The override succeeds because only the originating House must reach two-thirds."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The Constitution requires two-thirds of all Members in each House, not a pooled vote. The House threshold is 300 × 2/3 = 200 and the Senate threshold is 24 × 2/3 = 16. The House's 205 passes, but the Senate's 15 falls short. A three-fourths House threshold is not the veto-override rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 27(1). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-34",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume a 24-member Senate has no vacancies. With a quorum present, it votes 16–2 to suspend a Member for 75 days for disorderly behavior. Considering only the constitutional vote threshold and maximum suspension period, which assessment is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The vote threshold fails, but the duration is allowed."
+      },
+      {
+        "choiceId": "b",
+        "text": "Both the vote threshold and the duration are allowed."
+      },
+      {
+        "choiceId": "c",
+        "text": "The vote threshold is met, but the duration exceeds the constitutional maximum."
+      },
+      {
+        "choiceId": "d",
+        "text": "Both the vote threshold and the duration violate the stated constitutional limits."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article VI, Section 16(3) requires two-thirds of all Members for suspension or expulsion: 16 of 24 meets that threshold. But a suspension may not exceed sixty days, so 75 days is impermissible even with sufficient votes. Quorum or the number voting does not replace the full-membership denominator.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VI, Section 16(3). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-35",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume an actual invasion exists and public safety requires martial law. The President initially proclaims it for 45 days and submits a report to Congress 36 hours later. An adviser then claims that the proclamation automatically suspends both the Constitution and the privilege of the writ of habeas corpus. Which assessment correctly combines Article VII, Section 18's rules?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The initial period and report timing are within their limits, but neither claimed automatic suspension follows."
+      },
+      {
+        "choiceId": "b",
+        "text": "The initial period is within its limit, but the report is late and both claimed automatic suspensions follow."
+      },
+      {
+        "choiceId": "c",
+        "text": "The initial period exceeds its limit, but the report is timely and both claimed automatic suspensions follow."
+      },
+      {
+        "choiceId": "d",
+        "text": "The initial period exceeds its limit and the report is late, but neither claimed automatic suspension follows."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article VII, Section 18 allows an initial period of no more than sixty days and requires a report to Congress within forty-eight hours. Thus 45 days and 36 hours meet those respective limits. Martial law neither suspends the Constitution nor automatically suspends the privilege of the writ. Only the assessment combining both compliant timings with neither automatic effect is correct. Each distractor retains one correct assessment but misstates the other two; the invasion and public-safety grounds are supplied, not left to inference.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Section 18. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-36",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two former Vice-Presidents each succeeded to the presidency after a President's resignation; neither had previously been elected President. One served exactly four years as President, while the other served four years and one day. Assume all other qualifications are satisfied. Under Article VII, Section 4's succession-service limit alone, who is barred from later election as President?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both, because any service by succession bars election."
+      },
+      {
+        "choiceId": "b",
+        "text": "Neither, because neither served a full six-year term."
+      },
+      {
+        "choiceId": "c",
+        "text": "Only the person who served exactly four years."
+      },
+      {
+        "choiceId": "d",
+        "text": "Only the person who served four years and one day."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article VII, Section 4 bars a person who succeeded as President and served for more than four years from election to that office. Exactly four years does not exceed the threshold; four years and one day does. This is distinct from the prohibition on reelection of a person elected President.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Section 4. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-37",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume a full 24-member Senate and 300-member House. In separate proceedings, 16 Senators concur in a treaty; a declaration of the existence of a state of war receives 16 Senate votes but only 199 House votes in joint session, with the chambers voting separately. Considering only the constitutional vote thresholds, which assessment is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both thresholds are met because each proceeding needs only Senate approval."
+      },
+      {
+        "choiceId": "b",
+        "text": "Neither threshold is met because the Senate needs 18 votes in each."
+      },
+      {
+        "choiceId": "c",
+        "text": "The treaty threshold is met, but the war-declaration threshold is not."
+      },
+      {
+        "choiceId": "d",
+        "text": "The war-declaration threshold is met, but the treaty threshold is not."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article VII, Section 21 requires at least two-thirds of all Senators for treaty concurrence: 16 of 24. Article VI, Section 23(1) requires two-thirds of both Houses in joint session, voting separately, to declare a state of war: 16 Senators and 200 House Members. Thus 199 House votes is insufficient. The question concerns a treaty, not the separate category of executive agreements.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VII, Section 21; Article VI, Section 23(1). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-38",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Consider only the signature percentages stated in Article XVII, Section 2, not whether an initiative is legally available or otherwise valid. There are 10,000,000 registered voters nationally. Petition P has 1,250,000 valid signatures nationally, but one district contributes only 2.9% of its registered voters. Petition Q has 1,190,000 valid signatures nationally, and every district contributes at least 3%. Which petition satisfies both stated percentage requirements?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Neither P nor Q"
+      },
+      {
+        "choiceId": "b",
+        "text": "P only"
+      },
+      {
+        "choiceId": "c",
+        "text": "Q only"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both P and Q"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The national threshold is 12%, or 1,200,000 of 10,000,000 registered voters, and every district must reach 3%. P exceeds the national threshold but fails one district; Q meets every district threshold but is 10,000 signatures short nationally. Passing these numerical tests alone would not establish a legally valid initiative.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XVII, Section 2. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-39",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume land is already properly classified as alienable agricultural land of the public domain, and each applicant is an otherwise qualified private corporation. Considering only the area and lease-period ceilings in Article XII, Section 3, which proposal stays within all three ceilings?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Lease 900 hectares initially for 30 years, renewable for 20 years."
+      },
+      {
+        "choiceId": "b",
+        "text": "Lease 1,000 hectares initially for 25 years, renewable once for 25 years."
+      },
+      {
+        "choiceId": "c",
+        "text": "Lease 1,100 hectares initially for 20 years, renewable for 20 years."
+      },
+      {
+        "choiceId": "d",
+        "text": "Lease 800 hectares initially for 25 years, renewable for 30 years."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "For private corporations, Article XII, Section 3 permits holding such public-domain lands only by lease: no more than 1,000 hectares, an initial period no longer than 25 years, and renewal no longer than 25 years. The 1,000/25/25 proposal meets all three ceilings. The others exceed respectively the initial period, area, or renewal period. Other legal conditions remain necessary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article XII, Section 3. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-philippine-constitution-40",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A screening exercise considers three possible Supreme Court appointees. Inez is 42 and has practiced law in the Philippines for 14 years; Paolo is 39 with 16 years of such practice; Tomas is 42 with 16 years of such practice. None has served as a judge. All are natural-born citizens with the required competence, integrity, probity, and independence. Considering the age and experience minimums, JBC list size, and confirmation rule in Article VIII, which proposed plan meets every stated requirement? Assume any additional nominees in a final shortlist are qualified.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The President appoints Tomas from a JBC list of only two nominees for the vacancy, without confirmation."
+      },
+      {
+        "choiceId": "b",
+        "text": "The President appoints Paolo from a JBC list of three nominees for the vacancy, without confirmation."
+      },
+      {
+        "choiceId": "c",
+        "text": "The President appoints Inez from a JBC list of three nominees for the vacancy, with Commission on Appointments consent."
+      },
+      {
+        "choiceId": "d",
+        "text": "The President appoints Tomas from a JBC list of three nominees for the vacancy, without confirmation."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article VIII, Section 7 requires a Supreme Court appointee to be at least forty and to have at least fifteen years as a lower-court judge or in Philippine law practice. With no judicial service, Inez falls short on experience and Paolo on age; Tomas meets both. Section 9 requires at least three JBC nominees for the vacancy and no confirmation. The plan choosing Tomas from three nominees therefore meets all stated requirements. Two nominees are insufficient, and Commission on Appointments consent neither supplies missing experience nor is required for this judicial appointment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
+      "sources": [
+        "1987 Constitution, Article VIII, Sections 7(1), 7(3), and 9. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+      ]
+    }
+  }
+]

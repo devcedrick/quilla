@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f01-reading-english-01",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which action best meets the handbook’s meaning of stewardship?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Cleaning a borrowed drill, reporting its damaged cable, and returning it by the agreed time"
+      },
+      {
+        "choiceId": "b",
+        "text": "Cleaning and promptly returning a borrowed drill, treating its damaged cable as ordinary wear"
+      },
+      {
+        "choiceId": "c",
+        "text": "Reporting a drill’s damaged cable and storing it securely until another borrower asks for it"
+      },
+      {
+        "choiceId": "d",
+        "text": "Replacing a worn part on a borrowed drill and treating the repair as payment for ownership"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The handbook requires cleaning, reporting damage, and timely return while the tool remains shared property. Cleaning the drill, reporting its damaged cable, and returning it by the agreed time meet those conditions together. Prompt return does not excuse leaving damage unreported; secure storage does not establish cleaning or timely return. Repairing a part does not make the borrower the owner. Each alternative includes a useful action but falls short of the handbook’s full definition.",
+    "reference": {
+      "referenceId": "f01-reading-english-01-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-english-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What reason does the passage give for moving the desk’s hours later?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The room had too few chairs"
+      },
+      {
+        "choiceId": "b",
+        "text": "Working residents could not arrive before the original closing time"
+      },
+      {
+        "choiceId": "c",
+        "text": "The coordinator wanted fewer advisers"
+      },
+      {
+        "choiceId": "d",
+        "text": "The building was unavailable in the morning"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The residents’ letters identify the problem: they finished work after the desk had closed. Later hours address that problem. The room had spare chairs, staffing did not change, and no morning building restriction is mentioned.",
+    "reference": {
+      "referenceId": "f01-reading-english-02-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Stated reason; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-english-03",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which figure of speech is used in the first line?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Simile"
+      },
+      {
+        "choiceId": "b",
+        "text": "Hyperbole"
+      },
+      {
+        "choiceId": "c",
+        "text": "Metaphor"
+      },
+      {
+        "choiceId": "d",
+        "text": "Onomatopoeia"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The line directly identifies patience with a bridge to suggest that it helps people reconnect. That is a metaphor. It does not use like or as for a simile, exaggerate a measurable claim, or imitate a sound.",
+    "reference": {
+      "referenceId": "f01-reading-english-03-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify a metaphor in original verse; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-english-04",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which statement best captures the handbook’s distinction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Transparency requires releasing every private detail"
+      },
+      {
+        "choiceId": "b",
+        "text": "Transparency means keeping decisions secret but publishing names"
+      },
+      {
+        "choiceId": "c",
+        "text": "A decision is transparent whenever it is popular"
+      },
+      {
+        "choiceId": "d",
+        "text": "Reasons can be made public while unrelated personal details remain private"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The passage separates access to the reasons for a decision from exposure of unrelated private details. Making reasons public while keeping unrelated personal details private preserves both parts. Releasing every private detail removes the distinction, keeping decisions secret reverses it, and popularity is not the handbook’s test of transparency.",
+    "reference": {
+      "referenceId": "f01-reading-english-04-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a defined idea and its boundary; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-english-05",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Why was the covered court chosen as a temporary library stop?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Access to the original stop was blocked by road repairs"
+      },
+      {
+        "choiceId": "b",
+        "text": "Borrowing at the market had fallen sharply"
+      },
+      {
+        "choiceId": "c",
+        "text": "Readers had complained about the market’s shade"
+      },
+      {
+        "choiceId": "d",
+        "text": "The library had decided to stop serving market readers"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Road repairs blocked the van’s access, so a temporary alternative was needed. The passage expressly says borrowing remained steady and readers liked the shade. It also says the move lasts only until the road reopens, rather than ending service to those readers.",
+    "reference": {
+      "referenceId": "f01-reading-english-05-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-english-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How do the doorway metaphor and the reference to a prize together describe what the workshop offers?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It prepares participants for a competition whose main goal is winning a prize"
+      },
+      {
+        "choiceId": "b",
+        "text": "It marks a qualification participants have earned before starting practical work"
+      },
+      {
+        "choiceId": "c",
+        "text": "It offers access to unfamiliar work without promising a reward"
+      },
+      {
+        "choiceId": "d",
+        "text": "It offers a chance to watch experienced workers instead of trying the tools"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The doorway suggests access to something new, developed by the unfamiliar tools and work the speakers have not tried. The phrase not a promise of a prize limits the offer: an opportunity is available, but a reward is not promised. The verse does not describe a competition or an earned qualification. Its reference to work we have not tried supports participation rather than merely watching others. Absence of a promised prize does not establish whether participants will succeed or fail at the work.",
+    "reference": {
+      "referenceId": "f01-reading-english-06-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a metaphor using surrounding lines; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  }
+]

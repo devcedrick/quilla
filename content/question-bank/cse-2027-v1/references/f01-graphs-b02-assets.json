@@ -1,0 +1,66 @@
+[
+  {
+    "assetId": "f01-b02-clinic-visits-image",
+    "path": "assets/b02-clinic-visits.png",
+    "mediaType": "image/png",
+    "sha256": "a44b21034ec060e52afde938c78ba7c780493ac99c007a4806874499aab03ad4",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f01-b02-water-use-image",
+    "path": "assets/b02-water-use.png",
+    "mediaType": "image/png",
+    "sha256": "a17b54c6ae0dd8ef362fd3b70c414d2855d1e584df534efe3cb9ef30b57d9526",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f01-b02-project-budget-image",
+    "path": "assets/b02-project-budget.png",
+    "mediaType": "image/png",
+    "sha256": "9206d05812a4b9bfdaa295812c6a536ebabe513509b853ad082fc302dd8f2457",
+    "width": 1374,
+    "height": 1145,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f01-b02-relief-packs-image",
+    "path": "assets/b02-relief-packs.png",
+    "mediaType": "image/png",
+    "sha256": "1ba1829bb3e8039a7895b6257214eddfebe3fd3193a03c18bc9146b3fb5cb90c",
+    "width": 1536,
+    "height": 1024,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  }
+]
