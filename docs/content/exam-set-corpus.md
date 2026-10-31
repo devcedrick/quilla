@@ -107,6 +107,36 @@ evidence, mandatory for licensed material). Human review must verify substantive
 explanations, factual citations, licensing, proposed difficulty, and originality.
 Synthetic content is only a fixture/example and must not become the product bank.
 
+## Choice identity and display order
+
+`choiceId` is a stable identity within a question version, not a displayed answer
+letter. For example, a choice with ID `c` can appear as visible A in an attempt;
+`correctChoiceId: "c"` still identifies that same answer. Do not rename choice IDs
+to match shuffled positions. Choice IDs remain local to the exact question version.
+
+The authored JSON array supplies source order. The planned assessment backend
+generates a random permutation for each eligible newly served item, stores the
+ordered choice IDs with the attempt, and serves that order to the interface.
+The interface derives visible letters from positions. It must reuse the saved
+order on navigation, refresh, resume, and review. Answers submit choice IDs and
+the backend scores them against the immutable served question version. Correct
+IDs and explanations are withheld until authorized feedback/review.
+
+Consequently, a C-heavy distribution of stored correct IDs is not by itself a
+content defect once this runtime behavior exists. It remains a serving concern
+until then. Random shuffling does not promise an exactly balanced A–D distribution
+in each exam, and authoring does not require ten stored keys per letter.
+
+Prefer position-independent options. Ordered numerical options may be shuffled
+when their meaning is unchanged. Options referring to other letters or relative
+positions require preserved order or an editorial rewrite. Future lifecycle work
+must explicitly record shuffle eligibility in immutable versions before serving;
+do not add an unsupported field to this v1 JSON format. The offline validator
+does not currently prove order independence or implement randomization.
+
+See [ADR 0010](../ADR/0010-assessment-choice-order-and-scoring.md). This policy
+does not resolve separate originality, difficulty, or blueprint-coverage findings.
+
 ## Shared passages, tables, and graphs
 
 A reference requires `referenceId`, `version`, `family`, `module`, `language`,

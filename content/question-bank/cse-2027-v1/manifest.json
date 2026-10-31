@@ -1,12 +1,13 @@
 {
   "formatVersion": 1,
   "corpusId": "cse-2027-v1",
-  "revision": 3,
+  "revision": 7,
   "taxonomyId": "cse-taxonomy-2027-v1",
   "blueprintIds": ["cse-professional-2027-v1", "cse-subprofessional-2027-v1"],
   "questionFiles": [
     "families/f01-graphs-b01.json",
-    "families/f01-graphs-b02.json"
+    "families/f01-graphs-b02.json",
+    "families/f01-analogy-logic.json"
   ],
   "referenceFiles": [
     "references/f01-graphs-b01.json",

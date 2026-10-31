@@ -125,6 +125,45 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 
 ## 3. Diagnostic assessment
 
+### Shared assessment choice-order policy
+
+The following planned contract applies to diagnostics, adaptive practice, timed
+mock exams, and learner-initiated review sessions that serve questions. It does
+not claim that assessment generation or choice shuffling is already implemented.
+
+- A choice's stable `choiceId` identifies its content within an immutable question
+  version. Its stored array position and ID spelling (including `a`, `b`, `c`, or
+  `d`) do not establish its displayed answer letter.
+- On first serving an eligible question in an attempt, the backend generates and
+  persists a random permutation of its choice IDs. The interface renders that
+  saved order and derives visible A–F labels from positions. Refresh, navigation,
+  resume, and historical review reuse the same order; rendering never reshuffles
+  an already served item. Adaptive sessions apply this when each new item is served.
+- Answers submit the selected stable choice ID. The backend verifies attempt
+  ownership and membership in the served question's choices, then scores against
+  the exact served version's correct choice ID. Client-provided letters, indices,
+  correctness claims, and permutations are not authoritative.
+- Active-assessment responses omit correct choice IDs, answer keys, and
+  explanations until the activity's authorized feedback/review stage. The client
+  does not need the correct choice to shuffle or display options.
+- Order-dependent choices, such as "both A and B" or "all of the above", must
+  retain their authored order unless rewritten and independently validated for
+  shuffling. Eligibility must be explicitly represented and validated in future
+  question-version/lifecycle work; the initial corpus JSON contract does not yet
+  define a shuffle-policy field. Do not infer an exemption from fragile text matching.
+- Use an unbiased permutation for eligible choices. Randomization removes a fixed
+  authored-position bias but does not guarantee equal correct-answer counts per
+  displayed letter in any one attempt. Exact A–D balancing is not a requirement.
+
+Acceptance tests must prove that reordered choices retain their correct scoring,
+saved orders survive refresh/resume/review, invalid choice IDs are rejected,
+exempt items retain their order, and active responses do not leak answer keys.
+Randomization tests should use controlled randomness and permutation invariants,
+not flaky expectations about one small sample's answer-letter distribution.
+
+See [ADR 0010](ADR/0010-assessment-choice-order-and-scoring.md) and the
+[corpus authoring guide](content/exam-set-corpus.md#choice-identity-and-display-order).
+
 ### Problem
 
 Without a baseline, learners do not know which concepts deserve attention, and Quilla cannot provide meaningful personalization.
@@ -269,6 +308,7 @@ As a learner, I want to choose what and how long to practice while Quilla priori
 - The level initially defaults to the learner's preference and is explicitly confirmed for each new attempt without updating that preference. All subject and concept filters must be eligible for the attempt's selected level.
 - Generation prioritizes adaptive review recommendations, then low mastery, then blueprint weight within selected filters.
 - No question repeats within a session.
+- Served questions follow the shared assessment choice-order policy in section 3.
 - Two consecutive correct answers step difficulty up when eligible content exists; two incorrect answers step it down.
 - Challenge mode fixes the target difficulty to hard and clearly reports coverage limits.
 - Submission records answer history and updates mastery and adaptive review state.
@@ -319,6 +359,7 @@ Neither initial blueprint may activate until a dry run proves that all eight pai
 - Each new mock exam explicitly confirms its level, initially defaulting to the learner's preference, and stores that level with its immutable blueprint snapshot. Later preference changes do not alter the attempt or transfer its score to the other level.
 - Professional exams exclude Clerical Ability; Subprofessional exams exclude Analytical Ability.
 - Subject distribution, difficulty mix, randomization, time limit, and passing reference come from an immutable blueprint snapshot.
+- Choice display and scoring follow section 3's shared assessment choice-order policy; saved choice order is part of the served item snapshot.
 - The server is authoritative for timing and auto-submits expired attempts.
 - Progress is autosaved and can survive a browser interruption without extending the deadline.
 - Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
@@ -361,6 +402,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - Leaving and reopening a review preserves the same submitted result and does not consume or invalidate review access.
 - Viewing a historical review does not update mastery or adaptive recommendation state; only newly submitted answers from a separate eligible activity can do so.
 - Every item uses the exact served question-version snapshot.
+- Review preserves the original displayed choice order and answer-letter mapping under section 3's shared assessment choice-order policy.
 - Review shows the learner's answer, correct answer, explanation, concept, and source citation where applicable.
 - Available distractor rationales are shown without fabricating missing content.
 - Learners can flag and unflag an item idempotently.

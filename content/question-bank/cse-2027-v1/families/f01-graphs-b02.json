@@ -91,7 +91,7 @@
   },
   {
     "questionId": "f01-graphs-b02-23",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -100,27 +100,27 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "What is the simplest ratio of morning to afternoon visits on Wednesday?",
+    "stem": "Across all four days combined, what is the ratio of total morning visits to total afternoon visits, expressed in simplest whole-number form?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "3:5"
+        "text": "2:3"
       },
       {
         "choiceId": "b",
-        "text": "5:3"
+        "text": "3:2"
       },
       {
         "choiceId": "c",
-        "text": "5:2"
+        "text": "5:3"
       },
       {
         "choiceId": "d",
-        "text": "8:3"
+        "text": "9:5"
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Wednesday’s ratio is 50:30; dividing both terms by 10 gives 5:3.",
+    "explanation": "Morning visits totalled 40 + 30 + 50 + 60 = 180; afternoon visits totalled 20 + 30 + 30 + 40 = 120. Dividing both terms of 180:120 by 60 gives 3:2. The reversed ratio is 2:3, while 5:3 compares Wednesday alone rather than all four days.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -181,7 +181,7 @@
   },
   {
     "questionId": "f01-graphs-b02-25",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -189,7 +189,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "stem": "Suppose 10 Tuesday visits were reclassified from afternoon to morning, with all daily totals unchanged. Approximately what percentage of all four days’ visits would then be morning visits?",
     "choices": [
       {
@@ -271,7 +271,7 @@
   },
   {
     "questionId": "f01-graphs-b02-27",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -279,7 +279,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "What was the mean daily water use over the five days, in cubic metres?",
     "choices": [
       {
@@ -406,7 +406,7 @@
   },
   {
     "questionId": "f01-graphs-b02-30",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -414,7 +414,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "stem": "A sixth day is added. To make the six-day mean exactly 130 cubic metres, how much water must be used on that sixth day?",
     "choices": [
       {
@@ -586,7 +586,7 @@
   },
   {
     "questionId": "f01-graphs-b02-34",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -594,7 +594,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "What is the simplest ratio of the Health allocation to the Transport allocation?",
     "choices": [
       {
@@ -631,7 +631,7 @@
   },
   {
     "questionId": "f01-graphs-b02-35",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -639,7 +639,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "stem": "If 10% of Transport’s allocation is transferred to Health, while the overall budget stays fixed, what percentage of the entire budget would Health then receive?",
     "choices": [
       {
@@ -811,7 +811,7 @@
   },
   {
     "questionId": "f01-graphs-b02-39",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -819,7 +819,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "How many times as many packs were delivered to District C as to District A?",
     "choices": [
       {
@@ -856,7 +856,7 @@
   },
   {
     "questionId": "f01-graphs-b02-40",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -864,7 +864,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "stem": "The remaining undelivered packs will be purchased at PHP 15 each, with a delivery charge equal to 10% of their purchase cost. How much is needed to complete the planned deliveries?",
     "choices": [
       {

@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-graphs-b01-01",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -10,27 +10,27 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Refer to the nursery records. Eight native trees from May were reserved for a school nursery. How many of May’s native trees remained for other recipients?",
+    "stem": "Refer to the nursery records. A school received 40% of all seedlings distributed in May. Of the seedlings sent to the school, 75% were native trees. How many of May’s native trees went to recipients other than the school?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "18"
+        "text": "10"
       },
       {
         "choiceId": "b",
-        "text": "22"
+        "text": "15"
       },
       {
         "choiceId": "c",
-        "text": "30"
+        "text": "20"
       },
       {
         "choiceId": "d",
-        "text": "38"
+        "text": "30"
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "May had 50 seedlings. Native trees were 50 × 0.60 = 30; after reserving 8, 22 remained.",
+    "explanation": "The May bar gives 50 seedlings, and the May pie gives 60% native trees: 50 × 0.60 = 30 native trees in all. The school received 50 × 0.40 = 20 seedlings. Its native trees numbered 20 × 0.75 = 15, leaving 30 − 15 = 15 native trees for other recipients. The 75% uses the school’s 20 seedlings as its base, not all 50 seedlings in May. Subtracting all 20 school seedlings would incorrectly count its five non-native trees as native.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -44,7 +44,7 @@
   },
   {
     "questionId": "f01-graphs-b01-02",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -53,27 +53,27 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Refer to the nursery records. Twelve of June’s locally raised seedlings went to a school. How many locally raised seedlings went to other recipients?",
+    "stem": "Refer to the nursery records. A school received 40% of June’s locally raised seedlings. Locally raised seedlings made up 60% of all seedlings received by that school in June. How many externally raised seedlings did the school receive in June?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "24"
+        "text": "6"
       },
       {
         "choiceId": "b",
-        "text": "33"
+        "text": "12"
       },
       {
         "choiceId": "c",
-        "text": "45"
+        "text": "15"
       },
       {
         "choiceId": "d",
-        "text": "48"
+        "text": "18"
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "June had 60 seedlings. Locally raised seedlings were 60 × 0.75 = 45; 45 − 12 = 33.",
+    "explanation": "June’s 60 seedlings were 75% locally raised, so there were 60 × 0.75 = 45 locally raised seedlings. The school received 40% of those, or 45 × 0.40 = 18. These 18 were 60% of the school’s own total, so that total was 18/0.60 = 30. The school therefore received 30 − 18 = 12 externally raised seedlings. Six results from assuming the school also had June’s overall 25% external share; 15 is the external count for all June recipients, and 18 counts the school’s local seedlings. The school’s composition and June’s overall composition have different bases and percentages.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -130,7 +130,7 @@
   },
   {
     "questionId": "f01-graphs-b01-04",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -138,7 +138,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "What is the ratio of May seedlings to February seedlings, expressed in simplest whole-number form?",
     "choices": [
       {
@@ -259,7 +259,7 @@
   },
   {
     "questionId": "f01-graphs-b01-07",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -267,7 +267,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "stem": "A volunteer group supplied 8 of January’s seedlings. If its contribution in June was the same proportion of the monthly total, how many did it supply in June?",
     "choices": [
       {
@@ -302,7 +302,7 @@
   },
   {
     "questionId": "f01-graphs-b01-08",
-    "version": 1,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -310,28 +310,28 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "hard",
-    "stem": "A donor provided 12 of February’s seedlings. If the donor supplied the same percentage of May’s seedlings, how many did the donor supply in May?",
+    "difficulty": "medium",
+    "stem": "A donor supplied 20 of May’s seedlings and the same proportion of each month’s total in January and February. How many seedlings distributed in January and February combined came from other sources?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "15"
-      },
-      {
-        "choiceId": "b",
-        "text": "18"
-      },
-      {
-        "choiceId": "c",
         "text": "20"
       },
       {
+        "choiceId": "b",
+        "text": "30"
+      },
+      {
+        "choiceId": "c",
+        "text": "40"
+      },
+      {
         "choiceId": "d",
-        "text": "24"
+        "text": "50"
       }
     ],
-    "correctChoiceId": "c",
-    "explanation": "The February share is 12/30 = 40%. Forty percent of 50 is 20.",
+    "correctChoiceId": "b",
+    "explanation": "The donor supplied 20/50 = 40% of May’s seedlings, so other sources supplied 60% in January and February as well. Those two months totalled 20 + 30 = 50 seedlings. Other sources therefore supplied 0.60 × 50 = 30. The donor’s own combined contribution was 20 seedlings, not the requested remainder.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -345,7 +345,7 @@
   },
   {
     "questionId": "f01-graphs-b01-09",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -353,7 +353,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "Between which consecutive months was the largest increase in the number of seedlings distributed?",
     "choices": [
       {
@@ -517,7 +517,7 @@
   },
   {
     "questionId": "f01-graphs-b01-13",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -525,7 +525,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "What was the mean monthly distance patrolled from January through April, in kilometres?",
     "choices": [
       {
@@ -560,7 +560,7 @@
   },
   {
     "questionId": "f01-graphs-b01-14",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -568,7 +568,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "What was the mean monthly distance patrolled from March through June, in kilometres?",
     "choices": [
       {
@@ -603,7 +603,7 @@
   },
   {
     "questionId": "f01-graphs-b01-15",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -611,7 +611,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "In which month did the distance patrolled fall compared with the immediately preceding month?",
     "choices": [
       {
@@ -689,7 +689,7 @@
   },
   {
     "questionId": "f01-graphs-b01-17",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -697,7 +697,7 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "stem": "June’s distance patrolled was what percentage of January’s distance?",
     "choices": [
       {
