@@ -19,6 +19,14 @@ for v2. The [Spelling ledger](../../../docs/content/spelling-family01-ledger.md)
 records source checks, answer keys, difficulty rationale, and adoption limits.
 These candidates do not change the 40-item Clerical total or its 12/20/8 cells.
 
+`families/f01-alphabetizing.json` contains ten Family 01 Alphabetizing items:
+three easy, five medium, and two hard. Each has its own records to sort, explicit
+filing rules, four sequence choices, and explanation. All are English,
+Subprofessional-only Clerical items. See the
+[Alphabetizing ledger](../../../docs/content/alphabetizing-family01-ledger.md)
+for sorting conventions and verified orders. This candidate pool does not change
+the 40-item Clerical total or set a permanent per-concept allocation.
+
 The current v1 manifest and offline validator remain unchanged. A successful v1
 validation does not validate these staged records. V2 policy support, tests,
 versioned manifest/blueprints, complete family selection, and human sign-off are

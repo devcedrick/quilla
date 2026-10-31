@@ -1,0 +1,412 @@
+[
+  {
+    "questionId": "f01-alphabetizing-01",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. \n\nR1: Folder\nR2: Basket\nR3: Stapler\nR4: Envelope\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R2-R1-R4-R3"
+      },
+      {
+        "choiceId": "b",
+        "text": "R2-R4-R1-R3"
+      },
+      {
+        "choiceId": "c",
+        "text": "R4-R2-R1-R3"
+      },
+      {
+        "choiceId": "d",
+        "text": "R3-R1-R4-R2"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The first letters give B, E, F, S: Basket, Envelope, Folder, Stapler. The correct order is R2-R4-R1-R3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New supply labels exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-02",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. \n\nR1: Harbor Books\nR2: Harbor Garden\nR3: Harbor Arts\nR4: Harbor Dental\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R1-R3-R4-R2"
+      },
+      {
+        "choiceId": "b",
+        "text": "R3-R4-R1-R2"
+      },
+      {
+        "choiceId": "c",
+        "text": "R2-R4-R1-R3"
+      },
+      {
+        "choiceId": "d",
+        "text": "R3-R1-R4-R2"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Harbor is shared by every name, so compare the next words: Arts, Books, Dental, Garden. The correct order is R3-R1-R4-R2.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New shared organisation prefix exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-03",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Each record is written Surname, Given name. Compare surnames first, then given names if surnames tie. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. \n\nR1: Lim, Nora\nR2: Garcia, Leo\nR3: Ramos, Iris\nR4: Cruz, Emil\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R4-R2-R1-R3"
+      },
+      {
+        "choiceId": "b",
+        "text": "R2-R4-R1-R3"
+      },
+      {
+        "choiceId": "c",
+        "text": "R4-R1-R2-R3"
+      },
+      {
+        "choiceId": "d",
+        "text": "R4-R3-R2-R1"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Compare surnames, not given names: Cruz, Garcia, Lim, Ramos. No surname tie requires a given-name comparison. Sorting by the given names Emil, Iris, Leo, Nora would instead produce R4-R3-R2-R1, which violates the surname-first rule. The correct order is R4-R2-R1-R3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New distinct surnames exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-04",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Each record is written Surname, Given name. Compare surnames first, then given names if surnames tie. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. \n\nR1: Navarro, Alina\nR2: Navarro, Ali\nR3: Navarro, Allan\nR4: Navarro, Alisa\nR5: Navarro, Alicia\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R5-R2-R1-R4-R3"
+      },
+      {
+        "choiceId": "b",
+        "text": "R2-R1-R5-R4-R3"
+      },
+      {
+        "choiceId": "c",
+        "text": "R2-R5-R1-R4-R3"
+      },
+      {
+        "choiceId": "d",
+        "text": "R2-R5-R4-R1-R3"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "All surnames tie. Ali ends before the longer names beginning Ali, so it comes first. The next letters order Alicia, Alina, Alisa. Allan comes last because All follows Ali. The correct order is R2-R5-R1-R4-R3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New given-name prefixes exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-05",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. \n\nR1: Cedar Community Records\nR2: Cedar Community Reading\nR3: Cedar Community Research\nR4: Cedar Community Recreation\nR5: Cedar Community Resource\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R2-R4-R1-R3-R5"
+      },
+      {
+        "choiceId": "b",
+        "text": "R2-R1-R4-R3-R5"
+      },
+      {
+        "choiceId": "c",
+        "text": "R2-R1-R4-R5-R3"
+      },
+      {
+        "choiceId": "d",
+        "text": "R1-R2-R3-R4-R5"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Cedar Community ties throughout. Compare Reading, Records, Recreation, Research, Resource. Records precedes Recreation at the o/r difference after Rec; Research precedes Resource at the e/o difference after Res. The correct order is R2-R1-R4-R3-R5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New deep organisation-name comparison exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-06",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Each record is written Surname, Given name. Compare surnames first, then given names if surnames tie. Keep surnames exactly as written; do not split or reinterpret them. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. \n\nR1: Delos, Mira\nR2: Delgado, Mina\nR3: Delos, Mina\nR4: Delano, Mica\nR5: Delgado, Mira\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R4-R2-R5-R3-R1"
+      },
+      {
+        "choiceId": "b",
+        "text": "R4-R3-R1-R2-R5"
+      },
+      {
+        "choiceId": "c",
+        "text": "R2-R5-R4-R3-R1"
+      },
+      {
+        "choiceId": "d",
+        "text": "R4-R5-R2-R1-R3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The surname order is Delano, Delgado, Delos. Within each repeated surname, Mina precedes Mira because n precedes r. Finish each surname group before moving to the next surname. The correct order is R4-R2-R5-R3-R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New surname branches and given-name ties exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-07",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. Keep spaces as word boundaries; do not join separate words.\n\nR1: Greenfield Records\nR2: Green Hill Records\nR3: Green House Records\nR4: Greene Records\nR5: Green Hills Records\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R4-R1-R2-R5-R3"
+      },
+      {
+        "choiceId": "b",
+        "text": "R2-R5-R4-R1-R3"
+      },
+      {
+        "choiceId": "c",
+        "text": "R5-R2-R3-R4-R1"
+      },
+      {
+        "choiceId": "d",
+        "text": "R2-R5-R3-R4-R1"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The first word Green is shorter than Greene and Greenfield, so all Green entries come first. Among them, Hill precedes Hills because it is shorter, and both precede House. Greene then precedes Greenfield at e/f after Green. The correct order is R2-R5-R3-R4-R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New word boundaries versus joined words exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-08",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Compare word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first. Ignore periods, but do not expand abbreviations: St. is filed as St, not as Saint.\n\nR1: Saint Alder Clinic\nR2: St. Alder Clinic\nR3: St. Alden Clinic\nR4: Saint Alden Clinic\nR5: St. Alder College\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R4-R3-R1-R2-R5"
+      },
+      {
+        "choiceId": "b",
+        "text": "R4-R1-R3-R5-R2"
+      },
+      {
+        "choiceId": "c",
+        "text": "R4-R1-R3-R2-R5"
+      },
+      {
+        "choiceId": "d",
+        "text": "R3-R2-R5-R4-R1"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Saint comes before St because a precedes t. Within each first-word group, Alden precedes Alder because n precedes r. For the two St Alder entries, Clinic precedes College because l precedes o after C. The correct order is R4-R1-R3-R2-R5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. New literal abbreviations exercise; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-09",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Before comparing names, omit a leading A, An, or The and remove apostrophes and hyphens without adding spaces. Keep all other spaces as word boundaries. Compare the resulting names word by word, comparing letters within each word. If one word or complete name is an exact prefix of another, put the shorter one first.\n\nR1: The Brook-side Art Center\nR2: Brookside Arts Center\nR3: Brookside Art Centre\nR4: A Brookside Art Center Annex\nR5: Brook's Art Center\nR6: The Brookside Art Center Archives\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R5-R1-R4-R6-R3-R2"
+      },
+      {
+        "choiceId": "b",
+        "text": "R5-R1-R6-R4-R3-R2"
+      },
+      {
+        "choiceId": "c",
+        "text": "R1-R4-R6-R3-R2-R5"
+      },
+      {
+        "choiceId": "d",
+        "text": "R5-R1-R4-R6-R2-R3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "First normalize the names as directed. R5 begins Brooks, an exact shorter prefix of Brookside, so it comes first. Among the Brookside names, Art precedes Arts. Within the Art group, Center precedes Centre. The complete name Brookside Art Center ends before the longer Center Annex and Center Archives names, so R1 comes before R4 and R6. Annex precedes Archives at n/r after A. R3 follows those Center names, and R2 follows every Art entry because it contains Arts. The correct order is R5-R1-R4-R6-R3-R2.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. Revised normalized organisation index with complete-name prefixes and deeper word comparisons; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-alphabetizing-10",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange the records in ascending alphabetical order. R1, R2, and so on are fixed record labels, not answer-option letters. Ignore letter case. Each record is written Surname, Given names, with an optional title before the surname. Omit the titles Dr. and Ms. For surname comparison only, remove spaces and hyphens, retaining every surname letter. Compare normalized surnames letter by letter; if one is an exact prefix of another, the shorter comes first. If surnames tie, compare given names word by word, comparing letters within each word and placing the shorter exact word or complete-name prefix first.\n\nR1: Dr. De Vera, Ana Marie\nR2: De-Vera, Ana Maria Luisa\nR3: Devera, Ana Mariel\nR4: Ms. De Vera, Ana\nR5: Deveras, Ana\nR6: De Vera, Ana Maria\n\nWhich sequence gives the correct filing order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R4-R2-R6-R1-R3-R5"
+      },
+      {
+        "choiceId": "b",
+        "text": "R4-R5-R6-R2-R1-R3"
+      },
+      {
+        "choiceId": "c",
+        "text": "R4-R6-R2-R1-R3-R5"
+      },
+      {
+        "choiceId": "d",
+        "text": "R4-R6-R2-R3-R1-R5"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "After removing titles and joining surname spaces and hyphens, five surnames become Devera. Deveras is a longer exact prefix extension and follows that entire group. Within Devera, Ana alone comes first (R4). Ana Maria (R6) precedes its complete-name extension Ana Maria Luisa (R2). Both Maria entries precede Marie because a precedes e at the first difference in Maria/Marie; the extra word Luisa does not override that comparison. Marie then precedes its longer word extension Mariel (R1 before R3). R5 remains last because surname comparison takes priority over given names. The correct order is R4-R6-R2-R1-R3-R5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting and rule-based sorting checks; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Alphabetizing reference image batch; filing-order format inspiration, not copied entry lists or answer keys. Revised normalized surname index with distinct multi-part given names and prefix comparisons; see alphabetizing-family01-ledger.md."
+      ]
+    }
+  }
+]
