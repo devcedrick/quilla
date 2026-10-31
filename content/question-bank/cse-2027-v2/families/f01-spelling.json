@@ -1,0 +1,427 @@
+[
+  {
+    "questionId": "f01-spelling-01",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nPrint the delivery _____ clearly on the envelope.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "adress"
+      },
+      {
+        "choiceId": "b",
+        "text": "addres"
+      },
+      {
+        "choiceId": "c",
+        "text": "address"
+      },
+      {
+        "choiceId": "d",
+        "text": "adres"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Address has two d's and two s's. Adress omits a d, addres omits an s, and adres omits both.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/address"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-02",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nApplicants will _____ a confirmation message after submitting the form.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "receive"
+      },
+      {
+        "choiceId": "b",
+        "text": "recieve"
+      },
+      {
+        "choiceId": "c",
+        "text": "receeve"
+      },
+      {
+        "choiceId": "d",
+        "text": "receve"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Receive is spelled r-e-c-e-i-v-e. Recieve reverses e and i; receeve substitutes ee for ei; receve omits i.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/receive"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-03",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nKeep the signed originals in a _____ folder.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "seperate"
+      },
+      {
+        "choiceId": "b",
+        "text": "separete"
+      },
+      {
+        "choiceId": "c",
+        "text": "seperete"
+      },
+      {
+        "choiceId": "d",
+        "text": "separate"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Separate contains two a's: s-e-p-a-r-a-t-e. Each other choice replaces at least one of those a's with e.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/separate"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-04",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nThe clerk checked that all _____ attachments were included.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "neccessary"
+      },
+      {
+        "choiceId": "b",
+        "text": "necessary"
+      },
+      {
+        "choiceId": "c",
+        "text": "necesary"
+      },
+      {
+        "choiceId": "d",
+        "text": "neccessery"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Necessary has one c, two consecutive s's, and the ending -ary. Neccessary adds a c; necesary drops an s; neccessery also changes the ending.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/necessary"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-05",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nAccess to the archive is a _____ granted only to designated staff.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "privelege"
+      },
+      {
+        "choiceId": "b",
+        "text": "priviledge"
+      },
+      {
+        "choiceId": "c",
+        "text": "privilege"
+      },
+      {
+        "choiceId": "d",
+        "text": "privilage"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Privilege is spelled p-r-i-v-i-l-e-g-e. Privelege changes the second i to e, priviledge adds d, and privilage changes the e after l to a.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/privilege"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-06",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair in which both words are correctly spelled. Insert the words in the order shown.\n\nThe travel coordinator confirmed the team's overnight _____ and attached the final _____ listing the journey's stops.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "accommodation; itinerary"
+      },
+      {
+        "choiceId": "b",
+        "text": "accomodation; itinerary"
+      },
+      {
+        "choiceId": "c",
+        "text": "accommodation; itenerary"
+      },
+      {
+        "choiceId": "d",
+        "text": "accommmodation; itinerary"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The correct pair is accommodation; itinerary. Accommodation has two consecutive c's and two consecutive m's; accomodation omits an m, while accommmodation adds a third m. Itinerary is spelled i-t-i-n-e-r-a-r-y; itenerary replaces the second i with e. Both words must be correct, so recognizing either word alone does not distinguish the correct pair from every distractor.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/accommodation",
+        "https://dictionary.cambridge.org/dictionary/english/itinerary"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-07",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nPlease return the completed service-feedback _____ to the reception desk.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "questionaire"
+      },
+      {
+        "choiceId": "b",
+        "text": "questionnairre"
+      },
+      {
+        "choiceId": "c",
+        "text": "questionnare"
+      },
+      {
+        "choiceId": "d",
+        "text": "questionnaire"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Questionnaire has two consecutive n's and ends in -aire, with one r. Questionaire drops an n, questionnairre adds an r, and questionnare omits i.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/questionnaire"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-08",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the correctly spelled word to complete the sentence.\n\nThe records assistant logged all incoming _____ before distributing it.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "corespondence"
+      },
+      {
+        "choiceId": "b",
+        "text": "correspondence"
+      },
+      {
+        "choiceId": "c",
+        "text": "correspondance"
+      },
+      {
+        "choiceId": "d",
+        "text": "corresspondence"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Correspondence has two consecutive r's, one s, and the ending -ence. Corespondence drops an r, correspondance changes the ending, and corresspondence adds an s.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/correspondence"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-09",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Proofread the three numbered words in this draft. Which option corrects every misspelling without changing a correctly spelled word?\n\n\"Regular (1) maintenence reduces the (2) occurrence of breakdowns; completing repairs requires (3) perserverance.\"",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Change maintenence to maintenance and perserverance to perseverance; leave occurrence unchanged."
+      },
+      {
+        "choiceId": "b",
+        "text": "Change maintenence to maintenance and occurrence to occurrance; leave perserverance unchanged."
+      },
+      {
+        "choiceId": "c",
+        "text": "Change perserverance to perseverance and occurrence to occurence; leave maintenence unchanged."
+      },
+      {
+        "choiceId": "d",
+        "text": "Change maintenence to maintainance and perserverance to perseverance; leave occurrence unchanged."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Maintenance and perseverance are the required spellings; occurrence is already correct, with double c, double r, and -ence. The correct edit repairs words 1 and 3 while retaining word 2. The other edit sets either leave an original error or introduce occurrance, occurence, or maintainance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/maintenance",
+        "https://dictionary.cambridge.org/dictionary/english/occurrence",
+        "https://dictionary.cambridge.org/dictionary/english/perseverance"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-spelling-10",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Proofread the three numbered words in this draft. Which option corrects every misspelling without changing a correctly spelled word?\n\n\"A (1) conscientious assistant is (2) indispensible when sorting (3) miscelaneous records.\"",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Change conscientious to conscientous and miscelaneous to miscellaneous; leave indispensible unchanged."
+      },
+      {
+        "choiceId": "b",
+        "text": "Change indispensible to indispensable; leave conscientious and miscelaneous unchanged."
+      },
+      {
+        "choiceId": "c",
+        "text": "Change indispensible to indispensable and miscelaneous to miscellaneous; leave conscientious unchanged."
+      },
+      {
+        "choiceId": "d",
+        "text": "Change conscientious to consciencious and indispensible to indispensable; leave miscelaneous unchanged."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Conscientious is already correct and must be retained. Indispensible must become indispensable (-able), and miscelaneous must become miscellaneous (double l). Only the edit set retaining word 1 and correcting words 2 and 3 satisfies all three checks. Conscientous and consciencious are misspellings; correcting only indispensible leaves miscelaneous incorrect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
+      "sources": [
+        "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
+        "https://dictionary.cambridge.org/dictionary/english/conscientious",
+        "https://dictionary.cambridge.org/dictionary/english/indispensable",
+        "https://dictionary.cambridge.org/dictionary/english/miscellaneous"
+      ]
+    }
+  }
+]
