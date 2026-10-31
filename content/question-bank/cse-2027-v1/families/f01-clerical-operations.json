@@ -1,0 +1,827 @@
+[
+  {
+    "questionId": "f01-clerical-operations-01",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A stationery supplier sends a buyer an itemised bill showing the goods supplied, quantities, unit prices, and total amount charged. Which document would the clerk normally use to identify this bill?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sales invoice"
+      },
+      {
+        "choiceId": "b",
+        "text": "Purchase order"
+      },
+      {
+        "choiceId": "c",
+        "text": "Delivery receipt"
+      },
+      {
+        "choiceId": "d",
+        "text": "Payment voucher"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "A sales invoice is the seller’s itemised billing document. A purchase order records what the buyer orders, a delivery receipt records delivery, and a payment voucher supports a payment process. The question identifies the document by its function rather than treating it as proof of payment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 106; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-02",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A sales dispatch file is limited to the customer’s order, the seller’s invoice, and the delivery acknowledgement. Which document belongs in a different file?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Customer purchase order"
+      },
+      {
+        "choiceId": "b",
+        "text": "Seller’s sales invoice"
+      },
+      {
+        "choiceId": "c",
+        "text": "Student academic report card"
+      },
+      {
+        "choiceId": "d",
+        "text": "Signed delivery acknowledgement"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The customer purchase order, seller’s sales invoice, and signed delivery acknowledgement are expressly included in the dispatch file. A student academic report card is outside this file’s stated purpose. This is a classification under the given filing rule, not a claim that a business can never hold an academic record.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 107; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-03",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A reception guide asks staff to greet callers politely, identify the office and themselves, and offer assistance. Which opening meets all three requirements?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Good morning. How may I help you today?"
+      },
+      {
+        "choiceId": "b",
+        "text": "Good morning, Harbour Office, Lia speaking. How may I help you?"
+      },
+      {
+        "choiceId": "c",
+        "text": "Harbour Office. Please tell me which extension you need."
+      },
+      {
+        "choiceId": "d",
+        "text": "Lia speaking. May I have your name and contact number?"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The Harbour Office greeting includes a polite greeting, both office and staff identity, and an offer of assistance. The other openings omit at least one required element. The answer follows this office’s stated guide rather than assuming there is only one acceptable telephone script.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 108; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-04",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A clerk has an email message, a PDF saved on a computer, a document stored on a USB drive, and a letter printed on paper. Which is a hard copy?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The saved email message"
+      },
+      {
+        "choiceId": "b",
+        "text": "The PDF on the computer"
+      },
+      {
+        "choiceId": "c",
+        "text": "The document on the USB drive"
+      },
+      {
+        "choiceId": "d",
+        "text": "The printed paper letter"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "A hard copy is a physical printed copy. A document does not become a hard copy merely because its electronic file is stored on a physical device such as a USB drive.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 109; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-05",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In an email addressing field, what does the abbreviation Cc stand for?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Carbon copy"
+      },
+      {
+        "choiceId": "b",
+        "text": "Certified copy"
+      },
+      {
+        "choiceId": "c",
+        "text": "Copy confirmation"
+      },
+      {
+        "choiceId": "d",
+        "text": "Circulation code"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Cc stands for carbon copy. It sends a copy to additional recipients; it is not a certification or proof that those recipients have read the message. Copy furnished is sometimes used as an annotation, but it is not the expansion of Cc.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 110; original scenario and choices. See clerical-operations-family01-ledger.md.",
+        "https://support.microsoft.com/en-US/Outlook/automatically-cc-carbon-copy-someone-on-every-email-you-send"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-06",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An office needs to scan a paper form and transmit its image over a telephone connection to another office’s compatible receiving machine. Which device is designed for that conventional task?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Standalone photocopier"
+      },
+      {
+        "choiceId": "b",
+        "text": "Typewriter"
+      },
+      {
+        "choiceId": "c",
+        "text": "Fax machine"
+      },
+      {
+        "choiceId": "d",
+        "text": "Standalone document shredder"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "A conventional fax machine scans and transmits a document image through a telephone connection to a compatible receiver. Photocopying alone produces a local copy, typing creates text, and shredding destroys paper. This describes conventional faxing, not every modern online fax service.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 112; original scenario and choices. See clerical-operations-family01-ledger.md.",
+        "https://download.brother.com/welcome/doc002488/mfc8880n_chneng_usr_a.pdf"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-07",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A clerk has an editable letter and a PDF exported before a wording correction was requested. The recipient needs a PDF containing the correction. Which workflow ensures the correct content and file format are sent?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Export the editable letter, save the requested correction, then attach the PDF exported before that correction"
+      },
+      {
+        "choiceId": "b",
+        "text": "Save the correction, export a new PDF, check its contents, then attach that checked PDF"
+      },
+      {
+        "choiceId": "c",
+        "text": "Save the correction and export a new PDF, then attach the corrected editable document instead"
+      },
+      {
+        "choiceId": "d",
+        "text": "Save the correction and export a new PDF, then attach the earlier PDF already listed in the draft email"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Saving the correction before export and checking the actual PDF establish that the attachment has both the requested wording and format. Exporting before the correction leaves an outdated PDF. Sending the editable document fails the PDF requirement. Creating a correct new PDF does not help if the earlier PDF remains attached to the email.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 111; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-08",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The directory assigns future funding plans to the CFO, daily cash-position reports to the treasurer, and independent reviews of past transactions to the auditor. A caller asks two questions: how an increase in trainees would change next quarter’s funding needs, and how much cash is available today. Which routing pair matches the two requests in that order?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Treasurer for the funding estimate; CFO for today’s cash report"
+      },
+      {
+        "choiceId": "b",
+        "text": "CFO for the funding estimate; auditor for today’s cash report"
+      },
+      {
+        "choiceId": "c",
+        "text": "Auditor for the funding estimate; treasurer for today’s cash report"
+      },
+      {
+        "choiceId": "d",
+        "text": "CFO for the funding estimate; treasurer for today’s cash report"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The trainee question asks for an estimate of future funding needs, so it belongs to the CFO under this directory. Today’s available cash is a current cash-position request for the treasurer. Neither request asks for an independent review of past transactions. The correct pair must classify both requests and preserve their order; it does not assume universal equivalence of finance job titles.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 113; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-09",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The office’s rule is to query a bill when the invoiced quantity exceeds the accepted delivery. Purchase order PO-241 authorises 18 folders. The signed delivery record shows 16 accepted, while the supplier’s invoice bills 18. What should the clerk do before passing the bill for payment review?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Request a quantity clarification using PO-241, the signed delivery record, and the invoice"
+      },
+      {
+        "choiceId": "b",
+        "text": "Change the accepted quantity to 18 because the purchase order authorises that amount"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pass the invoice because its quantity matches the purchase order"
+      },
+      {
+        "choiceId": "d",
+        "text": "Prepare a payment receipt showing that all 18 folders were accepted"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The order authorises 18, but acceptance of only 16 does not substantiate billing for 18 under the rule. The clerk should flag the discrepancy and provide all three records for clarification. Neither altering the delivery record nor treating an order as proof of receipt resolves the mismatch.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 106; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-10",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A file contains a buyer’s purchase order, a signed delivery acknowledgement, and an unpaid seller’s invoice. Under the office guide, the acknowledgement records receipt of goods; a separate payment entry records settlement. Which statement can the clerk support from these records?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The purchase order proves that the invoice has been settled"
+      },
+      {
+        "choiceId": "b",
+        "text": "The signed delivery acknowledgement replaces the seller’s invoice"
+      },
+      {
+        "choiceId": "c",
+        "text": "Receipt of goods is documented, but settlement is not documented"
+      },
+      {
+        "choiceId": "d",
+        "text": "The unpaid invoice proves that the goods were never delivered"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The signed acknowledgement documents delivery acceptance, while the invoice is explicitly unpaid and there is no settlement entry. Ordering, delivery, billing, and payment are distinct stages under the supplied guide.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 106; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-11",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The email guide puts the person responsible for the next action in To and the other participant in Cc. Mara must first verify a register. Only after that verification may Joel approve it. Both must see each message. Which addressing pair follows the two-stage handoff?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Verification: To Joel, Cc Mara; approval: To Mara, Cc Joel"
+      },
+      {
+        "choiceId": "b",
+        "text": "Verification: To Mara, Cc Joel; approval: To Joel, Cc Mara"
+      },
+      {
+        "choiceId": "c",
+        "text": "Verification: To Mara, Cc Joel; approval: To Mara, Cc Joel"
+      },
+      {
+        "choiceId": "d",
+        "text": "Verification: To Joel, Cc Mara; approval: To Joel, Cc Mara"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Mara owns the verification action and is therefore in To for the first message, with Joel in Cc. Once that prerequisite is met, Joel owns approval and moves to To, while Mara receives Cc. Keeping the same action recipient for both stages or reversing both stages fails the handoff even though both people receive the messages.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 110; original scenario and choices. See clerical-operations-family01-ledger.md.",
+        "https://support.microsoft.com/en-US/Outlook/automatically-cc-carbon-copy-someone-on-every-email-you-send"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-12",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A caller says: ‘I am Dina Solis of Bay Office. Please ask Mr Lim to call 02-8123-6074 about reference BX-071.’ The message form requires caller name, organisation, requested action, callback number, and reference. Which entry is complete and accurate?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Dina Solis, Bay Office; Mr Lim to call 02-8123-6074; BX-701"
+      },
+      {
+        "choiceId": "b",
+        "text": "Dina Solis; Mr Lim to call 02-8123-6074; BX-071"
+      },
+      {
+        "choiceId": "c",
+        "text": "Dina Solis, Bay Office; Mr Lim to call 02-8123-6047; BX-071"
+      },
+      {
+        "choiceId": "d",
+        "text": "Dina Solis, Bay Office; Mr Lim to call 02-8123-6074; BX-071"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The complete entry preserves all five fields exactly. BX-701 transposes the reference digits; the entry without Bay Office omits the organisation; and 6047 reverses the final two digits of the callback number. The name, organisation, and number are fictional practice data.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 108; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-13",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The counter file must contain a complete printed copy of the revision currently in effect. The superseded-copy rule requires withdrawing the old counter copy when its replacement takes effect. Today is Friday: revision 2 is in effect and its complete printed copy is at the counter. Revision 3 is approved but takes effect on Monday; its PDF is ready. Which plan complies?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Keep revision 2 at the counter today; replace it with a complete printed revision 3 when revision 3 takes effect on Monday"
+      },
+      {
+        "choiceId": "b",
+        "text": "Replace revision 2 with printed revision 3 today because the approval date overrides its effective date"
+      },
+      {
+        "choiceId": "c",
+        "text": "Withdraw revision 2 today and direct counter staff to revision 3’s PDF until its printed copy is prepared on Monday"
+      },
+      {
+        "choiceId": "d",
+        "text": "Insert revision 3’s changed pages into the printed revision 2 today and replace its remaining pages on Monday"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Approval and taking effect are separate events in this scenario. Revision 2 remains the complete printed copy required on Friday; revision 3 replaces it when revision 3 takes effect on Monday. Early replacement applies a future revision prematurely. Removing the physical copy leaves the counter without its required record, and mixing pages from two revisions does not provide a complete copy of the revision in effect. Withdrawal under this local rule does not imply destroying historical records.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 109; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-14",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fax job requires two pages to verified destination ending 204. The reports show 10:05 to 204: Busy, 0 pages; 10:12 to 402: Completed, 2 pages; 10:20 to 204: Completed, 1 page. The guide retains every attempt, flags any wrong-destination transmission, and marks the job complete only when all required pages are accounted for at the verified destination. No further receipt evidence is available. Which log assessment is supported?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Retain all three attempts, flag the 402 transmission, and mark the job complete because a report lists two pages"
+      },
+      {
+        "choiceId": "b",
+        "text": "Retain all three attempts and mark the job complete by adding the pages reported to 402 and 204"
+      },
+      {
+        "choiceId": "c",
+        "text": "Retain all three attempts, flag the 402 transmission, and leave the job incomplete pending evidence of both pages at 204"
+      },
+      {
+        "choiceId": "d",
+        "text": "Remove the 402 attempt from this job’s history and leave the job incomplete based only on the attempts to 204"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The two-page completion was to 402, not verified destination 204, so it does not complete the intended job and must be flagged. Only one page is reported completed to 204, and there is no evidence accounting for both required pages there. All three attempts must remain in the history, including the busy and wrong-destination attempts. A completed attempt and a completed job are different statuses.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 112; original scenario and choices. See clerical-operations-family01-ledger.md.",
+        "https://download.brother.com/welcome/doc002488/mfc8880n_chneng_usr_a.pdf"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-15",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For this filing exercise, ignore a leading ‘The’, ignore letter case, and compare organisation names letter by letter. Which sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Cedar Office Supplies; Cedar Office Services; The Cedar Archive"
+      },
+      {
+        "choiceId": "b",
+        "text": "The Cedar Archive; Cedar Office Services; Cedar Office Supplies"
+      },
+      {
+        "choiceId": "c",
+        "text": "Cedar Office Services; The Cedar Archive; Cedar Office Supplies"
+      },
+      {
+        "choiceId": "d",
+        "text": "Cedar Office Supplies; The Cedar Archive; Cedar Office Services"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "After removing The, Cedar Archive sorts before both Cedar Office names because A precedes O. Between the remaining names, Services precedes Supplies: after the shared S, e precedes u. The rule is stated for this exercise rather than asserted as every office’s filing convention.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 107; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-16",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The clerk must send the approved current quotation for client Kora, reference Q-184. The register lists revision 3 as approved and current; revision 4 is still a draft. Which attachment is eligible?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Q-184_Kora_r4_DRAFT.pdf"
+      },
+      {
+        "choiceId": "b",
+        "text": "Q-148_Kora_r3_APPROVED.pdf"
+      },
+      {
+        "choiceId": "c",
+        "text": "Q-184_Luma_r3_APPROVED.pdf"
+      },
+      {
+        "choiceId": "d",
+        "text": "Q-184_Kora_r3_APPROVED.pdf"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The attachment must match the reference, client, and current approved revision. Only Q-184_Kora_r3_APPROVED.pdf meets all three conditions. A higher revision number does not override draft status, and approval does not cure a wrong reference or client.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 111; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-17",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For a billing release, use the current approved invoice, include its supporting signed delivery records and any return note, and match the billed quantity to the net accepted quantity in those records. A delivery record already used in a release cannot be reused under another invoice ID. For PO-58, signed DR-11 records 8 accepted units and was fully used by released invoice I-26. Signed DR-12 records 7 accepted units; return note RN-4 removes 2 of those units. DR-12 and RN-4 have not been used. Invoice I-27 has not been released: revision 2 bills 5 units and is current and approved; revision 3 also bills 5 but is a draft. Which release plan complies?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Release I-27 revision 2 against DR-11, treating its earlier use by a different invoice ID as irrelevant"
+      },
+      {
+        "choiceId": "b",
+        "text": "Release I-27 revision 2 with DR-12 and RN-4, recording 5 net accepted units against those records"
+      },
+      {
+        "choiceId": "c",
+        "text": "Release I-27 revision 3 with DR-12 and RN-4, recording 5 net accepted units against those records"
+      },
+      {
+        "choiceId": "d",
+        "text": "Release I-27 revision 2 with DR-12 alone, treating all 7 accepted units as still available for billing"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The unused DR-12 supports 7 accepted units less the 2 returned under RN-4, leaving 5. That net quantity matches current approved I-27 revision 2; both supporting records must accompany it. DR-11 cannot support another release because I-26 has already used it, even though I-27 is a different invoice ID. Revision 3’s equal quantity does not overcome its draft status. Omitting RN-4 both removes required evidence and overstates the remaining accepted quantity. Eligibility therefore depends on record-use history, net acceptance, attached evidence, and invoice status together.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 106; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-18",
+    "version": 1,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The case-routing guide puts the available handling clerk in To and the reviewer in Cc. If the assigned clerk is absent, an authorised delegate replaces that clerk as handler. Only the current handler and reviewer may receive the case attachment; a status-only recipient must receive a separate message without it. Mara is the assigned clerk but is absent today; Lio is her authorised delegate. Joel is the reviewer, and supervisor Neri is a status-only recipient. Which plan complies today?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Send the case to Mara in To and Joel in Cc; separately send Neri an attachment-free status summary"
+      },
+      {
+        "choiceId": "b",
+        "text": "Send the case to Lio in To, Neri in Cc, and Joel in Bcc; separately send Mara an attachment-free status summary"
+      },
+      {
+        "choiceId": "c",
+        "text": "Send the case to Lio in To and Joel in Cc; separately send Neri a status summary without the attachment"
+      },
+      {
+        "choiceId": "d",
+        "text": "Send the case to Joel in To and Lio in Cc; separately send Neri an attachment-free status summary"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Mara’s absence activates the delegation rule, making Lio the current handler and To recipient. Joel remains the reviewer and must receive a visible Cc. Neri may receive only a separate attachment-free summary. Keeping Mara as handler ignores the exception; including Neri on the case message discloses an unauthorised attachment; putting Joel in To reverses the prescribed action and review roles. Bcc changes address visibility, not the fact that a recipient receives the message and attachment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 110; original scenario and choices. See clerical-operations-family01-ledger.md.",
+        "https://support.microsoft.com/en-US/Outlook/automatically-cc-carbon-copy-someone-on-every-email-you-send"
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-19",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "At 14:40, a single fax line is idle. Choose the next approved job by earliest cutoff, breaking equal-cutoff ties by earliest receipt time. Once started, a job runs to completion; reconsider the queue after each completion. Switching takes no time. A: approved now, cutoff 15:00, received 14:20, duration 6 minutes. B: approval arrives at 14:45, cutoff 14:55, received 14:00, duration 4 minutes. C: approved now, cutoff 16:00, received 14:05, duration 4 minutes. D: approved now, cutoff 15:00, received 14:10, duration 8 minutes. Which schedule follows the guide?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "D 14:40–14:48; B 14:48–14:52; A 14:52–14:58; C 14:58–15:02"
+      },
+      {
+        "choiceId": "b",
+        "text": "A 14:40–14:46; B 14:46–14:50; D 14:50–14:58; C 14:58–15:02"
+      },
+      {
+        "choiceId": "c",
+        "text": "D 14:40–14:45; B 14:45–14:49; resume D 14:49–14:52; A 14:52–14:58; C 14:58–15:02"
+      },
+      {
+        "choiceId": "d",
+        "text": "D 14:40–14:48; A 14:48–14:54; B 14:54–14:58; C 14:58–15:02"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "At 14:40, B is not approved. D and A have the earliest eligible cutoff, and D’s earlier receipt breaks their tie, so D occupies the line until 14:48. B’s approval at 14:45 does not interrupt D. At 14:48 the queue is reconsidered: B now has the earliest cutoff and runs until 14:52. A then finishes at 14:58 and C at 15:02. Choosing A first ignores the receipt-time tie break; interrupting D violates the completion rule; keeping A ahead of B after 14:48 fails to reconsider the newly eligible earlier-cutoff job. The correct schedule also finishes each job before its cutoff.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 112; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-clerical-operations-20",
+    "version": 2,
+    "family": 1,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The fax desk may send only the current approved document revision. Revision 1 is superseded, revision 2 is current and approved with three numbered content pages, and revision 3 is a draft. A cover sheet is additional to content pages. The first transmission report says ‘3 pages completed’; the recipient confirms receiving the cover and only content pages 1 and 2 of revision 2. The recovery rule requires sending only confirmed missing content with a new cover identifying the revision and missing-page numbers, and closing the log only after recipient confirmation. What should the clerk do?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Send two pages: a new cover and content page 3 of revision 3; await recipient confirmation before closing"
+      },
+      {
+        "choiceId": "b",
+        "text": "Send one page: content page 3 of revision 2 without a new cover; await recipient confirmation before closing"
+      },
+      {
+        "choiceId": "c",
+        "text": "Send four pages: a new cover and all three content pages of revision 2; await recipient confirmation before closing"
+      },
+      {
+        "choiceId": "d",
+        "text": "Send two pages: a new cover identifying revision 2 and missing page 3, plus that page; await recipient confirmation before closing"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The intended first packet had four physical pages: one cover plus three content pages. The three-page completion report is consistent with the confirmed cover and content pages 1–2, leaving content page 3 missing. The recovery packet must contain a new identifying cover and that page from approved revision 2, for two physical pages. Revision 3 fails the approval rule; omitting the new cover fails the packet rule; resending all three content pages fails the missing-content-only rule. Recipient confirmation is necessary, but it does not make an incorrect revision, missing cover, or excessive retransmission compliant.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
+      "sources": [
+        "Clerical reference batch: source item 112; original scenario and choices. See clerical-operations-family01-ledger.md."
+      ]
+    }
+  }
+]

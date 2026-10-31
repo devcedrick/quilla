@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "corpusId": "cse-2027-v1",
-  "revision": 15,
+  "revision": 18,
   "taxonomyId": "cse-taxonomy-2027-v1",
   "blueprintIds": ["cse-professional-2027-v1", "cse-subprofessional-2027-v1"],
   "questionFiles": [
@@ -15,7 +15,9 @@
     "families/f01-reading-english.json",
     "families/f01-reading-filipino.json",
     "families/f01-paragraph-english.json",
-    "families/f01-paragraph-filipino.json"
+    "families/f01-paragraph-filipino.json",
+    "families/f01-numerical.json",
+    "families/f01-clerical-operations.json"
   ],
   "referenceFiles": [
     "references/f01-graphs-b01.json",
