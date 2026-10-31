@@ -335,6 +335,10 @@ Neither initial blueprint may activate until a dry run proves that all eight pai
 
 [ADR 0008](ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md) records the decision. The complete identifier, taxonomy, allocation, coverage, shortage, and source-version contract is [Initial CSE Taxonomy and Mock-Exam Blueprints](exams/cse-taxonomy-and-blueprints.md).
 
+[ADR 0011](ADR/0011-numerical-data-sufficiency.md) approves a documentation-level v2 addition: Data Sufficiency (`data_sufficiency`) is a separate shared Numerical Ability concept. Each paired family must include it in the 35-item shared Numerical core; the existing per-concept coverage minimum also continues to apply to Numerical Reasoning. Numerical totals and difficulty cells do not change, and no fixed split between the two concepts beyond that minimum has been selected. The v2 taxonomy and blueprint identifiers, statement-sufficiency authoring rules, and adoption gate are defined in the taxonomy contract. The current corpus and validator remain v1 until explicitly migrated; this planned coverage is not yet shipped.
+
+[ADR 0012](ADR/0012-clerical-alphabetizing-and-spelling.md) refines that pending v2 taxonomy to include Alphabetizing (`alphabetizing`) and Spelling (`spelling`) under Clerical Operations (`clerical_operations`). Both topics are English and Subprofessional only. Spelling retains its canonical concept identity; historical v1 classifications are not rewritten. The general Clerical Operations concept remains, and the per-concept minimum applies to all three without changing the 40-item Clerical total or 12/20/8 difficulty cells. The exact concept allocation beyond those minima remains undecided. Validator and corpus support are pending.
+
 ### Edge cases
 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.

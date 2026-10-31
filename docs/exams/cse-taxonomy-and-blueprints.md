@@ -66,6 +66,11 @@ cannot receive Subprofessional-only Clerical coverage. The EDQ heading is not a
 mastery concept because the initial blueprint excludes that unscored
 questionnaire.
 
+The table includes the approved v2 Data Sufficiency and Alphabetizing additions,
+and groups Spelling under Clerical Operations for v2. Other rows retain their v1
+identities. These additions and the Spelling subtopic change are pending v2
+implementation; the current v1 validator contract remains unchanged.
+
 | Subject ID            | Applicability        | Subtopic ID                     | Concept ID                                           | Reference-aligned display label                       |
 | --------------------- | -------------------- | ------------------------------- | ---------------------------------------------------- | ----------------------------------------------------- |
 | `general_information` | Shared               | `civic_and_general_information` | `philippine_constitution_general_information_events` | Philippine Constitutions, General Information, Events |
@@ -74,10 +79,12 @@ questionnaire.
 | `verbal_ability`      | Shared               | `reading`                       | `reading_comprehension_test`                         | Reading Comprehension Test                            |
 | `verbal_ability`      | Shared               | `discourse`                     | `paragraph_organization_test_questions`              | Paragraph Organization Test Questions Civil Service   |
 | `numerical_ability`   | Shared               | `numerical_reasoning`           | `numerical_reasoning`                                | Numerical Reasoning                                   |
+| `numerical_ability`   | Shared               | `numerical_reasoning`           | `data_sufficiency`                                   | Data Sufficiency                                      |
 | `analytical_ability`  | Professional only    | `data_reasoning`                | `graphs_charts_and_data`                             | Graphs / Charts / Data                                |
 | `analytical_ability`  | Professional only    | `logic_and_analogy`             | `word_analogy_and_logic_test`                        | Word Analogy and Logic Test                           |
 | `clerical_ability`    | Subprofessional only | `clerical_operations`           | `clerical_operations`                                | Clerical Operations                                   |
-| `clerical_ability`    | Subprofessional only | `language_accuracy`             | `spelling`                                           | Spelling                                              |
+| `clerical_ability`    | Subprofessional only | `clerical_operations`           | `alphabetizing`                                      | Alphabetizing                                         |
+| `clerical_ability`    | Subprofessional only | `clerical_operations`           | `spelling`                                           | Spelling                                              |
 
 General Information, Numerical Ability, Analytical Ability, and Clerical Ability
 items are English in the initial blueprint. Verbal Ability uses both English and
@@ -87,6 +94,90 @@ Professional questions must never use `clerical_ability`. Subprofessional
 questions must never use `analytical_ability`. A shared concept retains one
 canonical identity across levels; question-level applicability remains an
 independent eligibility constraint.
+
+### Approved addition: Numerical Data Sufficiency
+
+The maintainer approved Data Sufficiency on 31 October 2026 as an additional
+Numerical Ability concept. It measures whether the available information is
+enough to determine an answer, rather than only the ability to calculate it.
+This is Quilla-authored preparation coverage, not a claim about an official CSC
+subtopic allocation. [ADR 0011](../ADR/0011-numerical-data-sufficiency.md) records
+the versioned addition, shown alongside the retained concepts in the main table
+above. Existing v1 policy and historical snapshots remain unchanged.
+
+The next contract uses `cse-taxonomy-2027-v2`, `cse-professional-2027-v2`, and
+`cse-subprofessional-2027-v2`. It retains every v1 concept and adds
+`data_sufficiency` as a distinct canonical concept, so mastery evidence is not
+silently merged with computation-only `numerical_reasoning` evidence.
+
+For v2, every paired family must include at least one Data Sufficiency item in
+its 35-item shared Numerical core, so both levels receive this coverage. The
+five-item Professional extension may also contain Data Sufficiency. The exact
+split between the two Numerical concepts beyond the existing per-concept minimum
+is not yet decided; do not assume a 20/20 split or add extra exam questions.
+
+Numerical totals and difficulty cells remain unchanged: the shared core has
+10 easy, 18 medium, and 7 hard items; the Professional extension has 2 easy,
+2 medium, and 1 hard item. Thus Numerical Ability remains 35 items for
+Subprofessional and 40 for Professional, with 12/20/8 in the Professional total.
+Data Sufficiency questions count inside those cells, not on top of them.
+
+Authoring and review requirements:
+
+- Provide a precise question, explicit domain restrictions, and two statements
+  whose sufficiency can be assessed separately and together. Sufficiency means
+  that all cases allowed by the information give the same answer. For a yes/no
+  question, a definite no is just as sufficient as a definite yes.
+- Use five semantic outcomes: statement 1 alone only; statement 2 alone only;
+  both together but neither alone; either statement alone; or neither alone nor
+  both together. Use full choice text and stable choice IDs rather than relying
+  on memorised A–E positions, which may change when choices are shuffled.
+- The combined statements must be mutually consistent and admit at least one
+  possible case. Contradictory premises are defective, not sufficient by default.
+  Do not assume unstated positivity, integrality, nonzero values, or diagram scale.
+- Explain what each statement establishes, why any insufficient statement allows
+  different answers, and what changes when the statements are combined. Use
+  counterexamples where helpful; the learner need not compute an exact value when
+  uniqueness alone establishes sufficiency.
+- Classify difficulty by reasoning demand. The five-choice format does not make
+  an item hard: direct uniqueness checks can be easy, linked constraints medium,
+  and interacting cases or subtle domain restrictions hard, pending calibration.
+
+This is a documentation-level decision, not implemented v2 support. The current
+corpus manifest and offline validator still use v1. Do not relabel existing
+Numerical questions or submit `data_sufficiency` records under the v1 manifest.
+Before v2 activation, synchronize validator/reference policy and tests, adopt
+versioned corpus metadata, author and review the required coverage, and rerun
+the full paired-family dry run. Preserve existing question and attempt versions.
+
+### Approved v2 grouping: Clerical Operations
+
+Clerical Operations includes Alphabetizing (`alphabetizing`) and Spelling
+(`spelling`), both under subject `clerical_ability` and subtopic
+`clerical_operations`. Both are English and Subprofessional only; neither may
+appear in a Professional exam. The existing general `clerical_operations`
+concept is retained rather than silently replaced.
+
+Alphabetizing assesses arranging words, names, or records in alphabetical order,
+including resolving shared prefixes. Each item must state any convention that
+could change the answer, such as surname-first filing or treatment of spaces,
+hyphens, and punctuation. Spelling assesses identifying or supplying correctly
+spelled words; authoring must avoid alternatives that are both accepted variants
+unless the stem explicitly specifies the required convention.
+
+[ADR 0012](../ADR/0012-clerical-alphabetizing-and-spelling.md) records this
+refinement of the pending v2 contract. Spelling keeps its canonical concept ID;
+v1 questions remain under `language_accuracy` in their historical versions.
+Adopting the new parent requires explicit versioned classification, not rewriting
+past question or attempt snapshots or discarding existing Spelling evidence.
+
+The existing per-concept minimum applies to all three Clerical concepts in each
+v2 family, including Alphabetizing. The Clerical module remains 40 questions:
+12 easy, 20 medium, and 8 hard. No split among these concepts beyond the minimum
+has been decided, and these topics do not add extra exam slots. This remains
+Quilla-authored preparation coverage, not a claim about official CSC weights.
+Validator/policy synchronization and reviewed coverage are required before v2
+activation; this documentation does not change the v1 corpus or runtime.
 
 ## Paired exam-set families
 

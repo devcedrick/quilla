@@ -28,6 +28,36 @@ Malformed JSON is invalid content (1). Output includes errors/warnings with file
 record ID, rule, expected/actual values, distributions, and per-family coverage.
 Warnings include exact duplicate candidates requiring editorial adjudication.
 
+## Pending taxonomy v2: Data Sufficiency
+
+[ADR 0011](../ADR/0011-numerical-data-sufficiency.md) and the
+[taxonomy addition](../exams/cse-taxonomy-and-blueprints.md#approved-addition-numerical-data-sufficiency)
+approve `data_sufficiency` as a second shared Numerical Ability concept, under
+subtopic `numerical_reasoning`. This is distinct from the existing concept with
+the same name as that subtopic. Each v2 family must contain Data Sufficiency in
+the shared Numerical core, inside the existing counts and difficulty cells.
+
+The current offline policy and corpus manifest still use taxonomy v1; this
+documentation change does not make the validator accept the new concept. Adopt
+v2 policy, blueprint identifiers, tests, and corpus metadata together before
+including these records. Taxonomy v2 does not by itself change JSON format
+version 1. Do not retag computation questions as Data Sufficiency or rewrite
+historical versions merely to meet coverage. New items require two consistent
+statements, five full-text sufficiency outcomes with stable choice IDs, and
+explanations evaluating each statement separately and then together.
+
+### Pending v2 Clerical grouping
+
+[ADR 0012](../ADR/0012-clerical-alphabetizing-and-spelling.md) adds
+`alphabetizing` and groups the retained `spelling` concept under subtopic
+`clerical_operations`, subject `clerical_ability`. The general
+`clerical_operations` concept remains. All are English, Subprofessional-only
+Clerical items; the existing 40-item total and 12/20/8 cells do not change.
+The current v1 validator still expects `language_accuracy` for Spelling and does
+not accept Alphabetizing. Do not retag v1 records in place. V2 adoption must
+synchronize policy, tests, and versioned classifications while preserving
+historical question versions and Spelling concept identity.
+
 ## Format version 1
 
 All JSON files are UTF-8. Unknown fields are rejected except inside optional
