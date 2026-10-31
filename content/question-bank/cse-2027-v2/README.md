@@ -27,6 +27,14 @@ Subprofessional-only Clerical items. See the
 for sorting conventions and verified orders. This candidate pool does not change
 the 40-item Clerical total or set a permanent per-concept allocation.
 
+`families/f01-philippine-constitution.json` contains forty original Family 01
+Constitution candidates: twelve easy, twenty medium, and eight hard. All are
+English shared-core items eligible for both levels, using the existing General
+Information concept. Each cites the 1987 Constitution by article and section.
+See the [Constitution ledger](../../../docs/content/philippine-constitution-family01-ledger.md)
+for keys, source review, and legal-scope limits. These are a selection pool, not
+forty exam slots: General Information remains 20 items with 6/10/4 difficulty cells.
+
 The current v1 manifest and offline validator remain unchanged. A successful v1
 validation does not validate these staged records. V2 policy support, tests,
 versioned manifest/blueprints, complete family selection, and human sign-off are
