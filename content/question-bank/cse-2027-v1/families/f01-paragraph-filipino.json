@@ -1,0 +1,276 @@
+[
+  {
+    "questionId": "f01-paragraph-filipino-01",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Aling bahagi ang pinakamainam na unang pangungusap ng talata?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ipinapakilala ng P2 ang dalawang uri ng tala at ang pagkakaiba ng gamit ng mga ito. Ang una sa P4 ay tumutukoy sa talang obserbasyon; ang ikalawa sa P1 ay tumutukoy sa talang pagninilay. Nilalagom ng P3 ang pagkakaiba ng paglalarawan at pagbibigay ng sariling kahulugan. Kaya P2–P4–P1–P3 ang ayos at P2 ang pinakamainam na pambungad. Paghahambing ito ng dalawang gamit, hindi sunod-sunod na hakbang ng isang proseso.",
+    "reference": {
+      "referenceId": "f01-paragraph-filipino-01-parts",
+      "referenceVersion": 2
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-filipino-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Aling bahagi ang angkop na pangwakas na pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Nilalagom ng P4 ang pakinabang ng bagong paraan. Ang ayos ay P1–P3–P2–P4: suliranin, tugon, napansing resulta, at paglalagom. Hindi pangwakas ang P2 dahil isa pa lamang itong detalye ng resulta.",
+    "reference": {
+      "referenceId": "f01-paragraph-filipino-02-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-filipino-03",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Kapag inayos ang mga bahagi, alin ang dapat na ikalawang pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P5"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4"
+      },
+      {
+        "choiceId": "e",
+        "text": "P1"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P3 ang pagpapakilala sa plano. P5 ang paghahanda bago tumanggap; dito itinatakda ang oras na tinutukoy sa P2. Kasunod ang pag-aayos sa P4 at pagbabalik sa P1. Kaya P3–P5–P2–P4–P1 ang ayos at P5 ang ikalawa.",
+    "reference": {
+      "referenceId": "f01-paragraph-filipino-03-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-filipino-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Ano ang pinakamakabuluhang pagkakasunod-sunod ng mga bahagi?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2-P4-P3-P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P2-P4-P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2-P3-P4-P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1-P2-P3-P4"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Nasa P2 ang suliranin. P3 ang pagpapasyang tugunan ito, at P4 ang pagsasagawa ng pasya. Ang ganitong pagkakahati sa P1 ay tumutukoy sa nagawa sa P4. Kaya P2–P3–P4–P1 ang ayos.",
+    "reference": {
+      "referenceId": "f01-paragraph-filipino-04-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-filipino-05",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Alin ang wastong ayos upang malinaw ang ugnayan ng kuwaderno, larawan, pangalan, at pagbabalik?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P5-P4-P2-P1-P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P5-P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2-P5-P4-P1-P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P5-P2-P1-P4-P3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ipinapakilala ng P5 ang kuwaderno. Dito tumutukoy ang nito sa P2, na nagpapakilala naman sa larawan. Inilalahad ng P4 ang nakasulat sa likod nito: ang pangalan ng kasamahan na tahasang tinukoy bilang may-ari ng kuwaderno. Ang pahayag ng pagmamay-ari, hindi basta pangalan sa larawan, ang batayan ng pagkilala sa P1. Nagtatapos sa pagbabalik at pasasalamat sa P3. Kaya P5–P2–P4–P1–P3 ang ayos.",
+    "reference": {
+      "referenceId": "f01-paragraph-filipino-05-parts",
+      "referenceVersion": 2
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-filipino-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Aling pagkakasunod-sunod ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P4-P1-P2-P6-P5-P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P4-P6-P1-P2-P5-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4-P1-P6-P5-P2-P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4-P1-P6-P2-P5-P3"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P4 ang layunin, at P1 ang pangangalap ng sukat. Ipinapaliwanag ng P6 ang natuklasan sa tala. Ang pagkakaibang iyon sa P2 ay tumutukoy sa magkaibang sukat na natuklasan sa P6, at ang dalawang modelo sa P2 ang sinusubok sa P5. Kailangan ang resulta ng pagsubok sa parehong hanay bago ang pagpili sa P3. Kaya P4–P1–P6–P2–P5–P3 ang ayos.",
+    "reference": {
+      "referenceId": "f01-paragraph-filipino-06-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  }
+]
