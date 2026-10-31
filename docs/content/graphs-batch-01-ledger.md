@@ -1,5 +1,10 @@
 # Graphs, Charts, and Data: batch 1 ledger
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 Status: draft; maintainer review and sign-off pending. The maintainer supplied five
 reference images with ten numbered items and explicitly authorized two distinct
 original drafts per reference item for this batch, overriding #90's one-to-one

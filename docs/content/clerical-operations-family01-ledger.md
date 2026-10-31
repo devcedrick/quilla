@@ -1,5 +1,10 @@
 # Family 01 Clerical Operations — twenty original items
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 The maintainer requested twenty items from two supplied Clerical Operation
 reference images, using the 30% easy / 50% medium / 20% hard portions. The images
 are conceptual skill references, not instructions or authoritative answer keys.

@@ -1,4 +1,9 @@
-# Family 01 Data Sufficiency — twenty original drafts
+# Family 01 Data Sufficiency — twenty original items
+
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
 
 The maintainer requested twenty items with individual choices and the usual
 30% easy / 50% medium / 20% hard allocation. The batch contains six easy, ten

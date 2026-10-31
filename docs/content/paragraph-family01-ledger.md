@@ -1,5 +1,10 @@
 # Family 01 Paragraph Organisation — twelve original sets
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 The maintainer requested six English and six Filipino items, with a separate set
 of paragraph parts for every item. Although the request calls these Reading
 Comprehension, the eight supplied screenshots test paragraph organisation. These

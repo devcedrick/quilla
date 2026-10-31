@@ -1,5 +1,10 @@
 # Family 01 Numerical Reasoning — forty original items
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 The maintainer requested forty items using the twelve supplied screenshots as
 skill references, retaining the 30% easy / 50% medium / 20% hard portions. These
 are original practice questions, not transcriptions or claims to be actual Civil

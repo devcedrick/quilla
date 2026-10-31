@@ -1,5 +1,10 @@
 # Family 01 Vocabulary — English and Filipino
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 Created 31 October 2026 following the maintainer's explicit allocation of seven
 questions per language: four synonyms and three antonyms in English, and four
 kasingkahulugan and three kasalungat in Filipino. This allocation supersedes any

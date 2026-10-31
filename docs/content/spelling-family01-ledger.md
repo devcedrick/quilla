@@ -1,4 +1,9 @@
-# Family 01 Spelling — ten original drafts
+# Family 01 Spelling — ten original items
+
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
 
 The batch contains **3 easy, 5 medium, and 2 hard** items (30/50/20).
 Each has a self-contained prompt, four unique options, one answer key, and an

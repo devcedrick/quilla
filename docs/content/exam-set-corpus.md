@@ -6,9 +6,24 @@ network access, or Convex deployment is needed. Policy comes from
 [ADR 0008](../ADR/0008-initial-cse-taxonomy-and-blueprint-policy.md) and the
 [taxonomy and blueprint contract](../exams/cse-taxonomy-and-blueprints.md).
 
+## Current seeding policy versus the legacy validator
+
+[ADR 0013](../ADR/0013-seeding-families-and-pooled-exam-selection.md) supersedes
+the paired-exam family interpretation. Each seed family has 270 unique authored
+questions: 40 General, 50 Verbal, 60 Numerical, 80 Analytical, and 40 Clerical.
+Eight families yield 2,160 unique questions. Family 01 is complete for seeding;
+exams draw from all eligible published families combined, subject to their own
+quotas. See [seeding families](seeding-families.md) for completion and reuse rules.
+
+The commands and format below describe existing v1 tooling, not implementation
+of the new policy. Replace its paired-family release gate with separate seed-count
+and pooled-blueprint checks for v3 selection. Do not change stored content or
+claim publication simply to make the obsolete family gate pass.
+
 ## Files and commands
 
-The eventual corpus lives under `content/question-bank/cse-2027-v1/`. Keep its
+The manifest-backed corpus currently lives under `content/question-bank/cse-2027-v1/`,
+with additional finalized seed content in `cse-2027-v2/`. Keep a corpus
 manifest at the root, question arrays in `families/`, reference arrays in
 `references/`, asset metadata arrays alongside them, and binary images in
 `assets/`. These files contain answer keys: never place them in `public/`, import
@@ -20,8 +35,10 @@ node scripts/validate-question-bank.mjs --manifest content/question-bank/cse-202
 node scripts/validate-question-bank.mjs --manifest content/question-bank/cse-2027-v1/manifest.json --mode release --json
 ```
 
-Draft mode validates declared content and reports incomplete coverage. Release
-mode requires eight complete paired families. Neither mode substitutes difficulty
+The legacy validator's draft mode validates declared content and reports incomplete
+coverage. Its release mode still requires eight paired exam families under the
+superseded v1 contract; that is not a current seeding-completion check.
+Neither mode substitutes difficulty
 cells or publishes questions. Exit codes: 0 means no validation errors; 1 means
 invalid content; 2 means invocation, unsafe path, or filesystem access failure.
 Malformed JSON is invalid content (1). Output includes errors/warnings with file,
@@ -34,12 +51,13 @@ Warnings include exact duplicate candidates requiring editorial adjudication.
 [taxonomy addition](../exams/cse-taxonomy-and-blueprints.md#approved-addition-numerical-data-sufficiency)
 approve `data_sufficiency` as a second shared Numerical Ability concept, under
 subtopic `numerical_reasoning`. This is distinct from the existing concept with
-the same name as that subtopic. Each v2 family must contain Data Sufficiency in
-the shared Numerical core, inside the existing counts and difficulty cells.
+the same name as that subtopic. Under ADR 0013, each generated exam must contain
+Data Sufficiency within its shared Numerical selection from the pooled bank,
+inside the existing exam counts and difficulty cells.
 
 The current offline policy and corpus manifest still use taxonomy v1; this
 documentation change does not make the validator accept the new concept. Adopt
-v2 policy, blueprint identifiers, tests, and corpus metadata together before
+taxonomy v2, pooled v3 blueprint identifiers, tests, and corpus metadata together before
 including these records. Taxonomy v2 does not by itself change JSON format
 version 1. Do not retag computation questions as Data Sufficiency or rewrite
 historical versions merely to meet coverage. New items require two consistent
@@ -122,8 +140,9 @@ Question array example (synthetic content only):
 ```
 
 All illustrated question fields are required except `reference`. `questionId`
-identifies both the canonical question and its assignment in this release; it
-cannot recur across families. Each module accepts only its approved subjects.
+identifies the canonical question. Its `family` is seed provenance, not an exam
+assignment. It cannot count as a new unique question in another seed family, but
+an eligible version may be selected in different attempts. Each module accepts only its approved subjects.
 Module IDs are `shared-core`, `professional-numerical`, `analytical`, `clerical`.
 Shared-core applicability is the ordered array shown above. Clerical applicability
 is `["subprofessional"]`; the other two modules use `["professional"]`.
@@ -211,7 +230,7 @@ Several questions may link to one exact reference version. They may appear
 separately and each must display the full reference. Do not hardcode "For items
 18–20"; future rendering derives any range from actual attempt positions. A
 question must not require another question's answer. References/assets never
-count toward the 1,520-question minimum or earn scores.
+count toward the current 2,160-unique-question seeding plan or earn scores.
 
 ## Checksums and handoff
 

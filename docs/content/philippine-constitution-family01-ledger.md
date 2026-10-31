@@ -1,4 +1,9 @@
-# Family 01 Philippine Constitution — forty original drafts
+# Family 01 Philippine Constitution — forty original items
+
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
 
 This candidate pool contains **12 easy, 20 medium, and 8 hard** items, exactly
 30/50/20. Every item has its own four choices, stable answer key, explanation,

@@ -1,5 +1,10 @@
 # Family 01 Graphs — batch 2, items 21–40
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 Created 31 October 2026 at the maintainer's request for another 20 original items
 and multiple original visuals. This is an independently authored extension of the
 earlier skill categories; no new source-image items were supplied, and no false

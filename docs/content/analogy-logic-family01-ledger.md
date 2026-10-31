@@ -1,4 +1,9 @@
-# Family 01 Word Analogy and Logic — 40 draft items
+# Family 01 Word Analogy and Logic — 40 items
+
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
 
 The maintainer requested 40 original questions using the six supplied images
 (reference items 51–70). Each source item informs two independently authored

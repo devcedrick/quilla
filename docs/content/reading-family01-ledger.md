@@ -1,5 +1,10 @@
 # Family 01 Reading Comprehension — twelve original passages
 
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
 The maintainer specified six English and six Filipino questions, each with its
 own passage. These drafts follow that allocation rather than assuming one output
 for every visible reference question. The four supplied images inform question

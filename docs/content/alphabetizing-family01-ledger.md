@@ -1,4 +1,9 @@
-# Family 01 Alphabetizing — ten original draft lists
+# Family 01 Alphabetizing — ten original lists
+
+> Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
+> this ledger's historical draft/candidate and exam-family completion wording.
+> Family 01 is complete as a 270-question seed batch. Publication and pooled exam
+> readiness are separate; source notes, hashes, and review evidence below remain historical records.
 
 The maintainer requested ten Family 01 items, each with its own records to sort,
 using the 30% easy / 50% medium / 20% hard proportions. This batch has three

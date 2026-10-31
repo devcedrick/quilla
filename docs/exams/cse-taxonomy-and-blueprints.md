@@ -20,17 +20,24 @@ blueprints provisionally. Activation requires confirmation against every
 applicable 2027 announcement and advisory; a changed official figure requires a
 new corrected blueprint version before use.
 
-The taxonomy grouping, subject allocations, difficulty mix, paired-set model,
+The taxonomy grouping, subject allocations, difficulty mix, pooled-bank model,
 scaled mock time limits, corpus threshold, and shortage policy below are
 Quilla-authored preparation policies. Quilla is not affiliated with or endorsed
 by the Philippine Civil Service Commission. Quilla must never reproduce leaked
 or actual examination questions.
 
-The initial immutable policy identifiers are:
+The original immutable policy identifiers, retained for historical data, are:
 
 - taxonomy: `cse-taxonomy-2027-v1`;
 - Professional blueprint: `cse-professional-2027-v1`;
 - Subprofessional blueprint: `cse-subprofessional-2027-v1`.
+
+The current approved documentation policy is
+[ADR 0013](../ADR/0013-seeding-families-and-pooled-exam-selection.md): seed
+families are 270-question authoring batches, not paired exams. Its selection
+contract uses `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`, with
+`cse-taxonomy-2027-v2`. Implementation and metadata adoption remain pending;
+existing manifests and historical attempts are not rewritten by this document.
 
 Display labels may change without becoming identity. Storage and APIs must use
 the stable identifiers defined here.
@@ -105,14 +112,15 @@ subtopic allocation. [ADR 0011](../ADR/0011-numerical-data-sufficiency.md) recor
 the versioned addition, shown alongside the retained concepts in the main table
 above. Existing v1 policy and historical snapshots remain unchanged.
 
-The next contract uses `cse-taxonomy-2027-v2`, `cse-professional-2027-v2`, and
-`cse-subprofessional-2027-v2`. It retains every v1 concept and adds
+ADR 0011 introduced `cse-taxonomy-2027-v2` and planned v2 blueprints. ADR 0013
+retains that taxonomy while superseding the selection policy with v3 blueprints.
+The taxonomy retains every v1 concept and adds
 `data_sufficiency` as a distinct canonical concept, so mastery evidence is not
 silently merged with computation-only `numerical_reasoning` evidence.
 
-For v2, every paired family must include at least one Data Sufficiency item in
-its 35-item shared Numerical core, so both levels receive this coverage. The
-five-item Professional extension may also contain Data Sufficiency. The exact
+Under the pooled policy, each generated exam must include Data Sufficiency in
+its 35-item shared Numerical selection, so both levels receive this coverage.
+The five-item Professional extension may also contain Data Sufficiency. The exact
 split between the two Numerical concepts beyond the existing per-concept minimum
 is not yet decided; do not assume a 20/20 split or add extra exam questions.
 
@@ -146,9 +154,9 @@ Authoring and review requirements:
 This is a documentation-level decision, not implemented v2 support. The current
 corpus manifest and offline validator still use v1. Do not relabel existing
 Numerical questions or submit `data_sufficiency` records under the v1 manifest.
-Before v2 activation, synchronize validator/reference policy and tests, adopt
+Before pooled v3 exam activation, synchronize validator/reference policy and tests, adopt
 versioned corpus metadata, author and review the required coverage, and rerun
-the full paired-family dry run. Preserve existing question and attempt versions.
+the pooled exam-feasibility dry run. Preserve existing question and attempt versions.
 
 ### Approved v2 grouping: Clerical Operations
 
@@ -172,35 +180,34 @@ Adopting the new parent requires explicit versioned classification, not rewritin
 past question or attempt snapshots or discarding existing Spelling evidence.
 
 The existing per-concept minimum applies to all three Clerical concepts in each
-v2 family, including Alphabetizing. The Clerical module remains 40 questions:
+generated Subprofessional exam, including Alphabetizing. The Clerical module remains 40 questions:
 12 easy, 20 medium, and 8 hard. No split among these concepts beyond the minimum
 has been decided, and these topics do not add extra exam slots. This remains
 Quilla-authored preparation coverage, not a claim about official CSC weights.
 Validator/policy synchronization and reviewed coverage are required before v2
 activation; this documentation does not change the v1 corpus or runtime.
 
-## Paired exam-set families
+## Seeding families and generated exam sets
 
-The initial corpus contains eight numbered paired families. Each family certifies
-one complete Professional mock and one complete Subprofessional mock:
+A seeding family is an authoring batch, not an exam. The initial plan is eight
+families of 270 unique questions each: 40 General, 50 Verbal, 60 Numerical,
+80 Analytical, and 40 Clerical. Family 01 is complete for seeding by maintainer
+confirmation. See the [seeding policy](../content/seeding-families.md) for the
+allocation table and the distinction between content completion and exam readiness.
 
-| Module                           | Unique items per family | Eligibility                    |
-| -------------------------------- | ----------------------: | ------------------------------ |
-| Shared core                      |                     105 | Both levels in the same family |
-| Professional Numerical extension |                       5 | Professional only              |
-| Analytical                       |                      40 | Professional only              |
-| Clerical                         |                      40 | Subprofessional only           |
+Mock exams randomly select eligible published versions from all seed families
+combined, constrained by the exam tables below. They need not be drawn from one
+family or draw equal amounts from each family. The 105 shared exam slots and
+five Professional Numerical extension slots remain eligibility partitions, not
+an identical shared question set between two paired exams.
 
-The shared core appears in both level variants of its family. The five-item
-Numerical extension uses shared Numerical concepts but contains questions whose
-selection eligibility is Professional only. Submitted evidence still follows the
-shared-concept policy in [ADR 0003](../ADR/0003-exam-level-selection-policy.md).
-
-No canonical question may appear in two different family numbers. A version,
-translation, or cosmetic rewording of the same canonical question does not create
-another unique item or another family. Presentation order may be randomized,
-but family membership and the immutable question versions served by an attempt
-must remain auditable.
+Each canonical question has one seed-family origin; versions, translations, or
+cosmetic rewrites do not add unique corpus coverage. The same eligible canonical
+question may recur across separate attempts, but never twice within one attempt.
+There is no guaranteed non-overlap across exams or reserved family-to-exam mapping.
+Preserve seed provenance and exact served versions in immutable attempt snapshots.
+Shared-concept evidence still follows
+[ADR 0003](../ADR/0003-exam-level-selection-policy.md).
 
 ### Subject and language totals
 
@@ -248,28 +255,34 @@ reproduce CSC's rating methodology.
 
 ## Coverage and activation
 
-Neither initial blueprint may be activated until a dry run proves that all eight
-paired families can be assembled simultaneously from eligible published question
-versions. The dry run must verify:
+Seed-authoring completion and exam activation are separate. The planned initial
+corpus has eight 270-question seeding families, totaling 2,160 unique questions:
 
-- exact level, family, subject, language, and difficulty totals;
-- at least one item for every applicable canonical concept in every family;
+| Subject             | Per seed family | Eight-family total |
+| ------------------- | --------------: | -----------------: |
+| General Information |              40 |                320 |
+| Verbal Ability      |              50 |                400 |
+| Numerical Ability   |              60 |                480 |
+| Analytical Ability  |              80 |                640 |
+| Clerical Ability    |              40 |                320 |
+| **Total**           |         **270** |          **2,160** |
+
+Family 01's final authored status does not depend on its independently matching
+exam difficulty cells. New seeding batches still target honest 30/50/20 difficulty;
+do not inflate labels or rewrite completed content merely to meet an exam quota.
+
+Activation requires completion/integration of the planned initial corpus and a
+dry run proving that each level's exam can be assembled from the eligible
+published combined bank. It no longer requires eight simultaneously disjoint
+exam pairs or a complete exam drawn from each seed family. Verify:
+
+- exact per-attempt level, subject, language, and difficulty totals;
+- at least one item for every applicable canonical concept in each generated exam;
 - the Professional/Clerical and Subprofessional/Analytical exclusions;
-- no canonical-question reuse between family numbers;
-- the permitted shared-core reuse only within the two level variants of one
-  family; and
+- one seed origin per unique canonical question, with no duplicate canonical
+  question inside an attempt, without a cross-attempt disjointness requirement; and
 - immutable question and blueprint versions plus actionable identifiers for
   every shortage or conflict.
-
-The minimum initial corpus is therefore 1,520 unique canonical questions:
-
-| Corpus partition                 | Calculation | Minimum unique questions |
-| -------------------------------- | ----------- | -----------------------: |
-| Shared core                      | 105 × 8     |                      840 |
-| Professional Numerical extension | 5 × 8       |                       40 |
-| Analytical                       | 40 × 8      |                      320 |
-| Clerical                         | 40 × 8      |                      320 |
-| **Total**                        |             |                **1,520** |
 
 A shared-core question counts once in the authored corpus and once in whichever
 attempt serves it. It receives no extra score or blueprint weight because it is
@@ -285,7 +298,7 @@ subject:
 1. choose the nearest difficulty on the ordered scale `easy` → `medium` →
    `hard`;
 2. when two choices are equally distant, choose the easier difficulty first;
-3. preserve level, family, subject, language totals, and the one-item-per-concept
+3. preserve per-exam level, subject, language totals, and the one-item-per-concept
    minimum; and
 4. block generation if the complete set still cannot be assembled.
 
