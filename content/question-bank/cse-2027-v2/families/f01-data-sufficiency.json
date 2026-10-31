@@ -1,0 +1,902 @@
+[
+  {
+    "questionId": "f01-data-sufficiency-01",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nSeveral identical sealed packets are placed on a scale. What is their total mass, excluding the scale?\n\nStatement 1: Each packet has a mass of 150 grams.\nStatement 2: There are 8 packets.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 gives the mass of one packet but not the number: 4 packets would weigh 600 grams, while 8 would weigh 1,200 grams. Statement 2 fixes the count but not each packet’s mass. Together, the total is 8 × 150 = 1,200 grams. Neither statement alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; replacement packet-mass scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA rectangle has width 6 cm. What is its area?\n\nStatement 1: Its length is greater than 6 cm.\nStatement 2: Its length is 9 cm.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "Statement 1 permits different lengths, such as 8 and 9 cm, producing areas of 48 and 54 cm². Statement 2 fixes the area at 6 × 9 = 54 cm². Only statement 2 alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original rectangle area scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-03",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nBy what percent did the positive price of a notebook increase?\n\nStatement 1: The new price is PHP 150.\nStatement 2: The increase is PHP 30.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 does not give the original price. Statement 2 does not give the price used as the percentage base. Together, the original price is 150 − 30 = PHP 120, and the increase is 30/120 × 100% = 25%. Neither statement alone determines the percentage.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original price-change base scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nWhat is the positive integer n?\n\nStatement 1: n + 7 = 25.\nStatement 2: 3n = 54.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Statement 1 gives n = 18. Independently, statement 2 gives n = 54/3 = 18. Each statement alone determines the same value. Do not combine them before assessing them separately.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original independent equations scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA box contains positive whole numbers of red and blue counters in the ratio 2:3. How many counters are in the box?\n\nStatement 1: The total number of counters is a multiple of 5.\nStatement 2: There are more than 10 red counters.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Statement 1 merely repeats a consequence of the given ratio; it fixes no scale. Statement 2 gives only a lower bound. Even together, 12 red and 18 blue counters (30 total), or 14 red and 21 blue counters (35 total), meet every condition. The total is not determined.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original scale versus proportion scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-06",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nFor an integer n, is n even?\n\nStatement 1: n is divisible by 6.\nStatement 2: n is greater than 20.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "one",
+    "explanation": "Every multiple of 6 is even, so statement 1 gives a definite yes without fixing n. Statement 2 permits 22 (yes) and 23 (no). Only statement 1 alone is sufficient. A yes/no question needs a fixed truth value, not necessarily a fixed number.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original definite yes/no scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-07",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nFor positive integers x and y with x < y, what is x/y?\n\nStatement 1: x + y = 30.\nStatement 2: The greatest common divisor of x and y is 6.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Even together, the statements allow (x,y) = (6,24) and (12,18). Both pairs have sum 30, greatest common divisor 6, and x < y. Yet their ratios are 1/4 and 2/3. Since these different answers satisfy both statements, each statement alone and the combination are insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; integer sum and common-divisor constraints. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-08",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nHow old is Amara now? Amara and Belen have positive whole-number ages.\n\nStatement 1: Their current ages add up to 40 years.\nStatement 2: Amara is 8 years older than Belen.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "A sum alone permits Amara to be 21 or 24; a difference alone permits many age pairs. Together, a + b = 40 and a − b = 8 give 2a = 48, so Amara is 24. Each statement alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original current ages scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-09",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA driver covers a 90-km route without stopping. One part is hilly, driven at a constant 30 km/h; the rest is flat, driven at a constant 60 km/h. Both parts have positive lengths. How many kilometres of the route are hilly?\n\nStatement 1: The entire trip takes 2 hours.\nStatement 2: The driver spends equal amounts of time on the hilly and flat parts.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Let h be the hilly distance, so the flat distance is 90 − h. Statement 1 gives h/30 + (90 − h)/60 = 2; multiplying by 60 gives 2h + 90 − h = 120, so h = 30 km. Statement 2 independently gives h/30 = (90 − h)/60, which also yields h = 30 km. Equal times do not mean equal distances when speeds differ. Each statement alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; unknown route split from total time or equal segment times. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-10",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA rectangle has perimeter 40 cm. What is its area?\n\nStatement 1: Its width is a positive whole number of centimetres.\nStatement 2: Its length is greater than its width.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "The perimeter gives length + width = 20. Even with both statements, dimensions 12 by 8 and 13 by 7 are possible. Their areas are 96 and 91 cm². Therefore neither statement alone nor the two together determine the area.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original perimeter does not fix area scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-11",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nForty-seven sheets are packed into identical boxes. Each box holds a positive whole number of sheets. As many boxes as possible are filled completely, and the remaining sheets are left outside. How many full boxes are there?\n\nStatement 1: Exactly 5 sheets remain outside the full boxes.\nStatement 2: Each box holds 6 sheets.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "Statement 1 says the full boxes contain 42 sheets but does not fix box capacity. Six boxes of 7 sheets or seven boxes of 6 sheets both leave 5 outside; in each case, the remainder is smaller than a box capacity. Statement 2 gives 47 = 7 × 6 + 5, so there are 7 full boxes. Only statement 2 alone is sufficient, and the statements are consistent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; replacement packing and division-remainder scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-12",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA delivery service charges a fixed positive base fee plus a positive constant fee per kilometre, with no other charges. What is the charge for an 18-km delivery?\n\nStatement 1: A 5-km delivery costs PHP 110.\nStatement 2: An 11-km delivery costs PHP 182.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Write the charge as b + rd. Statement 1 alone allows b = 60, r = 10 or b = 50, r = 12; their 18-km charges are PHP 240 and PHP 266. Statement 2 alone allows b = 72, r = 10 or b = 50, r = 12; their charges are PHP 252 and PHP 266. Together, subtracting b + 5r = 110 from b + 11r = 182 gives r = 12, then b = 50. The requested charge is uniquely PHP 266. Neither statement alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; replacement fixed-plus-variable delivery tariff. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-13",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA vehicle covers 360 km on one trip. What is its fuel efficiency in kilometres per litre?\n\nStatement 1: The fuel consumed on that trip cost PHP 900 in total.\nStatement 2: Every litre of fuel consumed on that trip cost PHP 45.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "The total cost alone does not give litres, and a per-litre price alone does not give fuel consumption. Together, the vehicle used 900/45 = 20 litres, so its efficiency was 360/20 = 18 km/L. Neither statement alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original fuel efficiency scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-14",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nEach of 80 members belongs to art, music, or both. Fifty belong to art. How many belong to both?\n\nStatement 1: Twenty members do not belong to music.\nStatement 2: Sixty members belong to music.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Because everyone belongs to at least one group, statement 1 means 60 are in music. The overlap is then 50 + 60 − 80 = 30. Statement 2 independently supplies the same music count and gives the same overlap. Each statement alone is sufficient; the two are equivalent here.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original overlapping groups scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-15",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nWhat is the real number x?\n\nStatement 1: x² − x = 6.\nStatement 2: x < 4.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Statement 1 becomes x² − x − 6 = (x − 3)(x + 2) = 0, so x may be 3 or −2. Statement 2 alone allows many values. Combining them does not choose a root because both 3 and −2 are less than 4. Both statements together remain insufficient; an inequality does not necessarily remove a quadratic equation’s ambiguity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; quadratic roots and an ineffective bound. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-16",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nFor positive integers x and y, is x divisible by 7?\n\nStatement 1: xy is divisible by 7.\nStatement 2: y is not divisible by 7.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 permits (x,y) = (7,1), where the answer is yes, and (1,7), where it is no. Statement 2 alone permits x = 7 or x = 1 with y = 1. Together, since 7 is prime and does not divide y, it must divide x. The definite answer is yes; neither statement alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original prime divisibility scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-17",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA full tank originally contains 50 litres of a water-and-concentrate mixture. What percentage of the original mixture is concentrate? Assume all mixtures are thoroughly mixed before removal and volumes add.\n\nStatement 1: Ten litres are removed and replaced with water. Then 10 litres of the resulting mixture are removed and replaced with pure concentrate. The final tank contains 26 litres of concentrate.\nStatement 2: If instead 20 litres of the original mixture were removed and replaced with water, the resulting full tank would be 30% concentrate.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Let C be the original litres of concentrate. For statement 1, each 10-litre removal retains 4/5 of the concentrate present. Thus (4/5)²C + 10 = 26, giving C = 25 and an original percentage of 50%. For statement 2, the alternative removal retains 3/5 of C. The final 30% of 50 litres is 15 litres, so (3/5)C = 15 and C = 25 again. Each statement alone fixes the original percentage. These are alternative procedures applied to the same original mixture, not consecutive extra steps.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; replacement alternative mixture-replacement procedures. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-18",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nAt their initial positive rates, A and B together would finish a job in 6 hours if those rates were maintained; their work contributions add. When A works alone, A maintains the initial rate for the first 2 hours, then works at half that rate until the job is finished. How long does A’s entire solo job take?\n\nStatement 1: At their initial rates, two hours of A’s work plus three hours of B’s work complete 5/12 of the job.\nStatement 2: At B’s initial rate, B would take at least 10 hours to finish the job alone.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "one",
+    "explanation": "Let a and b be the initial fractions of a job completed per hour. The stem gives a + b = 1/6. Statement 1 adds 2a + 3b = 5/12, yielding a = b = 1/12. In A’s first 2 solo hours, A completes 1/6 of the job. The remaining 5/6 takes (5/6)/(1/24) = 20 hours at the reduced rate, so the entire solo job takes 22 hours. Statement 2 alone also permits a = 1/10 and b = 1/15; A would then take 2 + (4/5)/(1/20) = 18 hours. These two possible solo times show that statement 2 is insufficient. The first pair satisfies both statements.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original work-rate equations scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-19",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nA hypothetical account deducts a PHP 200 opening fee from an initial deposit greater than PHP 200. The remaining balance earns interest compounded annually at a constant positive rate. There are no later fees, deposits, or withdrawals. What was the initial deposit before the opening fee?\n\nStatement 1: The annual compound-interest rate is 10%.\nStatement 2: Immediately after interest is credited at the end of year 1, the balance is PHP 5,500; at the end of year 2, it is PHP 6,050.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "Statement 1 fixes the growth factor but not the deposit: initial deposits of PHP 1,200 and PHP 5,200 both satisfy it. For statement 2, consecutive balances reveal the annual growth factor as 6,050/5,500 = 1.10. Undo one year’s growth to obtain the opening balance after the fee: 5,500/1.10 = PHP 5,000. Add back the PHP 200 fee to recover the initial deposit, PHP 5,200. Only statement 2 alone is sufficient, and its implied rate agrees with statement 1. Subtracting a constant annual interest amount would be incorrect because interest compounds.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch informed the format; compounded balances with an opening fee. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-data-sufficiency-20",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Decide whether the statements provide enough information to answer the question. Evaluate each statement alone using the question’s given facts, then evaluate them together.\n\nThree non-overlapping groups contain 40, 60, and 100 learners. What is the mean score of all 200 learners? All scores are real numbers from 0 through 100.\n\nStatement 1: The unweighted mean of the three group means is 75.\nStatement 2: The 40-learner group mean is 10 less than the 100-learner group mean; the 60-learner group mean is 5 more than the 100-learner group mean.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not sufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not sufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither statement alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Neither statement alone nor both statements together are sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 alone permits group means (75,75,75), with combined mean 75, or (70,75,80), with combined mean 76.5. For statement 2, let the 100-learner mean be t. The means are t − 10, t + 5, and t, so the combined mean is [40(t − 10) + 60(t + 5) + 100t]/200 = t − 0.5. Different allowed t values give different answers. Together, statement 1 gives (3t − 5)/3 = 75, hence t = 230/3, fixing the combined mean at 457/6, or 76 1/6. All three means remain within the allowed range. Neither statement alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
+      "sources": [
+        "Maintainer Data Sufficiency reference image batch; original weighted versus unweighted means scenario. See data-sufficiency-family01-ledger.md."
+      ]
+    }
+  }
+]
