@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-vocabulary-filipino-01",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -9,34 +9,35 @@
     "conceptId": "vocabulary_questions",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
-    "difficulty": "easy",
-    "stem": "Nauulinigan ni Lino ang putol-putol na anunsiyo mula sa mahinang radyo. Alin ang pinakamalapit na kahulugan ng NAUULINIGAN sa pangungusap?",
+    "difficulty": "hard",
+    "stem": "Sa ulat, “pinasubalian” ng lupon ang paratang: iniharap nito ang orihinal na resibo na hindi tugma sa halagang ibinibintang, ngunit hindi pa nito nasuri ang ibang transaksiyon. Aling paglalahad ang pinakatumpak na nagpapanatili sa kahulugan at saklaw ng “pinasubalian”?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "nakikita sa malayo"
+        "text": "Ipinagpaliban ng lupon ang pagtalakay sa paratang hanggang matapos ang lahat ng pagsusuri."
       },
       {
         "choiceId": "b",
-        "text": "nahahawakan nang marahan"
+        "text": "Tinanggap ng lupon ang paratang ngunit ipinaliwanag kung bakit nangyari ang pagkukulang."
       },
       {
         "choiceId": "c",
-        "text": "naaamoy nang bahagya"
+        "text": "Pinatunayan ng lupon na walang anumang pagkakamali sa lahat ng transaksiyon."
       },
       {
         "choiceId": "d",
-        "text": "naririnig nang di-malinaw"
+        "text": "Kinontra ng lupon ang paratang sa pamamagitan ng ebidensiya, nang hindi nilulutas ang lahat ng ibang transaksiyon."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Ang nauulinigan ay naririnig, ngunit maaaring hindi malinaw na maunawaan. Ang putol-putol na anunsiyo sa mahinang radyo ay tumutukoy sa pandinig, hindi sa paningin, paghipo, o pang-amoy.",
+    "explanation": "Ang pinasubalian ay kinontra o itinanggi sa pamamagitan ng paliwanag o ebidensiya. May partikular na ebidensiya laban sa paratang ngunit limitado ang saklaw ng pagsusuri. Hindi ito simpleng pagpapaliban, pag-amin, o patunay na walang kamalian sa lahat ng transaksiyon.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
-        "Vocabulary reference batch: Image 5, kasingkahulugan item 1; target nauulinigan; task kasingkahulugan. See vocabulary-family01-ledger.md."
+        "Vocabulary reference batch: Image 5, kasingkahulugan item 1; target nauulinigan; task kasingkahulugan. See vocabulary-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },

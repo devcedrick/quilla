@@ -87,49 +87,6 @@
   },
   {
     "questionId": "f01-graphs-b01-03",
-    "version": 1,
-    "family": 1,
-    "module": "analytical",
-    "subjectId": "analytical_ability",
-    "subtopicId": "data_reasoning",
-    "conceptId": "graphs_charts_and_data",
-    "levelApplicability": ["professional"],
-    "language": "english",
-    "difficulty": "easy",
-    "stem": "How many times as many seedlings were distributed in June as in January?",
-    "choices": [
-      {
-        "choiceId": "a",
-        "text": "2"
-      },
-      {
-        "choiceId": "b",
-        "text": "2.5"
-      },
-      {
-        "choiceId": "c",
-        "text": "3"
-      },
-      {
-        "choiceId": "d",
-        "text": "4"
-      }
-    ],
-    "correctChoiceId": "c",
-    "explanation": "June’s 60 divided by January’s 20 is 3.",
-    "provenance": {
-      "kind": "original",
-      "author": "Quilla",
-      "assistance": "AI-assisted drafting; maintainer review pending",
-      "sources": ["Reference images batch 1; see batch ledger"]
-    },
-    "reference": {
-      "referenceId": "f01-seedlings",
-      "referenceVersion": 1
-    }
-  },
-  {
-    "questionId": "f01-graphs-b01-04",
     "version": 2,
     "family": 1,
     "module": "analytical",
@@ -138,33 +95,82 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "What is the ratio of May seedlings to February seedlings, expressed in simplest whole-number form?",
+    "difficulty": "hard",
+    "stem": "Using the distribution chart, suppose 20% of the combined January–March seedlings fail to survive and 40% of the combined April–June seedlings fail. How many additional survivors would April–June need for its survivors to be twice those of January–March?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "3:5"
+        "text": "15"
       },
       {
         "choiceId": "b",
-        "text": "5:3"
+        "text": "30"
       },
       {
         "choiceId": "c",
-        "text": "5:2"
+        "text": "45"
       },
       {
         "choiceId": "d",
-        "text": "10:3"
+        "text": "57"
       }
     ],
-    "correctChoiceId": "b",
-    "explanation": "The ratio is 50:30, which simplifies to 5:3.",
+    "correctChoiceId": "d",
+    "explanation": "January–March total 20+30+40=90, with 72 survivors. April–June total 35+50+60=145, with 87 survivors. Twice 72 is 144, so 144−87=57 additional survivors are needed. The target is twice the earlier survivors, not twice the earlier total or merely the difference between the two survival counts.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; maintainer review pending",
-      "sources": ["Reference images batch 1; see batch ledger"]
+      "sources": [
+        "Reference images batch 1; see batch ledger",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
+    },
+    "reference": {
+      "referenceId": "f01-seedlings",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f01-graphs-b01-04",
+    "version": 3,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Each month, 20% of the seedlings shown in the distribution chart are assigned to schools. The rest go to households in packs of five, with incomplete packs held for that month and not pooled across months. How many complete household packs can be made over all six months?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "34"
+      },
+      {
+        "choiceId": "b",
+        "text": "35"
+      },
+      {
+        "choiceId": "c",
+        "text": "37"
+      },
+      {
+        "choiceId": "d",
+        "text": "47"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "After the school allocation, monthly household counts are 16,24,32,28,40,48. The monthly complete packs are 3,4,6,5,8,9, totalling 35. Pooling the 188 household seedlings would incorrectly give 37 packs; ignoring the school allocation and pooling all 235 would give 47.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": [
+        "Reference images batch 1; see batch ledger",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
     },
     "reference": {
       "referenceId": "f01-seedlings",
@@ -173,7 +179,7 @@
   },
   {
     "questionId": "f01-graphs-b01-05",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -181,33 +187,36 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "How many more seedlings were distributed in June than in May?",
+    "difficulty": "hard",
+    "stem": "A sponsor reimburses PHP 12 per seedling up to 40 seedlings in each month and PHP 8 for each additional seedling in that month. How much less is the total reimbursement for January–June than it would be at a flat PHP 12 per seedling?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "5"
+        "text": "PHP 80"
       },
       {
         "choiceId": "b",
-        "text": "10"
+        "text": "PHP 100"
       },
       {
         "choiceId": "c",
-        "text": "15"
+        "text": "PHP 120"
       },
       {
         "choiceId": "d",
-        "text": "20"
+        "text": "PHP 200"
       }
     ],
-    "correctChoiceId": "b",
-    "explanation": "June had 60 and May had 50, so the difference is 10.",
+    "correctChoiceId": "c",
+    "explanation": "Only May and June exceed 40: their excesses are 10 and 20. Each of these 30 seedlings is reimbursed PHP 4 less, so the reduction is 30×4=PHP 120. Applying the threshold to the six-month total rather than each month would be incorrect.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; maintainer review pending",
-      "sources": ["Reference images batch 1; see batch ledger"]
+      "sources": [
+        "Reference images batch 1; see batch ledger",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
     },
     "reference": {
       "referenceId": "f01-seedlings",

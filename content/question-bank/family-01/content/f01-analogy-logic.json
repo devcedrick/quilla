@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-analogy-logic-01",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -9,34 +9,35 @@
     "conceptId": "word_analogy_and_logic_test",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Letters are shifted one place forward in the alphabet, with Z wrapping to A: LAMP becomes MBNQ. What does ROAD become?",
+    "difficulty": "medium",
+    "stem": "A code first reverses a four-letter word, then shifts the first and third letters forward one place and the second and fourth letters backward one place, wrapping between A and Z. What is the code for ZONE?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "SPBE"
+        "text": "FMPY"
       },
       {
         "choiceId": "b",
-        "text": "QNZC"
+        "text": "DMNY"
       },
       {
         "choiceId": "c",
-        "text": "SPAD"
+        "text": "FNNY"
       },
       {
         "choiceId": "d",
-        "text": "TQCF"
+        "text": "YPMF"
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Move each letter forward once: R→S, O→P, A→B, D→E. The result is SPBE.",
+    "explanation": "Reverse ZONE to ENOZ, then apply +1, −1, +1, −1: E→F, N→M, O→P, Z→Y. FMPY requires applying both operations in order; shifting first would produce a different result.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; editorial review pending",
       "sources": [
-        "Maintainer reference batch analogy/logic: source item 51; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+        "Maintainer reference batch analogy/logic: source item 51; independently constructed draft 1. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
@@ -83,7 +84,7 @@
   },
   {
     "questionId": "f01-analogy-logic-03",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -91,34 +92,35 @@
     "conceptId": "word_analogy_and_logic_test",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Complete the synonym analogy: BRIEF : CONCISE :: COURTEOUS : ?",
+    "difficulty": "medium",
+    "stem": "Choose the pair with the same directional relationship as QUESTION : INTERROGATE, where a general action is followed by a more intensive, systematic form of that action.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "distant"
+        "text": "inspect : glance"
       },
       {
         "choiceId": "b",
-        "text": "formal"
+        "text": "examine : scrutinise"
       },
       {
         "choiceId": "c",
-        "text": "polite"
+        "text": "reject : decline"
       },
       {
         "choiceId": "d",
-        "text": "silent"
+        "text": "whisper : speak"
       }
     ],
-    "correctChoiceId": "c",
-    "explanation": "Brief and concise have similar meanings. Courteous similarly means polite; being formal, silent, or distant does not necessarily mean being courteous.",
+    "correctChoiceId": "b",
+    "explanation": "Scrutinise is to examine closely, just as interrogate is to question intensively and systematically. Inspect→glance and whisper→speak reverse the movement toward greater intensity. Reject and decline do not express the specified systematic intensification.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; editorial review pending",
       "sources": [
-        "Maintainer reference batch analogy/logic: source item 52; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+        "Maintainer reference batch analogy/logic: source item 52; independently constructed draft 1. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
@@ -165,47 +167,6 @@
   },
   {
     "questionId": "f01-analogy-logic-05",
-    "version": 1,
-    "family": 1,
-    "module": "analytical",
-    "subjectId": "analytical_ability",
-    "subtopicId": "logic_and_analogy",
-    "conceptId": "word_analogy_and_logic_test",
-    "levelApplicability": ["professional"],
-    "language": "english",
-    "difficulty": "easy",
-    "stem": "Choose the pair matching the valued quality-to-role relationship in CURIOSITY : RESEARCHER.",
-    "choices": [
-      {
-        "choiceId": "a",
-        "text": "impartiality : mediator"
-      },
-      {
-        "choiceId": "b",
-        "text": "ticket : passenger"
-      },
-      {
-        "choiceId": "c",
-        "text": "salary : employee"
-      },
-      {
-        "choiceId": "d",
-        "text": "harvest : farmer"
-      }
-    ],
-    "correctChoiceId": "a",
-    "explanation": "Curiosity is a quality useful to a researcher. Impartiality is likewise a quality useful to a mediator. The other pairs concern a document, payment, or product rather than a quality.",
-    "provenance": {
-      "kind": "original",
-      "author": "Quilla",
-      "assistance": "AI-assisted drafting; editorial review pending",
-      "sources": [
-        "Maintainer reference batch analogy/logic: source item 53; independently constructed draft 1. See analogy-logic-family01-ledger.md."
-      ]
-    }
-  },
-  {
-    "questionId": "f01-analogy-logic-06",
     "version": 2,
     "family": 1,
     "module": "analytical",
@@ -214,40 +175,41 @@
     "conceptId": "word_analogy_and_logic_test",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Choose the pair matching VIGILANCE : LOOKOUT, where the first word names an essential quality exercised in the second role.",
+    "difficulty": "hard",
+    "stem": "Six files A, B, C, D, E, F are processed once each. A is before C; C is immediately before E; B is before D; F is immediately after B. If E is fifth, which file must be sixth?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "applause : performer"
+        "text": "A"
       },
       {
         "choiceId": "b",
-        "text": "discretion : confidential adviser"
+        "text": "B"
       },
       {
         "choiceId": "c",
-        "text": "profit : customer"
+        "text": "D"
       },
       {
         "choiceId": "d",
-        "text": "verdict : witness"
+        "text": "F"
       }
     ],
-    "correctChoiceId": "b",
-    "explanation": "A lookout exercises vigilance by watching carefully. A confidential adviser exercises discretion by handling sensitive information carefully. Applause, profit, and a verdict are not personal qualities.",
+    "correctChoiceId": "c",
+    "explanation": "E fifth forces C fourth. The B–F block must occupy positions 1–2 or 2–3: positions 3–4 are blocked by C and 5–6 by E. A must fill the other position before C, so D occupies sixth. Both B,F,A,C,E,D and A,B,F,C,E,D satisfy the constraints.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; editorial review pending",
       "sources": [
-        "Maintainer reference batch analogy/logic: source item 53; independently constructed draft 2. See analogy-logic-family01-ledger.md."
+        "Maintainer reference batch analogy/logic: source item 53; independently constructed draft 1. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
   {
-    "questionId": "f01-analogy-logic-07",
-    "version": 1,
+    "questionId": "f01-analogy-logic-06",
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -255,34 +217,77 @@
     "conceptId": "word_analogy_and_logic_test",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Complete the characteristic-disposition analogy: PEACEMAKER : CONCILIATION :: REBEL : ?",
+    "difficulty": "hard",
+    "stem": "A parcel is released if and only if its form is signed and either it passes testing or it has an exemption. A suspended parcel is never released. Parcel K was released without passing testing. Which set of conclusions must hold?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "precision"
+        "text": "K has an exemption and is not suspended, but its form may be unsigned."
       },
       {
         "choiceId": "b",
-        "text": "hospitality"
+        "text": "K has a signed form, has an exemption, and is not suspended."
       },
       {
         "choiceId": "c",
-        "text": "defiance"
+        "text": "K has a signed form and is not suspended, but it may lack an exemption."
       },
       {
         "choiceId": "d",
-        "text": "patience"
+        "text": "K has a signed form and an exemption, but it may be suspended."
       }
     ],
-    "correctChoiceId": "c",
-    "explanation": "A peacemaker seeks conciliation, or the settling of disagreements. A rebel is associated with defiance, or resistance to authority.",
+    "correctChoiceId": "b",
+    "explanation": "Release implies a signed form and at least one of testing or exemption. Since testing did not occur successfully, the exemption is necessary. Suspension would rule out the observed release, so K is not suspended. Each distractor drops one necessary conclusion.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; editorial review pending",
       "sources": [
-        "Maintainer reference batch analogy/logic: source item 54; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+        "Maintainer reference batch analogy/logic: source item 53; independently constructed draft 2. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-analogy-logic-07",
+    "version": 2,
+    "family": 1,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five people A, B, C, D, E sit left to right in five seats. B sits immediately to the right of A. C is not in the first seat. D sits to the left of C. E sits to the right of B, and D sits next to E. Which list contains all and only the people who could sit in the middle seat?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A or B only"
+      },
+      {
+        "choiceId": "b",
+        "text": "B or C only"
+      },
+      {
+        "choiceId": "c",
+        "text": "C or D only"
+      },
+      {
+        "choiceId": "d",
+        "text": "D or E only"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "If the A–B block starts in seat 2, E must be in seat 4 or 5; D must then be in seat 1 to precede C, so D cannot be next to E. If the block starts in seat 3, E is fifth and D cannot be next to E because B is fourth. Starting in seat 4 leaves no place for E after B. Thus A,B occupy 1,2. The remaining conditions allow exactly A,B,D,E,C and A,B,E,D,C. Their middle occupants are D and E.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; editorial review pending",
+      "sources": [
+        "Maintainer reference batch analogy/logic: source item 54; independently constructed draft 1. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
@@ -329,7 +334,7 @@
   },
   {
     "questionId": "f01-analogy-logic-09",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -337,34 +342,35 @@
     "conceptId": "word_analogy_and_logic_test",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Which pair has the same synonym relationship as EVIDENT : OBVIOUS?",
+    "difficulty": "hard",
+    "stem": "Every logged record is encrypted. No encrypted record is public. Some remote records are public, and every remote record is signed. Which conclusion must follow?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "fragile : delicate"
+        "text": "Some signed records are not logged."
       },
       {
         "choiceId": "b",
-        "text": "narrow : spacious"
+        "text": "No signed record is encrypted."
       },
       {
         "choiceId": "c",
-        "text": "rapid : delayed"
+        "text": "Every record that is not logged is public."
       },
       {
         "choiceId": "d",
-        "text": "smooth : jagged"
+        "text": "Some logged records are remote."
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Evident and obvious both mean clear or readily apparent. Fragile and delicate can both describe something easily damaged. Each other pair contrasts meanings.",
+    "explanation": "Take a remote public record whose existence is guaranteed. It is signed because it is remote, and it cannot be encrypted because it is public. It therefore cannot be logged, since all logged records are encrypted. This proves some signed records are not logged, without excluding other signed records from encryption or asserting that any logged record exists.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; editorial review pending",
       "sources": [
-        "Maintainer reference batch analogy/logic: source item 55; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+        "Maintainer reference batch analogy/logic: source item 55; independently constructed draft 1. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
@@ -411,7 +417,7 @@
   },
   {
     "questionId": "f01-analogy-logic-11",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -419,34 +425,35 @@
     "conceptId": "word_analogy_and_logic_test",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Complete the opposite-meaning analogy: ABUNDANT : SCARCE :: FLEXIBLE : ?",
+    "difficulty": "hard",
+    "stem": "Exactly one of P and Q is selected. Selecting P requires R; selecting R requires S. S is selected if and only if T is selected. T is not selected. Which pair of conclusions must follow?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "elastic"
+        "text": "P is selected; R is not selected."
       },
       {
         "choiceId": "b",
-        "text": "supple"
+        "text": "Q is selected; R is selected."
       },
       {
         "choiceId": "c",
-        "text": "rigid"
+        "text": "Q is selected; R is not selected."
       },
       {
         "choiceId": "d",
-        "text": "adaptable"
+        "text": "Neither P nor Q is selected."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Abundant and scarce are opposites. Flexible and rigid are opposites too. Elastic, supple, and adaptable are related to flexibility instead.",
+    "explanation": "From not T and S iff T, S is not selected. R would require S, so R is not selected. P would require R, so P is not selected. Exactly one of P and Q then forces Q. This uses the requirements backwards by contraposition, not the invalid reversal of an implication.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; editorial review pending",
       "sources": [
-        "Maintainer reference batch analogy/logic: source item 56; independently constructed draft 1. See analogy-logic-family01-ledger.md."
+        "Maintainer reference batch analogy/logic: source item 56; independently constructed draft 1. See analogy-logic-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },

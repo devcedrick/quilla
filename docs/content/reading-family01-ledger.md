@@ -1,9 +1,21 @@
 # Family 01 Reading Comprehension — twelve original passages
 
+> Current difficulty revision: [revision-4 item review](family01-difficulty-revision.md)
+> supersedes English 01, 02, 03, 05 and Filipino 01–04 below. These eight questions
+> and their dedicated passages are substantively rewritten for hard inference
+> tasks. Each updated reference is version 2 and still serves one question only.
+> Older skill tables, item labels, versions, and review descriptions are historical.
+
 > Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
 > this ledger's historical draft/candidate and exam-family completion wording.
 > Family 01 is complete as a 270-question seed batch. Publication and pooled exam
 > readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
+Current records are in the topic files declared by the
+[Family 01 manifest](../../content/question-bank/family-01/manifest.json), under
+`family-01/content/`. Shared material and images are in `family-01/references/`.
+Former v1/v2 paths and file hashes below identify historical source layouts,
+not additional current banks. Each future seed family has its own manifest and files.
 
 The maintainer specified six English and six Filipino questions, each with its
 own passage. These drafts follow that allocation rather than assuming one output

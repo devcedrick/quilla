@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-grammar-filipino-01",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -9,44 +9,41 @@
     "conceptId": "idiomatic_expressions_and_correct_grammar",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
-    "difficulty": "easy",
-    "stem": "Piliin ang bahaging may maling gamit sa pormal na Filipino. Piliin ang “Walang mali” kung wasto ang lahat. Pangungusap: Ipinadala ng Lira ang mga punla sa kooperatiba.",
+    "difficulty": "medium",
+    "stem": "Piliin ang pangungusap na wastong gumagamit ng “ng” at “nang” upang ipahayag na kumuha ng tala ang kawani at maingat na sinuri ang mga ito bago ipinasa.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Ipinadala"
+        "text": "Kumuha nang mga tala ang kawani at sinuri ng maingat ang mga ito bago ipinasa."
       },
       {
         "choiceId": "b",
-        "text": "ng Lira"
+        "text": "Kumuha ng mga tala ang kawani at sinuri nang maingat ang mga ito bago ipinasa."
       },
       {
         "choiceId": "c",
-        "text": "ang mga punla"
+        "text": "Kumuha nang mga tala ang kawani at sinuri nang maingat ang mga ito bago ipinasa."
       },
       {
         "choiceId": "d",
-        "text": "sa kooperatiba"
-      },
-      {
-        "choiceId": "e",
-        "text": "Walang mali"
+        "text": "Kumuha ng mga tala ang kawani at sinuri ng maingat ang mga ito bago ipinasa."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Ni ang ginagamit bago ang pang-isahang pangalang pantao na gumaganap sa kilos sa ganitong pangungusap. Kaya ni Lira, hindi ng Lira. Wasto: Ipinadala ni Lira ang mga punla sa kooperatiba. Hindi mali ang ng sa lahat ng gamit; halimbawa, maaari ang ng magsasaka para sa pangngalang pambalana.",
+    "explanation": "Ng ang ginagamit bago ang layon na mga tala. Nang naman ang ginagamit bago ang pang-abay na maingat na naglalarawan kung paano isinagawa ang pagsusuri. Dalawang magkaibang tungkulin ang kailangang suriin; hindi sapat na iwasto ang isa lamang.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
-        "Grammar reference batch: Image 4, pagkilala sa mali item 1; ni versus ng before a personal name. Task identifying-errors. See grammar-family01-ledger.md."
+        "Grammar reference batch: Image 4, pagkilala sa mali item 1; ni versus ng before a personal name. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
   {
     "questionId": "f01-grammar-filipino-02",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -54,38 +51,35 @@
     "conceptId": "idiomatic_expressions_and_correct_grammar",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
-    "difficulty": "easy",
-    "stem": "Piliin ang bahaging may maling gamit sa pormal na Filipino. Piliin ang “Walang mali” kung wasto ang lahat. Pangungusap: Si Omar at Pia ang naatasang magtala ng mga dumalo sa pagsasanay.",
+    "difficulty": "medium",
+    "stem": "Aling rebisyon ang malinaw na nagpapahayag na ang mga kawani ang nagsuri ng tala, samantalang ang pinuno lamang ang lumagda?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "ang naatasang magtala"
+        "text": "Sinuri at nilagdaan ng mga kawani at ng pinuno ang tala."
       },
       {
         "choiceId": "b",
-        "text": "ng mga dumalo"
+        "text": "Sinuri ng pinuno ang tala at nilagdaan ng mga kawani."
       },
       {
         "choiceId": "c",
-        "text": "sa pagsasanay"
+        "text": "Sinuri ng mga kawani ang tala; ang pinuno lamang ang lumagda rito."
       },
       {
         "choiceId": "d",
-        "text": "Si Omar at Pia"
-      },
-      {
-        "choiceId": "e",
-        "text": "Walang mali"
+        "text": "Sinuri ng mga kawani ang tala; sila lamang ang lumagda kasama ang pinuno."
       }
     ],
-    "correctChoiceId": "d",
-    "explanation": "Dalawang taong may tiyak na pangalan ang tinutukoy, kaya Sina ang pantukoy sa halip na Si. Wasto: Sina Omar at Pia ang naatasang magtala ng mga dumalo sa pagsasanay. Hindi ang ang o ng sa ibang bahagi ang kailangang palitan.",
+    "correctChoiceId": "c",
+    "explanation": "Hiwalay at tahasan ang gumaganap sa bawat sugnay ng ikatlong pangungusap. Ang una ay nag-uugnay sa parehong kilos sa parehong pangkat; binabaligtad ng ikalawa ang tungkulin; isinasama ng ikaapat ang mga kawani sa paglagda.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
-        "Grammar reference batch: Image 4, pagkilala sa mali item 2; plural personal marker sina. Task identifying-errors. See grammar-family01-ledger.md."
+        "Grammar reference batch: Image 4, pagkilala sa mali item 2; plural personal marker sina. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },

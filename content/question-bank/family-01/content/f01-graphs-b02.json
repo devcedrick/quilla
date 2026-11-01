@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-graphs-b02-21",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -9,34 +9,35 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "How many morning visits did the clinic record on Thursday?",
+    "difficulty": "hard",
+    "stem": "Using the clinic chart, Friday has as many visits as the mean of the four displayed daily totals. After Friday is included, morning visits must be exactly 60% of the five-day total. How many Friday visits must be in the afternoon?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "40"
+        "text": "15"
       },
       {
         "choiceId": "b",
-        "text": "50"
+        "text": "30"
       },
       {
         "choiceId": "c",
-        "text": "60"
+        "text": "45"
       },
       {
         "choiceId": "d",
-        "text": "100"
+        "text": "75"
       }
     ],
-    "correctChoiceId": "c",
-    "explanation": "Thursday’s morning bar is labelled 60.",
+    "correctChoiceId": "b",
+    "explanation": "The four totals are 60,60,80,100, giving Friday 75 and a five-day total of 375. Morning visits must total 225. The four displayed mornings total 180, so Friday morning needs 45 and Friday afternoon is 75−45=30.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
       "sources": [
-        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     },
     "reference": {
@@ -226,7 +227,7 @@
   },
   {
     "questionId": "f01-graphs-b02-26",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -234,34 +235,35 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "How many cubic metres less water was used on Wednesday than on Tuesday?",
+    "difficulty": "hard",
+    "stem": "Using the water-use chart, a revised plan reduces only Thursday’s and Friday’s usage by the same percentage. The five-day total must then be 10% below the displayed total. Approximately what reduction percentage is required on each of those two days?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "10"
+        "text": "10.00%"
       },
       {
         "choiceId": "b",
-        "text": "20"
+        "text": "20.00%"
       },
       {
         "choiceId": "c",
-        "text": "30"
+        "text": "20.69%"
       },
       {
         "choiceId": "d",
-        "text": "40"
+        "text": "24.14%"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Tuesday used 120 and Wednesday 90; the decrease is 30 cubic metres.",
+    "explanation": "The five-day total is 600 cubic metres, requiring a reduction of 60. Thursday and Friday together use 150+140=290. The common proportional reduction is 60/290×100≈20.69%, not 10%: only two days bear the entire reduction.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
       "sources": [
-        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     },
     "reference": {
@@ -676,7 +678,7 @@
   },
   {
     "questionId": "f01-graphs-b02-36",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -684,34 +686,35 @@
     "conceptId": "graphs_charts_and_data",
     "levelApplicability": ["professional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "How many packs were delivered to District D?",
+    "difficulty": "hard",
+    "stem": "Infer District D’s delivered packs from the table. Suppose 10% of delivered packs in every district are set aside for replacement checks and cannot count toward targets. To bring the remaining usable packs in every district to 95% of its original planned total, how many new usable packs must be supplied in all? Fractional intermediate counts are allowed in this planning model.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "80"
+        "text": "18"
       },
       {
         "choiceId": "b",
-        "text": "90"
+        "text": "38"
       },
       {
         "choiceId": "c",
-        "text": "100"
+        "text": "56"
       },
       {
         "choiceId": "d",
-        "text": "108"
+        "text": "76"
       }
     ],
-    "correctChoiceId": "b",
-    "explanation": "Four districts averaging 90 delivered packs total 360. A, B, and C total 72 + 90 + 108 = 270, leaving 90 for D.",
+    "correctChoiceId": "c",
+    "explanation": "The mean gives 360 delivered overall, so D received 360−72−90−108=90. Usable deliveries are 64.8,81,97.2,81. Targets are 76,95,114,95. The respective deficits 11.2,14,16.8,14 sum to 56. The replacement-check reduction applies to existing deliveries, not to the new usable packs requested.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
       "sources": [
-        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     },
     "reference": {

@@ -151,9 +151,11 @@ Authoring and review requirements:
   an item hard: direct uniqueness checks can be easy, linked constraints medium,
   and interacting cases or subtle domain restrictions hard, pending calibration.
 
-This is a documentation-level decision, not implemented v2 support. The current
-corpus manifest and offline validator still use v1. Do not relabel existing
-Numerical questions or submit `data_sufficiency` records under the v1 manifest.
+The offline `seed` mode and independent family inventories, beginning with
+`content/question-bank/family-01/manifest.json`, support taxonomy v2 with topic
+question files under each family's `content/` and shared material under `references/`. Legacy
+v1 modes remain available for historical fixtures, not current seed validation.
+Do not relabel existing Numerical questions merely to claim Data Sufficiency coverage.
 Before pooled v3 exam activation, synchronize validator/reference policy and tests, adopt
 versioned corpus metadata, author and review the required coverage, and rerun
 the pooled exam-feasibility dry run. Preserve existing question and attempt versions.

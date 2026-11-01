@@ -1,0 +1,138 @@
+[
+  {
+    "referenceId": "f01-reading-english-01-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "The Shared Tool Room",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The residents define stewardship as preserving shared tools for later users, not merely keeping them secure. Borrowers must clean tools, report damage, and return them by the next reservation. A trial required every tool to be put straight back on its shelf when returned. Returns became more punctual, yet two borrowers received faulty drills: the damage had been recorded, but nobody checked the register before issuing them. Some residents proposed letting borrowers keep faulty tools until repaired. The coordinator objected that an indefinite absence would conceal shortages and make reservations unreliable. She asked for a procedure that would preserve punctual return without treating return as proof of readiness."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-02-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An Evening Service",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The advice desk moved its hours two hours later after residents working until five said they could never arrive before closing. During the trial, several visitors explicitly said the change had enabled their first visit. Weekly attendance nevertheless remained about the same. The register counted visits, not unique people, and did not record unsuccessful attempts to attend. A volunteer noted that some former morning visitors had stopped coming, although nobody knew why. The coordinator retained the later hours for another month but requested a survey of both visitors and non-visitors before claiming that access had improved overall."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Stated reason; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-03-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "After the Argument",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Her patience was a bridge,\nnot a road that chose our destination.\nWe crossed it one word at a time,\ncarrying the maps we had defended.\nAt the far bank she set a table\nand did not ask us to agree.\nWe laid our maps there, still unfolded,\nand heard what each had left unnamed."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify a metaphor in original verse; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-04-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An Open Meeting",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "In this committee’s handbook, transparency means making the reasons for a decision available for others to examine. It does not mean publishing every piece of personal information discussed at a meeting. The handbook therefore asks members to release the decision and its reasons while removing private contact details. It distinguishes openness about the committee’s work from exposure of information that does not explain the decision."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a defined idea and its boundary; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-05-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "A Different Stop",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Repairs closed the only road wide enough for the travelling library van to reach its market stop. The library moved temporarily to a covered court. Traders treated the move as evidence that readers had abandoned the service, but borrowing totals remained steady. The librarian cautioned that this did not show everyone was equally well served: the register counted loans, not the identities of people who could no longer reach the van. The court was closer to a school but farther from several older readers’ homes. She planned to compare the users of both stops after the road reopened, rather than infer their experiences from a single total."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-06-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "The Workshop",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The workshop is a doorway,\nnot a promise of a prize.\nBeyond it wait unfamiliar tools\nand work we have not tried."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a metaphor using surrounding lines; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  }
+]

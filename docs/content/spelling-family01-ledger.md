@@ -5,6 +5,12 @@
 > Family 01 is complete as a 270-question seed batch. Publication and pooled exam
 > readiness are separate; source notes, hashes, and review evidence below remain historical records.
 
+Current records are in the topic files declared by the
+[Family 01 manifest](../../content/question-bank/family-01/manifest.json), under
+`family-01/content/`. Shared material and images are in `family-01/references/`.
+Former v1/v2 paths and file hashes below identify historical source layouts,
+not additional current banks. Each future seed family has its own manifest and files.
+
 The batch contains **3 easy, 5 medium, and 2 hard** items (30/50/20).
 Each has a self-contained prompt, four unique options, one answer key, and an
 explanation. Seven use single-word sentence completion; Item 06 requires a

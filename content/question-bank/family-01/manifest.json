@@ -1,0 +1,45 @@
+{
+  "formatVersion": 2,
+  "corpusId": "cse-2027-family01",
+  "revision": 4,
+  "taxonomyId": "cse-taxonomy-2027-v2",
+  "blueprintIds": ["cse-professional-2027-v3", "cse-subprofessional-2027-v3"],
+  "seedFamilies": [1],
+  "sources": [
+    {
+      "root": "",
+      "questionFiles": [
+        "content/f01-graphs-b01.json",
+        "content/f01-graphs-b02.json",
+        "content/f01-analogy-logic.json",
+        "content/f01-vocabulary-english.json",
+        "content/f01-vocabulary-filipino.json",
+        "content/f01-grammar-english.json",
+        "content/f01-grammar-filipino.json",
+        "content/f01-reading-english.json",
+        "content/f01-reading-filipino.json",
+        "content/f01-paragraph-english.json",
+        "content/f01-paragraph-filipino.json",
+        "content/f01-numerical.json",
+        "content/f01-clerical-operations.json",
+        "content/f01-data-sufficiency.json",
+        "content/f01-spelling.json",
+        "content/f01-alphabetizing.json",
+        "content/f01-philippine-constitution.json"
+      ],
+      "referenceFiles": [
+        "references/f01-graphs-b01.json",
+        "references/f01-graphs-b02.json",
+        "references/f01-reading-english.json",
+        "references/f01-reading-filipino.json",
+        "references/f01-paragraph-english.json",
+        "references/f01-paragraph-filipino.json"
+      ],
+      "assetFiles": [
+        "references/f01-graphs-assets.json",
+        "references/f01-graphs-b02-assets.json"
+      ]
+    }
+  ],
+  "datasetChecksum": "fca1890a1330accd5768f08a6efe535e864631818cd3c1a66db0e0625ce40700"
+}

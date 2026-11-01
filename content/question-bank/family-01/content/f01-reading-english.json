@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-reading-english-01",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -9,88 +9,44 @@
     "conceptId": "reading_comprehension_test",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Which action best meets the handbook’s meaning of stewardship?",
+    "difficulty": "hard",
+    "stem": "Which policy best reconciles the handbook’s two commitments while addressing the reason for the failed trial?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Cleaning a borrowed drill, reporting its damaged cable, and returning it by the agreed time"
+        "text": "Allow borrowers to keep tools until they judge them ready, because readiness matters more than the next reservation."
       },
       {
         "choiceId": "b",
-        "text": "Cleaning and promptly returning a borrowed drill, treating its damaged cable as ordinary wear"
+        "text": "Require return by the deadline, but place tools with unresolved damage in a marked hold area for staff assessment."
       },
       {
         "choiceId": "c",
-        "text": "Reporting a drill’s damaged cable and storing it securely until another borrower asks for it"
+        "text": "Issue every returned tool to the next borrower, while recording any unresolved damage in the register."
       },
       {
         "choiceId": "d",
-        "text": "Replacing a worn part on a borrowed drill and treating the repair as payment for ownership"
+        "text": "Require borrowers to replace any damaged tool before reporting the problem or returning it."
       }
     ],
-    "correctChoiceId": "a",
-    "explanation": "The handbook requires cleaning, reporting damage, and timely return while the tool remains shared property. Cleaning the drill, reporting its damaged cable, and returning it by the agreed time meet those conditions together. Prompt return does not excuse leaving damage unreported; secure storage does not establish cleaning or timely return. Repairing a part does not make the borrower the owner. Each alternative includes a useful action but falls short of the handbook’s full definition.",
+    "correctChoiceId": "b",
+    "explanation": "The deadline protects access, while a marked hold prevents an unsafe tool from being treated as usable. The trial failed because returned tools entered the available stock without a safety check. Indefinite retention undermines access, automatic reissue repeats the failure, and compulsory replacement before reporting delays staff knowledge and return.",
     "reference": {
       "referenceId": "f01-reading-english-01-passage",
-      "referenceVersion": 1
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
-        "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+        "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
   {
     "questionId": "f01-reading-english-02",
-    "version": 1,
-    "family": 1,
-    "module": "shared-core",
-    "subjectId": "verbal_ability",
-    "subtopicId": "reading",
-    "conceptId": "reading_comprehension_test",
-    "levelApplicability": ["professional", "subprofessional"],
-    "language": "english",
-    "difficulty": "easy",
-    "stem": "What reason does the passage give for moving the desk’s hours later?",
-    "choices": [
-      {
-        "choiceId": "a",
-        "text": "The room had too few chairs"
-      },
-      {
-        "choiceId": "b",
-        "text": "Working residents could not arrive before the original closing time"
-      },
-      {
-        "choiceId": "c",
-        "text": "The coordinator wanted fewer advisers"
-      },
-      {
-        "choiceId": "d",
-        "text": "The building was unavailable in the morning"
-      }
-    ],
-    "correctChoiceId": "b",
-    "explanation": "The residents’ letters identify the problem: they finished work after the desk had closed. Later hours address that problem. The room had spare chairs, staffing did not change, and no morning building restriction is mentioned.",
-    "reference": {
-      "referenceId": "f01-reading-english-02-passage",
-      "referenceVersion": 1
-    },
-    "provenance": {
-      "kind": "original",
-      "author": "Quilla",
-      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
-      "sources": [
-        "Reading reference batch: Stated reason; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
-      ]
-    }
-  },
-  {
-    "questionId": "f01-reading-english-03",
     "version": 2,
     "family": 1,
     "module": "shared-core",
@@ -99,38 +55,85 @@
     "conceptId": "reading_comprehension_test",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Which figure of speech is used in the first line?",
+    "difficulty": "hard",
+    "stem": "Which interpretation best explains why the coordinator kept the later hours but declined to call the trial proof of increased overall access?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Simile"
+        "text": "Later hours met one group’s stated need, but session attendance alone could not show whether total unmet need had fallen."
       },
       {
         "choiceId": "b",
-        "text": "Hyperbole"
+        "text": "Unchanged attendance established that the same residents attended before and after the change."
       },
       {
         "choiceId": "c",
-        "text": "Metaphor"
+        "text": "The evening trial failed because it could not increase the number of advisers available."
       },
       {
         "choiceId": "d",
-        "text": "Onomatopoeia"
+        "text": "The residents’ letters established that every person unable to attend in the morning could attend in the evening."
       }
     ],
-    "correctChoiceId": "c",
-    "explanation": "The line directly identifies patience with a bridge to suggest that it helps people reconnect. That is a metaphor. It does not use like or as for a simile, exaggerate a measurable claim, or imitate a sound.",
+    "correctChoiceId": "a",
+    "explanation": "The letters and new evening visitors support better access for workers. However, unchanged totals may conceal displaced morning users and do not measure unmet need. No visitor identities or complete demand measure establish a net gain. Neither failure nor universal evening availability follows.",
     "reference": {
-      "referenceId": "f01-reading-english-03-passage",
-      "referenceVersion": 1
+      "referenceId": "f01-reading-english-02-passage",
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
-        "Reading reference batch: Identify a metaphor in original verse; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+        "Reading reference batch: Stated reason; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-reading-english-03",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "How does the final image qualify the bridge metaphor rather than simply repeat it?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It implies that reconciliation requires the speakers to reach the same opinion before they can listen."
+      },
+      {
+        "choiceId": "b",
+        "text": "It replaces interpersonal patience with a claim that physical distance was the main obstacle."
+      },
+      {
+        "choiceId": "c",
+        "text": "It presents patience as enabling renewed dialogue without requiring either speaker to abandon an unresolved position."
+      },
+      {
+        "choiceId": "d",
+        "text": "It shows that the listener’s silence has made the original disagreement unimportant to both speakers."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The bridge makes a meeting possible, while the unfolded maps retain separate positions. Together with did not ask us to agree, those details distinguish listening from resolution. The poem neither reduces the disagreement to physical distance nor says that it has become unimportant.",
+    "reference": {
+      "referenceId": "f01-reading-english-03-passage",
+      "referenceVersion": 2
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify a metaphor in original verse; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },
@@ -181,7 +184,7 @@
   },
   {
     "questionId": "f01-reading-english-05",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -189,38 +192,39 @@
     "conceptId": "reading_comprehension_test",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "Why was the covered court chosen as a temporary library stop?",
+    "difficulty": "hard",
+    "stem": "Which conclusion best distinguishes what the road reopening would test from what the steady borrowing figures already establish?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Access to the original stop was blocked by road repairs"
+        "text": "Steady borrowing establishes that no reader was inconvenienced, so reopening can test only the driver’s preference."
       },
       {
         "choiceId": "b",
-        "text": "Borrowing at the market had fallen sharply"
+        "text": "Reopening would prove that the court caused the decline in readers that the traders described."
       },
       {
         "choiceId": "c",
-        "text": "Readers had complained about the market’s shade"
+        "text": "The figures establish that the same people borrowed at both locations, but reopening would reveal whether shade mattered."
       },
       {
         "choiceId": "d",
-        "text": "The library had decided to stop serving market readers"
+        "text": "Reopening could help distinguish the effects of location on particular users, while stable totals alone do not establish unchanged access for each user."
       }
     ],
-    "correctChoiceId": "a",
-    "explanation": "Road repairs blocked the van’s access, so a temporary alternative was needed. The passage expressly says borrowing remained steady and readers liked the shade. It also says the move lasts only until the road reopens, rather than ending service to those readers.",
+    "correctChoiceId": "d",
+    "explanation": "Stable totals do not identify individual borrowers or measure inconvenience. A return to the old location could supply comparative evidence about which users attend, though it would not by itself prove a causal effect. The traders’ suggested decline is unsupported, and the passage expressly leaves membership changes uncertain.",
     "reference": {
       "referenceId": "f01-reading-english-05-passage",
-      "referenceVersion": 1
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
-        "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+        "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },

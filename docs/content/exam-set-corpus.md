@@ -15,25 +15,32 @@ Eight families yield 2,160 unique questions. Family 01 is complete for seeding;
 exams draw from all eligible published families combined, subject to their own
 quotas. See [seeding families](seeding-families.md) for completion and reuse rules.
 
-The commands and format below describe existing v1 tooling, not implementation
-of the new policy. Replace its paired-family release gate with separate seed-count
-and pooled-blueprint checks for v3 selection. Do not change stored content or
-claim publication simply to make the obsolete family gate pass.
+The existing validator now has a separate `seed` mode implementing seed-count
+and taxonomy-v2 structural checks. Legacy `draft`/`release` modes remain pinned
+to the old policy for reproducibility; their paired-family gate is not the new
+completion test. Pooled v3 generation, publication gates, and eligible-version
+dry runs remain unimplemented. Do not change content to satisfy an obsolete gate.
 
 ## Files and commands
 
-The manifest-backed corpus currently lives under `content/question-bank/cse-2027-v1/`,
-with additional finalized seed content in `cse-2027-v2/`. Keep a corpus
-manifest at the root, question arrays in `families/`, reference arrays in
-`references/`, asset metadata arrays alongside them, and binary images in
-`assets/`. These files contain answer keys: never place them in `public/`, import
+Each family has an independent bank under `content/question-bank/family-NN/`:
+its own `manifest.json`, separate question arrays in `content/`, and shared
+reference/asset metadata in `references/`, with images in `references/assets/`.
+Family 01 contains 17 content files for its 270 questions. Future families have
+separate folders and manifests; do not append them to a global question file.
+See [ADR 0015](../ADR/0015-per-family-content-and-reference-banks.md). These files
+contain answer keys: never place them in `public/`, import
 them into application modules, or include them in client bundles. The validator
 is an offline Node script and is not used by the application.
 
 ```sh
-node scripts/validate-question-bank.mjs --manifest content/question-bank/cse-2027-v1/manifest.json --mode draft
-node scripts/validate-question-bank.mjs --manifest content/question-bank/cse-2027-v1/manifest.json --mode release --json
+node scripts/validate-question-bank.mjs --manifest content/question-bank/family-01/manifest.json --mode seed
+node scripts/validate-question-bank.mjs --manifest content/question-bank/family-01/manifest.json --mode seed --json
 ```
+
+Legacy v1 manifests can still be inspected in Git history or exercised by test
+fixtures. Their former on-disk paths were removed during consolidation and are
+not current validation commands.
 
 The legacy validator's draft mode validates declared content and reports incomplete
 coverage. Its release mode still requires eight paired exam families under the
@@ -45,7 +52,52 @@ Malformed JSON is invalid content (1). Output includes errors/warnings with file
 record ID, rule, expected/actual values, distributions, and per-family coverage.
 Warnings include exact duplicate candidates requiring editorial adjudication.
 
-## Pending taxonomy v2: Data Sufficiency
+## Combined seed inventory (manifest format 2)
+
+The [Family 01 inventory](../../content/question-bank/family-01/manifest.json)
+uses `formatVersion: 2`, `taxonomyId: "cse-taxonomy-2027-v2"`, the two v3 blueprint
+IDs, `seedFamilies: [1]`, and a nonempty `sources` array. Each source has only
+`root`, `questionFiles`, `referenceFiles`, and `assetFiles`; all three file lists
+are required. `root` is relative to the combined manifest's directory (empty
+string means that directory). Record lists and image paths are relative to their
+source root. Each family's layout uses one source with `root: ""` and
+`questionFiles` listing all its `content/*.json` files. Reference metadata lists
+images as `references/assets/...` relative to that family. Question values and
+shared reference records remain unchanged by layout changes.
+The top-level identity, revision, optional checksum, and external `signOff` fields
+have the same roles as format 1; top-level record file lists are not allowed.
+Question, reference, and asset record shapes do not change.
+
+Seed mode shares the existing structural, provenance, taxonomy, applicability,
+reference, image/checksum, duplicate-candidate, and path-safety checks. IDs and
+reference links are checked across sources, not separately per folder. Unknown
+fields, duplicate declarations, undeclared families, missing/extra subject items,
+and dangling references/assets fail validation. Every JSON file beneath each
+source's `content/`, legacy `families/`, and `references/` directories must be declared, including
+nested files; inventory symlinks are rejected. Paths cannot traverse or resolve
+outside the combined manifest's root. This inventory check covers declared source
+roots, not arbitrary undisclosed directories elsewhere in the repository.
+
+For every declared seed family, require 270 unique canonical questions and the
+40/50/60/80/40 subject totals, with 25 English and 25 Filipino Verbal questions.
+Report actual difficulty distributions without imposing exam difficulty cells or
+new fixed per-concept seed quotas. Exact duplicate candidates remain warnings
+requiring editorial adjudication; semantic duplicates and source accuracy still
+need human review. Do not relabel content to make authoring ratios look exact.
+
+The JSON result contains per-family subject/difficulty totals,
+`completeSeedFamilies`, and `examReadiness: "not-evaluated"`; it does not claim a
+number of feasible exams. A successful seed run neither publishes anything nor
+certifies legal accuracy, difficulty calibration, eight-family completion, or
+pooled exam activation. Review the [Family 01 report](family01-validation.md).
+All modes retain exit codes 0/1/2 as described above.
+
+Checksums include the combined manifest inventory and all original records;
+`datasetChecksum` and external `signOff` remain excluded. Update the revision,
+rerun without the old checksum, review the changed content, and pin the new
+checksum when the reviewed inventory changes. An invalid run is not signable.
+
+## Taxonomy v2: Data Sufficiency
 
 [ADR 0011](../ADR/0011-numerical-data-sufficiency.md) and the
 [taxonomy addition](../exams/cse-taxonomy-and-blueprints.md#approved-addition-numerical-data-sufficiency)
@@ -55,26 +107,25 @@ the same name as that subtopic. Under ADR 0013, each generated exam must contain
 Data Sufficiency within its shared Numerical selection from the pooled bank,
 inside the existing exam counts and difficulty cells.
 
-The current offline policy and corpus manifest still use taxonomy v1; this
-documentation change does not make the validator accept the new concept. Adopt
-taxonomy v2, pooled v3 blueprint identifiers, tests, and corpus metadata together before
-including these records. Taxonomy v2 does not by itself change JSON format
-version 1. Do not retag computation questions as Data Sufficiency or rewrite
+The combined seed manifest and `seed` mode accept the new concept under taxonomy
+v2 with v3 blueprint identifiers. Legacy manifests and modes remain v1. Runtime
+adoption and pooled exam checks are still separate work. The question-record
+shape remains unchanged. Do not retag computation questions as Data Sufficiency or rewrite
 historical versions merely to meet coverage. New items require two consistent
 statements, five full-text sufficiency outcomes with stable choice IDs, and
 explanations evaluating each statement separately and then together.
 
-### Pending v2 Clerical grouping
+### Taxonomy v2 Clerical grouping
 
 [ADR 0012](../ADR/0012-clerical-alphabetizing-and-spelling.md) adds
 `alphabetizing` and groups the retained `spelling` concept under subtopic
 `clerical_operations`, subject `clerical_ability`. The general
 `clerical_operations` concept remains. All are English, Subprofessional-only
 Clerical items; the existing 40-item total and 12/20/8 cells do not change.
-The current v1 validator still expects `language_accuracy` for Spelling and does
-not accept Alphabetizing. Do not retag v1 records in place. V2 adoption must
-synchronize policy, tests, and versioned classifications while preserving
-historical question versions and Spelling concept identity.
+Legacy v1 modes still expect `language_accuracy` for Spelling and do not accept
+Alphabetizing. Seed mode accepts the approved v2 grouping. Do not retag historical
+v1 records in place. Runtime adoption must preserve historical question versions
+and Spelling concept identity.
 
 ## Format version 1
 

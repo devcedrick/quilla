@@ -83,7 +83,7 @@
   },
   {
     "questionId": "f01-vocabulary-english-03",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -91,34 +91,35 @@
     "conceptId": "vocabulary_questions",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "The archive issued an EPHEMERAL access code that expired after thirty seconds. Which phrase is closest in meaning to EPHEMERAL?",
+    "difficulty": "hard",
+    "stem": "The panel called the evidence “suggestive, not dispositive”: the timing supported the allegation, but the access logs also allowed an innocent explanation. Which revision preserves both the evidential strength and the limitation of “dispositive” in this context?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "widely shared"
+        "text": "The evidence was relevant enough to examine, but too unreliable to support any inference."
       },
       {
         "choiceId": "b",
-        "text": "difficult to remember"
+        "text": "The evidence supported the allegation, but did not settle whether the alleged act occurred."
       },
       {
         "choiceId": "c",
-        "text": "short-lived"
+        "text": "The evidence established the alleged act, but did not establish the motive behind it."
       },
       {
         "choiceId": "d",
-        "text": "repeatedly renewed"
+        "text": "The evidence favoured innocence, but did not completely disprove the allegation."
       }
     ],
-    "correctChoiceId": "c",
-    "explanation": "Ephemeral describes something that lasts only a short time. The code’s thirty-second lifetime makes short-lived the best answer. Nothing says it was shared, hard to remember, or renewed.",
+    "correctChoiceId": "b",
+    "explanation": "Dispositive means settling or determining the issue, not merely being relevant or persuasive. The timing offers positive support, while the alternative explanation prevents a decisive conclusion about the act. The alternatives either erase the positive support, treat the act as established, or reverse the direction of the evidence.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
-        "Vocabulary reference batch: Image 1, synonym item 4; target ephemeral; task synonym. See vocabulary-family01-ledger.md."
+        "Vocabulary reference batch: Image 1, synonym item 4; target ephemeral; task synonym. See vocabulary-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },

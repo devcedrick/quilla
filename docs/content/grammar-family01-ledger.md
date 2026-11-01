@@ -1,9 +1,19 @@
 # Family 01 Grammar and Usage — English and Filipino
 
+> Current difficulty revision: [revision-4 item review](family01-difficulty-revision.md)
+> supersedes English 01–03 and Filipino 01–02 below. These five questions are
+> rewritten medium items; older formats, labels, and versions remain historical.
+
 > Current policy: [seeding families](seeding-families.md) and ADR 0013 supersede
 > this ledger's historical draft/candidate and exam-family completion wording.
 > Family 01 is complete as a 270-question seed batch. Publication and pooled exam
 > readiness are separate; source notes, hashes, and review evidence below remain historical records.
+
+Current records are in the topic files declared by the
+[Family 01 manifest](../../content/question-bank/family-01/manifest.json), under
+`family-01/content/`. Shared material and images are in `family-01/references/`.
+Former v1/v2 paths and file hashes below identify historical source layouts,
+not additional current banks. Each future seed family has its own manifest and files.
 
 The maintainer specified six items per language: three identifying-errors items
 and three correct-usage items. These twelve original drafts use the supplied

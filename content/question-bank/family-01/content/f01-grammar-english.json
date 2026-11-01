@@ -1,96 +1,6 @@
 [
   {
     "questionId": "f01-grammar-english-01",
-    "version": 1,
-    "family": 1,
-    "module": "shared-core",
-    "subjectId": "verbal_ability",
-    "subtopicId": "grammar_and_usage",
-    "conceptId": "idiomatic_expressions_and_correct_grammar",
-    "levelApplicability": ["professional", "subprofessional"],
-    "language": "english",
-    "difficulty": "easy",
-    "stem": "In formal written English, choose the quoted part that contains an error. Choose “No error” if every part is acceptable. Sentence: No one in the records unit were absent from Monday’s briefing.",
-    "choices": [
-      {
-        "choiceId": "a",
-        "text": "No one"
-      },
-      {
-        "choiceId": "b",
-        "text": "in the records unit"
-      },
-      {
-        "choiceId": "c",
-        "text": "were absent"
-      },
-      {
-        "choiceId": "d",
-        "text": "from Monday’s briefing"
-      },
-      {
-        "choiceId": "e",
-        "text": "No error"
-      }
-    ],
-    "correctChoiceId": "c",
-    "explanation": "No one is singular, so it takes was, not were, in this statement. The phrase in the records unit does not change the subject’s number. Corrected sentence: No one in the records unit was absent from Monday’s briefing.",
-    "provenance": {
-      "kind": "original",
-      "author": "Quilla",
-      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
-      "sources": [
-        "Grammar reference batch: Image 1, identifying errors item 1; singular indefinite subject. Task identifying-errors. See grammar-family01-ledger.md."
-      ]
-    }
-  },
-  {
-    "questionId": "f01-grammar-english-02",
-    "version": 1,
-    "family": 1,
-    "module": "shared-core",
-    "subjectId": "verbal_ability",
-    "subtopicId": "grammar_and_usage",
-    "conceptId": "idiomatic_expressions_and_correct_grammar",
-    "levelApplicability": ["professional", "subprofessional"],
-    "language": "english",
-    "difficulty": "easy",
-    "stem": "In formal written English, choose the quoted part that contains an error. Choose “No error” if every part is acceptable. Sentence: Both the coordinator and the volunteers checks the equipment before each drill.",
-    "choices": [
-      {
-        "choiceId": "a",
-        "text": "Both the coordinator and the volunteers"
-      },
-      {
-        "choiceId": "b",
-        "text": "checks"
-      },
-      {
-        "choiceId": "c",
-        "text": "the equipment"
-      },
-      {
-        "choiceId": "d",
-        "text": "before each drill"
-      },
-      {
-        "choiceId": "e",
-        "text": "No error"
-      }
-    ],
-    "correctChoiceId": "b",
-    "explanation": "The subject joins the coordinator and the volunteers with both ... and, making it plural. Use check rather than checks: Both the coordinator and the volunteers check the equipment before each drill.",
-    "provenance": {
-      "kind": "original",
-      "author": "Quilla",
-      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
-      "sources": [
-        "Grammar reference batch: Image 1, identifying errors item 4; compound subject joined by and. Task identifying-errors. See grammar-family01-ledger.md."
-      ]
-    }
-  },
-  {
-    "questionId": "f01-grammar-english-03",
     "version": 2,
     "family": 1,
     "module": "shared-core",
@@ -99,38 +9,119 @@
     "conceptId": "idiomatic_expressions_and_correct_grammar",
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
-    "difficulty": "easy",
-    "stem": "In formal written English, choose the quoted part that contains an error. Choose “No error” if every part is acceptable. Sentence: The curator’s report includes photographs of the newly restored paintings.",
+    "difficulty": "medium",
+    "stem": "Choose the revision that corrects the agreement error without changing which staff member is responsible. Sentence: The supervisor, together with the two assistants who check the forms, are responsible for the final signature.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "The curator’s report"
+        "text": "Change “are responsible” to “is responsible”."
       },
       {
         "choiceId": "b",
-        "text": "includes"
+        "text": "Change “who check” to “who checks”."
       },
       {
         "choiceId": "c",
-        "text": "photographs"
+        "text": "Change “together with” to “and”."
       },
       {
         "choiceId": "d",
-        "text": "of the newly restored paintings"
-      },
-      {
-        "choiceId": "e",
-        "text": "No error"
+        "text": "Change “the final signature” to “the final signatures”."
       }
     ],
-    "correctChoiceId": "e",
-    "explanation": "There is no error. The singular noun report takes includes. Curator’s correctly marks one curator’s possession, photographs is the object, and newly correctly modifies restored. Do not change includes to include because paintings is not the subject.",
+    "correctChoiceId": "a",
+    "explanation": "The head subject is the singular supervisor; together with does not create a compound subject. The relative clause who check correctly refers to the plural assistants. Using and would assign responsibility to all three people rather than preserving the stated responsibility.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
-        "Grammar reference batch: Image 1, identifying errors item 6; recognise a correct sentence. Task identifying-errors. See grammar-family01-ledger.md."
+        "Grammar reference batch: Image 1, identifying errors item 1; singular indefinite subject. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-02",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the sentence that preserves the intended meaning and uses parallel structure: the clerk must verify identities, record payments, and return original documents.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The clerk is responsible for verifying identities, recording payments, and the return of original documents."
+      },
+      {
+        "choiceId": "b",
+        "text": "The clerk is responsible for verifying identities, recording payments, and returning original documents."
+      },
+      {
+        "choiceId": "c",
+        "text": "The clerk is responsible for verifying identities, to record payments, and returning original documents."
+      },
+      {
+        "choiceId": "d",
+        "text": "The clerk is responsible for identity verification, recording payments, and to return original documents."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Only the second sentence coordinates three gerund phrases governed by for: verifying, recording, returning. The other choices mix gerunds with a noun phrase or an infinitive. All required actions are retained in the correct revision.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 4; compound subject joined by and. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-03",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A report must make clear that the inspector, not the driver, found the damaged seal. Which revision also avoids a dangling modifier?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "After examining the crate, the damaged seal was reported to the driver by the inspector."
+      },
+      {
+        "choiceId": "b",
+        "text": "After examining the crate, the driver received the inspector’s report of a damaged seal."
+      },
+      {
+        "choiceId": "c",
+        "text": "After examining the crate, a damaged seal appeared in the inspector’s report to the driver."
+      },
+      {
+        "choiceId": "d",
+        "text": "After examining the crate, the inspector reported a damaged seal to the driver."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The understood subject of after examining must be the subject of the main clause. Only the inspector in the last choice both examines and reports the finding. The driver choice assigns the examining to the wrong person; the other subjects cannot examine a crate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 6; recognise a correct sentence. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
       ]
     }
   },

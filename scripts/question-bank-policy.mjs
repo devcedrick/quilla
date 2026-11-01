@@ -32,3 +32,29 @@ export const policy = {
     ["clerical", "clerical_ability", 12, 20, 8],
   ],
 };
+
+// ADRs 0011–0013: seed authorship is not a pooled-exam activation gate.
+export const seedPolicy = {
+  ...policy,
+  taxonomy: "cse-taxonomy-2027-v2",
+  blueprints: ["cse-professional-2027-v3", "cse-subprofessional-2027-v3"],
+  concepts: {
+    ...policy.concepts,
+    numerical_ability: [
+      ["numerical_reasoning", "numerical_reasoning"],
+      ["numerical_reasoning", "data_sufficiency"],
+    ],
+    clerical_ability: [
+      ["clerical_operations", "clerical_operations"],
+      ["clerical_operations", "alphabetizing"],
+      ["clerical_operations", "spelling"],
+    ],
+  },
+  seedSubjects: {
+    general_information: 40,
+    verbal_ability: 50,
+    numerical_ability: 60,
+    analytical_ability: 80,
+    clerical_ability: 40,
+  },
+};

@@ -67,12 +67,30 @@ exam shortages. Those are historical notes, not the current definition of seed
 completion. This policy supersedes those interpretations, without erasing hashes,
 factual corrections, source notes, or question-level review evidence.
 
-The v1/v2 folders are storage/integration locations, not final-versus-draft
-content classifications. This documentation does not move, republish, or retag
-questions. The v1 validator still applies its old 1,520-question paired-exam gate;
-that gate does not determine completion of the new 270-item seed families.
+Each seed family now has its own bank, such as
+[`family-01/manifest.json`](../../content/question-bank/family-01/manifest.json),
+with topic/language question files in `content/` and shared material and images
+in `references/`. Future families have separate folders and manifests; there is
+no global appended question file. [ADR 0015](../ADR/0015-per-family-content-and-reference-banks.md)
+supersedes the earlier single-file interpretation. Taxonomy/blueprint versions
+remain metadata; question IDs, versions, and content are unchanged.
+Legacy validator modes retain the old paired-exam gate only for historical
+fixtures; that gate does not determine current seed completion.
 
-V3 pooled selection and validation require implementation. Initial activation
+The existing offline validator now supports a separate seed gate:
+
+```sh
+node scripts/validate-question-bank.mjs --manifest content/question-bank/family-01/manifest.json --mode seed
+```
+
+Each family's format-2 inventory declares its content and reference files and validates taxonomy v2, 270 items per
+declared family, subject counts, Verbal language totals, and existing record,
+asset, reference, and checksum invariants. It reports difficulty rather than
+enforcing per-exam cells. See [format and commands](exam-set-corpus.md#combined-seed-inventory-manifest-format-2)
+and the [Family 01 validation report](family01-validation.md). Seed success is
+structural evidence, not independent editorial sign-off or permission to serve.
+
+V3 pooled selection and exam-feasibility validation still require implementation. Initial activation
 still requires integration of the planned eight families and an eligible combined
 pool satisfying each level's exam cells. Pooled shortages and release checks are
 exam-readiness work, not a demand to discard completed seed content.
