@@ -421,7 +421,7 @@
   },
   {
     "questionId": "f01-philippine-constitution-11",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "general_information",
@@ -430,34 +430,36 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "easy",
-    "stem": "A foreign national acquires Philippine citizenship through a naturalization process completed in accordance with law. Which constitutional citizenship category directly covers this person?",
+    "stem": "A person who was not a Philippine citizen at birth later obtained Philippine citizenship after a court granted the person's petition under the applicable citizenship law. Which constitutional citizenship category directly describes this person?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "A citizen solely because of Philippine residence"
+        "text": "A citizen by naturalization"
       },
       {
         "choiceId": "b",
-        "text": "A person naturalized in accordance with law"
+        "text": "A natural-born citizen"
       },
       {
         "choiceId": "c",
-        "text": "A citizen solely because of a Philippine visa"
+        "text": "A citizen solely by Philippine birthplace"
       },
       {
         "choiceId": "d",
-        "text": "A person elected to Philippine citizenship by Congress without a legal process"
+        "text": "A citizen solely by marriage to a Filipino"
       }
     ],
-    "correctChoiceId": "b",
-    "explanation": "Article IV, Section 1(4) recognizes persons naturalized in accordance with law as citizens. Mere residence or possession of a visa does not itself satisfy that category.",
+    "correctChoiceId": "a",
+    "explanation": "Article IV, Section 1(4) recognizes those naturalized according to law as citizens. Acquiring citizenship through naturalization is different from citizenship from birth under Section 2. Birthplace or marriage alone does not establish the category described.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
       "sources": [
         "1987 Constitution, Article IV, Section 1(4). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
-        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "1987 Constitution, Article IV, Sections 1(4) and 2; https://lawphil.net/consti/cons1987.html; verified 2026-11-01."
       ]
     }
   },
@@ -925,7 +927,7 @@
   },
   {
     "questionId": "f01-philippine-constitution-23",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "general_information",
@@ -934,34 +936,36 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "A reviewer says the Constitution requires Congress to develop a regressive tax system because taxes must be uniform and equitable. Which correction follows Article VI, Section 28(1)?",
+    "stem": "A legislator argues that the constitutional requirement of uniform taxation forbids Congress from adopting graduated income-tax rates. Which response correctly distinguishes the two constitutional principles?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Congress must exempt every person who earns wages."
+        "text": "Uniformity requires every taxpayer to pay the same peso amount, regardless of taxable income."
       },
       {
         "choiceId": "b",
-        "text": "Uniformity prohibits any tax legislation."
+        "text": "Progressivity permits any two persons in the same taxable class to be assessed differently without a relevant distinction."
       },
       {
         "choiceId": "c",
-        "text": "Equity requires every taxpayer to pay the same peso amount."
+        "text": "Uniformity applies only to local taxes, while progressivity applies only to national taxes."
       },
       {
         "choiceId": "d",
-        "text": "Congress is directed to evolve a progressive system of taxation."
+        "text": "Uniformity and equity must be respected, and Congress must also evolve a progressive system; uniformity does not itself prohibit graduated rates."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Article VI, Section 28(1) combines uniformity and equity with a direction to Congress to evolve a progressive tax system. It does not require a regressive system, identical peso payments, or the elimination of taxes.",
+    "explanation": "Article VI, Section 28(1) requires uniformity and equity and directs Congress to evolve a progressive system. The two commands coexist; uniformity is not a requirement that everyone pay the same peso amount. Progressivity does not authorize arbitrary differences within the same relevant class, and the text does not divide the principles between local and national taxes.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
       "sources": [
         "1987 Constitution, Article VI, Section 28(1). Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
-        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "1987 Constitution, Article VI, Section 28(1); https://lawphil.net/consti/cons1987.html; verified 2026-11-01."
       ]
     }
   },
@@ -1177,7 +1181,7 @@
   },
   {
     "questionId": "f01-philippine-constitution-29",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "general_information",
@@ -1186,34 +1190,36 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "A qualified applicant for a civil right is told to pass a religious test before exercising that right. Which constitutional response is most direct?",
+    "stem": "A public office requires all applicants, regardless of religion, to pass its technical examination. It also requires them to profess a specified faith before exercising a civil right. Which constitutional assessment correctly distinguishes these requirements?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "The test is valid if no fee is charged."
+        "text": "Both requirements are religious tests because every examination tests a person's beliefs."
       },
       {
         "choiceId": "b",
-        "text": "No religious test may be required for exercising civil or political rights."
+        "text": "The faith profession is a prohibited religious test; a technical examination is not made a religious test merely by applying to all applicants."
       },
       {
         "choiceId": "c",
-        "text": "The test is valid if several religions prepare it."
+        "text": "The faith profession is permissible if the technical examination remains open to everyone."
       },
       {
         "choiceId": "d",
-        "text": "The test becomes valid after approval by a local majority."
+        "text": "Neither requirement is a religious test unless the office favors only one denomination within a religion."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Article III, Section 5 prohibits religious tests for exercising civil or political rights. The prohibition does not disappear because the test is free, locally popular, or prepared by several religious groups.",
+    "explanation": "Article III, Section 5 prohibits a religious test for exercising civil or political rights. Requiring profession of a faith is such a test even when other requirements are neutral. A technical examination is not, on the given facts, a test of religion. Equal access to that examination does not cure the separate religious condition.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
       "sources": [
         "1987 Constitution, Article III, Section 5. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
-        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "1987 Constitution, Article III, Section 5; https://lawphil.net/consti/cons1987.html; verified 2026-11-01."
       ]
     }
   },
@@ -1471,7 +1477,7 @@
   },
   {
     "questionId": "f01-philippine-constitution-36",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "general_information",
@@ -1480,34 +1486,36 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Two former Vice-Presidents each succeeded to the presidency after a President's resignation; neither had previously been elected President. One served exactly four years as President, while the other served four years and one day. Assume all other qualifications are satisfied. Under Article VII, Section 4's succession-service limit alone, who is barred from later election as President?",
+    "stem": "Assume all unmentioned constitutional requirements are satisfied. Mira succeeded to the presidency and served exactly four years; Nico succeeded and served four years and one day. A separate proposal would suspend a Senator for 70 days, with 16 of all 24 Senators voting for it. Which assessment correctly applies both the succession-election rule and the Senate discipline rule?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Both, because any service by succession bars election."
+        "text": "Neither Mira nor Nico is barred by the succession-duration rule; the suspension satisfies both its vote and duration requirements."
       },
       {
         "choiceId": "b",
-        "text": "Neither, because neither served a full six-year term."
+        "text": "Only Nico is barred by the succession-duration rule; the suspension fails its vote requirement but satisfies its duration limit."
       },
       {
         "choiceId": "c",
-        "text": "Only the person who served exactly four years."
+        "text": "Both Mira and Nico are barred by the succession-duration rule; the suspension satisfies its vote requirement but exceeds its duration limit."
       },
       {
         "choiceId": "d",
-        "text": "Only the person who served four years and one day."
+        "text": "Only Nico is barred by the succession-duration rule; the suspension satisfies its vote requirement but exceeds its duration limit."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Article VII, Section 4 bars a person who succeeded as President and served for more than four years from election to that office. Exactly four years does not exceed the threshold; four years and one day does. This is distinct from the prohibition on reelection of a person elected President.",
+    "explanation": "Article VII, Section 4 bars election after succession and service for MORE than four years: Nico crosses that boundary, while exactly four years does not by itself bar Mira. Article VI, Section 16(3) requires two-thirds for suspension and limits it to 60 days. Sixteen of 24 meets the vote threshold, but 70 days exceeds the limit. The alternatives each confuse at least one boundary; the required vote does not authorize an excessive duration.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and constitutional-text review; human editorial review and learner calibration pending",
       "sources": [
         "1987 Constitution, Article VII, Section 4. Supreme Court E-Library: https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353 (retrieved 2026-11-01).",
-        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md."
+        "Maintainer Constitution reference-image batch; topics only, not an authoritative answer key. See philippine-constitution-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "1987 Constitution, Article VII, Section 4 and Article VI, Section 16(3); https://lawphil.net/consti/cons1987.html; verified 2026-11-01."
       ]
     }
   },

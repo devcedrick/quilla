@@ -1,5 +1,45 @@
 # Family 01 seed validation
 
+## Current revision 5 — editorial quality repair
+
+- Date: 2026-11-01; [manifest](../../content/question-bank/family-01/manifest.json), revision 5.
+- Result: **PASS — 270 questions, 33 references, nine assets; zero errors and warnings.**
+- Dataset SHA-256: `5719ab3ab51f53ef362dbaf25af624467719df184905388f73eeb295658de7df`.
+- Question-record fingerprint: `c210317d778e5a9edd74d1557791ca54a02687f265739ea6af0d13f65c7298e9`.
+- [Item-level repair evidence](family01-quality-revision.md): 43 question versions
+  changed, including 37 prompt/task repairs and six explanation-only repairs;
+  five dedicated reading references changed. The other 227 questions are unchanged.
+- All difficulty labels are unchanged. Substantive task changes strengthen the
+  intended demand instead of manufacturing the ratio through relabeling.
+
+| Subject             | Items | Easy | Medium | Hard |
+| ------------------- | ----: | ---: | -----: | ---: |
+| General Information |    40 |   12 |     20 |    8 |
+| Verbal Ability      |    50 |   15 |     25 |   10 |
+| Numerical Ability   |    60 |   18 |     30 |   12 |
+| Analytical Ability  |    80 |   24 |     40 |   16 |
+| Clerical Ability    |    40 |   12 |     20 |    8 |
+| Total               |   270 |   81 |    135 |   54 |
+
+Every subject meets the 30/50/20 authoring target. Verbal remains 25 English and
+25 Filipino. All 24 reading/paragraph references still have one question consumer;
+all new reference versions are pinned. No chart image or taxonomy changed.
+
+Lint, typecheck, and Knip pass. A standalone full unit run passed 291 tests across
+24 files. The earlier concurrent run hit three existing validator-fixture
+five-second timeouts; the standalone rerun used unchanged assertions/timeouts.
+The focused editorial/difficulty files contain 18 tests. Final formatting,
+checksum validation, and diff checks are rerun after the identity pins.
+Build/E2E are inapplicable to offline content/document/test changes. CI/human
+review are not claimed. Difficulty remains an editorial cognitive-demand
+estimate, not empirical learner calibration or publication permission.
+
+## Historical revision 4 evidence
+
+The report below preserves the previous revision's identities and checks. Where
+content or difficulty rationale differs, revision 5 and its item-level report above
+are current.
+
 - Run date: 2026-11-01.
 - Contract: [ADR 0013](../ADR/0013-seeding-families-and-pooled-exam-selection.md).
 - Inventory: [family-01/manifest.json](../../content/question-bank/family-01/manifest.json), revision 4.

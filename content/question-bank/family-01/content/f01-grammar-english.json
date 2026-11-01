@@ -43,7 +43,7 @@
   },
   {
     "questionId": "f01-grammar-english-02",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -72,20 +72,21 @@
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Only the second sentence coordinates three gerund phrases governed by for: verifying, recording, returning. The other choices mix gerunds with a noun phrase or an infinitive. All required actions are retained in the correct revision.",
+    "explanation": "The revision using 'verifying', 'recording', and 'returning' coordinates three gerund phrases governed by 'for'. The alternatives mix gerunds with a noun phrase or an infinitive. The parallel revision retains all three required actions without depending on an option's displayed position.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
         "Grammar reference batch: Image 1, identifying errors item 4; compound subject joined by and. Task identifying-errors. See grammar-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
   {
     "questionId": "f01-grammar-english-03",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -114,14 +115,15 @@
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "The understood subject of after examining must be the subject of the main clause. Only the inspector in the last choice both examines and reports the finding. The driver choice assigns the examining to the wrong person; the other subjects cannot examine a crate.",
+    "explanation": "The understood subject of 'after examining' must be the subject of the main clause. In the revision with the inspector as that subject, the inspector both examines and reports the finding. The driver revision assigns examination to the wrong person; the other grammatical subjects cannot examine a crate.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
         "Grammar reference batch: Image 1, identifying errors item 6; recognise a correct sentence. Task identifying-errors. See grammar-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -209,7 +211,7 @@
   },
   {
     "questionId": "f01-grammar-english-06",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -218,33 +220,34 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Choose the phrasal verb that means postpone and correctly completes the sentence. Rather than continue with contaminated samples, the team decided to ___ the inspection until replacement samples arrived.",
+    "stem": "The office's approved minute must retain two facts: the panel postponed the inspection, and the date of the later inspection is still undecided. Which revision uses an idiomatic expression without changing either fact?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "put out"
+        "text": "The panel put forward the inspection; its later date remains undecided."
       },
       {
         "choiceId": "b",
-        "text": "put through"
+        "text": "The panel put off deciding whether an inspection would occur at all."
       },
       {
         "choiceId": "c",
-        "text": "put off"
+        "text": "The panel put off the inspection; its new date has not yet been set."
       },
       {
         "choiceId": "d",
-        "text": "put up"
+        "text": "The panel called off the inspection; it will not be rescheduled."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Put off means postpone, so it fits a decision to conduct the inspection later. Put out, put through, and put up have different meanings; they do not express postponing the inspection in this sentence.",
+    "explanation": "Put off the inspection means postpone it. The correct revision also preserves the undecided new date. Put forward does not express the stated postponement here; putting off a decision about whether to inspect changes the object of the delay; calling it off with no rescheduling changes postponement into cancellation.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
-        "Grammar reference batch: Image 3, correct usage items 34–37; context-appropriate phrasal verb; new verb/particle example. Task correct-usage. See grammar-family01-ledger.md."
+        "Grammar reference batch: Image 3, correct usage items 34–37; context-appropriate phrasal verb; new verb/particle example. Task correct-usage. See grammar-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   }

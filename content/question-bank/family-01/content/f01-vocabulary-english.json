@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-vocabulary-english-01",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -10,39 +10,41 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Despite repeated warnings about the broken alarm, the caretaker remained APATHETIC. Which word is closest in meaning to APATHETIC?",
+    "stem": "Mara understands the proposal but declines to vote because the outcome makes no difference to her. Noel wants to participate but fears that a mistaken vote could harm an applicant. Which pair most precisely describes their attitudes, in that order?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "indifferent"
+        "text": "apathetic; apprehensive"
       },
       {
         "choiceId": "b",
-        "text": "attentive"
+        "text": "apathetic; confident"
       },
       {
         "choiceId": "c",
-        "text": "anxious"
+        "text": "uncertain; apprehensive"
       },
       {
         "choiceId": "d",
-        "text": "enthusiastic"
+        "text": "hostile; indifferent"
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Apathetic means showing little interest or concern. Indifferent fits the caretaker’s lack of response. Attentive and enthusiastic suggest engagement, while anxious suggests worry.",
+    "explanation": "Mara's lack of concern about the outcome is apathetic, not uncertainty about a proposal she understands or hostility toward it. Noel's fear of a harmful mistake is apprehensive, not confidence or indifference. Knowing either word alone leaves two candidate pairs; the answer must match both attitudes and their stated order.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
-        "Vocabulary reference batch: Image 1, synonym item 1; target apathetic; task synonym. See vocabulary-family01-ledger.md."
+        "Vocabulary reference batch: Image 1, synonym item 1; target apathetic; task synonym. See vocabulary-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "Cambridge Dictionary, apathetic; https://dictionary.cambridge.org/dictionary/english/apathetic?topic=lacking-interest-and-enthusiasm; meaning verified 2026-11-01."
       ]
     }
   },
   {
     "questionId": "f01-vocabulary-english-02",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -51,39 +53,41 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Before approving the grant, the committee was COGNIZANT of the restrictions on how the money could be spent. Choose the closest meaning of COGNIZANT.",
+    "stem": "'Although cognizant of the new retention rule, the clerk used the old disposal schedule.' Which revision preserves the distinction made by 'although' and 'cognizant'?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "uncertain"
+        "text": "Because the clerk followed the new rule, the old schedule was no longer used."
       },
       {
         "choiceId": "b",
-        "text": "aware"
+        "text": "The clerk knew about the new rule but nevertheless used the old schedule."
       },
       {
         "choiceId": "c",
-        "text": "critical"
+        "text": "The clerk discovered the new rule only after using the old schedule."
       },
       {
         "choiceId": "d",
-        "text": "forgetful"
+        "text": "The clerk was responsible for writing the new rule but could not explain it."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Cognizant means aware of or having knowledge of something. The committee knew about the restrictions. Being critical means judging something, not merely knowing about it.",
+    "explanation": "Cognizant means aware of something. Although contrasts that awareness with using the old schedule; awareness does not establish compliance. Following the rule reverses the action, learning afterward removes the prior awareness, and authorship adds an unsupported responsibility.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
-        "Vocabulary reference batch: Image 1, synonym item 2; target cognizant; task synonym. See vocabulary-family01-ledger.md."
+        "Vocabulary reference batch: Image 1, synonym item 2; target cognizant; task synonym. See vocabulary-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "Oxford Advanced Learner's Dictionary, cognizant; https://www.oxfordlearnersdictionaries.com/definition/english/cognizant; meaning verified 2026-11-01."
       ]
     }
   },
   {
     "questionId": "f01-vocabulary-english-03",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -92,34 +96,36 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "The panel called the evidence “suggestive, not dispositive”: the timing supported the allegation, but the access logs also allowed an innocent explanation. Which revision preserves both the evidential strength and the limitation of “dispositive” in this context?",
+    "stem": "A report calls the badge log 'probative of entry, but not dispositive of responsibility'. It calls a signed inventory 'dispositive as to which tools were missing, but not as to who removed them'. Which summary preserves the different strengths and scopes of these judgments?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "The evidence was relevant enough to examine, but too unreliable to support any inference."
+        "text": "The log contributes nothing to assessing entry; the inventory settles which tools were missing; neither record by itself settles who was responsible."
       },
       {
         "choiceId": "b",
-        "text": "The evidence supported the allegation, but did not settle whether the alleged act occurred."
+        "text": "The log supports an entry inference; the inventory settles which tools were missing; neither record by itself settles who was responsible."
       },
       {
         "choiceId": "c",
-        "text": "The evidence established the alleged act, but did not establish the motive behind it."
+        "text": "The log supports an entry inference; the inventory offers only tentative support about missing tools; neither record by itself settles who was responsible."
       },
       {
         "choiceId": "d",
-        "text": "The evidence favoured innocence, but did not completely disprove the allegation."
+        "text": "The log supports an entry inference; the inventory settles which tools were missing; the two stated judgments identify the badge owner as responsible."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Dispositive means settling or determining the issue, not merely being relevant or persuasive. The timing offers positive support, while the alternative explanation prevents a decisive conclusion about the act. The alternatives either erase the positive support, treat the act as established, or reverse the direction of the evidence.",
+    "explanation": "Dispositive settles the specified issue, while probative gives relevant support without necessarily settling it. The log therefore supports entry, the inventory conclusively identifies the missing tools within the report's assessment, and neither stated judgment settles the responsible person's identity. Calling the log worthless removes its probative value; calling the inventory tentative weakens its expressly dispositive force; naming the badge owner transfers a conclusion about tools or entry to responsibility. The answer must preserve strength and scope for both records, not just match one word.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
         "Vocabulary reference batch: Image 1, synonym item 4; target ephemeral; task synonym. See vocabulary-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions.",
+        "Cambridge Dictionary, dispositive; https://dictionary.cambridge.org/us/dictionary/english/dispositive?topic=decisions-and-deciding; meaning verified 2026-11-01."
       ]
     }
   },

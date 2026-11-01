@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-reading-english-01",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -10,30 +10,30 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Which policy best reconciles the handbook’s two commitments while addressing the reason for the failed trial?",
+    "stem": "Which assessment best distinguishes the demonstrated failure, a proportionate correction, and the limit of what that correction would establish?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Allow borrowers to keep tools until they judge them ready, because readiness matters more than the next reservation."
+        "text": "The Friday-only hold corrects the release failure while preserving safe tools' timely availability; checking the register would establish that every fault had been detected."
       },
       {
         "choiceId": "b",
-        "text": "Require return by the deadline, but place tools with unresolved damage in a marked hold area for staff assessment."
+        "text": "A fault-specific hold and a register check address the documented reissue failure without routinely delaying safe returns; they do not prove that unreported faults are absent."
       },
       {
         "choiceId": "c",
-        "text": "Issue every returned tool to the next borrower, while recording any unresolved damage in the register."
+        "text": "A fault-specific hold preserves availability, but the accurate damage entries show that release decisions were already adequate and need no register check."
       },
       {
         "choiceId": "d",
-        "text": "Require borrowers to replace any damaged tool before reporting the problem or returning it."
+        "text": "A Friday-only hold prevents reissue before inspection, but the punctual return record establishes that missing fault reports are no longer a concern."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "The deadline protects access, while a marked hold prevents an unsafe tool from being treated as usable. The trial failed because returned tools entered the available stock without a safety check. Indefinite retention undermines access, automatic reissue repeats the failure, and compulsory replacement before reporting delays staff knowledge and return.",
+    "explanation": "Accurate entries were bypassed when shelf presence was treated as readiness. A fault-specific hold plus a release-time register check links known faults to release decisions while avoiding a blanket weekly delay for safe tools. The mechanic explicitly limits this remedy: unreported defects may still exist. The Friday hold needlessly delays safe tools, accurate recording did not ensure correct release, and punctual returns say nothing about completeness of fault detection.",
     "reference": {
       "referenceId": "f01-reading-english-01-passage",
-      "referenceVersion": 2
+      "referenceVersion": 3
     },
     "provenance": {
       "kind": "original",
@@ -41,7 +41,8 @@
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
         "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -184,7 +185,7 @@
   },
   {
     "questionId": "f01-reading-english-05",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -193,30 +194,30 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Which conclusion best distinguishes what the road reopening would test from what the steady borrowing figures already establish?",
+    "stem": "Which account correctly explains all three editorial decisions: rejecting 'unchanged', rejecting 'replica', and retaining the worn dial?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Steady borrowing establishes that no reader was inconvenienced, so reopening can test only the driver’s preference."
+        "text": "The new spring rules out 'unchanged'; one replacement makes 'replica' appropriate despite surviving material; the worn dial preserves evidence without proving a complete repair history."
       },
       {
         "choiceId": "b",
-        "text": "Reopening would prove that the court caused the decline in readers that the traders described."
+        "text": "Keeping the old spring makes 'unchanged' appropriate despite the replacement; surviving material rules out 'replica'; the worn dial preserves evidence without proving a complete repair history."
       },
       {
         "choiceId": "c",
-        "text": "The figures establish that the same people borrowed at both locations, but reopening would reveal whether shade mattered."
+        "text": "The new spring rules out 'unchanged'; surviving material rules out 'replica'; the worn dial and successful restart together establish that all earlier repairs have been identified."
       },
       {
         "choiceId": "d",
-        "text": "Reopening could help distinguish the effects of location on particular users, while stable totals alone do not establish unchanged access for each user."
+        "text": "The new spring rules out 'unchanged'; surviving material rules out 'replica'; the worn dial preserves repair evidence without establishing that the repair history is complete."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Stable totals do not identify individual borrowers or measure inconvenience. A return to the old location could supply comparative evidence about which users attend, though it would not by itself prove a causal effect. The traders’ suggested decline is unsupported, and the passage expressly leaves membership changes uncertain.",
+    "explanation": "The curator rejects both 'unchanged' and 'replica'. The new spring is a real alteration even though the old part was retained; substantial surviving historical material prevents treating the whole clock as a replica. Keeping the dial preserves traces, but those traces and successful operation do not establish that every past repair has been identified. Each alternative preserves two of these distinctions but changes the third, so one isolated fact cannot identify the correct account.",
     "reference": {
       "referenceId": "f01-reading-english-05-passage",
-      "referenceVersion": 2
+      "referenceVersion": 3
     },
     "provenance": {
       "kind": "original",
@@ -224,7 +225,8 @@
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
         "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

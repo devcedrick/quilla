@@ -366,7 +366,8 @@ describe("seed-family validation (ADR 0013)", () => {
     ).flat();
     const family = questions.filter((q) => q.family === 1);
     expect(family).toHaveLength(270);
-    // Revision-4 reviewed content fingerprint, after substantive difficulty edits.
+    // Revision-5 reviewed content fingerprint; editorial changes are itemized in
+    // docs/content/family01-quality-revision.md, not label-only adjustments.
     const digest = createHash("sha256")
       .update(
         JSON.stringify(
@@ -375,7 +376,7 @@ describe("seed-family validation (ADR 0013)", () => {
       )
       .digest("hex");
     expect(digest).toBe(
-      "bf9fb88245299dacfa2d0cc9040270eef811ff5ec40115fef6aa903aa8256ff8",
+      "c210317d778e5a9edd74d1557791ca54a02687f265739ea6af0d13f65c7298e9",
     );
   });
 

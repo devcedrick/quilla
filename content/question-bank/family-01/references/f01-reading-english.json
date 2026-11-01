@@ -1,15 +1,15 @@
 [
   {
     "referenceId": "f01-reading-english-01-passage",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "language": "english",
-    "title": "The Shared Tool Room",
+    "title": "Tools Between Reservations",
     "blocks": [
       {
         "type": "text",
-        "text": "The residents define stewardship as preserving shared tools for later users, not merely keeping them secure. Borrowers must clean tools, report damage, and return them by the next reservation. A trial required every tool to be put straight back on its shelf when returned. Returns became more punctual, yet two borrowers received faulty drills: the damage had been recorded, but nobody checked the register before issuing them. Some residents proposed letting borrowers keep faulty tools until repaired. The coordinator objected that an indefinite absence would conceal shortages and make reservations unreliable. She asked for a procedure that would preserve punctual return without treating return as proof of readiness."
+        "text": "The tool room has two obligations: a returned tool must be available for its next reservation if safe, and an unresolved safety report must prevent its reissue. The trial met its return deadlines but staff issued two drills despite damage entries in the register. The entries were accurate; the issuing clerk had checked only whether each drill was back on its shelf. One resident proposed keeping every returned tool out until a mechanic visited each Friday. Another proposed a separate hold rack only for reported faults, with the issuing clerk checking the register before each release. The mechanic warned that a clean register could not certify tools for faults nobody had reported. The coordinator therefore distinguished correcting the demonstrated release failure from guaranteeing that no future defect could escape detection."
       }
     ],
     "provenance": {
@@ -18,7 +18,8 @@
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
         "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
-        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -92,15 +93,15 @@
   },
   {
     "referenceId": "f01-reading-english-05-passage",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "language": "english",
-    "title": "A Different Stop",
+    "title": "Keeping the Clock's History",
     "blocks": [
       {
         "type": "text",
-        "text": "Repairs closed the only road wide enough for the travelling library van to reach its market stop. The library moved temporarily to a covered court. Traders treated the move as evidence that readers had abandoned the service, but borrowing totals remained steady. The librarian cautioned that this did not show everyone was equally well served: the register counted loans, not the identities of people who could no longer reach the van. The court was closer to a school but farther from several older readers’ homes. She planned to compare the users of both stops after the road reopened, rather than infer their experiences from a single total."
+        "text": "The museum's clock could not run with its cracked spring. Conservators fitted a new spring but retained the old one in a labelled tray. They left the worn dial untouched because repainting would erase marks showing how earlier owners had repaired it. The curator wanted visitors to see the hands move, yet rejected the label 'an unchanged working original'. An assistant suggested 'a replica', since one part was new. The curator rejected that too: most of the mechanism and the dial remained historical material. Her final note said the display should distinguish what survives, what was replaced, and what operation alone cannot establish. She also refused to use the successful restart as evidence that every earlier repair had been identified."
       }
     ],
     "provenance": {
@@ -109,7 +110,8 @@
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
         "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
-        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

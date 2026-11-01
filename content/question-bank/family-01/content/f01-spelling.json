@@ -127,7 +127,7 @@
   },
   {
     "questionId": "f01-spelling-04",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -136,40 +136,42 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Choose the correctly spelled word to complete the sentence.\n\nThe clerk checked that all _____ attachments were included.",
+    "stem": "Choose the pair in which both words are correctly spelled. Insert them in order.\n\nThe clerk attached the _____ supporting records and retained the payment _____.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "neccessary"
+        "text": "necessary; reciept"
       },
       {
         "choiceId": "b",
-        "text": "necessary"
+        "text": "necessary; receipt"
       },
       {
         "choiceId": "c",
-        "text": "necesary"
+        "text": "necesary; receipt"
       },
       {
         "choiceId": "d",
-        "text": "neccessery"
+        "text": "neccessary; reciept"
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Necessary has one c, two consecutive s's, and the ending -ary. Neccessary adds a c; necesary drops an s; neccessery also changes the ending.",
+    "explanation": "Necessary has one c and two s's; receipt has ei after c and ends in pt. The correct pair preserves both spellings. The pair containing necessary and reciept fails on receipt; the pair containing necesary and receipt fails on necessary; neccessary adds a c and reciept reverses ei. Knowing just one target does not eliminate every distractor.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
       "sources": [
         "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
-        "https://dictionary.cambridge.org/dictionary/english/necessary"
+        "https://dictionary.cambridge.org/dictionary/english/necessary",
+        "Collins English Dictionary, receipt; https://www.collinsdictionary.com/dictionary/english/receipt; headword verified 2026-11-01.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
   {
     "questionId": "f01-spelling-05",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -178,34 +180,36 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Choose the correctly spelled word to complete the sentence.\n\nAccess to the archive is a _____ granted only to designated staff.",
+    "stem": "The draft reads: 'Access is a priviledge available only to eligible staff.' Which edit corrects the spelling while leaving the already correct word unchanged?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "privelege"
+        "text": "Change priviledge to privilege and eligible to elligible."
       },
       {
         "choiceId": "b",
-        "text": "priviledge"
+        "text": "Leave priviledge unchanged and change eligible to eligable."
       },
       {
         "choiceId": "c",
-        "text": "privilege"
+        "text": "Change priviledge to privilege and leave eligible unchanged."
       },
       {
         "choiceId": "d",
-        "text": "privilage"
+        "text": "Change priviledge to privelege and leave eligible unchanged."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Privilege is spelled p-r-i-v-i-l-e-g-e. Privelege changes the second i to e, priviledge adds d, and privilage changes the e after l to a.",
+    "explanation": "Privilege has no d and is spelled p-r-i-v-i-l-e-g-e; eligible is already correct. The correct edit repairs the first word without introducing a second error. Elligible adds l, eligable substitutes a for i, and privelege replaces the second i with e. Each alternative either retains an error or creates one.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
       "sources": [
         "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
-        "https://dictionary.cambridge.org/dictionary/english/privilege"
+        "https://dictionary.cambridge.org/dictionary/english/privilege",
+        "Oxford Advanced Learner's Dictionary, eligible; https://www.oxfordlearnersdictionaries.com/definition/english/eligible; headword verified 2026-11-01.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -254,7 +258,7 @@
   },
   {
     "questionId": "f01-spelling-07",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -263,40 +267,42 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Choose the correctly spelled word to complete the sentence.\n\nPlease return the completed service-feedback _____ to the reception desk.",
+    "stem": "Choose the pair in which both words are correctly spelled. Insert them in order.\n\nThe _____ does not ask for a name, so responses may remain _____.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "questionaire"
+        "text": "questionnaire; anonimous"
       },
       {
         "choiceId": "b",
-        "text": "questionnairre"
+        "text": "questionaire; anonymous"
       },
       {
         "choiceId": "c",
-        "text": "questionnare"
+        "text": "questionnairre; anonimous"
       },
       {
         "choiceId": "d",
-        "text": "questionnaire"
+        "text": "questionnaire; anonymous"
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Questionnaire has two consecutive n's and ends in -aire, with one r. Questionaire drops an n, questionnairre adds an r, and questionnare omits i.",
+    "explanation": "Questionnaire has double n and one r in -aire; anonymous contains -onym-, not -onim-. The correct pair gets both right. One distractor has only anonymous correct, another only questionnaire correct, and the remaining pair misspells both. The task therefore checks two distinct spelling patterns, not a single familiar consonant.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
       "sources": [
         "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
-        "https://dictionary.cambridge.org/dictionary/english/questionnaire"
+        "https://dictionary.cambridge.org/dictionary/english/questionnaire",
+        "Collins English Dictionary, anonymous; https://www.collinsdictionary.com/us/dictionary/english/anonymous; headword verified 2026-11-01.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
   {
     "questionId": "f01-spelling-08",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -305,34 +311,36 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Choose the correctly spelled word to complete the sentence.\n\nThe records assistant logged all incoming _____ before distributing it.",
+    "stem": "Choose the pair in which both words are correctly spelled. Insert them in order.\n\nThe incoming _____ mentions an _____ containing the signed form.",
     "choices": [
       {
         "choiceId": "a",
-        "text": "corespondence"
+        "text": "correspondence; enclousure"
       },
       {
         "choiceId": "b",
-        "text": "correspondence"
+        "text": "correspondence; enclosure"
       },
       {
         "choiceId": "c",
-        "text": "correspondance"
+        "text": "correspondance; enclosure"
       },
       {
         "choiceId": "d",
-        "text": "corresspondence"
+        "text": "corespondence; enclousure"
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Correspondence has two consecutive r's, one s, and the ending -ence. Corespondence drops an r, correspondance changes the ending, and corresspondence adds an s.",
+    "explanation": "Correspondence has double r and ends in -ence; enclosure is spelled e-n-c-l-o-s-u-r-e, without an extra u before s. The correct pair checks both forms. Correspondance changes -ence to -ance, corespondence drops r, and enclousure adds a misplaced u. Either correctly recognized target still leaves two candidate pairs until the other is checked.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and editorial review; human review and learner calibration pending",
       "sources": [
         "Maintainer Spelling reference image, items 41–50; format reference only. Original prompts and options; see spelling-family01-ledger.md.",
-        "https://dictionary.cambridge.org/dictionary/english/correspondence"
+        "https://dictionary.cambridge.org/dictionary/english/correspondence",
+        "Collins English Dictionary, enclosure, noun sense 5; https://www.collinsdictionary.com/dictionary/english/enclosure; verified 2026-11-01.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

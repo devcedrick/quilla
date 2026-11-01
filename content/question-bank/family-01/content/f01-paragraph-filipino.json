@@ -185,7 +185,7 @@
   },
   {
     "questionId": "f01-paragraph-filipino-05",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -194,7 +194,7 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "medium",
-    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw na talata. Alin ang wastong ayos upang malinaw ang ugnayan ng kuwaderno, larawan, pangalan, at pagbabalik?",
+    "stem": "Ang P1, P2, at iba pa ay mga nakapirming pangalan ng bahagi, hindi titik ng sagot. Ayusin ang lahat ng bahagi upang makabuo ng malinaw at magkakaugnay na talata. Alin ang wastong pagkakasunod-sunod?",
     "choices": [
       {
         "choiceId": "a",
@@ -224,7 +224,8 @@
       "author": "Quilla",
       "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
       "sources": [
-        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

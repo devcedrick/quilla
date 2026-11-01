@@ -43,7 +43,7 @@
   },
   {
     "questionId": "f01-grammar-filipino-02",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -72,14 +72,15 @@
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Hiwalay at tahasan ang gumaganap sa bawat sugnay ng ikatlong pangungusap. Ang una ay nag-uugnay sa parehong kilos sa parehong pangkat; binabaligtad ng ikalawa ang tungkulin; isinasama ng ikaapat ang mga kawani sa paglagda.",
+    "explanation": "Sa wastong rebisyon, tahasang ang mga kawani ang nagsusuri at ang pinuno lamang ang lumalagda. Ang rebisyong pinag-iisa ang dalawang kilos sa parehong pangkat ay nagbabago ng mga gumaganap; ang pagpapalit ng tungkulin at pagsasama sa mga kawani sa paglagda ay hindi rin nagpapanatili sa nilalayong kahulugan.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
         "Grammar reference batch: Image 4, pagkilala sa mali item 2; plural personal marker sina. Task identifying-errors. See grammar-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -212,7 +213,7 @@
   },
   {
     "questionId": "f01-grammar-filipino-06",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -221,33 +222,34 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "easy",
-    "stem": "Piliin ang angkop na salita. Sinuri ___ mabuti ng tagapangasiwa ang bawat bote bago ito nilagyan ng etiketa.",
+    "stem": "Piliin ang pang-ugnay na nagpapanatili sa sanhi, hindi sa layunin, ng pangyayari: 'Hindi natuloy ang pulong _____ nawalan ng kuryente ang gusali.'",
     "choices": [
       {
         "choiceId": "a",
-        "text": "nang"
+        "text": "dahil"
       },
       {
         "choiceId": "b",
-        "text": "ng"
+        "text": "upang"
       },
       {
         "choiceId": "c",
-        "text": "ni"
+        "text": "bagaman"
       },
       {
         "choiceId": "d",
-        "text": "nina"
+        "text": "kung"
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Nang ang ginagamit upang iugnay ang kilos na sinuri sa paraan nitong mabuti: sinuri nang mabuti. Hindi ng mabuti ang kailangan dahil hindi mabuti ang bagay na sinusuri; bawat bote ang sinusuri. Ang ni at nina ay mga pantukoy sa pangalan ng tao.",
+    "explanation": "Dahil ang nag-uugnay sa pagkawala ng kuryente bilang sanhi ng hindi pagkatuloy. Upang ay pananda ng layunin, bagaman ay pagsalungat, at kung ay kundisyon. Ang tanong ay tungkol sa sanhi na ipinagpapalagay na nangyari, hindi sa planong magdulot ng pagkawala ng kuryente.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
       "sources": [
-        "Grammar reference batch: Image 7, wastong gamit item 20; nang/ng distinction, new manner rather than time context. Task correct-usage. See grammar-family01-ledger.md."
+        "Grammar reference batch: Image 7, wastong gamit item 20; nang/ng distinction, new manner rather than time context. Task correct-usage. See grammar-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   }

@@ -47,7 +47,7 @@
   },
   {
     "questionId": "f01-reading-filipino-02",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -56,30 +56,30 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "hard",
-    "stem": "Aling ulat ang pinakatapat sa pagkakaiba ng pagpapaliban, pagtanggi, at pahintulot na makikita sa talata?",
+    "stem": "Aling tala ng kalihim ang sabay na nagpapanatili sa katayuan ng panukala, sa kulang na kailangan, at sa hangganan ng pasiya para sa Sabado?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Tinanggihan ang pagpipintura at pinahintulutang kumpunihin agad ang lahat ng sirang bangko."
+        "text": "Hindi tinanggihan ang layunin; kailangan pa ang pagtataya at hiwalay na boto, ngunit sapat ang maagang pagtatapos upang simulan ang pagpipintura sa Sabado."
       },
       {
         "choiceId": "b",
-        "text": "Pinahintulutan ang pagpipintura kapag natapos nang maaga ang tatlong nakatalang gawain."
+        "text": "Tinanggihan ng lupon ang mismong layunin; kailangan pa ang pagtataya at hiwalay na boto, at hindi mapapalawak ng maagang pagtatapos ang pasiya para sa Sabado."
       },
       {
         "choiceId": "c",
-        "text": "Hindi kabilang ang pagpipintura sa kasalukuyang pahintulot, ngunit maaari pa itong talakayin sa hiwalay na pasiya sa susunod na buwan."
+        "text": "Hindi tinanggihan ang layunin, ngunit kailangan pa ang pagtataya at hiwalay na boto; ang maagang pagtatapos ay hindi magpapalawak sa pasiya para sa Sabado."
       },
       {
         "choiceId": "d",
-        "text": "Awtomatikong pinahintulutan ang pagpipintura sa susunod na buwan dahil walang tumutol dito."
+        "text": "Hindi tinanggihan ang layunin; kumpleto na ang dalawang kailangan at hiwalay na boto na lamang ang hinihintay; hindi mapapalawak ng maagang pagtatapos ang pasiya para sa Sabado."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Ang pagpapaliban ay hindi pinal na pagtanggi at hindi rin awtomatikong pahintulot. Tahasang itinakda ang hiwalay na pasiya. Pag-uulat lamang ng sirang bangko ang kasama; hindi nito pinahihintulutan ang pagkukumpuni. Wala ring eksepsiyon para sa maagang pagtatapos.",
+    "explanation": "Magkahiwalay ang pahintulot ng may-ari, pagtataya ng gastos, at boto ng lupon. Isa pa lamang sa dalawang kailangan bago ang boto ang natugunan. Hindi pagtanggi sa layunin ang pagpapaliban, at hindi mapapalawak ng maagang pagtatapos ang pasiya. Lahat ng pagpipilian ay kumikilala sa hiwalay na boto, ngunit ang mga mali ay nagdaragdag ng di-pinahintulutang eksepsiyon, nagsasabing tinanggihan ang layunin, o ipinapalagay na kumpleto na ang dalawang kailangan. Kaya dapat suriin ang lahat ng magkakaugnay na pahayag.",
     "reference": {
       "referenceId": "f01-reading-filipino-02-passage",
-      "referenceVersion": 2
+      "referenceVersion": 3
     },
     "provenance": {
       "kind": "original",
@@ -87,7 +87,8 @@
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
         "Reading reference batch: Tukuyin ang hindi kabilang ayon sa teksto; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -139,7 +140,7 @@
   },
   {
     "questionId": "f01-reading-filipino-04",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -148,30 +149,30 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "hard",
-    "stem": "Aling pasiya ang naaayon sa dalawang magkaibang pahintulot at sa dahilan ng pagpapaliban ng katalogo?",
+    "stem": "Aling pares ng susunod na hakbang ang sumusunod sa magkakahiwalay na saklaw ng pagpili at pahintulot?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Ituloy ang pinahintulutang pagtatanghal, ngunit huwag munang ilathala ang larawan sa katalogo hangga’t walang hiwalay na pahintulot."
+        "text": "Itanghal ang Lawa ayon sa pahintulot; hingin ang pahintulot para sa katalogo sa halip na ipalagay na sapat ang pagputol sa larawan."
       },
       {
         "choiceId": "b",
-        "text": "Ilathala ang lahat ng isinumite dahil ang pagsusumite ay katumbas ng pahintulot sa katalogo."
+        "text": "Itanghal ang Lawa ayon sa pahintulot; gamitin sa katalogo ang Daan dahil pareho namang isinumite ni Neri."
       },
       {
         "choiceId": "c",
-        "text": "Ibalik ang lahat ng napili dahil nawalan ng bisa ang pahintulot sa eksibit nang maantala ang katalogo."
+        "text": "Ipagpaliban ang pagtatanghal ng Lawa hanggang may pahintulot sa katalogo; hingin ang bagong pagpili bago gamitin ang Daan."
       },
       {
         "choiceId": "d",
-        "text": "Ipalathala lamang ang mga hindi napili dahil wala silang gagamiting puwesto sa eksibit."
+        "text": "Itanghal ang Lawa ayon sa pahintulot; gumamit ng pinutol na kopya nito sa katalogo dahil wala nang taong makikilala."
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Magkaiba ang pahintulot sa pisikal na pagtatanghal at sa paglalathala. Hindi nawawalan ng bisa ang una dahil wala pa ang ikalawa; hindi rin kusang naililipat ang pahintulot sa ibang gamit o sa ibang larawang isinumite.",
+    "explanation": "May pahintulot sa pisikal na pagtatanghal ng Lawa, kaya hindi iyon kailangang ipagpaliban. Wala pa ang pahintulot sa katalogo, at tahasang hindi ito awtomatikong nalilikha ng pagputol sa larawan. Ang Daan ay wala ring kinakailangang bagong pagpili at pahintulot. Ang mga alternatibo ay may isang wastong hakbang ngunit sinasamahan ito ng di-awtorisadong paggamit o di-kailangang pagpapaliban.",
     "reference": {
       "referenceId": "f01-reading-filipino-04-passage",
-      "referenceVersion": 2
+      "referenceVersion": 3
     },
     "provenance": {
       "kind": "original",
@@ -179,7 +180,8 @@
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
         "Reading reference batch: Suriin ang hindi suportadong pangkalahatang pahayag; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -230,7 +232,7 @@
   },
   {
     "questionId": "f01-reading-filipino-06",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -239,37 +241,38 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "medium",
-    "stem": "Ano ang pinakamakatwirang hinuha tungkol sa paraan ni Lira?",
+    "stem": "Bakit pinakamakatuwirang unawain ang hindi agad pagtukoy ng guro sa mali bilang bahagi ng pagtuturo, hindi bilang pagpapabaya?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Nais niyang pumili ng isang salaysay na papalit sa iba pang bersiyon"
+        "text": "Ipinakikita nitong hindi na mahalaga ang bilis basta natatapos ni Elio ang piyesa."
       },
       {
         "choiceId": "b",
-        "text": "Itinuturing niyang patunay ng katumpakan ang pagkakakilala sa nagsalaysay"
+        "text": "Pinatunayan ng dalawang rekording na wala nang pagkakamali sa pagtugtog ni Elio."
       },
       {
         "choiceId": "c",
-        "text": "Nais niyang mapanatili ang pinagmulan at pagkakaiba ng mga salaysay"
+        "text": "Ginamit ng guro ang paghahambing upang matukoy mismo ni Elio ang suliranin bago planuhin ang pagsasanay."
       },
       {
         "choiceId": "d",
-        "text": "Nais niyang ituring na tiyak ang detalye kapag nabanggit ito ng higit sa isang residente"
+        "text": "Iniwasan ng guro ang anumang puna upang si Elio na lamang ang magpasiyang tumigil."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Ang pagtatala kung sino ang nagsabi ng bawat sagot at ang pagpapanatiling magkahiwalay sa mga alaalang hindi nagtutugma ay sumusuporta sa pag-iingat sa pinagmulan at pagkakaiba ng mga salaysay. Hindi sinabing pumili siya ng isang bersiyong papalit sa iba. Ang pagkakakilala sa nagsalaysay ay tala ng pinagmulan, hindi patunay na tama ang salaysay. Wala ring tuntuning nagsasabing tiyak na ang isang detalye kapag nabanggit ito ng higit sa isang residente. Ang mga ito ay dagdag na palagay tungkol sa pagpili o pagpapatunay na hindi ibinigay sa talata.",
+    "explanation": "May magkakaugnay na hakbang ang guro: paghahambing ng rekording, sariling pagtukoy ni Elio sa paglihis, at pagpaplano ng pagsasanay. Ipinahihiwatig nito ang ginabayang pagsusuri sa sariling gawa, hindi pagbalewala sa bilis, patunay ng pagiging walang mali, o paghimok na tumigil.",
     "reference": {
       "referenceId": "f01-reading-filipino-06-passage",
-      "referenceVersion": 1
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
       "sources": [
-        "Reading reference batch: Hinuha sa layunin batay sa kilos ng tauhan; extension of the supplied comprehension formats. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+        "Reading reference batch: Hinuha sa layunin batay sa kilos ng tauhan; extension of the supplied comprehension formats. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   }

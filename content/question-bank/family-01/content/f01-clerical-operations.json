@@ -42,7 +42,7 @@
   },
   {
     "questionId": "f01-clerical-operations-02",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -51,33 +51,34 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "easy",
-    "stem": "A sales dispatch file is limited to the customer’s order, the seller’s invoice, and the delivery acknowledgement. Which document belongs in a different file?",
+    "stem": "The current dispatch file contains only the customer's order, the invoice for that order, and its signed delivery acknowledgement. Which record should be filed elsewhere?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Customer purchase order"
+        "text": "The customer's purchase order for this dispatch"
       },
       {
         "choiceId": "b",
-        "text": "Seller’s sales invoice"
+        "text": "The seller's invoice for the dispatched goods"
       },
       {
         "choiceId": "c",
-        "text": "Student academic report card"
+        "text": "The supplier's quotation for a possible future order"
       },
       {
         "choiceId": "d",
-        "text": "Signed delivery acknowledgement"
+        "text": "The customer's signed acknowledgement of this delivery"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "The customer purchase order, seller’s sales invoice, and signed delivery acknowledgement are expressly included in the dispatch file. A student academic report card is outside this file’s stated purpose. This is a classification under the given filing rule, not a claim that a business can never hold an academic record.",
+    "explanation": "The rule includes the order, invoice, and delivery acknowledgement for the current dispatch. A quotation for a possible future order belongs elsewhere because it is not one of those current-dispatch records. It is a plausible business record, but the office's stated file scope does not include it.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and editorial checks; maintainer review pending",
       "sources": [
-        "Clerical reference batch: source item 107; original scenario and choices. See clerical-operations-family01-ledger.md."
+        "Clerical reference batch: source item 107; original scenario and choices. See clerical-operations-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

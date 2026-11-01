@@ -903,7 +903,7 @@
   },
   {
     "questionId": "f01-numerical-23",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -912,39 +912,40 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "The successive increases in this sequence are 1², 2², 3², 4², and so on: 2, 3, 7, 16, 32, __. What is the next term?",
+    "stem": "A sequence begins 2, 3. Starting with the third term, each term is twice the preceding term minus the term two places earlier, plus 1. What is the sixth term?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "48"
+        "text": "12"
       },
       {
         "choiceId": "b",
-        "text": "56"
+        "text": "16"
       },
       {
         "choiceId": "c",
-        "text": "57"
+        "text": "17"
       },
       {
         "choiceId": "d",
-        "text": "64"
+        "text": "18"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "The next increase is 5² = 25. Add it to 32: 32 + 25 = 57.",
+    "explanation": "Use both previous terms at every step: the third is 2(3)−2+1=5; the fourth is 2(5)−3+1=8; the fifth is 2(8)−5+1=12; the sixth is 2(12)−8+1=17. Twelve stops one step early; 16 omits the final +1; 18 extends an incorrect constant increment. The recurrence is specified so no guess about an unstated pattern is needed.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
       "sources": [
-        "Maintainer Numerical reference image batch; original changing differences problem. See numerical-family01-ledger.md."
+        "Maintainer Numerical reference image batch; original changing differences problem. See numerical-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
   {
     "questionId": "f01-numerical-24",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -953,33 +954,34 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Starting with 6, a sequence alternates between multiplying by 3 and subtracting 2: 6, 18, 16, 48, 46, 138, __. What comes next?",
+    "stem": "A display starts at 10. Operation A adds 6; operation B divides the current value by 2. The machine repeats A, A, B in that order. What value is displayed after the fifth operation?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "140"
+        "text": "17"
       },
       {
         "choiceId": "b",
-        "text": "414"
+        "text": "13"
       },
       {
         "choiceId": "c",
-        "text": "134"
+        "text": "40"
       },
       {
         "choiceId": "d",
-        "text": "136"
+        "text": "23"
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "The last step multiplied 46 by 3. The next step subtracts 2, giving 138 − 2 = 136.",
+    "explanation": "Track both the operation cycle and current value: after operations 1–5 the displays are 16, 22, 11, 17, 23. Seventeen stops at operation 4. Thirteen results from incorrectly alternating A and B (16, 8, 14, 7, 13). Forty treats every operation as adding 6 and ignores B. The correct value requires preserving the specified A, A, B cycle.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and arithmetic checks; editorial review and learner calibration pending",
       "sources": [
-        "Maintainer Numerical reference image batch; original alternating operations problem. See numerical-family01-ledger.md."
+        "Maintainer Numerical reference image batch; original alternating operations problem. See numerical-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

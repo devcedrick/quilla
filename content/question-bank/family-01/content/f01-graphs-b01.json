@@ -483,7 +483,7 @@
   },
   {
     "questionId": "f01-graphs-b01-12",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -492,32 +492,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "easy",
-    "stem": "How many seedlings were distributed altogether in May and June?",
+    "stem": "What is the range of the monthly seedling distribution totals shown in the chart?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "90"
+        "text": "10"
       },
       {
         "choiceId": "b",
-        "text": "100"
+        "text": "20"
       },
       {
         "choiceId": "c",
-        "text": "110"
+        "text": "40"
       },
       {
         "choiceId": "d",
-        "text": "120"
+        "text": "60"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "50 + 60 = 110 seedlings.",
+    "explanation": "The largest monthly total is 60 and the smallest is 20, so the range is 60−20=40 seedlings. Ten is the May–June difference, 20 is the minimum alone, and 60 is the maximum alone. A range uses both extremes, not a sum of selected months.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; maintainer review pending",
-      "sources": ["Reference images batch 1; see batch ledger"]
+      "sources": [
+        "Reference images batch 1; see batch ledger",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
     },
     "reference": {
       "referenceId": "f01-seedlings",
@@ -569,7 +572,7 @@
   },
   {
     "questionId": "f01-graphs-b01-14",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -578,32 +581,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "easy",
-    "stem": "What was the mean monthly distance patrolled from March through June, in kilometres?",
+    "stem": "Which pair of consecutive-month intervals shares the largest absolute increase in river patrol distance?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "48"
+        "text": "January–February and April–May"
       },
       {
         "choiceId": "b",
-        "text": "52"
+        "text": "January–February and May–June"
       },
       {
         "choiceId": "c",
-        "text": "54"
+        "text": "February–March and May–June"
       },
       {
         "choiceId": "d",
-        "text": "56"
+        "text": "March–April and May–June"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "The total was 48 + 40 + 56 + 72 = 216 km; 216/4 = 54 km.",
+    "explanation": "The consecutive changes are +8, +16, −8, +16, +16 km. The largest increase is 16 km. Both February–March and May–June have that increase, so their listed pair qualifies. The other pairs contain January–February (+8) or March–April (−8). This asks for a qualifying listed pair, not a claim that only two intervals reach the maximum.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; maintainer review pending",
-      "sources": ["Reference images batch 1; see batch ledger"]
+      "sources": [
+        "Reference images batch 1; see batch ledger",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
     },
     "reference": {
       "referenceId": "f01-river-patrol",
@@ -741,7 +747,7 @@
   },
   {
     "questionId": "f01-graphs-b01-18",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -750,32 +756,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "May’s distance patrolled was approximately what percentage of March’s distance?",
+    "stem": "The river distances for March, April, May, and June were covered in 4, 4, 7, and 9 patrol days respectively. Which month had the highest average distance per patrol day?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "85.71%"
+        "text": "April"
       },
       {
         "choiceId": "b",
-        "text": "110%"
+        "text": "May"
       },
       {
         "choiceId": "c",
-        "text": "116.67%"
+        "text": "March"
       },
       {
         "choiceId": "d",
-        "text": "150%"
+        "text": "June"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "56/48 × 100 is approximately 116.67%.",
+    "explanation": "Combine each chart distance with its own day count: March 48/4=12, April 40/4=10, May 56/7=8, and June 72/9=8 km per patrol day. March has the highest rate even though June has the greatest total distance. Comparing totals alone or using one common divisor would answer a different question.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted drafting; maintainer review pending",
-      "sources": ["Reference images batch 1; see batch ledger"]
+      "sources": [
+        "Reference images batch 1; see batch ledger",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
     },
     "reference": {
       "referenceId": "f01-river-patrol",

@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f01-vocabulary-filipino-01",
-    "version": 3,
+    "version": 4,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -10,34 +10,35 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "hard",
-    "stem": "Sa ulat, “pinasubalian” ng lupon ang paratang: iniharap nito ang orihinal na resibo na hindi tugma sa halagang ibinibintang, ngunit hindi pa nito nasuri ang ibang transaksiyon. Aling paglalahad ang pinakatumpak na nagpapanatili sa kahulugan at saklaw ng “pinasubalian”?",
+    "stem": "'Pinasubalian' ng lupon ang paratang na sobra ang isang bayad gamit ang magkatugmang resibo at tala ng bangko. Kinilala rin nitong kulang ang lagda sa hiwalay na tala ng paghahatid; hindi pa nito nasuri ang ibang bayad. Aling paglalahad ang nagpapanatili sa kilos, batayan, at magkakaibang saklaw ng mga konklusyon?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Ipinagpaliban ng lupon ang pagtalakay sa paratang hanggang matapos ang lahat ng pagsusuri."
+        "text": "Kinontra nang may katibayan ang paratang sa bayad; kinilala ang kulang na lagda; itinuring na wala na ring kamalian ang ibang bayad."
       },
       {
         "choiceId": "b",
-        "text": "Tinanggap ng lupon ang paratang ngunit ipinaliwanag kung bakit nangyari ang pagkukulang."
+        "text": "Kinontra nang may katibayan ang paratang sa bayad; itinuring na pinabubulaanan din nito ang kulang na lagda; hindi hinatulan ang ibang bayad."
       },
       {
         "choiceId": "c",
-        "text": "Pinatunayan ng lupon na walang anumang pagkakamali sa lahat ng transaksiyon."
+        "text": "Kinontra ang paratang bilang hinalang walang katibayan; kinilala ang kulang na lagda; hindi hinatulan ang ibang bayad."
       },
       {
         "choiceId": "d",
-        "text": "Kinontra ng lupon ang paratang sa pamamagitan ng ebidensiya, nang hindi nilulutas ang lahat ng ibang transaksiyon."
+        "text": "Kinontra nang may katibayan ang paratang sa bayad; kinilala ang kulang na lagda; hindi pa hinatulan ang ibang bayad."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Ang pinasubalian ay kinontra o itinanggi sa pamamagitan ng paliwanag o ebidensiya. May partikular na ebidensiya laban sa paratang ngunit limitado ang saklaw ng pagsusuri. Hindi ito simpleng pagpapaliban, pag-amin, o patunay na walang kamalian sa lahat ng transaksiyon.",
+    "explanation": "Ang pinasubalian ay kinontra o itinanggi gamit ang paliwanag o katibayan. Tumutugon ang resibo at tala ng bangko sa partikular na paratang sa halaga, hindi sa hiwalay na kakulangan ng lagda o sa ibang bayad na hindi pa nasusuri. Dapat sabay na mapanatili ang may-batayang pagtutol, ang kinilalang kakulangan, at ang hindi pa hinahatulan. Ang mga alternatibo ay nagpapawalang-sala sa labas ng saklaw, binabawi ang kinilalang kakulangan, o nag-aalis sa tahasang katibayan.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
         "Vocabulary reference batch: Image 5, kasingkahulugan item 1; target nauulinigan; task kasingkahulugan. See vocabulary-family01-ledger.md.",
-        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -125,7 +126,7 @@
   },
   {
     "questionId": "f01-vocabulary-filipino-04",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -134,33 +135,34 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "medium",
-    "stem": "Tigib ng tubig ang imbakan matapos ang magdamag na pag-ulan. Alin ang kasingkahulugan ng TIGIB sa pangungusap?",
+    "stem": "'Tigib ng pangamba si Leni habang naghihintay ng resulta, bagaman mahinahon ang kaniyang pagsasalita.' Aling pagbabago ang nagpapanatili sa kahulugan at sa pagsalungat ng dalawang sugnay?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "tuyong-tuyo"
+        "text": "Mabilis na nawala ang pangamba ni Leni kaya naging mahinahon ang kaniyang pagsasalita."
       },
       {
         "choiceId": "b",
-        "text": "butas-butas"
+        "text": "Nagkunwari lamang na nangangamba si Leni habang hinihintay ang resulta."
       },
       {
         "choiceId": "c",
-        "text": "punong-puno"
+        "text": "Matindi ang pangamba ni Leni kahit hindi ito nahalata sa mahinahon niyang pagsasalita."
       },
       {
         "choiceId": "d",
-        "text": "bagong-bago"
+        "text": "Nag-alinlangan si Leni kung dapat pa siyang magsalita bago lumabas ang resulta."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Ang tigib sa gamit na ito ay punong-puno. Tumutukoy ito sa dami ng tubig sa imbakan, hindi sa pagkakaroon ng butas, pagiging bago, o pagkatuyo nito.",
+    "explanation": "Ang tigib ay punong-puno; sa kontekstong ito, matindi ang damdaming pangamba. Ipinapakita ng bagaman ang kaibahan ng loob at panlabas na pagsasalita. Hindi sinabing nawala o nagkunwari lamang ang pangamba, at walang pag-aalinlangan sa pagsasalita na binanggit.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
       "sources": [
-        "Vocabulary reference batch: Image 5, kasingkahulugan item 4; target tigib; task kasingkahulugan. See vocabulary-family01-ledger.md."
+        "Vocabulary reference batch: Image 5, kasingkahulugan item 4; target tigib; task kasingkahulugan. See vocabulary-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },

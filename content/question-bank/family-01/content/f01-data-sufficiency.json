@@ -46,7 +46,7 @@
   },
   {
     "questionId": "f01-data-sufficiency-02",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -79,13 +79,14 @@
       }
     ],
     "correctChoiceId": "two",
-    "explanation": "Statement 1 permits different lengths, such as 8 and 9 cm, producing areas of 48 and 54 cm². Statement 2 fixes the area at 6 × 9 = 54 cm². Only statement 2 alone is sufficient.",
+    "explanation": "Statement 1 permits different lengths, such as 8 and 9 cm, producing areas of 48 and 54 cm². Statement 2 fixes the area at 6 × 9 = 54 cm². Only statement 2 alone is sufficient. Together, the length is still 9 cm and is greater than 6 cm, so the area remains uniquely 54 cm²; statement 1 adds no needed information.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
       "sources": [
-        "Maintainer Data Sufficiency reference image batch; original rectangle area scenario. See data-sufficiency-family01-ledger.md."
+        "Maintainer Data Sufficiency reference image batch; original rectangle area scenario. See data-sufficiency-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -226,7 +227,7 @@
   },
   {
     "questionId": "f01-data-sufficiency-06",
-    "version": 1,
+    "version": 2,
     "family": 1,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -259,13 +260,14 @@
       }
     ],
     "correctChoiceId": "one",
-    "explanation": "Every multiple of 6 is even, so statement 1 gives a definite yes without fixing n. Statement 2 permits 22 (yes) and 23 (no). Only statement 1 alone is sufficient. A yes/no question needs a fixed truth value, not necessarily a fixed number.",
+    "explanation": "Every multiple of 6 is even, so statement 1 gives a definite yes without fixing n. Statement 2 permits 22 (yes) and 23 (no). Only statement 1 alone is sufficient. A yes/no question needs a fixed truth value, not necessarily a fixed number. Together, n is a multiple of 6 greater than 20, such as 24; every permitted n is still even, so the answer remains definitely yes.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
       "sources": [
-        "Maintainer Data Sufficiency reference image batch; original definite yes/no scenario. See data-sufficiency-family01-ledger.md."
+        "Maintainer Data Sufficiency reference image batch; original definite yes/no scenario. See data-sufficiency-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
@@ -451,7 +453,7 @@
   },
   {
     "questionId": "f01-data-sufficiency-11",
-    "version": 2,
+    "version": 3,
     "family": 1,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -484,13 +486,14 @@
       }
     ],
     "correctChoiceId": "two",
-    "explanation": "Statement 1 says the full boxes contain 42 sheets but does not fix box capacity. Six boxes of 7 sheets or seven boxes of 6 sheets both leave 5 outside; in each case, the remainder is smaller than a box capacity. Statement 2 gives 47 = 7 × 6 + 5, so there are 7 full boxes. Only statement 2 alone is sufficient, and the statements are consistent.",
+    "explanation": "Statement 1 says the full boxes contain 42 sheets but does not fix box capacity. Six boxes of 7 sheets or seven boxes of 6 sheets both leave 5 outside; in each case, the remainder is smaller than a box capacity. Statement 2 gives 47 = 7 × 6 + 5, so there are 7 full boxes. Only statement 2 alone is sufficient, and the statements are consistent. Together, a capacity of 6 gives exactly 7 full boxes and 5 sheets left outside, agreeing with both statements and leaving the same unique answer.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original drafting and sufficiency review; human editorial review and learner calibration pending",
       "sources": [
-        "Maintainer Data Sufficiency reference image batch informed the format; replacement packing and division-remainder scenario. See data-sufficiency-family01-ledger.md."
+        "Maintainer Data Sufficiency reference image batch informed the format; replacement packing and division-remainder scenario. See data-sufficiency-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
       ]
     }
   },
