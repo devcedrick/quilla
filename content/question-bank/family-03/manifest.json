@@ -1,7 +1,7 @@
 {
   "formatVersion": 2,
   "corpusId": "cse-2027-family03",
-  "revision": 1,
+  "revision": 2,
   "taxonomyId": "cse-taxonomy-2027-v2",
   "blueprintIds": ["cse-professional-2027-v3", "cse-subprofessional-2027-v3"],
   "seedFamilies": [3],
@@ -33,5 +33,5 @@
       "assetFiles": ["references/f03-chart-assets.json"]
     }
   ],
-  "datasetChecksum": "c6fd2b9e59e0e859c455304aafa444f6c037d7a9ba159c09ba5bea7707c65aa8"
+  "datasetChecksum": "b23cf7d1875e3e74e21a030fdab75686fa5b48490872ab7158d017741a144e39"
 }

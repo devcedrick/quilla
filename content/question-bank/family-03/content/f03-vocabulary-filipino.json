@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f03-vocabulary-filipino-01",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -14,23 +14,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Pinagmulan ng alitan"
+        "text": "Pinagmulan ng isang alitan"
       },
       {
         "choiceId": "b",
-        "text": "Bahagi ng halamang sumisipsip ng tubig"
+        "text": "Bahaging sumisipsip ng tubig"
       },
       {
         "choiceId": "c",
-        "text": "Dahilan ng paglalakbay"
+        "text": "Daluyan ng dugo sa katawan"
       },
       {
         "choiceId": "d",
-        "text": "Ugnayan ng magkakamag-anak"
+        "text": "Ugnayang namamana sa angkan"
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Punong mangga ang paksa kaya literal na bahagi ng halaman ang ugat. Ang pinagmulan at sanhi ay matalinghagang gamit sa ibang konteksto.",
+    "explanation": "Punong mangga ang paksa kaya bahagi ng halaman na kumukuha ng tubig ang ugat. Maaari ring tumukoy ang ugat sa daluyan ng dugo, pinagmulan ng alitan o kaugnayang pang-angkan sa ibang konteksto, ngunit hindi iyon ang ipinahihiwatig ng pangungusap.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -44,7 +44,7 @@
   },
   {
     "questionId": "f03-vocabulary-filipino-02",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -65,11 +65,11 @@
       },
       {
         "choiceId": "c",
-        "text": "Simple at hindi masalimuot"
+        "text": "Hindi masalimuot"
       },
       {
         "choiceId": "d",
-        "text": "Mahina at madaling masira"
+        "text": "Madaling masira"
       }
     ],
     "correctChoiceId": "c",
@@ -87,7 +87,7 @@
   },
   {
     "questionId": "f03-vocabulary-filipino-03",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -96,7 +96,7 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "medium",
-    "stem": "'Bukal ang tubig sa paanan ng burol; bukal naman sa loob ni Dina ang pagtulong.' Aling pares ang tumutugma sa dalawang gamit ng BUKAL?",
+    "stem": "'Sa bukal sa paanan ng burol kumuha ng tubig si Dina; bukal naman sa loob niya ang pagtulong sa mga kapitbahay.' Aling pares ang tumutugma sa dalawang gamit ng BUKAL?",
     "choices": [
       {
         "choiceId": "a",
@@ -116,7 +116,7 @@
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Ang una ay likas na pinanggagalingan ng tubig; ang 'bukal sa loob' ay kusang pagnanais. Hindi awtomatikong malinaw ang tubig, at hindi sapilitan o binabayaran ang ikalawang diwa.",
+    "explanation": "Ang bukal sa paanan ng burol ay pinagmumulan ng tubig; ang bukal sa loob ay kusang pagnanais. Lugar na pinagkunan ang una, hindi ang mismong likido o isang sisidlan. Hindi tumutugma ang sapilitan o kapalit ng bayad sa ikalawang gamit.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -130,7 +130,7 @@
   },
   {
     "questionId": "f03-vocabulary-filipino-04",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -143,23 +143,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Mahal ang baul ngunit maikli ang usapan"
+        "text": "Mahal ang baul; maikli ang usapan."
       },
       {
         "choiceId": "b",
-        "text": "Malaki ang bigat ng baul ngunit hindi mabigat sa damdamin ang usapan."
+        "text": "Mabigat buhatin ang baul; magaan sa damdamin ang usapan."
       },
       {
         "choiceId": "c",
-        "text": "Mahirap buhatin ang baul ngunit walang saysay ang usapan"
+        "text": "Mabigat buhatin ang baul; walang saysay ang pinag-usapan."
       },
       {
         "choiceId": "d",
-        "text": "Marami ang laman ng baul ngunit pabulong ang usapan"
+        "text": "Marami ang laman ng baul; mahina ang tinig sa pag-uusap."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Pisikal na bigat ang una at hindi mabigat o tensiyosong paksa ang ikalawa. Hindi nito tinitiyak ang presyo, haba, saysay o lakas ng tinig.",
+    "explanation": "Pisikal na bigat ang baul at hindi mabigat o tensiyosong paksa ang usapan. Hindi nito tinitiyak ang presyo, dami ng laman, haba o kawalang-saysay ng usapan, o lakas ng tinig.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -173,7 +173,7 @@
   },
   {
     "questionId": "f03-vocabulary-filipino-05",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -186,23 +186,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Pagpapabilis sa lahat ng yugto"
+        "text": "Paghahalo upang maging magkakatulad ang mga bahagi"
       },
       {
         "choiceId": "b",
-        "text": "Pagdaragdag ng bagong sangkap"
+        "text": "Pagpapadaan sa parehong hakbang, nang walang pagpili"
       },
       {
         "choiceId": "c",
-        "text": "Pagpapalit ng may-ari"
+        "text": "Pagtatanggal ng dumi, hindi pagpili ayon sa pamantayan"
       },
       {
         "choiceId": "d",
-        "text": "Paghihiwalay sa pamamagitan ng pamantayan o panala"
+        "text": "Pagpili o paghihiwalay gamit ang isang batayan"
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Panala ang gamit sa kape; pamantayan ang gamit sa pagpili ng mungkahi. Pagpili o paghihiwalay ang ugnayan, hindi simpleng pagdaragdag, pagpapabilis o pagmamay-ari.",
+    "explanation": "Sa kape, may pisikal na panala; sa mungkahi, pamantayan ang batayan ng pagpili. Paghihiwalay o pagpili ang magkatulad na ubod. Hindi paghahalo ang pagsala; hindi rin sapat ang pagdaan lamang sa isang hakbang. Ang dumi ay angkop sa literal na gamit ngunit hindi literal na inilalarawan ang mga mungkahi.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -216,7 +216,7 @@
   },
   {
     "questionId": "f03-vocabulary-filipino-06",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -225,27 +225,27 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "medium",
-    "stem": "'Tinimbang muna ni Olan ang mga dahilan bago siya nagpasiya.' Aling pangungusap ang gumagamit ng TINIMBANG sa kaparehong diwa?",
+    "stem": "'Tinimbang ni Olan ang mga dahilan bago siya nagpasiya; hindi niya basta binilang kung ilan ang pabor at ilan ang laban.' Aling paliwanag ang tumutugma sa TINIMBANG dito?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Tinimbang sa kilo ang sako bago ikarga."
+        "text": "Pinantay niya ang halaga ng magkasalungat na dahilan."
       },
       {
         "choiceId": "b",
-        "text": "Tinimbang ang alok batay sa gastos at pakinabang."
+        "text": "Sinuri niya ang bigat o saysay ng mga dahilan."
       },
       {
         "choiceId": "c",
-        "text": "Tinimbang ang bata sa klinika kahapon."
+        "text": "Tinaya niya ang gastos, hindi ang ibang batayan ng pasya."
       },
       {
         "choiceId": "d",
-        "text": "Tinimbang ng tindero ang tig-isang supot."
+        "text": "Ipinagpaliban niya ang pagpili hanggang mawala ang pagtutol."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Pagsusuri sa magkatunggaling konsiderasyon ang tinutukoy. Ang alok na sinusuri sa gastos at pakinabang ang kaparehong matalinghagang gamit; literal na sukat ang iba.",
+    "explanation": "Ang tinimbang ay masusing pagsusuri sa saysay o bigat ng magkakaibang konsiderasyon, hindi simpleng dami. Hindi nito ipinapantay ang halaga ng lahat, nililimitahan ang paghatol sa gastos, o hinihinging mawala muna ang pagtutol bago pumili.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -253,7 +253,8 @@
       "sources": [
         "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
         "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
-        "Diksiyonaryo.ph timbang/bigat endpoint retrieval incomplete; no claim of full headword verification; contextual meaning manually checked, independent bilingual review pending."
+        "Diksiyonaryo.ph timbang/bigat endpoint retrieval incomplete; no claim of full headword verification; contextual meaning manually checked, independent bilingual review pending.",
+        "Diksiyonaryo.ph, timbang; https://diksiyonaryo.ph/word/timbang; retrieved 2026-11-02; literal weight/equality senses verified; contextual evaluative extension is editorial and remains subject to bilingual review."
       ]
     }
   }

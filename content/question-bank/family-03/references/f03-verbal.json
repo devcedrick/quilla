@@ -61,7 +61,7 @@
   },
   {
     "referenceId": "f03-reading-english-04-passage",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "language": "english",
@@ -69,7 +69,7 @@
     "blocks": [
       {
         "type": "text",
-        "text": "A repair cooperative promises free adjustment for defects caused by its workmanship, but not for damage caused by misuse. When a repaired drawer jammed, the inspection found both an incorrectly fitted runner and a bent handle caused by an impact. The report said the runner alone explained the jamming and that the handle did not affect movement. The member requested a free runner adjustment and a free replacement handle. The cooperative accepted the first request but declined the second. It did not claim that misuse cancels every workmanship guarantee."
+        "text": "A repair cooperative promises free adjustment when an installation fault causes the reported malfunction and the malfunction is reported within 30 days of the work. Replacement of a part damaged later by an impact is charged separately. A drawer was reported as jamming on day 28 and examined on day 34. Its runner had been fitted at the wrong angle, and its handle had been bent by a later impact. With a straight borrowed handle but the original runner, it still jammed. With a correctly fitted runner but the bent handle, it moved freely. The owner requests a runner adjustment and a new handle. No decision on either request has yet been made."
       }
     ],
     "provenance": {
@@ -201,7 +201,7 @@
   },
   {
     "referenceId": "f03-reading-filipino-05-passage",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "language": "filipino",
@@ -209,7 +209,7 @@
     "blocks": [
       {
         "type": "text",
-        "text": "Sa paligsahang tumatanggap ng tula at maikling sanaysay, itinago sa mga hurado ang pangalan ng mga kalahok. Layunin nitong mabawasan ang impluwensiya ng pagkakakilala habang kinikilala pa rin ang magkaibang anyo. Nang suriin ang mga puna, napansing ang talinghaga sa tula ay madalas hingan ng literal na pagpapatunay, samantalang tinatanggap ang paghihinuha sa sanaysay. Iminungkahi ng pangkat na panatilihin ang pagtatago ng pangalan at linawin kung anong ebidensiya ang angkop sa bawat anyo. Bago gamitin ang bagong gabay sa susunod na paligsahan, nais nilang ipasuri ang iisang halimbawa sa iba't ibang hurado upang makita kung pare-pareho ang paglalapat. Hindi nila itinuring na patunay ng pantay na pagmamarka ang pagkakasundo lamang sa pulong."
+        "text": "Sa paligsahang tumatanggap ng tula at maikling sanaysay, hindi nakikita ng mga hurado ang pangalan ng may-akda. Layunin ng paligsahan na makilala ang bisa ng bawat anyo, hindi gawing magkatulad ang dalawa. Sa isang pagsubok, iisang talinghaga mula sa tula ang binasa ng dalawang hurado. Ibinasura ito ng una dahil hindi literal na mapatutunayan; tinanggap ito ng ikalawa dahil iniuugnay ito sa iba pang taludtod. Sa mga sanaysay, kapuwa nila tinanggap ang paghihinuha kapag may malinaw na batayan. Nagkasundo sila sa pulong na mahalaga ang ebidensiya. Hindi pa nila namarkahan nang magkahiwalay ang panibagong tula gamit ang isang magkatuwang na gabay. Wala ring paghahambing dito ng mga markang may pangalan at walang pangalan."
       }
     ],
     "provenance": {
@@ -221,7 +221,7 @@
   },
   {
     "referenceId": "f03-reading-filipino-06-passage",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "language": "filipino",
@@ -229,7 +229,7 @@
     "blocks": [
       {
         "type": "text",
-        "text": "Nang hindi abutin ni Sinta ang plumang iniaalok ko, isinulat ko sa isip ang salitang mapagmataas. Hapon na nang mapansin kong namamaga ang kanyang mga daliri; saka ko naalala na ako lamang ang nagbigay ng dahilan sa totoong pagtanggi niya. Kinabukasan, iniabot niya sa akin ang tasang mainit pa. Hindi niya tinanggap ang lahat ng mungkahi ko sa pulong; may isa pa siyang mariing tinutulan. Ngunit hindi ko na ginawang iisang paliwanag ang pagtanggi sa pluma, ang pag-abot ng tasa at ang pagsalungat sa mungkahi. Sa pag-uwi, bukas ang kamay kong dati ay nakatikom sa bulsa: hindi upang sabihing hawak ko na ang buong kuwento niya, kundi upang matutong magtanong bago magpangalan."
+        "text": "Nang hindi abutin ni Sinta ang plumang iniaalok ko, isinulat ko sa kuwaderno ang salitang mapagmataas. Hapon na nang mapansin kong namamaga ang kanyang mga daliri. Sa sumunod na gawain, itinulak niya ang papel papalapit sa kaliwang kamay at inilapag muli ang pluma matapos itong subukang hawakan. Kinabukasan, iniabot niya sa akin ang tasang mainit pa. Sa pulong, mariin pa rin niyang tinutulan ang isa kong mungkahi, saka iniusog sa akin ang pitsel nang maubos ang laman ng tasa ko. Pagkaraan, binalikan ko ang kuwaderno. Ginuhitan ko ang mapagmataas, ngunit iniwang walang kapalit ang patlang sa tabi nito. Nang maupo muli si Sinta, inilapag ko muna ang pluma; ang kamay kong kanina ay nakatikom sa bulsa ay nakabukas sa ibabaw ng mesa habang hinihintay ko siyang magsalita."
       }
     ],
     "provenance": {

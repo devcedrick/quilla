@@ -94,10 +94,70 @@ class AnalyticalChecks(unittest.TestCase):
 
     def test_all_data_keys_against_recomputed_outcomes(self):
         expected = ['4 hours', '10', '4 hours', '15/22', '08:40', '25', '08:25', 'Yes, with exactly enough seats.', '76', 'Up 10 percentage points', 'The new rate is 24 percentage points higher.', '75; 15 fewer than observed', '22+ days', 'PHP 800', 'PHP 450', '52; increase 22', '4', 'Vegetables', '35%', '4/3 ha', '1300 kWh', 'Thursday', '50 kWh', 'Daily-tier tariff byPHP 50', '20', '5/7', '50', '80', '24', '19', '11-12', '7', 'A and C tied', '10', 'Total forecast equals total observed.', '2 units', 'D', 'C', 'Cost 7; benefit 12', 'C and D']
+        expected[13] = '15-21 days'
+        expected[17] = '13 kL'
+        expected[26] = '60%'
+        expected[37] = 'D-A-C-B'
+        expected[38] = 'B and D'
         # Numeric outcomes additionally recomputed above; text assertions catch key swaps.
         for q, answer in zip(DATA, expected):
             with self.subTest(question=q['questionId']):
                 self.assertEqual(selected(q).replace('by PHP', 'byPHP'), answer)
+
+    def test_quality_revision_models(self):
+        changed_logic = {15, 24, 26, 33, 34, 36, 39}
+        changed_data = {14, 18, 27, 38, 39}
+        self.assertEqual({i + 1 for i, q in enumerate(LOGIC) if q['version'] == 2}, changed_logic)
+        self.assertEqual({i + 1 for i, q in enumerate(DATA) if q['version'] == 2}, changed_data)
+        # P did not light; Q's working result is fixed. Enumerate unknown causes
+        # at P to show why each cautiously phrased elimination is unwarranted.
+        lamp_models = [(power, lamp, connection) for power, lamp, connection in itertools.product((False, True), repeat=3) if not (power and lamp and connection)]
+        # A excludes intermittent lamp failure; B establishes power at P;
+        # C uniquely isolates the failure to P; D retains the three alternatives.
+        supported_assessments = [all(m[1] for m in lamp_models), all(m[0] for m in lamp_models), all(not m[0] for m in lamp_models), all(any(not m[i] and all(m[j] for j in range(3) if j != i) for m in lamp_models) for i in range(3))]
+        self.assertEqual(supported_assessments, [False, False, False, True])
+        self.assertEqual(LOGIC[14]['correctChoiceId'], f'choice-{supported_assessments.index(True) + 1}')
+        # Derive revised data outputs from the reference tables, not their keys.
+        age_matches = [r[0] for r in rows(3) if int(r[1]) < 25 and int(r[1]) * int(r[2]) >= 800]
+        self.assertEqual(age_matches, [selected(DATA[13])])
+        water = rows(4)
+        saving = sum(int(r[2]) - int(water[-1][2]) for r in water[:-1])
+        self.assertEqual(selected(DATA[17]), f'{saving} kL')
+        skills = {r[0]: int(r[1]) for r in rows(6)}
+        conditional = 100 * skills['Text only'] / (skills['Text only'] + skills['Spreadsheet only'])
+        self.assertEqual(selected(DATA[26]), f'{conditional:g}%')
+        projects = {r[0]: (int(r[1]), int(r[2])) for r in rows(9)}
+        ranked = sorted(projects, key=lambda name: (projects[name][1] + 5) / projects[name][0], reverse=True)
+        self.assertEqual(selected(DATA[37]), '-'.join(ranked))
+        feasible_pairs = [pair for pair in itertools.combinations(projects, 2) if sum(projects[name][0] for name in pair) <= 8]
+        best_pair = max(feasible_pairs, key=lambda pair: sum(projects[name][1] for name in pair))
+        self.assertEqual(selected(DATA[38]), ' and '.join(best_pair))
+        self.assertEqual(feasible_pairs, [('A', 'D'), ('B', 'D')])
+
+        # Majority checks use two different conditioned populations.
+        claims = (12 / 20 > .5, 5 / 12 > .5)
+        self.assertEqual(claims, (True, False))
+        self.assertEqual(LOGIC[23]['correctChoiceId'], 'choice-2')
+        # Both possible K origins are compatible with its known signature.
+        include = lambda district, signed: district and signed
+        self.assertFalse(include(True, False))
+        self.assertEqual({include(origin, True) for origin in (False, True)}, {False, True})
+        self.assertEqual(LOGIC[25]['correctChoiceId'], 'choice-1')
+
+        # All four offered flag configurations are modelled in full.
+        def accepted(flags):
+            signed, archived, encrypted = flags
+            return signed and (archived != encrypted)
+
+        outcomes = []
+        for l_removed, m_flip in ((1, 0), (2, 0), (1, 2), (2, 2)):
+            flags = [[True, True, False], [True, True, True], [False, False, True]]
+            flags[1][l_removed] = not flags[1][l_removed]
+            flags[2][m_flip] = not flags[2][m_flip]
+            accepted_flags = [f for f in flags if accepted(f)]
+            outcomes.append(len(accepted_flags) == 2 and any(f[2] for f in accepted_flags))
+        self.assertEqual(outcomes, [False, False, True, False])
+        self.assertEqual(LOGIC[35]['correctChoiceId'], f'choice-{outcomes.index(True) + 1}')
 
     def test_hard_logic_models(self):
         word = 'MARKET'
@@ -116,10 +176,21 @@ class AnalyticalChecks(unittest.TestCase):
                         paid.append(sum(costs) - max(eligible))
         self.assertEqual(sorted(paid), [3, 4, 8, 9])
         self.assertEqual(int(selected(LOGIC[37])), min(paid))
-        orders = [p for p in itertools.permutations('ABCDE') if p.index('A') < p.index('C') and p.index('B') == p.index('D') + 1 and p.index('E') not in (0, 4) and p[-1] == 'C' and p[2] == 'A']
-        self.assertEqual(orders, [tuple('DBAEC')])
-        selections = [set(p) for p in itertools.combinations('PQRST', 3) if 'R' in p and ('P' not in p or 'Q' in p) and not ('R' in p and 'Q' in p) and ('S' not in p or 'T' in p)]
-        self.assertEqual(selections, [set('RST')])
+        orders = [p for p in itertools.permutations('ABCDEF') if p.index('B') == p.index('A') + 1 and p.index('C') < p.index('D') and p.index('E') == p.index('D') + 2 and p[2] == 'F']
+        self.assertEqual(orders, [tuple('CDFEAB')])
+        self.assertEqual(selected(LOGIC[32]), orders[0][4])
+        distances = {'ABCD': 0}
+        frontier = ['ABCD']
+        while frontier:
+            state = frontier.pop(0)
+            for next_state in (state[1:] + state[0], state[0] + state[2] + state[1] + state[3]):
+                if next_state not in distances:
+                    distances[next_state] = distances[state] + 1
+                    frontier.append(next_state)
+        self.assertEqual(len(distances), 24)
+        self.assertEqual(distances['DCBA'], int(selected(LOGIC[33])))
+        self.assertEqual(distances['DCBA'], 6)
+        self.assertEqual(sum(v <= 5 for v in distances.values()), 21)
         crates = []
         for colours in itertools.permutations('RBG'):
             for weights in itertools.permutations((1, 2, 3)):
@@ -132,8 +203,10 @@ class AnalyticalChecks(unittest.TestCase):
             if sum((a, b, c)) == 2 and a != c:
                 valid_numbers.append(n)
         self.assertEqual(valid_numbers, [3, 4])
-        schedules = [p for p in itertools.permutations('XYZ') if p.index('X') < p.index('Z') and ((p[0] == 'Y') != (p[1] == 'Z'))]
-        self.assertEqual(schedules, [tuple('XZY'), tuple('YXZ')])
+        schedules = [p for p in itertools.permutations('WXYZ') if p.index('X') < p.index('Z') and abs(p.index('W') - p.index('Y')) == 1 and ((p[0] == 'Y') != (p[1] == 'Z'))]
+        self.assertEqual(schedules, [tuple('XZWY'), tuple('XZYW'), tuple('YWXZ')])
+        reported = set(selected(LOGIC[38]).strip('{}').split(', '))
+        self.assertEqual(reported, {''.join(p) for p in schedules})
         switch_models = []
         for a, b, c in itertools.product((0, 1), repeat=3):
             state = (a, a ^ b, b ^ c, c)

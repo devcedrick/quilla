@@ -46,7 +46,7 @@
   },
   {
     "questionId": "f03-reading-filipino-02",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -59,23 +59,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Ipatunay na nagsalita na nang malakas ang ama"
+        "text": "Mula sa pananahimik tungo sa hayagang pagsasalita"
       },
       {
         "choiceId": "b",
-        "text": "Ipakitang wala nang anumang suliranin ang mag-ama"
+        "text": "Mula sa hindi pagkakasundo tungo sa ganap na paglutas nito"
       },
       {
         "choiceId": "c",
-        "text": "Ihambing ang materyales ng kanilang bahay"
+        "text": "Mula sa paglalarawan sa bahay tungo sa paglalarawan sa ama"
       },
       {
         "choiceId": "d",
-        "text": "Ilarawan ang pagbabago mula sa pagtinging hadlang tungo sa pagtinging daan sa pag-unawa"
+        "text": "Mula sa hadlang tungo sa daan ng pag-unawa"
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Nagbago ang pagbasa ni Sela sa parehong katahimikan, mula sarado tungo sa nagbubukas ng pag-unawa. Walang patunay ng malakas na pagsasalita, materyales ng bahay o ganap na paglutas ng lahat ng suliranin.",
+    "explanation": "Nagbago ang pagtingin ni Sela sa parehong katahimikan: mula sa hadlang tungo sa daan ng pag-unawa. Hindi nagbago ang katahimikan sa malakas na pagsasalita, at hindi ipinahayag na nalutas na ang lahat ng suliranin. Bato at bintana ang mga talinghaga sa katahimikan, hindi paglalarawan sa materyales ng bahay.",
     "reference": {
       "referenceId": "f03-reading-filipino-02-passage",
       "referenceVersion": 1
@@ -91,7 +91,7 @@
   },
   {
     "questionId": "f03-reading-filipino-03",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -104,23 +104,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Pagpapatunay ng katumpakan ng kasangkapan at paghatol sa katapatan ng tao"
+        "text": "Katumpakan ng timbangan, hindi katapatan ng nanghiram"
       },
       {
         "choiceId": "b",
-        "text": "Pagkakaiba ng pagmamay-ari at pagbebenta ng isda"
+        "text": "Pagkakaiba ng lumang kagamitan at makabagong pagtitimbang"
       },
       {
         "choiceId": "c",
-        "text": "Pagiging magkapareho ng lahat ng paraan ng pagtitimbang"
+        "text": "Pagmamay-ari ng timbangan, hindi kalidad ng panimbang"
       },
       {
         "choiceId": "d",
-        "text": "Pagtangging magpahiram muli sa sinumang tao"
+        "text": "Pagpapatunay ng pandaraya, hindi pagsusuri ng kasangkapan"
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Kasangkapan ang sinusuri, hindi agad karakter ng nanghiram. Hindi binabanggit ang bentahan, pagkakapareho ng lahat ng pamamaraan o pangkalahatang pagbabawal sa pagpapahiram.",
+    "explanation": "Ang katumpakan ng timbangan ang pinatutunayan bago muling gamitin, hindi ang katapatan ng nanghiram. Walang paghahambing ng luma at makabagong teknolohiya o usapin ng pagmamay-ari. Ang pagsusuri sa kasangkapan ay hindi pa patunay ng pandaraya.",
     "reference": {
       "referenceId": "f03-reading-filipino-03-passage",
       "referenceVersion": 1
@@ -181,7 +181,7 @@
   },
   {
     "questionId": "f03-reading-filipino-05",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -190,30 +190,30 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "hard",
-    "stem": "Aling pagtataya ang pinakamainam na tumutugon sa resulta, sa layunin ng paligsahan at sa hangganan ng susunod na hakbang?",
+    "stem": "Aling pagtataya ang pinakamatibay na nabubuo mula sa pagsubok, layunin at hindi pa nasusuring bahagi ng pagmamarka?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Panatilihin ang bulag na pagmamarka at magdagdag ng pagsusuri sa hinihinging ebidensiya; subukin muna kung pare-pareho ang paglalapat sa iba't ibang anyo."
+        "text": "Hindi sapat ang pagtatago ng pangalan para sa pare-parehong pamantayan; kailangang subukin pa ang paglalapat ng gabay."
       },
       {
         "choiceId": "b",
-        "text": "Alisin ang bulag na pagmamarka dahil ang pagkakaiba ng anyo ay patunay na pangalan lamang ang dapat maging batayan."
+        "text": "Pinatutunayan ng magkaibang marka na walang pakinabang ang pagtatago ng pangalan; dapat ibalik ito bago subukin ang gabay."
       },
       {
         "choiceId": "c",
-        "text": "Panatilihin ang bulag na pagmamarka at magdagdag ng pagsusuri sa ebidensiya; ang pagkakasundo sa bagong tuntunin ay patunay na pantay na agad ang paglalapat."
+        "text": "Natutukoy ang problema sa pamantayan; ang pagkakasundo sa pulong ay sapat nang patunay ng pare-parehong paglalapat nito."
       },
       {
         "choiceId": "d",
-        "text": "Palitan ng iisang anyo ang lahat ng piyesa; natutugunan nito ang layuning makilala ang magkakaibang anyo nang hindi binabago ang paligsahan."
+        "text": "Dapat gawing literal ang ebidensiya sa lahat ng anyo; ang tuntuning iyon ay kapuwa nasubok na nila sa tula at sa sanaysay."
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "Inalis ng pagtatago ng pangalan ang isang posibleng impluwensiya, ngunit hindi nito nasagot ang hindi pantay na pagtanggap sa ebidensiya ng magkakaibang anyo. Ang karagdagang pamantayan ay nangangailangan pa ng pagsubok sa aktuwal na paglalapat. Hindi sapat ang pagkakasundo, at ang iisang anyo ay sumasalungat sa hayag na layunin.",
+    "explanation": "Magkaiba ang pagtanggap nila sa ebidensiya ng iisang tula kahit walang pangalan, kaya hindi sapat ang pagiging walang pangalan para sa pagkakapareho ng pamantayan. Hindi nito pinatutunayang walang pakinabang ang pagtatago ng pangalan: walang paghahambing na may pangalan laban sa walang pangalan. Ang pagkakasundo sa isang prinsipyo ay hindi pa pagsubok sa magkahiwalay na paglalapat ng gabay. Ang pag-aatas ng literal na patunay sa lahat ng anyo ay hindi rin tumutugon sa layuning kilalanin ang bisa ng magkaibang anyo.",
     "reference": {
       "referenceId": "f03-reading-filipino-05-passage",
-      "referenceVersion": 1
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",
@@ -226,7 +226,7 @@
   },
   {
     "questionId": "f03-reading-filipino-06",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -239,26 +239,26 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Nabago ang paliwanag niya sa pagtanggi ni Sinta, ngunit ang pag-abot ng tasa ay pagtatapos lamang ng lahat ng pagtutol; ang kamay ay tanda ng katiyakang wala nang dapat itanong."
+        "text": "May ibang paliwanag sa pagtanggi; ang tasa ay pag-ayon sa lahat ng mungkahi, at ang kamay ay kahandaang makinig."
       },
       {
         "choiceId": "b",
-        "text": "Ipinakita ng mainit na tasa na mali ang lahat ng unang obserbasyon niya; ang nakabukas na kamay ay patunay na alam na niya ang buong dahilan ni Sinta."
+        "text": "Tiyak na ang buong dahilan ng pagtanggi dahil sa daliri; hindi lubos na pag-ayon ang tasa, at pakikinig ang ipinahihiwatig ng kamay."
       },
       {
         "choiceId": "c",
-        "text": "Nananatiling tiyak ang unang paliwanag niyang pagmamataas ang pagtanggi; ang tasa at ang kamay ay nagpapakitang nagbago lamang ang pakikitungo kahit alam na niya ang dahilan."
+        "text": "May ibang posibleng dahilan ng pagtanggi; hindi lubos na pag-ayon ang tasa, at ang kamay ay tanda ng tiyak na pagkakilala kay Sinta."
       },
       {
         "choiceId": "d",
-        "text": "Nabago ang paliwanag niya sa tunay na pagtanggi nang mapansin ang kamay ni Sinta; ang pag-abot ng tasa ay hindi pagtanggap sa lahat, at ang sariling kamay ay nagpapahiwatig ng bukas na pagtatanong."
+        "text": "May ibang posibleng dahilan ng pagtanggi; hindi lubos na pag-ayon ang tasa, at ang kamay ay kahandaang makinig bago humatol."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "Totoong tumanggi si Sinta sa paghawak ng pluma; ang hindi suportado ay ang unang pagbasa rito bilang pagmamataas. Ang namamagang daliri ay nagbigay ng ibang paliwanag, habang ang pag-abot ng tasa ay nagpapakitang maaaring makipag-ugnayan nang hindi tinatanggap ang lahat ng panukala. Ang kamay na handang magtanong ay sagisag ng pagbabago sa paraan ng paghatol, hindi ganap na kaalaman sa isip ni Sinta o pag-urong ng lahat ng pagtutol. Pinag-uugnay ng tamang pagbasa ang tatlong detalyeng ito sa halip na itanggi ang obserbasyon o palitan ang isang katiyakan ng iba.",
+    "explanation": "Totoo ang pagtanggi sa pluma, ngunit ang namamagang daliri at hirap sa paghawak ay nagbibigay ng ibang posibleng paliwanag bukod sa pagmamataas; hindi nito ibinubunyag ang buong isip ni Sinta. Magkasama ang pagbibigay ng mainit na inumin at ang pagtutol sa mungkahi, kaya maaaring may mabuting pakikitungo nang walang lubos na pagsang-ayon. Ang ginuhitang bansag, patlang na walang kapalit, inilapag na pluma at bukas na kamay habang naghihintay ay magkakaugnay na kilos ng pakikinig at pagsuspinde ng tiyak na paghatol. Ang mga katunggaling pagbasa ay nagpapanatili ng dalawang ugnayan ngunit ginagawang lubos na pag-ayon ang tasa, ganap na katiyakan ang pisikal na palatandaan, o tiyak na pagkakilala ang bukas na kamay.",
     "reference": {
       "referenceId": "f03-reading-filipino-06-passage",
-      "referenceVersion": 1
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",

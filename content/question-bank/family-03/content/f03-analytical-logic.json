@@ -589,7 +589,7 @@
   },
   {
     "questionId": "f03-analytical-logic-15",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -598,34 +598,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "To test whether a lamp is faulty, a technician moves it from socket P to a verified working socket Q. It lights at Q. What has the test established?",
+    "stem": "A lamp failed to light at socket P. Without otherwise changing the lamp, a technician moved it to a verified working socket Q, where it lit. Which assessment best distinguishes what was tested from what remains uncertain?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "P is definitely faulty."
+        "text": "The lamp works at Q, which supports a fault at P and excludes intermittent lamp behaviour, although the defective socket component remains unknown."
       },
       {
         "choiceId": "choice-2",
-        "text": "The lamp always works."
+        "text": "The lamp works at Q, which establishes that both sockets supply power and favours a temporary connection fault, although that connection has not been identified."
       },
       {
         "choiceId": "choice-3",
-        "text": "Q has repaired the lamp."
+        "text": "The lamp works at Q, which isolates the earlier failure to P, although it does not show whether P's wiring or contacts caused it."
       },
       {
         "choiceId": "choice-4",
-        "text": "The lamp can operate at Q; the original failure is not yet fully explained."
+        "text": "The lamp works at Q; a P-related fault, intermittent lamp fault or intermittent connection could still explain the earlier failure."
       }
     ],
     "correctChoiceId": "choice-4",
-    "explanation": "Operation at Q rules out complete inability to light, but P, a loose connection or intermittent behaviour could explain the initial result. The test does not uniquely diagnose P or permanence.",
+    "explanation": "Lighting at Q establishes that the lamp was capable of operating in that test. A dead socket, a temporary connection fault, or intermittent lamp behaviour is compatible with both observations. The test does not establish power at P, uniquely diagnose P, or rule out an intermittent fault. Thus even a cautiously worded claim is too strong if it declares one rival explanation eliminated.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },
@@ -967,7 +968,7 @@
   },
   {
     "questionId": "f03-analytical-logic-24",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -976,34 +977,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "A desk's claim that 'most returns were damaged' means more than half. Which record would contradict it?",
+    "stem": "A report asserts BOTH that most returned items were damaged and that most damaged returns were repaired; 'most' means more than half. Records show 20 returns, 12 damaged returns, and 7 repaired returns, of which 5 were damaged. How do the records assess the two claims?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "Of 18 returned items, 9 were damaged."
+        "text": "Both claims are supported."
       },
       {
         "choiceId": "choice-2",
-        "text": "Of 18 returned items, 10 were damaged."
+        "text": "The damage claim is supported; the repair claim is contradicted."
       },
       {
         "choiceId": "choice-3",
-        "text": "Of 18 returned items, 12 were damaged."
+        "text": "The damage claim is contradicted; the repair claim is supported."
       },
       {
         "choiceId": "choice-4",
-        "text": "Of 18 returned items, 17 were damaged."
+        "text": "Both claims are contradicted."
       }
     ],
-    "correctChoiceId": "choice-1",
-    "explanation": "Nine of eighteen is exactly half, not more than half. Each other count satisfies most under the explicit definition.",
+    "correctChoiceId": "choice-2",
+    "explanation": "Damaged returns are 12/20, exceeding half. Repaired damaged returns are only 5/12, below half. The repair denominator is the 12 damaged returns, not all 20 returns or the 7 repaired items. Five of seven would reverse the conditioning and incorrectly support the second claim.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },
@@ -1051,7 +1053,7 @@
   },
   {
     "questionId": "f03-analytical-logic-26",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1060,34 +1062,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Only reports from district offices are included in a review. Report Z is included. Which inference is valid?",
+    "stem": "For this review, a report is included if and only if it BOTH originates from a district office and bears a signature. J is from a district office but unsigned. K is signed, but its origin is not recorded. Which assessment follows without assuming an unrecorded fact?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "Every district report was included."
+        "text": "J is excluded; K's inclusion is undetermined."
       },
       {
         "choiceId": "choice-2",
-        "text": "Z came from a district office."
+        "text": "J is excluded; K is included."
       },
       {
         "choiceId": "choice-3",
-        "text": "Z was accurate."
+        "text": "J's inclusion is undetermined; K is excluded."
       },
       {
         "choiceId": "choice-4",
-        "text": "No excluded report came from a district office."
+        "text": "Both J's and K's inclusion are undetermined."
       }
     ],
-    "correctChoiceId": "choice-2",
-    "explanation": "Inclusion requires district origin, so Z came from a district office. The reverse implication and accuracy are not given; some district reports could still be excluded.",
+    "correctChoiceId": "choice-1",
+    "explanation": "J fails a necessary signature requirement, so it is excluded despite its origin. K meets the signature requirement but could come from either a district or a nondistrict office. Those two compatible origins give different inclusion results, so K remains undetermined. Missing origin information is not evidence of nondistrict origin, and a signature alone is not sufficient.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },
@@ -1345,7 +1348,7 @@
   },
   {
     "questionId": "f03-analytical-logic-33",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1354,40 +1357,41 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Five jobs A, B, C, D, E occupy slots 1–5 once each. A precedes C; B immediately follows D; E is not at either end; C is last. If A is third, which pair could occupy slots 1 and 4, respectively?",
+    "stem": "Six jobs A, B, C, D, E, F each occupy one of slots 1–6, once each. B immediately follows A. C occurs before D. E occurs exactly two slots after D. F is in slot 3. Which job must occupy slot 5?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "D and E"
+        "text": "A"
       },
       {
         "choiceId": "choice-2",
-        "text": "E and B"
+        "text": "B"
       },
       {
         "choiceId": "choice-3",
-        "text": "B and E"
+        "text": "D"
       },
       {
         "choiceId": "choice-4",
-        "text": "D and B"
+        "text": "E"
       }
     ],
     "correctChoiceId": "choice-1",
-    "explanation": "With A 3 and C 5, the adjacent D, B block can only occupy 1, 2; E then occupies 4. D/E is possible. E 1 violates its end restriction, B 1 cannot immediately follow D, and B 4 leaves no place for D immediately before it because A 3 is fixed.",
+    "explanation": "D must occupy one of slots 1–4 to leave room for E. D cannot be slot 1 because E would clash with F in slot 3, and D cannot be slot 3 because F is there. If D were slot 4, E would be slot 6; C would have to precede D, but the consecutive A,B block would need slots 1,2, leaving no earlier slot for C. Thus D is slot 2 and E slot 4. C must be slot 1, leaving A,B in slots 5,6. The unique order is C-D-F-E-A-B.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },
   {
     "questionId": "f03-analytical-logic-34",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1396,34 +1400,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Exactly three of P, Q, R, S, T are selected. P requires Q; R excludes Q; S requires T. If R is selected, which statement is forced?",
+    "stem": "Four tiles begin in the order A-B-C-D. One move is either R: move the leftmost tile to the right end without changing the order of the others; or S: swap only the two middle tiles. Moves may be repeated. What is the fewest moves needed to reach D-C-B-A?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "P is absent and S is present."
+        "text": "4"
       },
       {
         "choiceId": "choice-2",
-        "text": "P is present and S is absent."
+        "text": "5"
       },
       {
         "choiceId": "choice-3",
-        "text": "Q is absent and T is absent."
+        "text": "6"
       },
       {
         "choiceId": "choice-4",
-        "text": "Q is present and T is present."
+        "text": "7"
       }
     ],
-    "correctChoiceId": "choice-1",
-    "explanation": "R excludes Q, which also eliminates P. The three available selections are then R, S, T and all are needed. Merely removing Q without the implication and size restriction would not establish the S/T pair.",
+    "correctChoiceId": "choice-3",
+    "explanation": "Six moves suffice: R,R,S,R,R,S gives ABCD → BCDA → CDAB → CADB → ADBC → DBCA → DCBA. To prove a smaller number cannot work, expand the distinct reachable orders by distance, omitting states seen earlier: 1 {BCDA, ACBD}; 2 {CDAB, BDCA, CBDA}; 3 {DABC, CADB, DCAB, BDAC, CDBA}; 4 {DBAC, ADBC, CABD, DACB, BADC}; 5 {BACD, DBCA, ABDC, CBAD, ADCB}. DCBA is absent through distance 5 and first appears at distance 6. A shorter-looking reversal must not silently swap the outside tiles or rotate in the opposite direction.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },
@@ -1471,7 +1476,7 @@
   },
   {
     "questionId": "f03-analytical-logic-36",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1480,34 +1485,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "A system accepts a file exactly when it is signed and has exactly one of archive or encryption flags. Three files have flags: K signed+archived; L signed+encrypted+archived; M encrypted only. A repair flips one flag on one file. Which repair results in exactly two accepted files?",
+    "stem": "A file is accepted exactly when it is signed and has exactly one of the archive and encryption flags. The COMPLETE initial flags are K: signed, archived; L: signed, archived, encrypted; M: encrypted only. K must stay unchanged. A configuration change must flip exactly one flag on L and exactly one on M. Which change leaves exactly TWO files accepted, including at least one accepted encrypted file?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "Remove L's archive flag."
+        "text": "Remove L's archive flag; add M's signature flag."
       },
       {
         "choiceId": "choice-2",
-        "text": "Remove K's signature flag."
+        "text": "Remove L's encryption flag; add M's signature flag."
       },
       {
         "choiceId": "choice-3",
-        "text": "Add M's archive flag."
+        "text": "Remove L's archive flag; remove M's encryption flag."
       },
       {
         "choiceId": "choice-4",
-        "text": "Remove L's signature flag."
+        "text": "Remove L's encryption flag; remove M's encryption flag."
       }
     ],
-    "correctChoiceId": "choice-1",
-    "explanation": "Initially only K qualifies. Removing archive from L leaves signed+encrypted, so K and L qualify. Removing K's signature leaves none; adding archive to unsigned M does not qualify it; removing L's signature leaves L invalid and only K accepted. The signature and exclusive flags must both be tracked.",
+    "correctChoiceId": "choice-3",
+    "explanation": "K remains an accepted archived file. Removing L's archive produces an accepted encrypted L; removing L's encryption instead produces an accepted archived L. Adding M's signature makes M accepted, whereas removing its encryption leaves it unsigned and unaccepted. The two signature-addition choices therefore produce three accepted files. Both encryption-removal choices on M produce two, but only the archive-removal change on L leaves an accepted encrypted file. Both the count and the flag requirement must be satisfied.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },
@@ -1597,7 +1603,7 @@
   },
   {
     "questionId": "f03-analytical-logic-39",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1606,34 +1612,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "On each of three days exactly one of X, Y, Z is inspected, each once. X is before Z. A truthful note says: 'Either Y is first or Z is second, but not both.' Which pair lists all possible schedules in day order?",
+    "stem": "Four inspections W, X, Y, Z occur on four consecutive days, one per day and each once. X occurs before Z. W and Y are on adjacent days. Exactly one of these statements is true: 'Y is first' and 'Z is second'. Which set lists ALL possible day orders?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "XZY and YXZ"
+        "text": "{XZWY, XZYW, YWXZ}"
       },
       {
         "choiceId": "choice-2",
-        "text": "XYZ and YXZ"
+        "text": "{XZWY, XYWZ, YWXZ}"
       },
       {
         "choiceId": "choice-3",
-        "text": "XZY and ZXY"
+        "text": "{XZYW, YWXZ, YWZX}"
       },
       {
         "choiceId": "choice-4",
-        "text": "XYZ and XZY"
+        "text": "{XZWY, XZYW, WYXZ}"
       }
     ],
     "correctChoiceId": "choice-1",
-    "explanation": "The X-before-Z schedules are XYZ, XZY, YXZ. XYZ makes both note clauses false, XZY makes only Z second true, and YXZ makes only Y first true. ZXY breaks the precedence rule. Thus exactly XZY, YXZ remain.",
+    "explanation": "The exclusive statement splits the models into two cases. If Y is first, W must be second by adjacency, and X before Z forces Y-W-X-Z; here Z is not second. If Z is second, X must be first, leaving W,Y in either order: X-Z-W-Y or X-Z-Y-W. These exhaust the cases. XYWZ and WYXZ make both quoted statements false; YWZX reverses X and Z.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     }
   },

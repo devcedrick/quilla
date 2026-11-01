@@ -94,7 +94,19 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
         }),
       );
     },
-    () => 1200 / (1 - 1.2 * 0.8),
+    () => {
+      const candidates = [500, 1000, 1500].map((fee) => ({
+        initial: (1800 - 0.8 * fee) / (1 - 1.2 * 0.8),
+        fee,
+      }));
+      const feeFor = (balance) =>
+        balance <= 18000 ? 500 : balance <= 36000 ? 1000 : 1500;
+      const valid = candidates.filter(({ initial, fee }) =>
+        close(feeFor(1.2 * initial), fee),
+      );
+      expect(valid).toHaveLength(1);
+      return valid[0].initial;
+    },
     () => ((3 / 5) * 3) / 5 + ((2 / 5) * 3) / 4,
     () => Math.ceil((900 + 45) / (0.9 * 0.8)),
     () => {
@@ -121,11 +133,15 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
       return Math.min(...mins);
     },
     () =>
-      [123, 132, 213, 231, 312, 321].filter(
-        (n) =>
+      Array.from({ length: 9000 }, (_, i) => i + 1000).filter((n) => {
+        const digits = String(n);
+        return (
+          /^[0-5]{4}$/.test(digits) &&
+          new Set(digits).size === 4 &&
           n % 3 === 0 &&
-          n - Number(String(n).split("").reverse().join("")) === 99,
-      ),
+          n - Number([...digits].reverse().join("")) === 2178
+        );
+      }),
   ];
   numerical.forEach((q, i) =>
     it(`recomputes ${q.questionId}`, () => {
@@ -136,8 +152,26 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
         expect(answer(q)).toBe("10 ≤ total < 12 kg");
         expect(computations[i]()).toEqual([10, 12]);
       } else if (i === 39) {
-        expect(answer(q)).toBe("231 and 312");
-        expect(computations[i]()).toEqual([231, 312]);
+        const solved = computations[i]();
+        expect(solved).toEqual([2310, 3201]);
+        const optionSets = q.choices.map((c) =>
+          [...c.text.matchAll(/\d+/g)].map((m) => +m[0]),
+        );
+        // Every candidate passes the easy digit/divisibility filters; only
+        // reversal and completeness can separate the competing sets.
+        for (const n of optionSets.flat()) {
+          expect(n % 3).toBe(0);
+          expect(/^[0-5]{4}$/.test(String(n))).toBe(true);
+          expect(new Set(String(n)).size).toBe(4);
+        }
+        expect(
+          optionSets.some((set) => set.length === 1 && solved.includes(set[0])),
+        ).toBe(true);
+        const valid = q.choices.filter(
+          (c, j) => JSON.stringify(optionSets[j]) === JSON.stringify(solved),
+        );
+        expect(valid).toHaveLength(1);
+        expect(valid[0].choiceId).toBe(q.correctChoiceId);
       } else if (i === 17) {
         expect(answer(q)).toBe("07:12");
         expect(computations[i]()).toBe(432);
@@ -170,7 +204,7 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
       "one",
       "one",
       "both",
-      "either",
+      "both",
       "both",
       "both",
       "both",
@@ -178,7 +212,7 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
       "neither",
       "both",
       "both",
-      "either",
+      "both",
     ];
     expect(ds.map((q) => q.correctChoiceId)).toEqual(expected);
     ds.forEach((q) =>
@@ -206,7 +240,39 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
     ]);
     expect([-2, -1, 10].sort((a, b) => a - b)[1]).toBeLessThan(0);
     expect([2 * (8 + 6), 2 * (4 + 12)]).toEqual([28, 32]);
-    expect((360 / 3) * 8 + (360 / 3) * 1.5 * 2).toBe(1320);
+    const wages = Array.from({ length: 139 }, (_, i) => i + 1).map((r) => ({
+      r,
+      allowance: 840 - 6 * r,
+    }));
+    const wageCases = wages.filter(
+      ({ r, allowance }) => allowance > 0 && 14 * r + allowance === 1680,
+    );
+    expect(wageCases).toEqual([{ r: 105, allowance: 210 }]);
+    expect(11 * wageCases[0].r + wageCases[0].allowance).toBe(1365);
+    for (const [models, total] of [
+      [
+        [
+          [100, 240],
+          [120, 120],
+        ],
+        840,
+      ],
+      [
+        [
+          [100, 280],
+          [110, 140],
+        ],
+        1680,
+      ],
+    ]) {
+      const coefficient = total === 840 ? 6 : 14;
+      expect(
+        models.every(
+          ([r, a]) => coefficient * r + a === total && r > 0 && a > 0,
+        ),
+      ).toBe(true);
+      expect(new Set(models.map(([r, a]) => 11 * r + a)).size).toBe(2);
+    }
     expect((2 * 4 * 8) / (12 * 11)).toBeLessThan(1 / 2);
     expect([3, 4, 5, 6].every((n) => n > 2.4 && n < 6.1)).toBe(true);
     expect([12, 32, 52, 72, 92].every((n) => n % 4 === 0)).toBe(true);
@@ -225,7 +291,27 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
         (n) => n % 3 !== 0 && n % 5 === 2 && n % 7 === 3,
       ),
     ).toEqual([17, 52]);
-    expect(Math.sqrt(14 * 6)).toBeGreaterThan(9);
+    const prime = (n) =>
+      n >= 2 &&
+      Array.from(
+        { length: Math.max(0, Math.floor(Math.sqrt(n)) - 1) },
+        (_, i) => i + 2,
+      ).every((d) => n % d !== 0);
+    const candidates = Array.from({ length: 9 }, (_, i) => [i + 1, 19 - i]);
+    const outcomes = (rows) => [...new Set(rows.map(([x, y]) => x * y > 81))];
+    expect(
+      new Set(outcomes(candidates.filter(([x]) => 120 % x === 0))),
+    ).toEqual(new Set([true, false]));
+    expect(new Set(outcomes(candidates.filter(([, y]) => prime(y))))).toEqual(
+      new Set([true, false]),
+    );
+    const joint = candidates.filter(([x, y]) => 120 % x === 0 && prime(y));
+    expect(joint).toEqual([
+      [1, 19],
+      [3, 17],
+    ]);
+    expect(outcomes(joint)).toEqual([false]);
+    expect(ds[19].correctChoiceId).toBe("both");
   });
   const cmp = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
   const clean = (s) => s.toLowerCase().replace(/[^a-z]/g, "");
@@ -347,8 +433,111 @@ describe("Family 03 Numerical and Clerical independent content checks", () => {
       "cemetery; dilemma",
       "itenerary → itinerary only",
       "hierarchy; bureaucracy",
-      "consensus; supersede; acquiesce; inoculate",
-      "1→reconnaissance; 3→rhythm; retain 2 and 4.",
+      "G, then E, then M.",
+      "One sequence command: 'comod' → 'commod' everywhere.",
     ]);
+  });
+  it("checks the revised investment fee rule against every candidate, not an assumed fee", () => {
+    const q = numerical[34];
+    const fee = (balance) =>
+      balance <= 18000 ? 500 : balance <= 36000 ? 1000 : 1500;
+    const valid = q.choices.filter((c) => {
+      const p = numericValue(c.text);
+      return close((1.2 * p - fee(1.2 * p)) * 0.8 + 1800, p);
+    });
+    expect(valid.map((c) => c.choiceId)).toEqual([q.correctChoiceId]);
+    expect([500, 1000, 1500].map((f) => (1800 - 0.8 * f) / 0.04)).toEqual([
+      35000, 25000, 15000,
+    ]);
+  });
+  it("rejects summaries that expose a small count directly or by subtraction", () => {
+    const q = operations[9];
+    const actual = { Facilities: 5, Access: 2, Hours: 4, total: 11 };
+    const valid = q.choices.filter((c) => {
+      const entries = Object.fromEntries(
+        [
+          ...c.text.matchAll(/(Facilities|Access|Hours|total) (\d+|withheld)/g),
+        ].map((m) => [m[1], m[2] === "withheld" ? null : +m[2]]),
+      );
+      if (Object.keys(entries).length !== 4) return false;
+      if (
+        Object.entries(entries).some(
+          ([name, n]) =>
+            n !== null && (n !== actual[name] || (name !== "total" && n < 3)),
+        )
+      )
+        return false;
+      const hidden = ["Facilities", "Access", "Hours"].filter(
+        (name) => entries[name] === null,
+      );
+      return !(hidden.length === 1 && entries.total !== null);
+    });
+    expect(valid.map((c) => c.choiceId)).toEqual([q.correctChoiceId]);
+  });
+  it("simulates every spelling command sequence and checks all three target words", () => {
+    const q = spelling[8];
+    const source = [...q.stem.matchAll(/\([123]\) ([a-z]+)/g)].map((m) => m[1]);
+    expect(source).toHaveLength(3);
+    const target = ["embarrassment", "embarrass", "harassment"];
+    const valid = q.choices.filter((c) => {
+      let words = [...source];
+      for (const command of c.text.split(";")[0].match(/\b[GEM]\b/g) ?? []) {
+        words = words.map((word) =>
+          command === "G"
+            ? word.replaceAll("rr", "r")
+            : command === "E"
+              ? word === "embarass"
+                ? "embarrass"
+                : word
+              : word === "embarassment"
+                ? "embarrassment"
+                : word,
+        );
+      }
+      return JSON.stringify(words) === JSON.stringify(target);
+    });
+    expect(valid.map((c) => c.choiceId)).toEqual([q.correctChoiceId]);
+  });
+  it("evaluates spelling and minimum safe command count for every batch plan", () => {
+    const q = spelling[9];
+    const source = ["accomodate", "accomodation", "recommend"];
+    const target = ["accommodate", "accommodation", "recommend"];
+    const results = q.choices.map((choice) => {
+      let words = [...source];
+      const pairs = [...choice.text.matchAll(/'([^']+)' → '([^']+)'/g)].map(
+        (m) => [m[1], m[2]],
+      );
+      for (const [from, to] of pairs)
+        words = words.map((word) =>
+          choice.text.includes("sequence command")
+            ? word.replaceAll(from, to)
+            : word === from
+              ? to
+              : word,
+        );
+      return {
+        choice,
+        count: pairs.length,
+        correct: JSON.stringify(words) === JSON.stringify(target),
+      };
+    });
+    const correct = results.filter((r) => r.correct);
+    expect(correct).toHaveLength(2);
+    const minimum = Math.min(...correct.map((r) => r.count));
+    expect(minimum).toBe(1);
+    expect(
+      correct.filter((r) => r.count === minimum).map((r) => r.choice.choiceId),
+    ).toEqual([q.correctChoiceId]);
+    expect(
+      [
+        numerical[34],
+        numerical[39],
+        ds[11],
+        ds[19],
+        operations[9],
+        spelling[8],
+        spelling[9],
+      ].every((q) => q.version === 2),
+    ).toBe(true);
   });
 });

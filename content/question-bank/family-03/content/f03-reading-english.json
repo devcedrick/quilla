@@ -46,7 +46,7 @@
   },
   {
     "questionId": "f03-reading-english-02",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -59,23 +59,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "To guarantee that neither bowl will crack"
+        "text": "To test thickness alone at a fixed kiln position"
       },
       {
         "choiceId": "b",
-        "text": "To establish that clay composition differed"
+        "text": "To check whether both bowls used the same clay"
       },
       {
         "choiceId": "c",
-        "text": "To separate a thickness explanation from a position explanation"
+        "text": "To test the thickness explanation against kiln position"
       },
       {
         "choiceId": "d",
-        "text": "To prove that the first firing produced no useful observation"
+        "text": "To repeat the first firing without changing its conditions"
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Thickness and kiln position changed together, so their effects cannot be distinguished from that firing. Reversing positions tests competing explanations; it neither guarantees an outcome nor erases the observation.",
+    "explanation": "Thickness and kiln position varied together in the first firing. Reversing positions changes the position associated with each thickness, helping distinguish those explanations. It does not hold position fixed, test clay composition, or repeat the first conditions unchanged.",
     "reference": {
       "referenceId": "f03-reading-english-02-passage",
       "referenceVersion": 1
@@ -91,7 +91,7 @@
   },
   {
     "questionId": "f03-reading-english-03",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -104,23 +104,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Train movements became a shared reference for daily activity"
+        "text": "Train movements helped organize daily routines"
       },
       {
         "choiceId": "b",
-        "text": "The railway introduced the town's first timekeeping devices"
+        "text": "Train movements created the first clocks"
       },
       {
         "choiceId": "c",
-        "text": "Every household stopped using mechanical clocks"
+        "text": "Daily routines controlled train departures"
       },
       {
         "choiceId": "d",
-        "text": "Railway workers officially controlled shop opening hours"
+        "text": "Railway rules fixed every shop's opening time"
       }
     ],
     "correctChoiceId": "a",
-    "explanation": "The described routines establish a social time reference. The later sentence rules out the first-clock claim; neither universal abandonment nor an official rule is stated.",
+    "explanation": "The described routines use train movements as a shared time reference. The passage says clocks existed earlier; it does not say household routines controlled departures or that an official railway rule fixed shop hours.",
     "reference": {
       "referenceId": "f03-reading-english-03-passage",
       "referenceVersion": 1
@@ -136,7 +136,7 @@
   },
   {
     "questionId": "f03-reading-english-04",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -145,30 +145,30 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Which evaluation best combines the guarantee, the causal finding and the scope of the decision?",
+    "stem": "Which assessment follows from the two tests and the guarantee's reporting condition?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Both requests are covered because the runner explains the jamming; the impact finding is therefore irrelevant to any repair cost."
+        "text": "Both are covered; day 28 meets the reporting deadline."
       },
       {
         "choiceId": "b",
-        "text": "The runner adjustment is covered, but the impact automatically cancels all other workmanship cover, including this adjustment."
+        "text": "Neither is covered; inspection on day 34 missed the deadline."
       },
       {
         "choiceId": "c",
-        "text": "Neither request is covered because an impact occurred; the runner's independent causal role cannot affect the guarantee."
+        "text": "Only the handle is covered; the swap tests identify it as the cause."
       },
       {
         "choiceId": "d",
-        "text": "The runner adjustment is covered by the workmanship finding; the handle remains outside that cover, without cancelling the covered adjustment."
+        "text": "Only the runner adjustment is covered; day 28 meets the reporting deadline."
       }
     ],
     "correctChoiceId": "d",
-    "explanation": "The promise attaches to the cause of the particular defect, not a blanket classification of the member. The runner is a workmanship defect and explains the jamming; the handle is impact damage. The two findings support separate decisions, not universal coverage or total cancellation.",
+    "explanation": "The guarantee requires an installation fault that causes the reported malfunction, not merely any installation defect. The drawer jams with the original runner even when the handle is straight, but moves freely with a correctly fitted runner even when the handle is bent. Those controlled swaps support the runner as the cause requiring adjustment, not the impact-damaged handle. Day 28 meets the reporting deadline; inspection on day 34 does not undo timely reporting. Only the runner adjustment is covered; the handle remains separately chargeable.",
     "reference": {
       "referenceId": "f03-reading-english-04-passage",
-      "referenceVersion": 1
+      "referenceVersion": 2
     },
     "provenance": {
       "kind": "original",
@@ -181,7 +181,7 @@
   },
   {
     "questionId": "f03-reading-english-05",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -194,19 +194,19 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "M separates quotation from explanation and keeps the visible label short, but visitors who skip the foldout may miss the explanation."
+        "text": "Only M meets both goals; the foldout may go unread."
       },
       {
         "choiceId": "b",
-        "text": "M meets both goals, and the presence of the foldout establishes that every visitor receives the explanation."
+        "text": "M also ensures every visitor reads its explanation."
       },
       {
         "choiceId": "c",
-        "text": "L protects quotation boundaries and therefore also meets the designer's short-label goal."
+        "text": "L keeps the quote intact and the label brief."
       },
       {
         "choiceId": "d",
-        "text": "K meets the designer's goal and preserves quotation boundaries because an explanation has the same meaning."
+        "text": "K stays brief; equivalent meaning preserves quotation integrity."
       }
     ],
     "correctChoiceId": "a",
@@ -226,7 +226,7 @@
   },
   {
     "questionId": "f03-reading-english-06",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -239,23 +239,23 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "P currently meets both promises; Q could do so once the morning boat is proposed."
+        "text": "Neither works now; proposing Q's addition itself satisfies the condition on reassigning the reserve."
       },
       {
         "choiceId": "b",
-        "text": "Q currently meets both promises because the spare engine physically exists; P misses the evening promise."
+        "text": "Neither works now; an extra morning boat cures P's unmet promise once another engine is secured."
       },
       {
         "choiceId": "c",
-        "text": "Neither currently meets both promises; Q could meet them with the morning addition only after the reserve condition is satisfied."
+        "text": "Neither works now; Q needs a morning addition and another reserve engine."
       },
       {
         "choiceId": "d",
-        "text": "Neither can ever meet both promises; the reserve condition permanently forbids any extra morning boat."
+        "text": "Neither works now; the existing spare counts both as the extra boat's engine and its replacement reserve."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "P misses the evening condition, Q the morning condition. The extra morning service would cure Q's timing gap, but the stated reserve condition is unmet. A conditional remedy is neither a current solution nor a permanent impossibility.",
+    "explanation": "P fails the evening condition; Q fails the morning connection. Adding a morning boat can cure Q's gap, not P's evening gap. But that addition uses the emergency reserve, which may be reassigned only after another replacement engine is secured. Neither a proposal nor counting the same spare engine twice fulfils that separate condition.",
     "reference": {
       "referenceId": "f03-reading-english-06-passage",
       "referenceVersion": 1

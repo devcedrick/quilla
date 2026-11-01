@@ -599,7 +599,7 @@
   },
   {
     "questionId": "f03-analytical-data-14",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -608,34 +608,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "What is the total value of the 15-21-day stock?",
+    "stem": "Which stock-age band has FEWER than 25 items but a total listed value of AT LEAST PHP 800?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "PHP 800"
+        "text": "0-7 days"
       },
       {
         "choiceId": "choice-2",
-        "text": "PHP 400"
+        "text": "8-14 days"
       },
       {
         "choiceId": "choice-3",
-        "text": "PHP 600"
+        "text": "15-21 days"
       },
       {
         "choiceId": "choice-4",
-        "text": "PHP 200"
+        "text": "22+ days"
       }
     ],
-    "correctChoiceId": "choice-1",
-    "explanation": "20 items at PHP 40 each give PHP 800. The value per unit must be multiplied by that band's count, not another band's.",
+    "correctChoiceId": "choice-3",
+    "explanation": "The four band values are 40×20=800, 30×30=900, 20×40=800, and 10×60=600 pesos. The first two meet the value threshold but fail the count limit. The oldest band meets the count limit but fails the value threshold. Only the 15-21-day band, with 20 items worth PHP 800, meets both.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     },
     "reference": {
@@ -783,7 +784,7 @@
   },
   {
     "questionId": "f03-analytical-data-18",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -792,34 +793,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Which use consumes the most weekly water in total?",
+    "stem": "Exactly 1 hectare from EACH of vegetables, fruit and grain is converted to habitat. All other areas and per-hectare water rates stay unchanged. By how much does TOTAL weekly water use fall?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "Vegetables"
+        "text": "13 kL"
       },
       {
         "choiceId": "choice-2",
-        "text": "Fruit"
+        "text": "16 kL"
       },
       {
         "choiceId": "choice-3",
-        "text": "Grain"
+        "text": "3 kL"
       },
       {
         "choiceId": "choice-4",
-        "text": "Habitat"
+        "text": "19 kL"
       }
     ],
     "correctChoiceId": "choice-1",
-    "explanation": "Area times intensity gives 96, 50, 42, 4 kL respectively. Comparing intensities alone is insufficient, although it happens to pick the same use here.",
+    "explanation": "The converted hectares originally consumed 8+5+3=16 kL per week. Their replacement habitat consumes 1+1+1=3 kL, so the net reduction is 13 kL. Sixteen omits habitat's remaining demand; three is the new consumption rather than the saving; nineteen adds the new demand instead of subtracting it. The highest intensity alone cannot answer this combined change.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     },
     "reference": {
@@ -1197,7 +1199,7 @@
   },
   {
     "questionId": "f03-analytical-data-27",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1206,34 +1208,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "How many staff have exactly one assessed skill?",
+    "stem": "Among staff who have EXACTLY ONE assessed skill, what percentage have text skill?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "50"
+        "text": "25%"
       },
       {
         "choiceId": "choice-2",
-        "text": "70"
+        "text": "60%"
       },
       {
         "choiceId": "choice-3",
-        "text": "100"
+        "text": "30%"
       },
       {
         "choiceId": "choice-4",
-        "text": "20"
+        "text": "80%"
       }
     ],
-    "correctChoiceId": "choice-1",
-    "explanation": "Exactly one is text only plus spreadsheet only, 30+20=50. Adding both would count people with two skills.",
+    "correctChoiceId": "choice-2",
+    "explanation": "Exactly-one staff comprise the 30 text-only and 20 spreadsheet-only staff, so the relevant denominator is 50. Text skill within that restricted group means the 30 text-only staff: 30/50=60%. Using all 120 produces 25%, treating the count as a percentage gives 30%, and 80 counts both-skilled staff who are excluded by the condition.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     },
     "reference": {
@@ -1703,7 +1706,7 @@
   },
   {
     "questionId": "f03-analytical-data-38",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1712,34 +1715,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Which project has the highest benefit per PHP 1,000 cost?",
+    "stem": "A revised plan awards EACH project 5 additional benefit points without changing any listed cost. Rank the projects from HIGHEST to LOWEST revised benefit per PHP 1,000 of cost.",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "A"
+        "text": "D-A-C-B"
       },
       {
         "choiceId": "choice-2",
-        "text": "B"
+        "text": "D-A-B-C"
       },
       {
         "choiceId": "choice-3",
-        "text": "C"
+        "text": "D-C-A-B"
       },
       {
         "choiceId": "choice-4",
-        "text": "D"
+        "text": "D-C-B-A"
       }
     ],
-    "correctChoiceId": "choice-3",
-    "explanation": "Ratios are 7/4=1.75, 9/5=1.8, 12/6=2, 5/3≈1.67; C is highest. Highest total benefit alone would not establish efficiency without dividing.",
+    "correctChoiceId": "choice-1",
+    "explanation": "Revised benefits are A=12, B=14, C=17, D=10. Their revised benefit/cost ratios are 12/4=3, 14/5=2.8, 17/6≈2.83, 10/3≈3.33, so D-A-C-B. All choices begin with D; choosing only the largest ratio cannot settle the ranking. Raw benefit would start with C, while ranking the remaining projects by lowest cost incorrectly puts B before C.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     },
     "reference": {
@@ -1749,7 +1753,7 @@
   },
   {
     "questionId": "f03-analytical-data-39",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1758,34 +1762,35 @@
     "levelApplicability": ["professional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "What are the combined cost and benefit of projects A and D?",
+    "stem": "Exactly TWO projects must be chosen, with a combined budget of at most PHP 8,000. No prerequisite rule applies in this item. Which pair gives the greatest combined benefit?",
     "choices": [
       {
         "choiceId": "choice-1",
-        "text": "Cost 7; benefit 12"
+        "text": "A and D"
       },
       {
         "choiceId": "choice-2",
-        "text": "Cost 8; benefit 16"
+        "text": "B and D"
       },
       {
         "choiceId": "choice-3",
-        "text": "Cost 9; benefit 16"
+        "text": "A and B"
       },
       {
         "choiceId": "choice-4",
-        "text": "Cost 7; benefit 11"
+        "text": "C and D"
       }
     ],
-    "correctChoiceId": "choice-1",
-    "explanation": "A plus D costs 4+3=7 thousand and yields 7+5=12 points.11 uses an incorrect benefit; costs and benefits have separate units.",
+    "correctChoiceId": "choice-2",
+    "explanation": "The affordable pairs are A+D, costing 7 thousand for 12 points, and B+D, costing 8 thousand for 14 points. A+B costs 9 thousand, A+C 10 thousand, B+C 11 thousand and C+D 9 thousand, so they are infeasible. B+D is therefore best; C's high individual efficiency does not overcome the pair budget, and the cheapest feasible pair is not the highest-benefit pair.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
       "sources": [
         "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
-        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
       ]
     },
     "reference": {

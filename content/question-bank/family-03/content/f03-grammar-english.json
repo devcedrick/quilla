@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f03-grammar-english-01",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -14,30 +14,31 @@
     "choices": [
       {
         "choiceId": "a",
-        "text": "Each of the lamps need a new bulb."
+        "text": "The news from the islands are encouraging."
       },
       {
         "choiceId": "b",
-        "text": "Each of the lamps needs a new bulb."
+        "text": "The news from the islands is encouraging."
       },
       {
         "choiceId": "c",
-        "text": "Each of the lamps needing a new bulb."
+        "text": "The news from the islands have been encouraging."
       },
       {
         "choiceId": "d",
-        "text": "Each of the lamps have needed a new bulb."
+        "text": "The news from the islands were encouraging."
       }
     ],
     "correctChoiceId": "b",
-    "explanation": "Each is singular and takes needs. The plural lamps is inside an of-phrase; needing lacks a finite main verb, and have disagrees with each.",
+    "explanation": "News takes a singular verb even though it ends in s. The plural islands belongs to a modifying phrase and does not control agreement. Is agrees; are, have and were require a plural subject in these constructions.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
       "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
       "sources": [
         "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
-        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Purdue OWL, Making Subjects and Verbs Agree, rules 5 and 7; https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html; retrieved 2026-11-02; intervening phrases and singular news."
       ]
     }
   },

@@ -334,7 +334,7 @@
   },
   {
     "questionId": "f03-spelling-09",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -343,42 +343,42 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Proofread all four marked words and preserve correct forms: (1) concensus, (2) supersede, (3) aquiesce, (4) inoculate. Which full replacement list is correct?",
+    "stem": "Proofread these three tokens: (1) embarassment, (2) embarrass, (3) harrassment. A batch tool offers commands applied once each in the stated order. G replaces every 'rr' with 'r' in every token. E replaces the WHOLE WORD 'embarass' with 'embarrass'. M replaces the WHOLE WORD 'embarassment' with 'embarrassment'. Commands use the text left by earlier commands. Which plan leaves ALL three tokens correctly spelled, including restoring any correct form damaged during editing?",
     "choices": [
       {
         "choiceId": "c1",
-        "text": "consensus; supersede; acquiesce; inoculate"
+        "text": "G, then E, then M."
       },
       {
         "choiceId": "c2",
-        "text": "consensus; supercede; acquiesce; inoculate"
+        "text": "E, then M; do not run G."
       },
       {
         "choiceId": "c3",
-        "text": "consensus; supersede; acquiesce; innoculate"
+        "text": "M, then G, then E."
       },
       {
         "choiceId": "c4",
-        "text": "concensus; supersede; acquiesce; inoculate"
+        "text": "G, then M; do not run E."
       }
     ],
     "correctChoiceId": "c1",
-    "explanation": "Repair concensus to consensus and aquiesce to acquiesce. Supersede and inoculate are already correct; supercede and innoculate would introduce errors. The complete audit, rather than a single repair, separates the choices.",
+    "explanation": "The required final tokens are embarrassment, embarrass, harassment. G repairs harrassment but changes the initially correct embarrass into embarass; E must therefore follow G. M repairs embarassment, but running G after M would damage the restored double r again. G-E-M succeeds. Without G, harrassment remains; M-G-E leaves embarassment; G-M without E leaves embarass. Thus every token affects the decision, and knowing one spelling alone is not enough to validate a plan.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "assistance": "AI-assisted original interacting proofreading repair after quality audit; independent human editorial approval and learner calibration pending",
       "sources": [
-        "Merriam-Webster headword consensus: https://www.merriam-webster.com/dictionary/consensus; retrieved 2026-11-01; spelling verified.",
-        "Merriam-Webster headword supersede: https://www.merriam-webster.com/dictionary/supersede; retrieved 2026-11-01; spelling verified.",
-        "Merriam-Webster headword acquiesce: https://www.merriam-webster.com/dictionary/acquiesce; retrieved 2026-11-01; spelling verified.",
-        "Merriam-Webster headword inoculate: https://www.merriam-webster.com/dictionary/inoculate; retrieved 2026-11-01; spelling verified."
+        "Merriam-Webster headword embarrassment; https://www.merriam-webster.com/dictionary/embarrassment; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword embarrass; https://www.merriam-webster.com/dictionary/embarrass; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword harassment; https://www.merriam-webster.com/dictionary/harassment; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "2026-11-02 original batch-proofreading rules and independent command simulation: docs/content/family03-numerical-clerical-review.md; no disputed spelling variant is used as an incorrect form."
       ]
     }
   },
   {
     "questionId": "f03-spelling-10",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -387,36 +387,40 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Audit all four marked spellings: (1) reconnaisance, (2) millennium, (3) rhytm, (4) parallel. Which instruction corrects all errors without introducing any?",
+    "stem": "A batch contains the tokens 'accomodate', 'accomodation', and 'recommend'. An edit command replaces either one exact whole-word spelling everywhere or one literal letter sequence everywhere, as specified; it costs ONE command regardless of matches. Keep already correct spellings correct. Which plan corrects the entire batch using the FEWEST commands? Read each quoted replacement literally.",
     "choices": [
       {
         "choiceId": "c1",
-        "text": "1→reconnaissance; 3→rhythm; retain 2 and 4."
+        "text": "One sequence command: 'm' → 'mm' everywhere."
       },
       {
         "choiceId": "c2",
-        "text": "1→reconnaissance; 2→millenium; 3→rhythm; retain 4."
+        "text": "Two whole-word commands: 'accomodate' → 'accommodate'; 'accomodation' → 'accommodation'."
       },
       {
         "choiceId": "c3",
-        "text": "1→reconnaissance; 3→rhythm; 4→paralell; retain 2."
+        "text": "One sequence command: 'comod' → 'commod' everywhere."
       },
       {
         "choiceId": "c4",
-        "text": "1→reconaissance; 3→rhythm; retain 2 and 4."
+        "text": "Two whole-word commands: 'accomodate' → 'accomadate'; 'accomodation' → 'accommodation'."
+      },
+      {
+        "choiceId": "c5",
+        "text": "One whole-word command: 'accomodate' → 'accommodate' only."
       }
     ],
-    "correctChoiceId": "c1",
-    "explanation": "Reconnaissance needs double s in the final part, and rhythm includes h after r. Millennium has double l and double n; parallel has double l before e and one l after it. Each competing audit either introduces an error or fails to finish a repair.",
+    "correctChoiceId": "c3",
+    "explanation": "Accommodate and accommodation require double c and double m, whereas recommend already has one c and double m. The sequence comod occurs in both defective words; changing it to commod repairs both and does not occur in recommend. Zero commands cannot work, so one safe command is minimal. Doubling every m damages recommend; two correct whole-word edits work but are not minimal; accomadate is still misspelled; correcting only accomodate leaves accomodation defective. Five choices distinguish the three orthographic checks from the separate minimal-command requirement.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "assistance": "AI-assisted original interacting proofreading repair after quality audit; independent human editorial approval and learner calibration pending",
       "sources": [
-        "Merriam-Webster headword reconnaissance: https://www.merriam-webster.com/dictionary/reconnaissance; retrieved 2026-11-01; spelling verified.",
-        "Merriam-Webster headword millennium: https://www.merriam-webster.com/dictionary/millennium; retrieved 2026-11-01; spelling verified.",
-        "Merriam-Webster headword rhythm: https://www.merriam-webster.com/dictionary/rhythm; retrieved 2026-11-01; spelling verified.",
-        "Merriam-Webster headword parallel: https://www.merriam-webster.com/dictionary/parallel; retrieved 2026-11-01; spelling verified."
+        "Merriam-Webster headword accommodate; https://www.merriam-webster.com/dictionary/accommodate; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword accommodation; https://www.merriam-webster.com/dictionary/accommodation; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword recommend; https://www.merriam-webster.com/dictionary/recommend; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "2026-11-02 original batch-proofreading rules and independent command simulation: docs/content/family03-numerical-clerical-review.md; no disputed spelling variant is used as an incorrect form."
       ]
     }
   }

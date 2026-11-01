@@ -352,7 +352,7 @@
   },
   {
     "questionId": "f03-clerical-operations-10",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "clerical",
     "subjectId": "clerical_ability",
@@ -361,32 +361,34 @@
     "levelApplicability": ["subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "Local rule: find the latest approved revision, ignoring newer drafts. R1 approved Monday, R2 draft Wednesday, R3 approved Tuesday, R4 draft Thursday. Which should be sent?",
+    "stem": "Local summary rule: publish exact category counts only when at least 3 comments belong to that category. A withheld count must also be impossible to recover by subtracting published category counts from the overall total; withhold the total when necessary. There are exactly three categories: Facilities 5, Access 2, Hours 4. Do not alter any published count. Which public summary follows ALL rules?",
     "choices": [
       {
         "choiceId": "c1",
-        "text": "R1"
+        "text": "Facilities 5; Access withheld; Hours 4; total 11."
       },
       {
         "choiceId": "c2",
-        "text": "R2"
+        "text": "Facilities 5; Access 2; Hours withheld; total withheld."
       },
       {
         "choiceId": "c3",
-        "text": "R3"
+        "text": "Facilities 5; Access withheld; Hours 4; total withheld."
       },
       {
         "choiceId": "c4",
-        "text": "R4"
+        "text": "Facilities 5; Access withheld; Hours 4; total 9."
       }
     ],
     "correctChoiceId": "c3",
-    "explanation": "Approval filters out R2 and R4; among approved versions R3 is later than R1. Draft dates do not authorize release.",
+    "explanation": "Access has fewer than 3 comments and must be withheld. Publishing the total of 11 alongside 5 and 4 would reveal the withheld 2 by subtraction, so the total must also be withheld. Publishing Access 2 breaks primary suppression even if another count is hidden; changing the total to 9 alters the count rather than suppressing it. This is the supplied office rule, not a universal legal disclosure rule.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
-      "sources": []
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
     }
   },
   {

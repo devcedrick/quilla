@@ -1,5 +1,10 @@
 # Family 03 — fresh quality and accuracy audit
 
+Historical revision-1 findings. The subsequent
+[revision-2 repair](family03-quality-revision.md) records their dispositions,
+changed versions and current verification; this audit is retained unchanged
+below as evidence, not a claim that the repaired bank still has these defects.
+
 Review completed: 2026-11-02. Read-only review of the question bank against
 [rules.md](../../content/question-bank/rules.md). This report supplements the
 authoring ledgers; it does not revise any question, key, reference, asset or

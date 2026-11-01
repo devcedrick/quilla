@@ -474,7 +474,7 @@
   },
   {
     "questionId": "f03-data-sufficiency-12",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -483,7 +483,7 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "medium",
-    "stem": "A worker's first 8 hours in a day are paid at a constant base hourly wage; additional hours are paid at 1.5 times that wage. There are no other payments. What is earned for a 10-hour day?\nStatement 1: A 3-hour day earns PHP 360.\nStatement 2: A 5-hour day earns PHP 600.",
+    "stem": "A worker earns a positive base hourly wage for the first 8 hours of each workday and 1.5 times that wage for additional hours. The SAME fixed positive daily allowance is also paid on every workday. There are no other payments. What is earned for a 10-hour day?\nStatement 1: A 6-hour day earns PHP 840.\nStatement 2: A 12-hour day earns PHP 1,680.",
     "choices": [
       {
         "choiceId": "one",
@@ -506,13 +506,15 @@
         "text": "Even both statements together are not sufficient."
       }
     ],
-    "correctChoiceId": "either",
-    "explanation": "Each statement independently fixes the base wage at PHP 120 per hour. Ten hours earn 8 × 120 + 2 × 180 = PHP 1,320, not ten hours all at the base rate or all at the overtime rate. Together both statements agree on the base wage and determine the same total.",
+    "correctChoiceId": "both",
+    "explanation": "Let r be the base wage and a the allowance. Statement 1 gives 6r + a = 840: (r, a) = (100, 240) or (120, 120) gives different 10-hour totals of PHP 1,340 or PHP 1,440. Statement 2 gives 14r + a = 1680 because four hours are overtime: (100, 280) or (110, 140) gives totals of PHP 1,380 or PHP 1,350. Neither alone suffices. Together subtraction gives r = 105 and a = 210, both positive. Ten hours earn 11r + a = PHP 1,365 uniquely. Treating overtime as base hours or omitting the unknown allowance changes the equations.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
-      "sources": []
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
     }
   },
   {
@@ -818,7 +820,7 @@
   },
   {
     "questionId": "f03-data-sufficiency-20",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -827,7 +829,7 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "Two positive numbers have arithmetic mean 10. Is their geometric mean greater than 9?\nStatement 1: Their difference is 8.\nStatement 2: Their product is 84.",
+    "stem": "Positive integers x<y have arithmetic mean 10. Is their geometric mean greater than 9?\nStatement 1: x is a divisor of 120.\nStatement 2: y is prime.",
     "choices": [
       {
         "choiceId": "one",
@@ -850,13 +852,15 @@
         "text": "Even both statements together are not sufficient."
       }
     ],
-    "correctChoiceId": "either",
-    "explanation": "The mean gives a sum of 20. Statement 1's difference of 8 forces 14 and 6; their product is 84 > 81, so the geometric mean exceeds 9. Statement 2 independently fixes the geometric mean at √84 > 9. Together both are consistent with 14 and 6 and still determine yes.",
+    "correctChoiceId": "both",
+    "explanation": "The stem gives x + y = 20 and 1 ≤ x ≤ 9. The answer is yes exactly when x(20 − x) > 81, which for integer x means x ≥ 6. Statement 1 allows x = 1 (product 19, no) or x = 8 (product 96, yes). Statement 2 allows (1, 19), no, or (7, 13), yes. Together, prime y permits x = 1, 3, 7 or 9; only 1 and 3 divide 120. Their products of 19 and 51 are below 81, so the combined answer is definitely no although the pair is not unique. The statements are consistent; a definite no is sufficient.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
-      "sources": []
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
     }
   }
 ]

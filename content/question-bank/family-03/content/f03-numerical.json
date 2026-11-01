@@ -1327,7 +1327,7 @@
   },
   {
     "questionId": "f03-numerical-35",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -1336,32 +1336,34 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "An investment gains 20% in year one and loses 20% in year two. PHP 1,200 is then added, restoring the initial balance. What was the initial investment?",
+    "stem": "A positive investment grows by 20%. A fee is then withdrawn: PHP 500 if the grown balance is at most PHP 18,000; PHP 1,000 if it is above PHP 18,000 but at most PHP 36,000; otherwise PHP 1,500. The remaining balance loses 20%, then PHP 1,800 is added, exactly restoring the initial investment. Which initial investment is consistent with BOTH the cash-flow equation and its fee band?",
     "choices": [
       {
         "choiceId": "c1",
-        "text": "PHP 6,000"
+        "text": "PHP 15,000"
       },
       {
         "choiceId": "c2",
-        "text": "PHP 12,000"
+        "text": "PHP 35,000"
       },
       {
         "choiceId": "c3",
-        "text": "PHP 24,000"
+        "text": "PHP 45,000"
       },
       {
         "choiceId": "c4",
-        "text": "PHP 30,000"
+        "text": "PHP 25,000"
       }
     ],
     "correctChoiceId": "c4",
-    "explanation": "Successive factors 1.20 and 0.80 leave 0.96 of the original investment. The deposit replaces the missing 4%, so the original is 1,200/0.04 = PHP 30,000. Equal percentage changes do not cancel.",
+    "explanation": "For initial P and fee F, 0.8(1.2P − F) + 1800 = P, so P = 45000 − 20F. Fees of PHP 500, 1,000 and 1,500 give candidates of PHP 35,000, 25,000 and 15,000 respectively. Their grown balances are PHP 42,000, 30,000 and 18,000: the first violates the low fee band, the last violates the high band, and only PHP 30,000 belongs to its assumed middle band. Thus P = PHP 25,000; PHP 45,000 ignores the fee. Solving an assumed fee equation is insufficient without checking its band.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
-      "sources": []
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
     }
   },
   {
@@ -1522,7 +1524,7 @@
   },
   {
     "questionId": "f03-numerical-40",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "numerical_ability",
@@ -1531,32 +1533,34 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "english",
     "difficulty": "hard",
-    "stem": "A three-digit positive integer uses each of 1, 2 and 3 exactly once. It is divisible by 3. After its digits are reversed, the new number is 99 smaller. Which complete set lists the possible original numbers?",
+    "stem": "A four-digit positive integer uses four DISTINCT digits chosen from 0 through 5. It is divisible by 3. Reversing its four digits gives a number exactly 2,178 smaller; if the reversed string begins with 0, interpret it normally as a number. Which is the COMPLETE set of possible original integers?",
     "choices": [
       {
         "choiceId": "c1",
-        "text": "213 only"
+        "text": "2310 only"
       },
       {
         "choiceId": "c2",
-        "text": "321 only"
+        "text": "2310 and 3201"
       },
       {
         "choiceId": "c3",
-        "text": "213 and 321"
+        "text": "2310 and 3120"
       },
       {
         "choiceId": "c4",
-        "text": "231 and 312"
+        "text": "2310, 3201 and 3210"
       }
     ],
-    "correctChoiceId": "c4",
-    "explanation": "All permutations have digit sum 6 and are divisible by 3, so that condition alone does not select an order. If hundreds h and units u differ by 1, then original minus reverse is 99. The pairs (h,u)=(2,1) and (3,2) give originals 231 and 312. Their reversals are 132 and 213. Other listed numbers either have the wrong sign or a difference of 198.",
+    "correctChoiceId": "c2",
+    "explanation": "For digits a, b, c and d, the reversal condition gives 999(a − d) + 90(b − c) = 2178, or 111(a − d) + 10(b − c) = 242. Modulo 10 and digit differences between −5 and 5 force a − d = 2, then b − c = 2. Available ordered pairs are (2, 0), (3, 1), (4, 2) and (5, 3). Distinct digits allow four pair combinations: (2, 0) with (3, 1); (2, 0) with (5, 3); (3, 1) with (4, 2); and (4, 2) with (5, 3), in either placement. Only the first combination has digit sum divisible by 3, producing 2310 and 3201. Every option uses only distinct allowed digits and multiples of 3, so that test alone cannot choose an answer. The partial list omits 3201; 3120 reverses to 213 and differs by 2907, while 3210 reverses to 123 and differs by 3087. Those extra candidates violate the reversal condition.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
-      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
-      "sources": []
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
     }
   }
 ]

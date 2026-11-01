@@ -253,7 +253,7 @@
   },
   {
     "questionId": "f03-grammar-filipino-07",
-    "version": 1,
+    "version": 2,
     "family": 3,
     "module": "shared-core",
     "subjectId": "verbal_ability",
@@ -262,27 +262,27 @@
     "levelApplicability": ["professional", "subprofessional"],
     "language": "filipino",
     "difficulty": "medium",
-    "stem": "May dalawang baryo: Malaya at Ligaya. Mas mahaba ang tulay ng Malaya kaysa sa tulay ng Ligaya. Aling rebisyon ang nagpapanatili sa malinaw at magkatumbas na paghahambing?",
+    "stem": "Magkaibang baryo ang Malaya at Ligaya. Sa ulat, mas mahaba ang tulay na nasa Malaya. Aling rebisyon ng 'Mas mahaba ang tulay ng Malaya kaysa sa Ligaya mismo' ang nagwawasto sa paghahambing nang hindi binabaligtad ang kahulugan?",
     "choices": [
       {
         "choiceId": "a",
-        "text": "Mas mahaba ang tulay ng Malaya kaysa sa Ligaya mismo."
+        "text": "Higit ang haba ng tulay sa Malaya kaysa sa lawak ng Ligaya."
       },
       {
         "choiceId": "b",
-        "text": "Mas mahaba ang tulay ng Ligaya kaysa sa tulay ng Malaya."
+        "text": "Higit ang haba ng tulay sa Ligaya kaysa sa tulay sa Malaya."
       },
       {
         "choiceId": "c",
-        "text": "Mas mahaba ang tulay ng Malaya kaysa sa tulay ng Ligaya."
+        "text": "Higit ang haba ng tulay sa Malaya kaysa sa tulay sa Ligaya."
       },
       {
         "choiceId": "d",
-        "text": "Mas mahaba ang Malaya kaysa sa tulay ng Ligaya."
+        "text": "Higit ang lawak ng Malaya kaysa sa haba ng tulay sa Ligaya."
       }
     ],
     "correctChoiceId": "c",
-    "explanation": "Tulay sa tulay ang magkatumbas na bagay na inihahambing, at Malaya ang may mas mahabang tulay. Ang iba ay nagbabaligtad ng direksiyon o naghahambing ng tulay at baryo sa halip na dalawang tulay.",
+    "explanation": "Ang tamang rebisyon ay naghahambing ng haba ng dalawang tulay at pinananatiling mas mahaba ang nasa Malaya. Ang tulay at lawak ng baryo ay hindi magkatumbas na bagay; ang pagbabaligtad ng mga baryo ay nagbabago sa ibinigay na direksiyon.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",

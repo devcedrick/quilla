@@ -1,5 +1,16 @@
 # Family 03 — seed bank and quality review
 
+## Current revision 2 — quality repair
+
+The 2026-11-02 [quality revision](family03-quality-revision.md) supersedes the
+revision-1 acceptance claims below. It substantively revises 64 questions and
+three dedicated passages while preserving all IDs, labels, counts and images.
+The [fresh audit](family03-quality-audit.md) remains historical evidence of the
+issues that prompted the repair. Refer to the revision report for current
+checks and checksum; the original revision-1 report below is preserved.
+
+## Historical revision 1
+
 Date: 2026-11-01. Corpus: `cse-2027-family03`, revision 1. This is original,
 AI-assisted, offline authoring, not an import into Convex, a publication decision,
 or actual/leaked Civil Service Examination material. Quilla is not affiliated
