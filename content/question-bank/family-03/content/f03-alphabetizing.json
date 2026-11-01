@@ -1,0 +1,392 @@
+[
+  {
+    "questionId": "f03-alphabetizing-01",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare the full words letter by letter, ignoring case; a shorter exact prefix comes first.\nR1. ledger\nR2. legal\nR3. legend\nR4. lemon\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R1, R3, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R1, R2, R3, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R1, R3, R2, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R1, R2, R4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "ledger precedes legal, then legend, then lemon; compare the fourth letter within leg.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-02",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "File surname first, then given name, ignoring case and commas.\nR1. Toral, Mina\nR2. Tomas, Aida\nR3. Toral, Miko\nR4. Torres, Bina\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R1, R3, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R3, R1, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R1, R2, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R1, R3, R2, R4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Tomas precedes Toral, then Torres; within Toral, Miko precedes Mina because k<n.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-03",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare full names letter by letter, ignoring spaces and case.\nR1. Cedar Hall\nR2. Cedar Farm\nR3. Cedar Hill\nR4. Cedar Grove\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R4, R1, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R1, R4, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R2, R1, R3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R4, R3, R1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "After cedar, suffixes sort farm, grove, hall, hill: f<g<h, then a<i.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-04",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Use word-by-word comparison: compare whole words; a shorter exact word comes first. Ignore case and punctuation, but spaces separate words.\nR1. Newark Office\nR2. New Arc Office\nR3. New Age Office\nR4. New Acre Office\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R4, R2, R1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R3, R2, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R2, R4, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R4, R1, R2"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The complete word New precedes Newark. Within New, Acre precedes Age, then Arc; hence R4,R3,R2,R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-05",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare letter by letter after removing spaces and hyphens; treat abbreviations literally and ignore case.\nR1. Sea-Ridge Centre\nR2. Sea Ride Centre\nR3. Sea Ridge Annex\nR4. Seaside Centre\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R3, R1, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R1, R3, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R1, R2, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R3, R4, R1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized searide precedes searidge; within searidge, annex precedes centre. Seaside follows sear... because s>r.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-06",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Ignore an initial The only. Compare word by word, case-insensitively; shorter exact words come first.\nR1. The Elm Archive\nR2. Elmwood Archive\nR3. Elm Annex\nR4. The Elm Archives\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R1, R4, R2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R1, R3, R4, R2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R4, R1, R2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R1, R2, R4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "After dropping The, Elm Annex precedes Elm Archive and Elm Archives; Archive precedes its longer prefix Archives. Elmwood follows all Elm entries.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-07",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "File surname then given name; ignore commas, spaces within fields, and case. A shorter exact field comes first. Do not rearrange surname particles.\nR1. Del Rio, Ana\nR2. De Leon, Zita\nR3. Del Rio, An\nR4. Del Rosario, Ana\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R3, R1, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R1, R2, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R2, R4, R3, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R1, R3, R4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized deleon precedes delrio, then delrosario. Within delrio, An is an exact prefix of Ana and comes first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-08",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare organization names letter by letter, ignoring punctuation, spaces and case; do NOT expand initials.\nR1. J. A. Records\nR2. JA Research\nR3. Jade Records\nR4. J. A. Record\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R1, R2, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R4, R1, R2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R1, R3, R2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R1, R4, R2, R3"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Normalized jade... comes before jar... because d<r. Then jarecord before jarecords before jaresearch; short exact prefix first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-09",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Sort word by word after dropping initial The, expanding Mt. to Mount, and ignoring punctuation/case. Shorter exact words come first; remaining identical names sort by ascending numeric branch number.\nR1. The Mt. Pine Office; branch 12\nR2. Mount Pine Office; branch 3\nR3. Mount Pine Offices; branch 1\nR4. Mt. Pine Annex; branch 9\nR5. Mount Pines Office; branch 2\nR6. Mountain Pine Office; branch 4\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R2, R1, R3, R5, R6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R1, R2, R3, R5, R6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R2, R1, R5, R3, R6"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R2, R1, R3, R6, R5"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Mount precedes Mountain. Pine precedes Pines; within Pine, Annex precedes Office, then Offices. Identical Office names use numeric branch 3 before branch 12, not the lexical order of the digit strings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-alphabetizing-10",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "File surname, given name, then numeric employee code ascending. Ignore titles Dr./Ms./Mr., spaces and apostrophes within names, and case. A shorter exact field comes first; do not expand initials.\nR1. Dr. O'Ria, Jo; code 21\nR2. Ms. Oria, Jon; code 2\nR3. Mr. O Ria, Jo; code 3\nR4. Dr. Oria, J; code 8\nR5. Ms. Orial, Jo; code 1\nR6. Mr. Oria, Jona; code 4\nWhich complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R3, R1, R2, R6, R5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R1, R3, R2, R6, R5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R3, R1, R6, R2, R5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R3, R1, R2, R5, R6"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Oria precedes Orial. Given names sort J, Jo, Jon, Jona. The Jo tie uses numeric code 3 before code 21. Titles do not affect comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

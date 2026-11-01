@@ -1,0 +1,296 @@
+[
+  {
+    "questionId": "f03-grammar-filipino-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling pangungusap ang malinaw na nagsasaad na tapos na ang gawain kahapon?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Isusulat ni Nena ang liham kahapon."
+      },
+      {
+        "choiceId": "b",
+        "text": "Isinusulat ni Nena ang liham bukas."
+      },
+      {
+        "choiceId": "c",
+        "text": "Isinulat ni Nena ang liham kahapon."
+      },
+      {
+        "choiceId": "d",
+        "text": "Susulat si Nena ng liham kahapon."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang isinulat ay naganap na aspekto at kaayon ng kahapon. Ang isusulat at susulat ay magaganap; ang bukas ay hindi kaayon ng hinihinging natapos kahapon.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-filipino-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Alin ang wastong gamit ng panghalip para sa dalawang taong kinakausap, hindi kabilang ang nagsasalita?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kayo ang magdadala ng susi."
+      },
+      {
+        "choiceId": "b",
+        "text": "Tayo ang magdadala ng susi."
+      },
+      {
+        "choiceId": "c",
+        "text": "Kami ang magdadala ng susi."
+      },
+      {
+        "choiceId": "d",
+        "text": "Sila ang magdadala ng susi."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Kayo ang ikalawang panauhang maramihan. Tayo at kami ay kabilang ang nagsasalita; sila ay ikatlong panauhan, hindi tuwirang kinakausap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-filipino-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling pares ang gumagamit ng wastong pang-angkop sa parehong parirala?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "mahabang daan; malinis na silid"
+      },
+      {
+        "choiceId": "b",
+        "text": "mahaba na daan; malinisng silid"
+      },
+      {
+        "choiceId": "c",
+        "text": "mahabang daan; malinisng silid"
+      },
+      {
+        "choiceId": "d",
+        "text": "mahaba ng daan; malinis na silid"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ikinakabit ang -ng sa mahaba na nagtatapos sa patinig; na naman pagkatapos ng malinis na nagtatapos sa s. Ang magkahiwalay na ng at ang malinisng ay hindi wastong pang-angkop sa mga pariralang ito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-filipino-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ibig sabihin: ang aklat ang bagay na hiniram ni Pio kay Nilo, hindi si Nilo ang humiram. Alin ang wastong pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Hiniram ni Pio ang aklat kay Nilo."
+      },
+      {
+        "choiceId": "b",
+        "text": "Hiniram ni Nilo ang aklat kay Pio."
+      },
+      {
+        "choiceId": "c",
+        "text": "Hiniram ni Pio si Nilo sa aklat."
+      },
+      {
+        "choiceId": "d",
+        "text": "Hiniram kay Pio ang aklat ni Nilo."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ni Pio ang tagaganap, ang aklat ang hiniram, at kay Nilo ang pinaghiraman. Binabago ng ibang pangungusap ang tagaganap, bagay o pinaghiraman; hindi sapat ang wastong mga pangalan kung mali ang papel na minamarkahan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-filipino-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "'Kahit maulan, itinuloy ang ensayo.' Aling pagbabago ang nagpapanatili sa ugnayan?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Dahil maulan, itinuloy ang ensayo."
+      },
+      {
+        "choiceId": "b",
+        "text": "Upang umulan, itinuloy ang ensayo."
+      },
+      {
+        "choiceId": "c",
+        "text": "Itinuloy ang ensayo sa kabila ng ulan."
+      },
+      {
+        "choiceId": "d",
+        "text": "Itinuloy ang ensayo kaya umulan."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Pagsalungat sa inaasahan ang kahit: natuloy sa kabila ng ulan. Dahil ay sanhi, upang ay layon, at kaya ay bunga; nagbabago ang ugnayan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-filipino-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Layunin ng may-akda na sabihing kapuwa kailangan ang lagda at petsa. Alin ang hindi nagpapahintulot ng isa lamang?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kailangan ang lagda o petsa."
+      },
+      {
+        "choiceId": "b",
+        "text": "Kailangan ang lagda at petsa."
+      },
+      {
+        "choiceId": "c",
+        "text": "Kailangan ang lagda maliban kung may petsa."
+      },
+      {
+        "choiceId": "d",
+        "text": "Kailangan ang petsa kung walang lagda."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "At ang nag-uugnay ng dalawang kapuwa kailangan. Ang o at mga eksepsiyon sa ibang pahayag ay nagpapahintulot na mawala ang isa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-filipino-07",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "May dalawang baryo: Malaya at Ligaya. Mas mahaba ang tulay ng Malaya kaysa sa tulay ng Ligaya. Aling rebisyon ang nagpapanatili sa malinaw at magkatumbas na paghahambing?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mas mahaba ang tulay ng Malaya kaysa sa Ligaya mismo."
+      },
+      {
+        "choiceId": "b",
+        "text": "Mas mahaba ang tulay ng Ligaya kaysa sa tulay ng Malaya."
+      },
+      {
+        "choiceId": "c",
+        "text": "Mas mahaba ang tulay ng Malaya kaysa sa tulay ng Ligaya."
+      },
+      {
+        "choiceId": "d",
+        "text": "Mas mahaba ang Malaya kaysa sa tulay ng Ligaya."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Tulay sa tulay ang magkatumbas na bagay na inihahambing, at Malaya ang may mas mahabang tulay. Ang iba ay nagbabaligtad ng direksiyon o naghahambing ng tulay at baryo sa halip na dalawang tulay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

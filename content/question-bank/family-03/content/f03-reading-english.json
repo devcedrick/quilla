@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f03-reading-english-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which entrance should a visitor needing step-free access use?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The delivery entrance"
+      },
+      {
+        "choiceId": "b",
+        "text": "The courtyard door"
+      },
+      {
+        "choiceId": "c",
+        "text": "The front gate only"
+      },
+      {
+        "choiceId": "d",
+        "text": "Any door after handing a ticket to another visitor"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The courtyard door is explicitly designated for step-free access and has ticket collection. Unnumbered seats do not change that direction; the side door is for deliveries.",
+    "reference": {
+      "referenceId": "f03-reading-english-01-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Why does the potter propose reversing the positions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "To guarantee that neither bowl will crack"
+      },
+      {
+        "choiceId": "b",
+        "text": "To establish that clay composition differed"
+      },
+      {
+        "choiceId": "c",
+        "text": "To separate a thickness explanation from a position explanation"
+      },
+      {
+        "choiceId": "d",
+        "text": "To prove that the first firing produced no useful observation"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Thickness and kiln position changed together, so their effects cannot be distinguished from that firing. Reversing positions tests competing explanations; it neither guarantees an outcome nor erases the observation.",
+    "reference": {
+      "referenceId": "f03-reading-english-02-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What does calling the station 'the town's clock' most reasonably suggest?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Train movements became a shared reference for daily activity"
+      },
+      {
+        "choiceId": "b",
+        "text": "The railway introduced the town's first timekeeping devices"
+      },
+      {
+        "choiceId": "c",
+        "text": "Every household stopped using mechanical clocks"
+      },
+      {
+        "choiceId": "d",
+        "text": "Railway workers officially controlled shop opening hours"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The described routines establish a social time reference. The later sentence rules out the first-clock claim; neither universal abandonment nor an official rule is stated.",
+    "reference": {
+      "referenceId": "f03-reading-english-03-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which evaluation best combines the guarantee, the causal finding and the scope of the decision?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both requests are covered because the runner explains the jamming; the impact finding is therefore irrelevant to any repair cost."
+      },
+      {
+        "choiceId": "b",
+        "text": "The runner adjustment is covered, but the impact automatically cancels all other workmanship cover, including this adjustment."
+      },
+      {
+        "choiceId": "c",
+        "text": "Neither request is covered because an impact occurred; the runner's independent causal role cannot affect the guarantee."
+      },
+      {
+        "choiceId": "d",
+        "text": "The runner adjustment is covered by the workmanship finding; the handle remains outside that cover, without cancelling the covered adjustment."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The promise attaches to the cause of the particular defect, not a blanket classification of the member. The runner is a workmanship defect and explains the jamming; the handle is impact damage. The two findings support separate decisions, not universal coverage or total cancellation.",
+    "reference": {
+      "referenceId": "f03-reading-english-04-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which assessment respects both presentation goals and the limitation on interpretation?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "M separates quotation from explanation and keeps the visible label short, but visitors who skip the foldout may miss the explanation."
+      },
+      {
+        "choiceId": "b",
+        "text": "M meets both goals, and the presence of the foldout establishes that every visitor receives the explanation."
+      },
+      {
+        "choiceId": "c",
+        "text": "L protects quotation boundaries and therefore also meets the designer's short-label goal."
+      },
+      {
+        "choiceId": "d",
+        "text": "K meets the designer's goal and preserves quotation boundaries because an explanation has the same meaning."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "M keeps source and commentary distinct while moving detail off the visible label. Optional access does not guarantee use. L remains long; K silently replaces quoted wording, so semantic similarity does not satisfy the curator's explicit boundary.",
+    "reference": {
+      "referenceId": "f03-reading-english-05-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which conclusion follows without treating a proposal as an accomplished change?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P currently meets both promises; Q could do so once the morning boat is proposed."
+      },
+      {
+        "choiceId": "b",
+        "text": "Q currently meets both promises because the spare engine physically exists; P misses the evening promise."
+      },
+      {
+        "choiceId": "c",
+        "text": "Neither currently meets both promises; Q could meet them with the morning addition only after the reserve condition is satisfied."
+      },
+      {
+        "choiceId": "d",
+        "text": "Neither can ever meet both promises; the reserve condition permanently forbids any extra morning boat."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P misses the evening condition, Q the morning condition. The extra morning service would cure Q's timing gap, but the stated reserve condition is unmet. A conditional remedy is neither a current solution nor a permanent impossibility.",
+    "reference": {
+      "referenceId": "f03-reading-english-06-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

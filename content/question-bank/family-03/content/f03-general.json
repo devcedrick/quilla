@@ -1,0 +1,1682 @@
+[
+  {
+    "questionId": "f03-general-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 10121, which term denotes a potentially damaging phenomenon, rather than the community's losses after it occurs?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Hazard"
+      },
+      {
+        "choiceId": "b",
+        "text": "Response"
+      },
+      {
+        "choiceId": "c",
+        "text": "Recovery"
+      },
+      {
+        "choiceId": "d",
+        "text": "Capacity"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 3(v) identifies the possible damaging event as a hazard. Response and recovery are activities; capacity describes resources and strengths.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A municipality trains evacuation volunteers before any warning is issued. Which disaster-management function is most directly illustrated?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Response"
+      },
+      {
+        "choiceId": "b",
+        "text": "Preparedness"
+      },
+      {
+        "choiceId": "c",
+        "text": "Recovery"
+      },
+      {
+        "choiceId": "d",
+        "text": "Rehabilitation"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Sections 3(j) and 3(bb) includes training and exercises within preparedness. Response addresses immediate effects; rehabilitation and recovery restore affected communities.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is an example of community capacity under RA 10121?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Expected storm intensity"
+      },
+      {
+        "choiceId": "b",
+        "text": "Homes inside an inundation zone"
+      },
+      {
+        "choiceId": "c",
+        "text": "A trained local rescue network"
+      },
+      {
+        "choiceId": "d",
+        "text": "The estimated likelihood of flooding"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 3(b) includes skills, institutions and social relationships within capacity. Storm intensity is a hazard property; location concerns exposure; likelihood contributes to risk.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Restoring damaged facilities after an emergency primarily belongs to which stage?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Hazard identification"
+      },
+      {
+        "choiceId": "b",
+        "text": "Early warning"
+      },
+      {
+        "choiceId": "c",
+        "text": "Preparedness training"
+      },
+      {
+        "choiceId": "d",
+        "text": "Rehabilitation"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 3(ee) describes restoration and improvement of facilities, livelihoods and living conditions. The other choices chiefly anticipate an event rather than restore damage.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under the Climate Change Act's terminology, an anthropogenic cause originates from what?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Human activity"
+      },
+      {
+        "choiceId": "b",
+        "text": "Seasonal variation alone"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ocean tides alone"
+      },
+      {
+        "choiceId": "d",
+        "text": "Volcanic processes alone"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "RA 9729 Section 3(c) uses anthropogenic for human-produced causes, not natural processes simply because they affect people.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which term describes an extended change in climatic averages or variability rather than one afternoon's weather?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A weather warning"
+      },
+      {
+        "choiceId": "b",
+        "text": "Climate change"
+      },
+      {
+        "choiceId": "c",
+        "text": "A daily temperature reading"
+      },
+      {
+        "choiceId": "d",
+        "text": "A rain shower"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 3(d) concerns persistent changes over extended periods. A single observation or event does not itself establish such a change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-07",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which measure most directly targets climate-change mitigation rather than adaptation?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Elevating a flood-prone walkway"
+      },
+      {
+        "choiceId": "b",
+        "text": "Preparing a heatwave response plan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Reducing greenhouse-gas emissions from generators"
+      },
+      {
+        "choiceId": "d",
+        "text": "Moving a nursery away from a projected flood zone"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 3(n) links mitigation to greenhouse-gas sources and sinks. The other measures adjust to impacts and therefore illustrate adaptation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-08",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An agency incorporates climate considerations into its ordinary transport plans instead of keeping them in a separate appendix. Which term fits?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Weather forecasting"
+      },
+      {
+        "choiceId": "b",
+        "text": "Emergency response"
+      },
+      {
+        "choiceId": "c",
+        "text": "Climate variability"
+      },
+      {
+        "choiceId": "d",
+        "text": "Mainstreaming"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 3(m) concerns integration into development planning and sectoral decisions; forecasting and emergency response are narrower activities.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-09",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under Article III, Section 20, which circumstance by itself cannot justify imprisonment?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "An unpaid debt"
+      },
+      {
+        "choiceId": "b",
+        "text": "A conviction for fraud"
+      },
+      {
+        "choiceId": "c",
+        "text": "A conviction for robbery"
+      },
+      {
+        "choiceId": "d",
+        "text": "A lawful contempt finding"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The constitutional protection concerns debt and nonpayment of a poll tax. It does not immunize independently established crimes or lawful contempt.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-10",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which protection is named in Article III, Section 22?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A ban on every retroactive administrative rule"
+      },
+      {
+        "choiceId": "b",
+        "text": "A prohibition of bills of attainder"
+      },
+      {
+        "choiceId": "c",
+        "text": "A general exemption from taxation"
+      },
+      {
+        "choiceId": "d",
+        "text": "A restriction on voluntary contracts"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 22 prohibits bills of attainder and ex post facto laws. The other claims broaden or change that specific protection.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-11",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The accused is presumed innocent until what condition is met?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A complaint has been filed"
+      },
+      {
+        "choiceId": "b",
+        "text": "A witness has testified"
+      },
+      {
+        "choiceId": "c",
+        "text": "The contrary is proved"
+      },
+      {
+        "choiceId": "d",
+        "text": "A prosecutor has announced confidence"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article III, Section 14(2) supplies the presumption. Filing, testimony, and official confidence do not by themselves displace it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-12",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which right most directly protects a person from being compelled to testify against himself?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The right to petition"
+      },
+      {
+        "choiceId": "b",
+        "text": "The right of association"
+      },
+      {
+        "choiceId": "c",
+        "text": "The right to travel"
+      },
+      {
+        "choiceId": "d",
+        "text": "The privilege against self-incrimination"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article III, Section 17 protects against compelled self-incriminating testimony. Petition, association and travel concern different freedoms.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-13",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A strong earthquake occurs in an uninhabited area without serious community disruption. Which interpretation best uses RA 10121's definitions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Every hazard occurrence is already a disaster"
+      },
+      {
+        "choiceId": "b",
+        "text": "A hazard occurred, but the stated facts do not establish a disaster"
+      },
+      {
+        "choiceId": "c",
+        "text": "No hazard existed because nobody was injured"
+      },
+      {
+        "choiceId": "d",
+        "text": "A disaster requires a declaration before any losses occur"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Sections 3(h) and 3(v) distinguish a damaging potential/event from a serious community disruption exceeding coping resources. Neither absence of casualties nor absence of a declaration defines the hazard away.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-14",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two settlements face the same flood depth. One has elevated homes and evacuation support; the other has fragile ground-level homes and no assistance. Why may their disaster risk differ?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Flood depth is irrelevant to risk"
+      },
+      {
+        "choiceId": "b",
+        "text": "The second settlement necessarily has more residents"
+      },
+      {
+        "choiceId": "c",
+        "text": "Vulnerability and capacity differ despite a similar hazard"
+      },
+      {
+        "choiceId": "d",
+        "text": "Risk can be compared only after deaths occur"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The definition of disaster risk relates potential losses to hazard exposure, vulnerability and capacity. Equal hazard intensity does not make these other conditions equal; population and deaths are not supplied.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-15",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Residents attend a presentation, but officials alone identify risks and choose all remedies. Which criticism best follows the community-based DRRM definition?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Community attendance satisfies every participation requirement"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only external experts may choose risk remedies"
+      },
+      {
+        "choiceId": "c",
+        "text": "Community-based work excludes government involvement"
+      },
+      {
+        "choiceId": "d",
+        "text": "Attendance alone is not active involvement in assessment and decisions"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 3(e) places at-risk communities in identification, analysis, treatment, monitoring and evaluation, with people central to decisions. Attendance alone is narrower; government and expert involvement need not be excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-16",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A siren reliably transmits a warning, but recipients do not understand it and no one knows which action to take. Which assessment best applies the early-warning definition?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Signal transmission alone is not an effective warning system"
+      },
+      {
+        "choiceId": "b",
+        "text": "A louder siren necessarily solves both failures"
+      },
+      {
+        "choiceId": "c",
+        "text": "Warnings become effective only after evacuation is complete"
+      },
+      {
+        "choiceId": "d",
+        "text": "Public understanding replaces the need for monitoring"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 3(q) includes risk knowledge, monitoring, communication and response capacity. Transmission cannot substitute for comprehension and action; louder sound, completed evacuation or public education alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-17",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A town strengthens buildings and also rehearses evacuations. Which mapping is most precise?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both are post-disaster recovery only"
+      },
+      {
+        "choiceId": "b",
+        "text": "Strengthening reduces impacts; rehearsal develops preparedness"
+      },
+      {
+        "choiceId": "c",
+        "text": "Strengthening is a warning; rehearsal is reconstruction"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both eliminate the underlying hazard"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Sections 3(i) and 3(j) distinguish mitigation of impacts from preparedness capacities. Neither measure necessarily removes a hazard or requires a disaster already to have occurred.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-18",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Relief supplies arrive rapidly, but the programme stops after distributing them and has no restoration work. What is supported?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Rapid relief demonstrates completed rehabilitation"
+      },
+      {
+        "choiceId": "b",
+        "text": "No response occurred without permanent rebuilding"
+      },
+      {
+        "choiceId": "c",
+        "text": "Immediate response occurred, but rehabilitation is not established"
+      },
+      {
+        "choiceId": "d",
+        "text": "Preparedness and rehabilitation are interchangeable"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Sections 3(l) and 3(ee) distinguish immediate assistance from restoration/improvement. Rapid distribution supports response, not a claim that recovery work is complete.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-19",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A coastal office raises storage shelves to cope with expected flooding and replaces diesel power to cut emissions. How should the two actions be classified?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both adaptation only"
+      },
+      {
+        "choiceId": "b",
+        "text": "Both mitigation only"
+      },
+      {
+        "choiceId": "c",
+        "text": "Shelves mitigation; power replacement adaptation"
+      },
+      {
+        "choiceId": "d",
+        "text": "Shelves adaptation; emission reduction mitigation"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "RA 9729 Section 3(a),(n) separates adjusting to effects from addressing greenhouse-gas emissions. An action's purpose, not its coastal location or equipment type alone, controls the classification.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-20",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A single unusually cool week is offered as proof that no long-term warming can exist. Which reply best applies the Act's definitions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A short weather interval does not determine a persistent climate trend"
+      },
+      {
+        "choiceId": "b",
+        "text": "Cool weather proves there can be no climate variability"
+      },
+      {
+        "choiceId": "c",
+        "text": "Every cool week is evidence of permanent climate change"
+      },
+      {
+        "choiceId": "d",
+        "text": "A climate trend requires every day to move in the same direction"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Sections 3(d),(e),(j) concern longer-term climate and average warming, allowing variability. One short interval cannot establish either permanent change or absence of a long-term trend.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-21",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A project estimates greenhouse-gas savings against a stated no-project emissions baseline. Why does that baseline matter?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It defines the number of project workers"
+      },
+      {
+        "choiceId": "b",
+        "text": "It supplies the comparison for estimated mitigation reductions"
+      },
+      {
+        "choiceId": "c",
+        "text": "It automatically certifies every forecast"
+      },
+      {
+        "choiceId": "d",
+        "text": "It measures only adaptation to rainfall"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 3(o) expresses mitigation potential relative to an emissions baseline. A comparison is not verification of all forecasts, a staffing count, or merely a rainfall measure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-22",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two farming communities face a similar expected drought. One can switch crops and access reliable forecasts; the other cannot. Which distinction is most directly illustrated?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A difference in the definition of drought"
+      },
+      {
+        "choiceId": "b",
+        "text": "Proof that emissions are equal"
+      },
+      {
+        "choiceId": "c",
+        "text": "A difference in adaptive capacity"
+      },
+      {
+        "choiceId": "d",
+        "text": "Proof that the first community faces no climate effects"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 3(b) concerns ability to adjust and cope. Crop options and usable information can change that ability without changing the hazard's definition or eliminating impacts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-23",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A planner claims sea-level rise at a location can be assessed solely from global ocean warming, ignoring sinking land. Which correction matches the Act's definition?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Local land movement matters only to air temperature"
+      },
+      {
+        "choiceId": "b",
+        "text": "Global warming excludes ocean expansion"
+      },
+      {
+        "choiceId": "c",
+        "text": "Land subsidence makes climate evidence irrelevant"
+      },
+      {
+        "choiceId": "d",
+        "text": "Local factors such as subsidence can contribute to relative sea-level rise"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 3(p) expressly includes local factors as well as warming-related influences. Recognizing local contributions neither removes global influences nor makes either sufficient alone.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-24",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A climate plan consults women only after all project choices are fixed. Which criticism best fits gender mainstreaming?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Concerns should inform design, implementation and evaluation, not merely a final consultation"
+      },
+      {
+        "choiceId": "b",
+        "text": "Consultation is required only for projects exclusively serving women"
+      },
+      {
+        "choiceId": "c",
+        "text": "Gender mainstreaming replaces environmental assessment"
+      },
+      {
+        "choiceId": "d",
+        "text": "The plan must guarantee identical personal outcomes for every participant"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 3(i) integrates women's and men's concerns throughout policy stages. It is not a final ceremonial consultation, an exclusion of other analysis, or a guarantee of identical individual results.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-25",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A debtor is separately prosecuted for proven fraud used to obtain a loan. Which reading of Article III, Section 20 is sound?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Every offence involving borrowed money becomes immune"
+      },
+      {
+        "choiceId": "b",
+        "text": "Nonpayment alone is protected; a separate criminal offence is not erased"
+      },
+      {
+        "choiceId": "c",
+        "text": "Imprisonment for any civil debt is required once fraud is alleged"
+      },
+      {
+        "choiceId": "d",
+        "text": "A lender's accusation alone proves the offence"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The ban on imprisonment for debt does not remove criminal liability for a distinct offence. Neither an allegation nor nonpayment itself establishes guilt.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-26",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A person waives custodial-investigation rights orally while a relative watches, with no counsel present. Which requirement is missing under Article III, Section 12?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only a relative's written approval"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only later approval by the police chief"
+      },
+      {
+        "choiceId": "c",
+        "text": "A waiver in writing and in the presence of counsel"
+      },
+      {
+        "choiceId": "d",
+        "text": "A newspaper announcement of the waiver"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 12(1) requires both writing and counsel's presence for waiver of the stated custodial rights. Relative attendance or later administrative approval cannot substitute.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-27",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An accused was arraigned, duly notified of trial and then absent without justification. Does Article III categorically prohibit trial from proceeding because of that absence?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Yes, presence is indispensable at every later hearing"
+      },
+      {
+        "choiceId": "b",
+        "text": "Yes, unless the accused consents to trial in writing"
+      },
+      {
+        "choiceId": "c",
+        "text": "No, but absence automatically proves guilt"
+      },
+      {
+        "choiceId": "d",
+        "text": "No; the stated conditions permit trial notwithstanding the absence"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article III, Section 14(2) permits trial after arraignment despite absence when notice was duly given and absence unjustifiable. This permission does not convert absence into proof of guilt.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-28",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A free legal-assistance request is rejected solely because the applicant is poor. Which constitutional distinction is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Poverty cannot be the reason to deny access and adequate assistance"
+      },
+      {
+        "choiceId": "b",
+        "text": "The guarantee automatically resolves the merits for the applicant"
+      },
+      {
+        "choiceId": "c",
+        "text": "The guarantee eliminates all procedural rules"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only criminal courts are covered by the access guarantee"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article III, Section 11 protects access to courts and quasi-judicial bodies and adequate legal assistance against denial by reason of poverty. It neither guarantees victory nor abolishes procedure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-29",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An agency head plans to submit the annual performance report 45 calendar days after year-end and says it need not be available to the public. Which correction matches RA 6713, Section 5(b)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The deadline is 15 working days and the report stays confidential"
+      },
+      {
+        "choiceId": "b",
+        "text": "The period is 45 working days and the report is publicly available during regular office hours"
+      },
+      {
+        "choiceId": "c",
+        "text": "The deadline is 30 calendar days and inspection requires a court order"
+      },
+      {
+        "choiceId": "d",
+        "text": "The report may be postponed until the head retires"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 5(b) uses working days and provides public availability during regular office hours. A communications deadline is different; confidentiality or retirement is not the stated rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 6713, Sections 5, 7 and 8; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-30",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A civil servant is authorized by law to practise a profession privately, but the proposed engagement conflicts with official functions. Which conclusion follows from Section 7(b)(2)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Authorization makes any engagement permissible"
+      },
+      {
+        "choiceId": "b",
+        "text": "An unpaid engagement cannot conflict"
+      },
+      {
+        "choiceId": "c",
+        "text": "Authorization does not remove the no-conflict condition"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only office location determines permissibility"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Both authorization and absence of conflict/tendency to conflict matter. Fees and location do not cure an official-function conflict.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 6713, Sections 5, 7 and 8; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-31",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An employee learns nonpublic classified information through official work and shares it to advantage a friend's firm. Which fact is most relevant to Section 7(c)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Whether the employee personally earned a commission"
+      },
+      {
+        "choiceId": "b",
+        "text": "Whether the friend was a relative"
+      },
+      {
+        "choiceId": "c",
+        "text": "Whether the information was shared after office hours"
+      },
+      {
+        "choiceId": "d",
+        "text": "Officially learned nonpublic information was used to confer undue advantage"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 7(c) reaches undue advantage to anyone, not merely the employee's own profit. Relationship and time of day do not remove the prohibited use.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 6713, Sections 5, 7 and 8; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-32",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A covered employee includes assets but omits outstanding liabilities from a SALN, claiming that net worth can be inferred from assets alone. Which assessment is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The statutory disclosure includes liabilities; assets alone do not provide net worth"
+      },
+      {
+        "choiceId": "b",
+        "text": "Assets alone satisfy the statement if no business is owned"
+      },
+      {
+        "choiceId": "c",
+        "text": "Liabilities are required only for officials with dependants"
+      },
+      {
+        "choiceId": "d",
+        "text": "Disclosure of a salary replaces disclosure of debts"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 8 expressly includes liabilities and net worth. Debts reduce net worth; lack of business or dependants does not remove that disclosure component.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 6713, Sections 5, 7 and 8; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-33",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A disaster-risk review distinguishes I: reducing structural vulnerability, II: developing ability to act on warnings, and III: restoring disrupted services after impact. Project A reinforces a bridge without changing the storm forecast; B teaches households how to interpret a warning and rehearse a route; C restores a damaged water line. Which mapping and limitation are justified under RA 10121?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A addresses I, B addresses II and C addresses III; changing vulnerability need not change the storm hazard."
+      },
+      {
+        "choiceId": "b",
+        "text": "A addresses I, B addresses III and C addresses II; changing vulnerability need not change the storm hazard."
+      },
+      {
+        "choiceId": "c",
+        "text": "A addresses II, B addresses I and C addresses III; restoring the water line establishes pre-impact preparedness."
+      },
+      {
+        "choiceId": "d",
+        "text": "A addresses I, B addresses II and C addresses III; unchanged storm intensity means A has not reduced disaster risk."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Reinforcement mitigates structural impacts, warning interpretation and rehearsal build preparedness, and post-impact restoration is rehabilitation. Hazard intensity and vulnerability are distinct: unchanged storm intensity does not show unchanged risk. Two alternatives have the same correct mapping, requiring evaluation of the limitation as well.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-34",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A town compares two disaster-risk proposals. In K, residents attend a presentation but cannot influence assessment or remedy selection; radio numbers are its only readiness measure. In L, residents identify risks, choose remedies and monitor implementation; its evaluation also tests whether messages are understood and evacuation actions can be performed. Which paired assessment best applies community-based DRRM and early-warning definitions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "K establishes community-based decision-making through attendance, while L assesses response ability beyond equipment counts."
+      },
+      {
+        "choiceId": "b",
+        "text": "K does not establish community-based decision-making, while radio numbers alone establish whether recipients can act."
+      },
+      {
+        "choiceId": "c",
+        "text": "K does not establish active community decision-making or response ability; L addresses both through participation and functional checks."
+      },
+      {
+        "choiceId": "d",
+        "text": "K and L equally establish community-based decision-making, while only L examines response ability."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Community-based DRRM requires active roles in risk analysis, treatment and monitoring, not attendance alone. Warning effectiveness also concerns understanding and ability to act, which radio inventories do not measure. L addresses both; alternatives preserve only one distinction or confuse attendance with decision-making.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 10121, Section 3; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-35",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A climate review considers K: elevated storage powered by higher-emission generators; L: lower-emission power with unchanged flood exposure; M: lower-emission power plus flood-safe storage. The reviewer distinguishes an action's adaptation purpose from its emissions effect and from meeting both objectives. Which assessment keeps all three distinctions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "K includes adaptation, L includes mitigation and M includes both; K's adaptation therefore makes K an emissions-reduction measure too."
+      },
+      {
+        "choiceId": "b",
+        "text": "K includes mitigation, L includes adaptation and M includes both; L's lower emissions do not themselves relocate exposed stores."
+      },
+      {
+        "choiceId": "c",
+        "text": "K includes adaptation, L includes mitigation and M includes both; M's dual role means mitigation and adaptation are interchangeable classifications."
+      },
+      {
+        "choiceId": "d",
+        "text": "K includes adaptation, L includes mitigation and M includes both; K's higher emissions do not negate its adaptation role but prevent inferring emissions reduction."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Adjustment to impacts and intervention on emissions are separate axes. K adjusts exposure but does not reduce emissions, L reduces emissions without the stated exposure remedy, and M combines them. Each distractor retains a correct fragment while reversing classifications or improperly merging separate objectives.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-36",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Office P uses climate analysis during project design but omits it from later sector decisions. Office Q involves women and men in implementation but not design or evaluation. Office R integrates climate measures into relevant planning and sector decisions and gender concerns through design, implementation and evaluation. Which comparison best fits the two mainstreaming definitions in RA 9729?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P and Q each show partial integration; R addresses both definitions through the relevant decision stages."
+      },
+      {
+        "choiceId": "b",
+        "text": "P fully establishes climate mainstreaming; Q is partial, while R addresses both definitions."
+      },
+      {
+        "choiceId": "c",
+        "text": "P is partial; Q fully establishes gender mainstreaming, while R addresses both definitions."
+      },
+      {
+        "choiceId": "d",
+        "text": "P and Q each show partial integration; R's later-stage work substitutes for gender concerns during design."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Climate mainstreaming integrates measures into development planning and sector decisions, while gender mainstreaming carries concerns across design, implementation, monitoring and evaluation. P and Q each omit relevant stages. R addresses the stated integration requirements; later-stage work does not substitute for design participation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 9729, Section 3; https://lawphil.net/statutes/repacts/ra2009/ra_9729_2009.html; definitions retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-37",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "During custodial investigation, Leo signs a waiver without counsel, while Neri gives an unwritten waiver with counsel present. Officers use physical coercion on both. Which combined assessment follows Article III, Section 12?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Leo's writing validates his waiver, but Neri's lack of writing invalidates hers; coercion remains prohibited"
+      },
+      {
+        "choiceId": "b",
+        "text": "Neither waiver meets both requirements, and counsel's presence or a signature does not authorize coercion"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both waivers are valid because each satisfies one safeguard; coercion remains prohibited"
+      },
+      {
+        "choiceId": "d",
+        "text": "Neither waiver meets both requirements, but a valid waiver would authorize physical coercion"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 12(1) requires writing and counsel together; each waiver lacks one. Section 12(2) independently forbids coercion. Knowing only the waiver rule leaves two plausible alternatives; the separate coercion safeguard resolves them.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-38",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Accused J was arraigned, duly notified and unjustifiably absent. Accused K was notified but has not yet been arraigned. A court says both absences prove guilt and allow the same trial-in-absence exception. Which review is best under Article III, Section 14(2)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The stated exception covers J and K; neither absence proves guilt"
+      },
+      {
+        "choiceId": "b",
+        "text": "The exception covers J only; J's absence by itself proves guilt"
+      },
+      {
+        "choiceId": "c",
+        "text": "The stated exception covers J only; neither absence by itself displaces presumed innocence"
+      },
+      {
+        "choiceId": "d",
+        "text": "The exception covers neither J nor K; both absences defeat presumed innocence"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The exception requires arraignment plus notice and unjustifiable absence; only J meets the stated conditions. Presumed innocence remains separate and cannot be replaced by treating absence as proof. The alternatives deliberately mix the two rules.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article III; https://lawphil.net/consti/cons1987.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-39",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A covered employee files a statement showing assets and debts but omits a business interest. She also proposes using classified office data to help a bidder without accepting payment. Which analysis correctly separates Sections 7(c) and 8?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The statement is incomplete; lack of payment makes the proposed data use permissible"
+      },
+      {
+        "choiceId": "b",
+        "text": "The statement is complete if net worth is correct; the proposed data use is prohibited"
+      },
+      {
+        "choiceId": "c",
+        "text": "The statement is complete if net worth is correct; lack of payment makes the data use permissible"
+      },
+      {
+        "choiceId": "d",
+        "text": "The statement is incomplete; conferring undue advantage with nonpublic official data can be prohibited without payment"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 8 includes business interests beyond assets, liabilities and net worth. Section 7(c) covers undue advantage to anyone without requiring personal payment. Correct arithmetic cannot cure omitted disclosure, and absence of compensation does not cure misuse.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 6713, Sections 5, 7 and 8; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-general-40",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A professional leaves an agency and, six months later, plans private work on an unrelated matter outside that agency. A separate proposed assignment is a professional matter before the former agency. Assume no other restriction or conflict applies. Which assessment matches Section 7(b)'s post-separation exception?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The general private-practice prohibition is excepted, but the former-agency matter remains subject to the one-year bar"
+      },
+      {
+        "choiceId": "b",
+        "text": "Both engagements are prohibited because all private professional work is barred for one year"
+      },
+      {
+        "choiceId": "c",
+        "text": "The unrelated engagement is prohibited, but the former-agency matter is exempt"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both engagements are exempt because retirement ends every Section 7(b) restriction"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The post-separation paragraph excepts general private professional practice from the one-year continuation, while retaining that bar for professional matters before the former office. Neither a blanket ban nor a blanket exemption preserves both parts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original application; independent domain and human editorial approval pending",
+      "sources": [
+        "RA 6713, Sections 5, 7 and 8; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; text retrieved 2026-11-01.",
+        "Original hypothetical scenario; source locators and review rationale in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

@@ -1,0 +1,413 @@
+[
+  {
+    "referenceId": "f03-data-turnaround",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Ticket turnaround",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Hours are exact completion times, not interval endpoints. All 44 tickets are included."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-turnaround-chart",
+        "caption": "Ticket turnaround",
+        "alt": "Ticket turnaround. Each series has a labelled panel; values also appear in the table.",
+        "description": "Completion time (hours) 2: Tickets = 12. Completion time (hours) 4: Tickets = 18. Completion time (hours) 6: Tickets = 10. Completion time (hours) 10: Tickets = 4."
+      },
+      {
+        "type": "table",
+        "caption": "Ticket turnaround",
+        "headers": ["Completion time (hours)", "Tickets"],
+        "rows": [
+          ["2", "12"],
+          ["4", "18"],
+          ["6", "10"],
+          ["10", "4"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-timetable",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Shuttle schedule",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each shuttle departs the same terminal. Departures use a 24-hour clock; travel time excludes boarding. Times are scheduled, not observed."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-timetable-chart",
+        "caption": "Shuttle schedule",
+        "alt": "Shuttle schedule. Each series has a labelled panel; values also appear in the table.",
+        "description": "Departure 08:10: Travel time (minutes) = 50; Seats = 24. Departure 08:25: Travel time (minutes) = 30; Seats = 16. Departure 08:40: Travel time (minutes) = 35; Seats = 30. Departure 09:00: Travel time (minutes) = 25; Seats = 20."
+      },
+      {
+        "type": "table",
+        "caption": "Shuttle schedule",
+        "headers": ["Departure", "Travel time (minutes)", "Seats"],
+        "rows": [
+          ["08:10", "50", "24"],
+          ["08:25", "30", "16"],
+          ["08:40", "35", "30"],
+          ["09:00", "25", "20"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-workshops",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Workshop completion",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Counts refer to distinct participants within each category and cycle. A completed participant is included in enrolled. Categories do not overlap."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-workshops-chart",
+        "caption": "Workshop completion",
+        "alt": "Workshop completion. Each series has a labelled panel; values also appear in the table.",
+        "description": "Cycle and category Old beginner: Enrolled = 80; Completed = 48. Cycle and category Old advanced: Enrolled = 20; Completed = 18. Cycle and category New beginner: Enrolled = 20; Completed = 14. Cycle and category New advanced: Enrolled = 80; Completed = 76."
+      },
+      {
+        "type": "table",
+        "caption": "Workshop completion",
+        "headers": ["Cycle and category", "Enrolled", "Completed"],
+        "rows": [
+          ["Old beginner", "80", "48"],
+          ["Old advanced", "20", "18"],
+          ["New beginner", "20", "14"],
+          ["New advanced", "80", "76"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-stock-age",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Stock age and value",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each item is in exactly one age band. Values are PHP per item; no spoilage or tax is assumed."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-stock-age-chart",
+        "caption": "Stock age and value",
+        "alt": "Stock age and value. Each series has a labelled panel; values also appear in the table.",
+        "description": "Age band 0-7 days: Items = 40; Value per item (PHP) = 20. Age band 8-14 days: Items = 30; Value per item (PHP) = 30. Age band 15-21 days: Items = 20; Value per item (PHP) = 40. Age band 22+ days: Items = 10; Value per item (PHP) = 60."
+      },
+      {
+        "type": "table",
+        "caption": "Stock age and value",
+        "headers": ["Age band", "Items", "Value per item (PHP)"],
+        "rows": [
+          ["0-7 days", "40", "20"],
+          ["8-14 days", "30", "30"],
+          ["15-21 days", "20", "40"],
+          ["22+ days", "10", "60"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-land",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Plot allocation",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Plots can be subdivided continuously. The table shows current area and weekly water per hectare. Total area is40ha and may not expand."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-land-chart",
+        "caption": "Plot allocation",
+        "alt": "Plot allocation. Each series has a labelled panel; values also appear in the table.",
+        "description": "Use Vegetables: Area (ha) = 12; Weekly water per ha (kL) = 8. Use Fruit: Area (ha) = 10; Weekly water per ha (kL) = 5. Use Grain: Area (ha) = 14; Weekly water per ha (kL) = 3. Use Habitat: Area (ha) = 4; Weekly water per ha (kL) = 1."
+      },
+      {
+        "type": "table",
+        "caption": "Plot allocation",
+        "headers": ["Use", "Area (ha)", "Weekly water per ha (kL)"],
+        "rows": [
+          ["Vegetables", "12", "8"],
+          ["Fruit", "10", "5"],
+          ["Grain", "14", "3"],
+          ["Habitat", "4", "1"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-meter",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Cumulative electricity readings",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Meter readings are cumulative kWh at midnight at the start of each listed day. There is no meter reset."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-meter-chart",
+        "caption": "Cumulative electricity readings",
+        "alt": "Line chart of cumulative electricity readings, with every point labelled and the same values in the accompanying table.",
+        "description": "Day Monday: Reading (kWh) = 1200. Day Tuesday: Reading (kWh) = 1240. Day Wednesday: Reading (kWh) = 1300. Day Thursday: Reading (kWh) = 1330. Day Friday: Reading (kWh) = 1400."
+      },
+      {
+        "type": "table",
+        "caption": "Cumulative electricity readings",
+        "headers": ["Day", "Reading (kWh)"],
+        "rows": [
+          ["Monday", "1200"],
+          ["Tuesday", "1240"],
+          ["Wednesday", "1300"],
+          ["Thursday", "1330"],
+          ["Friday", "1400"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-membership",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Skills register",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Exactly120 staff appear in the register. The four categories are mutually exclusive and exhaustive. Text and spreadsheet are the two assessed skills."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-membership-chart",
+        "caption": "Skills register",
+        "alt": "Pie chart of four mutually exclusive skill groups, with counts on slices and named counts in the legend and accompanying table.",
+        "description": "Category Text only: Staff = 30. Category Spreadsheet only: Staff = 20. Category Both skills: Staff = 50. Category Neither skill: Staff = 20."
+      },
+      {
+        "type": "table",
+        "caption": "Skills register",
+        "headers": ["Category", "Staff"],
+        "rows": [
+          ["Text only", "30"],
+          ["Spreadsheet only", "20"],
+          ["Both skills", "50"],
+          ["Neither skill", "20"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-queue",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Counter queue flows",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Opening queue is12 people. Each listed period's arrivals join before that period's service completions. Nobody abandons or re-enters the queue."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-queue-chart",
+        "caption": "Counter queue flows",
+        "alt": "Counter queue flows. Each series has a labelled panel; values also appear in the table.",
+        "description": "Period 09-10: Arrivals = 18; Completed = 15. Period 10-11: Arrivals = 24; Completed = 20. Period 11-12: Arrivals = 12; Completed = 18. Period 12-13: Arrivals = 16; Completed = 19."
+      },
+      {
+        "type": "table",
+        "caption": "Counter queue flows",
+        "headers": ["Period", "Arrivals", "Completed"],
+        "rows": [
+          ["09-10", "18", "15"],
+          ["10-11", "24", "20"],
+          ["11-12", "12", "18"],
+          ["12-13", "16", "19"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-forecast",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Forecast and observed demand",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each row is one distinct day; counts are comparable units. Define error as observed minus forecast."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-forecast-chart",
+        "caption": "Forecast and observed demand",
+        "alt": "Forecast and observed demand. Each series has a labelled panel; values also appear in the table.",
+        "description": "Day A: Forecast = 40; Observed = 50. Day B: Forecast = 60; Observed = 45. Day C: Forecast = 50; Observed = 60. Day D: Forecast = 70; Observed = 65."
+      },
+      {
+        "type": "table",
+        "caption": "Forecast and observed demand",
+        "headers": ["Day", "Forecast", "Observed"],
+        "rows": [
+          ["A", "40", "50"],
+          ["B", "60", "45"],
+          ["C", "50", "60"],
+          ["D", "70", "65"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-data-projects",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "language": "english",
+    "title": "Candidate community projects",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Costs are in PHP thousands; benefit is a synthetic planning-point score, not money. Each project is indivisible and can be chosen at most once."
+      },
+      {
+        "type": "image",
+        "assetId": "f03-projects-chart",
+        "caption": "Candidate community projects",
+        "alt": "Candidate community projects. Each series has a labelled panel; values also appear in the table.",
+        "description": "Project A: Cost (PHP thousands) = 4; Benefit points = 7. Project B: Cost (PHP thousands) = 5; Benefit points = 9. Project C: Cost (PHP thousands) = 6; Benefit points = 12. Project D: Cost (PHP thousands) = 3; Benefit points = 5."
+      },
+      {
+        "type": "table",
+        "caption": "Candidate community projects",
+        "headers": ["Project", "Cost (PHP thousands)", "Benefit points"],
+        "rows": [
+          ["A", "4", "7"],
+          ["B", "5", "9"],
+          ["C", "6", "12"],
+          ["D", "3", "5"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  }
+]
