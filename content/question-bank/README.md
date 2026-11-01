@@ -13,6 +13,12 @@ inventory: corpus ID `cse-2027-family01`, taxonomy `cse-taxonomy-2027-v2`, poole
 blueprint metadata Professional/Subprofessional v3, and `seedFamilies: [1]`.
 Each later family has its own corpus ID, family number, revision, and checksum.
 
+Family 02 is authored in **[family-02/](family-02/manifest.json)** with 270
+questions, its own revision-4 manifest, ten linked chart images, and the same per-subject 30/50/20
+authoring allocation. See its [review/source record](../../docs/content/family02-review.md)
+and [per-item register](../../docs/content/family02-item-register.md).
+It is local authored content, not imported or published database content.
+
 ## Layout within each family
 
 - `manifest.json`: the independent family inventory and validation metadata.

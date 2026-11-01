@@ -1,0 +1,217 @@
+[
+  {
+    "questionId": "f02-vocabulary-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The committee's timetable is TENTATIVE; it may change after consultation. What does TENTATIVE mean here?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Provisional"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Delayed"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Compulsory"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Detailed"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Tentative describes something not yet final. A provisional timetable can be revised; delay or detail alone does not convey that status.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://dictionary.cambridge.org/us/dictionary/english/tentative; headword contextual sense checked 2026-11-01."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The second copy added no information and was REDUNDANT. Which meaning fits?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Difficult to interpret"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Required for authentication"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Incorrect in every detail"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Unnecessary because it duplicated existing content"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Redundancy concerns needless duplication, not necessarily error, illegibility, or a required original.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/redundant; headword contextual sense checked 2026-11-01."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The assessor was IMPARTIAL toward the competing groups. Which phrase preserves the meaning?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Unwilling to decide"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Equally unfamiliar with each application"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Not favouring either group"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Unaware that groups existed"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Impartiality concerns absence of bias, not ignorance or refusal to judge.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/impartial; headword contextual sense checked 2026-11-01."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The proposed route is FEASIBLE but expensive. Which inference about FEASIBLE is justified?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "It is impossible unless its cost is zero."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "It can be carried out, although affordability remains a concern."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "It is cheaper than all alternatives."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "It has already been completed."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Feasible means practicable. The contrast separates practicability from low cost or completed implementation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/feasible; headword contextual sense checked 2026-11-01."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A SCRUPULOUS verifier checks even small discrepancies before certifying a total. Which contrast best preserves SCRUPULOUS?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Thoroughly careful rather than casually accepting"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Rapid rather than timely"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Suspicious rather than numerate"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Quiet rather than public"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Scrupulous verification involves conscientious attention to accuracy; speed, temperament, and publicity are not the contrast at issue.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://dictionary.cambridge.org/us/dictionary/english/scrupulous; headword contextual sense checked 2026-11-01."
+      ]
+    }
+  }
+]

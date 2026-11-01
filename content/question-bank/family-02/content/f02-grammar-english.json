@@ -1,0 +1,432 @@
+[
+  {
+    "questionId": "f02-grammar-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correct completion: Each of the cabinets ___ a numbered lock.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "has"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "have"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "are having"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "were having"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Each is a singular subject, so has agrees with it. The plural cabinets is inside an of phrase.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correct completion: The box belongs to Rina; it is ___.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "her's"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "hers'"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "she"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "hers"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The possessive pronoun hers takes no apostrophe. She is a subject pronoun, not a possessive form.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the sentence with the intended past time: the inspection ended yesterday.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "The inspection will end yesterday."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The inspection ending yesterday."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The inspection ended yesterday."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The inspection ends yesterday."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ended supplies the required past-tense finite verb; the other constructions conflict with yesterday or lack a finite verb.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correct completion: There are ___ errors in the revised list than in the draft.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "much"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "fewer"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "less"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "little"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Errors are countable individual items, so fewer fits this comparison; little and much describe amounts rather than plural counts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the completion that expresses an unreal past condition: If we had saved the draft, we ___ the text.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "could have recovered"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "can recover"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "will recover"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "are recovering"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Had saved sets an unreal past condition; could have recovered expresses its unreal past result rather than a present or future outcome.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The intended meaning is that the reviewer read nothing except the summary. Which sentence is clearest?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Only the reviewer read the summary."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The reviewer only said that she read the summary."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The reviewer read the summary only yesterday."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The reviewer read only the summary."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Only immediately before the summary limits the material read. The alternatives limit the reader, the action claimed, or the date.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the revision that preserves the contrast: the device is cheap to buy but costly to maintain.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "The device is expensive both to buy and to maintain."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The device is cheap to buy because it is cheap to maintain."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Although inexpensive to purchase, the device is expensive to maintain."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Because it is cheap to buy, the device is cheap to maintain."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Although expresses the stated contrast without changing either cost claim. The other revisions replace contrast with unsupported causal or equal-cost claims.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the revision that makes clear whose signed copy must be sent: the coordinator’s, not the assistant’s.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "The assistant and coordinator discussed sending her copy."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The coordinator asked the assistant to send the coordinator's signed copy."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The coordinator asked the assistant to send her signed copy."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "She asked her to send her signed copy."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Repeating coordinator identifies ownership explicitly. The pronouns in the alternatives leave more than one possible owner.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-09",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which sentence correctly reports a question without retaining direct-question word order?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "The visitor asked where the office was."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The visitor asked where was the office."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The visitor asked where did the office was."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The visitor asked where the office be."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "An embedded question uses subject-before-verb order: the office was. The other choices retain inversion or use an incorrect verb construction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Choose the revision preserving BOTH claims: fewer than half the applications were rejected; every rejected application lacked a signature. Do not assert the converse.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Fewer than half lacked signatures, and every unsigned application was rejected."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "All unsigned applications were rejected, although fewer than half were accepted."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Every rejected application lacked a signature, so every signed application was accepted."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Fewer than half were rejected, and all of those rejected lacked a signature."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Only the correct revision preserves the quantified rejection claim and its one-way condition. The alternatives change the counted group, reverse implication, or infer acceptance when nonrejection alone is known.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://owl.purdue.edu/owl/general_writing/the_writing_process/proofreading/proofreading_for_errors.html and https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html; agreement, clear reference and construction guidance retrieved 2026-11-01; quantifier tasks checked by stated logical meaning."
+      ]
+    }
+  }
+]

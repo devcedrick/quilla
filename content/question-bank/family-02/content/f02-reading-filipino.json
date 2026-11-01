@@ -1,0 +1,232 @@
+[
+  {
+    "questionId": "f02-reading-filipino-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Saan dapat ilagay ang lumang baterya ayon sa talata?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Sa kahong nakalaan para sa baterya"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Sa kahon ng papel"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Sa kahon ng bote"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Sa alinmang kahon kapag Sabado"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "May sariling kahon ang baterya. Ang takdang araw ng pagkuha ay hindi pahintulot na ihalo ito sa ibang uri.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-filipino-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Anong batayan ang ginamit ni Lani sa kaniyang mungkahi?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Walang sinumang nangangailangan ng manwal kaya ipapamigay ang lahat."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Mas mahirap isulat ang kuwento kaya ito ang tanging ilalagay."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Pareho ang bilis ng pagkaubos ng dalawang uri."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Magkaiba ang naobserbahang pangangailangan kaya dadagdagan ang kuwento nang hindi agad inaalis ang manwal."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang obserbasyon ay hindi pantay na pagkaubos at may natitirang interes sa manwal. Hindi nito sinusuportahan ang pag-aalis ng buong uri.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-filipino-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang hangganan ng serbisyong inilalarawan?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Awtomatikong reseta sa sinumang tumawag"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Pangakong laging may lahat ng gamot"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Impormasyon sa pagkakaroon ng gamot, hindi kapalit ng propesyonal na payo sa paggamit nito"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Ganap na pagsusuri sa lahat ng karamdaman sa telepono"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ibinubukod ng teksto ang imbentaryo sa medikal na payo. Hindi ipinapangako ang pagsusuri, reseta, o walang-hanggang suplay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-filipino-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Bakit mahalagang pagsamahin ang dalawang iminungkahing pag-iingat?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Walang kabuluhan ang bagong datos hangga’t hindi tinatanggal ang lahat ng recorder."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Kailangang ihiwalay ang epekto ng paraan ng pagrekord at ang posibilidad na paulit-ulit na nabilang ang iisang ibon."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Pinatutunayan ng sensitibong recorder na dumami ang ibon kaya oras lamang ang dapat itugma."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Sapat nang itugma ang oras upang awtomatikong maging magkakaibang ibon ang bawat tunog."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Magkaibang suliranin ang paghahambing ng paraan at ang dobleng pagbibilang. Ang mas maraming tunog ay hindi agad katumbas ng mas maraming magkakaibang ibon.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-filipino-05",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Batay sa patakaran at sa limitasyon ng pagsubok, aling pasiya ang may sapat na batayan?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Maaaring subukan ang pinagsamang pila para sa unang hakbang kung hindi nito ginagamit ang nakatalagang puwesto ng hiwalay na serbisyo; kailangan pa ng datos sa dalawang pangkat bago ito palawakin."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Maaaring ipagpatuloy ang iisang unang hakbang at ilipat ang mga puwestong walang gumagamit, basta hiwalay na susukatin ang paghihintay ng may appointment."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Dapat magkahiwalay ang unang hakbang ng dalawang serbisyo upang mapangalagaan ang mga appointment; saka pag-aralan ang pagpapalawak kapag nasukat na ang oras ng dalawang pangkat."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Maaaring panatilihin ang nakalaang puwesto at palawakin agad ang pagsubok; sapat ang mas mabilis na karaniwang pila upang masabing hindi nadagdagan ang paghihintay ng may appointment."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang pahintulot sa iisang unang hakbang ay hindi pahintulot na kunin ang nakatalagang puwesto sa hiwalay na serbisyo, kahit may puwestong tila walang gumagamit. Hindi rin hinihingi ng patakaran ang magkahiwalay na unang hakbang. Ang datos ay para lamang sa karaniwang pila at hindi sumasagot sa posibleng pagkaantala sa may appointment. Kailangang pagsamahin ang saklaw ng patakaran at limitasyon ng ebidensiya; hindi sapat ang alinman nang mag-isa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-filipino-05-reference",
+      "referenceVersion": 2
+    }
+  }
+]

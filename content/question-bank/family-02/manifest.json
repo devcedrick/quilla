@@ -1,0 +1,34 @@
+{
+  "formatVersion": 2,
+  "corpusId": "cse-2027-family02",
+  "revision": 4,
+  "taxonomyId": "cse-taxonomy-2027-v2",
+  "blueprintIds": ["cse-professional-2027-v3", "cse-subprofessional-2027-v3"],
+  "seedFamilies": [2],
+  "sources": [
+    {
+      "root": "",
+      "questionFiles": [
+        "content/f02-general-english.json",
+        "content/f02-numerical-english.json",
+        "content/f02-vocabulary-english.json",
+        "content/f02-vocabulary-filipino.json",
+        "content/f02-grammar-english.json",
+        "content/f02-grammar-filipino.json",
+        "content/f02-reading-english.json",
+        "content/f02-reading-filipino.json",
+        "content/f02-paragraph-english.json",
+        "content/f02-paragraph-filipino.json",
+        "content/f02-sufficiency-english.json",
+        "content/f02-data-english.json",
+        "content/f02-logic-english.json",
+        "content/f02-operations-english.json",
+        "content/f02-alphabetizing-english.json",
+        "content/f02-spelling-english.json"
+      ],
+      "referenceFiles": ["references/f02-supporting-material.json"],
+      "assetFiles": ["references/f02-chart-assets.json"]
+    }
+  ],
+  "datasetChecksum": "de9d8f96bea926512a1dedb38addf41c18a11e86b673337df04d6c1c398ee728"
+}

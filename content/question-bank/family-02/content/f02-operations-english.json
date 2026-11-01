@@ -1,0 +1,842 @@
+[
+  {
+    "questionId": "f02-operations-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Office rule: incoming envelopes receive a date stamp before sorting. What is the first required action for an unprocessed envelope?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Apply the receipt date stamp."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Sort by sender first."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "File it under the destination."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Wait until dispatch time."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The explicitly stated local sequence puts date stamping before sorting or filing. This is the supplied office policy, not a universal legal rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local rule: use the reference code, not the applicant's name, to retrieve a case. Which search field should be used first?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Applicant age"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Envelope colour"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Number of pages"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Reference code"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The rule establishes the retrieval identifier. Other attributes may describe a case but are not the required search key.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A register uses one row per parcel. Four new parcels arrive. How many new rows are required?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Two"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Eight"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Four"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "One"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The one-to-one rule requires one entry for each parcel, not one for the delivery batch.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An office uses red trays for urgent work and grey trays for routine work. Where does a routine unsigned draft belong under this rule alone?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Both trays simultaneously"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Grey tray"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Red tray"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Either tray because unsigned"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Urgency determines the tray in the supplied rule; signature status does not change the classification.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A filing schedule requires boxes to display their destruction-review date, not an instruction to destroy automatically. Which label follows that rule?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Review for disposal: 30 June"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Destroy without review: 30 June"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Dispose immediately on receipt"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No review date required"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The specified date triggers a review, not destruction. The distinction protects the stated approval step.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local rule: copies are marked COPY and the original remains unmarked. Which item should receive COPY?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "The signed original retained on file"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Every item including the original"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No circulated duplicate"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "A duplicate produced for circulation"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The duplicate is the copy. Marking the retained original would reverse the office's stated convention.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local priority: safety reports first, then other work by receipt time. Items are routine 08:05, safety 08:20, routine 08:00. Which order follows?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Routine 08:05; safety 08:20; routine 08:00"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Safety 08:20; routine 08:05; routine 08:00"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Safety 08:20; routine 08:00; routine 08:05"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Routine 08:00; routine 08:05; safety 08:20"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Apply category priority before receipt time, then chronological order within routine work. Sorting solely by arrival misses the safety exception.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: attach an invoice only after matching both purchase-order number and amount. The number matches but amount differs. What should the clerk do?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Record the amounts as equal."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Hold the attachment for discrepancy review."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Attach because one field matches."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Replace the order number with the invoice number."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The two tests are conjunctive. One match cannot cure an amount discrepancy or authorise altering the original evidence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-09",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A room seats 12. Meetings request 8 seats at 09:00 and 6 at 09:30; each lasts one hour. No standing attendance is allowed. Can both use the room as scheduled?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "No; they overlap and their combined attendance exceeds capacity."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Yes; neither individually exceeds capacity."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Yes; both start before noon."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No; a room can never host two meetings in a day."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The 09:30–10:00 overlap brings 14 people. Separate compliant headcounts do not ensure combined capacity compliance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: reconcile opening cash plus receipts minus payments with counted cash. Opening is PHP 500, receipts 320, payments 210, counted 600. What discrepancy exists?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "PHP 10 over"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "No discrepancy"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 110 short"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 10 short"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Expected cash is 610. Counted 600 is ten less, so the direction is short, not over.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-11",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A routing chart sends personnel requests to HR, purchasing requests to Procurement, and mixed requests to the coordinator. A letter seeks hiring and equipment purchase. Where should it go first?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Procurement only"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Whichever section opens the mail"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Coordinator"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "HR only"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The combined subject triggers the explicit mixed-request route, not an arbitrary first-read section.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-12",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Rule: amend a register by one line through an error, retaining legibility, then enter correction and initials. Which action complies?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Leave the wrong number and change another row."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Strike through once, enter the corrected value, and initial."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Erase all traces and retype without initials."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Overwrite until only the new number is visible."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The required process preserves the original and correction trace. The alternatives destroy evidence or fail to correct the entry.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-13",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: a restricted copy requires both role approval and case assignment. A staff member has role approval but is not assigned. What follows?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Do not release until assignment or an authorised exception is established."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Release because employment alone is sufficient."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Release because role approval replaces assignment."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Erase the restriction label before release."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Both conditions are required. The provided facts satisfy only one, so neither employment nor a label change authorises release.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-14",
+    "version": 2,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "This office adopts a proposal only after a recorded vote. Minutes must distinguish discussion, adoption, and rejection. A suggestion was discussed, but no vote was taken and no decision was reached. Which entry is accurate?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "The suggestion was unanimously adopted."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The suggestion was rejected by vote."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The suggestion became policy automatically."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The suggestion was discussed; no decision was adopted."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The supplied rule requires a recorded vote for adoption, and the facts expressly state that no decision was reached. Record discussion without adoption or rejection. This conclusion relies on the office's stated procedure, not a universal assumption about how every meeting decides.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-15",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Rule: use the later of completion date and approval date as the start of retention. Completion is 3 April and approval 8 April. Which start date applies?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "1 April"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Any date in April"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "8 April"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "3 April"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Later-of requires comparison of the two supplied dates and selects 8 April; it is not the earliest activity date.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-16",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A receipt book has consecutive numbers 731–740. Used receipts are 731–735 and 737–740; 736 is marked VOID with both copies retained. What is the reconciliation finding?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "The void must be recorded as a sale."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "All ten numbers are accounted for."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "One number is unexplained."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Eleven receipts are used."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Nine used plus one properly retained void account for the full sequence. Accounting for a number is not the same as treating it as revenue.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-17",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local rules: urgent jobs precede routine jobs; within each class, earliest deadline first; ties use receipt time. U: urgent, due 16:00, received 09:00. V: urgent, due 15:00, received 10:00. W: routine, due 12:00, received 08:00. X: urgent, due 15:00, received 08:30. What is the order?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "X-V-U-W"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "W-X-V-U"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "V-X-U-W"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "X-W-V-U"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Urgency puts W last despite its earlier deadline. Within urgent work, the two 15:00 jobs precede U, and X precedes V by earlier receipt. All three ranking keys must be applied in order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-18",
+    "version": 2,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A printer is available at 09:00. Setup takes 10 minutes; three batches then take 15 minutes each. A mandatory 10-minute check follows batch two and precedes batch three. After setup, an independent clerk can prepare a cover sheet in 25 minutes while printing continues. A final 5-minute assembly requires all batches and the cover sheet; nothing else can overlap. When is the earliest complete packet ready?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "10:05"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "10:35"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "10:00"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "10:10"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The printer/check path finishes at 09:00+10+15+15+10+15=10:05. The cover sheet starts after setup at 09:10 and finishes at 09:35, so it does not extend that path. Assembly waits for both and ends at 10:10. Omitting assembly gives 10:05; serialising the independent cover-sheet work gives 10:35; overlapping the required check with batch three violates precedence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-19",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A local release requires reviewer and approver to be different people. Asha can review only, Beto can review or approve, Celi can approve only. Beto is unavailable. Two files need simultaneous review, and one person cannot handle two at once. Which assessment follows?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "No file can be approved because Beto is absent."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Asha may approve her own review to add capacity."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Approval capacity exists, but only one simultaneous reviewer remains."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Both files can be reviewed simultaneously because Celi approves."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Asha is the only available reviewer; Celi can approve but cannot supply a second reviewer. Role separation and concurrency both matter; the workflow can operate sequentially, not as requested simultaneously.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-operations-english-20",
+    "version": 2,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Under a local ledger rule, receipts count on receipt date and refunds on refund date. A bank deposit includes receipts net of refunds actually paid and any money retained as the cash float. On 31 March, receipts are PHP 9000; a PHP 400 refund for a February receipt is paid; a PHP 600 refund for a March receipt is authorised but not paid until April. PHP 500 from today's net cash is retained as the float, not an expense. Which pair is correct for March net recorded activity and today's bank deposit?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "PHP 8600 net activity; PHP 8600 bank deposit"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 8600 net activity; PHP 8100 bank deposit"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 8000 net activity; PHP 7500 bank deposit"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 8100 net activity; PHP 8100 bank deposit"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "March activity includes 9000 receipts less the 400 refund paid in March: 8600. The April payment is excluded by the supplied date rule. Keeping a 500 float does not reduce activity but does reduce the deposit to 8100. The alternatives respectively book the April refund early, treat a transfer as an expense, or overlook retained cash.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

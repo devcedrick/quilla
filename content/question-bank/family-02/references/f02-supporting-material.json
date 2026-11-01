@@ -1,0 +1,1930 @@
+[
+  {
+    "referenceId": "f02-reading-english-01-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-reading-english-01",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The repair cafe accepts small lamps on Tuesdays and clocks on Thursdays. Visitors must bring the damaged item; photographs may be sent ahead but do not replace the item. No booking fee is charged."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-english-02-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-reading-english-02",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A museum stopped labelling a case simply as pottery and added the place and approximate date of each object. Visitors then asked more questions about trade routes. The curator welcomed those questions but did not compare attendance or learning scores before and after the change."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-english-03-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-reading-english-03",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The station installed a bell that could be heard in the garden. Staff still checked the waiting room every ten minutes because the bell required a visitor to press it. During a power failure, the regular checks continued."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-english-04-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-reading-english-04",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A cooperative tested two seed packets. Packet X germinated sooner in the indoor tray; packet Y produced more surviving plants in an outdoor plot. The tray had constant warmth and daily watering, while the plot had variable rain. The secretary proposed buying only X because speed could be measured sooner. The grower objected that their next crop would be outdoors and recommended testing both packets in matched outdoor plots before committing."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-english-05-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-reading-english-05",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The archive published a catalogue of letters, omitting addresses and names of living correspondents. Search requests increased. Some staff attributed this to better access; others noted that a local exhibition had advertised the catalogue in the same week. The archivist described the increase as encouraging but retained the access restrictions on originals while arranging a separate review of consent and sensitivity."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-filipino-01-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-reading-filipino-01",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Naglaan ang samahan ng isang kahon para sa mga lumang baterya. Hiwalay ang kahon ng papel at bote. Sa Sabado lamang kinukuha ng kinatawan ang mga baterya; hindi pinahihintulutang ihalo ang mga ito sa bote."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-filipino-02-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-reading-filipino-02",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa unang araw ng palitan ng aklat, mabilis na naubos ang pambatang kuwento ngunit maraming manwal ang naiwan. Iminungkahi ni Lani na magdala ng dagdag na kuwento sa susunod. Hindi niya iminungkahing alisin ang mga manwal dahil may ilang nagtatanong pa rin tungkol sa pagkukumpuni."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-filipino-03-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-reading-filipino-03",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Naglagay ang botika ng numerong maaaring tawagan bago bumiyahe. Layunin nitong ipaalam kung may nakalaang gamot, hindi upang magsuri ng karamdaman. Ang nagtatanong tungkol sa dosis ay itinuturo pa rin sa kwalipikadong propesyonal."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-filipino-04-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-reading-filipino-04",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa pag-aaral ng tunog sa bakuran, mas maraming ibon ang naitala ng bagong recorder kaysa ng dating gamit. Mas sensitibo ang bagong aparato at mas mahaba rin ang oras ng pagrekord. Natuwa ang pangkat ngunit hindi muna nagsabing dumami ang ibon. Iminungkahi nilang gumamit ng dalawang aparato sa parehong lugar at oras, at itala kung alin sa mga tunog ang maaaring nagmula sa iisang ibon."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-reading-filipino-05-reference",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-reading-filipino-05",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Dalawang serbisyo ang nasa isang tanggapan. Maaaring pagsamahin ang unang pagsusuri ng mga dokumento, ngunit nakalaan lamang sa may tugmang appointment ang mga puwesto sa masusing pagsusuri ng hiwalay na serbisyo. Hindi maaaring ilipat ang mga puwestong iyon sa karaniwang pila. Sinubukan ang iisang unang hakbang sa isang umaga; bumaba ang karaniwang paghihintay, ngunit walang naitalang oras para sa may appointment. Iminungkahing palawakin ang pagsubok at gamitin din sa karaniwang pila ang mga nakalaang puwesto. Hindi pa natutukoy kung may naghihintay na may appointment habang ginagawa ang pagsubok."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-english-01-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-paragraph-english-01",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. This map was then posted beside the entrance.\nP2. The hall manager first marked every accessible exit on a floor plan.\nP3. Visitors used the posted map to locate the nearest exit.\nP4. Before posting it, she asked the safety officer to verify the markings."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-english-02-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-paragraph-english-02",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. The replacement stopped the drip.\nP2. Water was dripping beneath the kitchen tap.\nP3. He then fitted a new washer in its place.\nP4. A caretaker removed the worn washer after turning off the supply."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-english-03-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-paragraph-english-03",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. Only after that check did they send the invitations.\nP2. The two organisers drafted a list of guests.\nP3. The returned replies were used to estimate meal numbers.\nP4. They checked the draft list for duplicate names."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-english-04-reference",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-paragraph-english-04",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. The committee therefore retained the log while removing that penalty.\nP2. The committee originally paired an anonymous fault log with a penalty for every reported defect.\nP3. That result undermined the log’s purpose, rather than proving the machines faultless.\nP4. The log was intended to reveal faults that routine inspections missed.\nP5. Fewer faults were reported after the penalty began, although repair staff continued finding them."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-english-05-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Supporting material f02-paragraph-english-05",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. That distinction led the group to publish the estimate with a range rather than as an exact count.\nP2. The volunteers counted occupied nests visible from the path.\nP3. A second observer saw additional nests from the hillside.\nP4. The first count was therefore a count of visible nests, not necessarily of all nests in the grove.\nP5. The group wanted to estimate nesting activity without entering the protected grove."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-filipino-01-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-paragraph-filipino-01",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. Pagkatapos nito, nilagyan niya ng pamagat ang bagong kopya.\nP2. Napansin ni Meli na kupas na ang babala sa pintuan.\nP3. Isinabit niya ang kopyang may pamagat kapalit ng lumang babala.\nP4. Kinopya muna niya ang buong teksto sa malinis na papel."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-filipino-02-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-paragraph-filipino-02",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. Doon nila itinabi ang mga larong kumpleto pa.\nP2. Inisa-isa ng mga bata ang kahon ng lumang laruan.\nP3. Saka nila ibinigay ang mga itinabing laro sa susunod na klase.\nP4. Naglaan ang guro ng hiwalay na mesa para sa mga napiling laro."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-filipino-03-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-paragraph-filipino-03",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. Ginamit ang natanggap na pahintulot upang itakda ang araw ng pagbisita.\nP2. Sumulat ang klase sa tagapangasiwa ng hardin.\nP3. Dumating ang liham na pumapayag sa hinihinging pagbisita.\nP4. Sa liham, humiling silang makita ang koleksiyon ng mga punong namumunga."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-filipino-04-reference",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-paragraph-filipino-04",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. Kaya pinaghiwalay nila sa ulat ang pagdami ng nakolekta at ang pagbabago sa kabuuang basura.\nP2. Pagkaraan nito, mas maraming bote ang nakolekta ng samahan.\nP3. Naglagay ang samahan ng dagdag na lalagyan ng bote sa palengke.\nP4. Hindi pa nila alam kung nabawasan ang lahat ng basurang itinatapon sa lugar.\nP5. Gayunman, maaaring ang ilan sa bote ay dati nang kinukuha ng ibang tagakolekta."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-paragraph-filipino-05-reference",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Supporting material f02-paragraph-filipino-05",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1. Ang mungkahing ito ay hindi hatol na iisang tao ang may dalawang tala, kundi hakbang upang linawin muna ang pagkakakilanlan.\nP2. May dalawang magkaparehong pangalan sa listahan ng kasapi.\nP3. Bago baguhin ang alinman, iminungkahi ng kalihim na ihambing ang mga lagda sa orihinal na pormularyo.\nP4. Nagbabala ang tagabilang na maaaring dobleng tala ang isa ngunit maaari ring magkaibang tao ang dalawa.\nP5. Kaya hindi muna binura ang alinmang pangalan habang wala pa ang paghahambing."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-01-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-01",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-loans-chart",
+        "caption": "Loan outcomes",
+        "alt": "Loan outcomes: directly labelled chart of Issued, Returned on time, with an equivalent data table.",
+        "description": "Elm: Issued = 80; Returned on time = 60. Pine: Issued = 120; Returned on time = 102. Cedar: Issued = 50; Returned on time = 45. Ash: Issued = 150; Returned on time = 120."
+      },
+      {
+        "type": "table",
+        "caption": "Loan outcomes",
+        "headers": ["Branch", "Issued", "Returned on time"],
+        "rows": [
+          ["Elm", "80", "60"],
+          ["Pine", "120", "102"],
+          ["Cedar", "50", "45"],
+          ["Ash", "150", "120"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-02-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-02",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-loans-chart",
+        "caption": "Loan outcomes",
+        "alt": "Loan outcomes: directly labelled chart of Issued, Returned on time, with an equivalent data table.",
+        "description": "Elm: Issued = 80; Returned on time = 60. Pine: Issued = 120; Returned on time = 102. Cedar: Issued = 50; Returned on time = 45. Ash: Issued = 150; Returned on time = 120."
+      },
+      {
+        "type": "table",
+        "caption": "Loan outcomes",
+        "headers": ["Branch", "Issued", "Returned on time"],
+        "rows": [
+          ["Elm", "80", "60"],
+          ["Pine", "120", "102"],
+          ["Cedar", "50", "45"],
+          ["Ash", "150", "120"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-03-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-03",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-loans-chart",
+        "caption": "Loan outcomes",
+        "alt": "Loan outcomes: directly labelled chart of Issued, Returned on time, with an equivalent data table.",
+        "description": "Elm: Issued = 80; Returned on time = 60. Pine: Issued = 120; Returned on time = 102. Cedar: Issued = 50; Returned on time = 45. Ash: Issued = 150; Returned on time = 120."
+      },
+      {
+        "type": "table",
+        "caption": "Loan outcomes",
+        "headers": ["Branch", "Issued", "Returned on time"],
+        "rows": [
+          ["Elm", "80", "60"],
+          ["Pine", "120", "102"],
+          ["Cedar", "50", "45"],
+          ["Ash", "150", "120"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-04-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-04",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-loans-chart",
+        "caption": "Loan outcomes",
+        "alt": "Loan outcomes: directly labelled chart of Issued, Returned on time, with an equivalent data table.",
+        "description": "Elm: Issued = 80; Returned on time = 60. Pine: Issued = 120; Returned on time = 102. Cedar: Issued = 50; Returned on time = 45. Ash: Issued = 150; Returned on time = 120."
+      },
+      {
+        "type": "table",
+        "caption": "Loan outcomes",
+        "headers": ["Branch", "Issued", "Returned on time"],
+        "rows": [
+          ["Elm", "80", "60"],
+          ["Pine", "120", "102"],
+          ["Cedar", "50", "45"],
+          ["Ash", "150", "120"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-05-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-05",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-solar-chart",
+        "caption": "Solar generation",
+        "alt": "Solar generation: directly labelled chart of Generation kWh, On-site use kWh, with an equivalent data table.",
+        "description": "Mon: Generation kWh = 42; On-site use kWh = 30. Tue: Generation kWh = 36; On-site use kWh = 32. Wed: Generation kWh = 54; On-site use kWh = 34. Thu: Generation kWh = 48; On-site use kWh = 36."
+      },
+      {
+        "type": "table",
+        "caption": "Solar generation",
+        "headers": ["Day", "Generation kWh", "On-site use kWh"],
+        "rows": [
+          ["Mon", "42", "30"],
+          ["Tue", "36", "32"],
+          ["Wed", "54", "34"],
+          ["Thu", "48", "36"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-06-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-06",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-solar-chart",
+        "caption": "Solar generation",
+        "alt": "Solar generation: directly labelled chart of Generation kWh, On-site use kWh, with an equivalent data table.",
+        "description": "Mon: Generation kWh = 42; On-site use kWh = 30. Tue: Generation kWh = 36; On-site use kWh = 32. Wed: Generation kWh = 54; On-site use kWh = 34. Thu: Generation kWh = 48; On-site use kWh = 36."
+      },
+      {
+        "type": "table",
+        "caption": "Solar generation",
+        "headers": ["Day", "Generation kWh", "On-site use kWh"],
+        "rows": [
+          ["Mon", "42", "30"],
+          ["Tue", "36", "32"],
+          ["Wed", "54", "34"],
+          ["Thu", "48", "36"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-07-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-07",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-solar-chart",
+        "caption": "Solar generation",
+        "alt": "Solar generation: directly labelled chart of Generation kWh, On-site use kWh, with an equivalent data table.",
+        "description": "Mon: Generation kWh = 42; On-site use kWh = 30. Tue: Generation kWh = 36; On-site use kWh = 32. Wed: Generation kWh = 54; On-site use kWh = 34. Thu: Generation kWh = 48; On-site use kWh = 36."
+      },
+      {
+        "type": "table",
+        "caption": "Solar generation",
+        "headers": ["Day", "Generation kWh", "On-site use kWh"],
+        "rows": [
+          ["Mon", "42", "30"],
+          ["Tue", "36", "32"],
+          ["Wed", "54", "34"],
+          ["Thu", "48", "36"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-08-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-08",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-solar-chart",
+        "caption": "Solar generation",
+        "alt": "Solar generation: directly labelled chart of Generation kWh, On-site use kWh, with an equivalent data table.",
+        "description": "Mon: Generation kWh = 42; On-site use kWh = 30. Tue: Generation kWh = 36; On-site use kWh = 32. Wed: Generation kWh = 54; On-site use kWh = 34. Thu: Generation kWh = 48; On-site use kWh = 36."
+      },
+      {
+        "type": "table",
+        "caption": "Solar generation",
+        "headers": ["Day", "Generation kWh", "On-site use kWh"],
+        "rows": [
+          ["Mon", "42", "30"],
+          ["Tue", "36", "32"],
+          ["Wed", "54", "34"],
+          ["Thu", "48", "36"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-09-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-09",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-training-chart",
+        "caption": "Training enrolment",
+        "alt": "Training enrolment: directly labelled chart of Beginners, Experienced, with an equivalent data table.",
+        "description": "Maps: Beginners = 18; Experienced = 12. Radio: Beginners = 24; Experienced = 16. First aid: Beginners = 15; Experienced = 25. Navigation: Beginners = 21; Experienced = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Training enrolment",
+        "headers": ["Course", "Beginners", "Experienced"],
+        "rows": [
+          ["Maps", "18", "12"],
+          ["Radio", "24", "16"],
+          ["First aid", "15", "25"],
+          ["Navigation", "21", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-10-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-10",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-training-chart",
+        "caption": "Training enrolment",
+        "alt": "Training enrolment: directly labelled chart of Beginners, Experienced, with an equivalent data table.",
+        "description": "Maps: Beginners = 18; Experienced = 12. Radio: Beginners = 24; Experienced = 16. First aid: Beginners = 15; Experienced = 25. Navigation: Beginners = 21; Experienced = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Training enrolment",
+        "headers": ["Course", "Beginners", "Experienced"],
+        "rows": [
+          ["Maps", "18", "12"],
+          ["Radio", "24", "16"],
+          ["First aid", "15", "25"],
+          ["Navigation", "21", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-11-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-11",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-training-chart",
+        "caption": "Training enrolment",
+        "alt": "Training enrolment: directly labelled chart of Beginners, Experienced, with an equivalent data table.",
+        "description": "Maps: Beginners = 18; Experienced = 12. Radio: Beginners = 24; Experienced = 16. First aid: Beginners = 15; Experienced = 25. Navigation: Beginners = 21; Experienced = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Training enrolment",
+        "headers": ["Course", "Beginners", "Experienced"],
+        "rows": [
+          ["Maps", "18", "12"],
+          ["Radio", "24", "16"],
+          ["First aid", "15", "25"],
+          ["Navigation", "21", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-12-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-12",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-training-chart",
+        "caption": "Training enrolment",
+        "alt": "Training enrolment: directly labelled chart of Beginners, Experienced, with an equivalent data table.",
+        "description": "Maps: Beginners = 18; Experienced = 12. Radio: Beginners = 24; Experienced = 16. First aid: Beginners = 15; Experienced = 25. Navigation: Beginners = 21; Experienced = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Training enrolment",
+        "headers": ["Course", "Beginners", "Experienced"],
+        "rows": [
+          ["Maps", "18", "12"],
+          ["Radio", "24", "16"],
+          ["First aid", "15", "25"],
+          ["Navigation", "21", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-13-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-13",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-stock-chart",
+        "caption": "Warehouse stock",
+        "alt": "Warehouse stock: directly labelled chart of Opening, Received, Dispatched, with an equivalent data table.",
+        "description": "Bolts: Opening = 90; Received = 40; Dispatched = 70. Nuts: Opening = 120; Received = 20; Dispatched = 60. Washers: Opening = 80; Received = 50; Dispatched = 45. Clips: Opening = 65; Received = 35; Dispatched = 40."
+      },
+      {
+        "type": "table",
+        "caption": "Warehouse stock",
+        "headers": ["Item", "Opening", "Received", "Dispatched"],
+        "rows": [
+          ["Bolts", "90", "40", "70"],
+          ["Nuts", "120", "20", "60"],
+          ["Washers", "80", "50", "45"],
+          ["Clips", "65", "35", "40"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-14-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-14",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-stock-chart",
+        "caption": "Warehouse stock",
+        "alt": "Warehouse stock: directly labelled chart of Opening, Received, Dispatched, with an equivalent data table.",
+        "description": "Bolts: Opening = 90; Received = 40; Dispatched = 70. Nuts: Opening = 120; Received = 20; Dispatched = 60. Washers: Opening = 80; Received = 50; Dispatched = 45. Clips: Opening = 65; Received = 35; Dispatched = 40."
+      },
+      {
+        "type": "table",
+        "caption": "Warehouse stock",
+        "headers": ["Item", "Opening", "Received", "Dispatched"],
+        "rows": [
+          ["Bolts", "90", "40", "70"],
+          ["Nuts", "120", "20", "60"],
+          ["Washers", "80", "50", "45"],
+          ["Clips", "65", "35", "40"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-15-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-15",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-stock-chart",
+        "caption": "Warehouse stock",
+        "alt": "Warehouse stock: directly labelled chart of Opening, Received, Dispatched, with an equivalent data table.",
+        "description": "Bolts: Opening = 90; Received = 40; Dispatched = 70. Nuts: Opening = 120; Received = 20; Dispatched = 60. Washers: Opening = 80; Received = 50; Dispatched = 45. Clips: Opening = 65; Received = 35; Dispatched = 40."
+      },
+      {
+        "type": "table",
+        "caption": "Warehouse stock",
+        "headers": ["Item", "Opening", "Received", "Dispatched"],
+        "rows": [
+          ["Bolts", "90", "40", "70"],
+          ["Nuts", "120", "20", "60"],
+          ["Washers", "80", "50", "45"],
+          ["Clips", "65", "35", "40"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-16-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-16",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-stock-chart",
+        "caption": "Warehouse stock",
+        "alt": "Warehouse stock: directly labelled chart of Opening, Received, Dispatched, with an equivalent data table.",
+        "description": "Bolts: Opening = 90; Received = 40; Dispatched = 70. Nuts: Opening = 120; Received = 20; Dispatched = 60. Washers: Opening = 80; Received = 50; Dispatched = 45. Clips: Opening = 65; Received = 35; Dispatched = 40."
+      },
+      {
+        "type": "table",
+        "caption": "Warehouse stock",
+        "headers": ["Item", "Opening", "Received", "Dispatched"],
+        "rows": [
+          ["Bolts", "90", "40", "70"],
+          ["Nuts", "120", "20", "60"],
+          ["Washers", "80", "50", "45"],
+          ["Clips", "65", "35", "40"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-17-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-17",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-ferry-chart",
+        "caption": "Ferry passenger counts",
+        "alt": "Ferry passenger counts: directly labelled chart of Adults, Students, Children, with an equivalent data table.",
+        "description": "08:00: Adults = 40; Students = 20; Children = 10. 10:00: Adults = 30; Students = 25; Children = 15. 12:00: Adults = 50; Students = 15; Children = 5."
+      },
+      {
+        "type": "table",
+        "caption": "Ferry passenger counts",
+        "headers": ["Departure", "Adults", "Students", "Children"],
+        "rows": [
+          ["08:00", "40", "20", "10"],
+          ["10:00", "30", "25", "15"],
+          ["12:00", "50", "15", "5"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-18-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-18",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-ferry-chart",
+        "caption": "Ferry passenger counts",
+        "alt": "Ferry passenger counts: directly labelled chart of Adults, Students, Children, with an equivalent data table.",
+        "description": "08:00: Adults = 40; Students = 20; Children = 10. 10:00: Adults = 30; Students = 25; Children = 15. 12:00: Adults = 50; Students = 15; Children = 5."
+      },
+      {
+        "type": "table",
+        "caption": "Ferry passenger counts",
+        "headers": ["Departure", "Adults", "Students", "Children"],
+        "rows": [
+          ["08:00", "40", "20", "10"],
+          ["10:00", "30", "25", "15"],
+          ["12:00", "50", "15", "5"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-19-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-19",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-ferry-chart",
+        "caption": "Ferry passenger counts",
+        "alt": "Ferry passenger counts: directly labelled chart of Adults, Students, Children, with an equivalent data table.",
+        "description": "08:00: Adults = 40; Students = 20; Children = 10. 10:00: Adults = 30; Students = 25; Children = 15. 12:00: Adults = 50; Students = 15; Children = 5."
+      },
+      {
+        "type": "table",
+        "caption": "Ferry passenger counts",
+        "headers": ["Departure", "Adults", "Students", "Children"],
+        "rows": [
+          ["08:00", "40", "20", "10"],
+          ["10:00", "30", "25", "15"],
+          ["12:00", "50", "15", "5"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-20-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-20",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-ferry-chart",
+        "caption": "Ferry passenger counts",
+        "alt": "Ferry passenger counts: directly labelled chart of Adults, Students, Children, with an equivalent data table.",
+        "description": "08:00: Adults = 40; Students = 20; Children = 10. 10:00: Adults = 30; Students = 25; Children = 15. 12:00: Adults = 50; Students = 15; Children = 5."
+      },
+      {
+        "type": "table",
+        "caption": "Ferry passenger counts",
+        "headers": ["Departure", "Adults", "Students", "Children"],
+        "rows": [
+          ["08:00", "40", "20", "10"],
+          ["10:00", "30", "25", "15"],
+          ["12:00", "50", "15", "5"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-21-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-21",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-rainfall-chart",
+        "caption": "Rainfall observations",
+        "alt": "Rainfall observations: directly labelled chart of Rain mm, Rainy days, with an equivalent data table.",
+        "description": "July: Rain mm = 180; Rainy days = 10. August: Rain mm = 240; Rainy days = 15. September: Rain mm = 150; Rainy days = 12. October: Rain mm = 210; Rainy days = 13."
+      },
+      {
+        "type": "table",
+        "caption": "Rainfall observations",
+        "headers": ["Month", "Rain mm", "Rainy days"],
+        "rows": [
+          ["July", "180", "10"],
+          ["August", "240", "15"],
+          ["September", "150", "12"],
+          ["October", "210", "13"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-22-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-22",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-rainfall-chart",
+        "caption": "Rainfall observations",
+        "alt": "Rainfall observations: directly labelled chart of Rain mm, Rainy days, with an equivalent data table.",
+        "description": "July: Rain mm = 180; Rainy days = 10. August: Rain mm = 240; Rainy days = 15. September: Rain mm = 150; Rainy days = 12. October: Rain mm = 210; Rainy days = 13."
+      },
+      {
+        "type": "table",
+        "caption": "Rainfall observations",
+        "headers": ["Month", "Rain mm", "Rainy days"],
+        "rows": [
+          ["July", "180", "10"],
+          ["August", "240", "15"],
+          ["September", "150", "12"],
+          ["October", "210", "13"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-23-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-23",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-rainfall-chart",
+        "caption": "Rainfall observations",
+        "alt": "Rainfall observations: directly labelled chart of Rain mm, Rainy days, with an equivalent data table.",
+        "description": "July: Rain mm = 180; Rainy days = 10. August: Rain mm = 240; Rainy days = 15. September: Rain mm = 150; Rainy days = 12. October: Rain mm = 210; Rainy days = 13."
+      },
+      {
+        "type": "table",
+        "caption": "Rainfall observations",
+        "headers": ["Month", "Rain mm", "Rainy days"],
+        "rows": [
+          ["July", "180", "10"],
+          ["August", "240", "15"],
+          ["September", "150", "12"],
+          ["October", "210", "13"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-24-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-24",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-rainfall-chart",
+        "caption": "Rainfall observations",
+        "alt": "Rainfall observations: directly labelled chart of Rain mm, Rainy days, with an equivalent data table.",
+        "description": "July: Rain mm = 180; Rainy days = 10. August: Rain mm = 240; Rainy days = 15. September: Rain mm = 150; Rainy days = 12. October: Rain mm = 210; Rainy days = 13."
+      },
+      {
+        "type": "table",
+        "caption": "Rainfall observations",
+        "headers": ["Month", "Rain mm", "Rainy days"],
+        "rows": [
+          ["July", "180", "10"],
+          ["August", "240", "15"],
+          ["September", "150", "12"],
+          ["October", "210", "13"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-25-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-25",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-repairs-chart",
+        "caption": "Workshop tickets",
+        "alt": "Workshop tickets: directly labelled chart of Opened, Closed, with an equivalent data table.",
+        "description": "Electrical: Opened = 24; Closed = 18. Mechanical: Opened = 30; Closed = 24. Plumbing: Opened = 18; Closed = 15. Carpentry: Opened = 12; Closed = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Workshop tickets",
+        "headers": ["Type", "Opened", "Closed"],
+        "rows": [
+          ["Electrical", "24", "18"],
+          ["Mechanical", "30", "24"],
+          ["Plumbing", "18", "15"],
+          ["Carpentry", "12", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-26-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-26",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-repairs-chart",
+        "caption": "Workshop tickets",
+        "alt": "Workshop tickets: directly labelled chart of Opened, Closed, with an equivalent data table.",
+        "description": "Electrical: Opened = 24; Closed = 18. Mechanical: Opened = 30; Closed = 24. Plumbing: Opened = 18; Closed = 15. Carpentry: Opened = 12; Closed = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Workshop tickets",
+        "headers": ["Type", "Opened", "Closed"],
+        "rows": [
+          ["Electrical", "24", "18"],
+          ["Mechanical", "30", "24"],
+          ["Plumbing", "18", "15"],
+          ["Carpentry", "12", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-27-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-27",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-repairs-chart",
+        "caption": "Workshop tickets",
+        "alt": "Workshop tickets: directly labelled chart of Opened, Closed, with an equivalent data table.",
+        "description": "Electrical: Opened = 24; Closed = 18. Mechanical: Opened = 30; Closed = 24. Plumbing: Opened = 18; Closed = 15. Carpentry: Opened = 12; Closed = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Workshop tickets",
+        "headers": ["Type", "Opened", "Closed"],
+        "rows": [
+          ["Electrical", "24", "18"],
+          ["Mechanical", "30", "24"],
+          ["Plumbing", "18", "15"],
+          ["Carpentry", "12", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-28-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-28",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-repairs-chart",
+        "caption": "Workshop tickets",
+        "alt": "Workshop tickets: directly labelled chart of Opened, Closed, with an equivalent data table.",
+        "description": "Electrical: Opened = 24; Closed = 18. Mechanical: Opened = 30; Closed = 24. Plumbing: Opened = 18; Closed = 15. Carpentry: Opened = 12; Closed = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Workshop tickets",
+        "headers": ["Type", "Opened", "Closed"],
+        "rows": [
+          ["Electrical", "24", "18"],
+          ["Mechanical", "30", "24"],
+          ["Plumbing", "18", "15"],
+          ["Carpentry", "12", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-29-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-29",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-donations-chart",
+        "caption": "Donation boxes",
+        "alt": "Donation boxes: directly labelled chart of Books, Notebooks, with an equivalent data table.",
+        "description": "A: Books = 14; Notebooks = 6. B: Books = 8; Notebooks = 12. C: Books = 17; Notebooks = 3. D: Books = 11; Notebooks = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Donation boxes",
+        "headers": ["Box", "Books", "Notebooks"],
+        "rows": [
+          ["A", "14", "6"],
+          ["B", "8", "12"],
+          ["C", "17", "3"],
+          ["D", "11", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-30-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-30",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-donations-chart",
+        "caption": "Donation boxes",
+        "alt": "Donation boxes: directly labelled chart of Books, Notebooks, with an equivalent data table.",
+        "description": "A: Books = 14; Notebooks = 6. B: Books = 8; Notebooks = 12. C: Books = 17; Notebooks = 3. D: Books = 11; Notebooks = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Donation boxes",
+        "headers": ["Box", "Books", "Notebooks"],
+        "rows": [
+          ["A", "14", "6"],
+          ["B", "8", "12"],
+          ["C", "17", "3"],
+          ["D", "11", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-31-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-31",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-donations-chart",
+        "caption": "Donation boxes",
+        "alt": "Donation boxes: directly labelled chart of Books, Notebooks, with an equivalent data table.",
+        "description": "A: Books = 14; Notebooks = 6. B: Books = 8; Notebooks = 12. C: Books = 17; Notebooks = 3. D: Books = 11; Notebooks = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Donation boxes",
+        "headers": ["Box", "Books", "Notebooks"],
+        "rows": [
+          ["A", "14", "6"],
+          ["B", "8", "12"],
+          ["C", "17", "3"],
+          ["D", "11", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-32-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-32",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-donations-chart",
+        "caption": "Donation boxes",
+        "alt": "Donation boxes: directly labelled chart of Books, Notebooks, with an equivalent data table.",
+        "description": "A: Books = 14; Notebooks = 6. B: Books = 8; Notebooks = 12. C: Books = 17; Notebooks = 3. D: Books = 11; Notebooks = 9."
+      },
+      {
+        "type": "table",
+        "caption": "Donation boxes",
+        "headers": ["Box", "Books", "Notebooks"],
+        "rows": [
+          ["A", "14", "6"],
+          ["B", "8", "12"],
+          ["C", "17", "3"],
+          ["D", "11", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-33-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-33",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-calls-chart",
+        "caption": "Helpline calls",
+        "alt": "Helpline calls: directly labelled chart of Answered, Missed, with an equivalent data table.",
+        "description": "Morning: Answered = 48; Missed = 12. Midday: Answered = 36; Missed = 4. Evening: Answered = 54; Missed = 6."
+      },
+      {
+        "type": "table",
+        "caption": "Helpline calls",
+        "headers": ["Period", "Answered", "Missed"],
+        "rows": [
+          ["Morning", "48", "12"],
+          ["Midday", "36", "4"],
+          ["Evening", "54", "6"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-34-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-34",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-calls-chart",
+        "caption": "Helpline calls",
+        "alt": "Helpline calls: directly labelled chart of Answered, Missed, with an equivalent data table.",
+        "description": "Morning: Answered = 48; Missed = 12. Midday: Answered = 36; Missed = 4. Evening: Answered = 54; Missed = 6."
+      },
+      {
+        "type": "table",
+        "caption": "Helpline calls",
+        "headers": ["Period", "Answered", "Missed"],
+        "rows": [
+          ["Morning", "48", "12"],
+          ["Midday", "36", "4"],
+          ["Evening", "54", "6"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-35-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-35",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-calls-chart",
+        "caption": "Helpline calls",
+        "alt": "Helpline calls: directly labelled chart of Answered, Missed, with an equivalent data table.",
+        "description": "Morning: Answered = 48; Missed = 12. Midday: Answered = 36; Missed = 4. Evening: Answered = 54; Missed = 6."
+      },
+      {
+        "type": "table",
+        "caption": "Helpline calls",
+        "headers": ["Period", "Answered", "Missed"],
+        "rows": [
+          ["Morning", "48", "12"],
+          ["Midday", "36", "4"],
+          ["Evening", "54", "6"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-36-reference",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-36",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-calls-chart",
+        "caption": "Helpline calls",
+        "alt": "Helpline calls: directly labelled chart of Answered, Missed, with an equivalent data table.",
+        "description": "Morning: Answered = 48; Missed = 12. Midday: Answered = 36; Missed = 4. Evening: Answered = 54; Missed = 6."
+      },
+      {
+        "type": "table",
+        "caption": "Helpline calls",
+        "headers": ["Period", "Answered", "Missed"],
+        "rows": [
+          ["Morning", "48", "12"],
+          ["Midday", "36", "4"],
+          ["Evening", "54", "6"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-37-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-37",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-produce-chart",
+        "caption": "Market crates",
+        "alt": "Market crates: directly labelled chart of Crates, Kilograms per crate, with an equivalent data table.",
+        "description": "Beans: Crates = 6; Kilograms per crate = 12. Squash: Crates = 4; Kilograms per crate = 18. Tomato: Crates = 9; Kilograms per crate = 8."
+      },
+      {
+        "type": "table",
+        "caption": "Market crates",
+        "headers": ["Crop", "Crates", "Kilograms per crate"],
+        "rows": [
+          ["Beans", "6", "12"],
+          ["Squash", "4", "18"],
+          ["Tomato", "9", "8"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-38-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-38",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-produce-chart",
+        "caption": "Market crates",
+        "alt": "Market crates: directly labelled chart of Crates, Kilograms per crate, with an equivalent data table.",
+        "description": "Beans: Crates = 6; Kilograms per crate = 12. Squash: Crates = 4; Kilograms per crate = 18. Tomato: Crates = 9; Kilograms per crate = 8."
+      },
+      {
+        "type": "table",
+        "caption": "Market crates",
+        "headers": ["Crop", "Crates", "Kilograms per crate"],
+        "rows": [
+          ["Beans", "6", "12"],
+          ["Squash", "4", "18"],
+          ["Tomato", "9", "8"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-39-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-39",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-produce-chart",
+        "caption": "Market crates",
+        "alt": "Market crates: directly labelled chart of Crates, Kilograms per crate, with an equivalent data table.",
+        "description": "Beans: Crates = 6; Kilograms per crate = 12. Squash: Crates = 4; Kilograms per crate = 18. Tomato: Crates = 9; Kilograms per crate = 8."
+      },
+      {
+        "type": "table",
+        "caption": "Market crates",
+        "headers": ["Crop", "Crates", "Kilograms per crate"],
+        "rows": [
+          ["Beans", "6", "12"],
+          ["Squash", "4", "18"],
+          ["Tomato", "9", "8"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f02-data-english-40-reference",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "language": "english",
+    "title": "Supporting material f02-data-english-40",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f02-produce-chart",
+        "caption": "Market crates",
+        "alt": "Market crates: directly labelled chart of Crates, Kilograms per crate, with an equivalent data table.",
+        "description": "Beans: Crates = 6; Kilograms per crate = 12. Squash: Crates = 4; Kilograms per crate = 18. Tomato: Crates = 9; Kilograms per crate = 8."
+      },
+      {
+        "type": "table",
+        "caption": "Market crates",
+        "headers": ["Crop", "Crates", "Kilograms per crate"],
+        "rows": [
+          ["Beans", "6", "12"],
+          ["Squash", "4", "18"],
+          ["Tomato", "9", "8"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

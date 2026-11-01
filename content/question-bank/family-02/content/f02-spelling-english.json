@@ -1,0 +1,443 @@
+[
+  {
+    "questionId": "f02-spelling-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word for the blank: The form needs the applicant's ___.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "signature"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "signiture"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "signatur"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "signeature"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Signature is the standard spelling, with -nature after sig-. The alternatives alter or omit letters.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/signature; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word for the blank: Record the exact ___ of the incident.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "discription"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "descripton"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "descripsion"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "description"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Description uses de- and the ending -scription. The other forms are misspellings, not regional variants.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/description; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word for the blank: The counter closes at ___ on Friday.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "noune"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "nune"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "noon"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "noone"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Noon names midday. The other strings are not accepted spellings of that time word.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/noon; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair in which BOTH words are spelled correctly: The ___ confirmed the ___ of the room.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "commitee; availibility"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "committee; availability"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "commitee; availability"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "committee; availibility"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Committee has double m and double t; availability is formed from available with -ability. Each incorrect pair contains one or both specified misspellings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/committee; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/availability; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair in which BOTH words are spelled correctly: The ___ contains the applicant's ___.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "document; qualifications"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "documant; qualifications"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "document; qualifacations"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "documant; qualifacations"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Document uses -ment, and qualifications retains qualifi-. Checking only one word leaves two possible pairs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/document; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/qualifications; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair in which BOTH words are spelled correctly: Make a ___ for each ___ request.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "referance; separate"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "reference; seperate"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "referance; seperate"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "reference; separate"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Reference contains -erence; separate contains -par-. Both forms must be checked rather than relying on one familiar word.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/reference; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/separate; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair in which BOTH words are spelled correctly: The ___ gives a useful ___.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "manual; explaination"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "mannual; explaination"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "manual; explanation"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "mannual; explanation"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Manual has one n, and explanation drops the i used in explain. Neither alternate spelling is an accepted variant here.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/manual; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/explanation; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the pair in which BOTH words are spelled correctly: Please ___ the ___ names.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "varify; relevent"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "verify; relevant"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "varify; relevant"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "verify; relevent"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Verify begins ver-, and relevant has -ant rather than -ent. Both checks are needed to distinguish the four options.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/verify; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/relevant; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-09",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Proofread all four marked words. Choose the replacement list that corrects errors while preserving correct words: (1) occassion, (2) recommend, (3) embarrasment, (4) eligible.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "occasion; recommend; embarrassment; eligible"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "occasion; reccommend; embarrassment; eligible"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "occasion; recommend; embarassment; eligable"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "occassion; recommend; embarrassment; eligable"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Occasion has one s, recommend has one c and two m, embarrassment has double r and double s, and eligible ends -ible. The correct list fixes 1 and 3 without corrupting 2 or 4; checking only occasion does not separate the first three lists.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/occasion; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/recommend; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/embarrassment; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/eligible; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-spelling-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Proofread all four marked words. Choose the replacement list that corrects errors while preserving correct words: (1) existance, (2) argument, (3) truely, (4) convenient.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "existence; arguement; truly; convenient"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "existence; argument; truely; conveniant"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "existance; argument; truly; conveniant"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "existence; argument; truly; convenient"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Existence ends -ence, argument has no e after u, truly drops the final e of true, and convenient contains -venient. The correct list repairs 1 and 3 while retaining 2 and 4; the alternatives each preserve or introduce errors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://www.merriam-webster.com/dictionary/existence; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/argument; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/truly; headword spelling retrieved 2026-11-01; no dictionary example text copied.",
+        "https://www.merriam-webster.com/dictionary/convenient; headword spelling retrieved 2026-11-01; no dictionary example text copied."
+      ]
+    }
+  }
+]

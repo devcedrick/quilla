@@ -1,0 +1,1682 @@
+[
+  {
+    "questionId": "f02-general-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 6713, which norm requires service without unfair discrimination based on party affiliation?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Political neutrality"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Simple living"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Nationalism"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Professionalism"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Political neutrality concerns equal public service regardless of political preference, rather than lifestyle or technical competence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 4(A)(d); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What does RA 6713 call the transfer that completely and actually removes an official's ownership interest to an eligible person?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Disclosure"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Delegation"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Designation"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Divestment"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Divestment removes title or interest; disclosure reports it and delegation transfers a task, not ownership.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(j); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 6713's definition, which child belongs to an official's statutory family?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "An unmarried 20-year-old child"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Any adult dependent cousin"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "An unmarried 17-year-old child"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A married 17-year-old child"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition includes unmarried children under 18 and the spouse, not every dependent relative.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(g); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A temporary unpaid appointee argues that RA 6713 applies only to salaried permanent staff. Which response matches its coverage?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Permanent status is necessary but payment is not."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Temporary status and lack of pay do not by themselves exclude the appointee."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Only elected officials are covered."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Payment is necessary but permanent status is not."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition covers elective and appointive personnel, permanent or temporary, whether compensated or not.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(b); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An official reports a business interest but retains title and voting control. Which distinction under RA 6713 is correct?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Reporting alone is not divestment."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Reporting automatically transfers ownership."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Voting control is unrelated to ownership interests."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Divestment means disclosing without transferring."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Disclosure and actual removal of ownership are different acts. The facts describe continued ownership, not completed divestment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(j); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A procurement officer owns a business whose interests may be affected by her official decisions. Is a completed favourable award necessary for the statutory conflict definition to become relevant?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Yes; only a paid award creates a conflict."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Yes; ownership matters only after a contract is signed."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No; any friendship is itself the statutory business interest."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "No; a potentially opposed or affected business interest can suffice."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition addresses interests that may conflict with faithful duty; it does not require a completed benefit. Friendship alone is not the specified ownership condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(i); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An office describes public resources as available for personal errands whenever no money changes hands. Which RA 6713 norm most directly contradicts this justification?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Nationalism alone"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Simple living alone"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Commitment to public interest"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Commitment to democracy alone"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The resource-use requirement concerns efficient and honest public use, not only cash payments. The other norms do not most directly resolve the resource justification.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 4(A)(a); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Under RA 6713, a reply sent within the statutory period says only 'Received' and omits action taken. Which assessment is best?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Content matters only after litigation begins."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Timeliness alone does not satisfy the specified reply content."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Acknowledgment always satisfies all reply duties."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A reply is required only if the request is approved."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The provision requires a response containing action taken, not merely timely acknowledgment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 5(a); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-09",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three officials claim divestment under RA 6713, Section 3(j). A transfers all shares to a spouse. B transfers voting rights to an unrelated person but keeps the right to dividends. C voluntarily and actually transfers all rights and interests to an unrelated buyer outside the prohibited relationship degrees. Which claims satisfy the definition on these facts?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "C only"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A and C only"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "B and C only"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A, B, and C"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "C satisfies complete, actual deprivation in favour of an eligible transferee. A fails the spouse exclusion even if the transfer is complete. B fails completeness even though the recipient is unrelated. Thus neither an eligible recipient alone nor complete transfer alone suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(j); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-10",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply only RA 6713's Section 3(c) exclusion from its definition of gift. All three tokens are unsolicited and accepted. A is insignificant and unrelated to any official favour. B is insignificant but offered in exchange for favourable official action. C is substantial and unrelated to any favour. Which tokens fall within the exclusion?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "A and B only"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A and C only"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A, B, and C"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "A only"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The exclusion requires both nominal/insignificant value and absence of an anticipated or exchanged official favour, as well as being unsolicited. A meets all conditions. B fails the favour condition; C fails the value condition. This classification alone is not a complete ruling on the legality of acceptance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; Section 3(c)-(d); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-11",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 9003, where does segregation at source occur?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Only after burning"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Only after waste export"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "At the point where waste is generated"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Only after landfill delivery"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Source segregation separates waste where it arises, rather than relying solely on downstream disposal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 3 and Section 21; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-12",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which process uses biological decomposition to turn organic waste into a soil-like product?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Incineration"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Composting"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Shredding alone"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Compaction"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Composting is biological decomposition; reducing physical size or volume alone does not perform it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 3; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-13",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is an MRF under RA 9003?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "A materials recovery facility"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A municipal revenue fund"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A mandatory refuse fine"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A mining restoration fee"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "MRF identifies a recovery facility, not a fee or accounting fund.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 3; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-14",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A community collects, segregates, and reuses previously used packaging without altering its physical or chemical characteristics. An organiser says it cannot be recycling because no new material is produced. Which assessment best applies RA 9003's definitions?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "It is reuse only, because recycling always requires a new material."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "It is recycling only, because reuse must change the original purpose."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "It is neither, because unchanged packaging cannot count as recovered material."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "It is reuse, and the packaging proviso also deems the activity recycling."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Unchanged recovery fits reuse under Section 3(ee). Section 3(bb) expressly deems collection, segregation, and reuse of previously used packaging material recycling. The categories are not mutually exclusive in this case; transformation into new material is not essential to that proviso.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Sections 3(bb) and 3(ee); statutory text retrieved 2026-11-01. Scope: definitions as written, including the packaging proviso, not a legal opinion.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-15",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A barangay has little land for an MRF. What arrangement does RA 9003 expressly contemplate?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "An MRF only for the national capital"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No recovery facility outside cities"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "An MRF for a barangay or a cluster of barangays"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "An MRF only for each individual household"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The law permits barangay clustering rather than making one facility per household the only approach.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 32; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-16",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A contractor offers one truck trip for presegregated waste but proposes mixing it all in transit. Which concern remains under RA 9003?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "A contractor may redefine segregated waste as mixed waste."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Collection must preserve segregation, not merely start with separated bins."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Initial separation makes later mixing irrelevant."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Segregation applies only to commercial waste."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Separate collection or compartments preserve the purpose of segregation; initial bins alone do not complete the system.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 24; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-17",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local plan directs all resources to disposal and considers no feasible reuse, recycling, or composting. Which statutory planning emphasis is missing?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Priority consideration of feasible diversion programmes before disposal capacity"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A requirement to ban every collection service"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A requirement to sell all public land"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A requirement to eliminate public participation"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The plan must emphasise feasible reuse, recycling, and composting while addressing residual disposal needs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 16; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-18",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A store stops distributing unnecessary packaging instead of collecting the same packaging later. Which strategy is most directly illustrated?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Final disposal"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Transport consolidation"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Landfill expansion"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Source reduction"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Avoiding waste generation is source reduction; later collection addresses waste already produced.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 3; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-19",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two barangays propose one joint MRF, end segregation at households, and carry mixed waste together in a single uncompartmented truck with no separate schedules or haulers. Under RA 9003, which package preserves the joint facility while addressing both segregation and transport?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Keep the joint MRF and change transport, but let MRF sorting replace household segregation."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Keep the joint MRF without either change, because a clustered facility replaces the earlier segregation duties."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Keep the joint MRF, require source segregation, and use separate schedules/haulers or appropriate vehicle compartments."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Keep the joint MRF and require source segregation, but use the proposed mixed transport because sorting occurred at home."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Section 32 allows an MRF for a barangay cluster; it does not displace Section 21's source segregation. Section 24 separately requires separate schedules/haulers or appropriate compartments. Fixing only collection or only household sorting leaves another defect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Sections 21, 24, and 32; statutory text retrieved 2026-11-01. Scope: provisions as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-20",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For a hypothetical day's 100 tonnes of waste, a town can feasibly reuse 20 tonnes and recycle 30 different tonnes. Of the remaining 50, exactly 30 are compostable, but today's composting capacity is 20 tonnes; no other recovery is feasible. Under RA 9003's recovery-and-residual planning approach, which plan uses all today's feasible recovery and provides sufficient suitable disposal capacity? These capacities are supplied assumptions, not statutory quotas.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Recover 50 tonnes and provide disposal for 50 tonnes."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Recover 70 tonnes and provide disposal for 30 tonnes."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Recover 80 tonnes and provide disposal for 20 tonnes."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Recover 70 tonnes and provide disposal for 20 tonnes."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Feasible recovery is 20 reuse + 30 recycling + min(30 compostable,20 capacity) = 70 tonnes. Residuals are 100−70=30, including ten compostable tonnes beyond today's feasible capacity. Eighty recovered ignores capacity; 20 disposal misses residuals; recovering only 50 omits feasible composting. Section 16 calls for feasible recovery and appropriate residual disposal, not these hypothetical numerical weights.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; Section 16; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-21",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Who is the data subject in RA 10173?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "The individual whose personal information is processed"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Every company selling computers"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Only the database programmer"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Only the head of an agency"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The term refers to the person the information concerns, not necessarily a processor or agency head.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 3(c); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-22",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which agency is created by the Data Privacy Act to administer its framework?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Commission on Elections"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Civil Aeronautics Board"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Commission on Audit"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "National Privacy Commission"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "RA 10173 establishes the National Privacy Commission for its privacy framework.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Sections 7-8; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-23",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which quality is part of RA 10173's definition of consent?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "A blanket waiver inferred from employment"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A requirement that agreement be oral only"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "A freely given, specific, informed indication of will"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "An assumption based only on silence"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition requires informed and specific voluntary agreement and permits written, electronic, or recorded evidence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 3(b); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-24",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A dataset omits names but combines details that directly identify one person to its holder. Which conclusion follows from RA 10173's definition?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Information becomes personal only after publication."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Removing names alone does not necessarily remove personal information."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Any nameless dataset is automatically anonymous."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Only photographs can identify people."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition includes combined information enabling direct identification, not only an explicit name.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 3(g); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-25",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An office collects complete family histories for a routine notification that needs only a contact address. Which data-privacy principle is most directly implicated?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Proportionality to a specified legitimate purpose"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Permanent retention by default"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Universal publication"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Exclusive use of handwritten files"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Data should be adequate and relevant but not excessive for its purpose. A convenient collection method does not justify unnecessary information.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 11(d); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-26",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A manager claims personal data can be kept forever because storage is cheap. Which principle under RA 10173 answers that claim?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Cheap storage removes retention limits."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "All records must be erased within one day."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Retention is unlimited if the record is accurate."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Retention must be linked to a necessary purpose or other lawful grounds, not storage cost alone."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The retention rule turns on necessity and applicable lawful purposes, not hardware cost or an invented universal one-day period.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 11(e); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-27",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Consent is absent, but processing is necessary to fulfil a contract with the data subject. Under Section 12 alone, what is the correct starting point?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "A contract automatically authorises any unrelated use."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Only public bodies can rely on contractual necessity."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Consent is not the only possible lawful criterion."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "All processing without consent is automatically unlawful."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Section 12 provides alternative lawful criteria including contractual necessity; the criterion does not license unlimited unrelated processing.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 12(b); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-28",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A service provider processes records solely under another organisation's instructions. Which role distinction is most relevant?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Exporter versus importer only"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Controller versus processor"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Voter versus candidate"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Complainant versus judge"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The controller determines processing while a processor may process on the controller's behalf; possession alone does not establish decision-making control.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Section 3(h)-(i); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-29",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A clinic outsources data entry. It removes names but keeps combinations that directly and certainly identify patients when matched to the clinic's other records. The contractor follows the clinic's processing instructions. The clinic argues that name removal and the contract end its responsibility. Which complete assessment fits RA 10173?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "The records remain personal information; the clinic remains accountable and must use appropriate protection when transferring them for processing."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The records remain personal information; the contractor's processing contract transfers all accountability away from the clinic."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The records cease to be personal information; the clinic nevertheless remains accountable for the transfer."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The records cease to be personal information; the processing contract also removes the clinic's accountability."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Section 3(g) includes identification through combined information, so deleting names is insufficient here. Section 21 retains controller accountability for information transferred for processing and calls for contractual or other reasonable means to provide comparable protection. Each distractor loses identification, accountability, or both.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Sections 3(g) and 21; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-30",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A controller lawfully collects an ordinary contact list for delivery under a contract. It later proposes unrelated advertising and indefinite retention. For this exercise, no compatible advertising purpose or separate lawful criterion has been established, and no continuing legal, legitimate-business, or rights-protection retention need is shown. Which assessment applies RA 10173 without treating consent as the sole possible lawful criterion?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "The delivery basis automatically justifies advertising, but indefinite retention lacks the stated justification."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Advertising needs purpose and lawful-criterion review, but lawful collection alone justifies indefinite retention."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The delivery basis automatically justifies both advertising and indefinite retention."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The delivery basis does not automatically justify advertising; purpose and lawful-criterion review are needed, and indefinite retention lacks the stated justification."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Sections 11(b),(e) require compatible declared purposes and justified retention. Section 12 supplies several lawful criteria, so delivery under a contract is not authority for every later use, nor is consent the sole possible criterion. With no new basis or continuing retention need established, both proposals require correction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2012/ra_10173_2012.html; Sections 11(b),(e) and 12; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-31",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 11032, what is a Citizen's Charter intended to make clear?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Only the names of former officials"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Only the annual national budget"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Service requirements, steps, responsible personnel, fees, and processing times"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Only the agency's founding date"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The charter explains the service process and associated obligations, not merely institutional history.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 6; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-32",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 11032's definition, when does the specified processing-time interval begin?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "The first public advertisement of the service"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Receipt of an application with complete requirements, documents, and fees"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The applicant's first idea to apply"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The agency's annual budget approval"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition starts from complete submission with accompanying documents and payment, not an unrelated date.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 4(j); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-33",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which term describes a person facilitating speedy transactions for gain through access to agency personnel?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Fixer"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Auditor"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Archivist"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Mediator in every case"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The definition depends on access, facilitation, and gain; official employment is not required.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 4(e); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-34",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A remote government office handles nonbusiness requests. Does its location or nonbusiness focus alone exclude it from RA 11032?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Yes; only local business permits are included."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Yes; all overseas offices are excluded."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No; but only elected officers are covered."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "No; the coverage includes domestic and overseas offices handling business and nonbusiness transactions."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Coverage is broader than business permitting or domestic offices; the two proposed exclusions are not supported.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 3; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-35",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A service only needs a ministerial check of complete routine documents. Which classification is most consistent with RA 11032's definitions?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Complex transaction solely because it has a form"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Judicial appeal in every case"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Simple transaction"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Highly technical application by default"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Simple transactions require ministerial actions or only inconsequential issues; having a form does not make a task technical.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 4(m); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-36",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A clerk treats an oral reassurance as the Act's defined action on an application. Which feature of the definition is missing?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "An additional unofficial charge"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Written approval or disapproval"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A favourable result in every case"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A court hearing in every case"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The defined action is written approval or disapproval, not necessarily approval and not merely oral reassurance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 4(a); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-37",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An applicant receives a list of required documents but no stated fees or processing period. Which assessment of the Citizen's Charter is most accurate?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "A document list alone omits other prescribed charter information."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The list is complete because fees are never disclosed."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Processing periods belong only in confidential records."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A charter is required only after a complaint."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The charter combines requirements with fees, time, steps, and responsible personnel; one component does not substitute for the whole.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 6; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-38",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A council calls every regulation red tape merely because it requires compliance. Which distinction matches RA 11032's definitions?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Every legal requirement is red tape by definition."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Only handwritten requirements can be red tape."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A procedure cannot be red tape if it is written."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Red tape concerns ineffective or detrimental procedures; not every regulatory requirement is red tape."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Regulation is a broad category; red tape describes procedures with ineffective or detrimental outcomes. Format alone does not decide it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Section 4(k)-(l); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-39",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A Philippine government office abroad handles a nonbusiness application. Adviser A charges only for explaining published requirements and has no access to staff. Intermediary B charges to speed completion using personal access to agency staff. Under RA 11032's coverage and fixer definitions, which classification follows from these facts alone?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "The service is excluded because it is abroad; B nevertheless fits the access-and-gain description."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The service is excluded because it is nonbusiness; neither A nor B can fit the fixer definition."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The service is covered; B fits the fixer definition, while the facts do not establish that A does."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The service is covered; both A and B fit the fixer definition merely because each charges."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Amended Section 3 covers Philippine government services abroad and nonbusiness transactions. Section 4(e) requires the specified access and speedy facilitation for gain, not payment for any advice. B meets that description; the facts about A do not. Coverage and the distinction between paid advice and fixing must both be retained.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Sections 3 and 4(e); statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-general-english-40",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Under RA 11032's definitions, Service A involves a long packet but only routine ministerial checking; Service B has a short packet but requires specialised technical evaluation. Both collect prescribed fees, yet their Citizen's Charter entries omit fee amounts. Which assessment addresses both classifications and both omissions?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "A is highly technical and B simple; only B's entry must disclose its applicable fee amount."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "A is simple and B highly technical; both entries must disclose the applicable fee amounts."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A is simple and B highly technical; only B's entry must disclose its applicable fee amount."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A is highly technical and B simple; both entries must disclose the applicable fee amounts."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Amended Sections 4(g),(m) classify the work, not packet length: A is ministerial/simple; B requires specialised evaluation. Section 6(f)'s fee disclosure applies here because both services collect fees. Neither a correct classification nor a short form excuses an applicable fee omission.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; Amended Sections 4(g),(m) and 6; statutory text retrieved 2026-11-01. Scope: provision as written, not a legal opinion or current agency procedure.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

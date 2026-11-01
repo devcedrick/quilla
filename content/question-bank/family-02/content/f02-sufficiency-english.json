@@ -1,0 +1,922 @@
+[
+  {
+    "questionId": "f02-sufficiency-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many pages are in a booklet?\nStatement 1: Its 24 pages are numbered consecutively.\nStatement 2: It has a blue cover.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "one",
+    "explanation": "Statement 1 fixes 24 pages. Statement 2 permits, for example, 12 or 24 pages with a blue cover. Together the count remains 24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the length of a ribbon in centimetres?\nStatement 1: It is shorter than 100 cm.\nStatement 2: It measures 75 cm.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "Statement 1 permits 50 or 75 cm. Statement 2 fixes 75; together the value remains 75 and satisfies the bound.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the measure of an angle in degrees?\nStatement 1: Its complementary angle measures 30 degrees.\nStatement 2: Its supplementary angle measures 120 degrees.",
+    "choices": [
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Statement 1 fixes 90−30=60 degrees; statement 2 independently fixes 180−120=60 degrees. Together the statements agree, so either alone is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the price of one identical blank folder?\nStatement 1: Four folders cost PHP 84.\nStatement 2: Six folders cost PHP 126.",
+    "choices": [
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Each statement independently fixes the same unit price: 84/4=21 and 126/6=21. Together the price is still PHP 21.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is a bus passenger’s age in whole years?\nStatement 1: The passenger is older than 20.\nStatement 2: The passenger is younger than 30.",
+    "choices": [
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Alone, each inequality allows many ages. Together ages 21 and 22 both work and give different values, so the age is not unique.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the perimeter of a square?\nStatement 1: Its side is 8 cm.\nStatement 2: Its area is greater than 25 cm².",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "one",
+    "explanation": "Statement 1 gives perimeter 32 cm. Statement 2 permits side 6 or 8, hence perimeter 24 or 32. Together side 8 satisfies the area condition and fixes 32.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A class has only day and evening students. How many are evening students?\nStatement 1: There are 48 students in all.\nStatement 2: There are 19 day students.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "The first alone allows different splits; the second allows different totals. Together evening count is 48−19=29.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a positive integer n, is n prime?\nStatement 1: n is even.\nStatement 2: n is greater than 2.",
+    "choices": [
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 permits 2 (prime) and 4 (not prime). Statement 2 permits 3 (prime) and 4 (not prime). Together n is even and greater than 2, so it has divisor 2 and is not prime. A definite no suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-09",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For real x, is x positive?\nStatement 1: x²=49.\nStatement 2: x<0.",
+    "choices": [
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "Statement 1 permits 7 or −7, so yes and no. Statement 2 alone gives a definite no, which is sufficient. Together x=−7 and the answer remains no.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the mean of a finite nonempty set of scores?\nStatement 1: The scores sum to 360.\nStatement 2: There are nine scores.",
+    "choices": [
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "A sum without count and a count without sum each permit different means. Together mean=360/9=40.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-11",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A journey is made at constant positive speed without stops. What distance is travelled?\nStatement 1: Travel time is 3 hours.\nStatement 2: Speed is 52 km/h.",
+    "choices": [
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Time alone allows different speeds and distance; speed alone allows different durations. Together distance=156 km.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-12",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the ratio a:b for positive a,b?\nStatement 1: a=2b+6.\nStatement 2: a/b=5.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "The first permits a:b=4:1 when b=3 or 3:1 when b=6. The second fixes 5:1. Together b=2,a=10, so they are consistent and preserve the ratio.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-13",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the median of three real numbers?\nStatement 1: Their sum is 30.\nStatement 2: Their smallest value is 4.",
+    "choices": [
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Statement 1 permits medians 10 or 9; statement 2 also leaves the median free. Together (4,8,18) and (4,10,16) both fit but have different medians.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-14",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For positive integers a and b, what is their least common multiple?\nStatement 1: Their product is 72.\nStatement 2: Their greatest common divisor is 6.",
+    "choices": [
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 allows (1,72), LCM 72, or (6,12), LCM 12. Statement 2 allows (6,6), LCM 6, or (6,12), LCM 12. Together LCM×GCD=ab gives LCM=72/6=12; (6,12) demonstrates consistency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-15",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the chance of drawing a red counter from a bag containing only red and blue counters?\nStatement 1: There are three red counters for every two blue.\nStatement 2: There are 25 counters altogether.",
+    "choices": [
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      }
+    ],
+    "correctChoiceId": "one",
+    "explanation": "The ratio alone fixes red probability at 3/5. The total alone permits, for example, 5 or 15 red counters. Together there are 15 red and the probability stays 3/5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-16",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For integers a and b, is a+b divisible by 5?\nStatement 1: a leaves remainder 2 on division by 5.\nStatement 2: b leaves remainder 3 on division by 5.",
+    "choices": [
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "The first alone permits different residues for b; the second permits different residues for a. Together the sum has residue 2+3=0 modulo 5, so the answer is always yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-17",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For positive real x and y, is x=y?\nStatement 1: x+y=10.\nStatement 2: x/y+y/x=2.",
+    "choices": [
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "two",
+    "explanation": "Statement 1 permits (1,9) and (5,5), giving no and yes. Multiplying statement 2 by positive xy gives x²+y²=2xy, hence (x−y)²=0 and x=y. Thus statement 2 alone suffices. Together x=y=5 is consistent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-18",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For real x, what is x?\nStatement 1: x²−5x+6=0.\nStatement 2: x²−7x+12=0.",
+    "choices": [
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 permits 2 or 3; statement 2 permits 3 or 4. Alone neither is unique; their only common root is 3, so both together suffice.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-19",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For nonzero real x and y, is x/y>1?\nStatement 1: x>y.\nStatement 2: y>0.",
+    "choices": [
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 permits (2,1), ratio 2, and (−1,−2), ratio 1/2. Statement 2 permits x=2 or 1/2 with y=1. Together division by positive y preserves x>y, giving yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-sufficiency-english-20",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A bag holds three distinct counters, each either red or blue. Two are drawn without replacement. Is the probability of matching colours greater than 1/2?\nStatement 1: At least one counter is red.\nStatement 2: At least one counter is blue.",
+    "choices": [
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      },
+      {
+        "choiceId": "together",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "one",
+        "text": "Statement 1 alone is sufficient; statement 2 alone is not."
+      },
+      {
+        "choiceId": "two",
+        "text": "Statement 2 alone is sufficient; statement 1 alone is not."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      }
+    ],
+    "correctChoiceId": "together",
+    "explanation": "Statement 1 allows all red, giving probability 1, or two red and one blue, giving 1/3. Statement 2 similarly allows all blue or a mixed bag. Together the bag is mixed: either 2 red or 2 blue, and matching probability is 1/3 in both cases. A definite no is sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]
