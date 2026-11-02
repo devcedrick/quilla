@@ -1,0 +1,1566 @@
+[
+  {
+    "questionId": "f03-numerical-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A temperature of −6°C rises by 11°C. What is the new temperature?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "−17°C"
+      },
+      {
+        "choiceId": "c2",
+        "text": "−5°C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5°C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "17°C"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Add the signed change: −6+11=5. Subtracting or adding the magnitudes gives the distractors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which fraction equals the decimal 0.125?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5/8"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "0.125=125/1000=1/8; the other fractions have different decimal values.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A 2.4-litre jug is emptied into 200-millilitre cups. How many full cups does it fill?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "14"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Convert 2.4 litres to 2400 mL, then divide by 200.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the smallest integer greater than 7.02?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7.1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The next whole number strictly above 7.02 is 8; 7.1 is not an integer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A balance shows PHP 360. A withdrawal of PHP 85 is followed by a deposit of PHP 25. What is the new balance?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 250"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 300"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 420"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 470"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "360−85+25=300. Withdrawals reduce and deposits increase the balance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Express 42 as a product of prime numbers.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2 × 3 × 7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2 × 21"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3 × 14"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6 × 7"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "2,3,7 are all prime. The other products equal 42 but contain a composite factor.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-07",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "11 cm"
+      },
+      {
+        "choiceId": "c2",
+        "text": "22 cm"
+      },
+      {
+        "choiceId": "c3",
+        "text": "24 cm"
+      },
+      {
+        "choiceId": "c4",
+        "text": "48 cm"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Perimeter is 2(8+3)=22 cm, not the area 24 cm².",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-08",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A uniform event starts at 13:45 and ends at 14:20 on the same day. How long does it last?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "25 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "35 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "45 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "75 minutes"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "15 minutes to 14:00 plus 20 minutes gives 35.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-09",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which number is divisible by both 3 and 5?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "125"
+      },
+      {
+        "choiceId": "c2",
+        "text": "132"
+      },
+      {
+        "choiceId": "c3",
+        "text": "135"
+      },
+      {
+        "choiceId": "c4",
+        "text": "145"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "135 ends in 5 and its digits sum to 9. The others fail one test.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-10",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Three scores are 4, 9, and 8. What is their median?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Order them 4,8,9; the middle value is 8, while the mean is 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-11",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A fair six-sided die numbered 1–6 is rolled once. What is the probability of a number greater than 4?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2/3"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Only 5 and 6 qualify, so 2/6=1/3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-12",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Simplify 3² + √49.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "14"
+      },
+      {
+        "choiceId": "c3",
+        "text": "16"
+      },
+      {
+        "choiceId": "c4",
+        "text": "30"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "3²=9 and the principal square root of 49 is 7; the sum is 16.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-13",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A map has scale 1:50,000. A straight path measures 3.6 cm on the map. What is its actual length in kilometres?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0.18 km"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1.8 km"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18 km"
+      },
+      {
+        "choiceId": "c4",
+        "text": "180 km"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "3.6 × 50,000 = 180,000 cm = 1,800 m = 1.8 km. Both the scale and the conversion from centimetres to kilometres must be applied.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-14",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Five scores in ascending order are 8, 11, x, 18, 20. Their mean is 14. What is their median?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "11"
+      },
+      {
+        "choiceId": "c2",
+        "text": "13"
+      },
+      {
+        "choiceId": "c3",
+        "text": "14"
+      },
+      {
+        "choiceId": "c4",
+        "text": "18"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The total must be 5 × 14 = 70. The known scores sum to 57, so x = 13, consistent with the stated order. The median is the third score 13, not the mean 14.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-15",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An item costs PHP 750 before a 12% service charge. A voucher then subtracts PHP 60 from the charged total. What is paid?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 765"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 772.80"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 780"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 840"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "750×1.12−60=780. Applying the voucher before the charge would incorrectly give 772.80.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-16",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fence needs posts at both ends of a 42-metre straight line and at every 6 metres between them. How many posts are needed?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "There are seven intervals of 6 m but eight boundary posts, including both ends.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-17",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A square tile has side 25 cm. Ignoring gaps and cutting, how many tiles cover a 2 m by 1.5 m floor?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "12"
+      },
+      {
+        "choiceId": "c2",
+        "text": "24"
+      },
+      {
+        "choiceId": "c3",
+        "text": "48"
+      },
+      {
+        "choiceId": "c4",
+        "text": "96"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Convert the floor to 200 by 150 cm. There are 8 × 6 = 48 tiles; dividing area by side length is invalid.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-18",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A bus leaves a terminal every 18 minutes, starting at 06:00. What is the first departure at or after 07:00?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "06:54"
+      },
+      {
+        "choiceId": "c2",
+        "text": "07:00"
+      },
+      {
+        "choiceId": "c3",
+        "text": "07:12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "07:18"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Departures are 06:00,18,36,54,07:12. The 07:00 boundary lies between departures.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-19",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A bicycle wheel travels 2 metres per revolution. It makes 150 revolutions per minute for 8 minutes. How far does it travel in kilometres?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0.3 km"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1.2 km"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2.4 km"
+      },
+      {
+        "choiceId": "c4",
+        "text": "24 km"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "2×150×8=2400 metres=2.4 km; revolutions, elapsed time and conversion all matter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-20",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A mean score is computed with weights 20%, 30%, and 50%. Scores are 80, 70, and 90 respectively. What is the weighted score?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "80"
+      },
+      {
+        "choiceId": "c2",
+        "text": "81"
+      },
+      {
+        "choiceId": "c3",
+        "text": "82"
+      },
+      {
+        "choiceId": "c4",
+        "text": "83"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "0.20 × 80 + 0.30 × 70 + 0.50 × 90 = 16 + 21 + 45 = 82. An unweighted mean would ignore the assigned weights.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-21",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A photograph 12 cm wide and 18 cm tall is enlarged without distortion to a width of 20 cm. What is its new height?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "24 cm"
+      },
+      {
+        "choiceId": "c2",
+        "text": "26 cm"
+      },
+      {
+        "choiceId": "c3",
+        "text": "30 cm"
+      },
+      {
+        "choiceId": "c4",
+        "text": "32 cm"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Use the same factor 20/12 on height:18×20/12=30. Adding 8 to height would distort the ratio.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-22",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A runner completes 3/8 of a course, then another 1/4 of the whole course. The remaining distance is 9 km. How long is the course?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "14.4 km"
+      },
+      {
+        "choiceId": "c2",
+        "text": "18 km"
+      },
+      {
+        "choiceId": "c3",
+        "text": "24 km"
+      },
+      {
+        "choiceId": "c4",
+        "text": "36 km"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The runner completed 5/8, leaving 3/8. Thus the whole course is 9 ÷ (3/8) = 24 km.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-23",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A shop sells equal quantities at PHP 40 and PHP 60 per unit. Its average cost is PHP 45 per unit. What is profit as a percentage of total cost?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "11 1/9%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25%"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For one unit at each price, revenue is PHP 100 and cost is PHP 90. Profit as a percentage of cost is 10/90 × 100 = 11 1/9%; dividing by revenue would incorrectly give 10%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-24",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two bells ring together at 08:00. One rings every 12 minutes and the other every 20 minutes. When do they next ring together?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "08:24"
+      },
+      {
+        "choiceId": "c2",
+        "text": "08:32"
+      },
+      {
+        "choiceId": "c3",
+        "text": "08:40"
+      },
+      {
+        "choiceId": "c4",
+        "text": "09:00"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The least common multiple of 12 and 20 is 60 minutes. Thus the next joint ringing is 09:00, not a time found by adding the two intervals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-25",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "At a stall, 2 pens and 3 pads cost PHP 94; 2 pens and 1 pad cost PHP 50. What is one pen's price?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 14"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 22"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 25"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 28"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Subtract the two purchase equations: two pads cost PHP 44, so one pad costs PHP 22. Then two pens cost 50 − 22 = PHP 28, so one pen costs PHP 14.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-26",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A bag has 4 blue and 6 white counters. Two are drawn without replacement. What is the probability both are blue?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/15"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4/25"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2/5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4/9"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The probability is (4/10)(3/9) = 2/15. Without replacement the second draw has one fewer blue counter and one fewer total counter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-27",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An integer n satisfies 3n−4<14 and n≥4. What is the sum of all possible n?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9"
+      },
+      {
+        "choiceId": "c4",
+        "text": "15"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The inequality gives 3n < 18, so n < 6. With n ≥ 4 the integer possibilities are 4 and 5; their sum is 9. The strict inequality excludes 6.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-28",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A scooter uses 2.5 litres for 75 km at a constant consumption rate. Fuel costs PHP 64 per litre. What is the fuel cost for 120 km?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 160"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 240"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 256"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 300"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The trip uses (120/75) × 2.5 = 4 litres, costing 4 × 64 = PHP 256. Do not apply the fuel price to the number of kilometres.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-29",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two parcel weights are independently rounded to the nearest whole kilogram, with halfway values rounded upward. Their displayed weights are 4 kg and 7 kg. What interval contains every possible exact combined weight?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10 ≤ total < 12 kg"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10 < total ≤ 12 kg"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10.5 ≤ total < 11.5 kg"
+      },
+      {
+        "choiceId": "c4",
+        "text": "11 ≤ total < 12 kg"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The first actual weight lies in [3.5,4.5) and the second in [6.5,7.5). Adding the lower and upper bounds gives [10,12). Lower endpoints are included; upper endpoints round to the next integer and are excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-30",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A clock runs correctly but was set 17 minutes slow. It displays 23:51 on Tuesday. What is the actual day and time?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Tuesday 23:34"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tuesday 23:51"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Wednesday 00:08"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Wednesday 00:17"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Add 17 minutes to the displayed time. Nine minutes reach midnight and eight remain, so the actual time is Wednesday 00:08.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-31",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A store packs 135 eggs in cartons of 12. Five eggs break before packing. How many cartons are needed for all remaining eggs, allowing the last carton to be partly filled?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "11"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "13"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "130 eggs require ceiling(130/12) = 11 cartons; ten cartons hold only 120 eggs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-32",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A group's mean age is 24 years. A 36-year-old joins, and the mean becomes 25. How many people were in the group originally?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "11"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "13"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "If the original number of people is n, then 24n + 36 = 25(n + 1). Thus n = 11; 12 is the new group size, not the requested original size.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-33",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A supplier offers boxes of 8 units for PHP 90 and boxes of 15 for PHP 160. At least 44 units are needed; only whole boxes may be bought. What is the lowest cost?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 480"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 500"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 520"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 540"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Three boxes of 15 supply 45 units for PHP 480. With zero, one or two such boxes, at least six, four or two boxes of 8 are needed, costing PHP 540, 520 or 500. Four boxes of 15 already cost PHP 640, so PHP 480 is minimal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-34",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four indivisible jobs require 2, 3, 4 and 5 work units. A handles one unit in 2 hours and B in 3 hours. Each job must stay with one worker; workers operate simultaneously from time zero without setup delays. What is the shortest possible time to finish all four jobs?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "16.8 hours"
+      },
+      {
+        "choiceId": "c2",
+        "text": "17 hours"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18 hours"
+      },
+      {
+        "choiceId": "c4",
+        "text": "21 hours"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "At a deadline below 18 hours, A can handle at most 8 whole units and B at most 5, totalling at most 13; the jobs total 14. Hence no shorter deadline works, even though divisible-work rates suggest 16.8. Eighteen hours is attainable: assign jobs 3+5 to A (16 hours) and 2+4 to B (18 hours).",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-35",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A positive investment grows by 20%. A fee is then withdrawn: PHP 500 if the grown balance is at most PHP 18,000; PHP 1,000 if it is above PHP 18,000 but at most PHP 36,000; otherwise PHP 1,500. The remaining balance loses 20%, then PHP 1,800 is added, exactly restoring the initial investment. Which initial investment is consistent with BOTH the cash-flow equation and its fee band?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 15,000"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 35,000"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 45,000"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 25,000"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "For initial P and fee F, 0.8(1.2P − F) + 1800 = P, so P = 45000 − 20F. Fees of PHP 500, 1,000 and 1,500 give candidates of PHP 35,000, 25,000 and 15,000 respectively. Their grown balances are PHP 42,000, 30,000 and 18,000: the first violates the low fee band, the last violates the high band, and only PHP 30,000 belongs to its assumed middle band. Thus P = PHP 25,000; PHP 45,000 ignores the fee. Solving an assumed fee equation is insufficient without checking its band.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-numerical-36",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A bag has 3 red and 2 blue counters. Draw one counter at random. If it is red, return it; if blue, leave it out. Mix and draw a second counter. What is the probability the second counter is red?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3/5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "33/50"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3/4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9/25"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Split on the first draw. Red first has probability 3/5 and leaves second-red chance 3/5. Blue first has probability 2/5 and leaves 3 red among 4, chance 3/4. Add disjoint paths: (3/5)(3/5)+(2/5)(3/4)=33/50. Neither fixed replacement convention applies to both paths.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-37",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A seller must receive at least PHP 900 after a platform deducts 10% of the final selling price and a fixed PHP 45 fee. The advertised price receives a 20% discount. What is the smallest whole-peso advertised price?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 1,250"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 1,312"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 1,313"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 1,350"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Net proceeds are 0.90(0.80P) − 45 = 0.72P − 45. Requiring at least PHP 900 gives P ≥ 1,312.50. The smallest whole-peso price is PHP 1,313; PHP 1,312 falls below the target.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-38",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A number is selected uniformly from integers 1 through 60. Given that it is divisible by 3 or 5, what is the probability it is divisible by both?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/15"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/5"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "There are 20 multiples of 3, 12 multiples of 5, and 4 multiples of both. The union has 20 + 12 − 4 = 28 numbers. Given membership in that union, the probability of both is 4/28 = 1/7, not 4/60.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-39",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five positive integer scores have mean 7, median 8 and unique mode 9. Repeated scores are allowed. What is the smallest score that can occur in such a list?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "In sorted order the third value is 8. Since 9 is the unique mode, it must appear at least twice, occupying the last two positions; three occurrences of 9 would make the median 9. The first two positive integers therefore sum to 35 − 8 − 9 − 9 = 9 and cannot create another value with frequency equal to that of 9. The pair (1, 8) would repeat 8 twice, destroying the unique mode. The pair (2, 7) works: 2, 7, 8, 9, 9. Thus 2 is the smallest feasible score.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-numerical-40",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A four-digit positive integer uses four DISTINCT digits chosen from 0 through 5. It is divisible by 3. Reversing its four digits gives a number exactly 2,178 smaller; if the reversed string begins with 0, interpret it normally as a number. Which is the COMPLETE set of possible original integers?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2310 only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2310 and 3201"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2310 and 3120"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2310, 3201 and 3210"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For digits a, b, c and d, the reversal condition gives 999(a − d) + 90(b − c) = 2178, or 111(a − d) + 10(b − c) = 242. Modulo 10 and digit differences between −5 and 5 force a − d = 2, then b − c = 2. Available ordered pairs are (2, 0), (3, 1), (4, 2) and (5, 3). Distinct digits allow four pair combinations: (2, 0) with (3, 1); (2, 0) with (5, 3); (3, 1) with (4, 2); and (4, 2) with (5, 3), in either placement. Only the first combination has digit sum divisible by 3, producing 2310 and 3201. Every option uses only distinct allowed digits and multiples of 3, so that test alone cannot choose an answer. The partial list omits 3201; 3120 reverses to 213 and differs by 2907, while 3210 reverses to 123 and differs by 3087. Those extra candidates violate the reversal condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
+    }
+  }
+]

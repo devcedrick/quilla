@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f03-reading-english-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which entrance should a visitor needing step-free access use?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The delivery entrance"
+      },
+      {
+        "choiceId": "b",
+        "text": "The courtyard door"
+      },
+      {
+        "choiceId": "c",
+        "text": "The front gate only"
+      },
+      {
+        "choiceId": "d",
+        "text": "Any door after handing a ticket to another visitor"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The courtyard door is explicitly designated for step-free access and has ticket collection. Unnumbered seats do not change that direction; the side door is for deliveries.",
+    "reference": {
+      "referenceId": "f03-reading-english-01-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-02",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Why does the potter propose reversing the positions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "To test thickness alone at a fixed kiln position"
+      },
+      {
+        "choiceId": "b",
+        "text": "To check whether both bowls used the same clay"
+      },
+      {
+        "choiceId": "c",
+        "text": "To test the thickness explanation against kiln position"
+      },
+      {
+        "choiceId": "d",
+        "text": "To repeat the first firing without changing its conditions"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Thickness and kiln position varied together in the first firing. Reversing positions changes the position associated with each thickness, helping distinguish those explanations. It does not hold position fixed, test clay composition, or repeat the first conditions unchanged.",
+    "reference": {
+      "referenceId": "f03-reading-english-02-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-03",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What does calling the station 'the town's clock' most reasonably suggest?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Train movements helped organize daily routines"
+      },
+      {
+        "choiceId": "b",
+        "text": "Train movements created the first clocks"
+      },
+      {
+        "choiceId": "c",
+        "text": "Daily routines controlled train departures"
+      },
+      {
+        "choiceId": "d",
+        "text": "Railway rules fixed every shop's opening time"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The described routines use train movements as a shared time reference. The passage says clocks existed earlier; it does not say household routines controlled departures or that an official railway rule fixed shop hours.",
+    "reference": {
+      "referenceId": "f03-reading-english-03-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-04",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which assessment follows from the two tests and the guarantee's reporting condition?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both are covered; day 28 meets the reporting deadline."
+      },
+      {
+        "choiceId": "b",
+        "text": "Neither is covered; inspection on day 34 missed the deadline."
+      },
+      {
+        "choiceId": "c",
+        "text": "Only the handle is covered; the swap tests identify it as the cause."
+      },
+      {
+        "choiceId": "d",
+        "text": "Only the runner adjustment is covered; day 28 meets the reporting deadline."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The guarantee requires an installation fault that causes the reported malfunction, not merely any installation defect. The drawer jams with the original runner even when the handle is straight, but moves freely with a correctly fitted runner even when the handle is bent. Those controlled swaps support the runner as the cause requiring adjustment, not the impact-damaged handle. Day 28 meets the reporting deadline; inspection on day 34 does not undo timely reporting. Only the runner adjustment is covered; the handle remains separately chargeable.",
+    "reference": {
+      "referenceId": "f03-reading-english-04-passage",
+      "referenceVersion": 2
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-05",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which assessment respects both presentation goals and the limitation on interpretation?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only M meets both goals; the foldout may go unread."
+      },
+      {
+        "choiceId": "b",
+        "text": "M also ensures every visitor reads its explanation."
+      },
+      {
+        "choiceId": "c",
+        "text": "L keeps the quote intact and the label brief."
+      },
+      {
+        "choiceId": "d",
+        "text": "K stays brief; equivalent meaning preserves quotation integrity."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "M keeps source and commentary distinct while moving detail off the visible label. Optional access does not guarantee use. L remains long; K silently replaces quoted wording, so semantic similarity does not satisfy the curator's explicit boundary.",
+    "reference": {
+      "referenceId": "f03-reading-english-05-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-english-06",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which conclusion follows without treating a proposal as an accomplished change?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Neither works now; proposing Q's addition itself satisfies the condition on reassigning the reserve."
+      },
+      {
+        "choiceId": "b",
+        "text": "Neither works now; an extra morning boat cures P's unmet promise once another engine is secured."
+      },
+      {
+        "choiceId": "c",
+        "text": "Neither works now; Q needs a morning addition and another reserve engine."
+      },
+      {
+        "choiceId": "d",
+        "text": "Neither works now; the existing spare counts both as the extra boat's engine and its replacement reserve."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P fails the evening condition; Q fails the morning connection. Adding a morning boat can cure Q's gap, not P's evening gap. But that addition uses the emergency reserve, which may be reassigned only after another replacement engine is secured. Neither a proposal nor counting the same spare engine twice fulfils that separate condition.",
+    "reference": {
+      "referenceId": "f03-reading-english-06-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

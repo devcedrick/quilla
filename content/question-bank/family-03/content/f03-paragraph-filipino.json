@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f03-paragraph-filipino-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Alin ang maayos na pagkakasunod-sunod?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P4-P1-P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P1-P4-P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1-P3-P4-P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P1-P2-P4"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P3 ang pagdating at paliligo; kasunod ang pagbibihis sa P1, pag-aayos matapos magbihis sa P4, at pangwakas na pagsalubong sa P2. Sinisira ng iba ang tahasang pagkakasunod ng mga gawain.",
+    "reference": {
+      "referenceId": "f03-paragraph-filipino-01-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-filipino-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling ayos ang nagpapanatili sa layunin, suliranin, hakbang at paliwanag?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2-P4-P1-P5-P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2-P1-P4-P5-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4-P2-P1-P3-P5"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2-P4-P5-P1-P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P2 ang layunin, P4 ang sagabal, P1 ang lalagyang tugon, at P5 ang pagpili mula rito. P3 ang panghuling pagpapaliwanag sa paghihiwalay. Sa ibang ayos, nauuna ang kaya sa batayan o ang lalagyang iyon bago maitatag ang lalagyan.",
+    "reference": {
+      "referenceId": "f03-paragraph-filipino-02-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-filipino-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Alin ang pinakamalinaw na ayos?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2-P4-P1-P3-P5"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1-P2-P4-P5-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2-P1-P4-P3-P5"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2-P1-P3-P5-P4"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P2 ang muling bilang na tinutukoy ng hindi pagtugma sa P1. Iyon ang dahilan ng paghahanap sa P4; ang P3 ang natuklasan at P5 ang paglutas. Hindi maaaring maging dahilan ang pagtuklas na hindi pa naisalaysay o mauna ang pinagsamang bilang sa pagkakita ng supot.",
+    "reference": {
+      "referenceId": "f03-paragraph-filipino-03-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-filipino-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling ayos ang lumilinang sa larawang pandama at sa kongklusyon?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P1-P5-P4-P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P5-P4-P1-P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P5-P3-P1-P4-P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P5-P1-P4-P2"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ipinakikilala ng P3 ang paglalakad. P5 ang paghintong lumilikha ng katahimikan sa P1; kampanilya roon ang tunog sa P4. P2 ang kongklusyong nakabatay sa buong pangyayari. Ang mga panghalip at pang-ugnay ang pumipigil sa ibang ayos.",
+    "reference": {
+      "referenceId": "f03-paragraph-filipino-04-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-filipino-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling ayos ang naghihiwalay sa naobserbahang pangyayari, sa maling batayan ng oras at sa limitadong pagtataya sa talaarawan?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P2-P5-P6-P4-P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P2-P6-P5-P4-P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3-P6-P2-P5-P4-P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P2-P6-P4-P5-P1"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P3 ang unang salaysay; P2 ang problemang sumisira sa oras na ibinigay, ngunit hindi pa sa mismong pagdating. Ibinibigay ng P6 ang hiwalay na katibayan at ipinapaliwanag ng P5 ang pagkakaiba ng dalawang uri ng pahayag. P4 ang paraan ng pagtaya at P1 ang limitadong hatol. Ang ibang ayos ay inuuna ang pagtutol o paraan bago ang katibayan at pagkakaibang pinagbabatayan.",
+    "reference": {
+      "referenceId": "f03-paragraph-filipino-05-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-filipino-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Alin ang ayos na nagpapanatili sa ebidensiya, pagtutol sa labis na paghatol at mungkahi?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P4-P6-P1-P5-P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P6-P4-P5-P2-P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3-P6-P4-P1-P5-P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P1-P6-P4-P2-P5"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 ang ulat at kakulangan nito; P6 ang kahulugan ng mga bahay na iyon. P4 ang kaya-kongklusyon, P1 ang pag-iwas sa labis na paghatol, P5 ang pinagsamang pagkilala at pagpuna, at P2 ang mungkahing nakabatay rito. Ang ibang ayos ay inuuna ang kongklusyon sa paliwanag o inilalayo ang paglilinaw sa pangwakas na mungkahi.",
+    "reference": {
+      "referenceId": "f03-paragraph-filipino-06-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

@@ -1,0 +1,1847 @@
+[
+  {
+    "questionId": "f03-analytical-data-01",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which completion time has the most tickets?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "2 hours"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "4 hours"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "6 hours"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "10 hours"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The count 18 at 4 hours exceeds 12, 10, 4. The longest time is not the most frequent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-turnaround",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-02",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many tickets took exactly 6 hours?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "6"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "10"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "18"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "44"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The 6-hour row contains 10 tickets. Six is a time, 18 belongs to 4 hours, 44 is the total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-turnaround",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-03",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If all tickets are ordered by completion time, what is the median completion time?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "2 hours"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "4 hours"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "5 hours"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "6 hours"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "For 44 tickets the median uses positions 22 and 23. Positions 1–12 take 2 hours and 13–30 take 4 hours, so both central tickets take 4 hours. Averaging distinct row labels ignores frequencies.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-turnaround",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-04",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What fraction of tickets finished in at most 4 hours?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "15/22"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "9/22"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "5/22"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "8/11"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Counts 12+18=30 out of 44 simplify to 15/22. Using 18 counts only the 4-hour row; 10 counts the 6-hour row. At most includes the boundary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-turnaround",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-05",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which shuttle has the largest seat capacity?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "08:10"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "08:25"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "08:40"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "09:00"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The 08:40 shuttle has 30 seats, more than 24, 16, 20. Departure order and travel time do not determine capacity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-timetable",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-06",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many minutes does the 09:00 shuttle take?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "20"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "25"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "30"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "35"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The travel time is 25 minutes; 20 is its seats. The other durations belong to different departures.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-timetable",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-07",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A passenger must arrive by 09:05. Which listed departure gives the latest possible terminal departure while meeting that deadline?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "08:10"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "08:25"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "08:40"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "09:00"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Arrivals are 09:00, 08:55, 09:15, 09:25. The first two meet 09:05, and 08:25 is the later departure. The fastest service is not necessarily latest feasible.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-timetable",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-08",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Forty passengers must travel on departures that arrive by 09:05. Can all be seated without standing?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Yes, with exactly enough seats."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Yes, with 6 spare seats."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "No, 4 passengers lack seats."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No, 16 passengers lack seats."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The qualifying 08:10 and 08:25 services provide 24+16=40 seats. Later services miss the arrival deadline, even though they increase total capacity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-timetable",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-09",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many advanced participants completed the new cycle?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "80"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "76"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "18"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "90"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "New advanced completion is 76, not enrollment 80 or old advanced completion 18. Ninety is a percentage, not this count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-workshops",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-10",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How did the beginner completion rate change from old to new?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Up 10 percentage points"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Up 20 percentage points"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Down 10 percentage points"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Up 14 percentage points"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Old beginners 48/80=60%; new 14/20=70%, a 10-point rise. Twenty is enrollment and 14 is a count, not the change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-workshops",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-11",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which statement correctly compares new and old overall completion rates?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Both rates are 66%."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "The new rate is 24 percentage points higher."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "The new rate is 24% lower."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "The old rate is 90%."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Old 66/100=66%; new 90/100=90%, so the difference is 24 points. A percentage-point difference is not the same as relative percentage change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-workshops",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-12",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "If the new category-specific completion rates applied to the OLD enrollment mix, how many of 100 participants would complete? Compare this standardized result with the observed new result.",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "75; 15 fewer than observed"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "90; the same as observed"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "82.5; 7.5 fewer than observed"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "70; 20 fewer than observed"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Apply 70% to 80 beginners and 95% to 20 advanced:56+19=75. Observed new completion 90 uses a different mix. Averaging 70 and 95 gives 82.5 but incorrectly weights categories equally; 70 ignores advanced learners.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-workshops",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-13",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which age band has the fewest items?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0-7 days"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "8-14 days"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "15-21 days"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "22+ days"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "The 22+ band has 10 items, below 20, 30, 40. Highest per-item value does not mean largest item count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-stock-age",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-14",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which stock-age band has FEWER than 25 items but a total listed value of AT LEAST PHP 800?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0-7 days"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "8-14 days"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "15-21 days"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "22+ days"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The four band values are 40×20=800, 30×30=900, 20×40=800, and 10×60=600 pesos. The first two meet the value threshold but fail the count limit. The oldest band meets the count limit but fails the value threshold. Only the 15-21-day band, with 20 items worth PHP 800, meets both.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-stock-age",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-15",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If all 22+-day items sell at a 25% reduction, how much revenue do they produce?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "PHP 150"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "PHP 450"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "PHP 600"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "PHP 750"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Original band value 10×60=600; selling at 75% gives 450. The amount 150 is the discount, 600 ignores it, 750 increases the value.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-stock-age",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-16",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "All stock older than 14 days is sold at a 25% discount. The proceeds are used to buy as many whole new PHP 20 items as possible. How many new items can be bought, and by how much does total item count change after the sale and purchase?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "52; increase 22"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "70; increase 40"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "52; increase 32"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "40; increase 10"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Eligible stock 20+10=30 items is worth 800+600=1400. Discounted receipts 1050 buy 52 whole items for 1040 with 10 left. Replacing 30 with 52 increases count 22. A count of 70 ignores discount; 32 subtracts only 20; 40 ignores the oldest band's value.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-stock-age",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-17",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many hectares are currently allocated to habitat?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "1"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "10"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "40"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Habitat area is 4 ha; 1 is water per hectare and 40 is total land.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-land",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-18",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Exactly 1 hectare from EACH of vegetables, fruit and grain is converted to habitat. All other areas and per-hectare water rates stay unchanged. By how much does TOTAL weekly water use fall?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "13 kL"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "16 kL"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "3 kL"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "19 kL"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The converted hectares originally consumed 8+5+3=16 kL per week. Their replacement habitat consumes 1+1+1=3 kL, so the net reduction is 13 kL. Sixteen omits habitat's remaining demand; three is the new consumption rather than the saving; nineteen adds the new demand instead of subtracting it. The highest intensity alone cannot answer this combined change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-land",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-19",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What share of total land is grain?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "14%"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "30%"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "35%"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "42%"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Grain occupies 14 of 40 ha=35%. The number 14 is hectares; 42 is its weekly water, not land share.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-land",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-20",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "At least 6 ha must become habitat. Exactly the additional 2 ha are taken from vegetables and/or fruit, and all other areas stay fixed. Weekly water must fall by at least 12 kL. What is the smallest vegetable area that must be converted?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0.5 ha"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1 ha"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "4/3 ha"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "2 ha"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Let x ha come from vegetables and 2−x from fruit. Conversion saves 7 x+4(2−x)=8+3 x kL, since habitat still uses 1 kL/ha. Requiring 12 gives x≥4/3 ha. A conversion of 1 ha saves 11, 0.5 ha saves 9.5; 2 ha works but is not minimal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-land",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-21",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What cumulative reading is recorded at the start of Wednesday?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "60 kWh"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1300 kWh"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "1330 kWh"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "100 kWh"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Wednesday's cumulative reading is 1300. The value 60 is Tuesday's usage and 100 is usage across two days, not the meter reading.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-meter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-22",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "On which complete day was electricity consumption greatest?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Monday"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Tuesday"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Wednesday"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Thursday"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Successive differences are 40, 60, 30, 70 kWh, so Thursday is greatest. Cumulative readings themselves are not daily consumption.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-meter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-23",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What was mean daily consumption over Monday through Thursday?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "40 kWh"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "50 kWh"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "60 kWh"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "200 kWh"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Total use 1400−1200=200 kWh across four days, so mean 50. There are five readings but four intervals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-meter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-24",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For these four days, a tariff charges PHP 5 per kWh for each day's first 40 kWh and PHP 8 per excess kWh. An alternative charges PHP 6 per kWh with no daily reset. Which is cheaper, and by how much?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Daily-tier tariff by PHP 50"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Flat tariff by PHP 50"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Daily-tier tariff by PHP 100"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Flat tariff by PHP 100"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Daily-tier bills are 200,360,150,440, total 1150. Flat charges 200×6=1200; daily tier is cheaper by 50. Combining all days into one 40 kWh allowance wrongly ignores the daily reset.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-meter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-25",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many staff have neither assessed skill?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "20"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "30"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "50"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "70"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The mutually exclusive Neither row contains 20. The table counts each staff member once.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-membership",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-26",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Among staff with spreadsheet skill, what fraction also have text skill?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "5/12"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "5/7"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "7/12"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Spreadsheet staff=20+50=70; both=50, giving 5/7. Dividing by 120 uses all staff rather than the conditional group.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-membership",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-27",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Among staff who have EXACTLY ONE assessed skill, what percentage have text skill?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "25%"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "60%"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "30%"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "80%"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Exactly-one staff comprise the 30 text-only and 20 spreadsheet-only staff, so the relevant denominator is 50. Text skill within that restricted group means the 30 text-only staff: 30/50=60%. Using all 120 produces 25%, treating the count as a percentage gives 30%, and 80 counts both-skilled staff who are excluded by the condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-membership",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-28",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A team selects staff without repetition. What is the smallest team size that guarantees at least 10 members have BOTH skills, regardless of selection?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "60"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "70"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "80"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "90"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "There are 120−50=70 staff not in both. A team of 79 can consist of all 70 plus 9 both, failing the target. Any 80 must contain at least 10 both.60 and 70 do not force enough; 90 guarantees it but is not minimal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-membership",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-29",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many people arrive during 10-11?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "12"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "18"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "20"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "The 10-11 arrivals entry is 24; 20 is service completions in that period.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-queue",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-30",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How many people are waiting at 11:00?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "7"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "19"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "31"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "42"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Opening 12+18−15=15 at 10:00, then+24−20=19 at 11:00. Ignoring the initial queue yields 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-queue",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-31",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which period reduces the queue by the largest amount?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "09-10"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "10-11"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "11-12"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "12-13"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Net changes arrivals minus service are+3, +4, −6, −3. The 11-12 interval gives the largest reduction, 6.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-queue",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-32",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Staff can move whole service completions from 12-13 to 09-10 without changing arrivals or any other period. Nobody may be served before arriving. What is the minimum number of completions to move so that EVERY end-of-period queue is at most 12?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "3"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "6"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "7"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Baseline end queues are 15, 19, 13, 10. Moving x completions from the last period to the first reduces the first three queues byx but leaves the final queue 10. Conditions requirex≥3, 7, 1 respectively, hence minimum 7. After moving 7, queues are 8, 12, 6, 10; first service 22 is feasible because opening 12 plus 18 arrivals=30. Moving 3 fixes only the first peak; 6 leaves 13 at 11:00; 9 works but is not minimum.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-queue",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-33",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "On which day did observed demand exceed forecast by the largest amount?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A and C tied"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B only"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C only"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "D only"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Errors are+10, −15, +10, −5, so A and C tie. Largest absolute error would instead be B.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-forecast",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-34",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the mean ABSOLUTE error across the four days?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "5"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "10"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "20"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Absolute errors 10, 15, 10, 5 sum 40, mean 10. Signed errors sum 0, but cancellation does not imply perfect predictions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-forecast",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-35",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which statement is supported by the totals?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Forecasts were correct on every day."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Total forecast equals total observed."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Every forecast was too low."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Absolute error total is zero."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Both totals are 220, although no daily error is zero. Equal totals hide opposite-sign errors; absolute error is 40.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-forecast",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-36",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A reserve unit covers up to 5 units of positive daily shortfall and cannot be shared across days. Unused reserve is lost each day. Units cost PHP 30 each; every uncovered demand unit costs PHP 20. Which fixed whole number of reserve units PER DAY minimizes total four-day cost?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0 units"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1 unit"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "2 units"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "3 units"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "With 0 units, positive shortfalls 10+10 cost 400. With 1 perday, reserve costs 120 and uncovered 10 cost 200, total 320. With 2 perday reserve costs 240 and covers all demand.3 costs 360 without extra benefit. Thus 2 minimizes cost; surplus days do not offset another day's shortfall.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-forecast",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-37",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which candidate has the lowest cost?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Project D costs 3 thousand, the minimum. Benefit is a separate measure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-38",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A revised plan awards EACH project 5 additional benefit points without changing any listed cost. Rank the projects from HIGHEST to LOWEST revised benefit per PHP 1,000 of cost.",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "D-A-C-B"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "D-A-B-C"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "D-C-A-B"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "D-C-B-A"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Revised benefits are A=12, B=14, C=17, D=10. Their revised benefit/cost ratios are 12/4=3, 14/5=2.8, 17/6≈2.83, 10/3≈3.33, so D-A-C-B. All choices begin with D; choosing only the largest ratio cannot settle the ranking. Raw benefit would start with C, while ranking the remaining projects by lowest cost incorrectly puts B before C.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-39",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Exactly TWO projects must be chosen, with a combined budget of at most PHP 8,000. No prerequisite rule applies in this item. Which pair gives the greatest combined benefit?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A and D"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B and D"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A and B"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "C and D"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The affordable pairs are A+D, costing 7 thousand for 12 points, and B+D, costing 8 thousand for 14 points. A+B costs 9 thousand, A+C 10 thousand, B+C 11 thousand and C+D 9 thousand, so they are infeasible. B+D is therefore best; C's high individual efficiency does not overcome the pair budget, and the cheapest feasible pair is not the highest-benefit pair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f03-analytical-data-40",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Budget is PHP 10,000. Project C may be selected only if D is also selected. What selection maximizes total benefit within budget?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A and B"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "C and D"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A and C"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "A, B and D"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "CD costs 9 thousand and gives 17 points. Adding A or B exceeds budget. Without C, AB is the best feasible selection, cost 9 benefit 16; ABD costs 12. AC costs 10 and gives 19 but violates C's prerequisite.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    },
+    "reference": {
+      "referenceId": "f03-data-projects",
+      "referenceVersion": 1
+    }
+  }
+]

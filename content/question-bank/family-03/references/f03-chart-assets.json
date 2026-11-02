@@ -1,0 +1,172 @@
+[
+  {
+    "assetId": "f03-forecast-chart",
+    "path": "references/assets/f03-forecast.png",
+    "mediaType": "image/png",
+    "sha256": "510b2cfe293481b48abcec158056702638a6000f722e4c6a6e571ba124642e58",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-land-chart",
+    "path": "references/assets/f03-land.png",
+    "mediaType": "image/png",
+    "sha256": "b8598dea5e9a2f1078c73f8b534a600217bf6cbf53a98d64887c3286b6aff442",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-membership-chart",
+    "path": "references/assets/f03-membership.png",
+    "mediaType": "image/png",
+    "sha256": "41e6d2d67820d288c01dac597b069644f1b26809b928a27c59f29117458a03ed",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-meter-chart",
+    "path": "references/assets/f03-meter.png",
+    "mediaType": "image/png",
+    "sha256": "42b699d2a782d9f0e8d5c29e3981bf4e8081b65c63e5d39e383124b915a6ea9e",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-projects-chart",
+    "path": "references/assets/f03-projects.png",
+    "mediaType": "image/png",
+    "sha256": "56eecdf706c1a98355419c082431d37d40f988886f3647b3cc4610d879041091",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-queue-chart",
+    "path": "references/assets/f03-queue.png",
+    "mediaType": "image/png",
+    "sha256": "c166abea4b12fd1d98b1b007d6b0a869a2c72c31a4a6f4382a7a47d118a04076",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-stock-age-chart",
+    "path": "references/assets/f03-stock-age.png",
+    "mediaType": "image/png",
+    "sha256": "c4ef92f01fbbcdc9eae81b6d920534d73e5397504dddb039bdaa1906b488dbba",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-timetable-chart",
+    "path": "references/assets/f03-timetable.png",
+    "mediaType": "image/png",
+    "sha256": "35e36e4d1ea5a426a224cd93252e1041c7b881c39d9242bce090ec48d533c22e",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-turnaround-chart",
+    "path": "references/assets/f03-turnaround.png",
+    "mediaType": "image/png",
+    "sha256": "55fbdaf9b9e9da8d6832c285e93ece1fbe1047f77ab0bcaddee875d2203ab2b3",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "assetId": "f03-workshops-chart",
+    "path": "references/assets/f03-workshops.png",
+    "mediaType": "image/png",
+    "sha256": "de026d024498e3c8e3c1753b8cd58fd44552262392b6db33ecd1534e9e6d696e",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  }
+]

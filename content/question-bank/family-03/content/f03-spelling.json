@@ -1,0 +1,427 @@
+[
+  {
+    "questionId": "f03-spelling-01",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word: Routine equipment ___ is scheduled.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "maintainance"
+      },
+      {
+        "choiceId": "c2",
+        "text": "maintenance"
+      },
+      {
+        "choiceId": "c3",
+        "text": "maintenence"
+      },
+      {
+        "choiceId": "c4",
+        "text": "maintanance"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Maintenance is the dictionary spelling; the stem refers to upkeep.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword maintenance: https://www.merriam-webster.com/dictionary/maintenance; retrieved 2026-11-01; verifies spelling and intended sense."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-02",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word: Mark the date on the ___.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "calender"
+      },
+      {
+        "choiceId": "c2",
+        "text": "calandar"
+      },
+      {
+        "choiceId": "c3",
+        "text": "calendar"
+      },
+      {
+        "choiceId": "c4",
+        "text": "callendar"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Calendar denotes the dated schedule; calender is a different technical word, not the intended spelling.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword calendar: https://www.merriam-webster.com/dictionary/calendar; retrieved 2026-11-01; verifies spelling and intended sense."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-03",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word: Step across the entrance ___.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "threshhold"
+      },
+      {
+        "choiceId": "c2",
+        "text": "thresold"
+      },
+      {
+        "choiceId": "c3",
+        "text": "threshould"
+      },
+      {
+        "choiceId": "c4",
+        "text": "threshold"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Threshold is the dictionary spelling; adding a second h, omitting h, or inserting u produces a misspelling.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword threshold: https://www.merriam-webster.com/dictionary/threshold; retrieved 2026-11-01; spelling verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-04",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair spells BOTH office terms correctly?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "liaison; personnel"
+      },
+      {
+        "choiceId": "c2",
+        "text": "liason; personnel"
+      },
+      {
+        "choiceId": "c3",
+        "text": "liaison; personel"
+      },
+      {
+        "choiceId": "c4",
+        "text": "liason; personel"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Liaison includes the sequence iais; personnel ends with double n then el. Each must be checked because one correct word leaves two candidates.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword liaison: https://www.merriam-webster.com/dictionary/liaison; retrieved 2026-11-01; verifies spelling and intended sense.",
+        "Merriam-Webster headword personnel: https://www.merriam-webster.com/dictionary/personnel; retrieved 2026-11-01; verifies spelling and intended sense."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-05",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread: 'The auxilary unit has fluorescent lamps.' Which edit corrects spelling without changing an already correct word?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "auxilary → auxiliary only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "fluorescent → flourescent only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Make both replacements."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Make neither replacement."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Auxiliary needs the second i; fluorescent is already correct and begins fluo, not flou. Checking both prevents an unnecessary edit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword auxiliary: https://www.merriam-webster.com/dictionary/auxiliary; retrieved 2026-11-01; spelling verified.",
+        "Merriam-Webster headword fluorescent: https://www.merriam-webster.com/dictionary/fluorescent; retrieved 2026-11-01; spelling verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-06",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair spells BOTH words correctly?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "cemetery; dilemma"
+      },
+      {
+        "choiceId": "c2",
+        "text": "cemetary; dilemma"
+      },
+      {
+        "choiceId": "c3",
+        "text": "cemetery; dilemna"
+      },
+      {
+        "choiceId": "c4",
+        "text": "cemetary; dilemna"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Cemetery ends ery; dilemma has double m. Each word leaves two candidates if checked alone.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword cemetery: https://www.merriam-webster.com/dictionary/cemetery; retrieved 2026-11-01; spelling verified.",
+        "Merriam-Webster headword dilemma: https://www.merriam-webster.com/dictionary/dilemma; retrieved 2026-11-01; spelling verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-07",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The proofreading task is spelling only. Which edit repairs 'The itenerary includes the written guarantee' while preserving correct words?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "itenerary → itinerary only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "guarantee → garantee only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Make both replacements."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Make neither replacement."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Itinerary has i after t; guarantee is already correctly spelled. Both words must be checked to avoid adding an error.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword itinerary: https://www.merriam-webster.com/dictionary/itinerary; retrieved 2026-11-01; spelling verified.",
+        "Merriam-Webster headword guarantee: https://www.merriam-webster.com/dictionary/guarantee; retrieved 2026-11-01; spelling verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-08",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which replacement pair correctly repairs BOTH words in 'The heirarchy coordinates the bureacracy'?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "hierarchy; bureaucracy"
+      },
+      {
+        "choiceId": "c2",
+        "text": "heirarchy; bureaucracy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "hierarchy; bureacracy"
+      },
+      {
+        "choiceId": "c4",
+        "text": "heirarchy; bureacracy"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Hierarchy begins hie, not hei; bureaucracy includes the sequence bureau. Each candidate shares at least one proposed form with another, so both repairs matter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword hierarchy: https://www.merriam-webster.com/dictionary/hierarchy; retrieved 2026-11-01; spelling verified.",
+        "Merriam-Webster headword bureaucracy: https://www.merriam-webster.com/dictionary/bureaucracy; retrieved 2026-11-01; spelling verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-09",
+    "version": 2,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Proofread these three tokens: (1) embarassment, (2) embarrass, (3) harrassment. A batch tool offers commands applied once each in the stated order. G replaces every 'rr' with 'r' in every token. E replaces the WHOLE WORD 'embarass' with 'embarrass'. M replaces the WHOLE WORD 'embarassment' with 'embarrassment'. Commands use the text left by earlier commands. Which plan leaves ALL three tokens correctly spelled, including restoring any correct form damaged during editing?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "G, then E, then M."
+      },
+      {
+        "choiceId": "c2",
+        "text": "E, then M; do not run G."
+      },
+      {
+        "choiceId": "c3",
+        "text": "M, then G, then E."
+      },
+      {
+        "choiceId": "c4",
+        "text": "G, then M; do not run E."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The required final tokens are embarrassment, embarrass, harassment. G repairs harrassment but changes the initially correct embarrass into embarass; E must therefore follow G. M repairs embarassment, but running G after M would damage the restored double r again. G-E-M succeeds. Without G, harrassment remains; M-G-E leaves embarassment; G-M without E leaves embarass. Thus every token affects the decision, and knowing one spelling alone is not enough to validate a plan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original interacting proofreading repair after quality audit; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword embarrassment; https://www.merriam-webster.com/dictionary/embarrassment; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword embarrass; https://www.merriam-webster.com/dictionary/embarrass; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword harassment; https://www.merriam-webster.com/dictionary/harassment; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "2026-11-02 original batch-proofreading rules and independent command simulation: docs/content/family03-numerical-clerical-review.md; no disputed spelling variant is used as an incorrect form."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-spelling-10",
+    "version": 2,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A batch contains the tokens 'accomodate', 'accomodation', and 'recommend'. An edit command replaces either one exact whole-word spelling everywhere or one literal letter sequence everywhere, as specified; it costs ONE command regardless of matches. Keep already correct spellings correct. Which plan corrects the entire batch using the FEWEST commands? Read each quoted replacement literally.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "One sequence command: 'm' → 'mm' everywhere."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Two whole-word commands: 'accomodate' → 'accommodate'; 'accomodation' → 'accommodation'."
+      },
+      {
+        "choiceId": "c3",
+        "text": "One sequence command: 'comod' → 'commod' everywhere."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Two whole-word commands: 'accomodate' → 'accomadate'; 'accomodation' → 'accommodation'."
+      },
+      {
+        "choiceId": "c5",
+        "text": "One whole-word command: 'accomodate' → 'accommodate' only."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Accommodate and accommodation require double c and double m, whereas recommend already has one c and double m. The sequence comod occurs in both defective words; changing it to commod repairs both and does not occur in recommend. Zero commands cannot work, so one safe command is minimal. Doubling every m damages recommend; two correct whole-word edits work but are not minimal; accomadate is still misspelled; correcting only accomodate leaves accomodation defective. Five choices distinguish the three orthographic checks from the separate minimal-command requirement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original interacting proofreading repair after quality audit; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "Merriam-Webster headword accommodate; https://www.merriam-webster.com/dictionary/accommodate; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword accommodation; https://www.merriam-webster.com/dictionary/accommodation; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "Merriam-Webster headword recommend; https://www.merriam-webster.com/dictionary/recommend; spelling retrieved 2026-11-02, no definition text reproduced.",
+        "2026-11-02 original batch-proofreading rules and independent command simulation: docs/content/family03-numerical-clerical-review.md; no disputed spelling variant is used as an incorrect form."
+      ]
+    }
+  }
+]

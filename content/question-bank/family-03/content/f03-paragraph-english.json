@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f03-paragraph-english-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which order gives a coherent set of instructions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2-P1-P4-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4-P2-P1-P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2-P4-P3-P1"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Write before drying, dry before folding, and fold before standing it up. Thus P2-P4-P1-P3 satisfies each explicit dependency; the competing orders fold too early, dry before writing, or stand an unfolded card.",
+    "reference": {
+      "referenceId": "f03-paragraph-english-01-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-english-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the coherent paragraph order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P2-P1-P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1-P3-P2-P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3-P1-P2-P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P1-P4-P2"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 introduces the gap, P1 explains its effect, P2 supplies the response, and P4 describes the result after repair. Other orders separate cause from explanation, use that gap before introducing it, or place the result before the repair.",
+    "reference": {
+      "referenceId": "f03-paragraph-english-02-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-english-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which order preserves the argument and the reference of 'this addition'?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P2-P1-P5-P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P5-P2-P1-P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2-P3-P5-P1-P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P2-P5-P1-P4"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P3 establishes the original reason, P2 the difficulty, and P5 the trade-off of moving the sole session. P1 resolves that trade-off through addition; P4 refers back to that addition. The alternatives give the solution before its trade-off, refer to parents before their difficulty, or use yet without its contrast.",
+    "reference": {
+      "referenceId": "f03-paragraph-english-03-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-english-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the best paragraph order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2-P3-P1-P4-P5"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2-P1-P3-P4-P5"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1-P2-P3-P5-P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2-P1-P4-P5-P3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 introduces marks; P1 distinguishes them from wear and motivates inspection in P3. P4 is the resulting enlarged view, and P5 refers to its finding. Delaying the reason, using unintroduced marks, or putting the enlarged view before its inspection breaks the explanatory chain.",
+    "reference": {
+      "referenceId": "f03-paragraph-english-04-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-english-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which order best develops the rival explanation, the test requirement and the limited conclusion?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P5-P1-P6-P4-P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P6-P5-P1-P4-P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3-P5-P6-P1-P4-P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P5-P6-P4-P1-P2"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 supplies the initial attribution, P5 the competing exposure explanation, and P6 derives the need to separate factors. P1 implements that requirement, P4 reports its result, and P2 limits the inference. Putting the test before its therefore-requirement, deriving the requirement before the rival explanation, or reporting observations before setting up the comparison disturbs that argument.",
+    "reference": {
+      "referenceId": "f03-paragraph-english-05-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-paragraph-english-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which order best preserves the concession and the final distinction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3-P5-P2-P6-P4-P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3-P2-P5-P6-P4-P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3-P5-P6-P2-P4-P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3-P5-P2-P4-P1-P6"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P3 introduces the praise and P5 explains its initial simplicity. P2 qualifies it; P6 identifies the controlling condition. P4 separates real shelter value from that problem, and P1 derives the preference. The alternatives interrupt the initial concession, mention a condition before it appears, or place the final generalization before the distinction it depends on.",
+    "reference": {
+      "referenceId": "f03-paragraph-english-06-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original ordering task; independent bilingual editorial approval pending",
+      "sources": [
+        "Each item owns its parts; reasoning and originality limitations in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

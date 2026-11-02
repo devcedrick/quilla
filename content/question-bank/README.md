@@ -19,6 +19,14 @@ authoring allocation. See its [review/source record](../../docs/content/family02
 and [per-item register](../../docs/content/family02-item-register.md).
 It is local authored content, not imported or published database content.
 
+Family 03 is authored in **[family-03/](family-03/manifest.json)** with 270
+questions, its own manifest, ten linked chart images, and the same per-subject
+30/50/20 editorial allocation. Its [review and per-item ledger index](../../docs/content/family03-review.md)
+records checks, diversity decisions, source limitations and pending human review.
+The [revision-2 quality repair](../../docs/content/family03-quality-revision.md)
+strengthens 64 questions and three dedicated passages without relabelling difficulty.
+It is offline authored content, not imported or published database content.
+
 ## Layout within each family
 
 - `manifest.json`: the independent family inventory and validation metadata.
