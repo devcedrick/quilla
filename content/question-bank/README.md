@@ -13,6 +13,13 @@ inventory: corpus ID `cse-2027-family01`, taxonomy `cse-taxonomy-2027-v2`, poole
 blueprint metadata Professional/Subprofessional v3, and `seedFamilies: [1]`.
 Each later family has its own corpus ID, family number, revision, and checksum.
 
+Family 03 is authored in **[family-03/](family-03/manifest.json)** with 270
+questions, its own revision-2 manifest, ten chart images, and the same per-subject
+30/50/20 editorial allocation. See its [review index](../../docs/content/family03-review.md)
+and [quality repair](../../docs/content/family03-quality-revision.md), which records
+64 revised questions and three revised dedicated passages, checks and pending
+human review. This is offline authored content, not database publication.
+
 Family 02 is authored in **[family-02/](family-02/manifest.json)** with 270
 questions, its own revision-4 manifest, ten linked chart images, and the same per-subject 30/50/20
 authoring allocation. See its [review/source record](../../docs/content/family02-review.md)
