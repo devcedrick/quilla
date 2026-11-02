@@ -1,0 +1,335 @@
+[
+  {
+    "questionId": "f04-spelling-01",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is the correct spelling of a person who establishes and runs a business?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "entreprenuer"
+      },
+      {
+        "choiceId": "c2",
+        "text": "entrepeneur"
+      },
+      {
+        "choiceId": "c3",
+        "text": "entrepreneur"
+      },
+      {
+        "choiceId": "c4",
+        "text": "entreprenneur"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Entrepreneur is the publisher headword. The alternatives transpose eu, omit r, or add n.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword entrepreneur: https://www.dictionary.com/browse/entrepreneur; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-02",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word referring to the staff of an organization.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "personell"
+      },
+      {
+        "choiceId": "c2",
+        "text": "personnel"
+      },
+      {
+        "choiceId": "c3",
+        "text": "personnell"
+      },
+      {
+        "choiceId": "c4",
+        "text": "personel"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Personnel has double n and one final l. All alternatives omit or add a consonant.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword personnel: https://www.dictionary.com/browse/personnel; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-03",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is the correctly spelled adjective in “a ___ company”?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "subsidary"
+      },
+      {
+        "choiceId": "c2",
+        "text": "subsidairy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "subsiduary"
+      },
+      {
+        "choiceId": "c4",
+        "text": "subsidiary"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Subsidiary retains the sequence idi before ary; the alternatives omit or alter that sequence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword subsidiary: https://www.dictionary.com/browse/subsidiary; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-04",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only: “The new policy will supersseed the earlier concensus.” Which pair corrects BOTH misspellings?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "supersede; consensus"
+      },
+      {
+        "choiceId": "c2",
+        "text": "supersede; concensus"
+      },
+      {
+        "choiceId": "c3",
+        "text": "supersseed; consensus"
+      },
+      {
+        "choiceId": "c4",
+        "text": "supersceede; consensus"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The verified headwords are supersede and consensus. Supersseed adds an s and uses an incorrect ending; supersceede adds c and an extra e. Concensus substitutes c for the first s. The accepted or disputed variant supercede is deliberately not used as an error or distractor.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword supersede: https://www.dictionary.com/browse/supersede; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong.",
+        "Dictionary.com headword consensus: https://www.dictionary.com/browse/consensus; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-05",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only: “The liason officer prepared the inaugral notice.” Which pair corrects BOTH words?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "liaison; inaugral"
+      },
+      {
+        "choiceId": "c2",
+        "text": "liason; inaugural"
+      },
+      {
+        "choiceId": "c3",
+        "text": "liaison; inaugural"
+      },
+      {
+        "choiceId": "c4",
+        "text": "liasion; inaugural"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Liaison and inaugural are the verified headwords. Each crossed alternative leaves one original error; liasion is also misspelled.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword liaison: https://www.dictionary.com/browse/liaison; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong.",
+        "Dictionary.com headword inaugural: https://www.dictionary.com/browse/inaugural; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-06",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread the marked forms: “The preliminery report includes a chronolgy and a preliminary summary.” Which complete edit set repairs spelling without altering a correct form?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "preliminery→preliminary only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "preliminery→preliminary; chronolgy→chronology"
+      },
+      {
+        "choiceId": "c3",
+        "text": "chronolgy→chronology only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "preliminary→preliminery; chronolgy→chronology"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Preliminery needs a before ry; chronolgy needs the missing o after l. The already correct preliminary stays unchanged. Each other edit set leaves an error or damages a correct form.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword preliminary: https://www.dictionary.com/browse/preliminary; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong.",
+        "Dictionary.com headword chronology: https://www.dictionary.com/browse/chronology; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-07",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread the marked forms: “A knowlegeable clerk anticipated a forseeable delay.” Which pair corrects BOTH forms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "knowledgeable; forseeable"
+      },
+      {
+        "choiceId": "c2",
+        "text": "knowlegeable; foreseeable"
+      },
+      {
+        "choiceId": "c3",
+        "text": "knowledgeable; foreseeible"
+      },
+      {
+        "choiceId": "c4",
+        "text": "knowledgeable; foreseeable"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Knowledgeable restores the missing d in knowledge; foreseeable retains both e letters at the fore+see boundary. Each other pair leaves an error or introduces an incorrect suffix. The accepted variant knowledgable is not offered as an error.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword knowledgeable: https://www.dictionary.com/browse/knowledgeable; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong.",
+        "Dictionary.com headword foreseeable: https://www.dictionary.com/browse/foreseeable; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-spelling-08",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only: “Surveilance supports the plan for resillience.” Which pair corrects BOTH forms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "surveillance; resilience"
+      },
+      {
+        "choiceId": "c2",
+        "text": "surveillance; resillience"
+      },
+      {
+        "choiceId": "c3",
+        "text": "surveilance; resilience"
+      },
+      {
+        "choiceId": "c4",
+        "text": "surveillence; resilience"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Surveillance has double l and the ending ance; resilience has one l. Each other pair leaves an original error or substitutes ence for ance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com headword surveillance: https://www.dictionary.com/browse/surveillance; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong.",
+        "Dictionary.com headword resilience: https://www.dictionary.com/browse/resilience; retrieved2026-11-02; headword spelling verified; no regional variant is marked wrong."
+      ]
+    }
+  }
+]

@@ -1,0 +1,1442 @@
+[
+  {
+    "questionId": "f04-analytical-data-01",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many commuters travelled from South to North?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "14"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "22"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "24"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "10"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Use the South row and North column: 22. Fourteen reverses a different flow, 24 is South-to-South, and 10 is South-to-East.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-commute",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-02",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Considering ONLY journeys between different districts, which district had more incoming than outgoing commuters, and by how many?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "East, by 10"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "North, by 16"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "South, by 6"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "North, by 6"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "East sends 24+12=36 and receives 16+10=26, a deficit of 10. North sends 16+14=30 and receives 24+22=46, a surplus of 16, not 20. South sends 10+22=32 and receives 12+14=26, a deficit of 6. Thus North has a surplus of 16.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-commute",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-03",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Among commuters arriving in North, including journeys within North, what fraction started outside North?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "23/33"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "23/80"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "10/33"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "23/30"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "North arrivals total 24+20+22=66. Of these, 46 began outside North, so 46/66=23/33. Using all 160 journeys changes the population; 20/66 counts only local journeys; 30 is the outgoing interdistrict count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-commute",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-04",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A corrected scenario reassigns x East-to-North commuters to North-to-East and y South-to-North commuters to North-to-South. The total number of journeys stays fixed. What is the smallest x+y that makes North's interdistrict incoming and outgoing counts equal, and which pair also leaves East and South individually balanced? x and y are nonnegative whole numbers.",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "8; x=5, y=3"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "16; x=10, y=6"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "8; x=3, y=5"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "8; x=8, y=0"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "North initially has incoming 46 and outgoing 30. Every reassignment lowers its surplus by 2, so x+y=8 is necessary. East has an outgoing surplus of 10; each East reassignment corrects 2, requiring x=5. South has an outgoing surplus of 6, requiring y=3. All counts remain nonnegative. The other sum-eight pairs balance North but leave East/South unbalanced; 16 overcorrects North.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-commute",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-05",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which supplier has no setup fee?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "B lists a setup fee of PHP 0. Its higher unit price does not create a setup fee; the other fees are 240, 500 and 100.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-quotes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-06",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For exactly 70 booklets from ONE supplier, without a delivery deadline, which eligible supplier is cheapest and at what total price?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A, PHP 800"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B, PHP 840"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C, PHP 920"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "D, PHP 800"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A costs 240+70×8=800; B costs 840; C costs 500+420=920. D can supply only 60, so its apparent PHP 800 quote is infeasible for 70.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-quotes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-07",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An order needs at least 75 booklets, all within two days, from ONE supplier. Which supplier can fill it?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "B meets both capacity 100≥75 and delivery 2≤2. A has enough capacity but takes 3 days; C takes 4 days; D meets the deadline but can supply only 60.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-quotes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-08",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Exactly 120 booklets must arrive within three days. Orders may be split. What is the least total cost?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "PHP 1,360"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "PHP 1,380"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "PHP 1,420"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "PHP 1,200"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "C misses the deadline. A+B is cheapest at A=80, B=40:240+640+480=PHP1,360. A+D is cheapest at A=80,D=40:240+640+100+400=1,380. B+D uses D=60,B=60 for 1,420. When all three are used, A is cheapest per unit and is filled first; moving up to 40 remaining units from B to D saves at most PHP80 but adds a PHP100 setup. Using less A cannot lower cost. No supplier alone reaches 120, so PHP1,360 is minimal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-quotes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-09",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many defective tiles did the machine flag?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "24"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "36"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "60"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The defective/flagged cell is 36. Four defective tiles were missed; 24 flags were sound tiles; 60 is all flagged tiles.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-test",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-10",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Of the machine-flagged tiles, what percentage were actually sound?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "15%"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "40%"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "12%"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "60%"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "There are 36+24=60 flags, of which 24 are sound:24/60=40%. Fifteen percent uses all sound tiles as denominator;12% uses all tiles;60% is the defective share of flags.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-test",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-11",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What fraction of ALL actual defective tiles escaped the machine flag?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "1/10"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1/35"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "1/5"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "1/50"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Actual defects total 36+4=40, and 4 escaped:4/40=1/10. Dividing by unflagged tiles measures a different conditional rate; 1/5 uses total defects divided by the whole batch.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-test",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-12",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A perfect manual check costs PHP 5 per checked tile. Every tile ultimately discarded costs PHP 9 to replace; every defective tile retained incurs a PHP 30 penalty. Compare P: check all flagged tiles, discard only confirmed defects, retain every unflagged tile; Q: discard every flagged tile without manual checks and manually check every unflagged tile, discarding confirmed defects. Which plan costs less, and by how much, for this batch?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "P, by PHP 140"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "P, by PHP 532"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Q, by PHP 140"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Q, by PHP 532"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "P checks60 for300, discards36 for324, and retains4 defective tiles for120: total744. Q checks140 for700 and discards60+4=64 for576, retaining no defects: total1276. P is cheaper by532. Merely comparing inspection costs ignores replacement and retained-defect penalties; both plans discard the 36 flagged defects.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-test",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-13",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which group contains 14 voters?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "G1"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "G2"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "G3"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "G4"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The G2 row lists14. It first prefers B. The other group sizes are18,10 and8.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-ballots",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-14",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "With all 50 voters participating, which theme is eliminated first, and which theme ultimately wins?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "B is eliminated; C wins"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A is eliminated; B wins"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "B is eliminated; A wins"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "C is eliminated; A wins"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "First counts are A18,B14,C18; B is uniquely last. Its14 votes transfer to C, giving C32 versus A18. The initial A/C tie is not a tie for elimination.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-ballots",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-15",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Only G4's eight voters abstain; every other ranking stays unchanged. What is the final winning margin after elimination?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A wins by 14"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "C wins by 6"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A wins by 6"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "B wins by 4"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Among42 voters first counts are A18,B14,C10. Eliminate C; G3 sends its10 to A, giving A28 and B14. Thus A wins by14. Reusing the original B elimination ignores the abstentions; no majority exists initially because18 is not greater than21.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-ballots",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-16",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "All 50 voters participate. Some G1 voters change their complete ranking from A>B>C to C>A>B; every other ranking stays unchanged. What is the fewest changers that makes B win, with no tie for elimination or victory?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "5"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "7"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "With k changers the first counts are A=18−k,B=14,C=18+k. For k≤3, B remains last and loses. At k=4, A and B tie for elimination, which is excluded. At k=5, A13 is eliminated; its remaining13 voters rank B next, making B27 against C23, so B wins. Seven produces a final25–25 tie, and eight gives C an immediate26-vote majority. This is why moving support toward C can make B win: it changes who is eliminated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-ballots",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-17",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which scanner had the most downtime?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "P"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Q"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "R"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "P and Q equally"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "R has20 minutes downtime, compared with15 for P and10 for Q. The highest page count does not imply the least downtime.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-scanners",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-18",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Rank the scanners by productive pages per minute, from greatest to least.",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "P, R, Q"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "R, P, Q"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "P, Q, R"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Q, P, R"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "P:360/45=8;Q:300/50=6;R:280/40=7. Thus P>R>Q. Raw pages rank P>Q>R and would reverse the last two. Productive rates require removing downtime from the denominator.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-scanners",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-19",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "P and Q each have 25 productive minutes available tomorrow. P must scan whole 30-page batches and Q whole 25-page batches. What is their maximum combined whole-batch page output?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "350"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "325"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "330"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "300"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "P can scan200 pages but only6 complete30-page batches=180 pages. Q can scan150 pages, exactly6×25. Total330 pages. Adding raw capacities gives350 and incorrectly includes an unfinished P batch.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-scanners",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-20",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Ten identical 40-page batches must be scanned. P, Q and R respectively have 20, 20 and 24 productive minutes, at the rates derived from the table. Any one scanner must finish a batch it starts. After one scanner loses four productive minutes, all ten batches must still be completed. Which initial allocation is feasible AND remains feasible without moving already assigned batches, whichever scanner loses the four minutes?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "P:3, Q:3, R:4"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "P:4, Q:3, R:3"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "P:4, Q:2, R:4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No allocation of ten batches can meet the guarantee"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Whole-batch capacities before loss are P floor(20×8/40)=4,Q floor(20×6/40)=3,R floor(24×7/40)=4, so all offered allocations of ten initially fit. To survive any single four-minute loss without reassignment, each scanner must stay below its own worst-case capacity: P floor(16×8/40)=3,Q floor(16×6/40)=2,R floor(20×7/40)=3. These sum to8, less than10. Each offered allocation overloads at least one scanner when that scanner loses four minutes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-scanners",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-21",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which venue has both a meeting room and secure storage but NO step-free entrance?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "J"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "K"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "L"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "M"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "K has a room and storage, with no step-free entrance. J and L lack a room;M lacks storage. N is not an offered answer and has step-free access.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-venues",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-22",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair covers all FIVE features while duplicating exactly ONE feature across the two venues?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "J and K"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "K and L"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "L and N"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "J and N"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "K supplies power,room,storage;L supplies access,storage,parking. Their union is all five and only storage overlaps. J+K overlaps power and storage;L+N lacks power;J+N overlaps access,storage,parking. Both full coverage and exactly one overlap must be checked.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-venues",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-23",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Exactly two venues must each have secure storage. Together they must cover all five features and cost at most 6 budget units. Which pair qualifies?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "J and L"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "K and L"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "K and M"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "L and N"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "K+L costs3+2=5, both have storage, and together cover all five. J+L costs6 and both have storage but lacks a room. K+M covers four features, has storage only at K, and costs8. L+N costs8 and lacks power. Neither the storage requirement nor the budget alone identifies a valid pair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-venues",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-24",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Choose exactly THREE venues costing at most 13 budget units in total. Each of the five features must remain covered after ANY ONE chosen venue becomes unavailable. Which set qualifies?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "J, K, N"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "J, M, N"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "J, K, M"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "K, L, N"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Each feature needs two providers to survive one venue loss. J+K+N costs4+3+6=13 and feature counts(access,power,room,storage,parking)=(2,2,2,3,2), so qualifies. J+M+N is robust with(2,2,2,2,3) but costs15. J+K+M costs12 but access is at J alone. K+L+N costs11 but power is at K alone. Both robust coverage and cost matter; every offered set initially covers all five.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-venues",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-25",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many tasks took between 10 and 14 minutes inclusive?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "6"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "8"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "10"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "14"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The10–14 row has8 tasks. Fourteen is an interval endpoint, not a frequency;6 and10 belong to other rows.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-bands",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-26",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many tasks are represented?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "19"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "24"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "30"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "34"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Sum frequencies6+10+8+6=30. Interval endpoints do not count additional tasks.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-bands",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-27",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the smallest possible mean completion time consistent with the table?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "7 minutes"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "7⅓ minutes"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "9 minutes"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "10 minutes"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Use every interval minimum:6×0+10×5+8×10+6×15=220, so the minimum mean is220/30=7⅓ minutes. This is attainable because all minima are permitted integers. Midpoints yield9⅓ and are an estimate, not a forced value; endpoint19 is not the mean.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-bands",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-28",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which statement about the median is guaranteed?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "It is exactly 7 minutes."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "It lies between 5 and 9 minutes inclusive."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "It lies between 9 and 10 minutes inclusive."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "It is exactly 9⅓ minutes."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "For30 tasks the central ranks are15 and16. The first6 are in0–4; ranks7–16 lie in5–9. Both middle values therefore lie in5–9, and so does their mean. The exact median is unknown;9⅓ is the midpoint-estimated overall mean, not the median.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-bands",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-29",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is C's east coordinate?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "1"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "2"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The C row lists east4, north2. Swapping the two coordinates gives2;1 and6 belong to other points.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-grid",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-30",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which pair shares the same east coordinate?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A and B"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A and C"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "B and D"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "C and D"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A and B both have east coordinate1. B and D share north5, which is a different direction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-grid",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-31",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How many blocks longer is the shortest A-to-D route required to pass through C than an unrestricted shortest A-to-D route?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "2"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A-to-D distance=|6−1|+|5−1|=9. Through C:|4−1|+|2−1|=4, then|6−4|+|5−2|=5; total9. C lies within the coordinate rectangle, so this requirement adds0 blocks. Treating C as an arbitrary detour would wrongly add distance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-grid",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-analytical-data-32",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Starting from B, a visitor needs a ramp and can travel at most FIVE blocks. Which statement correctly identifies ALL reachable ramp-equipped points and the nearest one?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A and D are reachable; A is nearest."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Only A is reachable; A is nearest."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A, C and D are reachable; A is nearest."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "B and D are reachable; B is nearest."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "From B(1,5), A,C,D are4,6,5 grid blocks away. A and D have ramps and meet the5-block limit;C has a ramp but is too far. B has no ramp even though its distance is0. Among the qualifying A,D points A is nearest.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-data-grid",
+      "referenceVersion": 1
+    }
+  }
+]

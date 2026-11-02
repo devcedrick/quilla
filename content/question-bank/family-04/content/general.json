@@ -1,0 +1,1642 @@
+[
+  {
+    "questionId": "f04-general-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which constitutional body has visitorial powers over jails, prisons and detention facilities?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Commission on Audit"
+      },
+      {
+        "choiceId": "b",
+        "text": "Commission on Human Rights"
+      },
+      {
+        "choiceId": "c",
+        "text": "Civil Service Commission"
+      },
+      {
+        "choiceId": "d",
+        "text": "Commission on Elections"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article XIII, Section 18(4) assigns this visitorial function to the CHR. Financial audit, personnel administration and election administration do not substitute for that specific mandate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution (ratified 1987-02-02), Article XIII Section 18(4); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Residents peacefully gather to ask the government to repair an unsafe footbridge. Which pair of rights in Article III, Section 4 is most directly involved?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Peaceful assembly and petition for redress"
+      },
+      {
+        "choiceId": "b",
+        "text": "Travel and choice of abode"
+      },
+      {
+        "choiceId": "c",
+        "text": "Bail and speedy trial"
+      },
+      {
+        "choiceId": "d",
+        "text": "Association and non-impairment of contracts"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The residents assemble peacefully and petition the government about a grievance. The other pairs concern different activities and do not describe both acts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article III Section 4; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Article XIV expressly guarantees academic freedom in which institutions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only public elementary schools"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only government research offices"
+      },
+      {
+        "choiceId": "c",
+        "text": "All institutions of higher learning"
+      },
+      {
+        "choiceId": "d",
+        "text": "All offices offering staff orientation"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article XIV, Section 5(2) identifies all institutions of higher learning. The guarantee is not limited to public institutions or extended by this wording to every training office.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 5(2); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A resettlement team adequately consults the families who will move but says the receiving community has no part in consultation. Which assessment follows Article XIII, Section 10?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Consultation is required only after relocation"
+      },
+      {
+        "choiceId": "b",
+        "text": "The moving families alone satisfy the express requirement"
+      },
+      {
+        "choiceId": "c",
+        "text": "The receiving community alone should have been consulted"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both the dwellers and the receiving community must be adequately consulted"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The second paragraph expressly includes the dwellers and the communities where they will be relocated. Consulting one group does not remove the other; after-the-fact notice is not the required prior consultation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIII Section 10, second paragraph; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A housing proposal correctly seeks affordable homes for underprivileged citizens, but its summary says the constitutional programme disregards all small property owners. What correction is needed?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The programme must also respect small property-owner rights"
+      },
+      {
+        "choiceId": "b",
+        "text": "The housing programme gives small owners an absolute veto over every proposed project"
+      },
+      {
+        "choiceId": "c",
+        "text": "The provision protects small owners only if they are also prospective beneficiaries"
+      },
+      {
+        "choiceId": "d",
+        "text": "Respect for small owners is required only after construction has been completed"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article XIII, Section 9 expressly requires respect for small property-owner rights during implementation. It does not phrase that safeguard as an absolute veto, limit it to future beneficiaries, or postpone it until after construction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIII Section 9; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An applicant says the constitutional right to choose a course of study requires admission even when fair, reasonable and equitable academic requirements are unmet. Which reply is accurate?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Course choice is absolute once an applicant is a citizen"
+      },
+      {
+        "choiceId": "b",
+        "text": "The right is expressly subject to those requirements"
+      },
+      {
+        "choiceId": "c",
+        "text": "Only private institutions may impose those requirements"
+      },
+      {
+        "choiceId": "d",
+        "text": "Admission requirements are allowed, but academic requirements after admission are excluded"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article XIV, Section 5(3) protects course/profession choice subject to fair, reasonable and equitable admission and academic requirements. It does not exempt citizens, limit the condition to private schools, or exclude later academic requirements.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 5(3); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-07",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A proposed scholarship summary excludes all students in private schools solely because the Constitution mentions public education elsewhere. Which correction follows Article XIV, Section 2(3)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Private-school students can benefit only from loans, never grants"
+      },
+      {
+        "choiceId": "b",
+        "text": "The provision covers only teachers rather than students"
+      },
+      {
+        "choiceId": "c",
+        "text": "Deserving students in both public and private schools are contemplated"
+      },
+      {
+        "choiceId": "d",
+        "text": "All private-school students are automatically entitled to every scholarship"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 2(3) contemplates scholarship grants and related incentives for deserving students in both sectors, especially the underprivileged. It does not guarantee every applicant every award or exclude grants from the private sector.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 2(3); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-08",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Consider only Article XIV, Section 3(3). A public high school proposes religious instruction during regular class hours. Plan R has written parental options and instructors approved by the relevant religious authorities, but charges the Government an additional instructor fee. Plan S has the same written options and approved instructors, with no additional government cost. Plan T has no additional government cost and approved instructors, but relies only on oral parental requests. Which plans satisfy all these express conditions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "R and S, because approval cures the fee"
+      },
+      {
+        "choiceId": "b",
+        "text": "S alone, because both writing and no additional government cost are required"
+      },
+      {
+        "choiceId": "c",
+        "text": "S and T, because an oral option substitutes for writing"
+      },
+      {
+        "choiceId": "d",
+        "text": "R alone, because additional payment is required for approved instructors"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "R fails the no-additional-cost condition; T fails the written-option condition. S meets writing, religious-authority designation/approval and cost requirements. Both S-containing distractors preserve one correct condition but wrongly waive another.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 3(3); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-09",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 9710 seeks substantive equality of women and men. Which focus best captures this policy?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Identical wording of every rule regardless of barriers"
+      },
+      {
+        "choiceId": "b",
+        "text": "Permanent separation of all educational standards"
+      },
+      {
+        "choiceId": "c",
+        "text": "Equal opportunities, access to resources and development outcomes"
+      },
+      {
+        "choiceId": "d",
+        "text": "Replacement of every individual assessment with a fixed entitlement"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 2 addresses opportunities, resources and development results in light of unequal structures. Identical wording alone may retain barriers, while permanent unequal standards and automatic universal entitlements do not define substantive equality.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710 (2009-08-14), Section 2; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-10",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 9710, when should temporary special measures be discontinued?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "When their objectives have been achieved"
+      },
+      {
+        "choiceId": "b",
+        "text": "When their first annual budget is released"
+      },
+      {
+        "choiceId": "c",
+        "text": "Whenever they benefit a previously disadvantaged group"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only when all ordinary public services are discontinued"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4(j) links discontinuation to achieving the measures’ objectives. A first budget or the fact that a measure addresses disadvantage is not the stated endpoint.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Section 4(j), Temporary Special Measures; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-11",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 9710 requires LGUs to establish which barangay-level mechanism for addressing violence against women?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "An electoral tribunal"
+      },
+      {
+        "choiceId": "b",
+        "text": "A land-registration branch"
+      },
+      {
+        "choiceId": "c",
+        "text": "A customs clearance post"
+      },
+      {
+        "choiceId": "d",
+        "text": "A Violence Against Women Desk"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 9(d) specifies a VAW Desk in every barangay. The other institutions have unrelated functions and are not that statutory mechanism.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Section 9(d); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-12",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A training rule is worded identically for everyone. Evidence shows it denies women access because of a sex-based disadvantage that the rule makes no provision to address. A manager says identical wording alone rules out discrimination. Under RA 9710, what is the best assessment?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Discrimination requires an expressly hostile written statement"
+      },
+      {
+        "choiceId": "b",
+        "text": "A generally applicable measure can still be discriminatory through its effects"
+      },
+      {
+        "choiceId": "c",
+        "text": "Discrimination is defined only for married women"
+      },
+      {
+        "choiceId": "d",
+        "text": "A training rule cannot be an administrative measure"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 4(b) includes direct and indirect restrictions, including generally applicable measures that fail to address sex/gender disadvantages and thereby deny rights or opportunities. Neutral wording alone is not conclusive, and marital status is not an exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Section 4(b), paragraphs 1–4; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-13",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A school admits women to technical courses but keeps textbooks portraying all technical work as exclusively male. It claims admission alone completes its obligations under RA 9710, Section 13(a). Which response is best?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The provision also addresses gender stereotypes in educational materials"
+      },
+      {
+        "choiceId": "b",
+        "text": "Equal admission is sufficient unless a textbook expressly prohibits enrolment"
+      },
+      {
+        "choiceId": "c",
+        "text": "The stereotype provisions govern teachers’ conduct but exclude printed curricula"
+      },
+      {
+        "choiceId": "d",
+        "text": "Revision of stereotypes is required only in materials written by government employees"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 13(a) covers stereotypes and images in educational materials and curricula, alongside gender-sensitive language. Its content duties are not conditioned on an express enrolment ban, limited to teachers’ conduct, or restricted by authors’ employment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Section 13(a); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-14",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "After a flood, an assistance plan for women provides food on the first day but excludes recovery and rehabilitation on the ground that protection ends with initial relief. Which interpretation of RA 9710, Section 10 is strongest?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The section applies only to evacuation-centre buildings"
+      },
+      {
+        "choiceId": "b",
+        "text": "Recovery is covered only if relief was delayed"
+      },
+      {
+        "choiceId": "c",
+        "text": "Protection also reaches recovery, rehabilitation and reconstruction"
+      },
+      {
+        "choiceId": "d",
+        "text": "The section treats health services as unrelated to crisis response"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 10 extends protection through relief, recovery, rehabilitation and reconstruction and identifies wider support needs. Immediate food assistance therefore does not exhaust the section’s reach.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Section 10; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-15",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply RA 9710’s definition of temporary special measures. All three measures aim to accelerate de facto equality. P retains common standards and stops when its objective is achieved. Q retains common standards but is designed to continue permanently after its objective is achieved. R stops when its objective is achieved but maintains unequal separate standards as its consequence. Which measures meet both the standards safeguard and the endpoint rule?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P and Q"
+      },
+      {
+        "choiceId": "b",
+        "text": "P alone"
+      },
+      {
+        "choiceId": "c",
+        "text": "P and R"
+      },
+      {
+        "choiceId": "d",
+        "text": "Q and R"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 4(j), with 4(g), forbids maintaining unequal/separate standards and requires discontinuation when objectives are achieved. P satisfies both. Q satisfies the standards condition but fails the endpoint; R satisfies the endpoint but fails the standards condition. One condition alone leaves a P-containing rival.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Sections 4(g) and 4(j); https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-16",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Under RA 9710, Section 14, a tournament open to both sexes uses male and female divisions in the same sports category. It offers a smaller prize to women winners. Separately, a school gives women 40% of athletic scholarships although women make up 60% of its students. Considering only the equal-prize rule and pro rata scholarship rule, which paired correction is supported?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Equalize prizes in that category; align women’s scholarship representation with their student-population share"
+      },
+      {
+        "choiceId": "b",
+        "text": "Equalize prizes in that category; use a 50% scholarship share regardless of population"
+      },
+      {
+        "choiceId": "c",
+        "text": "Keep the divided prizes; align scholarships with the student-population share"
+      },
+      {
+        "choiceId": "d",
+        "text": "Keep the divided prizes; use the women’s share of tournament entrants for scholarships"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 14 forbids differing prize amount/value in the same category when the event is open to both sexes and divided by sex. It separately bases women’s athletic-scholarship representation on the school’s women-student proportion. A fixed 50% or tournament-entry denominator substitutes a different rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9710, Section 14, prize paragraph and athletic-scholarship paragraph; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/26011; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-17",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is a mobile source as defined by the Clean Air Act?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A stationary factory stack"
+      },
+      {
+        "choiceId": "b",
+        "text": "A fuel-powered delivery bus"
+      },
+      {
+        "choiceId": "c",
+        "text": "A fixed warehouse wall"
+      },
+      {
+        "choiceId": "d",
+        "text": "A roadside monitoring instrument"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "RA 8749 Section 5(m) describes a fuel-propelled vehicle principally carrying people or property. The stack is stationary, the wall is not a source of that type, and the monitor measures air.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749 (1999-06-23), Section 5(m); https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-18",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A report distinguishes air quality across a neighbourhood from pollutants measured at a factory outlet. Which term in RA 8749 refers to the broad-area condition?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Certificate of conformity"
+      },
+      {
+        "choiceId": "b",
+        "text": "Octane rating"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ambient air quality"
+      },
+      {
+        "choiceId": "d",
+        "text": "Source emission"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 5(d) distinguishes general pollution in a broad area from source discharge measurements. The other terms concern vehicle certification, fuel properties or a source release.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Section 5(d); https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-19",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two towns share terrain and wind patterns that move pollutants between them. A planner insists an airshed can never cross a municipal boundary. What does RA 8749, Section 9 support?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Airsheds must be identical to electoral districts"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only population size may determine an airshed"
+      },
+      {
+        "choiceId": "c",
+        "text": "Municipal boundaries eliminate the need for coordination"
+      },
+      {
+        "choiceId": "d",
+        "text": "Designation can reflect shared atmospheric conditions and pollution interchange"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 9 uses climate, meteorology, topology and pollutant interchange/diffusion, among other grounds, and calls for common planning. It does not fix airsheds to electoral or municipal boundaries.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Section 9, first paragraph; https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-20",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A plant redesigns a process so it generates less air pollution, rather than relying only on equipment that captures pollutants after generation. Which policy emphasis in RA 8749 is most directly illustrated?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Giving primary attention to pollution prevention"
+      },
+      {
+        "choiceId": "b",
+        "text": "Showing that the Act ranks end-of-pipe control above process changes"
+      },
+      {
+        "choiceId": "c",
+        "text": "Showing that prevention applies only when no capture technology is available"
+      },
+      {
+        "choiceId": "d",
+        "text": "Replacing accountability for adverse impacts with voluntary process improvements"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 3(c) gives primary focus to prevention while retaining comprehensive management; Section 3(e) separately retains accountability. The redesign illustrates prevention without making it conditional on the absence of capture equipment or removing accountability.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Section 3(c); https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-21",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An air-quality programme publishes technical figures but bars residents from contributing to planning or monitoring. Which policy element remains unfulfilled despite publication?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Octane labelling alone"
+      },
+      {
+        "choiceId": "b",
+        "text": "Participation of an informed and active public"
+      },
+      {
+        "choiceId": "c",
+        "text": "A requirement that residents replace all inspectors"
+      },
+      {
+        "choiceId": "d",
+        "text": "A rule limiting consultation to manufacturers"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 3(d) couples information/education with public participation in planning and monitoring. Publication addresses only part of that policy, and participation is not equivalent to replacing technical inspectors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Section 3(d); https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-22",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "One factory reduces its measured emissions. Other sources and weather conditions are not studied. Which conclusion avoids confusing source and ambient measurements?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Every location in the town must now have cleaner air"
+      },
+      {
+        "choiceId": "b",
+        "text": "The factory’s emissions cannot have changed without a new airshed"
+      },
+      {
+        "choiceId": "c",
+        "text": "The factory result alone does not establish the whole area’s ambient change"
+      },
+      {
+        "choiceId": "d",
+        "text": "Ambient air quality means the factory’s permitted discharge rate"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Sections 5(d) and 5(h) distinguish broad-area quality and a source release. A source reduction is relevant but cannot alone establish a broad-area result with other influences unknown.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Sections 5(d) and 5(h); https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-23",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An airshed crosses provincial boundaries with shared atmospheric conditions. Under RA 8749, Section 9, proposal L has a common action plan but a Board of governors only. Proposal M has the specified DENR-Secretary-led multi-sectoral Board but no common airshed action plan. Proposal N has both that Board and a common action plan. Which proposals satisfy both the stated planning and Board requirements?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "N alone"
+      },
+      {
+        "choiceId": "b",
+        "text": "L and N"
+      },
+      {
+        "choiceId": "c",
+        "text": "M and N"
+      },
+      {
+        "choiceId": "d",
+        "text": "L and M"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 9 requires a common action plan as well as the Secretary-led Board with local officials, agencies, people’s organisations, NGOs and the private sector. L meets planning but lacks the specified Board; M has the Board but lacks common planning; N meets both. Either rule alone leaves another proposal plausible.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Section 9, first–fourth paragraphs; https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-24",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A lesson makes two claims about RA 8749: I. A listed naturally occurring atmospheric gas can never be an air pollutant, whatever its concentration. II. A vehicle’s tailpipe reading is itself the broad-area ambient air-quality measurement. Which correction best preserves the distinctions in Sections 5(a), 5(d) and 5(h)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Reject I because normal concentrations matter; accept II because both are air measurements"
+      },
+      {
+        "choiceId": "b",
+        "text": "Accept I because natural origin is decisive; reject II because a tailpipe is a source"
+      },
+      {
+        "choiceId": "c",
+        "text": "Accept both because the Act uses one definition for all gases and measurements"
+      },
+      {
+        "choiceId": "d",
+        "text": "Reject I because the exclusion refers to natural/normal concentrations; reject II because source emissions and ambient quality differ"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 5(a)’s exclusion for listed gases is qualified by natural or normal concentration, so origin is not an unlimited exemption. Sections 5(d) and 5(h) separately distinguish broad-area ambient conditions from source emissions. Each single-correction alternative overlooks the other distinction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 8749, Sections 5(a), 5(d), 5(h); https://lawphil.net/statutes/repacts/ra1999/ra_8749_1999.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-25",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 9275, which term describes underground water-bearing rock that can supply a well or natural spring?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Effluent"
+      },
+      {
+        "choiceId": "b",
+        "text": "Aquifer"
+      },
+      {
+        "choiceId": "c",
+        "text": "Airshed"
+      },
+      {
+        "choiceId": "d",
+        "text": "Discharge permit"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 4(a) defines the water-transmitting underground rock layer as an aquifer. Effluent is an outflow, an airshed concerns air, and a permit is an authorization.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275 (2004-03-22), Section 4(a); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-26",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which instrument limits the quantities, rates or concentrations that a point source may discharge under RA 9275?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A groundwater vulnerability map"
+      },
+      {
+        "choiceId": "b",
+        "text": "A beneficial-use inventory"
+      },
+      {
+        "choiceId": "c",
+        "text": "An effluent standard"
+      },
+      {
+        "choiceId": "d",
+        "text": "A list of recreational users"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 4(n) defines an effluent standard as legal limits on discharge parameters. A vulnerability map or use inventory describes different conditions and does not itself state that source limit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Section 4(n); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-27",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Waste liquid is poured on land from which it may drain into a river. A supervisor says the Act’s definition of discharge requires direct pouring into water. Which assessment is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The definition also includes release onto land from which material might flow into water"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only underground dumping can count as discharge"
+      },
+      {
+        "choiceId": "c",
+        "text": "A release counts only after a fish kill has been proved"
+      },
+      {
+        "choiceId": "d",
+        "text": "Discharge is defined solely as evaporation into air"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4(j) expressly includes land pathways into water. Direct pouring, a fish kill or an underground location is not a necessary part of that definition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Section 4(j); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-28",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A report says RA 9275 covers only land-based pollution because those sources are its primary focus. Which correction follows Section 3?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It covers only freshwater and excludes coastal waters"
+      },
+      {
+        "choiceId": "b",
+        "text": "It excludes civil liability for non-land-based sources"
+      },
+      {
+        "choiceId": "c",
+        "text": "Its primary focus makes all other sources legally irrelevant"
+      },
+      {
+        "choiceId": "d",
+        "text": "It covers water-quality management in all water bodies, with relevant standards and liabilities enforced irrespective of source"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 3 distinguishes all-water-body coverage and source-neutral enforcement from the primary emphasis on land-based abatement. Priority is not the same as exclusive coverage.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Section 3; https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-29",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A groundwater vulnerability map marks a site as readily allowing contaminants to migrate to an aquifer. No water sample has been tested. Which conclusion is supported by the statutory definitions alone?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The map proves a specific pollutant is already in the well"
+      },
+      {
+        "choiceId": "b",
+        "text": "The map indicates susceptibility, not a completed contamination finding"
+      },
+      {
+        "choiceId": "c",
+        "text": "The map guarantees the well is safe until a spill is reported"
+      },
+      {
+        "choiceId": "d",
+        "text": "The map measures the exact pollutant concentration in drinking water"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Sections 4(s)–(t) concern relative ease of contaminant migration and areas at risk. Those are susceptibility measures, not proof of present contamination, exact concentration or safety.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Sections 4(s)–(t); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-30",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An environmental inventory includes household cooking water and water used for boating. A reviewer wants to exclude boating because it is not drinking. Which interpretation of beneficial use is correct?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Cooking is a beneficial use; recreation is outside the definition"
+      },
+      {
+        "choiceId": "b",
+        "text": "Both are beneficial only when the water is part of a municipal supply"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both domestic and recreational uses are contemplated"
+      },
+      {
+        "choiceId": "d",
+        "text": "Recreation is a beneficial use only when combined with commercial fisheries"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 4(c)(1) and (8) expressly include domestic cooking and recreational boating. No municipal-supply or fisheries condition is attached to those definitions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Section 4(c)(1) and (8); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-31",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A factory first changes its process to use less hazardous input and generate less wastewater. It later removes pollutants already spilled into a creek and restores the affected area. Adviser J calls both activities cleanup because both improve the environment. Adviser K calls the first cleaner production and the second cleanup, while warning that the second does not erase the need for prevention. Which assessment best follows RA 9275?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The first is cleaner production and the second is cleanup; completing cleanup does not remove the prevention focus"
+      },
+      {
+        "choiceId": "b",
+        "text": "The first is cleaner production and the second is cleanup; completing cleanup makes prevention inapplicable to the factory"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both are cleaner production because prevention includes removal of an existing spill; the prevention focus remains"
+      },
+      {
+        "choiceId": "d",
+        "text": "The first is cleanup and the second is cleaner production; completing either removes the need for the other"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4(f) describes integrated preventive cleaner production, whereas 4(g) describes removal/restoration after discharge. Section 2(g) independently retains the prevention focus. The alternatives retaining both correct labels still differ on whether prevention continues; the others conflate stages or reverse them.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Sections 2(g), 4(f)–(g); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-32",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume a coastal vessel releases waste and a warehouse releases waste onto land where it may drain into a stream. A memo says the vessel falls outside RA 9275 because land-based sources are prioritised, while the warehouse is outside the definition of discharge because its release first touches soil. Which review correctly evaluates both claims?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both exclusions fail: priority is not exclusive coverage, and the land-to-water pathway is included"
+      },
+      {
+        "choiceId": "b",
+        "text": "The vessel exclusion fails, but the warehouse exclusion is valid until liquid directly enters the stream"
+      },
+      {
+        "choiceId": "c",
+        "text": "The warehouse exclusion fails, but the vessel exclusion follows from the land-based priority"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both exclusions are valid whenever a direct river outfall is absent"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 3 applies relevant standards and liability provisions irrespective of source despite the land-source priority. Section 4(j) includes release onto land from which material might drain to water. Each claim incorrectly turns a qualification into an exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 9275, Sections 3 and 4(j); https://lawphil.net/statutes/repacts/ra2004/ra_9275_2004.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-33",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Article XIV places the nation’s artistic and historic wealth under whose protection?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only private collectors"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only local tourism associations"
+      },
+      {
+        "choiceId": "c",
+        "text": "The State"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only the original artist’s descendants"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 16 treats artistic and historic wealth as national cultural treasure under State protection, with possible regulation of disposition. Exclusive private or familial protection is not the stated rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 16; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-34",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which RA 6713 norm calls for public officials and their families to lead modest lives appropriate to position and income?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Simple living"
+      },
+      {
+        "choiceId": "b",
+        "text": "Political neutrality"
+      },
+      {
+        "choiceId": "c",
+        "text": "Commitment to democracy"
+      },
+      {
+        "choiceId": "d",
+        "text": "Nationalism and patriotism"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4(A)(h) identifies simple living. The other norms concern service, democratic accountability or national allegiance rather than this particular lifestyle standard.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 6713 (1989-02-20), Section 4(A)(h); https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-35",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A museum plan preserves historic objects but declares that Filipino culture must stop evolving and that diversity is incompatible with nationhood. Which constitutional correction is needed?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Preservation requires a single unchanging artistic form"
+      },
+      {
+        "choiceId": "b",
+        "text": "National culture is to be preserved, enriched and allowed dynamic evolution through unity in diversity"
+      },
+      {
+        "choiceId": "c",
+        "text": "Historic objects may be preserved only by private owners"
+      },
+      {
+        "choiceId": "d",
+        "text": "Free artistic expression must cease once an object enters a museum"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article XIV, Section 14 combines preservation, enrichment and dynamic evolution with unity in diversity and free expression. Protecting historic objects does not require freezing culture or abolishing diversity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 14; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-36",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A language-policy chart labels Spanish and Arabic as compulsory national official languages, while calling regional languages irrelevant to instruction. Which revision follows Article XIV, Section 7?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Keep Spanish and Arabic compulsory and remove regional languages"
+      },
+      {
+        "choiceId": "b",
+        "text": "Replace Filipino with Spanish as the sole official language"
+      },
+      {
+        "choiceId": "c",
+        "text": "Treat every regional language as the sole national language"
+      },
+      {
+        "choiceId": "d",
+        "text": "Describe regional languages as auxiliary official/media-of-instruction languages in their regions and Spanish/Arabic promotion as voluntary and optional"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 7 gives the regional languages auxiliary status in their regions and provides voluntary, optional promotion of Spanish and Arabic. It names Filipino and, until otherwise provided by law, English for communication/instruction as official languages.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution, Article XIV Section 7; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-37",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An ethics manual lists four proposed summaries of RA 6713’s nationalism and patriotism norm. Which one most closely follows Section 4(A)(f)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Encourage appreciation of country and people, use of locally produced resources and technology, and protection of national sovereignty"
+      },
+      {
+        "choiceId": "b",
+        "text": "Encourage local products only when bought for personal use, while excluding government work from that norm"
+      },
+      {
+        "choiceId": "c",
+        "text": "Protect sovereignty but prefer a party’s interests whenever the party speaks in the name of national unity"
+      },
+      {
+        "choiceId": "d",
+        "text": "Encourage local technology but make loyalty to the Republic conditional on the employee’s regional affiliation"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4(A)(f) combines loyalty to the Republic/Filipino people, appreciation of country/people, use of local resources/technology and protection of sovereignty. The alternatives retain one element while adding an unstated personal-use, party-interest or regional-loyalty restriction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 6713, Section 4(A)(f); https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-38",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An agency redesigns its service guide under RA 6713’s responsiveness-to-the-public norm. Which interpretation best combines the information and procedure duties?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Use clear language, but retain unnecessary procedures whenever applicants can read them"
+      },
+      {
+        "choiceId": "b",
+        "text": "Use clear understandable information and simplified procedures that avoid red tape"
+      },
+      {
+        "choiceId": "c",
+        "text": "Simplify procedures, but provide explanations only to applicants represented by counsel"
+      },
+      {
+        "choiceId": "d",
+        "text": "Make the guide understandable, but treat consultation as required only after all decisions are final"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 4(A)(e) calls for clear understandable information, openness/consultation and simplified systematic procedures free of red tape. Clear wording does not justify unnecessary steps or replace openness, and the norm does not restrict information to represented applicants.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 6713, Section 4(A)(e); https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-39",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A training note proposes that an elected party leader’s instructions may displace public accountability. Which replacement most accurately states RA 6713’s commitment-to-democracy norm?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Uphold accountability except when party instructions are issued during an elected term"
+      },
+      {
+        "choiceId": "b",
+        "text": "Put civilian authority first, but treat personal loyalty as superior to loyalty to country"
+      },
+      {
+        "choiceId": "c",
+        "text": "Uphold the Constitution, accountability and civilian supremacy, with country above persons or party"
+      },
+      {
+        "choiceId": "d",
+        "text": "Put country above party only in elections; apply the reverse order in ordinary administration"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 4(A)(g) joins constitutional loyalty, accountability and civilian supremacy with country above persons/party. None of those commitments is made election-only or suspended for instructions issued by an elected leader.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "RA 6713, Section 4(A)(g); https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-general-40",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Consider only the ownership, control/administration and alien-enrolment conditions in Article XIV, Section 4(2). These ordinary schools are outside every stated exception, no law requires higher Filipino equity, and all unmentioned conditions are satisfied. School I has 60% Filipino capital, Filipino control/administration, and 30 alien students among 90 enrolled. School J has 65% Filipino capital, Filipino control/administration, and 31 alien students among 90. School K has 70% Filipino capital, alien control/administration, and 20 alien students among 90. Which schools meet all three conditions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "I and J"
+      },
+      {
+        "choiceId": "b",
+        "text": "I alone"
+      },
+      {
+        "choiceId": "c",
+        "text": "I and K"
+      },
+      {
+        "choiceId": "d",
+        "text": "J and K"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The constitutional minimum is 60% Filipino capital; control and administration must be vested in Filipino citizens; aliens may comprise no more than one third of enrolment outside the exceptions. I meets all three, including30/90 exactly one third. J exceeds the enrolment ceiling at 31/90 despite adequate equity/control. K meets equity/enrolment but fails citizen control. Checking either failed condition alone leaves an I-containing rival.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "1987 Constitution (ratified 1987-02-02), Article XIV Section4(2), including stated exceptions; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved2026-11-02. Original hypothetical constitutional-boundary exercise."
+      ]
+    }
+  }
+]

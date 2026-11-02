@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f04-paragraph-filipino-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata. Piliin ang buong pagkakasunod.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3 → P2 → P1 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1 → P3 → P2 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3 → P1 → P2 → P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3 → P1 → P4 → P2"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 ang nagpapakilala sa binhi at tela; P1 ang pangangalaga kinabukasan; P2 ang paglilipat matapos lumitaw ang ugat; P4 ang pagpapatuloy sa lupang tinutukoy ng doon. Hindi dapat unahin ang kinabukasan sa unang paghahanda o ang doon sa paglipat.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-filipino-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata. Piliin ang buong pagkakasunod.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P3 → P1 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1 → P2 → P3 → P4"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P2 ang suliranin; P1 ang tugon bago ang ikalawang pagsubok; P3 ang bunga; P4 ang limitadong paghahambing para sa telang ito. Ang ibang ayos ay nauunang mag-ulat ng ikalawang resulta o konklusyon bago ang kailangang pagsubok.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-filipino-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata. Piliin ang buong pagkakasunod.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P4 → P3 → P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4 → P2 → P1 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P4 → P1 → P3"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P2 ang paunang paliwanag; P4 ang pahintulot na may hangganan; P1 ang aktuwal na pagpili ayon sa hangganan; P3 ang naging ulat. Ang limitasyong iyon at pagpiling iyon ay nangangailangan ng naunang malinaw na tinutukoy.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-filipino-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata. Piliin ang buong pagkakasunod.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P5 → P3 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P5 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P5 → P3 → P1 → P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P5 → P1 → P4 → P3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 ang obserbasyon; P5 ang kabuluhan nito sa tirahan; P1 ang ibang claim na hindi pa mapatutunayan; P3 ang mungkahing pinagsasama ang pagdiriwang at paghihintay; P4 ang paliwanag sa dalawang layuning iyon. Hindi dapat mauna ang dalawang layunin sa mungkahing naglatag sa mga ito o ang mungkahi sa hangganang batayan nito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-filipino-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata. Piliin ang buong pagkakasunod.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P3 → P1 → P5 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P5 → P3 → P1 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P3 → P5 → P1 → P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P3 → P5 → P4 → P1"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P2 ang unang layunin; P3 ang pakinabang at pagkawala sa salin; P5 ang pagkilalang magkaiba ang dalawang usapin; P1 ang rebisyong tumutugon sa pagkakaibang ito; P4 ang interpretasyon sa rebisyon. Ginagawa ng ibang ayos na mauna ang pagkakaiba o paraan bago ang pangyayaring nagbibigay rito ng kahulugan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-filipino-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata. Piliin ang buong pagkakasunod.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3 → P5 → P1 → P4 → P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3 → P1 → P5 → P4 → P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3 → P5 → P4 → P1 → P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3 → P5 → P1 → P2 → P4"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P3 ang pagbabalik; P5 ang dalawang pangangailangan; P1 ang pagkakaibang natutuhan mula sa karanasan; P4 ang kasunduang isinasagawa ang pagkakaiba; P2 ang konklusyon sa kasunduang iyon. Hindi sapat ang unang pangyayari lamang bilang karanasang iyon, at hindi dapat mauna ang konklusyon sa mismong malinaw na kasunduan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

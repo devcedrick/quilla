@@ -1,0 +1,289 @@
+[
+  {
+    "questionId": "f04-grammar-english-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the verb that completes the sentence in standard written English: “There ___ three spare keys in the drawer.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "is"
+      },
+      {
+        "choiceId": "b",
+        "text": "was"
+      },
+      {
+        "choiceId": "c",
+        "text": "are"
+      },
+      {
+        "choiceId": "d",
+        "text": "has"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The grammatical subject after there is the plural phrase three spare keys, so are agrees. Is/was are singular; has does not form this existential construction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Purdue OWL, Making Subjects and Verbs Agree, there/here construction; https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-english-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the question in standard written English: “Did the courier ___ the parcel before noon?”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "delivered"
+      },
+      {
+        "choiceId": "b",
+        "text": "delivering"
+      },
+      {
+        "choiceId": "c",
+        "text": "deliver"
+      },
+      {
+        "choiceId": "d",
+        "text": "delivers"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Did carries the past tense, so the following main verb takes the base form deliver. Delivered duplicates the tense marking; delivering and delivers do not form the required question with did.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Purdue OWL, Verb Tenses overview and independent auxiliary/base-form substitution check; https://owl.purdue.edu/owl/general_writing/grammar/index.html; retrieved2026-11-02. Original question."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-english-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the account of a finished event yesterday: “At noon yesterday, Lira ___ the parcel to the porter.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "hands"
+      },
+      {
+        "choiceId": "b",
+        "text": "has handed"
+      },
+      {
+        "choiceId": "c",
+        "text": "will hand"
+      },
+      {
+        "choiceId": "d",
+        "text": "handed"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Handed places the completed event at the specified past time. Present and future change the time; present perfect does not normally pair with a finished yesterday-time reference in this account.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Purdue OWL, Verb Tense Consistency, past and present-perfect time frames; https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verb_tense_consistency.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-english-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The caretaker locked the kitchen at 6:00. The porter arrived at 6:15 and could not enter. Which sentence preserves that sequence while making the earlier action explicit?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "When the porter arrived, the caretaker will lock the kitchen."
+      },
+      {
+        "choiceId": "b",
+        "text": "The caretaker had locked the kitchen before the porter arrived."
+      },
+      {
+        "choiceId": "c",
+        "text": "The caretaker locked the kitchen only after the porter arrived."
+      },
+      {
+        "choiceId": "d",
+        "text": "The caretaker has locked the kitchen before the porter arrives tomorrow."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Had locked marks an action completed before the past arrival. The alternatives move the locking to the future, reverse the sequence, or change the entire account to tomorrow.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Purdue OWL, Verb Tense Consistency, past perfect with earlier past action; https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verb_tense_consistency.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-english-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Intended meaning: only the folders with red tabs need scanning; other folders do not. Which sentence states this without treating the red-tab description as an aside about all folders?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The folders, which have red tabs, need scanning."
+      },
+      {
+        "choiceId": "b",
+        "text": "All folders need scanning, including those with red tabs."
+      },
+      {
+        "choiceId": "c",
+        "text": "Only the folders that have red tabs need scanning."
+      },
+      {
+        "choiceId": "d",
+        "text": "The folders need scanning, although none has a red tab."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The restrictive that-clause identifies the required subset, and only limits the instruction to it. The comma clause describes the folders as a whole; all widens the instruction; none contradicts the stated group.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Purdue OWL, That vs. Which, Using That and Using Which; retrieved by link from grammar index; https://owl.purdue.edu/owl/general_writing/grammar/that_vs_which.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-english-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Intended meaning: Tomas checked the list, but he did not correct or approve it. No claim is made about whether anyone else checked it. Which sentence best expresses that limit?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Tomas only checked the list; he neither corrected nor approved it."
+      },
+      {
+        "choiceId": "b",
+        "text": "Only Tomas checked the list; he corrected and approved it."
+      },
+      {
+        "choiceId": "c",
+        "text": "Tomas checked only the list and approved it afterward."
+      },
+      {
+        "choiceId": "d",
+        "text": "Tomas did not check the list but approved it."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Only limits Tomas’s action to checking, and the second clause makes that scope explicit. Only Tomas instead excludes other checkers and adds forbidden actions; checked only the list restricts the object, not the work; the final alternative denies checking.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Original modifier-scope analysis; Purdue OWL grammar index for general grammar reference; https://owl.purdue.edu/owl/general_writing/grammar/index.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-english-07",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the revision that repairs both agreement errors while retaining the meaning: “The artist and the curator agrees that the labels beside each painting needs revision.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The artist and the curator agrees that the labels beside each painting need revision."
+      },
+      {
+        "choiceId": "b",
+        "text": "The artist and the curator agree that the labels beside each painting needs revision."
+      },
+      {
+        "choiceId": "c",
+        "text": "The artist and the curator agrees that the label beside each painting need revision."
+      },
+      {
+        "choiceId": "d",
+        "text": "The artist and the curator agree that the labels beside each painting need revision."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Artist and curator are two people, requiring agree. Labels is plural, requiring need; each painting occurs inside a modifying phrase and does not change that subject. The distractors repair only one error or introduce another.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Purdue OWL, Making Subjects and Verbs Agree, compound subjects and intervening phrases; https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  }
+]

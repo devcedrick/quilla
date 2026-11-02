@@ -1,0 +1,860 @@
+[
+  {
+    "questionId": "f04-clerical-operations-01",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local filing rule: mark a case “closed” only after its final acknowledgement arrives. Work is finished, but that acknowledgement has not arrived. Which status follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Closed"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Awaiting acknowledgement"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Not received"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Withdrawn"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Finishing the work does not satisfy the stated closure trigger. Awaiting acknowledgement describes the remaining requirement; neither withdrawal nor nonreceipt is stated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-02",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An office uses O for an original and C for a copy. A folder must contain one O and two C documents. Which inventory matches?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Three originals"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Two originals and one copy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "One original and two copies"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Three copies"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Apply the supplied symbols literally: O=one original and two C=two copies. The other inventories reverse or omit a required category.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-03",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local code uses two data digits followed by their sum as one check digit. The data digits are 2 and 5, in that order. Which complete code is valid?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "257"
+      },
+      {
+        "choiceId": "c2",
+        "text": "252"
+      },
+      {
+        "choiceId": "c3",
+        "text": "255"
+      },
+      {
+        "choiceId": "c4",
+        "text": "725"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Keep 2 then 5 and append 2+5=7, giving 257. The check digit is appended, not placed first or copied from a data digit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-04",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local accession rule: a range includes BOTH endpoints. Which label covers exactly the three accession numbers 401,402 and 403?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "401–402"
+      },
+      {
+        "choiceId": "c2",
+        "text": "402–404"
+      },
+      {
+        "choiceId": "c3",
+        "text": "400–403"
+      },
+      {
+        "choiceId": "c4",
+        "text": "401–403"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The inclusive range 401–403 contains exactly 401,402,403. Other ranges omit or add accession numbers.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-05",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The upload desk accepts ONLY filenames ending in .pdf, ignoring letter case. Which filename qualifies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "permit.pdf.tmp"
+      },
+      {
+        "choiceId": "c2",
+        "text": "permit.PDF"
+      },
+      {
+        "choiceId": "c3",
+        "text": "permitpdf"
+      },
+      {
+        "choiceId": "c4",
+        "text": "permit.pdf.docx"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The complete ending .PDF matches .pdf when case is ignored. A .pdf sequence before another extension does not end the filename.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-06",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local register rule: a “draft” becomes “submitted” when its sender presses Submit; review starts later. A sender has just pressed Submit on a draft. What is its immediate status?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Approved"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Reviewed"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Submitted"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Archived"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The stated action triggers submitted. The later review and approval stages have not occurred, and archival is not the immediate transition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-07",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An inventory reconciliation compares quantities by item, without offsetting errors across items. Register: clips 18, pads 12, folders 25. Physical count: clips 20, pads 9, folders 25. Which discrepancy report is complete?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Clips +2; pads −3; folders 0"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Overall shortage 1; no item details"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Clips −2; pads +3; folders 0"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Clips +2; pads 0; folders−3"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Subtract each register quantity from its physical count: +2,−3,0. Netting to−1 conceals the separate discrepancies; reversing subtraction reverses their meanings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-08",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Reference: case QN-604, revision 02, district West. Entered: case QN-640, revision 02, district East. The local rule is to correct ONLY mismatching fields. Which corrections are required?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Case only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "District only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Revision and district"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Case and district"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The case digits are transposed and district differs. Revision 02 already matches, so it must stay as entered.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-09",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The local queue orders complete files by earliest due time, breaking equal due times by earlier arrival. P arrived 08:10, due 12:00; Q arrived 08:05, due 12:00; R arrived 08:20, due 11:30. All are complete. What is the queue?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P, Q, R"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R, Q, P"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q, P, R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R, P, Q"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "R is due first. P and Q tie at 12:00, so earlier-arriving Q precedes P. Arrival is a tie-break, not the primary key.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-10",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A room is booked every Tuesday 09:00–10:00 for training. A one-week notice cancels ONLY the booking on Tuesday 12 May. No replacement is scheduled. Which statement follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "All Tuesday bookings are cancelled"
+      },
+      {
+        "choiceId": "c2",
+        "text": "12 May moves to 13 May"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12 May is free; other Tuesdays remain booked"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Every Tuesday is free after 12 May"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A cancellation for one occurrence changes that occurrence only. It neither shifts the meeting nor removes the recurring series.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-11",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An office promises action within two WORKING days AFTER receipt. A request received after 15:00 counts as received on the next working day. Working days are Monday–Friday except the stated holiday. A request arrives Friday 15:30; Monday is a holiday. What is the due day?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Thursday"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tuesday"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Wednesday"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Friday"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The effective receipt is Tuesday, because Monday is a holiday. Count Wednesday as day 1 and Thursday as day 2; effective receipt day itself is excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-12",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local indexing rule: file a document under the service it REQUESTS, not a service mentioned only as background. A letter mentions an earlier water-bill dispute but asks only to change the address for library notices. Which primary index is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Water billing—disputes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Water billing—address changes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Library—disputes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Library—notices address changes"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The requested action concerns library notice addresses. The water-bill issue is background, and no library dispute is requested.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-13",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A transmittal lists enclosures A(2 pages), B(3 pages), C(1 page). The packet contains A pages 1–2, B pages 1 and 3, and C page 1. Local rule: release only a complete packet. What must be obtained?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A page 3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B page 2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C page 2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A second copy of C page 1"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A and C are complete. B should have pages 1,2,3 but lacks 2; the six-page requirement cannot be satisfied by an unrelated duplicate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-14",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A cashbook has opening PHP 500, receipt PHP 240, payment PHP 90 and receipt PHP 70 in that order. The clerk records successive balances 740,660,730. Which correction set is complete?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Change only 740 to 730"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Change only 660 to 650"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Change 660 to 650 and 730 to 720"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Change 740 to 750 and 730 to 720"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "740 is correct. After the payment the balance is 650, and adding 70 gives 720. Correcting only the first wrong balance leaves the later propagated error.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-15",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local routing: a safety-related report goes to Safety even if it also mentions equipment. Otherwise equipment reports go to Maintenance; all remaining reports go to Administration. A report describes a loose machine guard that could injure users. Where does it go first?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Safety"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Maintenance"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Administration"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Both Maintenance and Administration"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The safety condition overrides the equipment branch. The rule specifies one route, so a combined route is not the instructed result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-16",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local tracker marks a notice “fully acknowledged” only when EVERY required recipient replies. Required recipients are Unit A and Unit B; Unit C is copied for information. A and C reply, but B has not. What is the proper tracker entry?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Fully acknowledged"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Awaiting A only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Awaiting C only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Awaiting B"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "A has replied; C is not required. B is the only required recipient still missing, so the full acknowledgement condition is unmet.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-17",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two records have unique IDs A and B. A currently belongs to Intake; B belongs to Review. Their IDs must be SWAPPED while each record keeps its department and all its incoming links. Local rule: a rename atomically changes an ID and every incoming link to that record; a rename is forbidden if its destination ID is already occupied. T is an unused temporary ID. Which ordered plan completes the swap and leaves T unused?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A→T; T→B; B→A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A→T; B→A; T→B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A→T; B→T; T→A"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A→T; B→A; A→B"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "After A→T, Intake and its links use T, and A is vacant. B→A moves Review and its links into A, vacating B. T→B then moves Intake into B and vacates T. Renaming T→B before B is vacated collides at B; renaming B→T collides at T; ending with A→B moves Review back to B and strands Intake at T. All offered plans start with the same valid step, so later states determine the result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-18",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An office must staff Intake, Payments and Release in BOTH morning and afternoon. Each shift requires three DISTINCT workers. Skills: Neri—Intake or Payments; Oli—Payments or Release; Paz—Intake or Release; Quin—all three. Paz is absent in the morning; Neri is absent in the afternoon. Anyone working both shifts must change counters. Which complete plan works?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Morning I:Neri, P:Oli, R:Quin; Afternoon I:Paz, P:Oli, R:Quin"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Morning I:Neri, P:Oli, R:Quin; Afternoon I:Quin, P:Oli, R:Paz"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Morning I:Neri, P:Oli, R:Quin; Afternoon I:Paz, P:Quin, R:Oli"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Morning I:Quin, P:Neri, R:Oli; Afternoon I:Paz, P:Quin, R:Oli"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "In the valid plan, morning Neri/Oli/Quin cover Intake/Payments/Release and afternoon Paz/Quin/Oli cover Intake/Payments/Release. All are present and qualified. Both returning workers change counters: Oli moves Payments→Release and Quin moves Release→Payments. The plan that keeps afternoon Oli at Payments and Quin at Release repeats both counters; another repeats Oli at Payments; the plan starting morning Release with Oli repeats Oli at Release. Every alternative otherwise covers all counters with qualified available staff, so the cross-shift rule must be checked.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-19",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Dispatch waves leave at 10:00 and 11:00; each holds at most 3 parcels. A(2 parcels) is ready 09:40; B(1) is ready 09:50 but may leave only in a LATER wave than A; C(2) is ready 10:20; D(1) is ready 09:30. Each job stays together; all jobs must leave by 11:00. Which plan works?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10:00 A+B; 11:00 C+D"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10:00 D; 11:00 A+B+C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10:00 A+C; 11:00 B+D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10:00 A+D; 11:00 B+C"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "A must leave 10:00 so B can leave a later wave. C is not ready for 10:00 and requires 2 slots at 11:00; B adds 1 there. D therefore joins A at 10:00. Capacities are 3 and 3, and every release condition holds.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-20",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Reconciliation rules: count each transaction ID once using its latest numbered version; an entry marked cancelled contributes 0 even if an earlier version was posted. Amounts are signed. X:v1 +200 posted, v2 +250 posted; Y:v1 −80 posted, v2 −80 cancelled; Z:v1 +40 posted, duplicate identical v1 +40 posted; W:v1 −30 posted. What net change should be posted?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "+260"
+      },
+      {
+        "choiceId": "c2",
+        "text": "+340"
+      },
+      {
+        "choiceId": "c3",
+        "text": "+180"
+      },
+      {
+        "choiceId": "c4",
+        "text": "+220"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "X contributes 250, Y contributes 0 after its latest cancellation, Z contributes 40 once, and W contributes −30. Net=260. Counting duplicate Z or retaining Y's earlier posted state gives the tempting incorrect totals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-21",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Custody transfers only on a receiving signature whose seal code matches the file. Transport alone has no effect; a mismatched code makes a signature invalid. Initially Ada holds P(seal 31) and Q(seal 42). P: Ben signs code 31 at 09:12; Cora signs code 13 at 09:19; Dino signs code 31 at 09:23. Q: Cora signs code 42 at 09:15; a messenger departs to return it to Ada at 09:18; Ada signs code 42 at 09:22. At 09:21, who has recorded custody of P and Q respectively?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Cora; Ada"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Ben; Cora"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ben; Ada"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Cora; Cora"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For P, Ben's 09:12 signature is valid; Cora's 09:19 signature uses the wrong seal and cannot transfer custody; Dino's valid signature is still in the future. For Q, Cora's 09:15 signature is valid and Ada has not yet signed at 09:21. Thus Ben and Cora retain recorded custody. Both codes and the time boundary must be applied; mere transport does not transfer Q.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-clerical-operations-22",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local retention: count 30 calendar days AFTER closure; closure day is day 0. Every day covered by a hold is excluded from this count. Hold start and release dates are BOTH excluded days. Disposal is allowed when 30 counted days have elapsed and no hold remains active. Today is 5 June 2027. P closed 6 May, no hold. Q closed 1 May, hold 11–15 May. R closed 1 May, hold 11–16 May. S closed 1 May, hold 11 May–5 June inclusive. Which COMPLETE list may be disposed of today?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P and Q"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P and R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P, Q and R"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "P counts 7–31 May(25 days)+1–5 June(5)=30. Q counts 2–31 May(30) minus 5 held days, plus 5 June days=30. R excludes 6 held days, leaving 29; S is still held through today. Thus only P and Q qualify. Inclusive hold endpoints and exclusion of closure day both change borderline results.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

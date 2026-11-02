@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f04-reading-english-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "According to the passage, which activity requires borrower registration?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Attending the indoor talk"
+      },
+      {
+        "choiceId": "b",
+        "text": "Joining the gathering under cloudy skies"
+      },
+      {
+        "choiceId": "c",
+        "text": "Taking binoculars beyond the marked viewing area"
+      },
+      {
+        "choiceId": "d",
+        "text": "Listening to the hilltop sky talk"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The restriction explicitly attaches to taking equipment beyond the marked area. Attendance and listening remain open, and cloud cover changes the talk’s location rather than the registration rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-english-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which description best matches Ana’s response?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Anger that makes her refuse to enter the market"
+      },
+      {
+        "choiceId": "b",
+        "text": "Nostalgia accompanied by a willingness to experience the changed place"
+      },
+      {
+        "choiceId": "c",
+        "text": "Indifference to every trace of the old market"
+      },
+      {
+        "choiceId": "d",
+        "text": "Certainty that all the new vendors are former neighbours"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The pang and search show attachment to the past, while sitting, eating and observing show engagement with the changed market. Anger/refusal and indifference contradict these actions; vendor identities are unstated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-english-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Why is the proposed comparison relevant?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It would hold light more constant while comparing insect access, reducing one competing explanation"
+      },
+      {
+        "choiceId": "b",
+        "text": "It would hold insect access constant while comparing light, directly testing the effect of more insect visits"
+      },
+      {
+        "choiceId": "c",
+        "text": "It would make watering vary with insect access so the two effects could be attributed to insects alone"
+      },
+      {
+        "choiceId": "d",
+        "text": "It would settle the cause from the original results without needing another observation"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Equal-light covers would better isolate insect access from the light difference. Holding insect access fixed while varying light tests a different comparison; confounding watering introduces another explanation; a proposed future comparison is not a completed causal result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-english-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the editor’s main purpose in retaining the disagreement?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "To preserve distinct recollections while making their limits visible"
+      },
+      {
+        "choiceId": "b",
+        "text": "To show that every recollection is equally accurate in every detail"
+      },
+      {
+        "choiceId": "c",
+        "text": "To prove that the dock workers never agreed on anything"
+      },
+      {
+        "choiceId": "d",
+        "text": "To avoid giving readers any information about dates"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The editor retains each account and supplies dates rather than flattening disagreement into one story. This preserves usable detail and visible limits; it neither certifies all details nor hides dates or generalizes to all workers.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-english-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which summary best captures the curator’s reasoning under the supplied rules?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The photograph establishes intact dispatch; the receipt establishes only the box count, so receipt alone cannot establish intact carrier handover"
+      },
+      {
+        "choiceId": "b",
+        "text": "The photograph establishes the earlier condition but not the post-packing condition; the receipt establishes intact contents as well as count"
+      },
+      {
+        "choiceId": "c",
+        "text": "The photograph and receipt establish their respective date/count facts and therefore together prove the carrier caused the damage"
+      },
+      {
+        "choiceId": "d",
+        "text": "The photograph supports its dated condition and the receipt a box count; neither alone supplies the later intact-condition findings proposed"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The photograph’s date gap prevents establishing post-packing condition; the receipt records boxes rather than contents. One rival correctly limits the receipt but overextends the photograph; another correctly limits the photograph but overextends the receipt. Promoting the two limited facts into carrier causation is also unsupported. Both evidential limits must be retained.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-english-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which assessment best connects the findings to both parts of the proposed remedy?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The returned reports establish N’s superiority; random assignment alone would recover the missing outcomes"
+      },
+      {
+        "choiceId": "b",
+        "text": "The reported advantage may reflect experience composition; assignment addresses that issue, while follow-up addresses missing outcomes"
+      },
+      {
+        "choiceId": "c",
+        "text": "Equal within-group report rates prove every novice failed; follow-up would only confirm the known failures"
+      },
+      {
+        "choiceId": "d",
+        "text": "Missing reports prove that selection of varieties was random; assignment would address only nonresponse"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Experienced growers chose N more often, so the aggregate reported difference need not be a variety effect. Random assignment addresses that selection issue; follow-up addresses unknown outcomes among nonrespondents. Similar observed rates do not establish the missing outcomes, and assignment cannot retrospectively recover them.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

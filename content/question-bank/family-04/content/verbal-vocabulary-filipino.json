@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f04-vocabulary-filipino-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Masigasig na tinuturuan ni Belen ang mga baguhang mananahi kahit walang paligsahan. Ano ang MASIGASIG sa pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mapagmataas sa kapuwa"
+      },
+      {
+        "choiceId": "b",
+        "text": "Palabago-bago ng pasiya"
+      },
+      {
+        "choiceId": "c",
+        "text": "Masipag at masugid sa gawain"
+      },
+      {
+        "choiceId": "d",
+        "text": "Nagmamadaling matapos lamang"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang masigasig ay masugid o may malasakit sa tungkulin. Hindi nito kailangang ipahiwatig ang pagmamataas, pabago-bagong pasiya, o pagmamadali.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Authoritative Filipino dictionary, headword masigásig; https://kwfdiksiyonaryo.ph/?query=masig%C3%A1sig; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-filipino-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Masalimuot ang pag-aayos ng dula dahil magkakaugnay ang iskedyul, kasuotan at pag-iilaw. Alin ang kahulugan ng MASALIMUOT?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mahal ngunit mabilis gawin"
+      },
+      {
+        "choiceId": "b",
+        "text": "Bago at hindi pa nasusubukan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Lihim at bawal ipaalam"
+      },
+      {
+        "choiceId": "d",
+        "text": "Maraming bahaging mahirap pag-ugnayin"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Maraming magkakaibang elementong kailangang isaayos ang diin ng masalimuot. Hindi awtomatikong mahal, lihim o bago ang isang masalimuot na gawain.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Authoritative Filipino dictionary, headword masalimuot; https://diksiyonaryo.ph/list/masalimuot?page=1; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-filipino-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Matapos buksan ang malalaking bintana, naging maaliwalas ang silid. Alin ang pinakamalapit na paglalarawan sa MAALIWALAS dito?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mas maliwanag at maginhawang tingnan"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mas matao at mas maingay"
+      },
+      {
+        "choiceId": "c",
+        "text": "Mas sarado at mas mainit"
+      },
+      {
+        "choiceId": "d",
+        "text": "Mas mamahalin at mas makulay"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang kahulugan ay kaugnay ng luwag, ayos at liwanag ng pook. Hindi halaga, dami ng tao o dagdag na ingay ang ipinahahayag.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Authoritative Filipino dictionary, headword aliwalas / maaliwalas; https://diksiyonaryo.ph/search/aliwalas; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-filipino-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Tahasan niyang sinabi, “Hindi pa tiyak kung matutuloy ang biyahe.” Aling paglalahad ang nagpapanatili sa paraan ng pagsasalita at sa nilalaman nito?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Palihim siyang nangakong tiyak ang biyahe"
+      },
+      {
+        "choiceId": "b",
+        "text": "Tuwiran niyang ipinahayag na hindi pa tiyak ang biyahe"
+      },
+      {
+        "choiceId": "c",
+        "text": "Tuwiran niyang pinatunayang kanselado ang biyahe"
+      },
+      {
+        "choiceId": "d",
+        "text": "Malabo niyang ipinahiwatig na natuloy na ang biyahe"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ang tahasan ay tumutukoy sa tuwirang pagpapahayag, hindi sa katiyakan ng pangyayaring sinasabi. Malinaw ang kaniyang pagbanggit ng kawalang-katiyakan; hindi ito pangako, patunay ng kanselasyon o ulat ng natapos na biyahe.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Authoritative Filipino dictionary, headword tahas, pang-uri sense 1; https://diksiyonaryo.ph/list/T?page=27; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-filipino-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "“Maigting ang lubid sa pagitan ng dalawang poste. Maigting din ang pagtatalo tungkol sa badyet.” Aling pares ang angkop sa dalawang gamit ng MAIGTING, ayon sa pagkakasunod?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Banat; maikli"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mahaba; matindi"
+      },
+      {
+        "choiceId": "c",
+        "text": "Banat; mahinahon"
+      },
+      {
+        "choiceId": "d",
+        "text": "Banat; matindi"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Pisikal na pagkabanat ang gamit sa lubid; tindi ng pangyayari ang gamit sa pagtatalo. May mga karibal na tama ang unang kahulugan o ang ikalawa lamang, kaya kailangang maitugma ang dalawang gamit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Authoritative Filipino dictionary, headword igting, physical and intensity senses; derivative maigting; https://kwfdiksiyonaryo.ph/?query=igt%C3%ADng; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-filipino-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "“Tinahak ng pintor ang rutang ginamit noon ng kaniyang guro, ngunit iba ang pinili niyang mga paksa.” Sa kontekstong ito, alin ang pinakamatibay na kahulugan ng TINAHAK nang hindi nagdaragdag ng di-sinasabing paggaya?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Dinaanan niya ang ruta, ngunit hindi nito sinasabing ginaya niya ang mga paksa ng guro"
+      },
+      {
+        "choiceId": "b",
+        "text": "Tiningnan niya ang ruta sa mapa, ngunit hindi ito aktuwal na dinaanan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ginaya niya ang mga paksa ng guro, bagaman hindi siya naglakbay sa ruta"
+      },
+      {
+        "choiceId": "d",
+        "text": "Dinaanan niya ang ruta at samakatuwid ay ginaya rin ang mga paksa ng guro"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Tinahak ang ruta ay aktuwal na pagdaan/paglalakbay. Hindi nito kahulugang tumingin lamang sa mapa o gumaya ng paksa; tahasang naiiba ang mga paksang pinili. May karibal na tama ang pagdaan ngunit maling idinadagdag ang paggaya.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Authoritative Filipino dictionary, headword tahak, pandiwa travel/route senses; https://diksiyonaryo.ph/list/T?page=27; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  }
+]
