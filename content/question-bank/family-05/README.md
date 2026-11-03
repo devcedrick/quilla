@@ -1,5 +1,7 @@
 # Family 05 — original CSE practice bank
 
+> Current chart revision: [revision-2 visual practice](../../../docs/content/family05-chart-revision.md) adds versioned chart assets. Earlier table-only inventory statements below describe the original authoring pass.
+
 This independent offline authoring family contains270 original questions. Quilla is not affiliated with the Philippine Civil Service Commission. No actual or leaked CSC examination questions are used.
 
 | Subject             | Total | Easy | Medium | Hard |

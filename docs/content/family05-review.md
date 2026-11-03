@@ -1,5 +1,7 @@
 # Family 05 authoring, review and validation
 
+> Current chart revision: [revision-2 visual practice](family05-chart-revision.md) supersedes the original table-only inventory and checksum below. The earlier authoring report remains historical evidence.
+
 Date:2026-11-03. This is original offline CSE preparation content. Quilla is not affiliated with the Philippine Civil Service Commission. No actual or leaked examination questions were used. A family is an authoring batch, not a fixed exam.
 
 ## Inventory and cognitive demand

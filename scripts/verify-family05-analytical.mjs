@@ -3,16 +3,15 @@ import { readFileSync } from "node:fs";
 const root = "content/question-bank/family-05/";
 const read = (p) => JSON.parse(readFileSync(root + p, "utf8"));
 const data = read("content/analytical-data.json"),
-  logic = read("content/analytical-logic.json"),
-  refs = read("references/analytical-data.json");
+  logic = read("content/analytical-logic.json");
 const answer = (kind, n) => {
   const q = (kind === "data" ? data : logic)[n - 1];
   return q.choices.find((c) => c.choiceId === q.correctChoiceId).text;
 };
-const table = (id) =>
-  refs
-    .find((r) => r.referenceId === "f05-data-" + id)
-    .blocks.find((b) => b.type === "table").rows;
+const chartData = JSON.parse(
+  readFileSync("scripts/family05-chart-data.json", "utf8"),
+);
+const table = (id) => chartData["f05-data-" + id].rows;
 const sum = (a) => a.reduce((x, y) => x + y, 0);
 const permutations = (a) =>
   a.length

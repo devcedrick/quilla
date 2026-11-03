@@ -6,6 +6,9 @@ const root = "content/question-bank/family-04/";
 const read = (path) => JSON.parse(readFileSync(root + path, "utf8"));
 const questions = read("content/analytical-data.json");
 const references = read("references/analytical-data.json");
+const canonical = JSON.parse(
+  readFileSync("scripts/family04-chart-data.json", "utf8"),
+);
 const question = (n) =>
   questions.find(
     (q) => q.questionId === `f04-analytical-data-${String(n).padStart(2, "0")}`,
@@ -17,7 +20,8 @@ const answer = (n) => {
 const rows = (id) =>
   references
     .find((r) => r.referenceId === `f04-data-${id}`)
-    .blocks.find((b) => b.type === "table").rows;
+    .blocks.find((b) => b.type === "table")?.rows ??
+  canonical[`f04-data-${id}`].rows;
 const sum = (a) => a.reduce((x, y) => x + y, 0);
 const findings = {};
 

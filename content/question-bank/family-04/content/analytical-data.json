@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f04-analytical-data-01",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -41,12 +41,12 @@
     },
     "reference": {
       "referenceId": "f04-data-commute",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-02",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -86,12 +86,12 @@
     },
     "reference": {
       "referenceId": "f04-data-commute",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-03",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -131,12 +131,12 @@
     },
     "reference": {
       "referenceId": "f04-data-commute",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-04",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -176,7 +176,7 @@
     },
     "reference": {
       "referenceId": "f04-data-commute",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
@@ -255,7 +255,7 @@
       }
     ],
     "correctChoiceId": "choice-1",
-    "explanation": "A costs 240+70×8=800; B costs 840; C costs 500+420=920. D can supply only 60, so its apparent PHP 800 quote is infeasible for 70.",
+    "explanation": "A costs 240+70\u00d78=800; B costs 840; C costs 500+420=920. D can supply only 60, so its apparent PHP 800 quote is infeasible for 70.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -300,7 +300,7 @@
       }
     ],
     "correctChoiceId": "choice-2",
-    "explanation": "B meets both capacity 100≥75 and delivery 2≤2. A has enough capacity but takes 3 days; C takes 4 days; D meets the deadline but can supply only 60.",
+    "explanation": "B meets both capacity 100\u226575 and delivery 2\u22642. A has enough capacity but takes 3 days; C takes 4 days; D meets the deadline but can supply only 60.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -361,7 +361,7 @@
   },
   {
     "questionId": "f04-analytical-data-09",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -401,12 +401,12 @@
     },
     "reference": {
       "referenceId": "f04-data-test",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-10",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -446,12 +446,12 @@
     },
     "reference": {
       "referenceId": "f04-data-test",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-11",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -491,12 +491,12 @@
     },
     "reference": {
       "referenceId": "f04-data-test",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-12",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -536,7 +536,7 @@
     },
     "reference": {
       "referenceId": "f04-data-test",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
@@ -705,7 +705,7 @@
       }
     ],
     "correctChoiceId": "choice-2",
-    "explanation": "With k changers the first counts are A=18−k,B=14,C=18+k. For k≤3, B remains last and loses. At k=4, A and B tie for elimination, which is excluded. At k=5, A13 is eliminated; its remaining13 voters rank B next, making B27 against C23, so B wins. Seven produces a final25–25 tie, and eight gives C an immediate26-vote majority. This is why moving support toward C can make B win: it changes who is eliminated.",
+    "explanation": "With k changers the first counts are A=18\u2212k,B=14,C=18+k. For k\u22643, B remains last and loses. At k=4, A and B tie for elimination, which is excluded. At k=5, A13 is eliminated; its remaining13 voters rank B next, making B27 against C23, so B wins. Seven produces a final25\u201325 tie, and eight gives C an immediate26-vote majority. This is why moving support toward C can make B win: it changes who is eliminated.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -721,7 +721,7 @@
   },
   {
     "questionId": "f04-analytical-data-17",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -761,12 +761,12 @@
     },
     "reference": {
       "referenceId": "f04-data-scanners",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-18",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -806,12 +806,12 @@
     },
     "reference": {
       "referenceId": "f04-data-scanners",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-19",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -840,7 +840,7 @@
       }
     ],
     "correctChoiceId": "choice-3",
-    "explanation": "P can scan200 pages but only6 complete30-page batches=180 pages. Q can scan150 pages, exactly6×25. Total330 pages. Adding raw capacities gives350 and incorrectly includes an unfinished P batch.",
+    "explanation": "P can scan200 pages but only6 complete30-page batches=180 pages. Q can scan150 pages, exactly6\u00d725. Total330 pages. Adding raw capacities gives350 and incorrectly includes an unfinished P batch.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -851,12 +851,12 @@
     },
     "reference": {
       "referenceId": "f04-data-scanners",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-20",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -885,7 +885,7 @@
       }
     ],
     "correctChoiceId": "choice-4",
-    "explanation": "Whole-batch capacities before loss are P floor(20×8/40)=4,Q floor(20×6/40)=3,R floor(24×7/40)=4, so all offered allocations of ten initially fit. To survive any single four-minute loss without reassignment, each scanner must stay below its own worst-case capacity: P floor(16×8/40)=3,Q floor(16×6/40)=2,R floor(20×7/40)=3. These sum to8, less than10. Each offered allocation overloads at least one scanner when that scanner loses four minutes.",
+    "explanation": "Whole-batch capacities before loss are P floor(20\u00d78/40)=4,Q floor(20\u00d76/40)=3,R floor(24\u00d77/40)=4, so all offered allocations of ten initially fit. To survive any single four-minute loss without reassignment, each scanner must stay below its own worst-case capacity: P floor(16\u00d78/40)=3,Q floor(16\u00d76/40)=2,R floor(20\u00d77/40)=3. These sum to8, less than10. Each offered allocation overloads at least one scanner when that scanner loses four minutes.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -896,7 +896,7 @@
     },
     "reference": {
       "referenceId": "f04-data-scanners",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
@@ -1081,7 +1081,7 @@
   },
   {
     "questionId": "f04-analytical-data-25",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1110,7 +1110,7 @@
       }
     ],
     "correctChoiceId": "choice-2",
-    "explanation": "The10–14 row has8 tasks. Fourteen is an interval endpoint, not a frequency;6 and10 belong to other rows.",
+    "explanation": "The10\u201314 row has8 tasks. Fourteen is an interval endpoint, not a frequency;6 and10 belong to other rows.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -1121,12 +1121,12 @@
     },
     "reference": {
       "referenceId": "f04-data-bands",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-26",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1166,12 +1166,12 @@
     },
     "reference": {
       "referenceId": "f04-data-bands",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-27",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1188,7 +1188,7 @@
       },
       {
         "choiceId": "choice-2",
-        "text": "7⅓ minutes"
+        "text": "7\u2153 minutes"
       },
       {
         "choiceId": "choice-3",
@@ -1200,7 +1200,7 @@
       }
     ],
     "correctChoiceId": "choice-2",
-    "explanation": "Use every interval minimum:6×0+10×5+8×10+6×15=220, so the minimum mean is220/30=7⅓ minutes. This is attainable because all minima are permitted integers. Midpoints yield9⅓ and are an estimate, not a forced value; endpoint19 is not the mean.",
+    "explanation": "Use every interval minimum:6\u00d70+10\u00d75+8\u00d710+6\u00d715=220, so the minimum mean is220/30=7\u2153 minutes. This is attainable because all minima are permitted integers. Midpoints yield9\u2153 and are an estimate, not a forced value; endpoint19 is not the mean.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -1211,12 +1211,12 @@
     },
     "reference": {
       "referenceId": "f04-data-bands",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-28",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1241,11 +1241,11 @@
       },
       {
         "choiceId": "choice-4",
-        "text": "It is exactly 9⅓ minutes."
+        "text": "It is exactly 9\u2153 minutes."
       }
     ],
     "correctChoiceId": "choice-2",
-    "explanation": "For30 tasks the central ranks are15 and16. The first6 are in0–4; ranks7–16 lie in5–9. Both middle values therefore lie in5–9, and so does their mean. The exact median is unknown;9⅓ is the midpoint-estimated overall mean, not the median.",
+    "explanation": "For30 tasks the central ranks are15 and16. The first6 are in0\u20134; ranks7\u201316 lie in5\u20139. Both middle values therefore lie in5\u20139, and so does their mean. The exact median is unknown;9\u2153 is the midpoint-estimated overall mean, not the median.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -1256,12 +1256,12 @@
     },
     "reference": {
       "referenceId": "f04-data-bands",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-29",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1301,12 +1301,12 @@
     },
     "reference": {
       "referenceId": "f04-data-grid",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-30",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1346,12 +1346,12 @@
     },
     "reference": {
       "referenceId": "f04-data-grid",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-31",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1380,7 +1380,7 @@
       }
     ],
     "correctChoiceId": "choice-1",
-    "explanation": "A-to-D distance=|6−1|+|5−1|=9. Through C:|4−1|+|2−1|=4, then|6−4|+|5−2|=5; total9. C lies within the coordinate rectangle, so this requirement adds0 blocks. Treating C as an arbitrary detour would wrongly add distance.",
+    "explanation": "A-to-D distance=|6\u22121|+|5\u22121|=9. Through C:|4\u22121|+|2\u22121|=4, then|6\u22124|+|5\u22122|=5; total9. C lies within the coordinate rectangle, so this requirement adds0 blocks. Treating C as an arbitrary detour would wrongly add distance.",
     "provenance": {
       "kind": "original",
       "author": "Quilla",
@@ -1391,12 +1391,12 @@
     },
     "reference": {
       "referenceId": "f04-data-grid",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f04-analytical-data-32",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1436,7 +1436,7 @@
     },
     "reference": {
       "referenceId": "f04-data-grid",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   }
 ]

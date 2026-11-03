@@ -1,7 +1,7 @@
 [
   {
     "referenceId": "f04-data-commute",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "language": "english",
@@ -12,14 +12,11 @@
         "text": "Each entry counts distinct commuters travelling from its row origin to its column destination. Within-district journeys are included on the diagonal. Each commuter makes one recorded journey. These are fictional counts."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f04-commute-chart",
         "caption": "One morning: recorded commuter movements",
-        "headers": ["Origin / Destination", "East", "North", "South"],
-        "rows": [
-          ["East", "18", "24", "12"],
-          ["North", "16", "20", "14"],
-          ["South", "10", "22", "24"]
-        ]
+        "alt": "One morning: recorded commuter movements. Exact labelled data are fully described below.",
+        "description": "East: East = 18; North = 24; South = 12. North: East = 16; North = 20; South = 14. South: East = 10; North = 22; South = 24."
       }
     ],
     "provenance": {
@@ -72,7 +69,7 @@
   },
   {
     "referenceId": "f04-data-test",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "language": "english",
@@ -83,13 +80,11 @@
         "text": "All 200 tiles were machine-tested and then independently checked with a perfect reference inspection, giving this cross-classification. These figures describe only this fictional batch, not any medical test."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f04-test-chart",
         "caption": "Tile inspection verification",
-        "headers": ["Actual condition", "Flagged by machine", "Not flagged"],
-        "rows": [
-          ["Defective", "36", "4"],
-          ["Sound", "24", "136"]
-        ]
+        "alt": "Tile inspection verification. Exact labelled data are fully described below.",
+        "description": "Defective: Flagged by machine = 36; Not flagged = 4. Sound: Flagged by machine = 24; Not flagged = 136."
       }
     ],
     "provenance": {
@@ -142,7 +137,7 @@
   },
   {
     "referenceId": "f04-data-scanners",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "language": "english",
@@ -153,19 +148,11 @@
         "text": "The page count covers only productive time, which is 60 minus downtime. Each scanner works at a constant productive rate derived from this log. Future-window questions use those same rates. Whole batches may be assigned to any scanner unless a question restricts them. A scanner handles one batch at a time."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f04-scanners-chart",
         "caption": "Scanner logs for one 60-minute window",
-        "headers": [
-          "Scanner",
-          "Pages scanned",
-          "Downtime within window (minutes)",
-          "Pages per whole batch"
-        ],
-        "rows": [
-          ["P", "360", "15", "30"],
-          ["Q", "300", "10", "25"],
-          ["R", "280", "20", "40"]
-        ]
+        "alt": "Scanner logs for one 60-minute window. Exact labelled data are fully described below.",
+        "description": "P: Pages scanned = 360; Downtime within window (minutes) = 15; Pages per whole batch = 30. Q: Pages scanned = 300; Downtime within window (minutes) = 10; Pages per whole batch = 25. R: Pages scanned = 280; Downtime within window (minutes) = 20; Pages per whole batch = 40."
       }
     ],
     "provenance": {
@@ -221,7 +208,7 @@
   },
   {
     "referenceId": "f04-data-bands",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "language": "english",
@@ -232,15 +219,11 @@
         "text": "Each task took a whole number of minutes. Only these grouped counts are known; individual times within each interval are not supplied. The median of an even number of observations is the mean of the two central sorted values."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f04-bands-chart",
         "caption": "Task times grouped into intervals",
-        "headers": ["Time in whole minutes", "Number of tasks"],
-        "rows": [
-          ["0–4 inclusive", "6"],
-          ["5–9 inclusive", "10"],
-          ["10–14 inclusive", "8"],
-          ["15–19 inclusive", "6"]
-        ]
+        "alt": "Task times grouped into intervals. Exact labelled data are fully described below.",
+        "description": "0\u20134 inclusive: Number of tasks = 6. 5\u20139 inclusive: Number of tasks = 10. 10\u201314 inclusive: Number of tasks = 8. 15\u201319 inclusive: Number of tasks = 6."
       }
     ],
     "provenance": {
@@ -254,7 +237,7 @@
   },
   {
     "referenceId": "f04-data-grid",
-    "version": 1,
+    "version": 2,
     "family": 4,
     "module": "analytical",
     "language": "english",
@@ -265,20 +248,11 @@
         "text": "Coordinates refer to an unobstructed rectangular street grid. Travel follows horizontal and vertical blocks only, in either direction. The shortest grid distance between points is the sum of the absolute east-coordinate and north-coordinate differences."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f04-grid-chart",
         "caption": "Coordinates of fictional service points",
-        "headers": [
-          "Point",
-          "East coordinate (blocks)",
-          "North coordinate (blocks)",
-          "Has a ramp"
-        ],
-        "rows": [
-          ["A", "1", "1", "Yes"],
-          ["B", "1", "5", "No"],
-          ["C", "4", "2", "Yes"],
-          ["D", "6", "5", "Yes"]
-        ]
+        "alt": "Coordinates of fictional service points. Exact labelled data are fully described below.",
+        "description": "A: East coordinate (blocks) = 1; North coordinate (blocks) = 1; Has a ramp = Yes. B: East coordinate (blocks) = 1; North coordinate (blocks) = 5; Has a ramp = No. C: East coordinate (blocks) = 4; North coordinate (blocks) = 2; Has a ramp = Yes. D: East coordinate (blocks) = 6; North coordinate (blocks) = 5; Has a ramp = Yes."
       }
     ],
     "provenance": {

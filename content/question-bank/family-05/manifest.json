@@ -1,7 +1,7 @@
 {
   "formatVersion": 2,
   "corpusId": "cse-2027-family05",
-  "revision": 1,
+  "revision": 2,
   "taxonomyId": "cse-taxonomy-2027-v2",
   "blueprintIds": ["cse-professional-2027-v3", "cse-subprofessional-2027-v3"],
   "seedFamilies": [5],
@@ -30,8 +30,8 @@
         "references/analytical-data.json",
         "references/verbal.json"
       ],
-      "assetFiles": []
+      "assetFiles": ["references/chart-assets.json"]
     }
   ],
-  "datasetChecksum": "38bc66974e585f9d643f2f84009dd18b1bb032097b5f90a9a9bedae60a390c05"
+  "datasetChecksum": "fda9e925818518e70800d88eba022056fb15eb8c64010813366f82d832c305af"
 }

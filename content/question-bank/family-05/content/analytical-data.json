@@ -1,7 +1,7 @@
 [
   {
     "questionId": "f05-analytical-data-01",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -41,12 +41,12 @@
     },
     "reference": {
       "referenceId": "f05-data-pictograms",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-02",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -86,12 +86,12 @@
     },
     "reference": {
       "referenceId": "f05-data-pictograms",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-03",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -131,12 +131,12 @@
     },
     "reference": {
       "referenceId": "f05-data-pictograms",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-04",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -176,12 +176,12 @@
     },
     "reference": {
       "referenceId": "f05-data-pictograms",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-05",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -221,12 +221,12 @@
     },
     "reference": {
       "referenceId": "f05-data-rain",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-06",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -266,12 +266,12 @@
     },
     "reference": {
       "referenceId": "f05-data-rain",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-07",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -311,12 +311,12 @@
     },
     "reference": {
       "referenceId": "f05-data-rain",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-08",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -356,12 +356,12 @@
     },
     "reference": {
       "referenceId": "f05-data-rain",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-09",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -401,12 +401,12 @@
     },
     "reference": {
       "referenceId": "f05-data-contest",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-10",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -446,12 +446,12 @@
     },
     "reference": {
       "referenceId": "f05-data-contest",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-11",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -491,12 +491,12 @@
     },
     "reference": {
       "referenceId": "f05-data-contest",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-12",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -536,7 +536,7 @@
     },
     "reference": {
       "referenceId": "f05-data-contest",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
@@ -721,7 +721,7 @@
   },
   {
     "questionId": "f05-analytical-data-17",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -761,12 +761,12 @@
     },
     "reference": {
       "referenceId": "f05-data-packing",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-18",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -806,12 +806,12 @@
     },
     "reference": {
       "referenceId": "f05-data-packing",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-19",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -851,12 +851,12 @@
     },
     "reference": {
       "referenceId": "f05-data-packing",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-20",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -896,7 +896,7 @@
     },
     "reference": {
       "referenceId": "f05-data-packing",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
@@ -1081,7 +1081,7 @@
   },
   {
     "questionId": "f05-analytical-data-25",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1121,12 +1121,12 @@
     },
     "reference": {
       "referenceId": "f05-data-percentiles",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-26",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1166,12 +1166,12 @@
     },
     "reference": {
       "referenceId": "f05-data-percentiles",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-27",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1211,12 +1211,12 @@
     },
     "reference": {
       "referenceId": "f05-data-percentiles",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-28",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1256,7 +1256,7 @@
     },
     "reference": {
       "referenceId": "f05-data-percentiles",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
@@ -1441,7 +1441,7 @@
   },
   {
     "questionId": "f05-analytical-data-33",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1481,12 +1481,12 @@
     },
     "reference": {
       "referenceId": "f05-data-ranking",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-34",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1526,12 +1526,12 @@
     },
     "reference": {
       "referenceId": "f05-data-ranking",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-35",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1571,12 +1571,12 @@
     },
     "reference": {
       "referenceId": "f05-data-ranking",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-36",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1616,12 +1616,12 @@
     },
     "reference": {
       "referenceId": "f05-data-ranking",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-37",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1661,12 +1661,12 @@
     },
     "reference": {
       "referenceId": "f05-data-cutting",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-38",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1706,12 +1706,12 @@
     },
     "reference": {
       "referenceId": "f05-data-cutting",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-39",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1751,12 +1751,12 @@
     },
     "reference": {
       "referenceId": "f05-data-cutting",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   },
   {
     "questionId": "f05-analytical-data-40",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "subjectId": "analytical_ability",
@@ -1796,7 +1796,7 @@
     },
     "reference": {
       "referenceId": "f05-data-cutting",
-      "referenceVersion": 1
+      "referenceVersion": 2
     }
   }
 ]

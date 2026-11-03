@@ -28,16 +28,22 @@ strengthens 64 questions and three dedicated passages without relabelling diffic
 It is offline authored content, not imported or published database content.
 
 Family 04 is authored in **[family-04/](family-04/manifest.json)** with 270
-questions, 32 text/table references and the per-subject 30/50/20 editorial
+questions, 32 references and five chart images and the per-subject 30/50/20 editorial
 allocation. Its [review ledger](../../docs/content/family04-review.md) records
 source evidence, independent AI review, validation and pending human review.
 It is offline authored content, not imported or published database content.
 
 Family 05 is authored in **[family-05/](family-05/manifest.json)** with 270
-questions, 34 text/table references and the per-subject 30/50/20 editorial
+questions, 34 references and seven chart images and the per-subject 30/50/20 editorial
 allocation. Its [review ledger](../../docs/content/family05-review.md) records
 source evidence, substantive originality/difficulty repairs, independent AI
 checks and pending human review. It is offline authored content.
+
+Family 06 is authored in **[family-06/](family-06/manifest.json)** with 270
+questions, 38 references and eight chart images and the per-subject 30/50/20 editorial
+allocation. Its [review ledger](../../docs/content/family06-review.md) records
+source evidence, independent AI checks, originality repairs and pending human
+review. It is offline authored content.
 
 ## Layout within each family
 

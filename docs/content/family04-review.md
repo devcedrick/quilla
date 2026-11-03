@@ -1,5 +1,7 @@
 # Family 04 review and validation
 
+> Current chart revision: [revision-2 visual practice](family04-chart-revision.md) supersedes the original table-only inventory and checksum below. The earlier authoring report remains historical evidence.
+
 Review date: 2026-11-02. Original offline CSE practice content. Quilla is not affiliated with the Philippine Civil Service Commission. No actual or leaked CSC examination material is used.
 
 ## Inventory

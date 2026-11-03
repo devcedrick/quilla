@@ -1,0 +1,117 @@
+{
+  "f04-data-commute": {
+    "type": "table",
+    "caption": "One morning: recorded commuter movements",
+    "headers": ["Origin / Destination", "East", "North", "South"],
+    "rows": [
+      ["East", "18", "24", "12"],
+      ["North", "16", "20", "14"],
+      ["South", "10", "22", "24"]
+    ]
+  },
+  "f04-data-quotes": {
+    "type": "table",
+    "caption": "Fictional printing quotations",
+    "headers": [
+      "Supplier",
+      "Setup fee (PHP)",
+      "Price per booklet (PHP)",
+      "Maximum booklets",
+      "Delivery days"
+    ],
+    "rows": [
+      ["A", "240", "8", "80", "3"],
+      ["B", "0", "12", "100", "2"],
+      ["C", "500", "6", "150", "4"],
+      ["D", "100", "10", "60", "2"]
+    ]
+  },
+  "f04-data-test": {
+    "type": "table",
+    "caption": "Tile inspection verification",
+    "headers": ["Actual condition", "Flagged by machine", "Not flagged"],
+    "rows": [
+      ["Defective", "36", "4"],
+      ["Sound", "24", "136"]
+    ]
+  },
+  "f04-data-ballots": {
+    "type": "table",
+    "caption": "Ranked preferences for a workshop theme",
+    "headers": [
+      "Voter group",
+      "Number of voters",
+      "First preference",
+      "Second preference",
+      "Third preference"
+    ],
+    "rows": [
+      ["G1", "18", "A", "B", "C"],
+      ["G2", "14", "B", "C", "A"],
+      ["G3", "10", "C", "A", "B"],
+      ["G4", "8", "C", "B", "A"]
+    ]
+  },
+  "f04-data-scanners": {
+    "type": "table",
+    "caption": "Scanner logs for one 60-minute window",
+    "headers": [
+      "Scanner",
+      "Pages scanned",
+      "Downtime within window (minutes)",
+      "Pages per whole batch"
+    ],
+    "rows": [
+      ["P", "360", "15", "30"],
+      ["Q", "300", "10", "25"],
+      ["R", "280", "20", "40"]
+    ]
+  },
+  "f04-data-venues": {
+    "type": "table",
+    "caption": "Facilities at five fictional venues",
+    "headers": [
+      "Venue",
+      "Step-free entrance",
+      "Backup power",
+      "Meeting room",
+      "Secure storage",
+      "Parking",
+      "Cost"
+    ],
+    "rows": [
+      ["J", "Yes", "Yes", "No", "Yes", "Yes", "4"],
+      ["K", "No", "Yes", "Yes", "Yes", "No", "3"],
+      ["L", "Yes", "No", "No", "Yes", "Yes", "2"],
+      ["M", "No", "Yes", "Yes", "No", "Yes", "5"],
+      ["N", "Yes", "No", "Yes", "Yes", "Yes", "6"]
+    ]
+  },
+  "f04-data-bands": {
+    "type": "table",
+    "caption": "Task times grouped into intervals",
+    "headers": ["Time in whole minutes", "Number of tasks"],
+    "rows": [
+      ["0\u20134 inclusive", "6"],
+      ["5\u20139 inclusive", "10"],
+      ["10\u201314 inclusive", "8"],
+      ["15\u201319 inclusive", "6"]
+    ]
+  },
+  "f04-data-grid": {
+    "type": "table",
+    "caption": "Coordinates of fictional service points",
+    "headers": [
+      "Point",
+      "East coordinate (blocks)",
+      "North coordinate (blocks)",
+      "Has a ramp"
+    ],
+    "rows": [
+      ["A", "1", "1", "Yes"],
+      ["B", "1", "5", "No"],
+      ["C", "4", "2", "Yes"],
+      ["D", "6", "5", "Yes"]
+    ]
+  }
+}

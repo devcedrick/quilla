@@ -1,7 +1,7 @@
 [
   {
     "referenceId": "f05-data-pictograms",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -12,14 +12,11 @@
         "text": "Each diamond represents six blankets; each circle represents two. Counts of symbols are exact; do not assume both symbol types have equal value. Staff counts are distinct people assigned for this shift."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-pictograms-chart",
         "caption": "Fictional shelter pictogram register",
-        "headers": ["Shelter", "Diamonds", "Circles", "Staff"],
-        "rows": [
-          ["A", "3", "2", "2"],
-          ["B", "2", "4", "5"],
-          ["C", "4", "1", "4"]
-        ]
+        "alt": "Pictogram for Fictional shelter pictogram register. Exact values in description.",
+        "description": "A: Diamonds = 3, Circles = 2, Staff = 2. B: Diamonds = 2, Circles = 4, Staff = 5. C: Diamonds = 4, Circles = 1, Staff = 4."
       }
     ],
     "provenance": {
@@ -33,7 +30,7 @@
   },
   {
     "referenceId": "f05-data-rain",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -41,18 +38,14 @@
     "blocks": [
       {
         "type": "text",
-        "text": "The table records rainfall separately during each interval. Minutes are elapsed since the storm began. Intervals have no gaps or overlap. The whole-storm average includes dry intervals."
+        "text": "The chart records rainfall separately during each interval. Minutes are elapsed since the storm began. Intervals have no gaps or overlap. The whole-storm average includes dry intervals."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-rain-chart",
         "caption": "One fictional rainstorm",
-        "headers": ["Elapsed interval (minutes)", "Rainfall (mm)"],
-        "rows": [
-          ["0–15", "3"],
-          ["15–45", "4"],
-          ["45–60", "0"],
-          ["60–90", "5"]
-        ]
+        "alt": "Interval rainfall bar chart for One fictional rainstorm. Exact values in description.",
+        "description": "0–15: Rainfall (mm) = 3. 15–45: Rainfall (mm) = 4. 45–60: Rainfall (mm) = 0. 60–90: Rainfall (mm) = 5."
       }
     ],
     "provenance": {
@@ -66,7 +59,7 @@
   },
   {
     "referenceId": "f05-data-contest",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -77,15 +70,11 @@
         "text": "Every event is scored independently. For each entrant discard exactly ONE lowest event score, then add the other three. A tie in this total is broken by the higher single-event score among all four. If that also ties, entrants share the place. Scores are nonnegative whole numbers."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-contest-chart",
         "caption": "Four-event practice competition",
-        "headers": ["Entrant", "Event1", "Event2", "Event3", "Event4"],
-        "rows": [
-          ["A", "8", "3", "7", "6"],
-          ["B", "9", "6", "6", "4"],
-          ["C", "7", "7", "5", "6"],
-          ["D", "10", "2", "5", "4"]
-        ]
+        "alt": "Small-multiple event score bars for Four-event practice competition. Exact values in description.",
+        "description": "A: Event1 = 8, Event2 = 3, Event3 = 7, Event4 = 6. B: Event1 = 9, Event2 = 6, Event3 = 6, Event4 = 4. C: Event1 = 7, Event2 = 7, Event3 = 5, Event4 = 6. D: Event1 = 10, Event2 = 2, Event3 = 5, Event4 = 4."
       }
     ],
     "provenance": {
@@ -135,7 +124,7 @@
   },
   {
     "referenceId": "f05-data-packing",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -146,14 +135,11 @@
         "text": "A box stands2 cm high and has a3 cm by2 cm base; each weighs0.8 kg. The inside of the crate is10 cm by7 cm by5 cm. Boxes stay upright. A layer is formed from full straight strips across the10-cm side: a strip2 cm deep holds three boxes; a strip3 cm deep holds five boxes. Only these strip layouts are allowed: P=three2-cm strips; Q=two3-cm strips; R=two2-cm strips plus one3-cm strip. A layout leaves unused depth when necessary; boxes do not hang over the crate. Whole full layers only, with at most two layers. Total load must not exceed16 kg."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-packing-chart",
         "caption": "Fictional display-box loading",
-        "headers": ["Layout", "Number of 2-cm strips", "Number of 3-cm strips"],
-        "rows": [
-          ["P", "3", "0"],
-          ["Q", "0", "2"],
-          ["R", "2", "1"]
-        ]
+        "alt": "Grouped strip-count bars for Fictional display-box loading. Exact values in description.",
+        "description": "P: Number of 2-cm strips = 3, Number of 3-cm strips = 0. Q: Number of 2-cm strips = 0, Number of 3-cm strips = 2. R: Number of 2-cm strips = 2, Number of 3-cm strips = 1."
       }
     ],
     "provenance": {
@@ -203,7 +189,7 @@
   },
   {
     "referenceId": "f05-data-percentiles",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -214,17 +200,11 @@
         "text": "Each person has exactly one score. Define the percentile P(s) as100 times the number of people with scores STRICTLY BELOW s divided by the total number of people. For an even count, the median is the mean of the two middle sorted scores. Newcomer questions retain every original person."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-percentiles-chart",
         "caption": "Exact scores in a fictional exercise",
-        "headers": ["Score", "People"],
-        "rows": [
-          ["40", "2"],
-          ["50", "3"],
-          ["60", "4"],
-          ["70", "3"],
-          ["80", "2"],
-          ["90", "1"]
-        ]
+        "alt": "Score frequency bar chart for Exact scores in a fictional exercise. Exact values in description.",
+        "description": "40: People = 2. 50: People = 3. 60: People = 4. 70: People = 3. 80: People = 2. 90: People = 1."
       }
     ],
     "provenance": {
@@ -270,7 +250,7 @@
   },
   {
     "referenceId": "f05-data-ranking",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -281,15 +261,11 @@
         "text": "Larger quality and service scores are better. For integer weight w with0≤w≤10, the aggregate score is w×quality+(10−w)×service. A candidate strictly dominates another when it is at least as good on both criteria and better on at least one. Equal aggregate scores are tied; there is no other tie-break."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-ranking-chart",
         "caption": "Two-criterion fictional shortlist",
-        "headers": ["Candidate", "Quality", "Service"],
-        "rows": [
-          ["A", "9", "3"],
-          ["B", "6", "7"],
-          ["C", "4", "8"],
-          ["D", "5", "5"]
-        ]
+        "alt": "Quality / service scatter plot for Two-criterion fictional shortlist. Exact values in description.",
+        "description": "A: Quality = 9, Service = 3. B: Quality = 6, Service = 7. C: Quality = 4, Service = 8. D: Quality = 5, Service = 5."
       }
     ],
     "provenance": {
@@ -303,7 +279,7 @@
   },
   {
     "referenceId": "f05-data-cutting",
-    "version": 1,
+    "version": 2,
     "family": 5,
     "module": "analytical",
     "language": "english",
@@ -311,18 +287,14 @@
     "blocks": [
       {
         "type": "text",
-        "text": "Each sheet is20 cm wide. Type A strips are3 cm wide; type B strips5 cm. Each produced strip consumes its width plus1 cm for its own cut, including its trailing cut; unused width is discarded. Only the FOUR patterns in the table may be used, once per sheet; patterns may repeat on different sheets. Count entire strips; joining scraps is forbidden."
+        "text": "Each sheet is20 cm wide. Type A strips are3 cm wide; type B strips5 cm. Each produced strip consumes its width plus1 cm for its own cut, including its trailing cut; unused width is discarded. Only the FOUR patterns in the chart may be used, once per sheet; patterns may repeat on different sheets. Count entire strips; joining scraps is forbidden."
       },
       {
-        "type": "table",
+        "type": "image",
+        "assetId": "f05-data-cutting-chart",
         "caption": "Permitted fictional cutting patterns",
-        "headers": ["Pattern", "A strips", "B strips"],
-        "rows": [
-          ["P", "5", "0"],
-          ["Q", "2", "2"],
-          ["R", "3", "1"],
-          ["S", "0", "3"]
-        ]
+        "alt": "Grouped strip-count bars for Permitted fictional cutting patterns. Exact values in description.",
+        "description": "P: A strips = 5, B strips = 0. Q: A strips = 2, B strips = 2. R: A strips = 3, B strips = 1. S: A strips = 0, B strips = 3."
       }
     ],
     "provenance": {
