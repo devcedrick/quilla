@@ -1,0 +1,207 @@
+[
+  {
+    "questionId": "f06-vocabulary-filipino-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Masinop si Mila sa pag-aayos ng maliliit na piyesa sa magkakahiwalay na lalagyan. Alin ang pinakamalapit sa masinop dito?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Laging nagmamadali"
+      },
+      {
+        "choiceId": "c",
+        "text": "Mahilig magpaliban"
+      },
+      {
+        "choiceId": "d",
+        "text": "Walang pakialam"
+      },
+      {
+        "choiceId": "a",
+        "text": "Maingat at maayos"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang masinop ay may kaayusan at pag-iingat sa gawain; hindi ito basta bilis o pagpapaliban.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, masinop headword, relevant contextual sense; https://diksiyonaryo.ph/search/masinop; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-filipino-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Masigasig ang pangkat sa pangangalap ng kuwentong-bayan. Ano ang diwa ng masigasig?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Padalos-dalos"
+      },
+      {
+        "choiceId": "d",
+        "text": "Laging nag-aalinlangan"
+      },
+      {
+        "choiceId": "a",
+        "text": "May sipag at sigla"
+      },
+      {
+        "choiceId": "b",
+        "text": "Walang pag-asa"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ipinapakita nito ang sigasig sa gawain, hindi kawalan ng pag-asa o padalos-dalos na paraan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, masigasig headword, relevant contextual sense; https://diksiyonaryo.ph/search/masigasig; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-filipino-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Saklaw ng ulat ang paglalayag sa loob lamang ng look; wala itong pag-aaral sa karagatan. Ano ang saklaw sa pangungusap?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Dami ng mambabasa"
+      },
+      {
+        "choiceId": "a",
+        "text": "Hangganan ng paksang tinatalakay"
+      },
+      {
+        "choiceId": "b",
+        "text": "Pangalan ng sumulat"
+      },
+      {
+        "choiceId": "c",
+        "text": "Kalidad ng pagkalimbag"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang saklaw dito ay lawak o hangganan ng paksa, hindi awtoridad o pisikal na anyo.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, saklaw headword, relevant contextual sense; https://diksiyonaryo.ph/search/saklaw; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-filipino-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Salungat sa tala ng unang pangkat ang bagong bilang, kaya muling binilang ang mga punla. Ano ang salungat dito?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Hindi tugma"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mas detalyado"
+      },
+      {
+        "choiceId": "c",
+        "text": "Mas maaga"
+      },
+      {
+        "choiceId": "d",
+        "text": "Hindi nabasa"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Tumutukoy ito sa hindi pagkakatugma ng impormasyon. Walang pahiwatig na mas maaga o hindi nabasa ang bilang.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, salungat headword, relevant contextual sense; https://diksiyonaryo.ph/search/salungat; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-filipino-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ang saliksik tungkol sa lumang pantalan ay gumamit ng panayam at mga dokumento. Aling kahulugan ng saliksik ang angkop?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Basta paghula"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pagdiriwang ng anibersaryo"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pag-uulit ng sabi-sabi"
+      },
+      {
+        "choiceId": "a",
+        "text": "Sistematikong pagsisiyasat"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang paksa at paggamit ng ebidensiya ay tumutugma sa sistematikong pag-aaral, hindi sa ibang rehiyonal na kahulugan ng salita.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, saliksik headword, relevant contextual sense; https://diksiyonaryo.ph/search/saliksik; retrieved 2026-11-03"
+      ]
+    }
+  }
+]

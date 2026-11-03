@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f06-paragraph-english-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2–P1–P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1–P2–P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2–P3–P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3–P2–P1"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Spreading precedes drying and stacking; wrapping the stack comes last.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-english-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "P1–P2–P3–P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2–P3–P4–P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2–P1–P4–P3"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P1–P3–P4"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The crack supplies this defect; unreliability motivates replacement; replacement precedes its test.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-english-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "P4–P2–P1–P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2–P4–P3–P1"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P4–P1–P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2–P1–P4–P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Proposal establishes ten minutes; objection responds to it; that objection prompts shortening; shortened versions can then be tested.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-english-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "P2–P4–P3–P1"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P4–P1–P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2–P1–P4–P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4–P2–P1–P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The introduction establishes two designs; first then second supports instead; both can then be summarised.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-english-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3–P5–P2–P1–P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3–P2–P5–P1–P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3–P5–P1–P2–P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3–P5–P2–P4–P1"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The reported increase precedes its claimed cause; yet challenges that attribution; therefore proposes the matched trial; such a trial then states its inferential role. Alternatives break challenge/recommendation dependencies.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-english-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "P2–P3–P4–P1–P5"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2–P4–P1–P3–P5"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2–P4–P3–P5–P1"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P4–P3–P1–P5"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Goal precedes failed first method; instead introduces the fallback range; that fallback evaluates it before later narrowing supplies new evidence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

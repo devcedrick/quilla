@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f06-grammar-filipino-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang wastong pangungusap na nagtatanong nang tuwiran.",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Saan inilagay ang timbangan."
+      },
+      {
+        "choiceId": "c",
+        "text": "Saan inilagay ang timbangan,"
+      },
+      {
+        "choiceId": "d",
+        "text": "Saan inilagay ang timbangan;"
+      },
+      {
+        "choiceId": "a",
+        "text": "Saan inilagay ang timbangan?"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Tandang pananong ang kailangan sa tuwirang tanong.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "KWF Manwal sa Masinop na Pagsulat (2014), sections9 and12 punctuation/quotation conventions; accessible publisher PDF https://kwfwikaatkultura.ph/download/21720/?tmstv=1710437195; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-filipino-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Punan: Inilatag niya ang banig ___ maingat.",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "na ang"
+      },
+      {
+        "choiceId": "d",
+        "text": "nangang"
+      },
+      {
+        "choiceId": "a",
+        "text": "nang"
+      },
+      {
+        "choiceId": "b",
+        "text": "ng"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nang ang ginagamit sa pariralang nagsasaad ng paraan ng paglalatag.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "KWF Manwal sa Masinop na Pagsulat (2014), sections9 and12 punctuation/quotation conventions; accessible publisher PDF https://kwfwikaatkultura.ph/download/21720/?tmstv=1710437195; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-filipino-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Alin ang nagpapanatiling layunin ang ikalawang sugnay: Sinukat muna ang pinto ___ magkasya ang bagong aparador?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "samantalang"
+      },
+      {
+        "choiceId": "a",
+        "text": "upang"
+      },
+      {
+        "choiceId": "b",
+        "text": "dahil"
+      },
+      {
+        "choiceId": "c",
+        "text": "bagaman"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Upang ang tahasang nagsasaad ng layunin. Dahil ay dahilan, bagaman ay pagsalungat, at samantalang ay paghahambing o kasabay na pangyayari.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original meaning-constrained conjunction application; KWF MMP general writing context; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-filipino-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Layunin ng pangungusap na si Lira lamang ang nagtahi, ngunit maaaring may ibang bumili ng tela. Alin ang malinaw?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Si Lira lamang ang nagtahi ng kurtina."
+      },
+      {
+        "choiceId": "b",
+        "text": "Si Lira lamang ang bumili ng tela."
+      },
+      {
+        "choiceId": "c",
+        "text": "Kurtina lamang ang tinahi ni Lira."
+      },
+      {
+        "choiceId": "d",
+        "text": "Tinahi ni Lira ang tanging kurtina."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang lamang ay naglilimita sa nagtahi, hindi sa mamimili o sa bagay na tinahi.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original scope-of-modifier analysis; bilingual editorial review pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-filipino-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Punan ang dalawang magkaibang gamit: Kumuha ___ sinulid si Pina at nagtahi ___ dahan-dahan.",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "nang; ng"
+      },
+      {
+        "choiceId": "c",
+        "text": "ng; ng"
+      },
+      {
+        "choiceId": "d",
+        "text": "nang; nang"
+      },
+      {
+        "choiceId": "a",
+        "text": "ng; nang"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ng ang pananda ng kinuhang bagay; nang ang kaugnay ng paraang dahan-dahan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "KWF Manwal sa Masinop na Pagsulat (2014), sections9 and12 punctuation/quotation conventions; accessible publisher PDF https://kwfwikaatkultura.ph/download/21720/?tmstv=1710437195; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-filipino-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Si Olan ang nakakita sa bangkang butas habang naglalakad sa pampang. Alin ang malinaw na rebisyon nang hindi pinapalitan ang nakakita?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Ang butas na bangka ang naglalakad nang makita si Olan."
+      },
+      {
+        "choiceId": "d",
+        "text": "Nakita ng kasama ni Olan ang butas habang naglalakad."
+      },
+      {
+        "choiceId": "a",
+        "text": "Habang naglalakad sa pampang, nakita ni Olan ang butas na bangka."
+      },
+      {
+        "choiceId": "b",
+        "text": "Habang naglalakad sa pampang, nakita ng bangka si Olan."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang unang sugnay at nakita ni Olan ay magkaugnay sa parehong tao. Nagbabago o nagiging di-makatwiran ang gumaganap sa iba.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original actor/modifier analysis; bilingual editorial review pending."
+      ]
+    }
+  }
+]

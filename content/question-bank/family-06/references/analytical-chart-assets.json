@@ -1,0 +1,138 @@
+[
+  {
+    "assetId": "f06-returns-chart",
+    "path": "references/assets/f06-returns.png",
+    "mediaType": "image/png",
+    "sha256": "010762161f64bba4ff281f39975a4b6d639cc85008bee66b1fb5f253309507d3",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-weights-chart",
+    "path": "references/assets/f06-weights.png",
+    "mediaType": "image/png",
+    "sha256": "f989634b1ef1dd72235497698994dbed4c3b536dd573be629837f5c31d331f88",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-queue-chart",
+    "path": "references/assets/f06-queue.png",
+    "mediaType": "image/png",
+    "sha256": "4e11d2a9eceae3a6b362cf1219639b89230291596ad265bf24a9ab8f9916feba",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-routes-chart",
+    "path": "references/assets/f06-routes.png",
+    "mediaType": "image/png",
+    "sha256": "c5451995612ba519fcba55275fcb1fbb8fa5f3cd8a651bfa0e54fe6dd544c1ee",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-ratings-chart",
+    "path": "references/assets/f06-ratings.png",
+    "mediaType": "image/png",
+    "sha256": "2665a87f95254dc78e5e6dde2f6da0227098519017555e2eba24aebeb934057f",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-survival-chart",
+    "path": "references/assets/f06-survival.png",
+    "mediaType": "image/png",
+    "sha256": "8cbc131f18d8f81d59558776cd8ee009c7ea58fc13ecba1122ebdf6e9469215f",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-inventory-chart",
+    "path": "references/assets/f06-inventory.png",
+    "mediaType": "image/png",
+    "sha256": "6c07725e9a063a2abcd9a5d60ca3905e105b1805611ab65e0bf3d65a02c09501",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "assetId": "f06-pairs-chart",
+    "path": "references/assets/f06-pairs.png",
+    "mediaType": "image/png",
+    "sha256": "5d0b992ad671a06308a496223ee5f41a25925a6665931ea6df157ab20eb2e20c",
+    "width": 1800,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  }
+]

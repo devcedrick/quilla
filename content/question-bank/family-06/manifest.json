@@ -1,0 +1,37 @@
+{
+  "formatVersion": 2,
+  "corpusId": "cse-2027-family06",
+  "revision": 2,
+  "taxonomyId": "cse-taxonomy-2027-v2",
+  "blueprintIds": ["cse-professional-2027-v3", "cse-subprofessional-2027-v3"],
+  "seedFamilies": [6],
+  "sources": [
+    {
+      "root": "",
+      "questionFiles": [
+        "content/alphabetizing.json",
+        "content/analytical-data.json",
+        "content/analytical-logic.json",
+        "content/clerical.json",
+        "content/general.json",
+        "content/grammar-english.json",
+        "content/grammar-filipino.json",
+        "content/numerical.json",
+        "content/paragraph-english.json",
+        "content/paragraph-filipino.json",
+        "content/reading-english.json",
+        "content/reading-filipino.json",
+        "content/spelling.json",
+        "content/sufficiency.json",
+        "content/vocabulary-english.json",
+        "content/vocabulary-filipino.json"
+      ],
+      "referenceFiles": [
+        "references/analytical-data.json",
+        "references/verbal.json"
+      ],
+      "assetFiles": ["references/analytical-chart-assets.json"]
+    }
+  ],
+  "datasetChecksum": "766bc083283cb85052c0576fc0bc3629a8047f7f944b2e90ca37e0aa41227c30"
+}

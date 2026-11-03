@@ -1,0 +1,412 @@
+[
+  {
+    "questionId": "f06-spelling-01",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a payment-and-records proofreading exercise, which is the standard spelling of the word meaning a written acknowledgement of payment?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "reciept"
+      },
+      {
+        "choiceId": "c2",
+        "text": "receipt"
+      },
+      {
+        "choiceId": "c3",
+        "text": "receip"
+      },
+      {
+        "choiceId": "c4",
+        "text": "receipte"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The verified Dictionary.com headword is receipt. The other forms are misspellings; this tests the full written form.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-02",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a payment-and-records proofreading exercise, which is the standard spelling of the word meaning to put things apart?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "seperate"
+      },
+      {
+        "choiceId": "c2",
+        "text": "separate"
+      },
+      {
+        "choiceId": "c3",
+        "text": "separat"
+      },
+      {
+        "choiceId": "c4",
+        "text": "separatee"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The verified Dictionary.com headword is separate. The other forms are misspellings; this tests the full written form.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-03",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a payment-and-records proofreading exercise, which is the standard spelling of the word meaning upkeep of equipment?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "maintainance"
+      },
+      {
+        "choiceId": "c2",
+        "text": "maintenance"
+      },
+      {
+        "choiceId": "c3",
+        "text": "maintenanc"
+      },
+      {
+        "choiceId": "c4",
+        "text": "maintenancee"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The verified Dictionary.com headword is maintenance. The other forms are misspellings; this tests the full written form.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-04",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A form has three fields: P=\"privilege\", Q=\"liason\", R=\"receipt\". Which action repairs all spelling errors without changing correctly spelled fields?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Change Q to liaison only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Change P to privelege and Q to liaison"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Change Q to liaison and R to reciept"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Change P to privelege only"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P privilege and R receipt already match verified dictionary headwords. Only Q is misspelled and must become liaison; the other edits damage correct fields or omit the repair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-05",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A proofreader reports exactly ONE error in the line \"The liaison recorded the occurence and issued a receipt.\" Which assessment is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The report is correct: occurrence needs repair"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The report misses an error in liaison"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The report misses an error in receipt"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The report is wrong because occurence is correct"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Liaison and receipt are correctly spelled; occurence omits the secondr and must become occurrence. Exactly one spelling error is present.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-06",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local proofreading rule: correct ordinary words but preserve approved codes exactly. Rows are code / description: R1 GUARANTEE / \"occurence receipt\"; R2 RECIEPT / \"guarantee reciept\"; R3 OCCURENCE / \"occurrence guarantee\". What is the correct number of changed fields in the CODE and DESCRIPTION columns, respectively?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0 and 2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 and 2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0 and 3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2 and 1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Every approved code is protected even when it resembles a misspelling. R1 description requires occurence→occurrence; R2 description requires reciept→receipt; R3 has no error. Thus zero code fields and two description fields change. Count fields, not apparent errors across both columns.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com headwords occurrence, receipt, guarantee; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/guarantee; retrieved 2026-11-03; full headword spellings verified. Original proofreading policy and text."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-07",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two drafts read A=\"guarantee / threshold\" and B=\"guarentee / threshhold\". Which diagnosis is accurate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A has no errors; B has two"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A has one error; B has one"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A has two errors; B has none"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A has no errors; B has one"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Both words in A are correctly spelled; both in B are misspellings. Guarantee ends in antee; threshold does not have the extra h shown in threshhold.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-08",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three log extracts read A=\"questionnaire / threshold\", B=\"questionaire / itinery\", C=\"itinerary / threshhold\". Which error-count report is correct for A, B, C respectively?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0 / 2 / 1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 / 1 / 1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0 / 1 / 2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1 / 2 / 0"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A has two correctly spelled words and zero errors. B has two errors: questionnaire needs double n and itinerary needs its full internal sequence. C has correct itinerary but misspelled threshhold; threshold is the verified form. The counts are 0, 2, 1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com verified headwords receipt, separate, maintenance, privilege, liaison, occurrence, guarantee, threshold, questionnaire, itinerary; https://www.dictionary.com/browse/receipt; https://www.dictionary.com/browse/separate; https://www.dictionary.com/browse/maintenance; https://www.dictionary.com/browse/privilege; https://www.dictionary.com/browse/liaison; https://www.dictionary.com/browse/occurrence; https://www.dictionary.com/browse/guarantee; https://www.dictionary.com/browse/threshold; https://www.dictionary.com/browse/questionnaire; https://www.dictionary.com/browse/itinerary; retrieved 2026-11-03; spelling forms verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-09",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Office proofreading rule: change ordinary words only in BODY fields; preserve QUOTE and CODE fields verbatim. Current fields are B1 BODY \"heirarchy consencus\"; B2 BODY \"supercede\"; Q QUOTE \"heirarchy\"; C CODE \"CONSENCUS\". A proposal lists final B1 / B2 / Q / C in that order. Which proposal makes every required spelling correction and no prohibited edit?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "hierarchy consensus / supersede / heirarchy / CONSENCUS"
+      },
+      {
+        "choiceId": "c2",
+        "text": "hierarchy consensus / supersede / hierarchy / CONSENCUS"
+      },
+      {
+        "choiceId": "c3",
+        "text": "hierarchy consencus / supersede / heirarchy / CONSENCUS"
+      },
+      {
+        "choiceId": "c4",
+        "text": "hierarchy consensus / supercede / heirarchy / CONSENCUS"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "B1 needs hierarchy and consensus; B2 needs supersede. Q and C must retain their supplied strings despite their resemblance to misspellings. All proposals repair hierarchy in B1, so that single familiar spelling does not identify the key. The rivals respectively alter a protected quote, omit consensus, or omit supersede.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com headwords hierarchy, consensus, supersede; https://www.dictionary.com/browse/hierarchy; https://www.dictionary.com/browse/consensus; https://www.dictionary.com/browse/supersede; retrieved 2026-11-03; full headword spellings verified. Original proofreading policy and text."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-spelling-10",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A local audit permits whole-word replacements only in BODY text and requires matching body occurrences in BOTH versions to be corrected. It forbids changes to QUOTE fields and to words embedded in codes. Version A BODY: \"concientious auxilliary perseverance\"; QUOTE: \"auxilliary\". Version B BODY: \"concientious auxiliary perserverance\"; CODE: \"auxilliary-R7\". The audit reports edited BODY word occurrences / edited QUOTE occurrences / edited CODE occurrences. Which final spellings and counts comply?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "conscientious, auxiliary, perseverance; 4 / 0 / 0"
+      },
+      {
+        "choiceId": "c2",
+        "text": "conscientious, auxiliary, perseverance; 4 / 1 / 0"
+      },
+      {
+        "choiceId": "c3",
+        "text": "conscientious, auxiliary, perseverance; 4 / 0 / 1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "conscientious, auxilliary, perseverance; 3 / 0 / 0"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Both concientious body occurrences require conscientious (two edits). Version A auxilliary requires auxiliary (one); Version B perserverance requires perseverance (one). Correct auxiliary and perseverance occurrences stay unchanged. Total body edits four, quote and code edits zero. A global replacement would damage the protected quote or code; leaving auxilliary in body misses one required repair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Dictionary.com headwords conscientious, auxiliary, perseverance; https://www.dictionary.com/browse/conscientious; https://www.dictionary.com/browse/auxiliary; https://www.dictionary.com/browse/perseverance; retrieved 2026-11-03; full headword spellings verified. Original proofreading policy and text."
+      ]
+    }
+  }
+]

@@ -1,0 +1,1682 @@
+[
+  {
+    "questionId": "f06-analytical-logic-01",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a filing metaphor, INDEX relates to LOCATION as LEGEND relates to what?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Symbol meaning"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Distance travelled"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Page binding"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Printing date"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "An index locates an entry; a legend explains a symbol. Other choices name unrelated properties.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-02",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Every amber token is circular. Token J is amber. What follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "J is square"
+      },
+      {
+        "choiceId": "c2",
+        "text": "J is circular"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Every circle is amber"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No circle is amber"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Apply the stated inclusion to J; the converse is not given.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-03",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A door opens exactly when both switches are on. Left is on; right is off. Is the door open?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Yes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It alternates"
+      },
+      {
+        "choiceId": "c3",
+        "text": "No"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Cannot be determined"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Both are required and one is absent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-04",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A code writes V for each vowel A,E,I,O,U and C for every other English letter, preserving order. What is the code for OAR?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "VCV"
+      },
+      {
+        "choiceId": "c2",
+        "text": "CVV"
+      },
+      {
+        "choiceId": "c3",
+        "text": "CCV"
+      },
+      {
+        "choiceId": "c4",
+        "text": "VVC"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "O and A are vowels and R a consonant; the classification in order is V,V,C. This code records letter classes rather than advancing letters.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-05",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "By definition a reversible step can be undone. Which operation is reversible on a known starting whole number?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Add seven"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Replace it with zero"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Discard its last digit"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Round it to a multiple of ten"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Subtracting seven recovers the original; the other operations can merge distinct inputs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-06",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Exactly one of two lamps is lit. The blue lamp is lit. What is true of the white lamp?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "It is lit"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It is unlit"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both lamps are broken"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Its state is unknown"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Exactly one excludes both lit and both unlit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-07",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Rank rises from bronze to silver to gold. Ina is silver and Jo is bronze. Who ranks higher?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Jo"
+      },
+      {
+        "choiceId": "c2",
+        "text": "They tie"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ina"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No comparison is possible"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Silver is above bronze under the explicit order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-08",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A pattern repeats red, blue, blue. The first symbol is red. What is the sixth symbol?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Red"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Green"
+      },
+      {
+        "choiceId": "c3",
+        "text": "No symbol"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Blue"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Positions3 and6 finish cycles and are blue.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-09",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "All stored copies are numbered. Some numbered objects are sketches. Must any stored copy be a sketch?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "It is not forced"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Yes, all copies"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Yes, at least one"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No numbered objects are sketches"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The sketches could be numbered objects outside the stored copies.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-10",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A valid voucher requires a stamp. A stamped voucher may still be invalid. Which observation proves a voucher invalid?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "It has a stamp"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It lacks a stamp"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Its stamp is blue"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Its validity is unknown"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Missing a necessary condition disproves validity; satisfying it alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-11",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Mira finishes before Noel; Noel finishes before Olan. Pia finishes before Olan, with no other comparison. Which must hold?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Pia before Mira"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Noel before Pia"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Mira before Olan"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Mira before Pia"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Transitivity gives Mira before Olan. Pia can occur before or after Mira and Noel.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-12",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Exactly two of X,Y,Z are selected. If X is selected, Y is excluded. Which pair is impossible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "X and Y"
+      },
+      {
+        "choiceId": "c2",
+        "text": "X and Z"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Y and Z"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No listed pair is impossible"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "X requires Y absent. XZ and YZ each satisfy exactly two; thus the no-impossible-pair assertion fails.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-13",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A map arrow from A to B means A sends directly to B. Arrows are A→B and B→C only. Which direct transfer exists?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "B to C"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A to C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C to B"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B to A"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Following two arrows is indirect; no reverse arrows are stated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-14",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The rule says: if a file is signed, archive it. A signed file was not archived. What follows about the rule's compliance?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "It was followed"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It was violated for this file"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Unsigned files must be archived"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No files were signed"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A policy is not proof of actual compliance; the observed antecedent without the required action violates it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-15",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "There are three bins. Red objects go only to1 or2; large objects only to2 or3. An object is both red and large. Which bin is permitted?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Any bin"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The permitted sets intersect at2.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-16",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a complete list of four people, exactly two walk and the rest cycle; no one uses both. A and B cycle. What follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "C cycles"
+      },
+      {
+        "choiceId": "c2",
+        "text": "D cycles"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only C walks"
+      },
+      {
+        "choiceId": "c4",
+        "text": "C and D walk"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The two remaining people must fill both walking places.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-17",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An analogy must preserve a whole-to-removable-functional-component relation, rather than a substance, product or surrounding condition. In BICYCLE : PEDAL :: FLASHLIGHT : ?, which candidate meets the entire relation?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Plastic"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Illumination"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Battery"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Darkness"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A pedal and a battery are removable functional components. Plastic is a material, illumination a product and darkness a surrounding condition; a material may compose a component but is not the component itself.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-18",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Each of five cards has a different integer1–5. A is larger than B, B larger than C; D is5. What is the greatest possible value of C?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A,B,C occupy an increasing triple in1–4 after reserving5 for D. Largest possible smallest is2 via2,3,4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-19",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A statement is true exactly when one, but not both, of P and Q is true. P is false. What must Q be for the statement to be true?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "False"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Both true and false"
+      },
+      {
+        "choiceId": "c3",
+        "text": "True"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Unrestricted"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Exclusive-or requires the remaining input true when P is false.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-20",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four deliveries occur on distinct days1–4. A is immediately before B; C is day1. What is impossible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A on2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B on4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "D on4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A on1"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "C already occupies1; AB may occupy2–3 or3–4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-21",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Only members can borrow, but not all members borrow. Bea borrows. Cal is a member. Which follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Bea is a member; Cal may or may not borrow"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Cal borrows"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Bea is not a member"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Every member borrows"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Borrowing implies membership; the reverse is expressly not guaranteed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-22",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A device sends an alert if either heat or smoke is detected. No alert was sent and the device obeyed the rule. What follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Only heat was absent"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Neither was detected"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only smoke was absent"
+      },
+      {
+        "choiceId": "c4",
+        "text": "At least one was detected"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Either trigger would force alert; its absence excludes both triggers.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-23",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "From premises Some poets are editors; no editor is a pilot, which follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "No poet is a pilot"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Every pilot is a poet"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Some poets are not pilots"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Some pilots are editors"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The existing poet-editors are excluded from pilots; other poets are unrestricted.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-24",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An analogy reverses an asymmetric relation. ABOVE : BELOW :: BEFORE : AFTER. Applied to a schedule, J is before K and L is after K. Which uses the same inverse relation without claiming an unsupported immediate adjacency?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "J is immediately before L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "K is after J and before L"
+      },
+      {
+        "choiceId": "c3",
+        "text": "J is after K and before L"
+      },
+      {
+        "choiceId": "c4",
+        "text": "L is before both J and K"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "J<K<L follows from both comparisons. Reversing J before K gives K after J; no premise says immediately.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-25",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A code swaps the first two symbols, then reverses all three. What does ABC become?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "CAB"
+      },
+      {
+        "choiceId": "c2",
+        "text": "CBA"
+      },
+      {
+        "choiceId": "c3",
+        "text": "BAC"
+      },
+      {
+        "choiceId": "c4",
+        "text": "ACB"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "ABC becomes BAC, then CAB. Applying only one step gives a distractor.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-26",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three seats face north in a row. J is left of K and L is not in the middle. Which order is possible from left to right?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "K J L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "L J K"
+      },
+      {
+        "choiceId": "c3",
+        "text": "J L K"
+      },
+      {
+        "choiceId": "c4",
+        "text": "L K J"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "J before K rules out KJL and LKJ; JLK puts L in middle.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-27",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Exactly one box contains a coin. Label A says coin in A; label B says coin in A; label C says coin not in C. Exactly one label is true. Where is the coin?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "B"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Any box"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Coin A makes all three labels true; B makes only C true; C makes all false.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-28",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "All red tags are reusable. No reusable tag is torn. Which cannot exist?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Reusable nonred tag"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Untorn red tag"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Torn nonred tag"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Torn red tag"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Red implies reusable and hence untorn; other combinations remain permitted.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-29",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A machine follows the explicit sequence rule: start2 and alternately add3 then double. What is the fifth term?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "26"
+      },
+      {
+        "choiceId": "c2",
+        "text": "13"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "23"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Terms2,5,10,13,26. The rule is supplied so no alternative pattern is assumed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-30",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A registry stores the distinct letters of BALLOON, ignoring repetition. It then removes every letter also present in LOG and adds every distinct letter in BAND. How many letters remain?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "BALLOON gives B,A,L,O,N. Removing L,O leaves B,A,N. Union with B,A,N,D gives B,A,N,D, four letters; duplicates are not added again.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-31",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A museum allows entry exactly when a visitor has a pass AND either a booking or a staff escort. A visitor has a pass and no booking. What else is necessary and sufficient for entry?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A second pass"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A booking and escort"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A staff escort"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No further condition"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "With pass true and booking false, the full expression reduces to escort.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-32",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An event occurs on Tuesday or Thursday, but not both. If Thursday, it uses room 2. It does not use room 2. What follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Thursday in room 1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tuesday is impossible"
+      },
+      {
+        "choiceId": "c3",
+        "text": "No day is possible"
+      },
+      {
+        "choiceId": "c4",
+        "text": "It occurs Tuesday"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The Thursday implication is excluded by not-room 2; the exclusive choice then forces Tuesday.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-33",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five distinct tasks A,B,C,D,E occupy slots 1–5. A precedes C; C precedes E; B immediately precedes D; D precedes E. How many complete orders are possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "E must be last. Treat adjacent BD as a block; the remaining objects A,C,BD must preserve A before C. Their three orders yield AC BDE, A BD CE and BD ACE. Counting unrestricted permutations ignores both adjacency and A<C.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-34",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four cards 2,3,4,5 appear exactly once in a row. The first plus last equals 7. The second is even and exceeds the first. How many different rows satisfy all these conditions?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Only 2,4,3,5 works. If first 3 and last 4, second must2 and fails the greater-than condition. First 4 or5 cannot have a larger even second. Thus exactly one row satisfies all constraints.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-35",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Choose exactly three of A,B,C,D,E. A and B cannot both join. C joins exactly when D joins. If A joins, E must join. How many teams are possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "With C,D present the third is B or E: A would also require E and exceed size three. Without C,D, the only size-three possibility ABE violates AB. Thus BCD and CDE only.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-36",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Exactly one of Ana, Ben and Cy made a mark. Ana says Ben did it. Ben says Cy did it. Cy says Ben's statement is false. Exactly two statements are true. Who made it?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Ana"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Cy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "No solution"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Ben"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "If Ben did it, Ana and Cy are true. If Ana did it only Cy true; if Cy did it only Ben true.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-37",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four distinct jobs P,Q,R,S fill slots 1–4. P is before R; Q is not first or last; S is immediately after Q. What must be true?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P is first"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P is second"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R is third"
+      },
+      {
+        "choiceId": "c4",
+        "text": "S is third"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Q2 gives S3 and P1,R4; Q3 gives S4 and P1,R2. Both models force P1 while other positions vary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-38",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A three-digit code uses distinct digits 1,2,3. Compare it with guesses 123,231,312. Each guess has exactly ONE correct digit in its position. The code's first digit is larger than its last digit. How many codes satisfy all constraints?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The one-match condition leaves132,213,321. Only321 has first digit greater than last. The cyclic codes each fully match one guess and fail the other two. Thus exactly one code.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-39",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three workers take distinct jobs paint, wire, tile and distinct shifts early, middle, late. Ana does not paint; the wirer works early. Ben works late and does not tile. Cy does not work middle. What does Ana do?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Paint on middle"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Wire on early"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Tile on middle"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Tile on late"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Ben cannot tile and cannot wire because late; so paints. Cy cannot middle or late(Ben), so early and wires. Ana tiles middle.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-analytical-logic-40",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A bag selection must have exactly two of red, blue, green, white. Red requires blue; green excludes blue; white requires green. Which color occurs in every valid selection?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Red"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Blue"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Green"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No color occurs in every valid selection"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Only red+blue and green+white satisfy all implications. Their intersection is empty; checking one valid pair alone cannot establish necessity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  }
+]

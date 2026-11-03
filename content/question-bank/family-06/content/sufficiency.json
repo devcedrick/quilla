@@ -1,0 +1,862 @@
+[
+  {
+    "questionId": "f06-sufficiency-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A digital clock is working correctly. What is its current hour on a 24-hour display?\nStatement 1: It displays 15:42.\nStatement 2: It is afternoon.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "S 1 fixes hour 15. S 2 permits 13:00 or 15:00 so is insufficient. Together remain consistent at 15:42; S 1 alone suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A shopper has exactly PHP 100 and makes one purchase with no fees. Can the shopper pay its price exactly without receiving change?\nStatement 1: The shopper has exactly two PHP 50 notes and no other money.\nStatement 2: The price is PHP 75.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 allows price 50(yes)or 75(no), so insufficient. S 2 permits a shopper holding five PHP 20 notes(no), or one PHP 50 note and ten PHP 5 coins(yes), both totalling 100. Together two 50 notes cannot make 75, giving a definite no.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For integer n, is n odd?\nStatement 1: n is divisible by 4.\nStatement 2: n=12.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "S 1 guarantees even, hence a definite no. S 2 also gives no. Together consistent 12; either alone suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many red counters are in a bag?\nStatement 1: Red:blue=2:3 and these are the only colours.\nStatement 2: There are more blue than red counters.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c5",
+    "explanation": "S 1 and the combined facts allow red 2,blue 3 or red 4,blue 6. S 2 alone also allows these. No unique red count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the mean of two numbers a and b?\nStatement 1: a+b=30.\nStatement 2: a−b=4.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "S 1 fixes mean 15. S 2 permits(4,0)mean 2 or(6,2)mean 4. Together(17,13),mean 15; S 1 only.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A file has a positive whole number of pages and every page is printed on one side of a sheet. How many sheets are required for one copy?\nStatement 1: There are 8 pages.\nStatement 2: There are two sections of 4 pages each and no other pages.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "S 1 gives 8 sheets directly. S 2 totals 4+4=8 pages and therefore 8 sheets. The two statements agree; either alone suffices. The stated one-sided rule prevents a duplex assumption.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-07",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For nonzero real x, is x positive?\nStatement 1: x³>x.\nStatement 2: x²<1.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 allows 2(yes)and−0.5(no). S 2 allows 0.5(yes)and−0.5(no). Together −1<x<0, so definite no. Positive x<1 would give x³<x.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-08",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For positive integers a,b, what is a+b?\nStatement 1: ab=12.\nStatement 2: a and b are consecutive.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 allows(1,12)sum 13 or(3,4)sum 7. S 2 allows(1,2)sum 3 or(3,4)sum 7. Together only 3,4 in either order, sum 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-09",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What percentage of a club are cyclists?\nStatement 1: There are 18 cyclists.\nStatement 2: There are 12 noncyclists and all members are in exactly one group.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 allows total 20 or 30,90%or 60%. S 2 allows cyclists 8 or 18,40%or 60%. Together 18/30=60%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-10",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For integer n, what is its remainder on division by 4?\nStatement 1: n leaves remainder 7 on division by 12.\nStatement 2: n is odd.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "S 1 gives n=12 k+7, hence remainder 3 mod 4. S 2 permits 1 or 3. Together consistent at 7; S 1 alone suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-11",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three real numbers are written in increasing order. What is their median?\nStatement 1: Their mean is 10.\nStatement 2: The first plus third equals 20.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 permits(0,5,25)median 5 or(8,10,12)median 10. S 2 permits(0,5,20)median 5 or(8,10,12)median 10. Combined total 30 minus extremes 20 fixes median 10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-12",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the perimeter of a right triangle?\nStatement 1: Its area is 6 cm².\nStatement 2: Its two perpendicular sides have product 12 cm².",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c5",
+    "explanation": "Statements are equivalent. Legs 3,4 give perimeter 12; legs 2,6 give 8+sqrt 40. Both satisfy each and together; no unique perimeter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-13",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A drink uses only syrup and water, both positive volumes. What fraction is syrup?\nStatement 1: Syrup:water=3:7.\nStatement 2: Water is 4 litres more than syrup.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "S 1 fixes 3/10. S 2 allows syrup 1,water 5(fraction 1/6)or syrup 3,water 7(3/10). Together syrup 3,water 7; only S 1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-14",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For an integer n, is n even?\nStatement 1: n² is odd.\nStatement 2: n+1 is even.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "An odd square requires odd n; an even n+1 also requires odd n. Each yields definite no, consistent e.g.n=3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-15",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For real a,b, is a>b?\nStatement 1: a²>b².\nStatement 2: a and b are positive.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 permits(3,2)yes or(−3,2)no. S 2 permits(3,2)yes or(2,3)no. Together positive square roots preserve order, yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-16",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fictional delivery tariff charges PHP 40 for the first 2 kg and PHP 12 per additional started kilogram. The parcel weighs more than 2 kg. What is its charge?\nStatement 1: Its weight is more than 4 kg but no more than 5 kg.\nStatement 2: Its weight is more than 3.5 kg but less than 4.5 kg.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "S 1 fixes three additional started kilograms, charge 76. S 2 permits 4 kg(charge 64) or 4.2 kg(charge 76), so insufficient. Together weights greater than 4 and less than 4.5 give 76. Only S 1 suffices; the statements are consistent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-17",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For positive integer n, is n divisible by 6?\nStatement 1: n is divisible by 3 and 8<n<20.\nStatement 2: n is even and 10<n<16.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 permits 9(no),12(yes),15(no),18(yes). S 2 permits 12(yes),14(no). Intersection is 12, so yes; statements consistent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-18",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Positive integers a<b have sum 50. Is their product greater than 500?\nStatement 1: a has exactly four positive divisors.\nStatement 2: a is divisible by 7.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Since a<25, S 1 allows a=6(product 264,no)or 14(product 504,yes), so insufficient. S 2 allows 7(product 301,no)or 14(product 504,yes). Jointly multiples 7 below 25 are 7,14,21;7 has two divisors and is excluded, while 14 and 21 each have four. Products 504 and 609 are both greater than 500, so together give yes without uniquely determining a.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-19",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Positive integers a and b satisfy a<b and a+b=20. What is a?\nStatement 1: ab is divisible by 4.\nStatement 2: a is prime.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "For sum 20, product is divisible by 4 exactly when a is even: a=2,4,6,8. S 2 permits primea=2,3,5,7. Each alone varies; together onlya=2,b=18. Product 36 is divisible by 4, proving consistency. The restrictions must be intersected rather than assumed to name the same pair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-sufficiency-20",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An integer n satisfies 0≤n<30. What is n?\nStatement 1: n leaves remainder 2 on division by 7.\nStatement 2: n leaves remainder 3 on division by 5.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "c5",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S 1 candidates 2,9,16,23; S 2 candidates 3,8,13,18,23,28. Each varies; intersection only 23, proving uniqueness and consistency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

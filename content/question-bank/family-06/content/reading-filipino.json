@@ -1,0 +1,362 @@
+[
+  {
+    "questionId": "f06-reading-filipino-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Alin ang maaaring panoorin nang walang tiket?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Pagtatanghal sa gabi"
+      },
+      {
+        "choiceId": "c",
+        "text": "Lahat ng palabas sa anumang araw"
+      },
+      {
+        "choiceId": "d",
+        "text": "Palabas tuwing Linggo"
+      },
+      {
+        "choiceId": "a",
+        "text": "Ensayo sa umaga"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Hayagang libre at walang tiket ang ensayo sa umaga; may hiwalay na tiket ang gabi.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling gamit ang naiwan sa mesa?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Panukat"
+      },
+      {
+        "choiceId": "d",
+        "text": "Kahon"
+      },
+      {
+        "choiceId": "a",
+        "text": "Lapis"
+      },
+      {
+        "choiceId": "b",
+        "text": "Pisi"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Tahasang inilagay sa mesa ang lapis; kasama sa dinalang kahon ang ibang gamit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang dahilan ng pagdaragdag ng paliwanag?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Palitan ang mga larawan ng mga pintura"
+      },
+      {
+        "choiceId": "a",
+        "text": "Palalimin ang pag-unawa sa mga larawan"
+      },
+      {
+        "choiceId": "b",
+        "text": "Takpan ang lahat ng larawan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Paramihin lamang ang bagay sa pader"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ugnayan at pag-unawa ang layunin, hindi basta dami o pagtatakip.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang mahalagang naiuwi sa konteksto?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Bagong kaalaman mula sa isa’t isa"
+      },
+      {
+        "choiceId": "b",
+        "text": "Bayad na itinago sa iba"
+      },
+      {
+        "choiceId": "c",
+        "text": "Libreng kagamitang binanggit sa teksto"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sertipikadong titulo sa trabaho"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang itinurong kasanayan ang batayan ng halaga; walang ebidensiya ng kagamitan, bayad o titulo.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang nagpapasimula ng paggunita ni Ibo?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Pagbasa sa bagong album"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pagdinig ng tawag ng kaibigan"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pag-alis ng lahat ng puno"
+      },
+      {
+        "choiceId": "a",
+        "text": "Pagkilala sa hugis ng dating daan"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang pamilyar na liko ang unang kinikilalang detalye. Hindi pa nabubuksan ang album at walang tawag na binanggit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling pagtataya ang may sapat na pag-iingat?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Napatunayang walang epekto ang pormularyo"
+      },
+      {
+        "choiceId": "d",
+        "text": "Ang mas kaunting ulat ay tiyak na katumbas ng mas kaunting suliranin"
+      },
+      {
+        "choiceId": "a",
+        "text": "Maaaring nagbago ang paraan ng pag-uulat; hindi pa tiyak na bumuti ang serbisyo"
+      },
+      {
+        "choiceId": "b",
+        "text": "Tiyak na lumala ang serbisyo sa bawat mamimili"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nagbago rin ang pagkakataong mag-ulat, kaya hindi pa maihihiwalay ang kalidad ng serbisyo sa akses sa reklamo. Hindi pinatutunayan ang tiyak na paglala o kawalan ng epekto.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-07",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling pasya ang sumusunod sa parehong pahintulot?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Ilathala ang kuwento ni Rosa kasama ang pangalan; ilathala rin ang kuwento ni Gil nang walang pangalan"
+      },
+      {
+        "choiceId": "a",
+        "text": "Ilathala ang kuwento ni Rosa nang walang pangalan; ilista si Gil nang hindi inilalathala ang kaniyang kuwento"
+      },
+      {
+        "choiceId": "b",
+        "text": "Ilathala ang kuwento ni Rosa nang walang pangalan; ilathala rin ang kuwento ni Gil nang walang pangalan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ilathala ang kuwento ni Rosa kasama ang pangalan; ilista si Gil nang hindi inilalathala ang kaniyang kuwento"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Magkaiba ang pinahihintulutang pangalan at kuwento. Ang pag-alis ng pangalan ay hindi nagbibigay ng nawawalang pahintulot ni Gil sa kuwento.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-07-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-filipino-08",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling bagong impormasyon ang pinakatumutugon sa limitasyong tinukoy, nang hindi pinawawalang-bisa ang naobserbahang pakinabang?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Suriin ang upuang nagagamit ng mga magulang at iba pang pangkat matapos ang pagbabago"
+      },
+      {
+        "choiceId": "b",
+        "text": "Dagdagan lamang ang panayam sa mga nakatatandang gumagamit na ng nalililimang bangko"
+      },
+      {
+        "choiceId": "c",
+        "text": "Bilangin lamang ang lahat ng dumalaw nang hindi tinutukoy kung nakaupo sila o kung saang pangkat sila kabilang"
+      },
+      {
+        "choiceId": "d",
+        "text": "Ihambing lamang ang haba ng pag-upo ng mga nakatatanda bago at pagkatapos"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang limitasyon ay di-nasukat na epekto sa ibang pangkat, kabilang ang mga magulang. Dagdag na datos lamang sa nakatatanda o kabuuang dalaw na walang akses-sa-upuang detalye ay hindi sumasagot sa posibleng paglipat ng abala.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-filipino-08-reference",
+      "referenceVersion": 1
+    }
+  }
+]

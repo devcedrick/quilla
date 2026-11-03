@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f06-grammar-english-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the parallel completion: The workshop teaches measuring, cutting and ___.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "joining"
+      },
+      {
+        "choiceId": "b",
+        "text": "to join"
+      },
+      {
+        "choiceId": "c",
+        "text": "join"
+      },
+      {
+        "choiceId": "d",
+        "text": "joined"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "All three coordinated activities use gerund forms.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Parallel Structure / Sentence Clarity; https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html and https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-english-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Two carpenters jointly own one tool chest. Which phrase marks plural possession correctly?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "the carpenters’ tool chest"
+      },
+      {
+        "choiceId": "b",
+        "text": "the carpenter’s tool chest"
+      },
+      {
+        "choiceId": "c",
+        "text": "the carpenters tool’s chest"
+      },
+      {
+        "choiceId": "d",
+        "text": "the carpenters’s tool chest"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The regular plural carpenters takes its possessive apostrophe after s. The singular possessive changes the stated number of owners.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Purdue OWL Apostrophes, regular plural possessive rule; https://owl.purdue.edu/owl/general_writing/punctuation/apostrophe_introduction.html; retrieved2026-11-03."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-english-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Nora, rather than the assistant, checked the telescope and discovered the cracked lens. Which revision clearly preserves both actions and that actor?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "While checking the telescope, Nora found a cracked lens."
+      },
+      {
+        "choiceId": "b",
+        "text": "While Nora checked the telescope, the assistant found a cracked lens."
+      },
+      {
+        "choiceId": "c",
+        "text": "After the assistant checked the telescope, Nora found a cracked lens."
+      },
+      {
+        "choiceId": "d",
+        "text": "While the assistant checked the telescope, Nora found a cracked lens."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The introductory modifier makes Nora both checker and discoverer. Each alternative transfers checking or discovering to the assistant.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Parallel Structure / Sentence Clarity; https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html and https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-english-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The intended meaning is that only the draft’s conclusion needs revision, not the whole draft. Which sentence states that precisely?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "The editor asked only us to revise the conclusion of the draft."
+      },
+      {
+        "choiceId": "a",
+        "text": "The editor asked us to revise only the conclusion of the draft."
+      },
+      {
+        "choiceId": "b",
+        "text": "Only the editor asked us to revise the conclusion of the draft."
+      },
+      {
+        "choiceId": "c",
+        "text": "The editor only asked us to revise the conclusion of the draft."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Only directly limits the conclusion; the alternatives limit the editor, action or workers.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Parallel Structure / Sentence Clarity; https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html and https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-english-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A report must retain both actions and the same actor. Which revision is parallel?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The team checked the scale and recorded the readings."
+      },
+      {
+        "choiceId": "b",
+        "text": "The team checked the scale and the readings were recorded."
+      },
+      {
+        "choiceId": "c",
+        "text": "The team checking the scale and recorded the readings."
+      },
+      {
+        "choiceId": "d",
+        "text": "The team checked the scale and to record the readings."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Both coordinated verbs share the team as subject and use past-tense active forms. Passive mixing obscures the shared actor.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Parallel Structure / Sentence Clarity; https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html and https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-grammar-english-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A caption must say that the tiles were blue, without claiming that the painters or shed were blue. Which revision states precisely that meaning?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The painters stored the blue tiles in the shed."
+      },
+      {
+        "choiceId": "b",
+        "text": "The painters stored the tiles in the blue shed."
+      },
+      {
+        "choiceId": "c",
+        "text": "The blue painters stored the tiles in the shed."
+      },
+      {
+        "choiceId": "d",
+        "text": "The painters in blue stored the tiles in the shed."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Only blue tiles attributes the colour to the tiles. The other placements attribute it to the shed, painters or their clothes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Parallel Structure / Sentence Clarity; https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html and https://owl.purdue.edu/owl/general_writing/mechanics/sentence_clarity.html; retrieved 2026-11-03"
+      ]
+    }
+  }
+]

@@ -1,0 +1,618 @@
+[
+  {
+    "referenceId": "f06-reading-english-01-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The island seed fair opens at nine. Seed swaps end at noon, but the display remains open until three. Visitors may look at the display without joining a swap."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-02-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Rafi’s notebook has one page for sounds and another for colours. During his first walk he writes only on the sounds page: a loose gate, a bicycle bell and a distant drum."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-03-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The pottery cooperative numbered its fragile pieces before lending them. Numbers made returns easier to check. They did not indicate price: the cheapest bowl carried the highest number."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-04-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The gardener removed the board announcing a perfect harvest. She replaced it with a sheet showing which beds produced well and which needed work. Visitors stayed longer at the new sheet, asking questions she had once avoided."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-05-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A radio workshop added transcripts to its recorded interviews. Participants who preferred listening kept the audio; others could search the transcripts for names. The organiser called the two forms companions."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-06-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A ferry trial shortened the crossing by ten minutes, but boarding queues grew by fifteen. Only crossing and queue times were measured. The operator calls the crossing result an improvement; a passenger association asks for total journey comparisons, including travel to the changed pier, which was not measured."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-07-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "An archive digitised letters from donors who gave scanning permission. Some donors permitted a scan for preservation but not public display. The online catalogue lists all scanned letters, including restricted ones, with dates only. Researchers cannot read a restricted letter online merely because its date appears."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-english-08-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "At dawn Eva mended a fishing net her father had left unfinished. She kept one of his awkward knots, though she replaced the torn mesh around it. By noon the net could be used again. When asked why the knot remained, she said, “It does not catch fish, but it holds a voice.”"
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-01-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Bukas ang munting tanghalan tuwing Sabado. Libre ang ensayo sa umaga; ang pagtatanghal sa gabi ay may hiwalay na tiket. Hindi kailangan ng tiket upang manood ng ensayo."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-02-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Tatlong gamit ang nasa kahon ni Berto: pisi, lapis at panukat. Iniwan niya ang lapis sa mesa at dinala ang kahon sa bakuran."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-03-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Nang mapuno ang pader ng larawan, nagdagdag ang museo ng mga paliwanag sa halip na bagong litrato. Nais ng tagapangasiwa na maunawaan ng bisita ang ugnayan ng mga nasa larawan, hindi lamang madagdagan ang makikita."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-04-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa palitan ng kasanayan, nagturo ng paghahabi si Nena at natuto naman ng pag-ukit mula kay Tino. Walang salaping ipinasa. Gayunman, pareho nilang sinabing may naiuwi silang mahalaga."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-05-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Mula sa bintana, tanaw ni Ibo ang dating palaruan. May mga bagong puno roon, ngunit nakilala niya ang liko ng daang tinatakbuhan nila noon. Napangiti siya bago pa buksan ang lumang album."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-06-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa unang buwan, bumaba ang reklamong natanggap ng pagawaan matapos nitong baguhin ang pormularyo. Kasabay nito, isinara ang kahon ng reklamo tuwing hapon. Walang tala kung ilang mamimili ang nakagamit ng pormularyo o nakapagreklamo sa ibang paraan. Iminungkahi ng tagasuri na ibalik ang buong-oras na kahon bago ihambing muli ang mga buwan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-07-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa aklat ng pamayanan, pinayagan ni Rosa ang paglalathala ng kaniyang kuwento ngunit hindi ang kaniyang pangalan. Si Gil naman ay pumayag sa pangalan para sa talaan ng kalahok, ngunit hindi sa paglalathala ng kuwento. Nais ng patnugot na igalang ang tiyak na saklaw ng pahintulot ng bawat isa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-reading-filipino-08-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Inilipat ang ilang bangko sa lilim ng bagong bubong. Mas maraming nakatatanda ang umupo roon kaysa dati, ngunit nabawasan ang upuang nasa tabi ng palaruan. Hindi tinanong ang mga magulang kung nakahanap sila ng ibang upuan. Sinabi ng ulat na may nakitang pakinabang sa isang pangkat, ngunit hindi pa nito masusukat ang kabuuang ginhawa ng lahat."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-english-01-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: After drying, the sheets were stacked.\nP2: The printer first spread the wet sheets on a rack.\nP3: Finally, the stack was wrapped for delivery."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-english-02-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: This defect made the latch unreliable.\nP2: A crack had appeared in the gate’s latch.\nP3: The carpenter therefore replaced it before the next opening.\nP4: The replacement then passed a pull test."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-english-03-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: That objection led the group to shorten each recording.\nP2: The first proposal used ten-minute audio guides.\nP3: The shortened versions were then tested with visitors.\nP4: Several visitors warned that ten minutes would delay a quick visit."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-english-04-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The second used local clay instead.\nP2: Two lamp designs were compared.\nP3: Both designs were displayed at the fair.\nP4: The first used imported metal."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-english-05-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The panel therefore recommended a repeat trial with the same number of opening days and the same daily opening hours.\nP2: Yet the new week also had two extra opening days, a difference the comparison ignored.\nP3: A market trial reported more total visitors in its second week.\nP4: Only such a matched trial could test whether the new signs themselves attracted more visits.\nP5: The report credited the new signs for the increase."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-english-06-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Before seeking any further map, the team explained that this fallback range kept the project possible without inventing the missing evidence.\nP2: The research team wanted a date for the abandoned kiln.\nP3: Instead, it offered a range supported by the available map and left the precise date open.\nP4: It first sought a dated receipt, but no receipt could be located.\nP5: The range was later narrowed when a second map was found."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-filipino-01-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Pagkatapos hugasan, pinatuyo ang mga bote.\nP2: Unang hinugasan ang mga nakolektang bote.\nP3: Sa huli, inilagay ang tuyong bote sa kahon."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-filipino-02-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Dahil sa lamat na iyon, tumagas ang tubig.\nP2: Sa sisidlan ay may natuklasang maliit na lamat.\nP3: Kaya inilipat muna ang tubig sa ibang sisidlan.\nP4: Matapos mailipat ang tubig, saka kinumpuni ang una."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-filipino-03-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Ang ikalawa naman ay gumagamit ng larawang sunod-sunod.\nP2: Dalawang gabay sa paggawa ng parol ang sinubukan.\nP3: Pinaghambing pagkatapos ang linaw ng dalawang gabay.\nP4: Ang una ay pawang nakasulat na hakbang."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-filipino-04-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Iyon ang dahilan kung bakit nagdagdag ng mababang mesa.\nP2: Masyadong mataas ang dating mesa para sa ilang bata.\nP3: Sa bagong mesa, nakapagtrabaho silang nakaupo.\nP4: Pagkatapos, sinuri ng guro kung komportable pa rin ang ibang gumagamit."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-filipino-05-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Gayunman, iisang araw lamang ang sakop ng tala at araw pa iyon ng pista.\nP2: Kaya nagpasya silang magtala rin sa mga karaniwang araw bago humatol.\nP3: Napansin ng pangkat na maraming dumaan sa bagong hagdan.\nP4: Sa gayong paghahambing, masusuri kung bukod sa pista ay may pagbabago pa rin.\nP5: Ipinakahulugan muna nila ito bilang patunay na mas pinipili na ang bagong daan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-paragraph-filipino-06-reference",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Bago humanap ng bagong saksi, nilagyan nila ang pansamantalang talaang iyon ng malinaw na babala sa puwang.\nP2: Nais ng manunulat na matukoy ang lahat ng mang-aawit sa lumang larawan.\nP3: Nang may bagong saksi, isa lamang sa mga puwang ang napunan.\nP4: Ngunit dalawa lamang ang nakilala ng unang nakapanayam.\nP5: Sa halip na manghula sa iba, inilista muna niya ang dalawang tiyak na pangalan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independent original text",
+      "sources": [
+        "Original fictional text written for this item; no actual examination content."
+      ]
+    }
+  }
+]

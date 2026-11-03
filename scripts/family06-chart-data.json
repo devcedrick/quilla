@@ -1,0 +1,342 @@
+[
+  {
+    "referenceId": "f06-data-returns",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional tool returns",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each loan creates exactly one return. On-time and late returns are disjoint. All loans in the table have been returned."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional tool returns",
+        "headers": ["Tool", "On-time", "Late", "Repair needed"],
+        "rows": [
+          ["Drill", "36", "4", "3"],
+          ["Saw", "24", "6", "6"],
+          ["Sander", "18", "2", "1"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-weights",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional grain sample",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Frequency is the number of bags with exactly the indicated mass. No other masses occur."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional grain sample",
+        "headers": ["Mass (kg)", "Frequency"],
+        "rows": [
+          ["2", "3"],
+          ["3", "4"],
+          ["5", "2"],
+          ["8", "1"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-queue",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional queue checkpoints",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "New arrivals and completed services occur between checkpoints. Nobody abandons the queue. The start queue is 7 people."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional queue checkpoints",
+        "headers": ["Interval", "Arrivals", "Completed"],
+        "rows": [
+          ["I", "9", "6"],
+          ["II", "4", "8"],
+          ["III", "11", "7"],
+          ["IV", "3", "9"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-routes",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional shuttle choices",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Total trip time equals waiting plus riding. Cost is per trip. A rider may select one route only."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional shuttle choices",
+        "headers": ["Route", "Wait (min)", "Ride (min)", "Cost (pesos)"],
+        "rows": [
+          ["P", "4", "28", "18"],
+          ["Q", "12", "17", "24"],
+          ["R", "2", "34", "16"],
+          ["S", "8", "22", "20"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-ratings",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional workshop ratings",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Every attendee selected one rating. Small and large sessions have different attendance."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional workshop ratings",
+        "headers": ["Session", "Satisfied", "Not satisfied"],
+        "rows": [
+          ["Small", "18", "2"],
+          ["Large", "48", "32"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-capacity",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional loading combinations",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each crate must go on exactly one truck; crates cannot split. A truck cannot exceed either limit. All numbers are exact."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional loading combinations",
+        "headers": ["Item", "Mass (kg)", "Volume (units)"],
+        "rows": [
+          ["Crate A", "4", "7"],
+          ["Crate B", "6", "3"],
+          ["Crate C", "5", "5"],
+          ["Crate D", "3", "6"],
+          ["Truck limit", "10", "12"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-score",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional grant scoring",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Score = 2 times access plus reliability. Higher is better; ties favor higher reliability. A proposal must have access at least4 to be eligible."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional grant scoring",
+        "headers": ["Proposal", "Access", "Reliability"],
+        "rows": [
+          ["K", "6", "4"],
+          ["L", "4", "9"],
+          ["M", "7", "2"],
+          ["N", "3", "12"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-survival",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional seedling monitoring",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "No new seedlings enter. Losses are counted during each period."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional seedling monitoring",
+        "headers": [
+          "Batch",
+          "Initially alive",
+          "Period1 losses",
+          "Period2 losses"
+        ],
+        "rows": [
+          ["U", "50", "10", "4"],
+          ["V", "40", "4", "8"],
+          ["W", "60", "12", "6"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-inventory",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional material stock",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Closing stock = opening + received - issued. No other changes occur. Cost is per unit."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional material stock",
+        "headers": ["Material", "Opening", "Received", "Issued", "Cost"],
+        "rows": [
+          ["X", "14", "8", "10", "5"],
+          ["Y", "9", "12", "6", "3"],
+          ["Z", "20", "0", "8", "4"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  },
+  {
+    "referenceId": "f06-data-pairs",
+    "version": 1,
+    "family": 6,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional survey counts",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Survey contains100 distinct people. Each may choose either, both, or neither service. Exactly15 chose neither."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional survey counts",
+        "headers": ["Choice", "People"],
+        "rows": [
+          ["Service A", "55"],
+          ["Service B", "50"],
+          ["Both services", "20"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; author calculation review recorded separately; human approval and calibration pending",
+      "sources": [
+        "Original fictional Family 06 premises, 2026-11-03. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/1-3-frequency-frequency-tables-and-levels-of-measurement (retrieved 2026-11-03: frequency and relative-frequency definitions only)."
+      ]
+    }
+  }
+]

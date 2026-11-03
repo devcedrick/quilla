@@ -1,0 +1,1642 @@
+[
+  {
+    "questionId": "f06-general-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which official chairs the NDRRMC under RA 10121, Section 5?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Secretary of National Defense"
+      },
+      {
+        "choiceId": "b",
+        "text": "Secretary of Social Welfare and Development"
+      },
+      {
+        "choiceId": "c",
+        "text": "Secretary of Science and Technology"
+      },
+      {
+        "choiceId": "d",
+        "text": "Secretary of the Interior and Local Government"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The Secretary of National Defense chairs; the other listed secretaries hold thematic vice-chair roles.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 5; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which agency administers the national civil-defense and disaster-risk-reduction programme under RA 10121?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Commission on Audit"
+      },
+      {
+        "choiceId": "c",
+        "text": "National Economic and Development Authority"
+      },
+      {
+        "choiceId": "d",
+        "text": "Department of Foreign Affairs"
+      },
+      {
+        "choiceId": "a",
+        "text": "Office of Civil Defense"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 8 assigns programme administration to OCD; the other agencies have different mandates.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 8; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 10121, which existing barangay body serves as the local DRRM council?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Sangguniang Kabataan"
+      },
+      {
+        "choiceId": "d",
+        "text": "Barangay Assembly"
+      },
+      {
+        "choiceId": "a",
+        "text": "Barangay Development Council"
+      },
+      {
+        "choiceId": "b",
+        "text": "Barangay Peace and Order Committee"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The Barangay Development Council serves as the LDRRMC in every barangay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 11; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A briefing assigns disaster preparedness to DOST and disaster prevention/mitigation to DILG. What correction matches the RA 10121 vice-chair assignments?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Keep DILG mitigation but transfer preparedness to DSWD"
+      },
+      {
+        "choiceId": "a",
+        "text": "Exchange those two assignments"
+      },
+      {
+        "choiceId": "b",
+        "text": "Assign both to DSWD"
+      },
+      {
+        "choiceId": "c",
+        "text": "Keep DOST preparedness but transfer mitigation to NEDA"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "DILG is vice-chair for preparedness; DOST for prevention and mitigation. DSWD handles response and NEDA recovery/rehabilitation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 5; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A municipal DRRM council plans to meet only after a disaster. Which requirement in RA 10121 is inconsistent with this plan?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It must convene at least quarterly or as necessary"
+      },
+      {
+        "choiceId": "b",
+        "text": "It must convene daily regardless of need"
+      },
+      {
+        "choiceId": "c",
+        "text": "Only the national council may convene before impact"
+      },
+      {
+        "choiceId": "d",
+        "text": "It must wait for a state-of-calamity declaration"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The council must meet at least once every three months or as necessary, so an impact-only schedule is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 11; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two barangays in one municipality are affected by a disaster. Under the Section 15 lead-coordination hierarchy, which level takes the lead?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Barangay council of the larger barangay"
+      },
+      {
+        "choiceId": "c",
+        "text": "Provincial DRRMC in every case"
+      },
+      {
+        "choiceId": "d",
+        "text": "National DRRMC in every case"
+      },
+      {
+        "choiceId": "a",
+        "text": "Municipal or city DRRMC"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Two or more affected barangays within one city/municipality trigger city/municipal lead coordination, not automatic provincial or national leadership.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 15; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-07",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A provincial plan establishes an operations centre but leaves disaster information and resource databases to be created only after emergencies. Which statutory local-office function remains omitted?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Maintaining an operations-centre visitor log only"
+      },
+      {
+        "choiceId": "d",
+        "text": "Relying exclusively on national aggregate statistics"
+      },
+      {
+        "choiceId": "a",
+        "text": "Maintaining local risk maps and a DRRM database"
+      },
+      {
+        "choiceId": "b",
+        "text": "Publishing only historical relief expenditures"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 12 requires local risk maps and a database including resources and vulnerable groups; an operations centre alone does not discharge those information duties.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 12; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-08",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A DRRM training policy limits volunteer mobilisation to government employees. What change follows RA 10121, Section 13?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Confine participation to personnel employed by local government"
+      },
+      {
+        "choiceId": "a",
+        "text": "Allow accredited volunteers and civil-society/private-sector participation under the Act"
+      },
+      {
+        "choiceId": "b",
+        "text": "Allow private-sector groups but exclude all unpaid community volunteers"
+      },
+      {
+        "choiceId": "c",
+        "text": "Allow community volunteers but exclude civil-society organisations"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The Act provides for mobilisation and accreditation of volunteers and participation beyond government employees; it does not abolish training or safeguards.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 13; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-09",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For Section 15 coordination only, a disaster affects two municipalities in Province P and another municipality in Province Q; P and Q are in the same region. A memo assigns the provincial council overall lead and says national support ends once a local council leads. Which paired correction fits the Act?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Regional lead; higher councils still support local councils"
+      },
+      {
+        "choiceId": "b",
+        "text": "Regional lead; all national support must cease"
+      },
+      {
+        "choiceId": "c",
+        "text": "Provincial lead; higher councils still support local councils"
+      },
+      {
+        "choiceId": "d",
+        "text": "National lead automatically; all local councils cease operating"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Two or more provinces within one region call for regional lead; higher councils remain support bodies to local councils. Local operation and national support are not abolished.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 15; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-10",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Under RA 10121 Sections 16 and 21, a sanggunian proposes declaring a local state of calamity on its own assessment alone and treating the entire local DRRM fund as Quick Response Fund. Which correction addresses both defects?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Require the LDRRMC recommendation but treat 100% as QRF"
+      },
+      {
+        "choiceId": "c",
+        "text": "Keep the declaration procedure but retain 30% QRF"
+      },
+      {
+        "choiceId": "d",
+        "text": "Require only a national declaration and allocate 5% of the fund as QRF"
+      },
+      {
+        "choiceId": "a",
+        "text": "Require the LDRRMC recommendation and retain the 30% QRF allocation"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The local sanggunian declares on LDRRMC recommendation based on damage assessment/needs analysis; 30% of the LDRRMF is QRF. The at-least-5% estimated-revenue rule concerns the fund base, not its QRF fraction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Sections 16,21; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-11",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 10121 Section 14 expressly integrates DRRM education into which settings?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Only military academies"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only government-employee orientation"
+      },
+      {
+        "choiceId": "a",
+        "text": "School curricula and nonformal, technical-vocational and indigenous learning programmes"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only postgraduate emergency medicine"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "DRRM education extends across formal and specified alternative learning programmes; it is not confined to specialist training.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 14; https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-12",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 10121 uses which term for adjustment to actual or expected climatic effects that moderates harm or exploits beneficial opportunities?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Contingency planning"
+      },
+      {
+        "choiceId": "a",
+        "text": "Adaptation"
+      },
+      {
+        "choiceId": "b",
+        "text": "Exposure"
+      },
+      {
+        "choiceId": "c",
+        "text": "Response"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Adaptation is adjustment to climatic stimuli/effects. Exposure describes elements encountering hazards; response and contingency planning have different functions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(a); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-13",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which RA 10121 term concerns potential future losses rather than an already completed damage inventory?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Disaster risk"
+      },
+      {
+        "choiceId": "b",
+        "text": "Disaster response"
+      },
+      {
+        "choiceId": "c",
+        "text": "State of calamity"
+      },
+      {
+        "choiceId": "d",
+        "text": "Post-disaster recovery"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Risk refers to potential losses over a specified future period; the other terms are actions or a declared condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(m); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-14",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A land-use rule blocks new settlements in a known high-risk zone. A memo calls this prospective risk management only after losses occur. What is the better analysis?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "It is solely response because its effect will be seen during an emergency"
+      },
+      {
+        "choiceId": "c",
+        "text": "It is recovery because it changes where future houses may stand"
+      },
+      {
+        "choiceId": "d",
+        "text": "It is only retrospective risk assessment because the zone is already known"
+      },
+      {
+        "choiceId": "a",
+        "text": "It can prevent new risk before losses occur"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Prospective DRRM seeks to avoid new or increased risks. It is anticipatory rather than conditional on recorded losses.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(o); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-15",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A hazard map identifies future flood zones, while an inventory identifies older residents needing evacuation assistance. Which interpretation best preserves the distinction?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Both are exposure inventories, so assistance needs can be inferred from flood depth alone"
+      },
+      {
+        "choiceId": "d",
+        "text": "The inventory establishes hazard frequency while the map establishes household capacity"
+      },
+      {
+        "choiceId": "a",
+        "text": "Both inform risk management, but the inventory adds vulnerability information"
+      },
+      {
+        "choiceId": "b",
+        "text": "The map measures vulnerability while the age-related inventory measures hazard magnitude"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Hazard information and conditions affecting vulnerability are complementary. Neither source implies identical capacity or replaces the other.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(v),(gg); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-16",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A development plan treats environmental protection and disaster risk as separate from land-use and infrastructure decisions. Which RA 10121 policy challenges that separation?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Consider climate solely in response plans after infrastructure is designed"
+      },
+      {
+        "choiceId": "a",
+        "text": "Mainstream DRR and climate change into development planning"
+      },
+      {
+        "choiceId": "b",
+        "text": "Treat DRR as a separate relief budget outside routine development decisions"
+      },
+      {
+        "choiceId": "c",
+        "text": "Integrate risk only into emergency communications while leaving land-use unchanged"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 2(g) explicitly integrates risk and climate measures into land-use, urban planning, infrastructure and other development processes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 2(g); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-17",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A risk assessment calculates likely losses from a technological hazard. A reviewer excludes it because the framework is supposedly natural-hazards-only. What is accurate?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The framework uses an all-hazards approach"
+      },
+      {
+        "choiceId": "b",
+        "text": "The framework covers human-made hazards only when they trigger a natural event"
+      },
+      {
+        "choiceId": "c",
+        "text": "The framework restricts technological risks to incidents outside urban areas"
+      },
+      {
+        "choiceId": "d",
+        "text": "The framework considers technological hazards only in post-event response"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The framework is comprehensive and all-hazards; the definition of hazard also includes human activity and dangerous substances/conditions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(v),(y); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-18",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A town designs recovery to restore the old bridge exactly, despite a documented avoidable vulnerability. Which statutory recovery principle supports considering a safer redesign?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Restore original conditions regardless of prior vulnerability"
+      },
+      {
+        "choiceId": "c",
+        "text": "Restrict recovery to replacing physical assets at original specifications"
+      },
+      {
+        "choiceId": "d",
+        "text": "Treat recovery as complete once immediate relief ends"
+      },
+      {
+        "choiceId": "a",
+        "text": "Build back better"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Post-disaster recovery includes appropriate improvement and efforts to reduce risk factors, rather than restoring avoidable vulnerability unquestioningly.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(aa); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-19",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Consider only RA 10121 Sections 2(j),(n) and 3(e). Plan K lets residents identify and monitor risks but excludes marginalised women from participation. Plan L has gender-sensitive assistance but gives officials alone all assessment and remedy decisions. Which repair preserves each plan’s existing strength while curing its stated gap?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "K retains the exclusion but adds relief stocks; L adds community decision roles"
+      },
+      {
+        "choiceId": "d",
+        "text": "K retains the exclusion but adds relief stocks; L retains official-only remedy decisions"
+      },
+      {
+        "choiceId": "a",
+        "text": "K adds inclusive gender-responsive participation; L adds community decision roles"
+      },
+      {
+        "choiceId": "b",
+        "text": "K adds inclusive gender-responsive participation; L retains official-only remedy decisions"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "K must address gender responsiveness and vulnerable-group capacity while retaining participation; L must add active community risk identification/decision/monitoring. Assistance alone is not community-based DRRM.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Sections 2(j),(n),3(e); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-20",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Compare two proposed interventions under RA 10121. R moves a planned clinic away from a high-risk site before construction but supplies no evacuation training. S trains users of an existing clinic and stocks emergency supplies but leaves its unsafe site unchanged. Which review preserves both interventions’ strengths and remaining gaps?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "R completes preparedness through relocation; S resolves siting risk through supply stockpiles"
+      },
+      {
+        "choiceId": "a",
+        "text": "R avoids new exposure but needs preparedness; S builds preparedness without resolving the siting risk"
+      },
+      {
+        "choiceId": "b",
+        "text": "R avoids new exposure and completes preparedness; S builds preparedness without resolving the siting risk"
+      },
+      {
+        "choiceId": "c",
+        "text": "R avoids new exposure but needs preparedness; S resolves siting risk through supply stockpiles"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Avoiding a new high-risk site addresses prospective risk; training and stockpiles build preparedness. Neither intervention supplies the function missing in the other.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 10121 (2010), Section 3(j),(o),(bb); https://lawphil.net/statutes/repacts/ra2010/ra_10121_2010.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-21",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 9003 Section 22, which label belongs on a separate waste container alongside recyclable, non-recyclable and special waste?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Compostable"
+      },
+      {
+        "choiceId": "b",
+        "text": "Taxable"
+      },
+      {
+        "choiceId": "c",
+        "text": "Imported"
+      },
+      {
+        "choiceId": "d",
+        "text": "Certified"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 22 lists compostable, non-recyclable, recyclable and special waste identification. The other terms do not identify its segregation categories.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 22; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-22",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which liquid is called leachate under RA 9003?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "All rainwater before it touches any material"
+      },
+      {
+        "choiceId": "c",
+        "text": "Only treated drinking water"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only oil sold as a new product"
+      },
+      {
+        "choiceId": "a",
+        "text": "Liquid produced as waste decomposes and water percolates through waste"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Leachate comes from decomposition and percolation through solid waste; the definition is not every liquid or rainfall in isolation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 3; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-23",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which plan horizon does RA 9003 prescribe for local solid-waste management plans?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Three years"
+      },
+      {
+        "choiceId": "d",
+        "text": "Twenty-five years"
+      },
+      {
+        "choiceId": "a",
+        "text": "Ten years"
+      },
+      {
+        "choiceId": "b",
+        "text": "One month"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 16 prescribes ten-year plans, with yearly review/update; horizon and review frequency are different.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 16; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-24",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A coastal city’s waste plan estimates only household waste, omitting market, institutional and construction sources. Which planning component is incomplete?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "The household-collection route sequence only"
+      },
+      {
+        "choiceId": "a",
+        "text": "Waste generation and source profile"
+      },
+      {
+        "choiceId": "b",
+        "text": "The final-disposal-site engineering specification only"
+      },
+      {
+        "choiceId": "c",
+        "text": "The recovery-facility staffing schedule only"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 17 calls for estimated waste generation and projection by source, including market, institutional and construction/demolition streams. Household estimates alone are incomplete.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 17(a); https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-25",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A collector has the correct waste truck but its workers lack protective equipment and training in safe waste handling. What remains required under RA 9003?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both appropriate personal protection and worker training"
+      },
+      {
+        "choiceId": "b",
+        "text": "Personal protection only; training is needed only for drivers"
+      },
+      {
+        "choiceId": "c",
+        "text": "Worker training only; the correct vehicle replaces personal protection"
+      },
+      {
+        "choiceId": "d",
+        "text": "Neither safeguard is separately required once the vehicle complies"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 23 requires personnel protective equipment and necessary training; a compliant vehicle does not discharge either worker safeguard.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 23; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-26",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A transfer station stores solid waste for four days. Which RA 9003 Section 25 concern applies without judging other permitting issues?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Storage can last indefinitely if the station is not the final disposal site"
+      },
+      {
+        "choiceId": "c",
+        "text": "Storage can last seven days if waste volume remains below capacity"
+      },
+      {
+        "choiceId": "d",
+        "text": "Time limits apply only after the station reaches maximum capacity"
+      },
+      {
+        "choiceId": "a",
+        "text": "Waste may not remain there beyond twenty-four hours"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 25 limits storage at transfer stations to twenty-four hours, so four-day storage exceeds that limit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 25; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-27",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A ten-year waste plan is approved, then treated as immune from annual revision. Which distinction corrects the error?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Yearly review applies only to plans that have not yet been approved"
+      },
+      {
+        "choiceId": "d",
+        "text": "Review is needed only if the national framework has been repealed"
+      },
+      {
+        "choiceId": "a",
+        "text": "Ten years is the horizon; yearly review/update is still required"
+      },
+      {
+        "choiceId": "b",
+        "text": "Ten years is the horizon and also the minimum interval between reviews"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 16 pairs a ten-year planning horizon with yearly board review and updating; approval does not remove that duty.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 16; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-28",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A waste characterisation study reports only a total truck volume, with no constituent materials or generation sources. What must be added for the Section 17 component?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Only the number of households served on the sample route"
+      },
+      {
+        "choiceId": "a",
+        "text": "Representative composition, material types and sources"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only total truck capacity and annual trip frequency"
+      },
+      {
+        "choiceId": "c",
+        "text": "Only gross weight totals without distinguishing materials or sources"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The component identifies constituent materials, volume/weight or equivalent, type and source; gross truck volume alone lacks that breakdown.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Section 17(b); https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-29",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A proposed waste transfer station limits storage to 20 hours but offers no siting assessment of traffic access. Its collection operation provides worker gloves but no handling training. Under Sections 23 and 25, which revision addresses both gaps without discarding the compliant time limit?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Assess access considerations and train workers"
+      },
+      {
+        "choiceId": "b",
+        "text": "Assess access considerations but treat gloves as a substitute for training"
+      },
+      {
+        "choiceId": "c",
+        "text": "Keep access unassessed but train workers"
+      },
+      {
+        "choiceId": "d",
+        "text": "Keep access unassessed and treat gloves as a substitute for training"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Transfer-station siting must consider efficient access, among other factors; worker protection and training are separate duties. Twenty-hour storage meets the stated time ceiling but cures neither omission.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Sections 23,25; https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-30",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For RA 9003 planning, Town A inventories material types but uses a sample known to exclude its large market stream. Town B uses representative samples but approves a ten-year plan with no annual update process. Which targeted correction follows Sections 16 and 17?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "A repairs representativeness; B retains approval without yearly updating"
+      },
+      {
+        "choiceId": "c",
+        "text": "A keeps the market exclusion but adds more material labels; B adds annual review/update"
+      },
+      {
+        "choiceId": "d",
+        "text": "A keeps the market exclusion but adds more material labels; B retains approval without yearly updating"
+      },
+      {
+        "choiceId": "a",
+        "text": "A repairs representativeness; B adds annual review/update"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 17 requires representative waste characterisation; Section 16 requires annual review/update. Material detail cannot repair sampling bias, and good sampling cannot replace plan governance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 9003 (2001), Sections 16,17(b); https://lawphil.net/statutes/repacts/ra2001/ra_9003_2001.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-31",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 11032’s amended Section 9(d), what is the ordinary maximum number of signatories in a government-service document?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Seven"
+      },
+      {
+        "choiceId": "d",
+        "text": "Ten"
+      },
+      {
+        "choiceId": "a",
+        "text": "Three"
+      },
+      {
+        "choiceId": "b",
+        "text": "Five"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The amended provision limits signatories to three; five was the older rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(d); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-32",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 11032’s ordinary processing ceilings, how many working days apply to a simple transaction, assuming no exception or extension?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Twenty"
+      },
+      {
+        "choiceId": "a",
+        "text": "Three"
+      },
+      {
+        "choiceId": "b",
+        "text": "Seven"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ten"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The simple-transaction ceiling is three working days. Seven is for complex transactions; special categories have different ceilings.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(b)(1); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-33",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What must a receiving officer assign to an application under RA 11032 for its subsequent transactions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A unique identification number"
+      },
+      {
+        "choiceId": "b",
+        "text": "A new unrelated number at every step"
+      },
+      {
+        "choiceId": "c",
+        "text": "The officer’s private mobile number as its identifier"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only the daily visitor count"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "A unique application identification number follows the specific application across subsequent transactions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(a)(3); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-34",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A zero-contact policy is read as barring even preliminary assessment and evaluation of submitted requirements. What correction follows the amended Section 7?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Only assessment of business applications is an exception; nonbusiness assessment is barred"
+      },
+      {
+        "choiceId": "c",
+        "text": "The exception covers final approval discussions but excludes preliminary assessment"
+      },
+      {
+        "choiceId": "d",
+        "text": "The exception authorises any applicant contact once assessment has begun"
+      },
+      {
+        "choiceId": "a",
+        "text": "Those assessment activities are express exceptions"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The rule expressly excepts preliminary assessment and evaluation of sufficiency, and recognises strictly necessary contact; it is not an absolute ban.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 7, inserted Section 7; https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-35",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An authorised signatory takes official leave. A service desk says the application must wait indefinitely for that person. Which provision offers the required response?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Treat all approved documents as void until the officer returns"
+      },
+      {
+        "choiceId": "d",
+        "text": "Add a fourth mandatory signatory rather than designate a substitute"
+      },
+      {
+        "choiceId": "a",
+        "text": "Designate an alternate signatory"
+      },
+      {
+        "choiceId": "b",
+        "text": "Require the applicant to wait for the officer’s return under every circumstance"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The amended limitation-of-signatories provision requires an alternate when the authorised person is on official business or leave.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(d); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-36",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a complex transaction with a seven-working-day Charter period, an agency seeks one seven-day extension. What additional step is required before the original period lapses?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "A published general announcement replacing individual written notice"
+      },
+      {
+        "choiceId": "a",
+        "text": "Written notice of reason and final release date, signed by the applicant as proof of notice"
+      },
+      {
+        "choiceId": "b",
+        "text": "Written notice of the reason only, with no final release date"
+      },
+      {
+        "choiceId": "c",
+        "text": "Oral notice of the reason and final date after the original period lapses"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The extension must be indicated in the Charter; prior written notice must give reason and final date, with applicant signature as proof. A possible extension is not silent or recurring.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(b)(1); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-37",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A desk finds a missing requirement listed in the Citizen’s Charter but waits until its final decision to tell the applicant. Which receiving-stage duty was missed?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Immediately inform the applicant of the deficiency"
+      },
+      {
+        "choiceId": "b",
+        "text": "Wait until the processing deadline before identifying the deficiency"
+      },
+      {
+        "choiceId": "c",
+        "text": "Treat assigning an application number as sufficient notification of the deficiency"
+      },
+      {
+        "choiceId": "d",
+        "text": "Require the applicant to discover deficiencies solely by rereading the Charter"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Receiving officers conduct preliminary assessment and immediately communicate deficiencies, limited to Charter requirements. This is distinct from a later merits decision.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(a)(2); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-38",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An agency offers an applicable electronic permit but labels it inherently less authoritative than its signed hard copy. What does the amended Section 9(e) require?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Electronic versions are informational previews pending every paper issue"
+      },
+      {
+        "choiceId": "c",
+        "text": "An applicant-printed version automatically has a different level of authority"
+      },
+      {
+        "choiceId": "d",
+        "text": "Electronic versions have authority only after a second independent approval"
+      },
+      {
+        "choiceId": "a",
+        "text": "The electronic version has the same level of authority"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "When applicable the electronic version must have the same level of authority and may be printed by the applicant.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(e); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-39",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply only the ordinary extension rule in RA 11032; no disaster, Sanggunian approval or other special rule applies. A seven-day complex application has already received one seven-day extension. The office now proposes a second seven-day extension and says its late oral notice is enough. Which assessment identifies both defects?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "A second extension is barred but late oral notice suffices"
+      },
+      {
+        "choiceId": "d",
+        "text": "Unlimited extensions are allowed if the total stays below twenty days"
+      },
+      {
+        "choiceId": "a",
+        "text": "A second ordinary extension is barred; the first required timely written notice"
+      },
+      {
+        "choiceId": "b",
+        "text": "A second extension is allowed if oral notice is timely"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The maximum ordinary period may be extended only once for the same number of days; notice before lapse must be written with reason and final date. The twenty-day special-category ceiling does not create repeated extensions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(b)(1); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-general-40",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume only the cited RA 11032 receipt and signatory provisions apply. Office K uses one stable application ID but omits receipt date/time. Office L records complete receipt details but waits for an officer on official leave instead of designating an alternate. Which paired repair addresses the distinct gaps?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "K keeps the receipt incomplete; L designates an alternate"
+      },
+      {
+        "choiceId": "a",
+        "text": "K adds date/time; L designates an alternate"
+      },
+      {
+        "choiceId": "b",
+        "text": "K changes the ID at every step; L adds four signatories"
+      },
+      {
+        "choiceId": "c",
+        "text": "K adds date/time; L waits until the officer returns"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The acknowledgment includes date/time; a stable ID does not replace receipt details. Official leave requires an alternate signatory; complete receipts do not cure that delay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "RA 11032 (2018), Section 9, amended Section 9(a)(3)–(4),(d); https://lawphil.net/statutes/repacts/ra2018/ra_11032_2018.html; retrieved 2026-11-03. Original educational application; statutory text, not legal advice."
+      ]
+    }
+  }
+]
