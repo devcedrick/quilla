@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f05-vocabulary-filipino-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Ginawang SALIGAN ng pasiya ang mga nasuring tala. Ano ang SALIGAN sa pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Resulta"
+      },
+      {
+        "choiceId": "b",
+        "text": "Pagtutol"
+      },
+      {
+        "choiceId": "c",
+        "text": "Batayan"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pahintulot"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang saligan ang pinagbatayan, hindi awtomatikong resulta, pagtutol o pahintulot na ibinunga ng pasiya.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword saligan; https://diksiyonaryo.ph/search/saligan; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-filipino-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Hindi inalis ni Sela ang kaniyang TITIG sa pintuang hinihintay niyang bumukas. Ano ang TITIG dito?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Saglit na sulyap"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mabilis na paglingon"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pagsilip nang nakapikit"
+      },
+      {
+        "choiceId": "d",
+        "text": "Matagal at masidhing pagtingin"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ang titig ay masidhi at matagal na tingin. Naiiba ito sa saglit na sulyap o paglingon; hindi pagtingin ang nakapikit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword titig; https://diksiyonaryo.ph/list/T?page=175; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-filipino-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Dahil sa alitan sa pamamahala ng tindahan, hindi na nag-uusap ang dating magkasosyo. Ano ang pinakamalapit na kahulugan ng ALITAN?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Matinding hindi pagkakaunawaan"
+      },
+      {
+        "choiceId": "b",
+        "text": "Pagpapalitan ng mga tauhan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pagbabago ng oras ng pagbubukas"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pagsasanib ng dalawang puhunan"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang alit/alitan ay hidwaan o hindi pagkakaunawaan. Hindi ito simpleng pagpapalit ng tauhan, iskedyul o pagsasanib ng puhunan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword alit / alitan; https://diksiyonaryo.ph/list/A?page=102; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-filipino-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Alinsunod sa napagkasunduang sukat ang bagong mesa, ngunit iba ang materyal nito. Alin ang nagpapanatili sa kahulugan ng ALINSUNOD at sa saklaw ng pahayag?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Katulad ang materyal, ngunit hindi tiyak ang sukat"
+      },
+      {
+        "choiceId": "b",
+        "text": "Sumusunod ang sukat sa kasunduan; hindi nito sinasabing magkatulad din ang materyal"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sumusunod ang sukat sa kasunduan, kaya tiyak na pareho ang lahat ng katangian"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sumasalungat ang sukat sa kasunduan, bagaman pareho ang materyal"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Alinsunod sa ay pagsunod o pag-ayon sa tinukoy na batayan. Sukat lamang ang pinag-uusapan; hindi nito pinalalawak ang pagkakatulad sa lahat ng katangian o binabaligtad ang pagkakaiba ng materyal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword alinsunod; https://diksiyonaryo.ph/search/alinsunod; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-filipino-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Sa eksibit, ITINAMPOK ang mga likha ng baguhang iskultor, kasabay ng mas maliit na seksiyon para sa mga batikang pintor. Aling pagpapahayag ang pinakamalapit sa ITINAMPOK nang hindi nagdaragdag ng diwa?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Binigyang-diin ang baguhan, kaya awtomatikong hindi na kabilang ang mga beterano"
+      },
+      {
+        "choiceId": "b",
+        "text": "Binigyang-diin ang baguhan, kaya napatunayang mas mahusay ang bawat isa sa mga beterano"
+      },
+      {
+        "choiceId": "c",
+        "text": "Binigyang-diin ang baguhan habang maaari pa ring kabilang ang gawa ng iba"
+      },
+      {
+        "choiceId": "d",
+        "text": "Isinama ang baguhan ngunit walang pagkakaiba sa bigat ng pagbibigay-pansin sa alinmang seksiyon"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang itinampok ay pagbibigay ng natatanging diin/pansin o pagkilala. Hindi ito awtomatikong eksklusibong paglalathala, patunay ng higit na husay, o simpleng pagsasama nang walang diin. Ang mas maliit na seksiyon para sa iba ay kaayon ng pagkakaibang ito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword tampok, prominence/recognition senses; https://diksiyonaryo.ph/search/tampok; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-filipino-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Sa tula, ang bukas na pinto ay SAGISAG ng pagtanggap, ngunit hindi inilalarawan ng makata ang anyo ng tunay na bahay. Aling pagbasa ang pinananatili ng SAGISAG?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kumakatawan ang pinto sa pagtanggap, kaya tiyak na may gayong pinto sa bahay ng makata"
+      },
+      {
+        "choiceId": "b",
+        "text": "Kumakatawan ang pinto sa pagtanggap, kaya bawat katangian ng pinto ay dapat literal na itumbas sa pagtanggap"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ang pinto ay nangangahulugan ng pagtanggap, ngunit bawal nang magkaroon ito ng literal na gamit sa ibang tula"
+      },
+      {
+        "choiceId": "d",
+        "text": "Kumakatawan ang pinto sa pagtanggap; hindi nito pinatutunayan ang anyo ng isang tunay na bahay"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ang sagisag ay kinatawan ng diwa, hindi ebidensiya ng pisikal na bahay o ganap na literal na pagtutumbas ng lahat ng katangian. Hindi rin itinatakda ng gamit na ito ang lahat ng posibleng gamit sa ibang tula.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword sagisag, noun representation sense; https://diksiyonaryo.ph/search/sagisag-panulat; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  }
+]

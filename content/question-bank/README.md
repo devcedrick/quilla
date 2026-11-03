@@ -33,6 +33,12 @@ allocation. Its [review ledger](../../docs/content/family04-review.md) records
 source evidence, independent AI review, validation and pending human review.
 It is offline authored content, not imported or published database content.
 
+Family 05 is authored in **[family-05/](family-05/manifest.json)** with 270
+questions, 34 text/table references and the per-subject 30/50/20 editorial
+allocation. Its [review ledger](../../docs/content/family05-review.md) records
+source evidence, substantive originality/difficulty repairs, independent AI
+checks and pending human review. It is offline authored content.
+
 ## Layout within each family
 
 - `manifest.json`: the independent family inventory and validation metadata.

@@ -1,0 +1,1562 @@
+[
+  {
+    "questionId": "f05-numerical-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Estimate 39×61 by first rounding EACH factor to the nearest ten. What estimate results?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1800"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2000"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2400"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2800"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "39 rounds to 40 and 61 to 60, giving 40×60=2400. The question prescribes factor rounding, rather than rounding the exact product afterward.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which fraction has a terminating decimal expansion in base 10?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3/20"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4/7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5/6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The reduced denominator 20 contains only factors 2 and 5, so 3/20=0.15 terminates. The other reduced denominators retain 3 or 7 and their long division repeats.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the sign of (−2)×(−5)×(−7)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Negative"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Positive"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Zero"
+      },
+      {
+        "choiceId": "c4",
+        "text": "It depends on the order"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Two negative factors give a positive product; multiplying by a third negative makes it negative. Reordering factors cannot change the product.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many POSITIVE integer divisors does 49 have?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The positive divisors are 1,7 and 49. Count the distinct divisors, including 1 and 49, rather than count repeated factors in 49=7×7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which calculation correctly rewrites 6÷(3/4) as multiplication?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6×(3/4)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(1/6)×(3/4)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "6×(4/3)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6×(1/4)"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Division by 3/4 equals multiplication by its reciprocal 4/3. Keeping 3/4 or taking the reciprocal of 6 reverses the wrong quantity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A sector occupies exactly 1/8 of a circle. How many degrees is its central angle?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "45 degrees"
+      },
+      {
+        "choiceId": "c2",
+        "text": "40 degrees"
+      },
+      {
+        "choiceId": "c3",
+        "text": "60 degrees"
+      },
+      {
+        "choiceId": "c4",
+        "text": "90 degrees"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A full circle is 360 degrees. One eighth is 360/8=45 degrees; 90 would represent one quarter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-07",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A hollow cube has internal side 5 cm. Given 1 cubic centimetre equals 1 mL, what is its capacity?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "25 mL"
+      },
+      {
+        "choiceId": "c2",
+        "text": "125 mL"
+      },
+      {
+        "choiceId": "c3",
+        "text": "150 mL"
+      },
+      {
+        "choiceId": "c4",
+        "text": "15 mL"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Internal volume is 5×5×5=125 cubic centimetres, hence 125 mL. Squaring gives a face area rather than capacity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-08",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Four people each shake hands exactly once with every other person. How many handshakes occur?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The pair count is 3+2+1=6. Counting 3 handshakes for each of 4 people counts every pair twice.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-09",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A list contains three copies of 4, two copies of 5, one 6 and one 7. What is its mode?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "6"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The mode is the value with the highest frequency. Four occurs three times, more often than any other listed value.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-10",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A point lies exactly halfway between−9 and 5 on a number line. What is its coordinate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "-7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "-4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "-2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The midpoint is(−9+5)/2=−2. It is 7 units from either endpoint; 7 is the distance, not the coordinate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-11",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A solid cube has edge 3 cm. What is its TOTAL surface area?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9 cm²"
+      },
+      {
+        "choiceId": "c2",
+        "text": "18 cm²"
+      },
+      {
+        "choiceId": "c3",
+        "text": "27 cm²"
+      },
+      {
+        "choiceId": "c4",
+        "text": "54 cm²"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Each of six faces has area 3²=9 cm², giving 54 cm². The 27 calculation is volume, not surface area.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-12",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A 1000 mm board is cut ONCE into two equal usable pieces. The saw removes a 4 mm-wide strip at that cut. How long is each piece?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "496 mm"
+      },
+      {
+        "choiceId": "c2",
+        "text": "498 mm"
+      },
+      {
+        "choiceId": "c3",
+        "text": "500 mm"
+      },
+      {
+        "choiceId": "c4",
+        "text": "502 mm"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The usable total is 1000−4=996 mm. Divide it equally to obtain 498 mm. There is one lost strip, not one per resulting piece.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-13",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A walker at 3 km/h starts 20 minutes before a cyclist who follows the same route at 5 km/h. Both continue at constant speeds. How many minutes AFTER the cyclist starts does the cyclist catch the walker?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "12 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "20 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "30 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "50 minutes"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The head start is 3×(20/60)=1 km. The cyclist closes it at 5−3=2 km/h, requiring 1/2 hour=30 minutes. The total time since the walker began is a different quantity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-14",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A three-digit code uses DISTINCT digits from 0,1,2,3,4. Its first digit cannot be 0. How many codes are possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "48"
+      },
+      {
+        "choiceId": "c2",
+        "text": "60"
+      },
+      {
+        "choiceId": "c3",
+        "text": "36"
+      },
+      {
+        "choiceId": "c4",
+        "text": "64"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "There are 4 first-digit choices, then 4 remaining choices including 0, then 3. Thus 4×4×3=48. Excluding 0 from every position or allowing repetition counts a different set.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-15",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How many integers n satisfy |2 n−7|≤3?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The absolute-value condition means−3≤2 n−7≤3. Hence 2≤n≤5, giving four integers 2,3,4,5. Both endpoints satisfy the non-strict inequality.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-16",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three items each cost exactly PHP 1.245 before cash rounding. Method U rounds EACH unit price to the nearest cent, then adds. Method T adds exact prices, then rounds the total to the nearest cent. Half-cent values round upward. How much MORE does U charge than T?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 0.00"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 0.01"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 0.02"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 0.03"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "U charges 3×1.25=3.75. T rounds 3×1.245=3.735 to 3.74. The difference is 0.01; rounding once and rounding three times need not agree.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-17",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Positive INTEGER prices p, q satisfy BOTH equations 2 p+3 q=18 and 4 p+6 q=36. How many ordered pairs(p, q) are possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "None"
+      },
+      {
+        "choiceId": "c2",
+        "text": "One"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Two"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Infinitely many"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The second equation is twice the first, so it adds no restriction. From 2 p=18−3 q, positive integer p requires q to be even and less than 6. Thus q=2 gives p=6, and q=4 gives p=3. These are the only two positive integer pairs. Treating the equations as independent suggests one solution; ignoring integrality suggests infinitely many.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-18",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two fictional accounts each start at PHP 1000 and have no deposits or withdrawals. A adds 10% of its CURRENT balance after each year for two years. B pays simple interest equal to 11% of its ORIGINAL principal per year for two years. Which has the higher final balance, and by how much?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A byPHP 10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B byPHP 10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A byPHP 20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B byPHP 20"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A finishes 1000×1.1×1.1=1210. B adds 2×0.11×1000=220 to its original 1000, giving 1220. B is higher by 10. Compounding the 11% in B or treatingA as simple interest changes the stated products.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-19",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fictional loan starts at PHP 1000. At each month-end,10% interest is first added to the unpaid balance, then aPHP 400 payment is deducted. What balance remains immediately AFTER the SECOND payment?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 200"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 300"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 400"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 370"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "After the first interest and payment:1000×1.1−400=700. After the second:700×1.1−400=370. Charging the second interest on 1000 or subtracting payments before interest changes the stated sequence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-20",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fictional bonus is divided among three workers INVERSELY to their individual times to complete the same task: A takes 4 hours, B6 hours, C12 hours. If the bonus is PHP 1200, how much does B receive?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 300"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 327.27"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 400"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 600"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Inverse-time weights are 1/4:1/6:1/12=3:2:1. B receives 2 of 6 parts, or 400. Using times 4:6:12 directly gives about 327.27 and reverses the required allocation principle; equal division ignores differing weights.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-21",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two sides of a non-degenerate triangle are 5 cm and 8 cm. How many POSITIVE INTEGER centimetre lengths are possible for the third side?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The strict triangle inequalities require 8−5<x<8+5, so 3<x<13. The integer lengths 4 through 12 give 9 possibilities. Length 3 or 13 would flatten the triangle.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-22",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 4 m-by-3 m rectangle is removed from one CORNER of a 12 m-by-9 m rectangular floor. The remaining floor is L-shaped. What is its perimeter, including the edges of the notch?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "42 m"
+      },
+      {
+        "choiceId": "c2",
+        "text": "35 m"
+      },
+      {
+        "choiceId": "c3",
+        "text": "28 m"
+      },
+      {
+        "choiceId": "c4",
+        "text": "54 m"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Removing the corner deletes boundary segments 4 and 3 but adds new notch segments 4 and 3. The perimeter stays 2(12+9)=42 m. Subtracting the cut lengths without adding the exposed edges undercounts it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-23",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two runners start together on a 400 m circular track and run in OPPOSITE directions at 5 m/s and 3 m/s. When do they first meet again?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "40 seconds"
+      },
+      {
+        "choiceId": "c2",
+        "text": "80 seconds"
+      },
+      {
+        "choiceId": "c3",
+        "text": "200 seconds"
+      },
+      {
+        "choiceId": "c4",
+        "text": "50 seconds"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Their combined progress around the track is 8 m each second. They meet when this totals one 400 m lap:400/8=50 seconds. Subtracting speeds applies to the same-direction catching problem.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-24",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fair six-sided die is rolled independently three times. What is the probability of at least one 6?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "91/216"
+      },
+      {
+        "choiceId": "c3",
+        "text": "125/216"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/216"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The chance of no 6 is(5/6)³=125/216. Subtract from 1 to obtain 91/216. Three times 1/6 double-counts outcomes with multiple sixes; 1/216 is three sixes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-25",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Evaluate 1/(1×2)+1/(2×3)+1/(3×4)+…+1/(9×10).",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4/5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9/10"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Each term 1/[k(k+1)] equals 1/k−1/(k+1). Intermediate terms cancel, leaving 1−1/10=9/10. The sequence has nine terms, not ten.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-26",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The decimal 0.272727… repeats 27 forever. What is its exact value as a fraction in simplest form?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3/11"
+      },
+      {
+        "choiceId": "c2",
+        "text": "27/100"
+      },
+      {
+        "choiceId": "c3",
+        "text": "27/90"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2/7"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "If x=0.272727…, then 100 x−x=27, so x=27/99=3/11. A denominator 100 would describe a terminating 0.27 instead.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-27",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two temperature readings obey F=(9/5) C+32. At a particular temperature the numerical reading F equals 2 C. What is C?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "32"
+      },
+      {
+        "choiceId": "c2",
+        "text": "80"
+      },
+      {
+        "choiceId": "c3",
+        "text": "320"
+      },
+      {
+        "choiceId": "c4",
+        "text": "160"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Substitute 2 C for F:2 C=(9/5) C+32. The difference is C/5=32, so C=160 and F=320. The question asks for C.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-28",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Five scores are 10,20,30,40,50. Two new scores, each a whole number from 0 to 100, are added. The mean of all seven scores is 40 and their median is 40. What is the GREATEST possible new score?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "80"
+      },
+      {
+        "choiceId": "c2",
+        "text": "90"
+      },
+      {
+        "choiceId": "c3",
+        "text": "100"
+      },
+      {
+        "choiceId": "c4",
+        "text": "130"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The original total is 150; the new total is 7×40=280, so the added scores sum 130. Already three original scores are below 40. If either added score were below 40, the fourth score and median would be below 40. Thus each added score is at least 40, and the larger is at most 90. Adding 40 and 90 achieves the mean and median. A value 100 would require its partner 30, which makes the median 30.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-29",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "At 3:00 on a continuously moving analogue clock, the minute hand is at 12 and the hour hand at 3. After how many minutes will they first overlap?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "15"
+      },
+      {
+        "choiceId": "c2",
+        "text": "180/11"
+      },
+      {
+        "choiceId": "c3",
+        "text": "16"
+      },
+      {
+        "choiceId": "c4",
+        "text": "18"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The initial separation is 90 degrees. The minute hand moves 6 degrees/minute and the hour hand 0.5, so the closing rate is 5.5. Time=90/5.5=180/11 minutes. Treating the hour hand as stationary gives 15, too early.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-30",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A person walks 6 m east, then 8 m north. A direct straight path connects the same start and finish. How many metres SHORTER is the direct path?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2 m"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4 m"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10 m"
+      },
+      {
+        "choiceId": "c4",
+        "text": "14 m"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The walked path is 14 m. The direct distance is√(6²+8²)=10 m by the right-angle geometry. The saving is 14−10=4 m, not the direct distance itself.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-31",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Class A scores are 40,60,80; Class B scores are 50,60,70. Both raw means are 60. Add 20 to EACH score, but cap every converted score at 90. What are the converted means(A, B)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(76 2/3,80)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(80,80)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(80,76 2/3)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(70,70)"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A converts to 60,80,90, total 230, mean 76 2/3. B converts to 70,80,90, total 240, mean 80. OnlyA loses points to the cap. Applying the transformation to the shared raw mean gives 80 for both and overlooks the different upper tails.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-32",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In a triangle, angles A and B are in the ratio 2:3. The exterior angle adjacent to angleC is 125 degrees. What is angleB?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "75 degrees"
+      },
+      {
+        "choiceId": "c2",
+        "text": "50 degrees"
+      },
+      {
+        "choiceId": "c3",
+        "text": "55 degrees"
+      },
+      {
+        "choiceId": "c4",
+        "text": "83.33 degrees"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "AnglesA+B equal the exterior angle 125. Five ratio parts therefore total 125, so B=3×25=75. AngleC=55 is not the requested angle.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-33",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A rectangular plot has positive INTEGER side lengths x and y metres. One x-length side borders a road and costs PHP 10/m to fence; the other x-length side and BOTH y-length sides cost PHP 20/m. At mostPHP 800 is available. What is the greatest possible enclosed area?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "128 m²"
+      },
+      {
+        "choiceId": "c2",
+        "text": "130 m²"
+      },
+      {
+        "choiceId": "c3",
+        "text": "132 m²"
+      },
+      {
+        "choiceId": "c4",
+        "text": "133 m²"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The cost is 30 x+40 y≤800. For each integer y from 1 to 19, the largest feasible x is floor((800−40 y)/30). The maximum product is 132 atx=12, y=11, cost 800. Nearby y=10 givesx=13, area 130; y=9 givesx=14, area 126. A continuous optimum near 133.33 is unavailable with integer side lengths.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-34",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Choose one of two boxes with equal probability, then draw one counter uniformly from that box. Box A has 2 red and 1 blue; Box B has 1 red and 3 blue. The drawn counter is red. What is the probability that Box A was chosen?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3/4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8/11"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The red outcomes have relative weights 2/3 from A and 1/4 from B because the box chances are equal. Express these as 8/12 and 3/12:among red outcomes,8 of 11 come from A. The unconditional chance 1/2 and the within-A red chance 2/3 answer different questions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-35",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "What is the units digit of 7 raised to(2 raised to 15), PLUS 3 raised to(3 raised to 12)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Powers of 7 cycle 7,9,3,1 every 4 exponents. Since 2^15 is divisible by 4, the 7-power ends 1. Powers of 3 cycle 3,9,7,1. Since 3^12 leaves remainder 1 on division by 4, its exponent selects the 3 ending. The sum ends 1+3=4. Both outer cycles and inner exponent remainders must be resolved.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-36",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A staircase has 12 steps. A route uses exactly THREE two-step moves; all other moves take one step. No two two-step moves may be consecutive, and the LAST move must be a one-step move. How many different ordered routes are possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "15"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "35"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Three double moves cover 6 steps, so six one-step moves remain. Place those six single moves in order. A double may go in any of the six gaps before a single, but not after the final single. At most one double fits each gap because doubles cannot be consecutive. Choose three distinct gaps from six:20 possible triples. Counting all positions without the gap restriction includes forbidden adjacent doubles or a final double.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-37",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Equal squares of side x are cut from all four corners of a 24 cm-by-18 cm sheet. The sides are folded up to make an open box with positive base dimensions. Its base area is 216 cm². What is the volume of the box?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "432 cm³"
+      },
+      {
+        "choiceId": "c2",
+        "text": "648 cm³"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1296 cm³"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3888 cm³"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The base is(24−2 x) by(18−2 x), so(24−2 x)(18−2 x)=216. Rearranging givesx²−21 x+54=0, with roots 3 and 18. Positive base dimensions require 0<x<9, so only 3 is valid. Height 3 times base area 216 gives 648 cm³. Keeping 18 would produce impossible base dimensions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-38",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two 12-hour clocks initially show the correct time. Clock A gains 2 display-minutes per actual hour; Clock B loses 3. After exactly 50 actual hours, B is reset to the correct time and then resumes its same loss rate; A is never reset. At what elapsed actual time after the initial start will their 12-hour displays FIRST agree again?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "144 hours"
+      },
+      {
+        "choiceId": "c2",
+        "text": "150 hours"
+      },
+      {
+        "choiceId": "c3",
+        "text": "174 hours"
+      },
+      {
+        "choiceId": "c4",
+        "text": "194 hours"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Before the reset the display difference grows 5 minutes/hour and reaches only 250 minutes, below a full 720-minute cycle. Immediately after resettingB, the difference is A’s 100-minute gain. It then grows at 5 minutes/hour, needing(720−100)/5=124 more hours to reach a full cycle. Total 50+124=174 hours. Ignoring the reset gives 144; resettingA as well would use a different starting difference.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-39",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A fictional allocation rule assigns 97 kits to A, B, C. First reserve 10 kits for C. For the remaining 87, use weights 5:3:2. IfA’s exact quota exceeds 40, fixA at 40 and redistribute ALL 47 other unreserved kits betweenB and C in the ratio 3:2. Only then round down each unreserved quota; assign leftover kits to the largest fractional remainder. AddC’s reserved kits last. What are the final totals(A, B, C)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(40,29,28)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(44,26,27)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(40,28,29)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(40,32,25)"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The initialA quota is 87×5/10=43.5, so the cap applies. Of the 47 remaining unreserved kits, B gets 28.2 andC18.8. Floors 28 and 18 leave one kit, which goes to C’s larger 0.8 remainder. AddingC’s 10 reserved kits gives(40,28,29), total 97. Rounding before the cap or applying the reserve twice changes the prescribed order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-numerical-40",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A walker travels continuously at 4 km/h and is 1.5 km ahead when a second walker starts. The second walks at 7 km/h for 20 minutes, rests 10 minutes, then repeats that walk/rest cycle. The first never rests. How long after the second starts is the FIRST catch-up?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "70 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "75 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "76 minutes 40 seconds"
+      },
+      {
+        "choiceId": "c4",
+        "text": "80 minutes"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "During each walking segment the gap shrinks 3×(20/60)=1 km; during each rest it grows 4×(10/60)=2/3 km. The gaps at starts of walking segments are 1.5,7/6 and 5/6 km. Neither of the first two segments closes its initial gap. In the third segment,5/6 km at 3 km/h takes 5/18 hour=16 minutes 40 seconds. Add the two completed 30-minute cycles:76 minutes 40 seconds. Using an average speed can miss the first catch occurring within a walking segment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

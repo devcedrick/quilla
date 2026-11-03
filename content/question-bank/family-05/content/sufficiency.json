@@ -1,0 +1,862 @@
+[
+  {
+    "questionId": "f05-sufficiency-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the perimeter of an equilateral triangle?\nStatement 1: One side is 6 cm.\nStatement 2: Two sides have combined length 12 cm.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either-alone",
+    "explanation": "Statement 1 makes all three sides 6, so the perimeter is 18 cm. Statement 2 makes each of its two equal sides 6, so also gives 18 cm. They are consistent together and either alone suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For a positive integer n, is n prime?\nStatement 1: n=2.\nStatement 2: n is even.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1-only",
+    "explanation": "Statement 1 gives the prime 2, so yes. Statement 2 permits 2(prime) or 4(not prime). Together n=2 is consistent and the answer remains yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For a positive real number x, what is its fractional part? The fractional part is x minus the greatest integer not exceeding x.\nStatement 1: x is an integer.\nStatement 2: x is greater than 10.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1-only",
+    "explanation": "Statement 1 forces fractional part 0. Statement 2 permits 11(fractional part 0) or 11.5(part 0.5), so does not fix it. Together an integer above 10 still has fractional part 0.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A coin is tossed twice. How many of the two results are heads?\nStatement 1: The first toss is heads.\nStatement 2: The second toss is tails.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 permits 1 or 2 heads; statement 2 permits 0 or 1. Together the outcomes are head then tail, so exactly 1 head. Neither alone determines that count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An integer n is between 1 and 9 inclusive. Is n greater than 5?\nStatement 1: n is less than 3.\nStatement 2: n is greater than 1.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1-only",
+    "explanation": "Statement 1 leaves 1 or 2, both giving no; a definite no is sufficient. Statement 2 permits 2(no) or 6(yes). Together n=2, and the answer is still no.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A positive two-digit integer is given. What is its LARGER digit?\nStatement 1: Its tens digit is 4.\nStatement 2: Its units digit is 5.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 allows 40(larger digit 4) or 49(larger 9). Statement 2 allows 15(larger 5) or 95(larger 9). Together the integer is 45 and its larger digit is 5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-07",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A list has a unique mode. Every value is increased by the SAME unknown real amount k. What is the new mode?\nStatement 1: The original mode is 6.\nStatement 2: k=3.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 allows shifts 0 or 3, giving modes 6 or 9. Statement 2 permits original modes 1 or 6, giving new modes 4 or 9. Together every occurrence of 6 becomes 9 and all frequencies retain their ranks, so the new unique mode is 9.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-08",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A positive two-digit integer uses two DISTINCT digits. Is the number obtained by reversing its digits greater than the original? A reversed leading zero is interpreted normally.\nStatement 1: The two digits sum to 11.\nStatement 2: The tens digit is less than 5.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Let tens=a, units=b. The reversed number is greater exactly when b>a. Statement 1 permits 29(yes) or 92(no). Statement 2 permits 12(yes) or 10(no). Together a can only be 2,3,4 with b=9,8,7 respectively, so b>a always.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-09",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For real x, is its distance from−2 less than its distance from 2 on the number line?\nStatement 1: x³ is negative.\nStatement 2: x²=9.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1-only",
+    "explanation": "Comparing squared distances gives(x+2)²<(x−2)² exactly when x<0. Statement 1 forces a negative x, so yes. Statement 2 permits−3(yes) or 3(no). Together x=−3 is consistent and the answer is yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-10",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fraction has positive integer numerator a and denominator b. Is it in lowest terms, meaning that their greatest common divisor is 1?\nStatement 1: a is odd.\nStatement 2: b is one more than a.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s2-only",
+    "explanation": "Statement 1 allows 3/5(lowest terms) or 3/9(not). Statement 2 gives consecutive integers; any common divisor would divide their difference 1, so the gcd is 1. Together, for example 3/4 is consistent, and the answer stays yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-11",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For positive real numbers a, b, is a/(a+b) greater than 2/3?\nStatement 1: a−2 b=5.\nStatement 2: a>b.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1-only",
+    "explanation": "The comparison is equivalent to a>2 b because the denominators are positive. Statement 1 guarantees it. Statement 2 allows a=3, b=2(no) or a=5, b=2(yes). Together a=9, b=2 is possible and gives a definite yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-12",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a positive integer n, is n a perfect square?\nStatement 1: n has an odd number of positive divisors.\nStatement 2: n is divisible by 4.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1-only",
+    "explanation": "Positive divisors pair as d and n/d. An odd count occurs exactly when one pair coincides at an integer square root, so statement 1 forces a square. Statement 2 allows 4(square) or 8(not). Together 4 is possible and the answer remains yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-13",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two positive real numbers differ by 4. Is the square root of their product greater than 5?\nStatement 1: Their sum is 12.\nStatement 2: One of them is 8.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either-alone",
+    "explanation": "Statement 1 fixes 4 and 8, whose product 32 exceeds 25, so yes. Statement 2 permits the other number 4 or 12; both products 32 and 96 exceed 25, so yes despite the nonunique pair. Both statements together allow 4 and 8 and still give yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-14",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For nonzero real x, y, is xy positive?\nStatement 1: x+y is negative.\nStatement 2: x² is greater than y².",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "The pairs(−3,−1) and(−3,1) satisfy BOTH statements, but their products are positive and negative respectively. Thus each statement alone and both together admit opposite answers. Knowing that x has the greater magnitude and the sum is negative fixes x’s sign, not y’s.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-15",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a positive integer n, is 2 raised to n divisible by 8?\nStatement 1: n is prime.\nStatement 2: n is even.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Divisibility holds exactly when n≥3. Statement 1 allows n=2(no) or 3(yes). Statement 2 allows 2(no) or 4(yes). Together the only even prime is 2, so the answer is definitely no. The statements are consistent without fixing a yes answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-16",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A code has two digits drawn from an unknown nonempty subset of 0–9. Repetition is allowed, but the first digit cannot be 0. How many different codes are possible?\nStatement 1: The allowed subset has exactly 3 digits.\nStatement 2: Zero is not in the allowed subset.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 permits subset{0,1,2}, giving 2×3=6 codes, or{1,2,3}, giving 3×3=9. Statement 2 allows{1,2}(4 codes) or{1,2,3}(9). Together all 3 digits are nonzero, so 9 codes are possible.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-17",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two nonempty boxes contain only red and blue counters. Select a box with equal probability, then choose a counter uniformly from it. Is the probability of red GREATER than 1/2?\nStatement 1: Across the two boxes together, the total red and blue counts are equal.\nStatement 2: The two boxes contain equal total numbers of counters.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 alone permits A:(1 red,0 blue), B:(1 red,2 blue), giving red probability 2/3, or A:(0 red,1 blue), B:(2 red,1 blue), giving 1/3. Statement 2 alone permits two all-red equal-size boxes(yes) or two all-blue equal-size boxes(no). Together equal box sizes make equal-box selection equivalent to a uniform draw from the combined balanced pool, so probability is exactly 1/2 and the answer is no.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-18",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For a positive real x, what is x+1/x?\nStatement 1: (x−1/x)²=5.\nStatement 2: x²−3 x+1=0.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either-alone",
+    "explanation": "For statement 1,(x+1/x)²=(x−1/x)²+4=9. Positivity of x makes the sum positive, so it is 3, not−3. Statement 2 divided by x directly gives x+1/x=3. Both are consistent at either positive root of x²−3 x+1=0 and together give the same 3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-19",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Positive integers a, b satisfy a+b=1001 and a is less than b. What is their greatest common divisor?\nStatement 1: a is divisible by 7.\nStatement 2: b is divisible by 11.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 allows(a, b)=(7,994), gcd 7, or(77,924), gcd 77. Statement 2 allows(11,990), gcd 11, or(77,924), gcd 77. Together 1001=7×11×13 forces BOTH numbers to be multiples of 77. The possible smaller numbers are 77,154,231,308,385,462, paired with 924,847,770,693,616,539. Each pair has gcd 77 because after division by 77 the positive pair sums to the prime 13 and neither term is 13. Thus together the gcd is uniquely 77, although the numbers themselves are not unique.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-sufficiency-20",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A two-digit integer n is between 10 and 99 inclusive. Is n divisible by 7?\nStatement 1: Dividing n by 9 leaves remainder 4.\nStatement 2: The units digit of n² is 6.",
+    "choices": [
+      {
+        "choiceId": "s1-only",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2-only",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "both-needed",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either-alone",
+        "text": "Either statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "both-needed",
+    "explanation": "Statement 1 allows 49(yes) or 13(no). Statement 2 allows 14(yes) or 24(no). Its condition requires n to end in 4 or 6. The statement 1 candidates are 13,22,31,40,49,58,67,76,85,94; only 76 and 94 also satisfy statement 2. Neither is divisible by 7, so together the answer is definitely no although n is not unique.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

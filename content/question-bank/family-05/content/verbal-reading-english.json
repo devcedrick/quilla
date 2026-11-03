@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f05-reading-english-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which submission feature is required?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Quantities and cooking steps"
+      },
+      {
+        "choiceId": "b",
+        "text": "A photograph of the finished dish"
+      },
+      {
+        "choiceId": "c",
+        "text": "The contributor’s printed name"
+      },
+      {
+        "choiceId": "d",
+        "text": "Typing rather than handwriting"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Quantities and steps are expressly required. The photograph and printed name are optional; handwriting is accepted.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-english-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which detail first prompts Jo’s recognition before she reads the sign?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A station announcement"
+      },
+      {
+        "choiceId": "b",
+        "text": "The smell of roasting corn"
+      },
+      {
+        "choiceId": "c",
+        "text": "A handwritten luggage label"
+      },
+      {
+        "choiceId": "d",
+        "text": "A greeting from a porter"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The scent arrives before the sign and accompanies her familiar movements. No announcement, porter greeting or luggage-label recognition is described.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-english-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What does the remark about the trophy chiefly accomplish?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It proves that the trophy was earned for attendance"
+      },
+      {
+        "choiceId": "b",
+        "text": "It asks members to replace debate with silent agreement"
+      },
+      {
+        "choiceId": "c",
+        "text": "It uses irony to contrast passive presence with the active participation she wants"
+      },
+      {
+        "choiceId": "d",
+        "text": "It identifies an actual member who should be removed from office"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The inanimate trophy is praised for silent attendance, while the following request values challenging voices. The irony criticises passive participation; it does not report an award criterion or identify a member for removal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-english-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which correction best follows the teacher’s distinction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "They disagree about whether the final piece was performed"
+      },
+      {
+        "choiceId": "b",
+        "text": "They agree that the pace was slow and also give the same evaluation"
+      },
+      {
+        "choiceId": "c",
+        "text": "Their different evaluations prove that neither heard the final piece"
+      },
+      {
+        "choiceId": "d",
+        "text": "They share the observation of slow pace but differ in their assessment of its effect"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Slow pace is common to both descriptions; solemn and lifeless assign different values to it. A difference in judgement does not establish a difference in observed speed or the absence of either reviewer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-english-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which summary preserves all three distinctions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both oppose closing the walk at night; they differ on whether extending route lighting should wait for widening; neither establishes a view on fees"
+      },
+      {
+        "choiceId": "b",
+        "text": "Both oppose closing the walk at night; they differ on widening; both therefore favour free admission"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both favour postponing route lighting until widening; they differ only on whether workers should enter at night; neither discusses fees"
+      },
+      {
+        "choiceId": "d",
+        "text": "Both oppose a night closure and endorse immediate whole-route lighting; fees are the sole unresolved disagreement"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Their common opposition is explicit, but Ari proposes path lighting while Ben makes extension conditional on widening a narrow section. Neither discusses fees, so agreement on free admission cannot be inferred. Rivals preserve either the common policy or silence but misstate sequencing or fee views.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-english-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which interpretation best connects the changed metaphor, the narrator’s solitary climb and the unchanged steps?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The quick climb shows what the narrator missed; the new doorway image means Grandfather’s pauses no longer carry any significance"
+      },
+      {
+        "choiceId": "b",
+        "text": "The quick climb exposes missed encounters; the new image revalues the pauses while the staircase remains physically steep"
+      },
+      {
+        "choiceId": "c",
+        "text": "The doorway image recognizes encounters, and proves that every pause was unrelated to any need for rest"
+      },
+      {
+        "choiceId": "d",
+        "text": "The stairs remain steep, so the new image can refer only to physical doors and cannot change the meaning of the pauses"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The quick solitary climb misses sounds/encounters; wall-to-doorways revalues pauses as contact with other lives. The unchanged steepness distinguishes interpretation from rebuilding but does not exclude possible rest. Rivals retain the missed sounds, encounter image or physical fact while wrongly discarding another supported dimension.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

@@ -1,0 +1,1643 @@
+[
+  {
+    "questionId": "f05-general-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which list consists entirely of the territorial and political subdivisions named in Article X, Section 1 of the Constitution?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Provinces, cities, municipalities and barangays"
+      },
+      {
+        "choiceId": "b",
+        "text": "Provinces, regions, congressional districts and precincts"
+      },
+      {
+        "choiceId": "c",
+        "text": "Cities, metropolitan agencies, precincts and barangays"
+      },
+      {
+        "choiceId": "d",
+        "text": "Municipalities, provinces, departments and districts"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article X names provinces, cities, municipalities and barangays. Administrative regions, electoral divisions and national departments do not replace those constitutional categories.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, ratified 1987-02-02, Article X Section 1; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Article X, Section 2 states that territorial and political subdivisions shall enjoy which governing principle?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Complete exemption from national law"
+      },
+      {
+        "choiceId": "b",
+        "text": "Independent national sovereignty"
+      },
+      {
+        "choiceId": "c",
+        "text": "Local autonomy"
+      },
+      {
+        "choiceId": "d",
+        "text": "Exclusive control of national defence"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Local autonomy is expressly protected. It is not separate sovereignty, immunity from national law or exclusive local authority over defence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 2; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under Article X, Section 6, how is the LGUs’ just share in national taxes to be released?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only after an annual application by each mayor"
+      },
+      {
+        "choiceId": "b",
+        "text": "Automatically, with the share determined by law"
+      },
+      {
+        "choiceId": "c",
+        "text": "Only after approval by each provincial board"
+      },
+      {
+        "choiceId": "d",
+        "text": "As a discretionary personal grant from the President"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The constitutional share is determined by law and automatically released. It is not made a personal discretionary grant or conditioned on those extra applications/approvals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 6; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local council has chosen one of two equally lawful routes for a municipal service. In applying Article X, Section 4’s general-supervision rule, an adviser distinguishes checking that the council acts within prescribed powers from substituting a national official’s preferred route merely because he likes it better. Which assessment preserves that distinction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Check lawful powers; supervision alone does not establish unrestricted substitution of a lawful local choice."
+      },
+      {
+        "choiceId": "b",
+        "text": "General supervision permits checking lawful powers and automatically replacing any lawful choice for reasons of preference"
+      },
+      {
+        "choiceId": "c",
+        "text": "The council’s lawful discretion makes all checking of prescribed powers unconstitutional"
+      },
+      {
+        "choiceId": "d",
+        "text": "General supervision forbids checking legal powers but permits replacing the choice if the service is popular"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4 describes general supervision and ensuring component acts stay within prescribed powers/functions. It does not itself state unrestricted control to replace a lawful policy for personal preference. Respecting lawful discretion does not eliminate legality oversight. The scenario is a textual distinction, not a determination of every statutory review power.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 4; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A municipal-tax summary says Congress may provide lawful guidelines consistent with local autonomy, then concludes that the collected local taxes must therefore accrue to the National Government. Which assessment follows Article X, Section 5?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both conclusions follow because the power to set guidelines determines ownership of proceeds"
+      },
+      {
+        "choiceId": "b",
+        "text": "The guidelines proposition is supported, but the specified local revenues accrue exclusively to the LGU"
+      },
+      {
+        "choiceId": "c",
+        "text": "The guidelines proposition fails, but the proceeds conclusion follows"
+      },
+      {
+        "choiceId": "d",
+        "text": "The guidelines proposition is supported, but proceeds must be shared equally with every neighbouring LGU"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 5 expressly permits congressional guidelines/limits consistent with autonomy and separately assigns such taxes/fees/charges exclusively to LGUs. Setting lawful limits does not turn local proceeds into national receipts or an automatic equal pool for neighbouring units.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 5; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two municipalities propose a jointly operated communications service for common benefit while retaining their separate governments. A reviewer correctly insists on compliance with applicable law, but also says Article X makes coordination legally identical to a merger. Which correction is best?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Keep legal compliance; Article X permits common-benefit coordination without making it a merger."
+      },
+      {
+        "choiceId": "b",
+        "text": "Drop legal compliance because common benefit alone supplies every authority needed"
+      },
+      {
+        "choiceId": "c",
+        "text": "Keep legal compliance; every shared service necessarily abolishes the separate local governments"
+      },
+      {
+        "choiceId": "d",
+        "text": "Keep separate governments only if the service is funded exclusively by private donations"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 13 distinguishes grouping, consolidation and coordination in accordance with law. Common-benefit coordination need not be a merger; retaining distinct governments does not make legal compliance optional or impose a private-donation condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 13; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-07",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a proposed substantial boundary alteration, officials satisfy the Local Government Code criteria but plan no plebiscite in the directly affected political units. Considering Article X, Section 10 alone, what remains missing?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Approval by every registered voter, whether voting or absent"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only approval by the officials whose jurisdictions would change"
+      },
+      {
+        "choiceId": "c",
+        "text": "Majority of plebiscite votes cast in directly affected units."
+      },
+      {
+        "choiceId": "d",
+        "text": "A national plebiscite in every province regardless of effect"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 10 requires both Code criteria and majority-of-votes-cast plebiscite approval in the directly affected units. Official approval or a denominator of all registered voters does not substitute for that text.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 10; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-08",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume the creation procedures for a special metropolitan political subdivision are met. Its proposed charter leaves component cities’ executives and assemblies in place, but gives the metropolitan authority all local policy jurisdiction and declares component basic autonomy extinguished. A reviewer says retaining local officeholders cures both defects. Which review applies Article X, Section 11 to the institutions, autonomy and metropolitan jurisdiction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Keep local offices, restore basic autonomy and limit metropolitan power to basic services needing coordination."
+      },
+      {
+        "choiceId": "b",
+        "text": "Retaining local institutions is supported; restore autonomy but allow metropolitan jurisdiction over every local policy"
+      },
+      {
+        "choiceId": "c",
+        "text": "Retaining local institutions is supported; limit metropolitan jurisdiction but basic autonomy may still be extinguished"
+      },
+      {
+        "choiceId": "d",
+        "text": "Retaining local institutions alone is enough, so no other charter provision needs correction"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 11 separately preserves component basic autonomy, their executives/assemblies and a metropolitan jurisdiction limited to basic services requiring coordination. Retained offices satisfy only the institutional part; both autonomy and jurisdiction clauses require repair. Rivals share the correct institutional conclusion and repair at most one remaining defect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "1987 Constitution, Article X Section 11; https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/3/353; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-09",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which document adopted by the UN General Assembly on 10 December 1948 sets out a common standard of human rights for all peoples and nations?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The Universal Declaration of Human Rights"
+      },
+      {
+        "choiceId": "b",
+        "text": "The Philippine Bill of Rights of 1987"
+      },
+      {
+        "choiceId": "c",
+        "text": "The Convention on Biological Diversity"
+      },
+      {
+        "choiceId": "d",
+        "text": "The Philippine Local Government Code"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The UDHR is the 1948 declaration. The Philippine constitutional and statutory documents have different dates and origins, while the biodiversity convention concerns another field.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR, adopted 1948-12-10; full-text title and preamble, PDF page 1; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content.",
+        "Republic of Türkiye Ministry of Foreign Affairs, Universal Declaration of Human Rights, opening adoption-date paragraph (10 December 1948); https://www.mfa.gov.tr/universal-declaration-of-human-rights.en.mfa; retrieved 2026-11-03. Date corroboration; the UN e-learning PDF supplies the declaration text."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-10",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A membership form says participation is voluntary. Which UDHR principle most directly supports allowing a person to decline membership?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Every organisation must have the same number of members"
+      },
+      {
+        "choiceId": "b",
+        "text": "Association may not be compelled."
+      },
+      {
+        "choiceId": "c",
+        "text": "Association is permitted only when membership lasts for life"
+      },
+      {
+        "choiceId": "d",
+        "text": "A group’s majority may always compel outsiders to join"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article 20(2) expressly protects against compelled association. Voluntariness is not guaranteed by equal membership counts, lifetime participation or compulsory recruitment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 20(2), PDF pages 3–4; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-11",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which pair of protections appears in UDHR Article 15?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A nationality only if one owns land; no ability to change it"
+      },
+      {
+        "choiceId": "b",
+        "text": "A nationality only by birth; mandatory loss when moving abroad"
+      },
+      {
+        "choiceId": "c",
+        "text": "Nationality, with no arbitrary deprivation or denial of change."
+      },
+      {
+        "choiceId": "d",
+        "text": "A nationality of every country visited; automatic acquisition on arrival"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article 15 recognizes nationality and protects against arbitrary deprivation or denial of changing it. It does not prescribe those property, birthplace or travel-based rules.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 15, PDF page 3; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-12",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For a civic lesson applying only UDHR Article 14, a person invokes asylum solely to avoid a prosecution genuinely arising from a non-political crime. Which qualification must the lesson retain?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Asylum applies whenever any prosecution exists"
+      },
+      {
+        "choiceId": "b",
+        "text": "Only nationality determines the Article 14 exception"
+      },
+      {
+        "choiceId": "c",
+        "text": "The exception applies only after a country grants citizenship"
+      },
+      {
+        "choiceId": "d",
+        "text": "The stated non-political-prosecution exception applies."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article 14(2) qualifies the right to seek/enjoy asylum by excluding genuinely non-political-crime prosecutions and acts contrary to UN purposes/principles. A prosecution’s mere existence is not the same as the specified qualification.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 14(1)–(2), PDF page 3; not an individual asylum determination; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-13",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A civic case has two features: a person changes her religion and later practises the new belief privately alone. A draft summary accepts freedom to change belief but says manifestation is protected only in public groups. Which review of UDHR Article 18 is accurate?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Changing belief and practising it privately alone are both included in Article 18’s protection."
+      },
+      {
+        "choiceId": "b",
+        "text": "Changing belief is covered; private practice is covered only if a public congregation first approves it"
+      },
+      {
+        "choiceId": "c",
+        "text": "Private practice is covered; changing belief is excluded once a person has reached adulthood"
+      },
+      {
+        "choiceId": "d",
+        "text": "Private practice and changing belief are covered only when both occur in the same public ceremony"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article 18 separately includes changing religion/belief and manifestation alone/in community and public/private. The draft preserves the former but unduly narrows the latter. Congregational approval, adult prohibition and a single ceremony are not stated conditions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 18, PDF page 3; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-14",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A researcher seeks and receives environmental ideas from overseas media but publishes nothing herself. A brochure says UDHR Article 19 protects only people who impart their own ideas across borders. What correction fits the described activity?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Receiving is covered only after the researcher republishes the material"
+      },
+      {
+        "choiceId": "b",
+        "text": "Seeking and receiving ideas also fall within the right, regardless of frontiers."
+      },
+      {
+        "choiceId": "c",
+        "text": "Seeking is covered, but receiving is outside the article unless the material is domestic"
+      },
+      {
+        "choiceId": "d",
+        "text": "Receiving is covered, but only through printed media rather than any other medium"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article 19 names seeking, receiving and imparting through any media regardless of frontiers. Publication is not a precondition for the seeker/receiver, and neither a domestic-only nor print-only restriction appears.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 19, PDF page 3; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-15",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A civic poster accurately mentions reasonable limits on working hours. Its author then treats a short unpaid break as eliminating any need to mention periodic paid holidays under UDHR Article 24. Which review best preserves the article’s scope?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Working-hour limits alone exhaust the article; any break replaces periodic paid holidays"
+      },
+      {
+        "choiceId": "b",
+        "text": "Periodic holidays are covered, but payment is excluded whenever working hours are reasonable"
+      },
+      {
+        "choiceId": "c",
+        "text": "The article separately includes reasonable working hours and periodic paid holidays."
+      },
+      {
+        "choiceId": "d",
+        "text": "Paid holidays alone exhaust the article; mentioning reasonable hours is unnecessary and outside its wording"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article 24 includes both reasonable working-hour limitation and periodic holidays with pay. Recognizing one does not remove the other, and an unpaid break is not a textual substitute for the separate periodic-holiday protection.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 24, PDF page 4; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-16",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An assistance guide recognises special care for motherhood and childhood. It then says a child born outside marriage may receive less social protection solely on that basis. Which paired review follows UDHR Article 25(2)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both the special-care statement and the birth-status distinction are supported"
+      },
+      {
+        "choiceId": "b",
+        "text": "The special-care statement fails, but the birth-status distinction is supported"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both statements fail because the article addresses children but never motherhood"
+      },
+      {
+        "choiceId": "d",
+        "text": "Special care is supported; birth-based unequal protection is not."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article 25(2) contains both special care/assistance for motherhood and childhood and the same social protection for all children regardless of the stated birth status. Keeping the first principle does not authorize the proposed distinction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 25(2), PDF page 4; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-17",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A cultural programme cites the UDHR’s freedom to enjoy the arts as proof that an author has no protected interest in her own work. Which assessment keeps both Article 27 dimensions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both cultural participation and authors’ moral/material interests are protected."
+      },
+      {
+        "choiceId": "b",
+        "text": "Author protection replaces the public’s right to participate in cultural life"
+      },
+      {
+        "choiceId": "c",
+        "text": "Participation is protected only when all works become commercially free"
+      },
+      {
+        "choiceId": "d",
+        "text": "The article protects scientific works but excludes literary and artistic production"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Article 27(1) protects cultural/artistic/scientific participation; 27(2) protects authors’ moral and material interests. Neither erases the other or states that every work must be commercially free. This is the declaration’s general principle, not a complete copyright rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 27(1)–(2), PDF page 4; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-18",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply only UDHR Article 16. Couple P are adults with equal marital rights but enter the marriage under coercion. Couple Q enter freely as adults but a proposed rule gives one spouse fewer rights upon dissolution because of sex. Couple R are adults entering freely with equal rights before, during and at dissolution. Which arrangements meet both the free/full-consent and equal-rights conditions?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P and R"
+      },
+      {
+        "choiceId": "b",
+        "text": "R alone"
+      },
+      {
+        "choiceId": "c",
+        "text": "Q and R"
+      },
+      {
+        "choiceId": "d",
+        "text": "P and Q"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Article 16(1) addresses equal rights at marriage, during it and dissolution; 16(2) requires free/full consent. P meets equality but not consent; Q meets consent but not equality across stages; R meets both. The two safeguards must be applied separately.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 16(1)–(2), PDF page 3; hypothetical conditions only; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-19",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For this UDHR Article 21(3) exercise, all unmentioned conditions are satisfied. System K has genuine periodic elections and equal suffrage but voting is neither secret nor an equivalent free procedure. System L uses secret voting and equal suffrage but permits no further periodic election. System M combines genuine periodic elections, universal/equal suffrage and secret voting. Which systems meet both the periodicity and free-voting safeguards?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "K and M"
+      },
+      {
+        "choiceId": "b",
+        "text": "L and M"
+      },
+      {
+        "choiceId": "c",
+        "text": "M alone"
+      },
+      {
+        "choiceId": "d",
+        "text": "K and L"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Article 21(3) combines periodic genuine elections, universal/equal suffrage and secret or equivalent free voting. K fails the last safeguard; L fails periodicity; M meets both. Equal suffrage alone cannot distinguish them.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Article 21(3), PDF page 4; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-20",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Consider UDHR Articles 29–30. Proposal A limits a freedom by law solely to respect others’ rights and meet just public-order requirements in a democratic society. Proposal B cites public order but gives an official an unwritten personal power to impose the limit. Proposal C is enacted as a law but aims to destroy another protected right rather than meet the Article 29 purposes. Which assessment applies both the lawful-purpose limitation rule and the no-destruction safeguard?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A and B are supported; C is not"
+      },
+      {
+        "choiceId": "b",
+        "text": "A and C are supported; B is not"
+      },
+      {
+        "choiceId": "c",
+        "text": "All are supported if described as public order"
+      },
+      {
+        "choiceId": "d",
+        "text": "A alone meets the stated conditions."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Article 29(2) permits only limitations determined by law for specified legitimate purposes; Article 30 supplies no right to destroy declared rights. A has the stated legal basis and proper purpose; B lacks the former and C the latter. A legal form or a public-order label alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "UDHR Articles 29(2) and 30, PDF page 5; hypothetical textual application; https://elearning.un.org/CONT/GEN/CS/I_Know_Gender_(English)/story_content/external_files/HRhandbooken.pdf; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-21",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 9147’s definition, does captivity alone remove wild forms of plants or animals from the term wildlife?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "No; the definition includes those in captivity or being bred or propagated"
+      },
+      {
+        "choiceId": "b",
+        "text": "Yes; only animals currently living freely qualify"
+      },
+      {
+        "choiceId": "c",
+        "text": "Yes; plants cease to be wildlife once grown by people"
+      },
+      {
+        "choiceId": "d",
+        "text": "No; but only mature animals are included"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 5(x) includes wild flora/fauna in all developmental stages and those captive, bred or propagated. Captivity, plant status or immaturity alone is not an exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147, approved 2001-07-30, Section 5(x); https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-22",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which RA 9147 term identifies a species naturally occurring and found only within specific areas in the country?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Exotic species"
+      },
+      {
+        "choiceId": "b",
+        "text": "Endemic species"
+      },
+      {
+        "choiceId": "c",
+        "text": "By-product"
+      },
+      {
+        "choiceId": "d",
+        "text": "Captive-breeding"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 5(i) defines endemic species by natural occurrence and restricted geographic range. Exotic species do not naturally occur in the country; the other terms concern products and production.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Section 5(i); https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-23",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A wildlife lesson asks for the term describing the place or environment where a species naturally occurs or has naturally established its population. What term fits?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Derivative"
+      },
+      {
+        "choiceId": "b",
+        "text": "Export permit"
+      },
+      {
+        "choiceId": "c",
+        "text": "Habitat"
+      },
+      {
+        "choiceId": "d",
+        "text": "Bioprospecting"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 5(m) defines habitat. A derivative is a wildlife product, a permit is authorization, and bioprospecting concerns commercial research/collection/utilization.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Section 5(m); https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-24",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A plant naturally occurs in the Philippines and also naturally occurs in several other countries. Based on those facts alone, which RA 9147 classification is established without making a narrower geographic claim?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Endemic, because all naturally occurring species are country-exclusive"
+      },
+      {
+        "choiceId": "b",
+        "text": "Exotic, because the species is also found abroad"
+      },
+      {
+        "choiceId": "c",
+        "text": "Threatened, because its distribution spans borders"
+      },
+      {
+        "choiceId": "d",
+        "text": "Indigenous wildlife; those facts do not establish endemism."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 5(o) covers naturally occurring/naturally established wildlife. Section 5(i) adds restricted occurrence for endemic species. Occurrence abroad does not make a naturally occurring Philippine species exotic or prove extinction risk.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Sections 5(i), 5(j), 5(o); https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-25",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A buyer offers a lawfully sourced processed wildlife extract. A reviewer says processing means it is no longer a derivative, while a second reviewer says the lawful source makes it unnecessary to decide whether it is a derivative. Which assessment best separates classification from source under RA 9147?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "It remains a raw-or-processed derivative; lawful source is a separate condition."
+      },
+      {
+        "choiceId": "b",
+        "text": "It is outside the definition because processing changes form; lawful source matters only for live animals"
+      },
+      {
+        "choiceId": "c",
+        "text": "It is within the definition, so the lawful-source condition necessarily becomes irrelevant"
+      },
+      {
+        "choiceId": "d",
+        "text": "The source alone determines whether an extracted substance is a derivative, whatever its origin or form"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 5(b) classifies raw/processed parts or extracted substances as derivatives; Section 9 separately requires a source not obtained in violation of the Act. Lawful source neither removes the classification nor makes source irrelevant after classification.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Sections 5(b) and 9; https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-26",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A habitat project combines preservation of one area with restoration of a degraded area. A memo rejects restoration as outside conservation, while claiming that anything called conservation automatically authorizes any wildlife collection. Which review best keeps RA 9147’s definition separate from activity authorization?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Restoration is outside conservation, but a conservation label authorizes collection"
+      },
+      {
+        "choiceId": "b",
+        "text": "Restoration is conservation; that definition does not itself authorize collection."
+      },
+      {
+        "choiceId": "c",
+        "text": "Restoration falls within conservation and therefore removes every collection restriction"
+      },
+      {
+        "choiceId": "d",
+        "text": "Preservation falls outside conservation whenever another area is restored"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 5(e) includes habitat restoration as well as preservation/sustainable use. Sections 6–7 separately govern authorization/evaluation and collection techniques/conditions. A conceptual label is not itself a collection permit or exemption.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Section 5(e); https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-27",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An indigenous community’s stated traditional-use collection is not primarily for trade. The proposed plan nevertheless includes threatened species and says its traditional purpose removes the need for Section 6’s best-available scientific-information evaluation. Other collection requirements are satisfied. Which repair package is necessary under the provisions cited, without treating this review as collection approval?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Keep threatened species and waive evaluation, because traditional purpose alone suffices"
+      },
+      {
+        "choiceId": "b",
+        "text": "Exclude threatened species but waive evaluation, because the purpose condition is met"
+      },
+      {
+        "choiceId": "c",
+        "text": "Retain the non-trade traditional purpose, exclude threatened species from that proviso, and retain the separate Section 6 evaluation"
+      },
+      {
+        "choiceId": "d",
+        "text": "Retain the purpose and evaluation but keep threatened species within the Section 7 traditional-use proviso"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 7’s traditional-use proviso does not cover threatened species and its collection remains in accordance with Section 6. Section 6 requires proper best-available-information/scientific-data evaluation. Meeting the purpose condition removes neither safeguard; threatened-species collection is governed separately by Section 23.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Section 7, traditional-use provisos and reference to Section 23; https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-28",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Under RA 9147, Section 8, Applicant A has a lawful source and proved financial/technical capability, but has not proved a facility to maintain the wildlife. Applicant B has proved all maintenance conditions but its proposed source violates the Act. Which set of additional facts would cure both stated deficiencies, assuming all other requirements are met?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A proves the required facility; B merely promises to maintain the unlawfully sourced specimens well"
+      },
+      {
+        "choiceId": "b",
+        "text": "A must prove the facility; B must supply specimens from a lawful replacement source."
+      },
+      {
+        "choiceId": "c",
+        "text": "A merely repeats its lawful-source evidence; B supplies lawful replacement-source evidence"
+      },
+      {
+        "choiceId": "d",
+        "text": "A proves the facility; B relabels the same unlawful source as captive-bred without changing or validating it"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "A’s missing maintenance-facility proof must be supplied despite its lawful source; B needs a lawful source despite its maintenance capability. Only facility evidence plus lawful replacement-source facts cure both. Better maintenance or a new label cannot retroactively make the same unlawful source lawful.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9147 Section 8; https://lawphil.net/statutes/repacts/ra2001/ra_9147_2001.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-29",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 9512 designates which month as Environmental Awareness Month throughout the Philippines?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "November"
+      },
+      {
+        "choiceId": "b",
+        "text": "June"
+      },
+      {
+        "choiceId": "c",
+        "text": "September"
+      },
+      {
+        "choiceId": "d",
+        "text": "January"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 5 designates November. Other environmental observances do not change this Act’s specific month.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9512, approved 2008-12-12, Section 5; https://lawphil.net/statutes/repacts/ra2008/ra_9512_2008.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-30",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which educational settings are within RA 9512’s environmental-education scope?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Public universities only"
+      },
+      {
+        "choiceId": "b",
+        "text": "Public and private education, including nonformal and out-of-school programmes"
+      },
+      {
+        "choiceId": "c",
+        "text": "Only schools that already have a tree nursery"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only courses leading to environmental-science degrees"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 3 covers public/private curricula at all levels and expressly includes nonformal, technical-vocational, indigenous and out-of-school settings. It is not degree-, nursery- or sector-exclusive.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9512 Section 3, first paragraph; https://lawphil.net/statutes/repacts/ra2008/ra_9512_2008.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-31",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 9512 specifies which combination of environmental-education modules?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Theory only, with no practical activities"
+      },
+      {
+        "choiceId": "b",
+        "text": "Practicum only, with no concepts or principles"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both theoretical and practicum modules"
+      },
+      {
+        "choiceId": "d",
+        "text": "Only optional excursions unrelated to lessons"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 3 expressly combines theoretical and practicum modules. Practical undertakings complement concepts, rather than replacing all theory or being excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9512 Section 3, final paragraph; https://lawphil.net/statutes/repacts/ra2008/ra_9512_2008.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-32",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A course teaches environmental concepts, laws and local conditions, but its designer omits citizen responsibilities, human-well-being impacts and any practicum on the ground that theory is sufficient. Which assessment identifies the omitted dimensions of RA 9512, Section 3?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Concepts and laws are outside the scope; only practical activities belong"
+      },
+      {
+        "choiceId": "b",
+        "text": "The existing theoretical coverage is relevant, but responsibilities, well-being links and practicum also belong"
+      },
+      {
+        "choiceId": "c",
+        "text": "The existing coverage is relevant and removes the need for practicum whenever local conditions are included"
+      },
+      {
+        "choiceId": "d",
+        "text": "Responsibilities and well-being links belong, but the Act excludes practicum from education"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 3 includes the existing content alongside environmental threats/human well-being, citizen responsibility and both theoretical/practicum modules. Relevant theory neither becomes irrelevant nor substitutes for those additional dimensions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9512 Section 3, second–third paragraphs; https://lawphil.net/statutes/repacts/ra2008/ra_9512_2008.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-33",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An interagency plan assigns DENR to provide current environmental updates and strategic advice, while DOST develops programmes for science-based student information and solutions. Which assessment matches RA 9512, Section 6?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both roles are supported within collaborative interagency implementation."
+      },
+      {
+        "choiceId": "b",
+        "text": "Only DENR may perform both roles, and DOST has no specified role"
+      },
+      {
+        "choiceId": "c",
+        "text": "DOST provides all updates while DENR is confined to textbook printing"
+      },
+      {
+        "choiceId": "d",
+        "text": "The two roles mean DepEd, CHED and TESDA are excluded from implementation"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 6 specifies the DENR update/advice role and DOST science-information/solutions role within collaborative implementation. The other descriptions reverse, erase or isolate those functions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9512 Section 6; https://lawphil.net/statutes/repacts/ra2008/ra_9512_2008.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-34",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A training institution treats a one-off environmental lecture as replacing both continuing teacher capacity-building and environmental activities within the relevant NSTP component. Which correction follows RA 9512?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Only tree planting may count as capacity-building"
+      },
+      {
+        "choiceId": "b",
+        "text": "CWTS integration and capacity-building remain separate duties."
+      },
+      {
+        "choiceId": "c",
+        "text": "All NSTP components are replaced by an environmental-science degree"
+      },
+      {
+        "choiceId": "d",
+        "text": "Teacher development is outside environmental education whenever a lecture has occurred"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 4 places environmental programmes/activities within CWTS for the stated courses; Section 7 addresses capacity-building such as training/materials/teacher education. These distinct provisions are not displaced merely by holding a lecture.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 9512 Sections 4 and 7; no claim about every NSTP implementation rule; https://lawphil.net/statutes/repacts/ra2008/ra_9512_2008.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-35",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An employee accurately completes technically demanding work, accepts no payment beyond salary, but describes official access as a personal favour owed to his friends. His supervisor says skill and absence of extra payment exhaust the professionalism norm. Which reading of RA 6713 is more complete?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Skill and no extra fee do not remove the norm’s separate concern about undue-patronage perceptions."
+      },
+      {
+        "choiceId": "b",
+        "text": "Skill is relevant, and patronage perceptions become relevant only after money changes hands"
+      },
+      {
+        "choiceId": "c",
+        "text": "Patronage perceptions are relevant only to elected officials, while technical skill applies to employees"
+      },
+      {
+        "choiceId": "d",
+        "text": "Avoiding extra fees alone establishes professionalism even when skill and dedication are absent"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Section 4(A)(b) combines excellence/skill/dedication with discouraging wrong perceptions of officials as dispensers or peddlers of undue patronage. No fee requirement is attached to that latter obligation; neither skill nor payment alone exhausts the norm.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 6713, approved 1989-02-20, Section 4(A)(b); https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-36",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Assume two applicants meet the same applicable entitlement conditions. A desk manual would deny the poorer applicant solely for being poor; a proposed repair would instead give every poor applicant automatic entitlement even when the applicable conditions are unmet. Which assessment best applies RA 6713’s justness/sincerity norm without inventing a universal entitlement?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both the denial and automatic entitlement follow from the norm"
+      },
+      {
+        "choiceId": "b",
+        "text": "Both are justified whenever the office calls them assistance"
+      },
+      {
+        "choiceId": "c",
+        "text": "Reject poverty-based discrimination; the norm does not by itself establish entitlement regardless of applicable conditions"
+      },
+      {
+        "choiceId": "d",
+        "text": "Reject automatic entitlement but retain denial solely because of poverty"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Section 4(A)(c) rejects discrimination, especially against poor/underprivileged people, and requires respect for law/rights. It condemns the stated poverty-only denial without creating an automatic entitlement overriding every applicable condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 6713 Section 4(A)(c), first paragraph; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-37",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An office’s valid regulation prescribes stricter ethical standards than RA 6713. An employee meets the Act’s baseline but not that regulation and says the baseline cancels the additional standard. Which distinction follows Section 13?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Meeting the baseline makes every stricter valid regulation optional"
+      },
+      {
+        "choiceId": "b",
+        "text": "Meeting the baseline is relevant, but the Act does not derogate from the valid more stringent regulation"
+      },
+      {
+        "choiceId": "c",
+        "text": "Meeting the regulation would automatically excuse every independent breach of the Act"
+      },
+      {
+        "choiceId": "d",
+        "text": "The regulation survives only if the employee voluntarily signs a second employment contract"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 13 preserves more stringent standards in law/regulation. Satisfying a baseline does not cancel a valid additional requirement, while an additional rule does not excuse an independent breach of the Act. No new contract condition is stated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 6713 Section 13; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-38",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A committee finds that a timely submitted disclosure statement is incomplete. The filer argues that timeliness prevents any corrective review. Which response best follows RA 6713, Section 10(a)?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Timeliness alone establishes that the statement is complete"
+      },
+      {
+        "choiceId": "b",
+        "text": "Review also concerns completeness/proper form, with notice and necessary corrective action for deficiencies"
+      },
+      {
+        "choiceId": "c",
+        "text": "A committee may review form only for statements submitted late"
+      },
+      {
+        "choiceId": "d",
+        "text": "The Act requires incomplete statements to be treated as withdrawn without notice"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Section 10(a) distinguishes timeliness, completeness and proper form and directs notification/correction where filing is deficient. Timeliness does not establish the other dimensions or remove the stated process.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 6713 Section 10(a); https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-39",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "RA 6713’s personal-staff exception is invoked for a relative whose appointment would be coterminous with the official’s. Assume this satisfies the specified Section 4(A)(c) exception. A valid agency regulation nevertheless forbids all relative appointments in this office, including personal staff. The official says the statutory exception invalidates that stricter rule and also exempts unrelated preferential service to the relative. Which analysis follows Sections 4(A)(c) and 13?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The appointment fits the specified statutory exception, but the valid stricter rule remains; the appointment exception does not authorize unrelated undue favours"
+      },
+      {
+        "choiceId": "b",
+        "text": "The appointment fits the exception and invalidates the stricter rule, but unrelated undue favours remain barred"
+      },
+      {
+        "choiceId": "c",
+        "text": "The appointment fits the exception and the stricter rule remains, but the exception authorizes every office favour to that relative"
+      },
+      {
+        "choiceId": "d",
+        "text": "The exception applies only when the relative pays a fee, and the stricter rule is invalid in every case"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The assumed appointment classification fits the narrow personal-staff exception. Section 13 preserves valid more stringent standards, so that classification does not nullify the additional rule. An appointment exception is not a general exemption for unrelated undue favours. The partially correct alternatives preserve one limitation while dropping the other.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 6713 Section 4(A)(c), final sentence; hypothetical textual exception only; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-general-40",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply only RA 6713, Section 8(C)–(D), assuming all unmentioned access requirements are met. Request P is inspection at reasonable hours before ten working days have passed. Q seeks copying before ten working days have passed. Separately, R uses a statement commercially as news media for dissemination to the general public; S sells it for unrelated commercial marketing. Which paired assessment keeps the inspection/copying distinction and the stated commercial-use exception?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Both P and Q are immediately covered; R is within the exception and S is not"
+      },
+      {
+        "choiceId": "b",
+        "text": "P is covered but Q is premature under the copying rule; both R and S are within the exception"
+      },
+      {
+        "choiceId": "c",
+        "text": "Both P and Q are premature; only R is within the exception"
+      },
+      {
+        "choiceId": "d",
+        "text": "P is covered but Q is premature under the copying rule; R is within the exception and S is not"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Section 8(C)(1) allows inspection at reasonable hours, while (C)(2) specifies copying after ten working days. Section 8(D)(b) excludes commercial purposes except news/communications-media dissemination to the general public. P/Q must be separated, as must R/S; neither access timing nor one use condition alone resolves both dimensions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "RA 6713 Sections 8(C)(1)–(2) and 8(D)(b); statutory wording only, not a claim overriding later access procedures; https://lawphil.net/statutes/repacts/ra1989/ra_6713_1989.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  }
+]

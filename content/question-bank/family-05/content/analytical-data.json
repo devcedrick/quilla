@@ -1,0 +1,1802 @@
+[
+  {
+    "questionId": "f05-analytical-data-01",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many blankets does ONE circle represent?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The stated key assigns two blankets to a circle. Six belongs to a diamond; the symbol count is not the represented quantity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-pictograms",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-02",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many blankets are recorded at B?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "28"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "B represents 2×6+4×2=20 blankets. Counting six symbols loses their unequal values.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-pictograms",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-03",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which shelter has the greatest number of recorded blankets per assigned staff member?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A and C tie"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A has22/2=11 blankets per staff member; B20/5=4; C26/4=6.5. The largest blanket total C is not the largest per-person quantity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-pictograms",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-04",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In a separate revised register, one diamond is moved from C to B, and one circle from A to C; staff do not move. What is the new descending order of blanket TOTALS?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "C, B, A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B, A, C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "B, C, A"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A, C, B"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Original totals A22,B20,C26 become A20,B26,C22. A diamond moves six blankets and a circle two; counting each transferred symbol as one gives the wrong totals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-pictograms",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-05",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which interval recorded no rainfall?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0–15"
+      },
+      {
+        "choiceId": "c2",
+        "text": "15–45"
+      },
+      {
+        "choiceId": "c3",
+        "text": "45–60"
+      },
+      {
+        "choiceId": "c4",
+        "text": "60–90"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The 45–60 interval has zero millimetres; the other intervals have positive recorded rainfall.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-rain",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-06",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many separate intervals are listed?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "There are four listed intervals. The five boundary times do not create five intervals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-rain",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-07",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "During which interval was average rainfall intensity greatest?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0–15"
+      },
+      {
+        "choiceId": "c2",
+        "text": "15–45"
+      },
+      {
+        "choiceId": "c3",
+        "text": "45–60"
+      },
+      {
+        "choiceId": "c4",
+        "text": "60–90"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Divide depth by duration: 3/15=.2,4/30≈.133,0/15=0,5/30≈.167 mm/min. The largest depth in the final interval is spread over twice the first interval’s duration.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-rain",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-08",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What was average rainfall intensity over all 90 minutes, in millimetres per hour?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Total depth is12 mm and elapsed time is1.5 hours, including the dry15 minutes. Thus12/1.5=8 mm/hour. Averaging four interval rates without duration weights is not the whole-storm rate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-rain",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-09",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Who scored 10 in Event1?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "D’s Event1 cell is10. Event totals and discarded scores are irrelevant to this cell lookup.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-contest",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-10",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is A’s counting total after the required discard?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "18"
+      },
+      {
+        "choiceId": "c2",
+        "text": "21"
+      },
+      {
+        "choiceId": "c3",
+        "text": "24"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Discard A’s lowest score3 from total24, leaving21. Discarding the highest8 instead would leave16; adding all four leaves24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-contest",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-11",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Who ranks first under BOTH the counting-total and tie-break rules?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Counting totals are A21,B21,C20,D19. B’s best event9 exceeds A’s8, so B wins. D has the highest event10 but not a tied leading counting total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-contest",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-12",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Only ONE of C’s event scores may rise by either 1 or 2 points. Every other score stays fixed. Which list contains ALL single changes that would make C the unique overall winner?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Event1 +2; Event2 +2; Event4 +2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Event1 +2; Event2 +2; Event3 +2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Event1 +1; Event2 +2; Event4 +2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Event1 +2; Event3 +2; Event4 +2"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "C begins with counting total20. Every +1 produces at most21 with a best event no higher than8, losing the tie-break to B9. Adding2 to Event1,2 or4 gives22. Adding2 to the discarded Event3 raises it5→7 but then Event4’s6 is discarded: total21,best7, still behind B. All eight allowed changes must be checked.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-contest",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-13",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is Y’s repeat interval?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1 day"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2 days"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3 days"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4 days"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Y repeats every3 days. Its first scheduled day1 is not its repeat interval.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calendar",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-14",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Within days1–28, what is the LAST OPEN day on which BOTH X and Y occur?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16"
+      },
+      {
+        "choiceId": "c3",
+        "text": "25"
+      },
+      {
+        "choiceId": "c4",
+        "text": "28"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The X/Y intersections satisfy n divisible by4 and n≡1 modulo3: days4,16,28. Day28 is closed, so16 is the last open intersection. Selecting the final cycle intersection without the closure rule gives28.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calendar",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-15",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Considering days1–6 only, which days offer exactly TWO demonstration types?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1, 3, 4, 5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 and 4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3 and 5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4 only"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Day1 has Y/Z;day4 has X/Y. Day3 and5 have Z alone;day2 and6 have none. None of these days is closed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calendar",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-16",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A visitor will come on three CONSECUTIVE days, each between1 and15 inclusive, and attend X,Y,Z exactly once in some order, one per day. No visit may be on a closed day. Which list gives ALL possible first days?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8, 10, 11"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4, 10, 11"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8, 9, 11"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8, 10, 12"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The only feasible starts are 8, 10, 11. Check all13 possible starts and all6 assignments of X,Y,Z to three successive dates. A scheduled type must occur on its assigned date, and none of those dates may be7 or14. Merely finding all types somewhere in a three-day interval is insufficient when two must use the same date. The reviewer verifier records each valid assignment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calendar",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-17",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the height of each upright box?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2 cm"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3 cm"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5 cm"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7 cm"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The stated upright height is2 cm;3 and2 also describe the base but do not change the specified vertical orientation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-packing",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-18",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How many boxes fit in ONE full R layer under the stated strip rules?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "11"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "R has two2-cm strips with3 boxes each and one3-cm strip with5:3+3+5=11. Depth used is2+2+3=7. Counting strips alone or applying one orientation throughout misses the mixed layer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-packing",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-19",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which two-full-layer loading exceeds the weight limit, although it fits the dimensions?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P and P"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P and Q"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q and Q"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R and R"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "P,Q,R hold9,10,11 boxes. Two R layers hold22 and weigh17.6 kg, exceeding16;the other pairs hold18,19,20 and weigh14.4,15.2,16. Height4 cm fits every two-layer plan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-packing",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-20",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two identical crates will be loaded, one today and one tomorrow, with exactly TWO full layers per crate. A reusable layout template is nevertheless reserved for only ONE layer over these two days: available reservations are one P, two Q and one R. Each layer consumes one reservation for its own layout, and no more reservations can be obtained. Each crate separately has the stated16-kg limit. Which plan attains the greatest possible combined number of loaded boxes while respecting BOTH the reservations and each crate’s limit?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Today P+R; tomorrow Q+Q"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Today P+Q; tomorrow Q+R"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Today P+P; tomorrow R+R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Today P+Q; tomorrow P+R"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P,Q,R layers contain9,10,11 boxes. The separate16-kg limit permits at most20 boxes in each crate, so40 is an upper bound. PR and QQ each contain20 and together use exactly P1,Q2,R1, attaining40. PQ/QR respects reservations but loads19/21, overloading one crate. PP/RR exceeds reservations and overloads RR. PQ/PR respects both mass limits but uses P twice when only one reservation exists. Each constraint alone leaves a plausible competing plan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-packing",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-21",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Ignoring fees, one X converted directly to Z produces how many Z?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The X→Z gross rate is5. Eight is the fixed output fee, not an exchange rate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-exchange",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-22",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Without splitting X between routes, what is the SMALLEST positive whole number of X for which conversion via Y produces MORE Z than direct conversion, after all fees? Both routes must be valid under the stated rules.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6 X"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7 X"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8 X"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10 X"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For n X, direct output is5n−8;via Y it is2(4n−10)−8=8n−28. Via wins when3n>20, so the smallest integer is7. At7,via receives18Y and yields28Z;direct yields27Z;both outputs are positive and the cap is met. At6,via yields20Z against direct22Z.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-exchange",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-23",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If12 X go by X→Y→Z, what is the final Z output?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "68 Z"
+      },
+      {
+        "choiceId": "c2",
+        "text": "76 Z"
+      },
+      {
+        "choiceId": "c3",
+        "text": "88 Z"
+      },
+      {
+        "choiceId": "c4",
+        "text": "52 Z"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "First12×4−10=38 Y;then38×2−8=68 Z. The input38 Y fits the60-Y cap. Paying the Y fee after converting it as though it were Z produces a different result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-exchange",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-24",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Exactly30 X must finish as Z today. At most one transaction may be made on each listed conversion. Inputs may be split between direct and via-Y routes. What is the greatest achievable final Z output?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "142 Z"
+      },
+      {
+        "choiceId": "c2",
+        "text": "165 Z"
+      },
+      {
+        "choiceId": "c3",
+        "text": "172 Z"
+      },
+      {
+        "choiceId": "c4",
+        "text": "212 Z"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "If n whole X go via Y, that booth receives4n−10 Y, so the cap gives n≤17. With both routes used, output=2(4n−10)−8+5(30−n)−8=3n+114, increasing with n. Positive transaction outputs require n≥4, and n17 is valid:58 Y→108 Z plus13 X→57 Z, total165. All-direct yields142;all-via would send110 Y and violates the cap. Thus165 is the maximum.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-exchange",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-25",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many people scored60?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The score60 row has4 people. Six is not a frequency in that row.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-percentiles",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-26",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is P(70) under the stated definition?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "60"
+      },
+      {
+        "choiceId": "c2",
+        "text": "70"
+      },
+      {
+        "choiceId": "c3",
+        "text": "80"
+      },
+      {
+        "choiceId": "c4",
+        "text": "75"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "There are2+3+4=9 scores below70 among15 people;100×9/15=60. Including ties at70 would use a different definition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-percentiles",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-27",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "One newcomer scores65. What is the revised P(70)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "60"
+      },
+      {
+        "choiceId": "c2",
+        "text": "62.5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "66⅔"
+      },
+      {
+        "choiceId": "c4",
+        "text": "75"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "There are now10 people below70 among16 total, giving62.5. The newcomer changes both numerator and denominator, not just the denominator.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-percentiles",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-28",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Newcomers score either55 or85, with at least ONE scoring85 and at most12 newcomers altogether. The new P(70) must be exactly66⅔ (that is, the below-70 fraction is exactly2/3), AND the median must remain exactly60. How many newcomers scoring85 are possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Exactly1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Exactly2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Exactly1 or2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Exactly1,2 or3"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Let b score55 and a score85. The percentile condition gives(9+b)/(15+b+a)=2/3, hence b=3+2a. With a≥1 and b+a≤12, a=1,2,3. For a1,b5 there are21 people:the11th score is60. For a2,b7 there are24 people:middle scores55,60 give57.5. For a3,b9 there are27:the14th is55. Only a1 preserves median60. Each condition removes a genuine alternative.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-percentiles",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-29",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What bias does instrument B add to its scaled true value?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "−2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "−1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "B’s bias is−1. Its scale2 is a separate multiplier, not the additive bias.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calibration",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-30",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For this question ONLY, treat A’s reading52 and B’s reading97 as EXACT unrounded readings for two different specimens. Which comparison of the TRUE specimen values is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A’s specimen exceeds B’s by1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B’s specimen exceeds A’s by1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A’s specimen is45 below B’s"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Both specimens have the same true value"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A:T+2=52 gives50. B:2T−1=97 gives49. Thus A’s true value is one greater, despite its much smaller raw reading. Comparing displays directly ignores both scale and bias.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calibration",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-31",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Separate specimens give displayed readings A52 and B99. What is the tight interval for the true A-specimen value MINUS the true B-specimen value?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "−0.75 < difference < 0.75"
+      },
+      {
+        "choiceId": "c2",
+        "text": "−1 ≤ difference ≤ 1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "−0.5 ≤ difference < 0.5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0 ≤ difference < 1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A52 gives49.5≤a<50.5;B99 gives49.75≤b<50.25. Thus−0.75<a−b<0.75;neither endpoint can be attained because one relevant upper endpoint is excluded. Values can approach either bound.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calibration",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-32",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two specimens have true values a and b, each a multiple of0.1. Their EXACT combined value is100.2. A measures the first specimen and displays52; B measures the second and displays100. How many ordered pairs(a,b) satisfy all facts AND have b−a at least0.7?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A52 requires49.5≤a<50.5;B100 requires50.25≤b<50.75. Combining b=100.2−a gives49.45<a≤49.95;intersecting yields49.5≤a≤49.95. On the0.1 grid a=49.5,49.6,49.7,49.8,49.9, with b=50.7,50.6,50.5,50.4,50.3. Differences are1.2,1.0,0.8,0.6,0.4, so exactly3 pairs qualify. Checking only the interval or only the sum overcounts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-calibration",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-33",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which candidate has the greatest quality score?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A’s quality9 is greatest;C’s8 is a service value, not its quality value.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-ranking",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-34",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "At w=4, which candidate has the greatest aggregate score?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Scores are A4×9+6×3=54;B24+42=66;C16+48=64;D20+30=50. B leads although neither raw-column maximum belongs to B.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-ranking",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-35",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which candidate strictly dominates D?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A and C"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "B exceeds D in both quality6>5 and service7>5. A’s service3 is lower;C’s quality4 is lower. A weighted score exceeding D in one setting is not itself two-criterion dominance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-ranking",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-36",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For which ALL integer weights w is B the UNIQUE aggregate leader?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3,4,5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4,5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4,5,6"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5,6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "B=70−w;A=30+6w;C=80−4w;D=50. B>A requires w<40/7, so integer w≤5. B>C requires w>10/3, so w≥4. B>D imposes w<20, automatically met in the domain. Thus only4 and5 meet all comparisons;at3 C wins,at6 A wins.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-ranking",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-37",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the width of a type B strip before its cut allowance?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3 cm"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4 cm"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5 cm"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6 cm"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Type B is5 cm wide. Its extra1-cm cut allowance does not change the stated strip width.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-cutting",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-38",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How much of a sheet’s width is discarded after pattern R, including the cut allowances as consumed width?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0 cm"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 cm"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2 cm"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3 cm"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "R consumes3×(3+1)+1×(5+1)=18 cm;20−18=2 cm is discarded. Subtracting strip widths alone ignores four cut allowances.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-cutting",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-39",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which TWO-sheet pattern pair produces at least4 A strips AND at least4 B strips?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P+R"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q+Q"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q+S"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R+S"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "PR gives8A/1B;QQ gives4A/4B;QS gives2A/5B;RS gives3A/4B. Only QQ meets both minima. The A requirement alone leaves PR;the B requirement alone leaves QS and RS.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-cutting",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-analytical-data-40",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Exactly7 A strips and5 B strips are needed, with NO extras. Exactly THREE sheets must be used. Which list contains ALL unordered pattern triples that meet both exact counts?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P+Q+S and Q+Q+R"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P+Q+S only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q+Q+R and P+R+S"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P+Q+R and Q+Q+R"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Enumerating20 unordered triples with repetition gives two exact solutions: P+Q+S produces(5+2+0,0+2+3)=(7,5);Q+Q+R produces(2+2+3,2+2+1)=(7,5). Other triples fail at least one exact count. For example PRS gives8A/4B and PQR gives10A/3B. Each pattern fits20 cm after cut allowances, so the remaining constraints are exact simultaneous counts and three sheets.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-data-cutting",
+      "referenceVersion": 1
+    }
+  }
+]

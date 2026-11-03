@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f05-reading-filipino-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Saan dapat magpatala ayon sa pabatid?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sa pahina ng samahan"
+      },
+      {
+        "choiceId": "b",
+        "text": "Sa silid-sining habang nagsisimula ang palihan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sa opisina"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sa tindahan ng materyales"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Opisina lamang ang tahasang tinukoy sa pagpapatalâ. Ang silid-sining ay tagpuan ng gawain, at hindi tinatanggap ang mensahe sa pahina bilang pagpapatala.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-filipino-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Bakit ayaw ni Dina na takpan ang guhit?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Dahil hindi pa tapos kumpunihin ang sapatos"
+      },
+      {
+        "choiceId": "b",
+        "text": "Dahil ipinagbabawal ng sapatero ang pagbabago ng kulay"
+      },
+      {
+        "choiceId": "c",
+        "text": "Dahil balak niyang ipagbili itong bagong sapatos"
+      },
+      {
+        "choiceId": "d",
+        "text": "Dahil mahalaga sa kaniya ang alaala ng pagkatuto ng anak"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ipinaliliwanag ng guhit mula sa anak at ng kaniyang pahayag ang personal na halaga nito. Tapos na ang pagkukumpuni; walang pagbabawal ng sapatero o planong pagbebenta.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-filipino-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Anong kaisipan ang pinakamalinaw na isinasadula ng huling kilos?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Maaaring magbago ang sariling kakayahan nang hindi nawawala ang pangangailangang unawain ang karanasan ng iba"
+      },
+      {
+        "choiceId": "b",
+        "text": "Ipinakikitang mas mapanganib ang bagong tulay kaysa sa dati"
+      },
+      {
+        "choiceId": "c",
+        "text": "Tiyak na lahat ng bata ay takot sa anumang uri ng tulay"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pinatutunayang hindi na kailangang tumawid ni Berto"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nagbago ang kaniyang pagtawid ngunit tumugon pa rin siya sa maaaring pangangailangan ng bata. Hindi nito itinatatag ang panganib ng bagong tulay o pangkalahatang takot ng lahat ng bata.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-filipino-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang tungkulin ng tanong sa simula?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Humingi ng bilang ng mga aklat na nailista"
+      },
+      {
+        "choiceId": "b",
+        "text": "Hamunin ang mababaw na pagkilala sa aklat at anyayahan ang pagninilay sa epekto ng pagbasa"
+      },
+      {
+        "choiceId": "c",
+        "text": "Patunayang walang kalahok na marunong bumasa"
+      },
+      {
+        "choiceId": "d",
+        "text": "Piliin ang taong may pinakamaraming pamagat na kabisado"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ang kasunod na gawain ay pagbabahagi ng nabagong kaisipan, kaya retorikal na hamon sa mababaw na pagkilala ang tanong. Hindi ito simpleng imbentaryo o pagsusulit ng dami ng kabisadong pamagat.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-filipino-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling buod ang wastong tumutukoy sa pagkakasundo, tunay na pinagtatalunan at hindi pa mapagpapasiyahan mula sa teksto?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kapuwa mahalaga sa kanila ang babae at lumang sanggunian; magkaiba ang lokasyon ng pagkilala; dahil dito ay alam nang pareho ang lahat ng residente"
+      },
+      {
+        "choiceId": "b",
+        "text": "Kapuwa mahalaga sa kanila ang babae; nais nilang kapuwa ilagay ang dagdag na pangalan sa karatula; hindi pa alam ang gastos"
+      },
+      {
+        "choiceId": "c",
+        "text": "Kapuwa mahalaga ang babae at lumang sanggunian; sa lokasyon ng bagong pagkilala sila naiiba; hindi pa ibinigay ang gastos o saloobin ng lahat"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sa lokasyon ng pagkilala sila naiiba at hindi tiyak ang gastos; nangangahulugan itong ayaw ni Lani ng anumang pagkilala sa babae"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Tinatanggap nila ang dalawang halaga ngunit hindi ang iisang paraan: karatula laban sa hiwalay na paliwanag. Walang datos sa gastos o opinyon ng lahat. Ang mga karibal ay may tamang pagkakasundo, lokasyon o kakulangan ng datos ngunit dinaragdagan ng hindi suportadong pagkakaisa o pagtanggi.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-reading-filipino-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling pagsusuri ang pinakamahusay na nagpapanatili sa tatlong usapin?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Pinananatili ng L ang kondisyon; pinatutunayan na ng pahintulot sa sipi na matutupad ang kondisyon"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mali ang pagtiyak ng K, ngunit kailangang ipahayag na kanselado ang pagbalik dahil wala pang iskedyul"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pinananatili ng L ang kondisyon; ang kawalan ng iskedyul ay katumbas na rin ng pangakong walang kondisyon"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pinananatili ng L ang kondisyon; hindi ginagawang tiyak o kanselado ng pahintulot sa sipi at kawalan ng iskedyul ang pagbalik"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Hiwalay ang pahintulot sa pagsipi sa kung matutupad ang kondisyon. L ang nagpapanatili ng kapag; ang kawalan ng iskedyul ay hindi patunay ng katuparan o kanselasyon at hindi kapalit ng kondisyon. May mga karibal na tama ang puna sa K o L ngunit mali ang idinaragdag na konklusyon.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-reading-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

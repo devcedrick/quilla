@@ -1,0 +1,530 @@
+[
+  {
+    "referenceId": "f05-reading-english-01-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The neighbourhood recipe exchange accepts handwritten or typed recipes. Every contributor must state the quantities and cooking steps. A photograph of the finished dish is welcome but optional. The organisers will ask contributors before printing their names; an unsigned submission may still be included if it meets the recipe requirements."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-english-02-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "When the train slowed, Jo lifted her bag before looking out. The familiar smell of roasting corn drifted through the window. She had not visited for twelve years, yet her hands already knew which strap to tighten before the crowded platform. Only then did she see the station sign."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-english-03-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "At the club’s anniversary, the speaker pointed to a polished trophy: “Our most reliable participant—never misses a meeting, never asks an awkward question.” Laughter followed. She then turned to the empty chairs and asked members to bring neighbours who would challenge the next proposal."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-english-04-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Two reviewers hear the same concert. Both report that the final piece was played slowly. One calls the pace solemn; the other calls it lifeless. A student writes that the reviewers disagree about how fast the piece was played. The teacher asks her to separate their shared observation from the evaluations attached to it."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-english-05-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Letter from Ari: “Keep the river walk open to everyone. A night closure would exclude workers who finish late. Use low, shielded lights along the path rather than lamps shining across the water.” Reply from Ben: “I also oppose the night closure. But shielding alone will not answer my concern: lighting the whole route may draw walkers into a narrow section where there is no safe passing space. I favour lighting the entrances and widening that section before extending the lights.” Neither letter discusses fees. A summary must distinguish common policy, disagreement over sequencing and a matter about which both are silent."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-english-06-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "I used to call the old staircase a wall. Grandfather paused on every landing, and I saw each pause as an obstacle keeping us from the roof. Years later, I returned alone and climbed without stopping. At the top I could not name a single sound from the rooms I had passed. Grandfather’s pauses had always come beside an open door: a ladle tapping a pot, a child sounding out a word, someone asking whether we needed water. I now call that same staircase a string of doorways. Its steps are as steep as before."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-filipino-01-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa palihan ng papet, may materyales na ibibigay sa bawat kalahok. Maaaring magdala ng sariling gunting ngunit hindi ito kailangan. Magkikita ang pangkat sa silid-sining nang alas-diyes. Sa opisina lamang magpapatala; hindi tumatanggap ng pagpapatalang isinasabay sa mensahe sa pahina ng samahan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-filipino-02-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Maayos na ang sapatos ni Dina nang matapos itong kumpunihin. Gayunman, hiniling niyang huwag takpan ng bagong kulay ang maliit na guhit sa gilid. Guhit iyon ng lapis ng kaniyang anak noong matutong sumulat. “Hindi ito mantsa para sa akin,” sabi niya, saka ibinalik ang lapis sa bulsa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-filipino-03-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa kaniyang sanaysay, naalala ni Berto ang takot sa pagtawid sa dating tulay. Nang may bagong tulay na, tumawid siya nang hindi humahawak sa kasama. Subalit nang marinig ang yabag ng batang nasa likuran, huminto siya at iniabot ang kamay. Hindi niya ipinagpalagay na nawala na rin ang takot ng iba dahil madali na para sa kaniya."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-filipino-04-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa pulong ng mambabasa, nagtanong ang tagapagsalita: “Kung puro pamagat lamang ang maaalala natin, nabasa ba natin ang aklat?” Hindi niya hinintay na magtaas ng kamay ang mga may hawak ng talaan. Sa halip, hiniling niyang ilahad ng bawat pangkat ang isang kaisipang binago ng kanilang pagbabasa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-filipino-05-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa talakayan ng pangalan ng isang lansangan, mungkahi ni Lani na panatilihin ang lumang pangalan dahil ginagamit ito sa mga lumang liham at mapa. Mungkahi ni Miro na idagdag sa karatula ang pangalan ng babaeng nagtayo ng unang silid-aklatan doon, nang hindi inaalis ang lumang pangalan. Pumayag si Lani sa hiwalay na paliwanag tungkol sa babae ngunit ayaw niyang isama ang bagong pangalan sa mismong karatula. Kapuwa nila kinikilala ang ambag ng babae at ang halaga ng lumang sanggunian. Wala silang ibinigay na datos tungkol sa gastos o opinyon ng lahat ng residente."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-reading-filipino-06-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Pumayag si Ines na sipiin ang pangungusap na “Babalik ako kapag maayos na ang silid.” Ang pahayagan ay naghahanda ng buod ng kaniyang liham. Ang bersiyong K ay “Tiyak nang babalik si Ines,” at ang bersiyong L ay “Sinabi ni Ines na babalik siya kapag maayos na ang silid.” Sa orihinal na liham, may kasunod na paliwanag na wala pang iskedyul ng pagkukumpuni. Hindi sinabi ni Ines na kanselado ang pagbabalik. Nais ng editor na paghiwalayin ang pahintulot na sumipi, ang kondisyon ng pangako at ang hindi pa tiyak na petsa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-english-01-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The legend explained that those dotted lines marked seasonal paths rather than permanent roads.\nP2: Once she made that distinction, she chose a solid-line route for the winter journey.\nP3: Rena initially planned her winter trip along the shortest dotted line on the map.\nP4: Before booking, however, she checked the legend to find out what the line meant."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-english-02-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Because each guest brought a dish, the organisers asked everyone to label ingredients.\nP2: A sketch of the mountain hung beside the organiser’s desk all year.\nP3: The labels helped guests choose food suited to their dietary needs.\nP4: For that reason, the organisers decided to keep the labelling rule at later shared meals."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-english-03-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The catalogue thus records what belongs to the collection, while the exhibition offers an interpretation of selected objects.\nP2: A visitor found several objects in the museum catalogue that were absent from the exhibition.\nP3: From that explicit distinction between a record of holdings and an interpretation of selected objects, it follows that gallery absence alone does not establish absence from the holdings.\nP4: The curator explained that limited gallery space requires selection, whereas the catalogue lists objects kept in storage as well."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-english-04-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Keeping every doorway open would satisfy the first aim but defeat the second.\nP2: The committee wanted visitors to move freely between workshops while keeping noisy machinery from overwhelming quiet demonstrations.\nP3: The recommended movable partitions follow from that distinction: they permit selected openings without treating either aim as expendable.\nP4: Conversely, sealing each room completely would preserve quiet but obstruct the movement the committee wanted.\nP5: The problem therefore calls for controlling particular connections rather than choosing either unrestricted openness or total separation."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-english-05-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The essay first argues for dimming the stadium lights after the players leave, because bright empty fields disturb nearby homes.\nP2: It therefore recommends shielded safety lighting on the exits while dimming the unused playing area, preserving the objection’s concern without abandoning the original aim.\nP3: A critic responds that late workers still need to walk safely through the exits.\nP4: That reply distinguishes the need to illuminate a route from the assumption that every empty field must remain equally bright.\nP5: The writer accepts that need but notes that exit paths can be lit separately from the playing area."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-english-06-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: That separation is the ethical point of the proposal: a voice can be heard without requiring its owner’s public identification.\nP2: The listening project promised anonymity to contributors who described losing their homes.\nP3: The editor therefore proposed retaining the accounts under chosen pseudonyms while removing identifying details.\nP4: Yet deleting every anonymous account would keep identities hidden only by making the experiences disappear as well.\nP5: To avoid that loss, she distinguished withholding a name from withholding the account itself."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-filipino-01-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Kaya inayos nila ang unang uri sa harap at ang ikalawa sa likod, na may malinaw na pagitan para sa pagdaan.\nP2: Bukod sa pakinabang habang nanonood na inilarawan, ang pagitan ding iyon ang nagpadali sa paglabas matapos ang programa.\nP3: May mabababang upuan para sa mga bata at mas matataas para sa matatanda sa bulwagan.\nP4: Sa ayos na iyon, kita ng mga bata ang entablado at hindi nahaharangan ng kanilang mga upuan ang daanan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-filipino-02-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Sa dulo ng kaniyang salaysay, ang dating buhol ay tinawag na habing may puwang para sa bagong sinulid.\nP2: Sa simula, inilarawan ni Eva ang kaniyang magulong alaala bilang isang buhol na hindi mahawakan.\nP3: Dahil sa paghihiwalay na iyon, hindi na niya itinuring na kailangang alisin ang bawat gusot upang maikuwento ang nakaraan.\nP4: Nang ayusin niya ang mga liham ayon sa sumulat, nakilala niya ang magkakaibang tinig sa tila iisang gulo."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-filipino-03-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Doon niya natuklasang hindi sira ang kampana; natatakpan lamang ng makapal na tela ang bibig nito.\nP2: Hindi narinig ni Pepe ang inaasahang kampana mula sa looban.\nP3: Ang pagkakatuklas na iyon ang nagpabago sa kaniyang unang hinuha, kaya inalis niya ang tela bago muling subukan ang pagtunog.\nP4: Inakala niyang sira ito, ngunit bago magpasya ay lumapit siya sa kinapupuwestuhan nito."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-filipino-04-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Gayunman, sa bagong pulong ay ibang kalagayan na ang sinasagot ng parehong pangungusap.\nP2: Sa unang pulong, nangako ang tagapamahala na magdadagdag ng upuan kapag dumami ang dumadalo.\nP3: Dahil sa pagkakaibang ito, hiniling ng mga kasapi ang paliwanag sa pagbabago ng kalagayan, sa halip na bilangin lamang kung ilang ulit na naulit ang pangako.\nP4: Ngayon ay marami na ang dumadalo, kaya ang pag-uulit ay hindi na tumutugon sa tanong kung kailan gagawin ang naipangako.\nP5: Noon ay kakaunti pa ang dumadalo; ipinaliwanag ng kasunod na ulat kung bakit hindi pa natutupad ang kondisyon."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-filipino-05-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Kaya idinagdag ng guro ang kasalukuyang pangalan sa tala at pinanatili ang lumang pangalan sa loob ng malinaw na petsa.\nP2: Nabasa sa lumang liham ang pangalan ng pook na hindi na ginagamit sa bagong mapa.\nP3: Mula sa paliwanag na iyon sa magkaibang bisa ng pangalan noon at ngayon, ang pagtatala ay hindi pagbura sa isa kundi pagpapakita ng pagbabago sa pagtukoy sa parehong lugar.\nP4: Ipinakikita ng petsang iyon na wasto ang lumang pangalan bilang bahagi ng liham, kahit iba ang kailangang gamitin sa paglalakbay ngayon.\nP5: Kinumpirma ng kasunod na tala ng mga pagbabago sa pangalan na iisang pook ang tinutukoy ng liham at ng bagong mapa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-paragraph-filipino-06-reference",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Bilang sagot sa tanong na ito, iminungkahi niyang magdagdag ng landas, sa halip na ipasara ang lahat ng dating daanan.\nP2: Naglalakad si Igo sa mataong plasa ngunit pinipili kung minsan ang tahimik na daan sa gilid.\nP3: Ang tanong, samakatuwid, ay kung paano mapalalawak ang pagpipilian nang hindi ginagawang pagbabawal sa iba ang sariling kagustuhan.\nP4: Mula rito, pinaghiwalay niya ang pagnanais ng isang uri ng lugar at ang pag-angking iyon lamang ang dapat payagang gamitin ng lahat.\nP5: Hindi niya hiniling na paalisin ang mga nagtitipon sa gitna; gusto lamang niyang may mapiling lugar ang naghahanap ng katahimikan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Original independently authored text; no actual or leaked CSE material."
+      ]
+    }
+  }
+]

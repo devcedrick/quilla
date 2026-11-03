@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f05-paragraph-english-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange all parts into the most coherent paragraph.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3 → P4 → P1 → P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3 → P1 → P4 → P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3 → P4 → P2 → P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4 → P3 → P1 → P2"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P3 introduces the dotted route and winter plan; P4 motivates checking; P1 supplies the legend’s distinction; P2 uses that distinction to choose a route. The rivals place the explanation before the check or the choice before its stated basis.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-english-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which order forms a coherent paragraph after removing the ONE sentence unrelated to its subject?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P1 → P2 → P3 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P1 → P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1 → P4 → P3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 is unrelated to the food-labelling argument. P1 states the practice, P3 its benefit and P4 the resulting decision. Keeping P2 leaves an irrelevant interruption; dropping P3 removes the basis for that reason; reversing P3/P4 puts the result before the stated reason.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-english-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange all parts into the most coherent paragraph.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P4 → P3 → P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4 → P2 → P1 → P3"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P2 introduces the mismatch; P4 explains selection/storage; P1 explicitly distinguishes the catalogue’s record function from the exhibition’s interpretation; P3 invokes that explicit record-versus-interpretation distinction to limit an absence inference. P3 cannot precede the precise distinction it names.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-english-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange all parts into the most coherent paragraph.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P4 → P3 → P5"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P4 → P1 → P5 → P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P1 → P5 → P4 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P1 → P4 → P5 → P3"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P2 defines the two aims, P1 tests unrestricted openness against them, P4 supplies the converse extreme, P5 distinguishes selective control from either extreme, and P3 applies that distinction. The rivals invoke a distinction before formulating it, put the converse before its first position, or conclude before the converse test.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-english-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange all parts into the most coherent paragraph.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P1 → P3 → P5 → P4 → P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1 → P3 → P4 → P5 → P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1 → P5 → P3 → P4 → P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1 → P3 → P5 → P2 → P4"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P1 introduces dimming, P3 the safety objection, P5 accepts its limited need and supplies separate lighting, P4 states the distinction in that reply, and P2 integrates both aims in a recommendation. Referring to that reply before P5, accepting a need before the critic states it, or applying the distinction before it is articulated weakens the competing orders.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-english-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange all parts into the most coherent paragraph.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P5 → P4 → P3 → P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P4 → P5 → P3 → P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P4 → P3 → P5 → P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P4 → P5 → P1 → P3"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 introduces anonymity; P4 exposes the cost of deleting accounts; P5 distinguishes name from account to avoid that loss; P3 makes the resulting proposal; P1 identifies the proposal’s ethical point. The rivals require loss before it is introduced, propose the remedy before its distinction, or refer to the proposal before it appears.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]
