@@ -1,0 +1,1562 @@
+[
+  {
+    "questionId": "f07-numerical-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which number has exactly three positive integer divisors?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "9 has divisors 1,3,9. The alternatives have four, four and six divisors respectively.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A number line has equally spaced marks at 1.2, 1.7, 2.2. What number is two marks to the left of 1.2?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0.2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "0.7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "-0.2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0.1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Each gap is 0.5; moving two gaps left subtracts 1.0.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which calculation gives the reciprocal of 2.5?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1 ÷ 2.5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2.5 ÷ 1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1 − 2.5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2.5 × 2.5"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A reciprocal multiplies the original number to give 1, hence it is 1 divided by the original number.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A square grid has five rows of five cells. The middle row is shaded. What fraction of cells is shaded?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4/25"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/25"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Five of the 25 cells are shaded, so 5/25=1/5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many positive two-digit multiples of 25 are there?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "They are 25,50,75. The next multiple 100 has three digits.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the difference between the largest and smallest numbers that round to 70 to the nearest ten, if only whole numbers and half-up rounding are used?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "19"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The endpoints are 65 and 74; their difference is 9, although there are ten integers.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-07",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A recipe uses 3 scoops of grain for every 2 scoops of beans. Which amount of beans matches 9 scoops of grain?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Multiplying the grain quantity by three also multiplies beans by three: 2×3=6.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-08",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is equal to 0.004 written as a percentage?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0.4%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0.04%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "40%"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Multiply the decimal by 100 to write percent: 0.004×100=0.4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-09",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A clock reads 23:48. What time will it show 25 minutes later on a 24-hour display?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "00:13"
+      },
+      {
+        "choiceId": "c2",
+        "text": "00:23"
+      },
+      {
+        "choiceId": "c3",
+        "text": "23:73"
+      },
+      {
+        "choiceId": "c4",
+        "text": "01:13"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Twelve minutes reach midnight and thirteen remain.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-10",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which whole number is closest to 19/6?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "19/6=3 and 1/6, closer to 3 than 4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-11",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The sum of a positive number and its additive inverse is what?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "-1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The original number"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "An additive inverse is its negative. Adding opposites gives zero.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-12",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A rectangular frame has outer side lengths 11 cm and 7 cm. What is the length of string running once around its outer edge?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "18"
+      },
+      {
+        "choiceId": "c2",
+        "text": "36"
+      },
+      {
+        "choiceId": "c3",
+        "text": "77"
+      },
+      {
+        "choiceId": "c4",
+        "text": "40"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The perimeter is 2(11+7)=36 cm, rather than the area 77.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-13",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A four-digit code uses each of 0,2,5,7 once, cannot start with 0, and must be divisible by 4. What is the smallest valid code greater than 5000?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5027"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5072"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5207"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5270"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Divisibility by 4 requires a last-two-digit multiple of 4. Among codes beginning 5, endings 72 and 20 are possible:5072 and 5720. The smaller is 5072;5027,5207 and 5270 fail divisibility by 4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-14",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "On a 1-to-100 numbered list, every number containing a digit 7 is marked. How many numbers are marked?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "18"
+      },
+      {
+        "choiceId": "c2",
+        "text": "19"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "21"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Ten numbers end in 7 and ten run 70–79. The number 77 is counted twice, so 10+10−1=19.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-15",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A number has been rounded to 3.6 to one decimal place with half-up rounding. Which interval contains every possible unrounded value?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3.55 ≤ x < 3.65"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3.50 ≤ x < 3.70"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3.55 < x ≤ 3.65"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3.60 ≤ x < 3.70"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The lower midpoint rounds up to 3.6; the upper midpoint rounds up to 3.7 and is excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-16",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A runner completes 3/8 of a circular lap, then turns around and runs 5/8 lap. Measured in the original forward direction, what fraction of a lap ahead of the starting point is the final position?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3/4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/2"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Signed displacement is 3/8−5/8=−1/4 lap, equivalent to 3/4 forward around the circle. Distance travelled is not displacement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-17",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Five distinct positive integers have median 8. What is their smallest possible sum?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "30"
+      },
+      {
+        "choiceId": "c2",
+        "text": "31"
+      },
+      {
+        "choiceId": "c3",
+        "text": "32"
+      },
+      {
+        "choiceId": "c4",
+        "text": "33"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The two smallest can be 1 and 2; the two largest must be at least 9 and 10. Sum=1+2+8+9+10=30.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-18",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 36 cm wire is bent into a rectangle whose side lengths are whole centimetres. What is the largest possible area if the rectangle must not be a square?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "80"
+      },
+      {
+        "choiceId": "c2",
+        "text": "81"
+      },
+      {
+        "choiceId": "c3",
+        "text": "72"
+      },
+      {
+        "choiceId": "c4",
+        "text": "77"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The side sum is 18. The nearest unequal pair is 8 and 10, with area 80;9 and 9 is excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-19",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two alternative coupons apply to a PHP 600 price: a PHP 50 discount BEFORE a 10% reduction, or a PHP 50 discount AFTER that reduction. How much lower is the final price under the AFTER coupon?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "45"
+      },
+      {
+        "choiceId": "c4",
+        "text": "50"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Before gives (600−50)×0.9=495; after gives 600×0.9−50=490. Difference 5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-20",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 100-page booklet is numbered 1 through 100. How many digit characters are printed in the page numbers?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "189"
+      },
+      {
+        "choiceId": "c2",
+        "text": "190"
+      },
+      {
+        "choiceId": "c3",
+        "text": "192"
+      },
+      {
+        "choiceId": "c4",
+        "text": "200"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Pages 1–9 use 9 digits;10–99 use 180;100 uses 3. Total 192.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-21",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A regular bus departs every 24 minutes. An express departs every 36 minutes. Both depart at 09:00. What is the next simultaneous departure?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10:12"
+      },
+      {
+        "choiceId": "c2",
+        "text": "09:36"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10:00"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10:24"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The least common multiple of 24 and 36 is 72 minutes, so 09:00+72 min=10:12.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-22",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A cube has side 4 cm. It is painted on all faces and cut into 1 cm cubes. How many small cubes have exactly two painted faces?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "24"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "32"
+      },
+      {
+        "choiceId": "c4",
+        "text": "16"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Such cubes lie on edges away from corners. Each of 12 edges has 4−2=2, giving 24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-23",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A bag contains two red, three blue and five white counters. One is selected uniformly. What is the probability it is NOT blue, conditional on it NOT being white?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2/10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3/5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7/10"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Conditioning leaves five red-or-blue counters; two are red, the only nonblue counters remaining.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-24",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "When a positive integer is divided by 8, the quotient is 6 and remainder is r. How many possible original integers are also divisible by 3?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The integers 48–55 arepossible;48,51,54 aredivisibleby 3. Remainder must be 0–7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-25",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A container is 60% full by volume. Half its contents are moved to a second, empty container with twice the capacity. What percentage of the second container is filled?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "15%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "30%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "60%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7.5%"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Moved volume is 0.3 ofthefirstcapacity. Dividing bytwice thatcapacity yields 0.15.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-26",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An integer has prime factorization 2³ × 3² × 5. How many of its positive divisors are perfect squares?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A square divisor must use even exponents. The power of 2 may be 0 or 2, the power of 3 may be 0 or 2, and the power of 5 must be 0. These independent choices give 2×2×1=4 square divisors:1,4,9,36. Counting all divisors ignores the even-exponent restriction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-27",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A building labels floors G,1,2,...,12,14,15,16,17; there is no floor 13. Every pair of physically adjacent floors is 3 m apart. A lift travels from floor 2 to floor 17, stopping at floor 8 without reversing. How far does it travel vertically?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "42"
+      },
+      {
+        "choiceId": "c2",
+        "text": "45"
+      },
+      {
+        "choiceId": "c3",
+        "text": "39"
+      },
+      {
+        "choiceId": "c4",
+        "text": "48"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "From 2 through 12 there are 10 physical gaps, then 12→14→15→16→17 adds 4. Fourteen gaps at 3 m give 42 m. The intermediate stop adds no distance, and the missing 13 removes one gap from ordinary subtraction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-28",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "There are 7 points on a straight line. How many distinct segments have endpoints among these points?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "21"
+      },
+      {
+        "choiceId": "c2",
+        "text": "42"
+      },
+      {
+        "choiceId": "c3",
+        "text": "14"
+      },
+      {
+        "choiceId": "c4",
+        "text": "28"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Choose two endpoints:7×6/2=21. Reversing endpoints does not create another segment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-29",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A wheel travels 12 m in 8 turns without slipping. It is replaced by a wheel whose circumference is 20% smaller. The replacement covers the rest of a 30 m route. How many wheel turns occur over the entire route?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "20"
+      },
+      {
+        "choiceId": "c2",
+        "text": "23"
+      },
+      {
+        "choiceId": "c3",
+        "text": "25"
+      },
+      {
+        "choiceId": "c4",
+        "text": "30"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The first wheel circumference is 12/8=1.5 m. The replacement travels 1.2 m per turn, so the remaining 18 m needs 15 turns. Add the first 8 for 23; using the new wheel for the whole route gives 25.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-30",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A positive fraction in simplest form has denominator 12 and is between 1/3 and 2/3. How many possible numerators are there?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Numerator must be 5,6 or 7;6/12 isnotinsimplestform, leaving 5 and 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-31",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three people each shake hands once with every other person in a meeting. Two more people arrive, and all previously unmade handshakes take place. How many NEW handshakes occur?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "6"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Five people yield 10 pairs;thefirstthreealreadycompleted 3,leaving 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-32",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 4 cm by 6 cm rectangle is drawn on squared paper. A point is chosen uniformly from its area. What fraction of its area lies within 1 cm of at least one edge?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5/6"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The interior more than 1 cmfromalledges is 2×4=8 of 24. Edge region is 16/24=2/3; boundary lines have zero area.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-33",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Starting at 5, use A (add 3), B (double), and C (subtract 4) once each. Reject any order whose intermediate value is negative. How many distinct final values remain?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "ABC=12, ACB=8, BAC=9, BCA=9, CAB=8, CBA=5. All intermediate values are nonnegative. The distinct outcomes are 5,8,9,12; counting orders gives six, while counting the repeated outcomes twice gives the wrong total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-34",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An original tray design uses a 14 cm by 10 cm sheet. For each integer h from 1 to 4, its usable rectangular base is (14−3 h)cm by(10−2 h)cm, and its height is h cm; the extra h in the first subtraction reserves a flap. Only bases with area at least 30 square cm are allowed. What is the largest permitted volume?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "88"
+      },
+      {
+        "choiceId": "c2",
+        "text": "96"
+      },
+      {
+        "choiceId": "c3",
+        "text": "120"
+      },
+      {
+        "choiceId": "c4",
+        "text": "168"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For h=1,2,3,4, base areas are 88,48,20,4 and volumes 88,96,60,16. Only h=1 and 2 meet area≥30, and h=2 maximizes volume at 96. Using 14−2 h ignores the flap and produces the tempting 120.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-35",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three different positive integers have sum 20. Exactly two are odd. Their product must be as large as possible. What is that product?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "280"
+      },
+      {
+        "choiceId": "c2",
+        "text": "294"
+      },
+      {
+        "choiceId": "c3",
+        "text": "300"
+      },
+      {
+        "choiceId": "c4",
+        "text": "308"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "For even member 2,4,6,8,10,12,14,16, the greatest products of distinct odd partners are 154,252,270,280,210,180,70,48. The maximum is 280 from 5,7,8. For even 18 there is no pair of distinct positive odd partners summing 2. Checking nearest unequal odd partners maximizes each fixed-sum pair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-36",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Bag A has 3 red and 2 blue tokens; B has 1 red and 4 blue; C has 2 red and 2 blue. Select a bag with probabilities 1/2,1/3,1/6 respectively, then draw 2 tokens without replacement from that bag. Given at least one drawn token is blue, what is the probability both are blue?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "25/74"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5/18"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/7"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Unconditional both-blue probabilities contribute (1/2)(1/10)+(1/3)(6/10)+(1/6)(1/6)=25/90. At-least-one-blue contributes (1/2)(7/10)+(1/3)(1)+(1/6)(5/6)=74/90. Conditional probability is 25/74. The 5/18 alternative is the unconditional event;1/7 wrongly uses only bagA.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-37",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A floor is a 5 by 5 grid. Remove its central cell. A straight cut along any internal grid line splits the remaining cells into two pieces. What is the smallest possible difference between their cell counts?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A cut after row or column 2 leaves 10 cells on one side and 14 on the other, since the center is on the larger side. After row/column 1 the counts are 5 and 19. The symmetric cuts give the same differences. A 12–12 cut would require a non-grid line.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-38",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Whole-number scores from 0 to 10 are recorded for six people. Their mean is 7, and exactly three scores are 10. What is the largest possible median?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8.5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9.5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The three non-ten scores sum 12 and are at most 9. The median is the average of the largest non-ten score and 10, so it is at most 9.5. Scores 0,3,9,10,10,10 attain this bound. A median 10 would require a fourth 10, contrary to exactly three.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-39",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An integer n is chosen uniformly from 1 through 30. What is the probability that n is divisible by 2 or 3, but NOT by both, and is NOT divisible by 5?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7/15"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8/15"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "There are 15 multiples of 2 and 10 of 3 in 1–30. Excluding all 5 multiples of 6 from BOTH lists leaves 15 numbers divisible by exactly one. Of these,10,15,20 are multiples of 5, leaving 12. Probability 12/30=2/5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-numerical-40",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Eight sealed packs each contain either 6 or 10 units and contain 64 units altogether. A 10-unit pack is selected and set aside. Then 3 of the remaining 7 packs are selected uniformly without replacement. What is the probability the three selected packs contain at least 26 units?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "13/35"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4/7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12/35"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The original batch has four packs of each size:10 x+6(8−x)=64 givesx=4. After setting aside a 10-unit pack,3 large and 4 small remain. Three chosen packs have 18+4 k units, so k≥2. Favorable subsets number C(3,2)C(4,1)+C(3,3)=13, out of C(7,3)=35. Counting exactly 2 large misses the all-large subset; ignoring the set-aside pack changes the sample space.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

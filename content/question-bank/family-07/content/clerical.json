@@ -1,0 +1,782 @@
+[
+  {
+    "questionId": "f07-clerical-01",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local register assigns an incoming letter its receipt date, not the date printed on it. A letter dated 3 May arrives 7 May and is opened 8 May. Which receipt date belongs in the register?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3 May"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7 May"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8 May"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No date until reply"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The stated receipt rule selects arrival 7 May; writing and opening dates are different events.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-02",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local rule marks a copy UNCONTROLLED unless its copy number appears in the current copy register. Copy 12 appears only in an old register; copy 18 appears in the current register. Which copy is controlled?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Copy 12 only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Copy 18 only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both copies"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Neither copy"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Only 18 meets the current-register condition. Historic registration does not satisfy the stated rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-03",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "At a local desk, orange folders go to Cash, green folders to Records, and unstickered folders to Intake. Where should a folder with no sticker go?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Cash"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Records"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Intake"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Cash then Records"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The explicit unstickered branch goes to Intake. The rule does not infer a destination from folder contents.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-04",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local scan log records only completed pages. A 16-page document has pages 1–12 scanned successfully; pages 13–16 are queued. What completed-page count is recorded?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "12"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "28"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Queued pages are not completed. Count only the twelve successful pages.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-05",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local desk reconciles by (invoiceID, amount), ignoring date. A bank line is usable only if it has not already been allocated; each invoice needs one unallocated matching line. InvoiceQ 17 isPHP 480. Lines L 1:Q 17/PHP 480/allocated; L 2:Q 71/PHP 480/unallocated; L 3:Q 17/PHP 480/unallocated; L 4:Q 17/PHP 408/unallocated. Which line may settle Q 17?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "L 1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "L 2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "L 3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "L 4"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "L 1 matches both fields but is already allocated. L 2 has the wrong ID and L 4 the wrong amount. Only L 3 meets exact matching and availability simultaneously.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-06",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: number forms only after validation; a rejected form gets no number and does not consume a number. Next number is 306. Forms A(valid), B(rejected), C(valid) arrive in that order. Which assignment is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A 306; B 307; C 308"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A 306; Bnone; C 307"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Anone; B 306; C 307"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A 307; Bnone; C 308"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A consumes 306, B consumes nothing, and C gets 307. Reserving a number for rejection wrongly creates a gap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-07",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A desk closes its same-day queue at 15:00 inclusive. Complete submissions enter immediately; an incomplete submission enters when completed. P arrives 14:40 and completes 15:02; Q arrives complete 15:00; R arrives complete 15:01. Which enter the same-day queue?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P and Q"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q and R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P only"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Use completion times 15:02,15:00,15:01. Only Q meets the inclusive cutoff; early incomplete arrival does not qualify P.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-08",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local retention starts the day AFTER closure and lasts exactly 7 calendar days, including that start day. A file closes 10 June. On which date does the seventh retention day end?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "16 June"
+      },
+      {
+        "choiceId": "c2",
+        "text": "17 June"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18 June"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10 June"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Day 1 is 11 June, so day 7 is 17 June. Counting closure as day 1 produces 16 June.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-09",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local stock card starts with 40 envelopes. It records receipt 30, issue 18, return of 4 UNUSED envelopes from that issue, and rejection of 5 damaged envelopes from the receipt before storage. What is usable closing stock?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "51"
+      },
+      {
+        "choiceId": "c2",
+        "text": "43"
+      },
+      {
+        "choiceId": "c3",
+        "text": "56"
+      },
+      {
+        "choiceId": "c4",
+        "text": "47"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Usable stock 40+30−18+4−5=51. Returned unused items add back; damaged received items are excluded once.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-10",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A register treats an ID as its letters plus digits, ignoring hyphens and spaces but preserving leading zeros. Which pair is a duplicate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "AB-007 / AB 007"
+      },
+      {
+        "choiceId": "c2",
+        "text": "AB-007 / AB 7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "AB-007 / BA-007"
+      },
+      {
+        "choiceId": "c4",
+        "text": "AB-070 / AB-007"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Both normalize toAB 007. Removing leading zeros or reversing letters would change the ID under this rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-11",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local routing: budget requests need Finance then Director; requests with personal data need Privacy BEFORE any other review. A budget request has personal data. Which complete review route applies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Finance → Privacy → Director"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Privacy → Finance → Director"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Privacy → Director → Finance"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Finance → Director"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Privacy precedes all other review, then Finance must precede Director. The alternatives break one requirement or omit Privacy.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-12",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local quorum needs one Records staff member, one Cash staff member, and a third distinct employee. A dual-appointed employee may count for only one department. Present are L(Records and Cash), M(Records), N(Intake). Which assignment establishes quorum?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "L=Cash; M=Records; N=third"
+      },
+      {
+        "choiceId": "c2",
+        "text": "L=Records and Cash; M=third; N=unused"
+      },
+      {
+        "choiceId": "c3",
+        "text": "L=Records; M=Records; N=third"
+      },
+      {
+        "choiceId": "c4",
+        "text": "L=Cash; N=Records; M=third"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Assign L to Cash, M to Records, and N as the distinct third employee. Dual appointment does not permit L to occupy both required seats. N is not Records and two Records representatives leave Cash unfilled.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-13",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local release requires the latest registered authorization for that parcel, plus an exact recipient name. Old authorizations become invalid even if names match. ParcelP has oldR 24/Mira Vale and latestR 42/Mira Vela. Presented slips: X:R 24/Mira Vale, Y:R 42/Mira Vale, Z:R 42/Mira Vela. Which qualifies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "X only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Y only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Z only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "X and Z"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "X matches the obsolete authorization, Y matches the latest number but not its recipient, and Z matches both latest fields. Similar spelling does not count as exact agreement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-14",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local dispatch uses the earlier of the customer deadline and internal deadline. Equal effective deadlines are ordered by receipt time. A:customer 16:00/internal 15:00/received 09:10; B:customer 14:30/internal 16:00/received 09:20; C:customer 15:00/internal 17:00/received 09:00. Which order applies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "B,C,A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B,A,C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C,A,B"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A,C,B"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Effective deadlines areA 15:00,B 14:30,C 15:00. B comes first; C beats A on earlier receipt time.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-15",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A desk totals only ACCEPTED rows dated 7 June; a reversal cancels its linked row rather than being a new charge. Rows: A 7 June/accepted/PHP 350; B 7 June/accepted/PHP 460; C 8 June/accepted/PHP 640; D 7 June/rejected/PHP 200; E 7 June/reversal linkedB/PHP 460. What is the accepted net total for 7 June?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 350"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 810"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 1450"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 1270"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A contributes 350. B is canceled by E; C is outside the date and D is rejected. A naive date-only sum or failure to link the reversal double-counts ineligible activity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-16",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local policy: archive when a case is closed AND its appeal period has expired; otherwise retain in active storage. A is closed/period open; B is open/period expired; C is closed/period expired. Which cases move to archive?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A and C"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B and C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A only"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Only C meets both conditions. A lacks expiry; B lacks closure. Either condition alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-17",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "One clerk and one scanner work independently from 09:00. Clerk prepares A for 10 minutes then B for 15 minutes; scanner scans A for 20 minutes after A preparation, then B for 5 minutes after B preparation. A courier pickup at 09:35 requires both scans complete by 09:35 inclusive. Reversing preparation order is allowed, but scanner always scans A before B. Which preparation orders meet pickup?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A then B only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B then A only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both orders"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Neither order"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A-first: A ready 09:10, scans 09:10–09:30; B ready 09:25, scans 09:30–09:35. B-first: B ready 09:15,A ready 09:25; A scans to 09:45 and B to 09:50. Parallel resources permit the first schedule; adding all task durations ignores overlap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-18",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A local reconciliation treats equal two-ended transfers as completed, one-ended transfers as pending, and unequal two-ended transfers as disputed. A reversal cancels a completed transfer only if BOTH reversal ends match its full original amount. T 1:80/80; T 2:50/missing; T 3:70/60; T 4:missing/40. T 1 reversal:source 80/destination missing. What is the completed NET amount / pending transfer-or-reversal IDs / disputed IDs?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "80 / T 2,T 4,T 1-reversal / T 3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "0 / T 2,T 4 / T 3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "80 / T 2 / T 3,T 4,T 1-reversal"
+      },
+      {
+        "choiceId": "c4",
+        "text": "150 / T 2,T 4,T 1-reversal / none"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "T 1 is completed 80. Its one-ended reversal is pending and cannot cancel it; T 2 andT 4 are also pending. T 3 is disputed because both ends exist but differ. Net completed stays 80. Treating any reversal entry as cancellation or classifying one-ended rows as disputed produces the rivals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-19",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A local release uses each row’s LATEST version. It must show Name and Amount, must hide Address, and must show Telephone exactly when that version records consent. The page total sums amounts from all latest rows. L-v 1:Lia/40/X/phone 11/consentYES; L-v 2:Lia/45/Z/phone 12/consentNO. M-v 1:Mio/60/Y/phone 22/consentYES. Which release is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Names Lia,Mio; amounts 45,60; no addresses; phone 22 only; total 105"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Names Lia,Mio; amounts 40,60; no addresses; phones 11,22; total 100"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Names Lia,Mio; amounts 45,60; no addresses; phones 12,22; total 105"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Names Lia,Mio; amounts 45,60; addressY only; phone 22 only; total 105"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Latest-version selection first replaces L-v 1 withL-v 2, changing both amount and consent. Release 45 and 60, total 105; withhold both addresses and L telephone 12, show M telephone 22. Each rival preserves some correct fields while using obsolete values, obsolete consent, or an address exception the rule never grants.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-clerical-20",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A local dispatch has capacity 10 kg; packets cannot split. A weighs 6 kg, due today, priority 2; B weighs 4 kg, due today, priority 1; C weighs 3 kg, due tomorrow, priority 1; D weighs 4 kg, due today, priority 2. First maximize the NUMBER due today, then among ties minimize the SUM of their priority numbers, then choose greatest total weight. Tomorrow packets may fill leftover capacity. Which load is chosen?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A and B"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B and D"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A and C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B,C,D"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "At most two today packets fit: A+B 10 kg, A+D 10 kg, B+D 8 kg. Priority sums 3,4,3 eliminate A+D; greatest weight selects A+B. B+C+D exceeds 10 kg. Counting priorities before the number of due packets misapplies the lexicographic rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

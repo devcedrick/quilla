@@ -1,0 +1,1642 @@
+[
+  {
+    "questionId": "f07-analytical-logic-01",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a local display, EXPAND means increase a shape's size without changing its form. Complete the operation-to-reversal analogy: EXPAND : CONTRACT :: CONNECT : ?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "ENLARGE"
+      },
+      {
+        "choiceId": "c2",
+        "text": "COPY"
+      },
+      {
+        "choiceId": "c3",
+        "text": "ROTATE"
+      },
+      {
+        "choiceId": "c4",
+        "text": "DISCONNECT"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Contract reverses the stated size operation; disconnect reverses connection. Copy and rotate preserve rather than reverse connection, and enlarge repeats expansion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-02",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For this analogy, a period is the interval between repetitions; frequency is the number of repetitions per fixed time. If the period doubles, the frequency halves. Complete: PERIOD DOUBLES : FREQUENCY HALVES :: PERIOD HALVES : ?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "FREQUENCY STAYS FIXED"
+      },
+      {
+        "choiceId": "c2",
+        "text": "FREQUENCY BECOMES ZERO"
+      },
+      {
+        "choiceId": "c3",
+        "text": "FREQUENCY DOUBLES"
+      },
+      {
+        "choiceId": "c4",
+        "text": "FREQUENCY HALVES"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Halving the time per repetition doubles repetitions in the same time. The relationship is supplied explicitly, so no specialist terminology is presumed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-03",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local system defines a mask as a rule that hides selected entries while preserving the others. Which pair preserves the relation SELECTIVE MASK : HIDES ENTRIES?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Rotation : excludes entries"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Selective filter : excludes entries"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Selective filter : invents entries"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Duplicate copy : hides entries"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The key retains a selective exclusion operation and its effect. Inventing, copying and rotation change the stated functional relationship.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-04",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A diagram has the relation INPUT : PROCESS : OUTPUT. Which triple has the same direction under these definitions: a mould receives liquid clay, shaping acts on it, and a cup results?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Liquid clay : shaping : cup"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Cup : shaping : liquid clay"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Shaping : cup : liquid clay"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Liquid clay : cup : shaping"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Liquid clay is the input, shaping the process and cup the output. The other triples swap roles rather than preserve direction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-05",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A panel contains exactly one of the symbols triangle, circle or star. It is not a triangle. Which fact would be enough on its own to identify the symbol?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "It is not a square"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It is a permitted symbol"
+      },
+      {
+        "choiceId": "c3",
+        "text": "It is not both circle and star"
+      },
+      {
+        "choiceId": "c4",
+        "text": "It is not a circle"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Excluding triangle and circle leaves star. Square is outside the already exhaustive domain; the other facts do not distinguish the two remaining symbols.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-06",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A card is either face up or face down, exclusively. The statement \"The card is face up\" is false. What follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The card is both up and down"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Its orientation cannot be identified"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The card is face down"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The card has no face"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The two states exhaust the possibilities and cannot overlap; negating up therefore establishes down. Without exhaustiveness this inference would not be licensed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-07",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A rule in a fictional game states that a valid move must change exactly ONE coordinate. Which change is a valid move?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(2,5) to (5,2)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(2,5) to (2,8)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(2,5) to (4,8)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(2,5) to (2,5)"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Only the second coordinate changes in the key. Two changed coordinates, no change and exchanging distinct coordinates do not meet exactly one.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-08",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A sorting key compares the LAST digit first, smaller before larger. If last digits tie, it compares the first digit. Which code comes first: 41, 23, 12, 31?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "31"
+      },
+      {
+        "choiceId": "c2",
+        "text": "41"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "23"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "31 and 41 tie on last digit 1; first digit 3 precedes 4. Codes 12 and 23 have larger last digits. Ordinary numerical ordering would incorrectly put 12 first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-09",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An arrow J -> K is defined to mean \"J needs K\", with no converse implied. Which arrow represents \"M needs N\"?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "N -> M"
+      },
+      {
+        "choiceId": "c2",
+        "text": "M -> M"
+      },
+      {
+        "choiceId": "c3",
+        "text": "N -> N"
+      },
+      {
+        "choiceId": "c4",
+        "text": "M -> N"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The requiring object is the arrow source and the required object its target. Reversing the arrow changes the dependency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-10",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local tag uses a slash to mean NOT and a plus to mean AND. What does /R + S mean?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Not both R and S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Either R or S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Not R, and S"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R, and not S"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The slash applies only to R and the plus joins the two assertions. Negating the whole conjunction or S changes scope.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-11",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A statement says at most two lamps are on. Which observation contradicts it?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Two lamps are on"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Three lamps are on"
+      },
+      {
+        "choiceId": "c3",
+        "text": "No lamps are on"
+      },
+      {
+        "choiceId": "c4",
+        "text": "One lamp is on"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "At most two allows zero, one and two, but excludes three. A lower bound was not stated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-12",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a game, a drawn tile is either marked or unmarked. The rule \"Every marked tile scores\" holds. An unmarked tile is drawn. What follows about its score?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The rule alone does not determine its score"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It must score"
+      },
+      {
+        "choiceId": "c3",
+        "text": "It cannot score"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The rule has been violated"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The implication constrains marked tiles only. Both scoring and nonscoring unmarked tiles fit it; inferring not-score would deny the antecedent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-13",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A pointer starts on A in the directed cycle A -> B -> C -> D -> A. A command F advances one arrow and command S stays put. The complete command string is F,S,F,F,S,F,F. Where does it finish?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Five F commands advance five positions; S does not move. Four steps return to A and the fifth reaches B. Counting all seven commands would give a different result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-14",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two boxes each contain either a red or a blue token. Exactly one box contains red. The left box is blue if and only if the right box is red. Which complete possibilities remain?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Left red/right blue only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Both red; or both blue"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Left red/right blue; or left blue/right red"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Left blue/right red only"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Both one-red possibilities satisfy the biconditional: in one both sides are false, in the other both are true. Biconditional truth does not require both components true.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-15",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A transformation first deletes every X, then duplicates the remaining FIRST character once at the front. Apply it to XABXA. What is the result?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "AABXA"
+      },
+      {
+        "choiceId": "c2",
+        "text": "AABA"
+      },
+      {
+        "choiceId": "c3",
+        "text": "XXABXA"
+      },
+      {
+        "choiceId": "c4",
+        "text": "ABAA"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Deleting X gives ABA; duplicating its first A at the front gives AABA. Duplicating before deletion or retaining an X changes the stated operation order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-16",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four runners have distinct finishing places. P is immediately ahead of Q. R finishes before P. S is not last. Which full order is possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R, S, P, Q"
+      },
+      {
+        "choiceId": "c2",
+        "text": "S, P, R, Q"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P, Q, R, S"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R, P, Q, S"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "R,S,P,Q satisfies the adjacent P/Q pair, R before P and S not last. Other choices break adjacency, precedence or S's end restriction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-17",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A router sends a number left if it is even, then sends it to tray U if it is greater than 5 and tray V otherwise. Which pair of inputs reaches left/U? Inputs are 2,6,7,8.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2 and 6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6 and 7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "7 and 8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6 and 8"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Both stages are required: even values are 2,6,8 and those greater than 5 are 6,8. Seven passes only the threshold; two passes only parity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-18",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A claim is \"Every chosen shape is large OR striped\" (inclusive OR). Which observation refutes the claim?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A chosen shape that is small and striped"
+      },
+      {
+        "choiceId": "c2",
+        "text": "An unchosen shape that is small and plain"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A chosen shape that is small and plain"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A chosen shape that is large and plain"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A refutation must be chosen and lack both permitted properties. Each middle case satisfies one disjunct, and an unchosen shape is outside the claim's scope.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-19",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose exactly three distinct letters from A,B,C,D,E. The choice must contain exactly ONE vowel (A or E). That vowel must have a selected consonant later in the alphabet, and the two selected consonants must NOT be consecutive alphabet letters. Which complete selection satisfies every rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A, B, C"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A, B, D"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A, C, D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B, C, D"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A,B,D has exactly one vowel A, later selected consonants B/D and a gap between those consonants. A,B,C and A,C,D each have one vowel and later consonants, but their consonant pairs B/C and C/D are consecutive. B,C,D contains no vowel. Thus checking any one rule alone leaves competing choices; all conditions together isolate A,B,D.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-20",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three reports describe the same switch at the same instant. R 1: it is ON. R 2: it is OFF. R 3: it is ON or OFF. ON/OFF are exhaustive exclusive states. Exactly two reports are true. What is the switch state?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Either ON or OFF remains possible"
+      },
+      {
+        "choiceId": "c2",
+        "text": "ON only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "OFF only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Neither state is possible"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "R 3 is always true and exactly one of R 1/R 2 is true under either state, giving two true reports in both models. The count does not identify which opposing report is true.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-21",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A queue is initially J,K,L,M from front to back. Remove the front item and put it at the back, then swap the first TWO items. Repeat those two steps once more. What is the final queue?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "K, M, J, L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "M, J, K, L"
+      },
+      {
+        "choiceId": "c3",
+        "text": "J, L, M, K"
+      },
+      {
+        "choiceId": "c4",
+        "text": "M, K, J, L"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "After one cycle: K,L,M,J then L,K,M,J. After the second: K,M,J,L then M,K,J,L. Treating the steps as simultaneous would change the result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-22",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Five distinct cards are dealt, each labelled 1 through 5 once. A pair is compatible if its sum is even AND its product is less than 10. Which list gives ALL compatible unordered pairs?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "{1,3} only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "{2,4} only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "{1,3} and {1,5}"
+      },
+      {
+        "choiceId": "c4",
+        "text": "{1,3}, {1,5} and {2,4}"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Even sum requires two odd or two even labels. Pairs 1/3,1/5 and 2/4 have products 3,5 and 8 below 10. Pair 3/5 has 15 and fails; mixed parity has odd sum. The full eligible list therefore has three pairs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-23",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A six-position strip reads A,B,C,D,E,F. Fold the rightmost three positions over the leftmost three, pairing positions equidistant from the fold between C and D. Which pair of original letters touches?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "C and E"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B and E"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A and D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B and F"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Fold pairs are C/D, B/E and A/F, determined by equal distance from the central fold. The other listed pairs have different distances.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-24",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A complete graph description is: J links to K and L; K links to M; L links to M and N. All links point in the named direction, and there are no others. A route uses exactly TWO links from J. Which list gives every possible final node?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "M and N"
+      },
+      {
+        "choiceId": "c2",
+        "text": "K and L"
+      },
+      {
+        "choiceId": "c3",
+        "text": "M only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "K, L, M and N"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Routes J-K-M and J-L-M end at M; J-L-N ends at N. K/L are one-link endpoints and cannot count; no additional links are inferred.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-25",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three boxes have capacities 2,3,4 tokens. Distribute exactly 8 identical tokens without exceeding any capacity. What is the complete list of possible contents of the capacity 2 box?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0, 1 or 2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2 only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0 or 1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1 or 2"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The other boxes hold at most 7, so the first needs at least 1; its capacity limits it to 2. Both occur:1/3/4 and 2/2/4. Zero cannot accommodate the remaining 8.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-26",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four candidates have distinct scores. X exceeds Y; Z exceeds W. No other score comparison is known. Which extra statement is sufficient to prove X exceeds W?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "X is below Z"
+      },
+      {
+        "choiceId": "c2",
+        "text": "W is below Y or above X"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Y exceeds Z"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Y is below Z"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Y>Z gives X>Y>Z>W. The other premises permit W above X or leave their ordering open; the last disjunction explicitly allows the unwanted ordering.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-27",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Exactly one of two detectors is faulty. A faulty detector always reports the OPPOSITE of the true state; the other always reports the true state. Detector P says OPEN; detector Q says CLOSED. What can be determined?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Both detectors must be faulty"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The reports are consistent, but the true state is not fixed"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The true state must be OPEN"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The true state must be CLOSED"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "OPEN with Q faulty and CLOSED with P faulty both satisfy the reports. Opposite reports are expected with exactly one inverter, but do not identify which detector is faulty.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-28",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A path from Start to Finish must use gate G or gate H, possibly both. Gate G is closed. Which extra fact is sufficient to conclude that no path remains?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Every route through H also passes through G"
+      },
+      {
+        "choiceId": "c2",
+        "text": "H is open"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Some routes through H avoid G"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A route through G also uses H"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "If every H route also needs closed G, neither disjunct permits travel. The converse containment does not rule out H-only routes, and an open H alone does not establish a complete path.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-29",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A word rule swaps its two equal-length halves, then compresses every maximal run of repeated adjacent letters to ONE letter. What is the result for ABBA?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "BAB"
+      },
+      {
+        "choiceId": "c2",
+        "text": "ABA"
+      },
+      {
+        "choiceId": "c3",
+        "text": "BAAB"
+      },
+      {
+        "choiceId": "c4",
+        "text": "ABBA"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Swapping halves AB and BA gives BAAB. Its maximal runs B/AA/B compress to B/A/B, giving BAB. Only existing adjacent runs are compressed; no deletion or reordering beyond the half swap occurs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-30",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A register has exactly four records, of which exactly two are signed. A report lists records J,K,L as unsigned. All names refer to distinct records. What is the smallest number of labels in that report that must be wrong?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Only two unsigned records exist, while three distinct records are called unsigned, so at least one label is wrong. Exactly one can be wrong when two of J/K/L are the unsigned records and the third is signed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-31",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every accepted pattern has a triangle and no star. Some patterns with a triangle and no star are rejected. Which statement correctly describes having a triangle and no star?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Neither necessary nor sufficient"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Necessary for acceptance, but not sufficient"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Sufficient for acceptance, but not necessary"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Both necessary and sufficient"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Accepted implies the pair of properties, establishing necessity. The stated rejected examples with both properties refute sufficiency; reversing the rule would erase those examples.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-32",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An audit checks a rule for ALL transactions: if payment is cash, a receipt exists. It inspects only transactions with receipts and finds many cash payments. Which uninspected group can contain a violation?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Transactions without receipts"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Only transactions with cash receipts"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only transactions with noncash receipts"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No uninspected transaction can violate it"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A violation is cash AND no receipt, so every possible violation lies among transactions without receipts. Receipt-bearing examples cannot establish the universal claim.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-33",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A transmitter sends one seven-bit word from this COMPLETE codebook: 0000000, 0011110, 1100110, 1111000, 1001101, 1010011. Exactly TWO bits are flipped in transmission, and their positions are NOT consecutive (positions 1 and 7 are not neighbours). The received word is 1010110. Which list contains ALL possible sent words?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0011110 only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1100110 and 1010011"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0011110, 1100110 and 1010011"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0011110 and 1010011"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Relative to received 1010110, 0011110 differs at 1/4 and 1010011 at 5/7, both two nonconsecutive positions. 1100110 differs at 2/3, forbidden consecutive errors. The remaining three words differ in four positions. All six candidates are checked, so omitting either surviving word is unjustified.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-34",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A secret ordered pair is chosen from this COMPLETE list: (1,1),(1,2),(2,1),(2,2),(2,3),(3,2),(3,3),(4,3). Aya sees only the FIRST number; Ben sees only the SECOND. Both know the list and reason correctly. Aya says, \"I cannot identify the pair.\" Ben then says, \"Even BEFORE you spoke, I knew you could not identify it.\" Aya then says, \"Now I can identify it.\" All statements are truthful and heard by both. What is the pair?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(1,2)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(2,1)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(3,2)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(3,3)"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Aya's first statement excludes first number 4, which has one listed pair. Ben could have known this in advance only with second 1 or 2; second 3 would have allowed(4,3), where Aya would know immediately. After excluding every second 3 pair, Aya's first 1 still permits two pairs and first 2 still permits two, but first 3 permits only(3,2). Her final knowledge therefore forces(3,2). Each announcement updates the common possibilities; dropping the BEFORE condition would fail to exclude second 3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-35",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A 3-row by 4-column board has cells(1,1) and(3,4) removed. Cover every remaining cell exactly once using five 1-by-2 dominoes, horizontal or vertical. No domino may cross a removed cell or the board edge. How many tilings use exactly THREE horizontal dominoes?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Cell(1,2), the first remaining cell in the top row, can pair only downward with(2,2) or rightward with(1,3). In the downward branch, only one completion has three horizontal dominoes: its horizontal pairs are(1,3)-(1,4), (2,3)-(2,4), (3,2)-(3,3). In the rightward branch, cell(1,4) must pair downward; the remaining two-row region has two completions with two more horizontal dominoes. Thus 1+2=3 qualifying tilings. The two other complete tilings have only one horizontal domino and are excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-36",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five voters rank three proposals. Two rank A>B>C; two rank B>C>A; one ranks C>A>B. A pairwise vote selects the proposal preferred by at least THREE voters. An agenda lists three distinct proposals: vote on its first two, then pit that winner against the third. Among all SIX agendas, how many produce champion B?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Majorities are A over B by 3-2, B over C by 4-1, and C over A by 3-2. B wins exactly when C and A are the opening pair, in either order: C first eliminates A and then loses to B. The other four agendas elect A or C. A single overall ranking cannot replace the cycle.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-37",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A proposed circular bead pattern must use exactly three red R, three blue B and two green G. No reds may touch, no greens may touch, and EXACTLY ONE neighbouring pair must be blue-blue, including the last/first boundary. Rotations count as the SAME pattern; mirror images count separately unless a rotation already matches them. Consider ONLY this complete catalogue: BBGRBRGR; BBGRGRBR; BBRBGRGR; BBRBRGRG; BBRGBRGR; BBRGRBGR; BBRGRBRG; BBRGRGBR; BBRRGGBR; BBGRRGBR; RBBGRBRG; BBGRGRRB. How many different allowable circular patterns does the catalogue contain?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The first eight strings have the required colour counts, no RR or GG edge and one BB edge. Each has a unique BB pair, so rotate that pair to the front to compare patterns without missing a rotational duplicate; their anchored forms are distinct. RBBGRBRG rotates to BBGRBRGR and adds no new pattern. BBRRGGBR contains RR and GG, BBGRRGBR contains RR, and BBGRGRRB has an additional BB pair across its last/first boundary. Thus eight distinct patterns survive all tests; no search outside the twelve entries is required.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-38",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Start with ABCDE. P reverses the FIRST three letters; Q reverses the LAST three; R moves the first letter to the end. Operations are read left to right. A permitted string must contain exactly two P, two Q and two R, with no identical consecutive operations. Consider ONLY these eight candidate strings: PRQPRQ, QPRQPR, RQPRQP, PQRQPR, RQPRPQ, RQPQPR, QRPQRP, PQPQRR. How many candidates are permitted AND return the letters to ABCDE?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The first three strings each return ABCDE and meet the count/adjacency rules. PQRQPR and RQPRPQ instead produce EBADC; RQPQPR and QRPQRP produce CAEBD. PQPQRR also fails the no-identical-neighbours rule (RR), and its result is ADCEB. Thus exactly three candidates satisfy the operation rules and final-state requirement together. Tracing the full state after each reversal is necessary because P and Q overlap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-39",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five nodes A,B,C,D,E must each be coloured red or blue. Every retained edge requires DIFFERENT colours at its two endpoints. The complete edge list is AB,BC,CA,CD,DE,EC,AD. Delete as FEW edges as possible to make a valid colouring possible. How many different edge-deletion sets attain that minimum?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The triangles ABC and CDE each need an edge removed, so at least two removals are required. Enumerating all 21 two-edge deletion sets and all 32 colourings leaves exactly {AB,CD}, {BC,CD}, {CA,DE}, {CA,EC}. Each has a valid colouring; a choice merely breaking the two named triangles can still leave an odd cycle through AD.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-analytical-logic-40",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Segment the exact string ABABAABABA into tokens drawn only from A, AB, BA and ABA. Tokens are concatenated without overlap or unused letters. Exactly ONE token must be ABA, and two consecutive tokens may NOT be identical. How many different token sequences satisfy every rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Complete prefix recursion yields four valid sequences: AB/A/BA/AB/ABA; AB/A/BA/ABA/BA; AB/ABA/AB/A/BA; ABA/BA/AB/A/BA. Other segmentations omit or repeat ABA or contain equal consecutive tokens. Counting character occurrences of ABA would wrongly count overlapping substrings as tokens.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; explicit-premise solution and distinct author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 explicit rules and finite models, authored and checked 2026-11-04. No external factual premise or actual CSC examination material."
+      ]
+    }
+  }
+]

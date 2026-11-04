@@ -1,0 +1,1842 @@
+[
+  {
+    "questionId": "f07-analytical-data-01",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many parcels have scan durations from 20 seconds inclusive to 30 seconds exclusive?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "16"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The 20–<30 bin contains 12 parcels. The adjacent bins contain 9 and 7, and must not be included.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-bins",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-02",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which duration bin has the fewest parcels?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0–<10 seconds"
+      },
+      {
+        "choiceId": "c2",
+        "text": "10–<20 seconds"
+      },
+      {
+        "choiceId": "c3",
+        "text": "30–<40 seconds"
+      },
+      {
+        "choiceId": "c4",
+        "text": "40–<50 seconds"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The frequencies are 4,9,12,7,3; 3 is the unique minimum. Bin width is equal throughout.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-bins",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-03",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A scan lasted exactly 20 seconds. Under the chart’s boundary convention, which bin contains it?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10–<20"
+      },
+      {
+        "choiceId": "c2",
+        "text": "20–<30"
+      },
+      {
+        "choiceId": "c3",
+        "text": "30–<40"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0–<10"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Left endpoints are included; right endpoints are excluded. Thus exactly 20 belongs to 20–<30, not 10–<20.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-bins",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-04",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many parcels have scan durations below 20 seconds?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "13"
+      },
+      {
+        "choiceId": "c3",
+        "text": "21"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The first two bins cover all durations below 20: 4+9=13. Counting the 20–<30 bin would cross the boundary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-bins",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-05",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many repairs had been completed by the end of Thursday?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "13"
+      },
+      {
+        "choiceId": "c2",
+        "text": "21"
+      },
+      {
+        "choiceId": "c3",
+        "text": "34"
+      },
+      {
+        "choiceId": "c4",
+        "text": "40"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The Thursday cumulative marker is 34;13 is Thursday’s increment, not the cumulative total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-cumulative",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-06",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many repairs were completed on Tuesday alone?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "15"
+      },
+      {
+        "choiceId": "c4",
+        "text": "21"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Tuesday’s cumulative 15 includes Monday’s 6; subtract to obtain 9.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-cumulative",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-07",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "At the end of which day did the cumulative repair total first exceed 30?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Tuesday"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Wednesday"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Thursday"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Friday"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Wednesday has 21 and Thursday 34. Therefore Thursday is the first end-of-day observation above 30; no within-day hour can be inferred.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-cumulative",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-08",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many repairs were completed on Thursday and Friday together?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "19"
+      },
+      {
+        "choiceId": "c2",
+        "text": "34"
+      },
+      {
+        "choiceId": "c3",
+        "text": "40"
+      },
+      {
+        "choiceId": "c4",
+        "text": "61"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Subtract Wednesday’s cumulative 21 from Friday’s 40, giving 19. Adding 34 and 40 would double-count repairs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-cumulative",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-09",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "At East desk, how many requests were renewals?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "15"
+      },
+      {
+        "choiceId": "c4",
+        "text": "30"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "East’s renewal segment is 15. Its total is 30, while 9 and 6 are other categories.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-stacks",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-10",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which desk has the largest number of new requests?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "North"
+      },
+      {
+        "choiceId": "c2",
+        "text": "East"
+      },
+      {
+        "choiceId": "c3",
+        "text": "South"
+      },
+      {
+        "choiceId": "c4",
+        "text": "West"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "New-request counts are 12,9,16,10. South’s 16 is largest; a tall total stack need not have the largest new segment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-stacks",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-11",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many categories are represented in each desk’s stack?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The legend names New, Renewal and Correction: three disjoint categories. Desks are not additional categories within a stack.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-stacks",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-12",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which desk recorded equal counts of new requests and renewals?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "North"
+      },
+      {
+        "choiceId": "c2",
+        "text": "East"
+      },
+      {
+        "choiceId": "c3",
+        "text": "South"
+      },
+      {
+        "choiceId": "c4",
+        "text": "West"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "West shows 10 new and 10 renewals. No other desk has equal values for those two segments.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-stacks",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-13",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In Cycle I, which team produced more actual pages, and by how many?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R by 10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "S by 10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "S by 36"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R by 36"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "R produced 80×1.20=96 pages; S produced 120×1.10=132. S exceeds R by 36 despite R’s higher index. Subtracting index values compares unlike baselines.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-indexes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-14",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In which displayed non-base cycle was the difference between actual team outputs smallest?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "I"
+      },
+      {
+        "choiceId": "c2",
+        "text": "II"
+      },
+      {
+        "choiceId": "c3",
+        "text": "III"
+      },
+      {
+        "choiceId": "c4",
+        "text": "All three were equal"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Actual pairs are 96/132,72/156,120/144; gaps are 36,84,24. Cycle III has the smallest gap. Index gaps alone are not actual gaps.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-indexes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-15",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The teams’ combined output in Cycle II was what percentage of their combined Base output?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "110%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "114%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "120%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "130%"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Cycle II output 72+156=228; combined Base 80+120=200. Thus 228/200×100=114%. The unweighted mean of 90 and 130 is 110%, which ignores unequal bases.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-indexes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-16",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Team R wants Cycle IV actual output to equal Team S’s Cycle III output. What must R’s Cycle IV index be?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "120"
+      },
+      {
+        "choiceId": "c2",
+        "text": "150"
+      },
+      {
+        "choiceId": "c3",
+        "text": "180"
+      },
+      {
+        "choiceId": "c4",
+        "text": "200"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S’s Cycle III output is 120×1.20=144. To produce 144 against R’s 80-page base needs 144/80×100=180. Reusing S’s index 120 would use the wrong base.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-indexes",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-17",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which trials satisfy BOTH at least 4 practice hours and more than 9 completed tasks?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "E and F"
+      },
+      {
+        "choiceId": "c2",
+        "text": "F and H"
+      },
+      {
+        "choiceId": "c3",
+        "text": "G and H"
+      },
+      {
+        "choiceId": "c4",
+        "text": "E, F and H"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Among E,F,G,H with at least 4 hours, only F 10 and H 12 exceed 9. G equals 9 and E has 7; strict and inclusive thresholds differ.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-scatter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-18",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Comparing the trials with exactly 2 hours against those with exactly 4 hours, how much higher is the latter group’s mean completed-task count?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1.5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2.5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3.5"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The two-hour mean is(7+5)/2=6; four-hour mean is(7+10)/2=8.5. Difference 2.5; comparing only B and E misses within-group variation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-scatter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-19",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Someone claims every increase in practice hours is accompanied by more completed tasks in these observed trials. Which pair disproves this strict claim?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A and B"
+      },
+      {
+        "choiceId": "c2",
+        "text": "C and D"
+      },
+      {
+        "choiceId": "c3",
+        "text": "D and E"
+      },
+      {
+        "choiceId": "c4",
+        "text": "E and F"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "From D(3,8) to E(4,7), hours increase while completed tasks decrease. E/F have equal hours; the other listed pairs increase on both coordinates. The evidence does not establish causation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-scatter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-20",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A trial dominates another when it uses no more practice hours and completes at least as many tasks, with at least one strict improvement. Which trial is dominated by BOTH B and D?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "E"
+      },
+      {
+        "choiceId": "c4",
+        "text": "G"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "E(4,7) is dominated by B(2,7) and D(3,8). C is dominated by B but not D because D needs more hours; A and G also fail the combined requirement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-scatter",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-21",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Half of Reference books and one quarter of Skills books are moved to a display. What share of ALL books is moved?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "17.5%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "25%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "37.5%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "45%"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Reference contributes 25%×1/2=12.5% of all books; Skills 20%×1/4=5%. Total 17.5%, not an unweighted average of the within-category fractions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-pie",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-22",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Twenty new Local books are added and no books removed. What is the new Local share?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "15%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "19.05%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25%"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Local starts 0.15×400=60; after addition it is 80 of 420. Rounded to two decimals,80/420×100=19.05%. The denominator also rises.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-pie",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-23",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "All Other books are reclassified as Reference, then 40 Reference books are loaned out. What fraction of books still physically present are Reference?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2/9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3/10"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Reference after reclassification has 100+20=120 books. After lending 40 it has 80 out of 360 remaining, or 2/9. Reclassification does not change the total, lending does.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-pie",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-24",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A random book is known to be either Skills or Local. Assuming equal chance for every book, what is the probability it is Local?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3/20"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3/7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4/7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7/20"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Restrict the denominator to Skills+Local=20%+15%=35%. The Local conditional share is 15/35=3/7, rather than 15% of the entire collection.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-pie",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-25",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The same whole-number amount must be delivered to P,Q and R. How many different amounts satisfy all three ranges?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The intersection starts at max(12,16,9)=16 and ends at min(20,24,18)=18. Included whole numbers 16,17,18 give 3 possibilities. Combining outer endpoints would be a union.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-intervals",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-26",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "P and Q together must receive exactly 35 L. What is the largest feasible delivery to P?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "17 L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "19 L"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20 L"
+      },
+      {
+        "choiceId": "c4",
+        "text": "23 L"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Q≥16 means P≤19; P’s own maximum 20 is therefore unattainable with total 35. P 19/Q 16 satisfies both intervals. Lower bounds prevent simply reading P’s upper endpoint.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-intervals",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-27",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "R and S must receive the same amount. What must their combined delivery be?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "18 L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "27 L"
+      },
+      {
+        "choiceId": "c3",
+        "text": "36 L"
+      },
+      {
+        "choiceId": "c4",
+        "text": "43 L"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Their closed ranges overlap only at 18, so each receives 18 and combined delivery 36. Other totals use endpoints that do not satisfy equality.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-intervals",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-28",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The total for all four tanks is 70 L. P receives its maximum and R its minimum. What is the smallest feasible amount for S?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "16 L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "17 L"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18 L"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25 L"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "P 20 and R 9 leave 41 for Q+S. S’s own minimum 18 can occur with Q 23, which is within 16–24. Thus 18 is attainable;16/17 violate S’s lower bound and 25 is not minimal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-intervals",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-29",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If the received shipment had been 10 units smaller while every other movement stayed fixed, what would the lowest stock level be, counting the opening and every stage?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "45"
+      },
+      {
+        "choiceId": "c2",
+        "text": "55"
+      },
+      {
+        "choiceId": "c3",
+        "text": "65"
+      },
+      {
+        "choiceId": "c4",
+        "text": "75"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Revised levels:75,93,57,66,55. The lowest 55 occurs after discard. Subtracting 10 from the original opening would wrongly change an unaffected stage.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-waterfall",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-30",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair correctly gives total units entering stock and total units leaving stock during the four movements?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "37 in;47 out"
+      },
+      {
+        "choiceId": "c2",
+        "text": "28 in;36 out"
+      },
+      {
+        "choiceId": "c3",
+        "text": "47 in;37 out"
+      },
+      {
+        "choiceId": "c4",
+        "text": "102 in;112 out"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Inflow 28+9=37; outflow 36+11=47. Their difference is-10, reconciling 75 to 65. Closing and opening are levels and must not be added to movement totals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-waterfall",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-31",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Suppose returns arrive just BEFORE issue instead of after it, with all amounts unchanged. Which paired statement is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Closing 65; peak 112"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Closing 74; peak 103"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Closing 65; peak 103"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Closing 56; peak 112"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Reordered levels 75,103,112,76,65. Signed total change is unchanged, but receiving returns before issue raises the peak to 112. Order affects interim levels, not final sum.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-waterfall",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-32",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "With the displayed order unchanged, at least 70 badges must remain after EVERY stage. What is the smallest whole-number reduction in the issued quantity that achieves this?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "6"
+      },
+      {
+        "choiceId": "c4",
+        "text": "11"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Original post-issue stock 67 needs 3 extra, but closing 65 needs 5 extra. Reducing issue 36 by 5 raises every later level by 5, giving 72,81,70. A 3-unit reduction fixes the earlier low but fails closing.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-waterfall",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-33",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Select at least two projects, spending at most 13 cost units and using at most 7 staff slots. A and E cannot both be selected; selecting B requires D. What is the greatest attainable total benefit?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "26 points"
+      },
+      {
+        "choiceId": "c2",
+        "text": "27 points"
+      },
+      {
+        "choiceId": "c3",
+        "text": "29 points"
+      },
+      {
+        "choiceId": "c4",
+        "text": "31 points"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A+C+D attains 29 with cost 13 and staff 7. A+B+D yields 27. Complete enumeration of 32 subsets removes B without D and the A/E combination before checking both capacities; the maximum over all feasible subsets is 29. Values 26/27 stop at feasible but inferior pairs or triples, and 31 cannot be reached under all rules.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-34",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Select exactly three projects with cost at most 15 and benefit at least 30. C and D cannot both be selected; E may be selected only with A. What is the smallest attainable staff requirement?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6 slots"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7 slots"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8 slots"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9 slots"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Among the ten three-project subsets, A+D+E meets cost 14, benefit 32 and staff 8. The triples with 6 or 7 slots have benefit below 30 or contain C/D; A+B+E and A+C+E exceed budget. Thus the combined benefit floor, compatibility and budget constraints force minimum 8.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-35",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Choose exactly two projects with cost at most 11 and staff at most 6. Maximise the SMALLER of the two individual benefit scores. Which list gives ALL pairs achieving the maximum?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A and B only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A and C only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A and B; or A and C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B and C; or C and E"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A+B and A+C each have minimum benefit 9, with cost/staff 9/5 and 10/6 respectively. Every feasible pair containing D has minimum 6. Any pair of B,C,E has staff at least 7; A+E also exceeds 6 staff. Thus the complete optimal set is A+B and A+C.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-36",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Initially at most 14 cost units and 8 staff slots are available. E requires D; A and C cannot both be selected; A and D also cannot both be selected. All other project rules stay fixed. Which ONE resource package permits total benefit STRICTLY ABOVE 32 points?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Raise cost capacity to15; keep staff capacity 8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Keep cost capacity 14; raise staff capacity 9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Raise cost capacity 15 and staff capacity 9"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Raise cost capacity 16; keep staff capacity 8"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "B+D+E produces 35 points but costs 15 and uses 9 staff, so both capacities must rise together. Enumeration under the four packages gives respective maximum benefits 32,32,35,32. Extra budget alone remains blocked by staff, and extra staff alone remains blocked by budget. The exclusions and E dependency prevent higher-benefit substitutes under the other packages.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-projects",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-37",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assign the four workers to four DIFFERENT stations. A may not use X and D may not use W. What is the smallest sum of the four task times?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "16 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "18 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "22 minutes"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A/W, B/Y, C/X, D/Z totals 6+3+6+3=18. Of the 24 bijections,12 satisfy the two forbidden cells; every feasible alternative has total at least 18. The unconstrained cheap pairing A/X,B/Y,C/Y,D/Z repeats Y and is not a bijection.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-matrix",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-38",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assign the four workers to four DIFFERENT stations. C may not use Y, D may not use W, and A's time plus D's time must be at most 9 minutes. What is the smallest possible largest individual task time?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "7 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8 minutes"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For a bottleneck at most 5, C would need Z (Y is forbidden), and D would also need Z (W is forbidden). Their collision makes 5 unattainable despite each row having a small entry. A/W,B/Y,C/X,D/Z gives 6,3,6,3, all stations distinct and A+D=9, attaining 6. Complete enumeration of 24 bijections confirms 6 is the global bottleneck minimum.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-matrix",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-39",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assign the four workers to four DIFFERENT stations. B and C must use consecutively numbered stations (W 1,X 2,Y 3,Z 4); A’s station number must be lower than D’s. What is the smallest total task time?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "15 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "20 minutes"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A/W, B/Y, C/X, D/Z gives total 18; B/C stations 3/2 are consecutive and A 1 is below D 4. Filtering all 24 bijections by both rules gives minimum 18. Merely minimising each row independently would reuse stations.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-matrix",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-analytical-data-40",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Open exactly TWO stations and assign exactly TWO workers to each. A and B must be at different stations, as must C and D. The score equals the four task times plus 3 for EACH open station. What is the smallest score?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "21"
+      },
+      {
+        "choiceId": "c2",
+        "text": "23"
+      },
+      {
+        "choiceId": "c3",
+        "text": "25"
+      },
+      {
+        "choiceId": "c4",
+        "text": "27"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A/W,B/Y,C/Y,D/W has score 6+3+4+4+6=23; A/Z,B/Y,C/Y,D/Z also attains 23. Enumerating all 256 mappings under the two-station, two-per-station and pair-separation rules finds none below 23. Reporting 17 would omit the two opening charges.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-data-matrix",
+      "referenceVersion": 1
+    }
+  }
+]

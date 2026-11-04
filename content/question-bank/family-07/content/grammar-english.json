@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f07-grammar-english-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Exactly two keys are on the tray. One opens the gate; ___ opens the shed. Choose the standard completion referring to the sole remaining key.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "the other"
+      },
+      {
+        "choiceId": "c2",
+        "text": "another"
+      },
+      {
+        "choiceId": "c3",
+        "text": "others"
+      },
+      {
+        "choiceId": "c4",
+        "text": "other"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "With exactly two keys and one already identified, the other identifies the sole remaining one. Another would introduce an additional indefinite item; others is plural and bare other needs a noun here.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Cambridge English Grammar Today, Other, others, the other or another, exact-two distinction; official indexed search text verification 2026-11-04; https://dictionary.cambridge.org/grammar/british-grammar/other-others-the-other-or-another; direct page returned403."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-english-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the word for the stated starting point: “The studio has been open ___ March.”",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "for"
+      },
+      {
+        "choiceId": "c2",
+        "text": "during"
+      },
+      {
+        "choiceId": "c3",
+        "text": "since"
+      },
+      {
+        "choiceId": "c4",
+        "text": "until"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Since introduces a starting point continuing to the present; for needs a duration. During and until do not express the stated relation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "British Council LearnEnglish, Present perfect, “Present perfect with time adverbials”, since starting point; https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-perfect; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-english-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The notice should identify a painter through ownership of the missing brushes, without saying that the painter is missing. Which relative construction conveys that meaning?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The painter whose brushes are missing should contact the studio."
+      },
+      {
+        "choiceId": "c2",
+        "text": "The painter who is missing should contact the studio about the brushes."
+      },
+      {
+        "choiceId": "c3",
+        "text": "The painter should contact the studio whose brushes are missing."
+      },
+      {
+        "choiceId": "c4",
+        "text": "The painter whose brushes were found should contact the studio."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Whose brushes in the key assigns the missing brushes to the painter. The rivals describe the painter as missing, assign the missing brushes to the studio, or change missing to found. These are distinct plausible notices, but only one preserves the intended ownership and event.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "British Council LearnEnglish, Relative clauses: non-defining relative clauses, who/which/whose paragraph: whose links a thing to its possessor; https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/relative-clauses-non-defining-relative-clauses; retrieved 2026-11-04. Original defining construction uses the same possessive relative."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-english-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Asha cannot read the script now and regrets this present limitation. Which wish sentence describes that present situation without moving the regret to an earlier occasion?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Asha wishes she could read the script."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Asha wishes she had read the script."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Asha wishes she had been able to read the script then."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Asha wishes she had not read the script."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Wish + could expresses a desired present ability. Had read/had been able describe an unreal earlier event or ability, and had not read regrets an actual earlier reading rather than present inability.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "British Council LearnEnglish, Wishes: wish and if only, In the present versus In the past; https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/wishes-wish-if-only; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-english-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Miro did not attend last month’s training and consequently does not know the procedure now. Which mixed conditional imagines the opposite past action and its present result?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "If Miro had attended the training, he would know the procedure now."
+      },
+      {
+        "choiceId": "c2",
+        "text": "If Miro had attended the training, he would have known the procedure last month."
+      },
+      {
+        "choiceId": "c3",
+        "text": "If Miro knew the procedure now, he would have attended the training."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Even if Miro had attended the training, he would not know the procedure now."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Past perfect supplies the unreal past attendance and would know supplies its imagined present result. A past result alone misses now; reversing condition/result changes the explanation, and even if retains the ignorance instead of imagining its opposite.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "British Council, Conditionals: third and mixed; https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/conditionals-third-mixed; retrieved/search-verified 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-english-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The protocol requires photography and record-signing for damaged specimens only, with the same technician doing both. It assigns neither duty for intact specimens. Which revision uses parallel verbs and preserves both the scope and the actor without adding duties?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The technician must photograph damaged specimens and sign their records; intact specimens need no photographs."
+      },
+      {
+        "choiceId": "c2",
+        "text": "The technician must photograph damaged specimens and sign all specimen records; intact specimens need no photographs."
+      },
+      {
+        "choiceId": "c3",
+        "text": "The technician must photograph all specimens and sign their records; intact specimens need no repairs."
+      },
+      {
+        "choiceId": "c4",
+        "text": "The technician must photograph damaged specimens, while another technician signs their records; intact specimens need no photographs."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Parallel photograph/sign belongs to the same subject and damaged set. One rival extends signing to all records, another extends photography to all specimens, and another changes the signer. Neither parallel grammar alone nor one preserved restriction suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Cambridge English Grammar Today, reported speech/indirect questions, statement word order; https://dictionary.cambridge.org/grammar/british-grammar/reported-speech-indirect-speech; official indexed text retrieved 2026-11-04. Relative clauses direct page returned 403; British Council defining/non-defining clauses verification recorded in review ledger. Meaning-preservation judgments independently authored."
+      ]
+    }
+  }
+]

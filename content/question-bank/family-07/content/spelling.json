@@ -1,0 +1,419 @@
+[
+  {
+    "questionId": "f07-spelling-01",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which spelling correctly completes \"The faded label is still ___.\"?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "legible"
+      },
+      {
+        "choiceId": "c2",
+        "text": "legable"
+      },
+      {
+        "choiceId": "c3",
+        "text": "ledgeable"
+      },
+      {
+        "choiceId": "c4",
+        "text": "legibel"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Legible ends ible. The alternatives substitute a, add dge, or transpose the ending.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword legible; https://www.merriam-webster.com/dictionary/legible; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-02",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is the correctly spelled word for an additional identical copy?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "duplicete"
+      },
+      {
+        "choiceId": "c2",
+        "text": "dupplicate"
+      },
+      {
+        "choiceId": "c3",
+        "text": "duplicate"
+      },
+      {
+        "choiceId": "c4",
+        "text": "dupilcate"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The verified headword is duplicate; the other forms change a vowel, double p, or transpose i and l.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword duplicate; https://www.merriam-webster.com/dictionary/duplicate; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-03",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which spelling correctly completes \"Keep the summary ___.\"?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "concise"
+      },
+      {
+        "choiceId": "c2",
+        "text": "consise"
+      },
+      {
+        "choiceId": "c3",
+        "text": "concice"
+      },
+      {
+        "choiceId": "c4",
+        "text": "conscise"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Concise has c after con and s before final e. The alternatives alter those consonants or insert an extra s.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword concise; https://www.merriam-webster.com/dictionary/concise; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-04",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is the correctly spelled verb in \"Please ___ delivery\"?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "expidite"
+      },
+      {
+        "choiceId": "c2",
+        "text": "expedite"
+      },
+      {
+        "choiceId": "c3",
+        "text": "expediet"
+      },
+      {
+        "choiceId": "c4",
+        "text": "expeedite"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Expedite has e after p and ends dite. Each distractor changes a vowel or transposes the ending.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword expedite; https://www.merriam-webster.com/dictionary/expedite; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-05",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A proofreader may swap ONE adjacent letter pair in the line \"chronological retreival\" to make every word correct. Which edit succeeds?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Swap e and i in retreival"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Swap o and l in chronological"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Swap r and e in retreival"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Swap a and l in retrieval"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Chronological is already correct. Retreival becomes retrieval by swapping its adjacent e and i; the other edits damage a correct word or leave the original error.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword chronological; https://www.merriam-webster.com/dictionary/chronological; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword retrieval; https://www.merriam-webster.com/dictionary/retrieval; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-06",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The draft tokens are 1 inventery,2 protocol,3 inventory,4 protocoll. Which positions contain spelling errors?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1 and 4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 and 2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2 and 3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3 and 4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Inventory ends ory, so 1 is wrong; protocol has one final l, so 4 is wrong. Tokens 2 and 3 are correct. Error-position identification requires checking both words in their correct and incorrect forms.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword inventory; https://www.merriam-webster.com/dictionary/inventory; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword protocol; https://www.merriam-webster.com/dictionary/protocol; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-07",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A line reads \"dispatch curriculam\". Edit only spelling errors. Which final line is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "dispatch curriculum"
+      },
+      {
+        "choiceId": "c2",
+        "text": "dispatch curriculam"
+      },
+      {
+        "choiceId": "c3",
+        "text": "dispach curriculum"
+      },
+      {
+        "choiceId": "c4",
+        "text": "dispatch curiculum"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Dispatch is already correctly spelled and retains t. Curriculum ends ulum and retains double r. The alternatives omit a needed repair or damage a correct token.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword dispatch; https://www.merriam-webster.com/dictionary/dispatch; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword curriculum; https://www.merriam-webster.com/dictionary/curriculum; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-08",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A clerk must repair \"directery\" and \"revission\" using only these edit types: replace ONE vowel, or delete ONE consonant. Which ordered edit pair works?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Replace e with o in directery; delete one s in revission"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Replace e with a in directery; delete one s in revission"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Replace e with o in directery; delete v in revission"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Delete t in directery; replace i with e in revission"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Directory requires replacing the e after t with o. Revision requires removing one of the doubled s letters. Other proposed operations leave a non-headword or damage a necessary consonant.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword directory; https://www.merriam-webster.com/dictionary/directory; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword revision; https://www.merriam-webster.com/dictionary/revision; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-09",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Proofread these five numbered tokens:1 custodean,2 paginaton,3 affidavit,4 custodian,5 affidavid. Report ALL erroneous positions in increasing order AND the corrected forms in that same order. Which audit is complete?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1,2,5: custodian; pagination; affidavit"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1,2: custodian; pagination"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1,2,3,5: custodian; pagination; affadavit; affidavit"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1,2,5: custodian; pagnation; affidavit"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Positions 1,2,5 are wrong: custodian has i, pagination retains the second i, and affidavit ends vit. Positions 3 and 4 are already correct and must not be changed. All choices address custodian, so recognizing that word alone cannot select the complete audit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword custodian; https://www.merriam-webster.com/dictionary/custodian; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword pagination; https://www.merriam-webster.com/dictionary/pagination; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword affidavit; https://www.merriam-webster.com/dictionary/affidavit; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-spelling-10",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A proofreading report must give: corrected line / number of erroneous WORD OCCURRENCES / number of DISTINCT misspelled forms. The source is \"attachement stipullation attachement attachment stipulation atachment\". Repair spelling only. Which report is accurate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "attachment stipulation attachment attachment stipulation attachment / 4 / 3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "attachment stipulation attachment attachment stipulation attachment / 3 / 3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "attachment stipullation attachment attachment stipulation attachment / 3 / 2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "attachment stipulation attachment attachment stipulation attachment / 4 / 4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Attachement occurs twice, stipullation once, and atachment once: four erroneous occurrences but three distinct error forms. The existing attachment and stipulation remain unchanged. The final six tokens are attachment,stipulation,attachment,attachment,stipulation,attachment. Counting types as occurrences or counting repetitions as new types yields the rival totals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": [
+        "Merriam-Webster, headword attachment; https://www.merriam-webster.com/dictionary/attachment; retrieved2026-11-04; headword spelling verified; original text and distractors.",
+        "Merriam-Webster, headword stipulation; https://www.merriam-webster.com/dictionary/stipulation; retrieved2026-11-04; headword spelling verified; original text and distractors."
+      ]
+    }
+  }
+]

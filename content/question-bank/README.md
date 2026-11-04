@@ -45,6 +45,12 @@ allocation. Its [review ledger](../../docs/content/family06-review.md) records
 source evidence, independent AI checks, originality repairs and pending human
 review. It is offline authored content.
 
+Family 07 is authored in **[family-07/](family-07/manifest.json)** with 270
+questions, 34 supporting references and ten original chart images. Its
+[review ledger](../../docs/content/family07-review.md) records source evidence,
+independent AI checks, originality repairs and pending human review.
+It is offline authored content.
+
 ## Layout within each family
 
 - `manifest.json`: the independent family inventory and validation metadata.

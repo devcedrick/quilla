@@ -1,0 +1,293 @@
+[
+  {
+    "questionId": "f07-vocabulary-filipino-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Marupok na ang lumang papel kaya hindi ito dapat basta tiklupin. Ano ang kahulugan ng MARUPOK dito?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Madaling masira"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Mahirap sulatan"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Madaling mabasa ang tinta"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Mabagal matuyo"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Marupok ay may kapansin-pansing dupok o madaling masira. Hindi nito tiyak na sinasabi kung mahirap sulatan, madaling basahin ang tinta o mabagal matuyo.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, marupok; https://diksiyonaryo.ph/word/marupok; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-filipino-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Banayad ang paliwanag ni Olan kahit paulit-ulit ang tanong sa kaniya. Ano ang kahulugan ng BANAYAD sa pangungusap?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Mahinahon"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Malabo"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Mahaba"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Palihim"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Sa paraan ng pagpapaliwanag, banayad ay mahinahon. Hindi nasasaad na malabo, mahaba o lihim ang paliwanag.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword banayad; https://diksiyonaryo.ph/word/banayad; retrieved 2026-11-04; contextual application independently authored."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-filipino-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Maliksi si Vina sa pagsalo ng bolang biglang lumihis. Aling paglalarawan ang pinakamalapit sa MALIKSI?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Mabilis at maagap sa pagkilos"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Malakas ngunit mabagal sa pagkilos"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Maingat sa pagpili ng salita"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Mahusay magtanda ng petsa"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Maliksi ay mabilis at maagap, karaniwan sa pagkilos. Pisikal na pagtugon sa bola ang konteksto, hindi pagpili ng salita o pag-alala ng petsa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, maliksí; https://diksiyonaryo.ph/list/mali?page=2; official dictionary indexed text retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-filipino-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Pihikan si Tami sa pagpili ng telang malambot sa balat. Kapag nakapili na, handa naman siyang gumamit ng telang hindi niya paboritong kulay. Aling paglalarawan ang nagpapanatili sa diwa at saklaw ng PIHIKAN?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Maingat siyang pumipili ayon sa lambot, ngunit hindi niya ginagawang hadlang ang kulay"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Maingat siyang pumipili ayon sa lambot, kaya tatanggihan niya ang lahat ng di-paboritong kulay"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Hindi niya pinapansin ang lambot, ngunit maingat siyang pumipili ng kulay"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Tinatanggihan niya ang lahat ng tela, anuman ang lambot at kulay"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Pihikan ay napakaingat sa pagpili. Ang pamantayan dito ay lambot, samantalang may tahasang kaluwagan sa kulay; hindi katumbas ng pihikan ang pagtanggi sa lahat.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, pihikan, adjective2; https://diksiyonaryo.ph/search/pihikan; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-filipino-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Sa tekstong A, ang “ugat” ay bahaging sumisipsip ng tubig sa halaman. Sa tekstong B, “ugat ng sigalot” ang matagal na kawalan ng tiwala. Aling paglalarawan ang wastong naghihiwalay sa literal at dagdag na diwa?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Literal na bahagi ng halaman sa A; sa B, nagpapahiwatig ng pinagmumulan ng suliranin"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Literal na bahagi ng halaman sa A; sa B, tumutukoy rin sa aktuwal na bahaging sumisipsip ng tubig"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Sa A, pahiwatig lamang ng pinagmulan; sa B, pinagmumulan ng suliranin ang diwa"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Sa A at B, kapwa aktuwal na bahaging sumisipsip ng tubig ang tinutukoy"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Konkretong bahagi ng halaman ang literal na gamit sa A. Sa B, iniuugnay ang pinagmumulan o sanhi sa ugat, isang paglilipat/dagdag na diwa; walang aktuwal na halaman sa paglalarawan ng sigalot. Kailangang maiba ang dalawang konteksto, hindi lamang matukoy ang isa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword konotasyon; https://diksiyonaryo.ph/search/konotasyon; retrieved 2026-11-04; contextual application independently authored.",
+        "Diksiyonaryo.ph, ugat, noun1 and3; https://diksiyonaryo.ph/search/ugat; retrieved 2026-11-04.",
+        "Diksiyonaryo.ph, ugat, noun1 and3; https://diksiyonaryo.ph/search/ugat; retrieved 2026-11-04.",
+        "Diksiyonaryo.ph, ugat, noun1 and3; https://diksiyonaryo.ph/search/ugat; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-filipino-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "“Pagpapahiwatig lamang iyon,” sabi ni Ina tungkol sa paglalagay niya ng bakanteng upuan sa tabi niya; hindi niya tahasang inanyayahan si Elo. Ano ang pinakamainam na pakahulugan?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Nagpabatid siya sa di-tuwirang paraan, ngunit hindi iyon katumbas ng tuwirang paanyaya"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Wala siyang anumang ipinabatid sapagkat hindi siya nagsalita"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Nagbigay siya ng malinaw na utos na umupo si Elo"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Tiniyak niyang mauunawaan ng lahat ang kilos sa iisang paraan"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Pagpapahiwatig ay pagpaparamdam/pagbibigay ng pahiwatig. May mensaheng ipinahihiwatig ngunit hindi awtomatikong tuwirang utos o tiyak na iisang pagbasa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, headword pagpapahiwatig; https://diksiyonaryo.ph/word/pagpapahiwatig; retrieved 2026-11-04; contextual application independently authored."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-filipino-07",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Tahas ang sinabi ni Sela: “Hindi ako sasali sa pagtatanghal.” Sa ensayo naman, isang pag-iling lamang ang kaniyang ginamit bilang pahiwatig na ayaw niyang ulitin ang awit. Aling ulat ang nagpapanatili sa paraan at magkahiwalay na saklaw ng dalawang mensahe?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Tuwirang tumanggi sa pagsali; di-tuwirang tumanggi sa pag-uulit ng awit"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tuwirang tumanggi sa pagsali; tuwirang sinabi ang pagtanggi sa pag-uulit ng awit"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Di-tuwirang ipinahiwatig ang pagtanggi sa pagsali; di-tuwirang tumanggi sa pag-uulit ng awit"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Di-tuwirang ipinahiwatig ang pagtanggi sa pagsali; tuwirang sinabi ang pagtanggi sa pag-uulit ng awit"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Ang tahas ay malinaw at tuwiran; ang pahiwatig ay di-tuwirang pagpaparamdam. Magkaiba rin ang pagsali sa pagtatanghal at pag-uulit ng isang awit; walang batayan ang pagpapalawak sa buong ensayo o sa hinaharap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, tahás (adjective, ST), https://diksiyonaryo.ph/list/T?page=27; retrieved 2026-11-04.",
+        "Diksiyonaryo.ph, headword pagpapahiwatig; https://diksiyonaryo.ph/word/pagpapahiwatig; retrieved 2026-11-04; contextual application independently authored."
+      ]
+    }
+  }
+]

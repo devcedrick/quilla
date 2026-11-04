@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f07-paragraph-filipino-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Mga nakapirming pangalan ng bahagi ang P1, P2 at iba pa. Aling buong ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P3 → P1 → P4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P1 → P2 → P4 → P3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P1 → P4 → P3"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 ang suliraning tinutukoy ng dahil dito sa P1; P3 ang pagsubok sa tabing na nailagay na; P4 ang pasiyang nakabatay sa nakitang pagbuti. Hindi maaaring suriin ang tabing bago ito ilagay o pagtibayin bago ang pagsusuri.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-filipino-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Mga nakapirming pangalan ng bahagi ang P1, P2 at iba pa. Aling buong ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P1 → P2 → P4 → P3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P1 → P3 → P4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 ang paksa at kahulugan; P1 ang halimbawa; P4 tumutukoy sa paghihiwalay na iyon; P3 nililimitahan ang kabuluhan matapos maipaliwanag ang tulong. Ang ibang ayos ay naghihiwalay sa halimbawa at paliwanag o nauuna sa kailangang paksa. Ang “naipaliwanag na pakinabang sa paglalarawan” sa P3 ay nangangailangan sa paliwanag na P4 bago nito. Ang “naipaliwanag na pakinabang sa paglalarawan” sa P3 ay nangangailangan sa paliwanag na P4 bago nito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-filipino-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Mga nakapirming pangalan ng bahagi ang P1, P2 at iba pa. Aling buong ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P4 → P1 → P3 → P2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P4 → P3 → P1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 ang suliranin, P4 ang tugon at bagong sukat, P1 ang inaasahang epekto ng gayong sukat, at P3 ang aktuwal na pagsukat pagkatapos gamitin. Hindi maipapaliwanag ang gayong sukat bago ito ipakilala.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-filipino-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Mga nakapirming pangalan ng bahagi ang P1, P2 at iba pa. Aling buong ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P3 → P4 → P1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P4 → P3 → P1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P2 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P3 → P2 → P4 → P1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 ipinakikilala ang dalawang pangkat, P3 ang unang tungkulin, P4 ang katapat na tungkulin gamit ang samantala, at P1 ang huling nabanggit na tagapagdala. Kapag pinagpalit ang P3/P4, mag-iiba ang tinutukoy ng huling pangkat. Tinutukoy ng “unang ipinaliwanag” at “kasunod na ipinaliwanag” ang pagkakasunod ng pagtalakay sa mga papel; kaya tagapagdala ang huling pangkat sa P1. Tinutukoy ng “unang ipinaliwanag” at “kasunod na ipinaliwanag” ang pagkakasunod ng pagtalakay sa mga papel; kaya tagapagdala ang huling pangkat sa P1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-filipino-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Mga nakapirming pangalan ng bahagi ang P1, P2 at iba pa. Aling buong ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P3 → P2 → P5 → P4 → P1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P3 → P2 → P4 → P5 → P1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P3 → P5 → P2 → P4 → P1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P3 → P2 → P5 → P1 → P4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P3 ang panukala, P2 ang tutol, P5 ang tugon, P4 ang paglilinaw sa saklaw ng kondisyong iyon, at P1 ang pagtanggap sa bagong kondisyon. Hindi iisang pagbabawal sa pagdalo ang kondisyon; kailangang matapos ang paliwanag bago ang pangwakas na pagtanggap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-filipino-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Mga nakapirming pangalan ng bahagi ang P1, P2 at iba pa. Aling buong ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P5 → P6 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P5 → P1 → P6 → P3 → P4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P2 → P6 → P5 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P5 → P6 → P3 → P1 → P4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 ang dalawang layunin; P5 ang tugon sa una; P6 ang limitasyon ng mga bagong iyon na nagbubukas sa ikalawang layunin; P1 ang tugon dito; P3 ang harang sa itinabi; P4 ang pinagsamang bunga. Ang katunggaling P2-P5-P1-P6-P3-P4 ay inilalagay ang limitasyon pagkatapos ng tugon sa ikalawa, na pumuputol sa ngunit na nakaugnay sa bagong upuan. Ang “matapos tukuyin ang limitasyong iyon” sa P1 ay tuwirang nangangailangan sa P6 bago P1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

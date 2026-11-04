@@ -1,0 +1,302 @@
+[
+  {
+    "referenceId": "f07-data-bins",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional parcel scan durations",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Bins include the left boundary and exclude the right. All 35 durations are at least 0 and below 50 seconds; individual durations are not supplied."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-bins-chart",
+        "caption": "Fictional parcel scan durations",
+        "alt": "Fictional parcel scan durations; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Duration (seconds); Parcels. Rows: 0–<10, 4; 10–<20, 9; 20–<30, 12; 30–<40, 7; 40–<50, 3."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-cumulative",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional completed repairs",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The count is cumulative since Monday opening, when it was zero. A repair is counted once on completion. The line joins end-of-day totals; within-day timing is unknown."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-cumulative-chart",
+        "caption": "Fictional completed repairs",
+        "alt": "Fictional completed repairs; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: By end of day; Cumulative repairs. Rows: Mon, 6; Tue, 15; Wed, 21; Thu, 34; Fri, 40."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-stacks",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional seed library requests",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each request belongs to exactly one desk and one category. Stacks show counts, with segments explicitly labelled."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-stacks-chart",
+        "caption": "Fictional seed library requests",
+        "alt": "Fictional seed library requests; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Desk; New; Renewal; Correction. Rows: North, 12, 8, 4; East, 9, 15, 6; South, 16, 7, 5; West, 10, 10, 8."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-indexes",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional digitisation output indexes",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Index = actual output / that team’s own Base output ×100. Team R Base output is 80 pages; Team S Base output is 120 pages. Different teams have different baselines."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-indexes-chart",
+        "caption": "Fictional digitisation output indexes",
+        "alt": "Fictional digitisation output indexes; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Cycle; Team R index; Team S index. Rows: Base, 100, 100; I, 120, 110; II, 90, 130; III, 150, 120."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-scatter",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional workshop trials",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each letter is one trial. Coordinates show practice hours and tasks completed; no causal relationship is assumed. Only these eight trials were observed."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-scatter-chart",
+        "caption": "Fictional workshop trials",
+        "alt": "Fictional workshop trials; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Trial; Practice hours; Tasks completed. Rows: A, 1, 4; B, 2, 7; C, 2, 5; D, 3, 8; E, 4, 7; F, 4, 10; G, 5, 9; H, 6, 12."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-pie",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional lending collection",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The 400 books are partitioned into the five nonoverlapping categories. Percentages refer to all 400 books; sectors sum to 100%."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-pie-chart",
+        "caption": "Fictional lending collection",
+        "alt": "Fictional lending collection; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Category; Share (%). Rows: Fiction, 35; Reference, 25; Skills, 20; Local, 15; Other, 5."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-intervals",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional feasible tank deliveries",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each tank’s delivery can independently take any whole-number value in its closed interval. Endpoints are included. These are feasible ranges, not measured errors."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-intervals-chart",
+        "caption": "Fictional feasible tank deliveries",
+        "alt": "Fictional feasible tank deliveries; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Tank; Minimum (L); Maximum (L). Rows: P, 12, 20; Q, 16, 24; R, 9, 18; S, 18, 25."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-waterfall",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional badge stock movement",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Opening and Closing are stock levels. The four intervening bars are signed changes in chronological order. Issued and discarded reduce stock; received and returned increase it. No other movements occur."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-waterfall-chart",
+        "caption": "Fictional badge stock movement",
+        "alt": "Fictional badge stock movement; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Stage; Units. Rows: Opening, 75; Received, 28; Issued, -36; Returned, 9; Discarded, -11; Closing, 65."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-projects",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional project selection profiles",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Projects are indivisible and selected at most once. Three separate panels use their own stated units. Costs, benefits and staff slots add across selected projects; eligibility constraints are supplied separately in each question."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-projects-chart",
+        "caption": "Fictional project selection profiles",
+        "alt": "Fictional project selection profiles; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Project; Cost units; Benefit points; Staff slots. Rows: A, 4, 9, 2; B, 5, 12, 3; C, 6, 14, 4; D, 3, 6, 1; E, 7, 17, 5."
+      }
+    ]
+  },
+  {
+    "referenceId": "f07-data-matrix",
+    "version": 1,
+    "family": 7,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional station task times",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    },
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each cell is minutes needed by that worker at that station. Lower time is better. Every worker receives exactly one station; capacities and additional restrictions are supplied in each question. Labels, not colour alone, carry every value."
+      },
+      {
+        "type": "image",
+        "assetId": "f07-matrix-chart",
+        "caption": "Fictional station task times",
+        "alt": "Fictional station task times; exact values follow in the accessible description.",
+        "description": "Exact plotted data. Columns: Worker; W (1); X (2); Y (3); Z (4). Rows: A, 6, 4, 9, 7; B, 5, 8, 3, 6; C, 7, 6, 4, 5; D, 4, 7, 6, 3."
+      }
+    ]
+  }
+]

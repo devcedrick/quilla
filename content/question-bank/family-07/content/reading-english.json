@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f07-reading-english-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Where will Friday’s weaving meeting take place?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "In the east shed"
+      },
+      {
+        "choiceId": "c2",
+        "text": "In the usual main-hall room"
+      },
+      {
+        "choiceId": "c3",
+        "text": "In the storeroom"
+      },
+      {
+        "choiceId": "c4",
+        "text": "In the painter’s workshop"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The first sentence directly identifies the east shed. The usual room is unavailable; the storeroom is locked and no painter’s workshop is specified.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-english-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which donation is expressly excluded?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Identifiable vegetables needing a label"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Labelled flower seeds"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Treated seeds"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Identifiable flower seeds needing a label"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Treatment, not the temporary lack of a label, is the stated exclusion. Blank labels are offered for identifiable contents.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-english-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How is Santi’s remark best understood in context?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "He is praising the room’s sound insulation"
+      },
+      {
+        "choiceId": "c2",
+        "text": "He is using apparent praise to criticize the noise"
+      },
+      {
+        "choiceId": "c3",
+        "text": "He is asking that the drilling continue"
+      },
+      {
+        "choiceId": "c4",
+        "text": "He is reporting that the drawing is complete"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The loud drill, closed notebook and departure conflict with literal praise and support irony. The drawing is finished outside, not before departure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-english-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which summary best captures the distinction?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Permission depends on the piece’s role and ownership rather than its appearance"
+      },
+      {
+        "choiceId": "c2",
+        "text": "All similarly shaped pieces may be handled alike"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Learners may move demonstrations only after visitors finish"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The lower shelf contains less durable clay"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The text distinguishes demonstration handling from learner ownership. Appearance does not determine permission, and durability or a visitor-first schedule is not stated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-english-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Why does the guide include times as well as distances?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "To guarantee the same arrival time for every walker"
+      },
+      {
+        "choiceId": "c2",
+        "text": "To offer an additional planning measure while allowing individual variation"
+      },
+      {
+        "choiceId": "c3",
+        "text": "To prove that distance is irrelevant to travel"
+      },
+      {
+        "choiceId": "c4",
+        "text": "To rank walkers by fitness"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Steps explain why equal distance may not mean equal time, but personal pace/stops keep estimates from being guarantees. Distance remains useful; ranking fitness is absent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-english-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which interpretation best connects the metaphor, the added note and the deferred promise?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The count remains useful but limited; the note rejects a quick-completion inference; job-type records still need comparison with completion times before supporting a promised date"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The count remains useful but limited; the note rejects a quick-completion inference; recording job types alone already justifies a promised date"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The count remains useful but limited; the note makes a low count a reliable quick-completion forecast; job-type records still require comparison before a promised date"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The count should be removed as invalid because it omits complexity; the note rejects a quick-completion inference; job-type records still require comparison before a promised date"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A window reveals something without settling the outcome. A real low count can coexist with lengthy work; the qualification limits inference rather than invalidating the count. Recording types is a next evidential step whose usefulness must still be checked against completion times.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "referenceId": "f07-reading-english-01-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A basket-weaving group will meet in the east shed on Friday. Its usual room in the main hall is being repainted. The storeroom remains locked."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-english-02-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The seed exchange accepts labelled packets of vegetables and flowers. It does not accept treated seeds. Volunteers will provide blank labels for packets whose contents the donor can identify."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-english-03-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The committee promised a quiet workroom. On opening day, a drill sounded through its wall every few minutes. “A splendid place to hear oneself think,” Santi said, closing his notebook. He went outside to finish his drawing."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-english-04-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The pottery class keeps two shelves. Pieces on the upper shelf are demonstrations that visitors may handle. Pieces on the lower shelf belong to learners and may be moved only by their makers. A label explains that identical shapes do not imply identical permissions."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-english-05-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A trail guide lists estimated walking times beside distances. Its author explains that two equally long paths may take different times because one has steps. The guide invites walkers to use both measures and to add time for their own pace and stops."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-english-06-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A cooperative described its new queue system as “a window, not a verdict.” The display shows how many orders await work, but not their complexity. After a difficult repair occupied the shop for two days, some members wanted the display removed because its count had stayed low. The manager kept it, added a note that a low count did not promise quick completion, and began recording job types separately. She declined to replace the count with a single promised date until she could compare the new records with actual completion times."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-filipino-01-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Nagrekord ang pangkat ng awit na ginagamit sa pagtatanim. Sa unang bersiyon, sabay-sabay ang mga tinig. Gumawa rin sila ng ikalawang bersiyon na paisa-isang umaawit upang malinaw na marinig ng mga nag-aaral ang bawat linya. Parehong bersiyon ang inilabas sa iisang rekording."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-filipino-02-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "May sampung sapin sa silid: anim para sa pagbabasa at apat na nakalaan sa pag-eensayo ng sayaw. Hindi muna maaaring hiramin ang apat habang may ensayo."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-filipino-03-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Noong una, inakala ni Kardo na pagkukulang ang mga puwang sa habi ni Ema. Nang isabit niya ito sa bintana, nakita niyang dumaraan sa mga puwang ang liwanag na bumubuo ng larawan sa sahig. Humingi siya ng isa pang habi, ngayon ay para sa liwanag nito."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-filipino-04-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Hindi makasabay si Luning sa mabilis na pagtawag ng mga pangalan sa entablado. Sa susunod na ensayo, tahimik na naglagay si Pio ng nakasulat na talaan sa kaniyang tabi. Hindi niya binagalan ang buong programa. Ngumiti si Luning at natapos ang pagtawag sa takdang oras."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-filipino-05-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Iminungkahi ng hardinero na markahan ang mga bahaging madaling matuyo bago magdagdag ng pandilig. May mga kamang basa pa kahit hapon at may tuyong sulok bago magtanghali. Para sa kaniya, kailangang malaman muna kung saan at kailan kulang ang tubig upang hindi pantay-pantay lamang ang dagdag."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-reading-filipino-06-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa pagbuo ng kasaysayan ng pangkat, tinawag ni Bina ang talaan na “salaming may dugtungan.” Magkatugma ang alaala ng dalawang tagapagtatag tungkol sa unang pagtatanghal ngunit magkaiba ang kanilang petsa. Isinama niya ang parehong salaysay at nilagyan ng paalala ang pagtatalo sa petsa. Nang may dumating na lumang tiket, itinugma niya rito ang petsa ng pagtatanghal ngunit hindi binura ang salaysay ng isa. Ipinaliwanag niyang may halaga pa rin iyon sa pag-unawa sa paghahanda, bagaman hindi nito mapatutunayan ang petsa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-english-01-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Only after the adhesive had set did she test the repaired handle.\nP2: The handle of a storage chest had come loose.\nP3: She first cleaned the joint and applied adhesive.\nP4: When the test succeeded, she returned the chest to use."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-english-02-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: For example, a small raised ridge can mark the edge of a step.\nP2: A tactile cue is a feature detected through touch.\nP3: Even with that independence from a printed sign, its usefulness, however, depends on whether users can distinguish it from nearby textures.\nP4: That ridge gives a walker information without requiring a printed sign."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-english-03-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The designer accepted that objection and proposed a detachable sheet instead.\nP2: A single booklet was proposed for instructions that changed every month.\nP3: The revised design retained the booklet’s durable cover.\nP4: A printer objected that replacing a whole booklet for one changed instruction would waste paper."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-english-04-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: That earlier note showed that the crack had been recorded before the storm.\nP2: At first the team blamed a recent storm for the cracked bell.\nP3: The team therefore withdrew its claim that the storm had caused the crack, while leaving its actual cause open.\nP4: Later, a notebook from the previous year was found."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-english-05-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The group replied that this concern could be met by keeping a staffed collection point as well.\nP2: A planner proposed sending notices only by text message.\nP3: With that safeguard accepted, the group approved the plan in its revised form.\nP4: Before the approval vote, the group clarified that the reply did not defend the word “only”; it changed the proposal into a two-channel service.\nP5: A member objected that residents without phones would then miss notices."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-english-06-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Text for this question",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The editor accordingly described the fading as real but left its cause undecided.\nP2: One proposed explanation was that sunlight had faded the ink.\nP3: A second blamed a cleaning liquid used only on the lower corners.\nP4: Because both the sunlit upper margin and the unsunlit lower corners had faded, each explanation accounted for a different part of the damage.\nP5: A document had faded in two separate areas.\nP6: Neither explanation alone, however, accounted for both areas under the stated exposure pattern."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-filipino-01-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Dahil dito, naglagay ng tabing sa gawing kanluran.\nP2: Masyadong nasisilaw ang mga gumagamit ng silid sa dapithapon.\nP3: Sa sumunod na hapon, sinuri kung nabawasan ang silaw sa likod ng tabing.\nP4: Nang bumuti ang liwanag, iniwan na ang tabing sa puwesto."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-filipino-02-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Halimbawa, maihihiwalay ang tunog ng kampana sa tunog ng sasakyan.\nP2: Ang pagmamapa ng tunog ay pagtatala ng naririnig sa iba’t ibang lugar.\nP3: Sa kabila ng naipaliwanag na pakinabang sa paglalarawan, tala lamang ito ng oras ng pakikinig, hindi ng lahat ng tunog sa buong araw.\nP4: Ang paghihiwalay na iyon ay nakatutulong upang mailarawan ang katangian ng bawat lugar."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-filipino-03-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Bago pa ito subukan, ipinaliwanag niyang sa gayong sukat ay hindi na kailangang putulin ang sobrang tela sa bawat piraso.\nP2: Maraming retaso ang natitira sa dating padron.\nP3: Matapos gamitin ang bagong padron, tinimbang ang natitirang retaso upang masuri ang nabawas.\nP4: Kaya binago ng mananahi ang sukat ng padron upang magkasya sa lapad ng tela."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-filipino-04-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Ang huling pangkat na iyon ang kailangang magbalik ng kahon kinabukasan.\nP2: May dalawang pangkat sa paglilipat: tagaimpake at tagapagdala.\nP3: Unang ipinaliwanag na ang mga tagaimpake ay mananatili sa lumang silid.\nP4: Kasunod na ipinaliwanag na ang mga tagapagdala ay sasama sa sasakyang patungo sa bagong silid."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-filipino-05-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Tinanggap ang tugong ito, kaya itinuloy ang pagtitipon sa bagong kondisyon.\nP2: May tumutol: kung ilalapit sa mga bulaklak ang lahat, maaaring masira ang taniman.\nP3: Iminungkahi ang malayang pagpasok sa buong hardin sa araw ng pagtatanghal.\nP4: Bago magpasiyang ituloy ang pagtitipon, nilinaw na ang kondisyong iyon ay naglilimita sa ruta, hindi sa dami ng maaaring dumalo.\nP5: Bilang tugon, iminungkahing manatiling bukas ang hardin ngunit sa nakamarkang daan lamang lumakad ang mga bisita."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f07-paragraph-filipino-06-reference",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Teksto para sa tanong",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Matapos tukuyin ang limitasyong iyon, para sa ikalawang layunin, itinabi ang ilang lumang upuan kahit hindi na puwedeng upuan.\nP2: Dalawa ang layunin ng pag-aayos ng silid: magbigay ng ligtas na mauupuan at magpakita ng kasaysayan nito.\nP3: Ang mga itinabing upuan ay nilagyan ng harang upang hindi mapagkamalang dagdag na mauupuan.\nP4: Sa gayon, nagsilbi ang lumang kagamitan bilang alaala nang hindi ito ginawang bahagi ng ligtas na upuan.\nP5: Para sa unang layunin, bumili ng matitibay na bagong upuan.\nP6: Ngunit hindi sapat ang mga bagong iyon upang ipakita ang dating anyo ng silid."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original independent text",
+      "sources": [
+        "Original fictional text; independently authored for this item; no actual examination content."
+      ]
+    }
+  }
+]

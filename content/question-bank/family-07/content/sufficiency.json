@@ -1,0 +1,862 @@
+[
+  {
+    "questionId": "f07-sufficiency-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An integer n is between 1 and 20 inclusive. Is n even? Statement 1: n is divisible by 4. Statement 2: n is greater than 10.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1",
+    "explanation": "Statement 1 gives an even number, always yes. Statement 2 permits 12(yes) and 13(no). Together n can be 12,16 or 20, all even; the statements are consistent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Every entry in a nonempty finite list is the same real number. What is the median of the list? Statement 1: The mode is 6. Statement 2: The list has an even number of entries.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1",
+    "explanation": "Statement 1 forces every entry to equal 6, so the median is 6. Statement 2 permits the lists [2,2] and [3,3], whose medians differ. Together [6,6] is a consistent witness and the median remains 6; statement 1 alone suffices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An integer t is a temperature in degrees. Is t below zero? Statement 1: t is below 10. Statement 2: t is at least 8.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s2",
+    "explanation": "Statement 1 permits−1(yes) and 4(no). Statement 2 gives a definite no. Together 8 or 9 are possible and both give no; the statements are consistent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A basket contains only apples and pears. How many fruits does it contain? Statement 1: It contains 4 apples. Statement 2: It contains 7 pears.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 allows 4 apples+1 pear or 4 apples+2 pears, totals 5 or 6. Statement 2 allows 1 apple+7 pears or 2 apples+7 pears, totals 8 or 9. Together total 4+7=11, a consistent unique answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A positive integer k is less than 10. Is k prime? Statement 1: k=7. Statement 2: k is an odd prime.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Statement 1 gives yes because 7 is prime. Statement 2 directly ensures yes, although k may be 3,5 or 7. Jointly k=7 is consistent and yes. The value need not be unique when the task asks only prime status.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A positive integer n is selected. How many positive divisors does n have? Statement 1: n is divisible by 6. Statement 2: n is less than 20.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Statement 1 permits n=6 with four divisors and n=12 with six divisors. Statement 2 permits n=2 with two divisors and n=4 with three divisors. Together n=6 and n=12 remain valid with different divisor counts, so even both statements are insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-07",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An integer n is between 10 and 99 inclusive. What is n? Statement 1: Its digits sum to 9. Statement 2: Its tens digit is twice its units digit.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 permits 18 and 27. Statement 2 permits 21 and 42. Together digits 2 u+u=9 giveu=3 andn=63, which satisfies both. Neither alone fixes n.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-08",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fair standard die is rolled once. Is the result greater than 3? Statement 1: The result is prime. Statement 2: The result is divisible by 3.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 allows 2(no) and 5(yes). Statement 2 allows 3(no) and 6(yes). Together the only result is 3, a definite no. The consistent intersection therefore suffices even though neither statement alone does.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-09",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Positive integers a and b satisfy a<b. Is their average a whole number? Statement 1: a+b is odd. Statement 2: a and b have different parity.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Statement 1 makes the average a half-integer, so no. Statement 2 makes the sum odd, also no. Together 1 and 2 are consistent witnesses. Neither statement needs the actual average to be determined.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-10",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A price is rounded to the nearest whole peso using half-up rounding. What rounded price is displayed? Statement 1: The exact price is at least PHP 12.50 and below PHP 13.00. Statement 2: The exact price is at least PHP 12.70 and below PHP 13.50.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Statement 1 is wholly inside the PHP 13 rounding interval[12.50,13.50). Statement 2 also lies inside it. Each yields 13, and the overlap[12.70,13.00) is nonempty.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-11",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A positive integer n leaves remainder 1 when divided by 3. Is n divisible by 4? Statement 1: n is less than 15. Statement 2: n is even.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "neither",
+    "explanation": "Statement 1 allows 1(no) and 4(yes). Statement 2 allows 4(yes) and 10(no). Together 4 and 10 remain compatible, giving opposite answers. The original remainder condition applies in every evaluation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-12",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three different integers have median 6. What is their sum? Statement 1: Their mean equals their median. Statement 2: Their greatest member is 9.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1",
+    "explanation": "Statement 1 sets mean 6 and sum 18. Statement 2 allows 1,6,9(sum 16) and 2,6,9(sum 17). Together 3,6,9 gives 18 and proves consistency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-13",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A nonzero real number x is used as a divisor. Is 12/x positive? Statement 1: x is less than −2. Statement 2: x squared is 9.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1",
+    "explanation": "Statement 1 forces negative x and therefore no. Statement 2 allowsx=−3(no) or 3(yes). Togetherx=−3 is consistent, giving no. The nonzero domain prevents division by zero.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-14",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An integer n is between 1 and 50 inclusive. What is the remainder when n is divided by 5? Statement 1: n leaves remainder 2 when divided by 10. Statement 2: n is 3 less than a multiple of 5.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "either",
+    "explanation": "Statement 1 gives n=10 k+2, hence remainder 2. Statement 2 gives n=5 k−3=5(k−1)+2, again remainder 2. n=2 is a consistent joint witness.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-15",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A list consists of four real scores, in nondecreasing order. Is its range zero? Statement 1: The first and third scores are equal. Statement 2: The second and fourth scores are equal.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 allows 0,0,0,1(no) or 0,0,0,0(yes). Statement 2 allows 0,1,1,1(no) or 1,1,1,1(yes). Together the equalities overlap, forcing all four equal, hence range 0.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-16",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An integer n is between 1 and 12 inclusive. Is n a factor of 12? Statement 1: n is a factor of 6. Statement 2: n is even.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "s1",
+    "explanation": "Statement 1 gives 1,2,3 or 6, all factors of 12. Statement 2 permits 2(yes) and 8(no). Together 2 or 6 are consistent and both yes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-17",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three whole-number scores a≤b≤c lie between 0 and 10 inclusive and have sum 18. What is their median? Statement 1: Their range is 6. Statement 2: Their greatest score is 10.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 allows [2,8,8] with median 8 and [3,6,9] with median 6. Statement 2 allows [0,8,10] with median 8 and [4,4,10] with median 4. Together c=10 and c−a=6 give a=4; the sum then gives b=4. The consistent ordered list [4,4,10] has unique median 4, so only the joint statements suffice.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-18",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A code is a three-digit number using three different digits from 1,2,3,4,5. What is the code? Statement 1: Its value is divisible by 12. Statement 2: Its hundreds digit exceeds its tens digit, and its units digit is 4.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 permits 132,312,324,432 and more, so does not fix the code. Statement 2 permits 214 and 314, for example. To satisfy both, enumerate endings 14,24,34,54 divisible by 4: only 24. Thus tens=2, units=4; hundreds exceeds 2 and must make digit sum a multiple of 3. Of remaining 3 and 5, only 3 qualifies, giving 324. Both statements are consistent and together sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-19",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A 3 by 3 grid contains nine different integers 1 through 9 once each. What is the middle entry? Statement 1: Every row and every column sums to 15. Statement 2: Both diagonals sum to 15.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Statement 1 permits rows[1,5,9],[6,7,2],[8,3,4],center 7, or[8,1,6],[3,5,7],[4,9,2],center 5. Statement 2 permits[1,2,3],[4,5,6],[7,8,9],center 5, or[1,2,4],[3,6,7],[5,9,8],center 6, whose diagonals both total 15. Jointly the two diagonals plus middle row and middle column total 60, counting all entries once and center three extra times;60=45+3 c givesc=5. The standard magic square establishes joint consistency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-sufficiency-20",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "data_sufficiency",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A batch contains 20 items,8 red and 12 blue, each with one or two labels. The number of red items with two labels is even. How many red items have two labels? Statement 1: The mean number of labels per item rounds to 1.7 to one decimal place using half-up rounding. Statement 2: Either 4 or 5 blue items have one label.",
+    "choices": [
+      {
+        "choiceId": "s1",
+        "text": "Statement 1 alone is sufficient, but statement 2 alone is not."
+      },
+      {
+        "choiceId": "s2",
+        "text": "Statement 2 alone is sufficient, but statement 1 alone is not."
+      },
+      {
+        "choiceId": "joint",
+        "text": "Both statements together are sufficient, but neither alone is sufficient."
+      },
+      {
+        "choiceId": "either",
+        "text": "Each statement alone is sufficient."
+      },
+      {
+        "choiceId": "neither",
+        "text": "Even both statements together are insufficient."
+      }
+    ],
+    "correctChoiceId": "joint",
+    "explanation": "Let r,b count red-two and blue-two. Statement 1 gives total labels 33 or 34, so r+b=13 or 14. It allows(r,b)=(2,11)or(4,9), so r is not fixed. Statement 2 gives b=8 or 7 and allows r=0 or 2, both even. Jointly r belongs to{5,6,7} from the possible differences, but the stem requires even r; only 6 remains. The joint witnesses(r,b)=(6,7)and(6,8) obey all counts and rounding. Thus neither alone, but both together suffice.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

@@ -1,0 +1,1642 @@
+[
+  {
+    "questionId": "f07-general-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 8491, which field of a horizontally flown Philippine flag is uppermost in time of peace?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Blue field"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Red field"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Either field at the custodian’s choice"
+      },
+      {
+        "choiceId": "c4",
+        "text": "White triangle"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 10 places the blue field on top in peace; red on top signifies war. The white triangle is at the hoist.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A Philippine flag is hung vertically in time of peace. Under RA 8491, where is its blue field relative to an observer?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "On the observer’s right"
+      },
+      {
+        "choiceId": "c2",
+        "text": "On the observer’s left"
+      },
+      {
+        "choiceId": "c3",
+        "text": "At the lower end"
+      },
+      {
+        "choiceId": "c4",
+        "text": "At the upper end"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Section 10 specifies blue on the observer’s left in peace; vertical display does not turn the fields into top and bottom.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What dignified disposal does RA 8491 prescribe for a flag worn out through wear and tear?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Preserve it indefinitely on its staff"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Sell it as scrap cloth"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Burn it solemnly"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Cut it into reusable cleaning cloths"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Section 14 prescribes solemn burning and immediate replacement when the flag shows wear; ordinary scrap disposal is not the prescribed method.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An indoor Philippine flag on a flagpole is placed for a person entering the room. Under RA 8491, Section 16(a), where should it stand?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "At the entrant’s left"
+      },
+      {
+        "choiceId": "c2",
+        "text": "At the entrant’s right"
+      },
+      {
+        "choiceId": "c3",
+        "text": "At the center behind the entrant"
+      },
+      {
+        "choiceId": "c4",
+        "text": "On either side regardless of viewpoint"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 16(a) places an indoor flagpole at the observer’s left upon entering. The question concerns the room and entrant, not the position of a particular desk.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Assume the joint national-flag display is otherwise authorized; consider arrangement only. At a peacetime event, the Philippine flag and another national flag will be flown together. Which arrangement follows RA 8491, Section 12?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "One staff, with the Philippine flag higher"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Separate equal-height staffs and flags of equal size"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Separate staffs, with the foreign flag deliberately smaller"
+      },
+      {
+        "choiceId": "c4",
+        "text": "One staff, with both flags attached at the same level"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "National flags use separate staffs of equal height and equal-size flags in peace. Same-staff and unequal-size arrangements defeat those conditions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A site designated for permanent day-and-night flag display prepares a peacetime display. Its plan keeps blue uppermost but leaves the flag unlit after dark. What targeted correction follows RA 8491?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Keep blue uppermost and provide proper night illumination"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Keep blue uppermost and retain the unlit night display"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Reverse to red uppermost and provide night illumination"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Reverse to red uppermost and retain the unlit night display"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 6 requires proper night illumination for the permanent display; Section 10 places blue uppermost in peace. The plan’s orientation is already right; lighting alone needs repair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-07",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Before a flag has been raised, inclement weather—a typhoon signal is raised in the locality—begins. A custodian proposes raising it anyway because daytime display is usual. Under RA 8491, Section 16, which assessment is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Do not raise it in inclement weather; this differs from the rule for a flag already raised"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Raise it because the rule for an already-raised flag governs every case"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Raise it at half-mast because rain authorizes that position"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Raise it with red uppermost because the weather changes orientation"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 16 says not to raise the flag in inclement weather, but says that if already raised it shall not be lowered. The initial status matters; half-mast and red-field display have separate bases. Section 3(h) supplies the local typhoon-signal meaning of inclement weather.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-08",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For an authorized half-mast observance, which sequence complies with RA 8491?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Raise directly to half-mast; lower directly at closing"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Raise to the peak briefly, lower to half-mast, raise to the peak again before final lowering"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Keep it at the peak until closing, then pause at half-mast"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Begin at half-mast and end at the peak overnight"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Section 23 requires peak-first both at the start and before final lowering. Merely choosing the correct middle height is incomplete.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-09",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For an authorized flag-draped casket, a plan places the white triangle at the head but puts blue over its left side and proposes lowering the flag into the grave. Which repair satisfies both relevant Section 24 requirements?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Put blue over the right side; remove/fold the flag and hand it to heirs before interment"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Keep blue over the left side; remove/fold the flag and hand it to heirs before interment"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Put blue over the right side; retain the flag into the grave"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Keep blue over the left side; retain the flag into the grave"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The triangle at the head is already correct. Section 24 requires blue over the casket’s right side and forbids lowering the flag into the grave; solemn folding and handover to heirs complete the stated handling.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-10",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "During a peacetime raising ceremony, a plan starts the ascent at the anthem’s first note but raises the flag slowly with red uppermost. Which targeted repair follows Sections 10 and 21 of RA 8491?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Keep first-note timing; raise briskly with blue uppermost"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Keep first-note timing; raise slowly with blue uppermost"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Keep first-note timing; raise briskly with red uppermost"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Wait until the last note; raise briskly with blue uppermost"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "First-note timing is already correct. Section 21 requires brisk ascent and Section 10 requires blue uppermost in peace. Changing only speed or orientation leaves a defect; delaying to the last note breaks timing.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-11",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A flag-lowering plan uses a slow ceremonial descent but completes it before the anthem begins, then leaves the flag unfolded on a chair. Which revision preserves the correct feature and cures the timing/handling gaps under RA 8491?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Keep slow descent, finish at the last note, then handle and fold solemnly"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Keep slow descent, finish before the first note, then fold solemnly"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Change to brisk descent, finish at the last note, then fold solemnly"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Keep slow descent, finish at the last note, then leave it unfolded"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 22 requires slow ceremonial lowering ending at the last note; Section 17 requires solemn handling/folding after lowering. Speed is already correct. Each rival leaves a timing or handling defect or introduces the wrong speed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-12",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume the joint national-flag display is otherwise authorized; consider arrangement only. Apply RA 8491 only. Display A uses equal-size Philippine and foreign national flags on separate staffs, but the foreign staff is taller. Display B uses equal-height separate staffs but makes the Philippine flag larger. Which targeted repairs are needed in peace?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A: equalize staff heights; B: equalize flag sizes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A: equalize staff heights; B: retain unequal flag sizes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A: retain unequal staff heights; B: equalize flag sizes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A: retain unequal staff heights; B: retain unequal flag sizes"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 12 requires both equal staff heights and equal flag sizes. A already meets the size condition; B already meets the height condition. Each rival preserves or repairs only the wrong dimension.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-13",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume a half-mast observance is duly authorized and the anthem is played at closing. A plan raises the flag briefly to the peak before lowering it to half-mast at opening, then lowers it straight from half-mast at brisk speed at closing. Which revision completes compliance with both relevant procedures?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "At closing raise briefly to the peak, then lower slowly to finish at the last note"
+      },
+      {
+        "choiceId": "c2",
+        "text": "At closing raise briefly to the peak, then lower briskly at the first note"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Keep the direct descent but slow it to finish at the last note"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Keep the closing plan but remove the opening peak step"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Sections 22–23 require a closing return to the peak as well as slow ceremonial lowering ending at the last note. One repair alone is insufficient; the opening peak step is already correct.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-14",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For an authorized flag-draped casket and a separate outdoor flagstaff, Plan R places the white triangle at the casket’s head and the blue over its right side, but lets the flag enter the grave. Plan S removes and folds the casket flag before interment but lowers the half-mast staff flag without first raising it to the peak. Which paired repair is needed?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R: remove/fold before interment; S: return staff flag to peak before lowering"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R: reverse blue to the casket’s left; S: return staff flag to peak"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R: remove/fold before interment; S: lower directly as proposed"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R: keep the casket flag in the grave; S: fold the staff flag at half-mast"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 24 supports R’s orientation but prohibits lowering the flag into the grave. Section 23 requires S’s staff flag to return to the peak. S’s casket handling already meets the stated requirement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 8491 (1998), Sections 6–24; https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html; retrieved 2026-11-04; statutory-text exercise, not an operational advisory."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-15",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For the statutory free-higher-education category in RA 10931, Section 4, which institutions are named?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "SUCs and eligible LUCs"
+      },
+      {
+        "choiceId": "c2",
+        "text": "All private HEIs automatically"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only state-run TVIs"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only secondary schools"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 4 concerns SUCs/LUCs; private-HEI support is distinguished under TES and state-run TVET under Section 5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-16",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 10931, Section 5 concerns free TVET in which setting?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Any private review center"
+      },
+      {
+        "choiceId": "c2",
+        "text": "State-run post-secondary TVIs under TESDA"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Every private university graduate school"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Every secondary school workshop"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The statutory category is post-secondary nondegree TVET in state-run TVIs under TESDA; the other settings do not meet that description.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-17",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which RA 10931 category includes library, laboratory and computer fees among charges supporting instructional activities?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Other school fees"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tuition fees alone"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Room-and-board allowances"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Student-loan interest"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 3 defines other school fees to include these instructional charges, separate from tuition for subjects/courses and living allowances.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-18",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A financially capable student wishes to decline the RA 10931 tuition subsidy. Which mechanism must an SUC/LUC provide under Section 4?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Voluntary opt-out or contribution mechanism"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Automatic exclusion based solely on family income"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A compulsory private-school transfer"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A loan replacing every subsidy"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The provision requires a voluntary opt-out/contribution mechanism; it does not make capacity alone a forced exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-19",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An applicant invokes RA 10931 as requiring an SUC to admit her without its entrance examination or other admission requirements. Which distinction follows Section 4?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Free-fee coverage removes all admission conditions"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Fee exemption remains subject to admission and retention requirements"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only retention rules remain applicable"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only an opt-out student must pass admission requirements"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Section 4 expressly retains entrance examination and admission/retention requirements. Funding coverage does not itself create unconditional admission.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-20",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A Filipino already holds a bachelor’s degree from a private HEI and seeks another undergraduate degree at an SUC. Considering RA 10931, Section 6(a)(1) alone, what follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The private origin avoids the prior-degree exclusion"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The prior bachelor’s degree triggers the exclusion whether public or private"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only a prior SUC degree triggers the exclusion"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The exclusion depends solely on the new degree’s length"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Section 6 includes a degree from any HEI, public or private. The exclusion turns on the attained degree rather than the funding source.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-21",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Apply only RA 10931, Section 6(a)(3). A program prescribes four years. A student completes it within the fifth year, meets admission/retention rules and has no prior degree. Which conclusion about this time-based exclusion is supported?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The student is excluded immediately after year four"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The student is not excluded by this completion-time rule"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Every extension beyond five years is also permitted"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Program duration is irrelevant under the section"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The text excludes failure to finish within a year after the prescribed period. Finishing within that extra year avoids this particular exclusion; it does not imply unlimited extension.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-22",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A state-run TVI applicant previously received a technical-vocational certificate equivalent to NC III. Apply RA 10931, Section 6(b)(1), assuming all other facts are neutral. Which assessment follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Only an NC IV or higher certificate counts"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The stated NC III-equivalent qualification triggers the exclusion"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A certificate never counts unless it is a bachelor’s degree"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The exclusion applies only to private TVIs"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The TVI exclusion includes certificates/diplomas equivalent to at least NC III; it is broader than the bachelor’s-degree condition alone.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-23",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A student in a state-run TVI has failed one enrolled course during the program. Which RA 10931 provision is directly relevant to statutory fee-exemption eligibility?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Section 6(b)(2), failure in any enrolled course"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Only Section 6(a)’s SUC/LUC completion-time rule"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only the voluntary opt-out provision"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only the definition of room and board"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 6(b)(2) expressly covers failure in any course during the TVI program. SUC/LUC and TVI exceptions must not be conflated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-24",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A private-HEI student is told that being outside Section 4’s SUC/LUC free-fee category necessarily places her outside every form of RA 10931 support. Which correction follows Section 7?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "TES includes private-HEI undergraduate/post-secondary students, subject to its rules and funding"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Every private-HEI student has unconditional Section 4 exemption"
+      },
+      {
+        "choiceId": "c3",
+        "text": "TES is restricted to SUCs alone"
+      },
+      {
+        "choiceId": "c4",
+        "text": "TES applies only to holders of a prior bachelor’s degree"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 7 establishes a separate TES scope including private HEIs. Its possible support is not an unconditional award or Section 4 fee exemption.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-25",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A TES planning note lists books and transport but says disability-related personal assistance is categorically outside RA 10931. What does Section 7 support?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Such assistance may be covered when reasonably incurred and subject to TES guidelines/budget"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It is always fully reimbursed without guidelines"
+      },
+      {
+        "choiceId": "c3",
+        "text": "It replaces all other TES expenses automatically"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only tuition can be a TES expense"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 7 lists disability-related allowances including personal assistance, while retaining guideline and budget limits. Possibility is not a guaranteed full payment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-26",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply only RA 10931, Section 6. Applicant P has no prior bachelor’s degree or NC III-equivalent qualification but failed one course in her current state-run TVI program. Applicant Q has a prior private-HEI bachelor’s degree and seeks an SUC undergraduate course with no failures. Which conclusion is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Both encounter an exclusion, P for TVI course failure and Q for prior degree"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Only P is excluded because Q’s degree was private"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only Q is excluded because TVI failures do not count"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Neither is excluded because both are new applicants"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P meets Section 6(b)(2); Q meets Section 6(a)(1), regardless of private/public source. Each rival confuses a distinct exception.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-27",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume all unmentioned statutory requirements are met. R seeks an SUC degree, has no prior degree and completes a four-year program within five years. S seeks state-run TVET, has no bachelor’s degree but already holds an NC III-equivalent certificate. Which assessment follows only RA 10931, Sections 4–6?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R avoids the stated time exclusion; S meets the prior-qualification exclusion"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R meets the time exclusion; S avoids exclusion because she lacks a bachelor’s"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both avoid exclusion because one extra year and NC III are always allowed"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Both are excluded because four years and NC II are absolute limits"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "R completes within the permitted extra year under 6(a)(3). S meets 6(b)(1)’s separate NC III threshold. Absence of a bachelor’s does not remove the certificate exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-28",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply the text of RA 10931, not current award rules. T is an otherwise eligible SUC student able to pay; U is a private-HEI undergraduate requesting help with books. Which combined statement preserves the statutory mechanisms and their limits?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "T may voluntarily opt out/contribute; U falls within TES’s stated scope, but a book allowance is subject to guidelines and appropriation"
+      },
+      {
+        "choiceId": "c2",
+        "text": "T must opt out; U falls within TES scope subject to guidelines and appropriation"
+      },
+      {
+        "choiceId": "c3",
+        "text": "T may voluntarily opt out/contribute; U automatically receives every requested book cost"
+      },
+      {
+        "choiceId": "c4",
+        "text": "T may voluntarily opt out/contribute; U is outside TES because the HEI is private"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Section 4 makes T’s opt-out voluntary. Section 7 includes private HEIs and possible book allowances while qualifying amounts by guidelines and annual appropriation. The rivals each distort one independent condition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 10931 (2017), Sections 3–7; https://lawphil.net/statutes/repacts/ra2017/ra_10931_2017.html; retrieved 2026-11-04; apply the cited statutory text only, not current funding or admission guarantees."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-29",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 7394’s definition, a consumer is what kind of person?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A natural person"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Only a registered corporation"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only a government agency"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Any manufacturer regardless of purchase purpose"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(n) specifies a natural person and includes several present/prospective transaction roles. Corporate personality alone is not the defined consumer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-30",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "RA 7394’s definition of consumer products and services expressly includes which purpose alongside personal, family and household purposes?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Agricultural"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Exclusively military"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Exclusively diplomatic"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Exclusively securities trading"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(q) expressly includes agricultural purposes. The other purposes are not added to this list.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-31",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Under RA 7394, consumer credit allows part or all of the price to be paid at what time?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Only before any transaction"
+      },
+      {
+        "choiceId": "c2",
+        "text": "At a future time, in full or installments"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only as a cash payment upon delivery"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only through a nonmonetary gift"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Article 4(o) focuses on future payment and allows either full future payment or installments; installment-only summaries are too narrow.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-32",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which RA 7394 policy objective concerns a consumer’s ability to seek a remedy after a problem?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Adequate rights and means of redress"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Product availability alone"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Business branding alone"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Recruitment commissions"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 2(d) names rights and means of redress. Information, safety and participation are other objectives, but branding or commissions are not remedies.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-33",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Lina is comparing household fans with a view to buying one but has not paid. A guide says RA 7394 cannot describe her as a consumer until payment. Which definition corrects it?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The definition includes a prospective purchaser who is a natural person"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The definition includes only installment buyers"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The definition includes only the fan manufacturer"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The definition requires a completed cash sale"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(n) expressly includes prospective purchasers. No completed-payment condition can be added to that definition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-34",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Members invest to obtain the right to recruit others who must also invest; profits arise primarily from recruitment. A promoter caps membership at 200 and says the cap removes the scheme from RA 7394’s pyramid definition. Which assessment fits Article 4(k)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The cap alone removes the recruitment feature"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The cap does not change the plan’s nature under that definition"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Any sale of a product automatically removes it"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only an unlimited chain can meet the definition"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The definition turns on investment-linked recruitment and primarily recruitment-based profits and expressly says a participant limit does not change the nature.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-35",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A detergent is made by Firm R but without authorization bears Firm S’s identifying mark and falsely appears to be S’s product. Which RA 7394 definition fits the stated attribution facts?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "It meets the counterfeit-product definition because the unauthorized mark falsely attributes it to Firm S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "It falls outside that definition because only Firm R’s factory identity, not the mark, matters"
+      },
+      {
+        "choiceId": "c3",
+        "text": "It falls outside that definition unless the detergent is also proved unsafe"
+      },
+      {
+        "choiceId": "c4",
+        "text": "It meets that definition only if Firm S actually manufactured the detergent"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(v) connects an unauthorized identifying mark with false attribution to a different producer/distributor. It does not require proof of unsafe contents or actual manufacture by the falsely named firm; knowing the real factory does not cure the label.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-36",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A shop commissions and pays for an advertisement; a service enterprise creates its campaign on the shop’s behalf. Under RA 7394, which pairing is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Shop: advertiser; enterprise: advertising agency/agent"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Shop: advertising agency; enterprise: advertiser"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both necessarily consumers of the advertised goods"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Both necessarily manufacturers of the advertised goods"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(c)–(d) distinguishes the sponsoring client from the campaign service enterprise. Creation does not itself make that enterprise the sponsor.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-37",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A household appliance is sold with the full price due next month in one payment. Which reading of RA 7394’s consumer-credit definition is accurate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Future full payment can qualify even without installments"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Only multiple installments can qualify"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Future payment cannot qualify without a credit card"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The definition applies only after a missed deadline"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(o) expressly permits future payment in full or installments. Cards and delinquency are not required elements.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-38",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A supplier solicits a natural person to buy household goods, but no sale occurs. For RA 7394, Article 4(s), which conclusion about consumer transactions is supported?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Solicitation/promotion of a covered transaction is included"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Only completed delivery is included"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Only installment repayment is included"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Only a completed insurance contract is included"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The definition includes supplier solicitation/promotion concerning covered transactions. Completion is not essential; the text separately excludes specified securities/insurance dispositions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-39",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Apply only RA 7394’s definitions. Plan A sells goods but derives profits primarily from investment-linked recruitment, with a fixed membership cap. Product B is correctly attributed to its real manufacturer but is expensive. Which assessment is supported?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A can meet the pyramid definition despite goods/cap; B is not shown counterfeit by price alone"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A cannot be a pyramid because goods exist; B is not shown counterfeit by price alone"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A can meet the pyramid definition; B is necessarily counterfeit because costly"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A cannot be a pyramid because capped; B is necessarily counterfeit because costly"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 4(k) addresses primarily recruitment profits and rejects a cap exception; 4(v) requires false unauthorized attribution, not a high price. Each rival preserves one conclusion but corrupts the other.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-general-40",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "general_information",
+    "subtopicId": "civic_and_general_information",
+    "conceptId": "philippine_constitution_general_information_events",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two draft consumer policies are reviewed under RA 7394, Article 2. Policy P funds clear product information but excludes consumer representatives from social/economic policy formulation. Policy Q provides representative participation but removes means of redress because prevention is preferred. Which revision addresses both omissions?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P: preserve information and add representative involvement; Q: preserve participation and restore redress"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P: preserve information and add representative involvement; Q: preserve participation but retain removal of redress"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P: preserve information but retain exclusion of representatives; Q: preserve participation and restore redress"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P: preserve information but retain exclusion of representatives; Q: preserve participation and retain removal of redress"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Article 2 includes information/education, redress and consumer-representative involvement together. Each policy’s existing strength should remain while its missing objective is restored; one objective does not substitute for another.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "RA 7394 (1992), Articles 2–4; https://lawphil.net/statutes/repacts/ra1992/ra_7394_1992.html; retrieved 2026-11-04; definition/policy exercise, not a finding of liability."
+      ]
+    }
+  }
+]
