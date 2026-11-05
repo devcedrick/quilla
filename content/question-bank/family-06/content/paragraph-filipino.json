@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f06-paragraph-filipino-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "P1–P2–P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2–P3–P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3–P1–P2"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P1–P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nauuna ang paghuhugas, kasunod ang pagpapatuyo, at sa huli ang paglalagay sa kahon.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-filipino-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "P2–P3–P1–P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2–P1–P4–P3"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P1–P3–P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1–P2–P3–P4"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Kailangan munang ipakilala ang lamat; bunga nito ang tagas, tugon ang paglipat, at saka ang pagkukumpuni.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-filipino-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "P2–P4–P3–P1"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P4–P1–P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2–P1–P4–P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4–P2–P1–P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ipinakikilala ang dalawa bago ang una at ikalawa; ang paghahambing ay may dalawang naipakilalang batayan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-filipino-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2–P1–P3–P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1–P2–P3–P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2–P3–P1–P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2–P1–P4–P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang suliranin ang tinutukoy ng iyon; ang bagong mesa ay kailangang maipakilala bago gamitin; pagkatapos sinusuri ang iba.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-filipino-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "P3–P1–P5–P2–P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3–P5–P2–P1–P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P3–P5–P1–P4–P2"
+      },
+      {
+        "choiceId": "a",
+        "text": "P3–P5–P1–P2–P4"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Obserbasyon muna, saka paunang hinuha; gayunman ay limitasyon sa hinuha; kaya ay tugon; gayong paghahambing ay tumutukoy sa planong pagsusuri.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-paragraph-filipino-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling ayos ang bumubuo ng pinakamalinaw na talata?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "P2–P4–P1–P5–P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2–P4–P5–P3–P1"
+      },
+      {
+        "choiceId": "a",
+        "text": "P2–P4–P5–P1–P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2–P5–P4–P1–P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Layunin, limitasyon ng panayam, tugong umiwas sa hula, babala sa pansamantalang talaan, saka bagong ebidensiya. Hindi dapat mauna ang tinutukoy na talaan sa paglikha nito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-paragraph-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

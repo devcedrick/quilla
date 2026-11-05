@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f04-reading-filipino-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Ano ang unang kailangang isumite ayon sa patalastas?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Rekording ng dulang napili na"
+      },
+      {
+        "choiceId": "b",
+        "text": "Listahan ng lahat ng tagapakinig"
+      },
+      {
+        "choiceId": "c",
+        "text": "Iskrip ng orihinal na dula"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pangalan ng kawaning magpapasiya"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Iskrip ang unang hinihingi; rekording ay para lamang sa mapipili. Walang kailangang listahan ng tagapakinig, at hindi tagapili ang kawaning tumutulong sa pag-format.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-filipino-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Bakit nagtatabi ng tinapay si Aling Sela?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Upang ipagbili lamang sa mayamang suki"
+      },
+      {
+        "choiceId": "b",
+        "text": "Upang may pagkain ang mga boluntaryo"
+      },
+      {
+        "choiceId": "c",
+        "text": "Upang itago ang lumang paninda sa katulong"
+      },
+      {
+        "choiceId": "d",
+        "text": "Upang bayaran ang batang may basket sa pagpipinta"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Tahasang nakasaad sa papel ang kusina ng mga boluntaryo bilang pagdadalhan. Akala lamang ng katulong ang mayamang suki; walang binanggit na lumang paninda o bayad sa bata.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-filipino-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang pinakamalakas na pagbasa sa “hindi naman nawala ang lilim”?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "May bagong punong bayabas na hindi nakikita ng iba"
+      },
+      {
+        "choiceId": "b",
+        "text": "Literal na nanatili ang anino ng pinutol na puno"
+      },
+      {
+        "choiceId": "c",
+        "text": "Wala nang halaga kay Rosa ang lumang bakuran"
+      },
+      {
+        "choiceId": "d",
+        "text": "Nananatili ang ginhawa ng alaala sa pagpapatuloy ng larong itinuro niya"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ang laro, tawanan at pagtuturo sa susunod na salinlahi ang sumusuporta sa talinghagang pagpapatuloy ng ginhawa. Walang bagong punong tinukoy o literal na naiwang anino; hindi rin paglimot ang ikinikilos niya.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-filipino-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Anong pagbabago sa pananaw ni Emil ang ipinahihiwatig ng kaniyang ginawa?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mula sa pagtingin sa mga guhit bilang sagabal tungo sa pagkilalang maaari itong mag-anyaya ng aktibong pagbasa"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mula sa pagtitiwala sa aklat tungo sa pagtangging basahin pa ito"
+      },
+      {
+        "choiceId": "c",
+        "text": "Mula sa kawalang-interes sa sagot tungo sa paniniwalang tama ang bawat sulat sa gilid"
+      },
+      {
+        "choiceId": "d",
+        "text": "Mula sa pagtatanong tungo sa katiyakang hindi na kailangang balikan ang teksto"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nagsimula sa inis ngunit nakibahagi sa pagtatanong at pagbabalik sa teksto. Hindi nito ginagawang tama ang lahat ng marginalia o ipinakikitang tinanggihan na niya ang aklat.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-filipino-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling iminungkahing paghawak sa liham at interpretasyon sa tala ang kapuwa naaayon sa patakaran at sa saklaw ng katibayan?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Maaaring ilathala ang liham kasabay ng tala nang hindi ineendorso; pinatutunayan ng Sabadong tala na walang gumagamit sa ibang araw"
+      },
+      {
+        "choiceId": "b",
+        "text": "Dapat tanggihang ilathala ang anumang opinyong may pinagtatalunang datos; sinasalungat ng Sabadong tala ang ganap na kawalang-paggamit"
+      },
+      {
+        "choiceId": "c",
+        "text": "Maaaring ilathala kasabay ng tala nang hindi ineendorso; sinasalungat ng Sabadong tala ang ganap na kawalang-paggamit ngunit hindi nito itinatakda ang gamit sa ibang araw o ang nararapat na proyekto"
+      },
+      {
+        "choiceId": "d",
+        "text": "Maaaring ilathala kasabay ng tala nang hindi ineendorso; samakatuwid ay sapat na ang tala upang obligahing panatilihin ang bawat bahagi ng palaruan"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Pinahihintulutan ng patakaran ang opinyong may pinagtatalunang datos kapag malinaw na kasabay ang nasuring katibayan, nang walang pag-endorso. Ang Sabadong paggamit ay kontra-halimbawa sa walang gumagamit sa anumang oras, ngunit wala itong sinasabi sa ibang araw o sa dapat na proyekto. May mga karibal na tama ang editorial handling o ang kontra-halimbawa lamang.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-reading-filipino-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling pagsusuri ang pinakamatibay batay lamang sa talata?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Itatapat ni Aida ang kalan at dami/panimulang temperatura; pinatutunayan na nito na kapal ng takip ang sanhi ng unang resulta"
+      },
+      {
+        "choiceId": "b",
+        "text": "Itatapat ni Aida ang kalan at dami/panimulang temperatura upang mas maihiwalay ang takip; wala pa itong itinatatag na resulta ng bagong pagsubok"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sapat nang itapat ang kalan at dami; maituturing nang kontrolado ang panimulang temperatura kahit hindi ito sukatin"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sapat nang itapat ang kalan at panimulang temperatura; hindi na maaaring makaapekto ang dami ng tubig"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Kailangang tugunan ang magkakaibang kalan at hindi kilalang dami/panimulang temperatura bago mas maihiwalay ang takip. Ginagawa iyon ng panukala ni Aida ngunit hindi pa ito obserbasyon. Ang isang karibal ay tama ang kontrol ngunit ginagawang napatunayang resulta ang plano; ang dalawa ay nag-iiwan ng hindi kontroladong salik.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-reading-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

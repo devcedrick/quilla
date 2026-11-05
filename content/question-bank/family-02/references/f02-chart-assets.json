@@ -1,0 +1,162 @@
+[
+  {
+    "assetId": "f02-loans-chart",
+    "path": "references/assets/f02-loans.png",
+    "mediaType": "image/png",
+    "sha256": "075eda3f6082b39bc2db9bf54d791153fd480df65ca91e28f4700e6c08b219d6",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-solar-chart",
+    "path": "references/assets/f02-solar.png",
+    "mediaType": "image/png",
+    "sha256": "ba259745cf7aa94da2560a2c899f697e27d61d4bcbb8ac920477913230c14df5",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-training-chart",
+    "path": "references/assets/f02-training.png",
+    "mediaType": "image/png",
+    "sha256": "e89e935aec0840633f6342388c7188b1673ab0b22058c9be0447319d4b6dcb33",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-stock-chart",
+    "path": "references/assets/f02-stock.png",
+    "mediaType": "image/png",
+    "sha256": "44889fe9930c1c12650550f0e374ed04b6d5dbe56e166510ae12d1e120a7b817",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-ferry-chart",
+    "path": "references/assets/f02-ferry.png",
+    "mediaType": "image/png",
+    "sha256": "29d8354c1224f0857117cc2becf55d2b6b70dfaaff2a499bb655dfc007b3b9c4",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-rainfall-chart",
+    "path": "references/assets/f02-rainfall.png",
+    "mediaType": "image/png",
+    "sha256": "ab5b00b38afd3f79c84669d4ea2f98b32b969d0c71a6dc3cf3f44516b33aa2c8",
+    "width": 1600,
+    "height": 1120,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-repairs-chart",
+    "path": "references/assets/f02-repairs.png",
+    "mediaType": "image/png",
+    "sha256": "b4d5af4be56d04e84d256b569bc77f258d07b4d689bc8fd68f083796ae0fddee",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-donations-chart",
+    "path": "references/assets/f02-donations.png",
+    "mediaType": "image/png",
+    "sha256": "4f53ccc611e158fce22135c9940812071850c879ea238fc878ef7a7c31a27d86",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-calls-chart",
+    "path": "references/assets/f02-calls.png",
+    "mediaType": "image/png",
+    "sha256": "c9db84a7c417578d1d4f386c3d1f4b54c75a924bfd7ace4581414e0304b09e3d",
+    "width": 1600,
+    "height": 960,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f02-produce-chart",
+    "path": "references/assets/f02-produce.png",
+    "mediaType": "image/png",
+    "sha256": "9c169c83782a6ca62b23a262d19323a39a62559ab96640f191f77b8643413383",
+    "width": 1600,
+    "height": 1120,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "Deterministic exact-value chart rendered with Pillow; visual inspection by authoring agent; independent human approval pending",
+      "sources": [
+        "Synthetic Family 02 source tables in references/f02-supporting-material.json; renderer scripts/render-family02-charts.py. See docs/content/family02-review.md."
+      ]
+    }
+  }
+]

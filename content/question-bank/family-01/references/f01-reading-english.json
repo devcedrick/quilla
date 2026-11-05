@@ -1,0 +1,140 @@
+[
+  {
+    "referenceId": "f01-reading-english-01-passage",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Tools Between Reservations",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The tool room has two obligations: a returned tool must be available for its next reservation if safe, and an unresolved safety report must prevent its reissue. The trial met its return deadlines but staff issued two drills despite damage entries in the register. The entries were accurate; the issuing clerk had checked only whether each drill was back on its shelf. One resident proposed keeping every returned tool out until a mechanic visited each Friday. Another proposed a separate hold rack only for reported faults, with the issuing clerk checking the register before each release. The mechanic warned that a clean register could not certify tools for faults nobody had reported. The coordinator therefore distinguished correcting the demonstrated release failure from guaranteeing that no future defect could escape detection."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Explicit definition in context; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-02-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An Evening Service",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The advice desk moved its hours two hours later after residents working until five said they could never arrive before closing. During the trial, several visitors explicitly said the change had enabled their first visit. Weekly attendance nevertheless remained about the same. The register counted visits, not unique people, and did not record unsuccessful attempts to attend. A volunteer noted that some former morning visitors had stopped coming, although nobody knew why. The coordinator retained the later hours for another month but requested a survey of both visitors and non-visitors before claiming that access had improved overall."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Stated reason; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-03-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "After the Argument",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Her patience was a bridge,\nnot a road that chose our destination.\nWe crossed it one word at a time,\ncarrying the maps we had defended.\nAt the far bank she set a table\nand did not ask us to agree.\nWe laid our maps there, still unfolded,\nand heard what each had left unnamed."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify a metaphor in original verse; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-04-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An Open Meeting",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "In this committee’s handbook, transparency means making the reasons for a decision available for others to examine. It does not mean publishing every piece of personal information discussed at a meeting. The handbook therefore asks members to release the decision and its reasons while removing private contact details. It distinguishes openness about the committee’s work from exposure of information that does not explain the decision."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a defined idea and its boundary; image 1, introductory example. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-05-passage",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Keeping the Clock's History",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The museum's clock could not run with its cracked spring. Conservators fitted a new spring but retained the old one in a labelled tray. They left the worn dial untouched because repainting would erase marks showing how earlier owners had repaired it. The curator wanted visitors to see the hands move, yet rejected the label 'an unchanged working original'. An assistant suggested 'a replica', since one part was new. The curator rejected that too: most of the mechanism and the dial remained historical material. Her final note said the display should distinguish what survives, what was replaced, and what operation alone cannot establish. She also refused to use the successful restart as evidence that every earlier repair had been identified."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Identify the stated cause amid competing explanations; image 1, passage A question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-english-06-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "The Workshop",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The workshop is a doorway,\nnot a promise of a prize.\nBeyond it wait unfamiliar tools\nand work we have not tried."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Interpret a metaphor using surrounding lines; image 2, question 8. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  }
+]

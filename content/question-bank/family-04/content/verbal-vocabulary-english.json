@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f04-vocabulary-english-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The FRUGAL cook planned meals around ingredients already available. Which word best matches FRUGAL here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Impatient"
+      },
+      {
+        "choiceId": "b",
+        "text": "Economical"
+      },
+      {
+        "choiceId": "c",
+        "text": "Secretive"
+      },
+      {
+        "choiceId": "d",
+        "text": "Inexperienced"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Frugal describes careful, efficient resource use. It does not state the cook’s speed, secrecy or experience.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Merriam-Webster, headword frugal; https://www.merriam-webster.com/dictionary/frugal; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-english-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "After losing its first crop, the RESILIENT cooperative reorganised and was producing again within months. What does RESILIENT describe?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Able to recover after difficulty"
+      },
+      {
+        "choiceId": "b",
+        "text": "Unwilling to accept any advice"
+      },
+      {
+        "choiceId": "c",
+        "text": "Unable to change its practices"
+      },
+      {
+        "choiceId": "d",
+        "text": "Certain never to experience a loss"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The sense is recovery or adjustment after adversity. It does not promise invulnerability or describe stubborn refusal to change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Merriam-Webster, headword resilient; https://www.merriam-webster.com/dictionary/resilient; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-english-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Rafi was RELUCTANT to speak at the gathering. Which replacement expresses the opposite attitude toward speaking?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Uncertain"
+      },
+      {
+        "choiceId": "b",
+        "text": "Silent"
+      },
+      {
+        "choiceId": "c",
+        "text": "Unprepared"
+      },
+      {
+        "choiceId": "d",
+        "text": "Willing"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Reluctant concerns hesitation or unwillingness. Willing reverses that attitude; silence, uncertainty and lack of preparation do not express the opposite willingness.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Merriam-Webster, headword reluctant; https://www.merriam-webster.com/dictionary/reluctant; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-english-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The laboratory called the evidence EQUIVOCAL because the readings were compatible with either of two explanations. Which interpretation fits without adding a claim about anyone’s honesty?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The evidence was knowingly forged"
+      },
+      {
+        "choiceId": "b",
+        "text": "The evidence uniquely established the cause"
+      },
+      {
+        "choiceId": "c",
+        "text": "The evidence did not point unambiguously to one explanation"
+      },
+      {
+        "choiceId": "d",
+        "text": "The evidence was irrelevant to both explanations"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Equivocal evidence is uncertain as an indication. Here the issue is competing interpretations, not established fraud, complete irrelevance or a unique result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Merriam-Webster, headword equivocal; https://www.merriam-webster.com/dictionary/equivocal; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-english-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare: “A small grant will SUSTAIN the workshop through June” and “The beam can SUSTAIN the roof’s weight.” Which pair preserves the contextual meanings?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Keep the workshop operating; measure the weight"
+      },
+      {
+        "choiceId": "b",
+        "text": "Keep the workshop operating; support the weight"
+      },
+      {
+        "choiceId": "c",
+        "text": "Support the workshop physically; support the weight"
+      },
+      {
+        "choiceId": "d",
+        "text": "Publicly endorse the workshop; carry the weight"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The grant sustains continued operation, while the beam sustains a physical load. One rival preserves the first sense but changes the second to measurement; two preserve the load-bearing sense but misread the grant as physical support or public endorsement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Merriam-Webster, headword sustain; https://www.merriam-webster.com/dictionary/sustain; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-vocabulary-english-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A notice says the padded lining will MITIGATE damage during transport, while still warning that fragile pieces may break. Which paraphrase preserves both the word and the warning?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The lining reduces the severity of damage without promising its elimination"
+      },
+      {
+        "choiceId": "b",
+        "text": "The lining eliminates damage, so the warning concerns only appearance"
+      },
+      {
+        "choiceId": "c",
+        "text": "The lining merely records damage after every object has broken"
+      },
+      {
+        "choiceId": "d",
+        "text": "The lining increases damage but makes it easier to measure"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Mitigate means make less severe. The warning prevents replacing reduction with a guarantee of elimination; recording or increasing damage changes the stated function.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Merriam-Webster, headword mitigate; https://www.merriam-webster.com/dictionary/mitigate; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  }
+]

@@ -1,0 +1,1640 @@
+[
+  {
+    "questionId": "f04-numerical-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A record shows corrections of −8, +13 and −2 units. What is their net adjustment?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "−23 units"
+      },
+      {
+        "choiceId": "c2",
+        "text": "−3 units"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3 units"
+      },
+      {
+        "choiceId": "c4",
+        "text": "23 units"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Combine increases and decreases: 13−8−2=3. Adding magnitudes loses the signs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A container is 3/5 full. What fraction of its total capacity is empty?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2/5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2/3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3/2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3/5"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The whole capacity is 5/5, so the empty part is 5/5−3/5=2/5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In the measurement 4.083 metres, the digit 8 represents how many metres?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "0.8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0.008"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0.08"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The 8 is in the hundredths place, so it represents 8/100=0.08 metre.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Evaluate 48 ÷ (2 + 4) × 3.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "24"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "First 2+4=6; then division and multiplication proceed left to right: 48÷6×3=24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Of 200 survey forms, 35% are incomplete. What percentage are complete?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "35%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "70%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "65%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "135%"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Complete and incomplete exhaust the forms, so 100%−35%=65%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A square garden has a side of 9 metres. What is its area?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "18 m²"
+      },
+      {
+        "choiceId": "c2",
+        "text": "36 m²"
+      },
+      {
+        "choiceId": "c3",
+        "text": "72 m²"
+      },
+      {
+        "choiceId": "c4",
+        "text": "81 m²"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Area is side times side: 9×9=81 m². The perimeter calculation would give 36 metres, not an area.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-07",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which pack has the lowest cost per sheet? All sheets are identical.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "20 sheets for PHP 30"
+      },
+      {
+        "choiceId": "c2",
+        "text": "30 sheets for PHP 42"
+      },
+      {
+        "choiceId": "c3",
+        "text": "40 sheets for PHP 60"
+      },
+      {
+        "choiceId": "c4",
+        "text": "50 sheets for PHP 75"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The 30-sheet pack costs 42/30=PHP 1.40 per sheet. Each other pack costs PHP 1.50 per sheet: 30/20, 60/40 and 75/50. Compare equal units rather than total pack prices.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-08",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A number multiplied by 4 and then decreased by 7 gives 29. What is the number?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5.5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "36"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Reverse the steps: (29+7)/4=9. Subtracting 7 again does not undo the subtraction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-09",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Red and yellow ribbons are in the ratio 3:7. What fraction of ALL ribbons are red?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3/7"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7/10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3/10"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7/3"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "There are 3+7=10 ratio parts altogether. Red occupies 3/10 of the total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-10",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A scale records masses 18, 25, 21, 17 and 24 kg. What is their range?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "7 kg"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8 kg"
+      },
+      {
+        "choiceId": "c3",
+        "text": "21 kg"
+      },
+      {
+        "choiceId": "c4",
+        "text": "42 kg"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The largest is 25 and the smallest 17; range=25−17=8 kg.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-11",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the distance between −4 and 7 on a number line?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "−11 units"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3 units"
+      },
+      {
+        "choiceId": "c3",
+        "text": "−3 units"
+      },
+      {
+        "choiceId": "c4",
+        "text": "11 units"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Distance is |7−(−4)|=11; it cannot be negative.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-12",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Express 2 hours 15 minutes entirely in minutes.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "135 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "125 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "215 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "150 minutes"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Two hours contribute 120 minutes, and 120+15=135. Hours are not decimal hundreds of minutes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-13",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "There are 24 green and 36 white cards. They must be divided into the greatest possible number of identical sets with no cards left over. How many sets can be made?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "12"
+      },
+      {
+        "choiceId": "c4",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The number of identical sets must divide both counts. Their greatest common divisor is 12; each set has 2 green and 3 white cards.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-14",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which number is the greatest?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0.507"
+      },
+      {
+        "choiceId": "c2",
+        "text": "0.57"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0.057"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0.5701"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Write the values as 0.5070, 0.5700, 0.0570 and 0.5701. The value 0.5701 exceeds 0.5700 by 0.0001 and is greater than the remaining two values.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-15",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 12-kg solution contains 10% salt by mass. Only water evaporates, leaving 8 kg of solution. What is the new salt percentage?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "12%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "15%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "20%"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Salt remains 0.10×12=1.2 kg. The new base is 8 kg, giving 1.2/8=15%. Using the lost water or the original total as denominator is incorrect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-16",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A box contains 40 red and 20 blue tokens. How many red tokens must be removed and replaced by the SAME number of blue tokens to make the two colours equally numerous?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "15"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "30"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "With x replacements, red=40−x and blue=20+x. Equality gives 2 x=20, so x=10. Removing 20 without accounting for the added blues overshoots.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-17",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The mean of 8 readings was recorded as 26. One reading had been entered as 41 instead of 17. What is the corrected mean?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "22"
+      },
+      {
+        "choiceId": "c2",
+        "text": "24"
+      },
+      {
+        "choiceId": "c3",
+        "text": "25"
+      },
+      {
+        "choiceId": "c4",
+        "text": "23"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The erroneous sum is 208. Correcting it subtracts 24, leaving 184; 184/8=23. The mean falls by 24/8, not by 24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-18",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A price increases by 25%, then decreases by 20% of the increased price. Compared with its original price, the final price is what?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5% higher"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5% lower"
+      },
+      {
+        "choiceId": "c3",
+        "text": "unchanged"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10% higher"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The multiplier is 1.25×0.80=1. The two percentages have different bases, so their signed difference is not the net change.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-19",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A train moves at a constant speed. It takes 12 seconds to pass a stationary pole, measured from the front reaching the pole until the rear clears it. It takes 30 seconds to pass a 180-metre platform, measured from the front reaching the near end until the rear clears the far end. What is the train’s length?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "72 metres"
+      },
+      {
+        "choiceId": "c2",
+        "text": "120 metres"
+      },
+      {
+        "choiceId": "c3",
+        "text": "180 metres"
+      },
+      {
+        "choiceId": "c4",
+        "text": "300 metres"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Passing the pole covers one train length in 12 seconds. Passing the platform covers that same length plus 180 metres in 30 seconds. Therefore the extra 18 seconds cover 180 metres, so the speed is 10 metres per second and the train length is 12×10=120 metres. Using 180/30 treats the platform as the whole passing distance; using 300 confuses the combined distance with the train length.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-20",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A delivery fee is PHP 55 for up to 2 kg plus PHP 18 for EACH additional kilogram or fraction of one. What is the fee for a 4.2-kg parcel?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 91"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 94.60"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 109"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 127"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The excess is 2.2 kg, charged as 3 additional units. Fee=55+3×18=109. Neither rounding down nor charging the base kilograms again follows the tariff.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-21",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 10 m by 6 m rectangular lawn has a 1-m-wide path OUTSIDE it on all four sides. What is the area of the path?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "32 m²"
+      },
+      {
+        "choiceId": "c2",
+        "text": "36 m²"
+      },
+      {
+        "choiceId": "c3",
+        "text": "40 m²"
+      },
+      {
+        "choiceId": "c4",
+        "text": "96 m²"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Outer dimensions are 12 by 8, so path area=96−60=36 m². The corners must be counted once; multiplying the original perimeter by width omits them.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-22",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A completion rate rises from 40% to 50%. What is the relative percentage increase in the completion rate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "20%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "125%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25%"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The gain is 10 percentage points, which is 10/40=25% of the original rate. Dividing by 50 uses the wrong base.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-23",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Mira is three times her cousin's age now. In 6 years she will be twice the cousin's age. How old is Mira now?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "12 years"
+      },
+      {
+        "choiceId": "c2",
+        "text": "18 years"
+      },
+      {
+        "choiceId": "c3",
+        "text": "24 years"
+      },
+      {
+        "choiceId": "c4",
+        "text": "30 years"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "If the cousin is x, then 3 x+6=2(x+6), giving x=6 and Mira=18. Apply the time shift to both people.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-24",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A printing order costs a fixed setup charge plus a constant cost per copy. 100 copies cost PHP 460; 160 copies cost PHP 640. What would 220 copies cost under the same terms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 820"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 880"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 1,012"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 1,100"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The extra 60 copies cost 180, or PHP 3 each. Another 60 therefore adds 180 to 640, giving 820. Scaling the entire bill also scales the fixed setup incorrectly.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-25",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Six workers finish 1/3 of a job in 4 days at equal constant rates. Nine workers then finish the remaining work. How many MORE days do they need?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4 days"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8 days"
+      },
+      {
+        "choiceId": "c3",
+        "text": "16/3 days"
+      },
+      {
+        "choiceId": "c4",
+        "text": "32/3 days"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "One third costs 24 worker-days, so the remaining two thirds costs 48 worker-days. Nine workers need 48/9=16/3 days. The first four days are already over.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-26",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A machine alternates “add 3” then “multiply by 2”, starting with add 3. Its FIFTH recorded value is 82. What was its FIRST value?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "14"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16"
+      },
+      {
+        "choiceId": "c3",
+        "text": "17"
+      },
+      {
+        "choiceId": "c4",
+        "text": "19"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "From x the values are x, x+3,2 x+6,2 x+9,4 x+18. Thus 4 x+18=82, so x=16. Reverse the operations in reverse order:82÷2−3 gives 38; 38÷2−3 gives 16. Reversing in the forward order gives a different start.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-27",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A whole number leaves remainder 4 when divided by 9. Its quotient from that division leaves remainder 2 when divided by 5. What remainder does the original number leave when divided by 45?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "14"
+      },
+      {
+        "choiceId": "c2",
+        "text": "22"
+      },
+      {
+        "choiceId": "c3",
+        "text": "24"
+      },
+      {
+        "choiceId": "c4",
+        "text": "29"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Write the quotient as 5 k+2. The number is 9(5 k+2)+4=45 k+22, so the remainder is 22.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-28",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A parcel charge is PHP 40 plus PHP 7 per item. At most PHP 100 may be spent. What is the greatest whole number of items that can be sent?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10"
+      },
+      {
+        "choiceId": "c4",
+        "text": "14"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "40+7 n≤100 means n≤60/7. The greatest allowable integer is 8; 9 costs PHP 103.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-29",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Of 70 participants, 38 joined art, 45 joined music, and 9 joined neither. How many joined BOTH art and music?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "13"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16"
+      },
+      {
+        "choiceId": "c3",
+        "text": "22"
+      },
+      {
+        "choiceId": "c4",
+        "text": "29"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The union contains 70−9=61. Inclusion–exclusion gives overlap=38+45−61=22. Subtracting from all 70 ignores the nine outside both groups.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-30",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A 4-L jug is 3/4 full and a 6-L jug is 1/3 full. Their contents are poured into an empty 10-L vessel. What fraction of the vessel is filled?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "13/24"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7/12"
+      },
+      {
+        "choiceId": "c3",
+        "text": "3/5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/2"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The jugs contain 3 L and 2 L, totaling 5 L. Against the 10-L capacity this is 1/2; averaging the original fractions ignores their different capacities.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-31",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A machine signals every 8 minutes beginning at 09:00. Another signals every 12 minutes beginning at 09:04. What is their first simultaneous signal at or after 09:00?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "09:12"
+      },
+      {
+        "choiceId": "c2",
+        "text": "09:16"
+      },
+      {
+        "choiceId": "c3",
+        "text": "09:24"
+      },
+      {
+        "choiceId": "c4",
+        "text": "09:28"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "First-machine times are 09:00, :08, :16, :24. Second-machine times are :04, :16, :28. The first common time is :16; the starts are offset, so adding the LCM to 09:00 fails.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-32",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A blend contains 3 kg of grain costing PHP 42/kg and 2 kg costing PHP 57/kg. Ignoring other costs, what is the blend's cost per kilogram?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 48"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 49.50"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 51"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 99"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Total cost is 126+114=240 for 5 kg, hence 48/kg. The unweighted mean assumes equal masses.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-33",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A square photograph is enlarged so that every length becomes 150% of the original. By what percentage does its AREA increase?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "50%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "75%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "125%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "225%"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Area is multiplied by 1.5²=2.25. The increase is 2.25−1=1.25=125%, while 225% is the new area as a percentage of the old.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-34",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "After spending 2/5 of her money and then receiving PHP 90, Ina has PHP 330. How much did she have before spending?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 360"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 400"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 550"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 700"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Before receiving 90 she had 240, which is 3/5 of the original. Thus original=240×5/3=400.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-35",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A register lists 120 applicants. Fifteen withdraw before testing. Of the remaining applicants, 84 pass. What percentage of those who actually take the test pass?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "65%"
+      },
+      {
+        "choiceId": "c2",
+        "text": "70%"
+      },
+      {
+        "choiceId": "c3",
+        "text": "75%"
+      },
+      {
+        "choiceId": "c4",
+        "text": "80%"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Those tested number 120−15=105; 84/105=80%. Using all registered applicants as the denominator gives 70%, a different rate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-36",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Pack A contains 4 chairs and 2 tables for PHP 900; Pack B contains 6 chairs and 1 table for PHP 800. Only whole packs can be bought, and surplus is allowed. What is the least cost of obtaining at least 26 chairs AND at least 8 tables?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 4,900"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 5,000"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 5,100"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 5,200"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Let a, b be nonnegative integer pack counts: 4 a+6 b≥26 and 2 a+b≥8. For a=0,1,2,3,4 the minimum b is 8,6,4,3,2, giving costs 6400,5700,5000,5100,5200. For a≥5 cost is at least 4500 and a=5 still needs b=1 (5300); a≥6 costs at least 5400. Thus a=2, b=4 is cheapest. A chair-only or table-only check admits invalid cheaper packs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-37",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A 100-L tank contains 20 kg of salt in a uniformly mixed solution. Remove x litres and refill with fresh water. Mix fully, remove x litres AGAIN, and add x litres of solution containing 0.30 kg of salt per litre. Volumes add. The final salt mass is exactly 18.8 kg. Which is the COMPLETE set of possible x, given 0<x<50?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "20 L only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "30 L only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "20 L or 30 L"
+      },
+      {
+        "choiceId": "c4",
+        "text": "25 L only"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "After two removals the original salt remaining is 20(1−x/100)². The final addition contributes 0.30 x. Hence 20(1−x/100)²+0.30 x=18.8, or x²−50 x+600=0. This factors as(x−20)(x−30)=0. Both 20 and 30 satisfy the domain and the original mass equation; choosing only one root is incomplete.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-38",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "For a whole number n of printed pages, 1≤n≤250, Plan A costs PHP 200 plus PHP 3 per page. Plan B costs PHP 6 per page for the first 100 pages and PHP 2 per page thereafter, with no fixed fee. For how many possible values of n is A STRICTLY cheaper than B?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "132"
+      },
+      {
+        "choiceId": "c2",
+        "text": "133"
+      },
+      {
+        "choiceId": "c3",
+        "text": "134"
+      },
+      {
+        "choiceId": "c4",
+        "text": "184"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "For n≤100, 200+3 n<6 n gives n≥67. For n>100, B=600+2(n−100)=400+2 n; A<B gives n<200. Thus qualifying integers are 67 through 199 inclusive, totaling 133. The equality at 200 is excluded, and the tariff changes after 100.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-39",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A whole number n is between 100 and 300 inclusive. Dividing n by 7 leaves remainder 2; dividing it by 9 leaves remainder 4. What is the sum of ALL possible n?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "368"
+      },
+      {
+        "choiceId": "c2",
+        "text": "489"
+      },
+      {
+        "choiceId": "c3",
+        "text": "552"
+      },
+      {
+        "choiceId": "c4",
+        "text": "615"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Writing n=7 k+2 gives 7 k≡2(mod 9), so k≡8(mod 9). Hence n≡58(mod 63). In the interval the values are 121,184,247, totaling 552. Stopping at one congruence or one candidate misses solutions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-40",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Pumps A and B can each fill an empty tank alone in 12 and 18 hours respectively. They start together at their constant rates. When the tank is half full, B slows to TWO THIRDS of its original rate; A is unchanged. No water is lost. What is the total filling time, rounded to the nearest minute?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "432 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "450 minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "465 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "486 minutes"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The first half takes(1/2)/(1/12+1/18)=18/5 hours. The second-half rate is 1/12+(2/3)(1/18)=13/108, so it takes 54/13 hours. Total=504/65 hours=465.23 minutes, rounding to 465. Applying the slowdown for the whole job or interpreting two thirds as a two-thirds loss gives the wrong time.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-41",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A club has between 20 and 60 members inclusive. Attendance is reported as 67% after rounding the exact attendance percentage to the nearest whole percent (halfway values upward). Five NEW members then join and all five attend, while every original member's attendance status stays the same. The new rounded rate is 70%. What is the SMALLEST possible original membership?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "36"
+      },
+      {
+        "choiceId": "c2",
+        "text": "39"
+      },
+      {
+        "choiceId": "c3",
+        "text": "42"
+      },
+      {
+        "choiceId": "c4",
+        "text": "45"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Let n be membership and a attendance. Require 66.5≤100 a/n<67.5 and 69.5≤100(a+5)/(n+5)<70.5. Testing integer n from 20 upward gives no solution below 39; n=39, a=26 gives 66.666…% and 31/44=70.4545…%, which round as stated. Nearby n=36, a=24 yields 29/41=70.7317…%, rounding 71, not 70. Exact fractions 2/3 and 7/10 are not required.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-numerical-42",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five DISTINCT positive integer scores have sum 51. Their range (largest minus smallest) is at most 12, and exactly TWO scores are even. What is the greatest possible median?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "11"
+      },
+      {
+        "choiceId": "c2",
+        "text": "12"
+      },
+      {
+        "choiceId": "c3",
+        "text": "13"
+      },
+      {
+        "choiceId": "c4",
+        "text": "14"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Write a<b<c<d<e. Since a+b≥3 and d+e≥2 c+3, the total 51 bounds c≤15. For c≥14, d≥15, e≥16, while a+b≤51−(14+15+16)=6, so a≤2; then e−a≥14 violates the range 12. Thus c≤13. The list 3,6,13,14,15 totals 51, has range 12 and exactly two even scores, achieving median 13. Higher offered medians violate the range; lower ones are feasible but not greatest.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

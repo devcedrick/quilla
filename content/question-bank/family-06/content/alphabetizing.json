@@ -1,0 +1,392 @@
+[
+  {
+    "questionId": "f06-alphabetizing-01",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Sort these records under this rule: Letter-by-letter; ignore spaces and hyphens; ignore case. Records: Sea View; Seabird; Sea-Air; Seaside. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Sea-Air → Seaside → Seabird → Sea View"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Sea-Air → Seabird → Sea View → Seaside"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Sea-Air → Seabird → Seaside → Sea View"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Seabird → Sea-Air → Seaside → Sea View"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are ['seaair', 'seabird', 'seaside', 'seaview']. Thus the full order is Sea-Air → Seabird → Seaside → Sea View. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-02",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Sort these records under this rule: Word-by-word; ignore case; a shorter complete word sorts before a longer word starting with it. Records: Oak Grove; Oakridge; Oak Bay; Oak Hill. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Oak Bay → Oak Hill → Oak Grove → Oakridge"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Oak Bay → Oak Grove → Oakridge → Oak Hill"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Oak Bay → Oak Grove → Oak Hill → Oakridge"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Oak Grove → Oak Bay → Oak Hill → Oakridge"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [['oak', 'bay'], ['oak', 'grove'], ['oak', 'hill'], ['oakridge']]. Thus the full order is Oak Bay → Oak Grove → Oak Hill → Oakridge. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-03",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Sort these records under this rule: Compare surname, then given name; ignore case. Names are displayed surname, given. Records: Mora, Lina; Mora, Leo; Moran, Lia; Moral, Luis. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Mora, Leo → Moral, Luis → Mora, Lina → Moran, Lia"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Mora, Leo → Mora, Lina → Moran, Lia → Moral, Luis"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Mora, Leo → Mora, Lina → Moral, Luis → Moran, Lia"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Mora, Lina → Mora, Leo → Moral, Luis → Moran, Lia"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [['mora', 'leo'], ['mora', 'lina'], ['moral', 'luis'], ['moran', 'lia']]. Thus the full order is Mora, Leo → Mora, Lina → Moral, Luis → Moran, Lia. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-04",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Sort these records under this rule: Letter-by-letter; ignore spaces, apostrophes and hyphens; ignore case. Records: Dela Rosa; Del-Arco; D'Elia; Delos Reyes. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Del-Arco → D'Elia → Dela Rosa → Delos Reyes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Del-Arco → Dela Rosa → Delos Reyes → D'Elia"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Del-Arco → Dela Rosa → D'Elia → Delos Reyes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Dela Rosa → Del-Arco → D'Elia → Delos Reyes"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are ['delarco', 'delarosa', 'delia', 'delosreyes']. Thus the full order is Del-Arco → Dela Rosa → D'Elia → Delos Reyes. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-05",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Sort these records under this rule: Word-by-word; ignore initial The; ignore case; shorter equal-prefix words first. Records: The Maple Room; Maplewood Office; Maple Annex; The Maple Archive. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Maple Annex → The Maple Room → The Maple Archive → Maplewood Office"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Maple Annex → The Maple Archive → Maplewood Office → The Maple Room"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Maple Annex → The Maple Archive → The Maple Room → Maplewood Office"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The Maple Archive → Maple Annex → The Maple Room → Maplewood Office"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [['maple', 'annex'], ['maple', 'archive'], ['maple', 'room'], ['maplewood', 'office']]. Thus the full order is Maple Annex → The Maple Archive → The Maple Room → Maplewood Office. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-06",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Sort these records under this rule: Compare surname, then given name; ignore titles Dr and Ms; ignore case. Names displayed title given surname. Records: Dr Mira Soto; Ms Mina Soto; Dr Mina Sotto; Ms Miro Soto. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Ms Mina Soto → Ms Miro Soto → Dr Mira Soto → Dr Mina Sotto"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Ms Mina Soto → Dr Mira Soto → Dr Mina Sotto → Ms Miro Soto"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ms Mina Soto → Dr Mira Soto → Ms Miro Soto → Dr Mina Sotto"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Dr Mira Soto → Ms Mina Soto → Ms Miro Soto → Dr Mina Sotto"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [('soto', 'mina'), ('soto', 'mira'), ('soto', 'miro'), ('sotto', 'mina')]. Thus the full order is Ms Mina Soto → Dr Mira Soto → Ms Miro Soto → Dr Mina Sotto. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-07",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Sort these records under this rule: Letter-by-letter; ignore punctuation and spaces; keep all letters including initial articles; ignore case. Records: A-One Supply; An Office; A New Office; A North Office. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A New Office → A North Office → An Office → A-One Supply"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A New Office → An Office → A-One Supply → A North Office"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A New Office → An Office → A North Office → A-One Supply"
+      },
+      {
+        "choiceId": "c4",
+        "text": "An Office → A New Office → A North Office → A-One Supply"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are ['anewoffice', 'anoffice', 'anorthoffice', 'aonesupply']. Thus the full order is A New Office → An Office → A North Office → A-One Supply. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-08",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Sort these records under this rule: Sort by surname then given name, ignoring case; treat compound surnames as displayed, including spaces, word-by-word. Names displayed surname, given. Records: De Leon, Paz; De Lima, Ana; De Leon, Pia; Del Mundo, Ada. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "De Leon, Paz → De Lima, Ana → De Leon, Pia → Del Mundo, Ada"
+      },
+      {
+        "choiceId": "c2",
+        "text": "De Leon, Paz → De Leon, Pia → Del Mundo, Ada → De Lima, Ana"
+      },
+      {
+        "choiceId": "c3",
+        "text": "De Leon, Paz → De Leon, Pia → De Lima, Ana → Del Mundo, Ada"
+      },
+      {
+        "choiceId": "c4",
+        "text": "De Leon, Pia → De Leon, Paz → De Lima, Ana → Del Mundo, Ada"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [('de leon', 'paz'), ('de leon', 'pia'), ('de lima', 'ana'), ('del mundo', 'ada')]. Thus the full order is De Leon, Paz → De Leon, Pia → De Lima, Ana → Del Mundo, Ada. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-09",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Sort these records under this rule: Remove initial The and titles Dr or Ms; then compare letter-by-letter ignoring punctuation/spaces and case; break identical normalized names by ascending numeric record ID. Records: R 4: The Bay View; R 2: Bay-View; R 3: Ms Bay Vista; R 1: Dr Bay View. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R1: Dr Bay View → R4: The Bay View → R2: Bay-View → R3: Ms Bay Vista"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R1: Dr Bay View → R2: Bay-View → R3: Ms Bay Vista → R4: The Bay View"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R1: Dr Bay View → R2: Bay-View → R4: The Bay View → R3: Ms Bay Vista"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2: Bay-View → R1: Dr Bay View → R4: The Bay View → R3: Ms Bay Vista"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [('bayview', 1), ('bayview', 2), ('bayview', 4), ('bayvista', 3)]. Thus the full order is R 1: Dr Bay View → R 2: Bay-View → R 4: The Bay View → R 3: Ms Bay Vista. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-alphabetizing-10",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Sort these records under this rule: Compare surname then given name, letter-by-letter ignoring punctuation/spaces and case; break identical names by ascending numeric ID. Records displayed ID: surname, given. Records: R 3: Al-Rami, Jo; R 1: Al Rami, Jo; R 4: Alrami, Jon; R 2: Al-Rami, Jan. Which complete order is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2: Al-Rami, Jan → R3: Al-Rami, Jo → R1: Al Rami, Jo → R4: Alrami, Jon"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2: Al-Rami, Jan → R1: Al Rami, Jo → R4: Alrami, Jon → R3: Al-Rami, Jo"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R2: Al-Rami, Jan → R1: Al Rami, Jo → R3: Al-Rami, Jo → R4: Alrami, Jon"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R1: Al Rami, Jo → R2: Al-Rami, Jan → R3: Al-Rami, Jo → R4: Alrami, Jon"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Normalization and comparison keys in sorted order are [('alrami', 'jan', 2), ('alrami', 'jo', 1), ('alrami', 'jo', 3), ('alrami', 'jon', 4)]. Thus the full order is R 2: Al-Rami, Jan → R 1: Al Rami, Jo → R 3: Al-Rami, Jo → R 4: Alrami, Jon. Alternatives reverse at least one required comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

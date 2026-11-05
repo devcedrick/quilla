@@ -1,0 +1,782 @@
+[
+  {
+    "questionId": "f05-clerical-01",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local attachment rule: label a photocopy certified by an authorized officer as C; label an uncertified photocopy as P. An attachment is a photocopy bearing that certification. Which label applies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "O"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "N"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The stated certification makes the photocopy C. It remains a photocopy; certification does not turn it into an original. P is reserved for an uncertified copy.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-02",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local rule: employee identifiers are TEXT and every written character must be preserved. The source identifier is 00482. Which entry follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "00482"
+      },
+      {
+        "choiceId": "c2",
+        "text": "482"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0482"
+      },
+      {
+        "choiceId": "c4",
+        "text": "004820"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The leading zeros are part of the text identifier. Removing one or both zeros, or appending another character, changes the identifier.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-03",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a fictional index, SEE directs the user to REPLACE the current heading with a preferred heading; SEE ALSO merely suggests a related heading. A record says“Repairs—SEE Maintenance”. Where should it be filed?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Both Repairs and Maintenance"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Repairs only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Related headings only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Maintenance"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "SEE names the preferred replacement heading, so file under Maintenance. Treating it as SEE ALSO would incorrectly keep the original heading as primary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-04",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local signature pattern: a surname followed by a comma, a space, and one given-name initial with a period. For Cora Velez, which signature matches?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "C.Velez"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Velez, C."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Velez C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Velez, Cora"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Velez, C. places the surname first and includes the required comma, space and single initial with a period. The other forms omit a required separator or use a full given name.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-05",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local archive range: a folder marked“Received 01–15 June”contains records received on either endpoint and every date between. Which receipt belongs there?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "31 May"
+      },
+      {
+        "choiceId": "c2",
+        "text": "16 June"
+      },
+      {
+        "choiceId": "c3",
+        "text": "15 June"
+      },
+      {
+        "choiceId": "c4",
+        "text": "30 June"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The range is inclusive, so 15 June belongs. The dates before 1 June or after 15 June lie outside it; this is a receipt-date filing convention.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-06",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "An office’s printed locker label is case-sensitive: the authorized label is AbC. Which copied label is an exact match?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Upper-lower-upper pattern: AbC"
+      },
+      {
+        "choiceId": "c2",
+        "text": "All uppercase pattern: ABC"
+      },
+      {
+        "choiceId": "c3",
+        "text": "All lowercase pattern: abc"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Lower-upper-lower pattern: aBc"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Case-sensitive means every character, including upper/lower case, must match. Only AbC preserves the printed pattern.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-07",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local backlog counts every unfinished case, assigned or unassigned. There are 7 unassigned and 4 assigned cases. Five new cases arrive, two finished cases are reopened, and three cases are completed. Four unfinished cases are reassigned between workers. What is the final backlog?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "11"
+      },
+      {
+        "choiceId": "c2",
+        "text": "12"
+      },
+      {
+        "choiceId": "c3",
+        "text": "19"
+      },
+      {
+        "choiceId": "c4",
+        "text": "15"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Initial backlog is 7+4=11. New and reopened cases add 5+2, while completions remove 3:11+7−3=15. Reassignment changes the worker, not whether the case is unfinished, and must not be counted as a new arrival or completion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-08",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local search pattern Report_*.pdf means: start withReport_, end with.pdf, and let*match zero or more characters. Ignore case. Which pair BOTH match?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "ReportA.pdf; report_.PDF"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Report_A.pdf; report_.PDF"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Report_A.pdf; Report_A.pdf.bak"
+      },
+      {
+        "choiceId": "c4",
+        "text": "ReportA.pdf; Report_A.pdf.bak"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Report_A.pdf has the required prefix and suffix; report_.PDF also qualifies because*may be empty and case is ignored. ReportA.pdf lacks the underscore; the.bak filename has the wrong ending. Each incorrect pair retains at least one mismatch.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-09",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local queue: urgent files precede normal ones; any file aged at least 3 days is treated as urgent. Within the resulting category, older age comes first, then alphabetical ID. A:urgent, age 1; B:normal, age 3; C:urgent, age 3; D:normal, age 2. What is the complete queue?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "B, C, A, D"
+      },
+      {
+        "choiceId": "c2",
+        "text": "C, B, A, D"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A, B, C, D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B, A, C, D"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "B is promoted to urgent. B and C then tie at age 3, so B precedesC by ID. A is urgent but younger; D remains normal. Sorting by the original category alone misses the escalation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-10",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local batch rule: include receipts at or before 17:00 local time on that date; later receipts enter the next date’s batch. Local time is exactly 8 hours ahead of the UTC timestamp. On 4 August, a receipt is timestamped 09:10 UTC. Which batch applies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4 August,09:10"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4 August,17:10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "5 August"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3 August"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "09:10 UTC becomes 17:10 on 4 August locally. It is ten minutes after the cutoff, so it enters 5 August’s batch. The display time itself is not a batch label, and subtracting the offset reverses the stated convention.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-11",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local packing rule: compartmentR holds signed originals; compartmentS holds certified copies; compartmentT holds uncertified copies. PacketX is an unsigned original, PacketY a certified copy, and PacketZ a signed original. Unsigned originals must stay on HOLD. Which complete routing is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "X→R, Y→S, Z→HOLD"
+      },
+      {
+        "choiceId": "c2",
+        "text": "X→HOLD, Y→T, Z→R"
+      },
+      {
+        "choiceId": "c3",
+        "text": "X→S, Y→HOLD, Z→R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "X→HOLD, Y→S, Z→R"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "X lacks the signature required for R and stays on hold. Y is certified and goes to S; Z is signed and goes to R. Each alternative misroutes at least one document while retaining some correct classifications.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-12",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An order is for 12 items. Ten arrive, including 2 damaged items; 2 ordered items have not arrived. Local acknowledgement must state quantity received, damage within that quantity, and outstanding quantity separately. Which entry is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Received 8; damaged 2; outstanding 4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Received 10; damaged 2; outstanding 2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Received 12; damaged 2; outstanding 0"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Received 10; damaged 0; outstanding 2"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Received means physically arrived, so it includes the 2 damaged items:10 received, of which 2 are damaged, and 2 not yet arrived. Treating damaged items as unreceived double-counts the shortfall.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-13",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local response-time policy counts minutes from request to successful retrieval, EXCLUDING only waits for the requester. Waits caused by the office still count; a failed search does not stop the clock. A request arrives at 09:00. The office waits for the requester from 09:10 to 09:25 and has its own internal hold from 09:30 to 09:40. A failed search is logged at 09:20; successful retrieval is at 10:05. How many minutes are reportable?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "50"
+      },
+      {
+        "choiceId": "c2",
+        "text": "40"
+      },
+      {
+        "choiceId": "c3",
+        "text": "45"
+      },
+      {
+        "choiceId": "c4",
+        "text": "65"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The full request-to-retrieval interval is 65 minutes. Only the 15-minute requester wait is excluded, giving 50. The 10-minute internal hold still counts. Excluding both waits gives 40; starting from the failed search gives 45; ignoring exclusions gives 65.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-14",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two double-sided originals contain pages 1/2 and 3/4 respectively. A scanner outputs both fronts first in original order, then both backs in REVERSE original order. The output is therefore 1,3,4,2. Fixed scan labelsS1–S4 identify these output positions. Which label sequence restores page order 1,2,3,4?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "S1, S2, S4, S3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "S1, S3, S2, S4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "S1, S4, S2, S3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "S1, S4, S3, S2"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "S1 is page 1, S4 page 2, S2 page 3, and S3 page 4. Restoring the page numbers gives S1, S4, S2, S3. Labels identify scan records, not answer-choice positions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-15",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four physical folders A, B, C, D bear labels 11,12,13,14 respectively, but EVERY label is wrong. The four actual documents have those four codes, one per folder. The register also says B’s actual code is exactly 1 less than D’s, and A’s code is lower than C’s. Which complete correction(A, B, C, D) fits?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(12,11,14,13)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(13,11,14,12)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(14,11,13,12)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(12,13,14,11)"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "All codes must occur once and none can match its current folder label. The assignment(13,11,14,12) satisfies these conditions, B+1=D, and A’s code is below C’s. The assignment(12,11,14,13) breaks the consecutive-code condition; (14,11,13,12) leavesC’s label correct and breaksA’s code is below C’s; (12,13,14,11) also breaksB+1=D. Enumerating the permitted assignments leaves only the keyed mapping.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-16",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Fictional release policy: a reviewed file may be sent only to its owning unit, unless an ACTIVE delegation names the receiving unit. Delegations expire at the stated time; expiry itself is NOT active. Personal email is never permitted. At 15:00, reviewed fileP belongs toWest and has delegation toEast expiring 16:00; reviewedQ belongs toNorth and has delegation toEast expiring 15:00. Proposed sends: PtoEast official email, PtoWest personal email, QtoEast official email, QtoNorth official email. Which complete set is allowed?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P→East; Q→East"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P→West personal; Q→North"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P→East; Q→North"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P→East; P→West personal; Q→North"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "P’s East delegation is active at 15:00 and official email is permitted. Personal email blocks the West send despite ownership. Q’s East delegation has expired at 15:00, but its North official send needs no delegation. Thus only P→East and Q→North meet every rule; ownership, delegation time and communication channel must all be assessed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-17",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Choose a 20-minute meeting slot. It needs at least TWO of P, Q, R available for the ENTIRE interval, plus secretaryS and the room. P:09:00–10:00; Q:09:15–09:45; R:09:30–10:30; S:09:20–10:30. Room:09:00–09:40 and 10:00–10:30. An interval may end exactly when availability ends. Which slot works?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "09:15–09:35"
+      },
+      {
+        "choiceId": "c2",
+        "text": "09:25–09:45"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10:00–10:20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "09:20–09:40"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "09:20–09:40 has P, Q, S and the room throughout. 09:15–09:35 begins beforeS is available. 09:25–09:45 outlasts the first room interval. 10:00–10:20 has S and room, but only R remains available for the whole interval, below the two-person quorum. Each rival meets several conditions but fails a different one.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-18",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A duplex packet must preserve numbered pages 1–7 in order. A one-page unnumbered insert comes immediately AFTER page 1; it occupies the FRONT of its OWN sheet, whose back must remain blank. Page 2 must be on a BACK face and page 3 on the following sheet’s FRONT. Page 5 begins a new section and must be on a FRONT. The packet starts with page 1 on a FRONT. Other blank faces are allowed; no sheet may carry more than two faces. What is the MINIMUM number of sheets?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Sheet 1 carries page 1 and a blank back because the insert must follow. Sheet 2 carries the insert and its required blank back. Sheet 3 needs a blank front and page 2 on its back. Sheet 4 carries pages 3/4; sheet 5 pages 5/6; sheet 6 page 7 with a blank back. This six-sheet layout satisfies the opening and section-face rules. Five sheets cannot accommodate the forced blank front before page 2 in addition to the other mandatory blanks.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-19",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local available-funds rule: cash balance minus OUTSTANDING reservations. Start withPHP 1000 cash and no reservations. ReservePHP 300 for A; payPHP 120 fromcash againstA, reducingA’s reservation by 120; cancelPHP 80 of A’s unspent reservation; reservePHP 200 for B; receive aPHP 20 refund of an earlier payment. A refund restorescash but does NOT reopen any reservation. What funds are available?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 480"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 580"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 600"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 700"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "After payment, cash=880 and A’s outstanding reservation=180. Cancellation reducesA to 100; B adds 200, so total reservations=300. The refund makescash 900 without increasing reservations. Available=900−300=600. Deducting the paid 120 again double-counts it; treating the refund as a new reservation incorrectly leaves 580.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-clerical-20",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local verified-hours rule: for EACH person, merge overlapping intervals, count no time twice, exclude 12:00–13:00 lunch, and then cap the person’s credited total at 5 hours. Sum the credited totals across people. Verified intervals: P09:00–12:00 and 11:00–16:00; Q10:00–13:00 and 12:00–15:00. What is the total credit?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8 hours"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9 hours"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10 hours"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12 hours"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "P’s union is 09:00–16:00, seven hours; excluding lunch leaves 6, capped to 5. Q’s union is 10:00–15:00, five hours; excluding lunch leaves 4, below the cap. Sum 5+4=9 hours. Adding raw intervals double-counts overlaps; excluding lunch without the individual cap gives 10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

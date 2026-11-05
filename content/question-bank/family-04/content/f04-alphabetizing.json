@@ -1,0 +1,392 @@
+[
+  {
+    "questionId": "f04-alphabetizing-01",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare words letter by letter, ignoring case. A shorter exact prefix comes first.\nR1: ferry\nR2: fern\nR3: fertile\nR4: ferret\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R1, R2, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R4, R1, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R2, R1, R4, R3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R2, R1, R3"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "All begin fer. fern has n, before r in ferret/ferry and t in fertile. Between ferret and ferry, e precedes y. Thus R2, R4, R1, R3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-02",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "File by surname, then given name; names are written Surname, Given. Ignore case and commas. A shorter exact field comes first.\nR1: Abao, Luz\nR2: Abad, Mila\nR3: Abad, Lina\nR4: Abao, Lia\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R2, R4, R1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R3, R4, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R2, R1, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R3, R1, R4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Abad precedes Abao. Within Abad, Lina precedes Mila; within Abao, Lia precedes Luz. Thus R3, R2, R4, R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-03",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local index rule: replace a leading numeral 1 with One, 2 with Two, and 3 with Three before filing. Then compare the resulting names word by word, ignoring case; within a word compare letters alphabetically. A shorter exact word comes first.\nR1: 3 Oaks Unit\nR2: 2 Bays Unit\nR3: 1 Elm Unit\nR4: 3 Alders Unit\nWhich complete filing sequence follows this rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R4, R1, R2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R1, R4, R2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R4, R2, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R2, R4, R1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Expand the leading numerals to obtain Three Oaks Unit, Two Bays Unit, One Elm Unit and Three Alders Unit. Alphabetically One precedes Three, which precedes Two. Within the Three group, Alders precedes Oaks. Thus R3, R4, R1, R2. Numeric order would place Two before Three and violate the stated filing convention.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-04",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare letter by letter after removing spaces, hyphens and apostrophes; ignore case. Do not expand any word.\nR1: Rock Bay\nR2: Rock-Bank\nR3: Roc Kaba\nR4: Rockbar\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R1, R2, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R2, R4, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R4, R2, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R2, R1, R4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Normalized strings are rockbay, rockbank, rockaba, rockbar. rockaba comes first; then rockbank, rockbar, rockbay by n, r, y. Thus R3, R2, R4, R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-05",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Drop initial A, An or The only when it is a separate word. Then compare word by word, ignoring case; shorter exact words come first.\nR1: The Anvil Desk\nR2: An Amber Desk\nR3: A Anchor Desk\nR4: The Amber Desks\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R4, R3, R1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R3, R4, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R2, R3, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R4, R1, R3"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "After dropping articles, compare Amber Desk, Amber Desks, Anchor Desk, Anvil Desk. Desk precedes Desks; Amber precedes Anchor and Anvil. Thus R2, R4, R3, R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-06",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare word by word after expanding Dept. to Department. Ignore periods and case. Do not alter any other words. Shorter exact words come first.\nR1: Dept. Art\nR2: Departmental Aid\nR3: Department Arts\nR4: Dept. Archive\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R3, R1, R2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R1, R2, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R1, R3, R2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R2, R1, R3"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Expanded Department precedes Departmental. Within Department, Archive precedes Art, and Art precedes Arts as a shorter exact word. Thus R4, R1, R3, R2.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-07",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "File by surname then given name, as written around the comma. Ignore case, spaces and apostrophes WITHIN each field; keep surname particles in place. If both fields tie, use ascending numeric staff ID.\nR1: Van Dae, Li; ID12\nR2: Vandae, Li; ID3\nR3: Van Dam, Lia; ID1\nR4: Van Dae, Lia; ID8\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R1, R4, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R1, R2, R4, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R2, R4, R1, R3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R1, R3, R4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "R1/R2 share normalized surname vandae and given name li; numeric 3 precedes 12. Lia follows Li, and vandam follows vandae. Thus R2, R1, R4, R3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-08",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Treat abbreviations literally. Compare word by word, ignoring periods and case. A shorter exact word comes first; spaces stay word boundaries.\nR1: C. D. Supply\nR2: Cedar Depot\nR3: C. Depot Supply\nR4: C. D. Supplies\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R1, R4, R3, R2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R3, R1, R2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R1, R2, R3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R1, R3, R2"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The first word C precedes Cedar. In C names, second word D precedes Depot. Between Supplies and Supply, i precedes y. Thus R4, R1, R3, R2.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-09",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Drop an initial The. Expand St. to Saint ONLY at the start of the remaining name. Then remove spaces, periods and hyphens and compare letter by letter, ignoring case. If normalized names tie, use ascending numeric branch.\nR1: The St. Elmo Hall; branch 14\nR2: Saint-Elmo Hall; branch 2\nR3: St. Elm Hall; branch 7\nR4: Saint Elmo Hall Annex; branch 1\nR5: Stanton Hall; branch 3\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R1, R2, R4, R5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R2, R1, R4, R5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R2, R4, R1, R5"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R4, R2, R1, R5"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "R3 normalizes saintelmhall, before saintelmohall because h precedes o. R1/R2 tie as saintelmohall and branch 2 precedes 14. R4 extends that name and follows both; stantonhall follows saint… names. Thus R3, R2, R1, R4, R5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f04-alphabetizing-10",
+    "version": 1,
+    "family": 4,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "File surname first, given name second, then ascending numeric ID. Ignore initial titles Dr./Ms./Mr.; remove spaces, hyphens and apostrophes within each name field; ignore case. Do NOT expand initials. A shorter exact field precedes its extension.\nR1: Dr. De-Sil, An; ID20\nR2: Ms. Desil, Ana; ID1\nR3: Mr. De Sil, An; ID4\nR4: Dr. Desila, A; ID2\nR5: Ms. De'Sil, A; ID30\nR6: Mr. Desil, An; ID12\nWhich complete sequence is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R5, R3, R1, R6, R2, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R5, R3, R6, R2, R1, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R5, R3, R6, R1, R2, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R5, R6, R3, R1, R2, R4"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "All but R4 have surname desil; R4 desila follows them. Within desil, A precedes An, and An precedes Ana. The three An records use IDs 4,12,20. Thus R5, R3, R6, R1, R2, R4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; deterministic solution checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

@@ -1,0 +1,1642 @@
+[
+  {
+    "questionId": "f05-analytical-logic-01",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the relation property to what is equal: EQUILATERAL : SIDE LENGTHS :: EQUIANGULAR : ?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Angle measures"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Total area"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Number of sides"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Perimeter"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Equilateral describes equal side lengths; equiangular describes equal angle measures. Neither word asserts a fixed area, perimeter or number of sides.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-02",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A measured amount is BELOW its target. Which description expresses the same directional relationship?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A surplus relative to the target"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A shortfall relative to the target"
+      },
+      {
+        "choiceId": "c3",
+        "text": "An amount equal to the target"
+      },
+      {
+        "choiceId": "c4",
+        "text": "A target below the measured amount"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "A shortfall is a deficit below the target. Surplus and the reversed comparison put the measured amount above it; equality removes the difference.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-03",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Match each operation with the operation that undoes it for EVERY real input: MULTIPLY BY4 : DIVIDE BY4 :: ADD9 : ?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Multiply by9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Divide by9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Subtract9"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Add−4"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Subtracting9 undoes adding9. Multiplication/division by9 do not restore every input;adding−4 removes a different amount.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-04",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local number grid uses this complete rule: each row’s third entry equals its first entry minus its second. One row is [13,5,?]. What completes it?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "5"
+      },
+      {
+        "choiceId": "c2",
+        "text": "8"
+      },
+      {
+        "choiceId": "c3",
+        "text": "13"
+      },
+      {
+        "choiceId": "c4",
+        "text": "18"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The supplied subtraction rule gives13−5=8. Addition18 uses a different rule;13 and5 merely copy entries.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-05",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "R and S are unequal. S and T are equal. Which comparison follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R equals T"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R differs from T"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R must exceed T"
+      },
+      {
+        "choiceId": "c4",
+        "text": "T must exceed R"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Substituting T for the equal S preserves R’s inequality. Unequal does not specify which value is greater.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-06",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A notice admits people aged AT LEAST18. No maximum age is stated. Which age meets that one condition?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "16"
+      },
+      {
+        "choiceId": "c2",
+        "text": "17"
+      },
+      {
+        "choiceId": "c3",
+        "text": "18"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No age can be checked without a maximum"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "At least includes the boundary18. A missing upper limit does not prevent checking the lower bound.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-07",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Two whole-number labels are both odd. What is the parity of their sum?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Always odd"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Always even"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Odd only when they differ"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Impossible to determine"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Write them2a+1 and2b+1;the sum is2(a+b+1),even. Equal versus different labels does not alter this.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-08",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Today is Sunday. What day is it10 days AFTER today, counting tomorrow as day1?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Tuesday"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Wednesday"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Thursday"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Friday"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Seven days returns to Sunday;three more reaches Wednesday. Counting today as day1 shifts the answer incorrectly.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-09",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The claim “Exactly ONE of the two lamps is on” is false. Which list gives ALL possible on/off patterns?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Both on or both off"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Both on only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both off only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "One on and one off"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Failure of exactly one permits zero or two on. Each single-pattern answer excludes another possible case;one on is precisely the rejected claim.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-10",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Box X is wholly inside box Y, and Y is wholly inside box Z. None of the boxes crosses a containing box’s boundary. What must hold?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Z is wholly inside X"
+      },
+      {
+        "choiceId": "c2",
+        "text": "X is wholly inside Z"
+      },
+      {
+        "choiceId": "c3",
+        "text": "X and Z have equal size"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Y is outside Z"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Containment composes:every part of X lies within Y and hence Z. The converse and equal size do not follow.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-11",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A circular face has twelve equally spaced marks numbered1–12 clockwise,with12 initially at the top. The ENTIRE face is rotated by a half-turn. The printed mark3 arrives at the location originally occupied by which mark?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "6"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9"
+      },
+      {
+        "choiceId": "c4",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A half-turn moves a mark six of the twelve equal intervals. Starting at3 and advancing six positions reaches the original9 location. The numerals rotate with the face;they are not independently relabelled.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-12",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A competition ranks scores using1,2,2 for the first three entrants: tied entrants share a rank and the next rank skips the places occupied by that tie. What is the next rank?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Three places are occupied, so the next entrant is fourth. Dense ranking would give3, but the stated competition convention explicitly skips occupied places.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-13",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A fictional display marks an item visible exactly when it is public OR it has a guest exemption, but a safety block overrides BOTH permissions. K is public and blocked; L is private, exempt and unblocked; M is public, unblocked and not exempt. Which items are visible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "K and L"
+      },
+      {
+        "choiceId": "c2",
+        "text": "L and M"
+      },
+      {
+        "choiceId": "c3",
+        "text": "M only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "K and M"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "K fails the overriding block despite being public. L qualifies by exemption;M by public status. A guest exemption is an alternative permission, not a requirement for every visible item.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-14",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three tasters make pairwise choices with no assumed consistency rule. A majority prefers P to Q;another majority prefers Q to R. Which further result is logically possible?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A majority prefers R to P"
+      },
+      {
+        "choiceId": "c2",
+        "text": "No comparison of R and P can ever be made"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Every taster must prefer P to R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P and R must tie"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Different people can form the majorities. For example rankings P>Q>R,Q>R>P,R>P>Q produce P>Q,Q>R and R>P by two votes each. Majority preference need not be transitive;neither a tie nor individual unanimity is forced.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-15",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An engineer proposes that a loose cover causes a sound. In one test the cover is held still AND the fan is switched off,and the sound stops. Which follow-up best distinguishes the proposed cover cause from the simultaneous fan change?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Hold the cover still while keeping the fan operating"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Hold the cover still and switch the fan off again"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Leave the cover unchanged and switch both the fan and a nearby pump off"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Compare a different machine with its cover held still and its fan off"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Holding the cover still while keeping the original fan operating tests the proposed cover effect without the competing fan intervention. Repeating both changes preserves confounding. Adding a pump intervention creates another possible cause,and using a different machine changes the object as well as both interventions. The original joint intervention alone does not separate cover and fan effects.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-16",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four posts P,Q,R,S lie at distinct points on a straight line. Q is between P and R;R is between Q and S. Which pair MUST be the two outermost posts?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P and S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P and R"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q and S"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Q and R"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The only possible directions are P–Q–R–S and its reversal S–R–Q–P. Thus P/S are the endpoints. Neither between-statement alone fixes both endpoints among all four.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-17",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A beacon switches on at some instant from09:01 through09:04 inclusive,and switches off at some instant from09:05 through09:08 inclusive. It stays on continuously from its switch-on time up to,but NOT including,its switch-off time. Which interval is guaranteed to be entirely ON in EVERY permitted timeline?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "09:04 inclusive to09:05 exclusive"
+      },
+      {
+        "choiceId": "c2",
+        "text": "09:01 inclusive to09:08 exclusive"
+      },
+      {
+        "choiceId": "c3",
+        "text": "09:01 inclusive to09:05 exclusive"
+      },
+      {
+        "choiceId": "c4",
+        "text": "09:04 inclusive to09:08 exclusive"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The latest possible start is09:04,so earlier times are not guaranteed on. The earliest possible end is09:05,and the end instant is excluded,so09:05 and later are not guaranteed on. Exactly[09:04,09:05)is contained in every possible on-interval. Each wider rival admits a start or end counterexample.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-18",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every parcel in rack A has a numbered tag. Exactly one parcel in rack A is fragile. Is a fragile parcel with a numbered tag guaranteed to exist?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Yes, the unique fragile rack-A parcel supplies a witness"
+      },
+      {
+        "choiceId": "c2",
+        "text": "No, universal statements can never have witnesses"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Yes, and every numbered-tag parcel must be fragile"
+      },
+      {
+        "choiceId": "c4",
+        "text": "No, because the fragile parcel might be outside rack A"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Exactly one fragile parcel IN rack A establishes existence;the rack rule gives it a numbered tag. This does not make every numbered parcel fragile or put the witness outside A. The existential premise,not the universal alone,supplies the object.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-19",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A device independently chooses red or blue with probability1/2 each on every trial. A session stops immediately on its first blue,or after trial3 if no earlier blue occurs. Which pair gives the probabilities of(1)a session lasting EXACTLY two trials,and(2)a session lasting three trials with its final result RED?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1/4 and1/8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1/2 and1/4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1/4 and1/4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1/8 and1/8"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Exactly two trials requires red then blue,probability(1/2)²=1/4. Three trials ending red requires red/red/red,probability(1/2)³=1/8;an earlier blue would stop the session. The probability of reaching three trials regardless of its last colour is1/4,a different event. Both independence and the stopping rule matter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-20",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rooted tree has parent links O→A,O→B,A→C,A→D,B→E,D→F;an arrow goes from parent to child and these are ALL links. Which is the nearest common ancestor of C and F?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "O"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A"
+      },
+      {
+        "choiceId": "c3",
+        "text": "D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "C descends from A directly;F descends through D from A. O is common but farther away;D is not an ancestor of C and B is on another branch.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-21",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rewriting machine first replaces nonoverlapping AA pairs, scanning LEFT TO RIGHT, with B. It then replaces nonoverlapping BB pairs,left to right,with A. Characters not in replaced pairs remain. What is the result on AAAAAA?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "AB"
+      },
+      {
+        "choiceId": "c2",
+        "text": "BA"
+      },
+      {
+        "choiceId": "c3",
+        "text": "AAA"
+      },
+      {
+        "choiceId": "c4",
+        "text": "BBB"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The first complete pass maps three AA pairs to BBB. The second replaces its first BB with A and leaves the third B, yielding AB. BBB stops after one pass;AAA wrongly treats overlapping BB pairs as independent.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-22",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A token begins at1. A move adds4 or subtracts6, but the result must remain an integer from1 through9. Moves may repeat. Which list gives ALL reachable positions,including the start?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1,3,5,7,9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1,5,9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1,3,5,7"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1,2,3,4,5,6,7,8,9"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "All moves preserve oddness,excluding every even value. The path1→5→9→3→7 reaches all five odd positions and stays in range. Parity alone is not enough to justify a smaller list;the exhibited path establishes every listed possibility.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-23",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For an unknown integer n from0 through10,two forecasts are computed: F=2n+5 and G=30−n. A report correctly states BOTH that F is greater than G and that F is at most23. What is n?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "9"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either9 or10"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "F>G gives3n>25,so integer n≥9. F≤23 gives2n≤18,so n≤9. Together n=9. The comparison alone leaves9/10;the ceiling alone leaves8 among others. Thus neither clause can be skipped.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-24",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A pair of sensors is summarised GREEN when both report PASS,RED when both report FAIL,and AMBER when their reports differ. Three sensors1,2,3 are tested once each. The summary for pair(1,2)is AMBER,and the summary for pair(2,3)is also AMBER. Which relation must hold?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Sensors1 and3 agree,and sensor2 differs from each"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Sensors1 and3 differ,and sensor2 agrees with1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "All three report PASS"
+      },
+      {
+        "choiceId": "c4",
+        "text": "All three report FAIL"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "If sensor2 passes,the amber pairs force1 and3 to fail. If sensor2 fails,both1 and3 pass. Thus the only report patterns are F/P/F and P/F/P:the end sensors agree and the middle differs. Either amber pair alone would leave the third sensor undetermined.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-25",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rule requires exactly one of X and Y,AND at least one of Y and Z. Z is absent. Which selection of X/Y/Z satisfies both requirements?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "X only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Y only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "X and Y"
+      },
+      {
+        "choiceId": "c4",
+        "text": "None selected"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "With Z absent,the second rule requires Y. Exactly one of X/Y then excludes X. X alone fails the second rule;both violates the first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-26",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In Site1,method P succeeds8/10 and Q succeeds3/5. In Site2,P succeeds1/5 and Q succeeds3/10. Across BOTH sites,which comparison is correct?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P has a higher combined success rate despite Q winning at Site2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q has a higher combined success rate despite P winning at Site1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both have the same combined rate"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Site1’s result alone determines the combined comparison"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P totals9/15=60%;Q6/15=40%,so P leads overall. Q does better at Site2(30%vs20%)while P wins Site1(80%vs60%). Neither single-site comparison fixes an aggregate without its counts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-27",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A register has100 distinct respondents:20 answered yes,30 no,and50 have no recorded answer. Each missing answer,if recovered,would be either yes or no. What is the tight range for the true YES percentage among all100?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "20% through70% inclusive"
+      },
+      {
+        "choiceId": "c2",
+        "text": "20% through50% inclusive"
+      },
+      {
+        "choiceId": "c3",
+        "text": "40% through100% inclusive"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Exactly40%"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Known yes20 is the minimum if all50 missing are no;maximum70 if all are yes. Both endpoints are attainable. Forty percent describes yes among the50 recorded responses,not a guaranteed full-register rate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-28",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An argument says a box contains more than two red balls because it contains three striped balls. Which extra premise makes that argument valid?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Every striped ball in this box is red"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Every red ball in this box is striped"
+      },
+      {
+        "choiceId": "c3",
+        "text": "At least one striped ball is red"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The box contains at least three balls"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "If all three striped balls are red,there are at least three red balls. The converse allows striped nonred balls;one overlap supplies only one red,while total ball count supplies no colour.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-29",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three shuttle trips carry4,5,and6 different passengers respectively;these are counts WITHIN each trip. Everyone on trip1 also rode trip3. Nobody on trip2 rode trip3. How many DISTINCT people rode at least one of the three trips?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9"
+      },
+      {
+        "choiceId": "c2",
+        "text": "11"
+      },
+      {
+        "choiceId": "c3",
+        "text": "15"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The information cannot fix a number"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Trip1 adds no new people beyond trip3 because its passenger set is contained there. Trip2 and trip3 are disjoint,so their union has5+6=11. Trip1 cannot overlap trip2 either,because all its passengers are on trip3. Adding4+5+6 counts the trip1 passengers twice.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-30",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A word classifier first DELETES every occurrence of any letter that appears more than once in the ORIGINAL word. It then labels the remaining string LONG if it has at least5 letters,and DISTINCT if no letter repeats. Ignore case. Apply it separately to LEVEL,TICKET,STATION. Which originals produce a result that is BOTH LONG and DISTINCT?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "STATION only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "TICKET and STATION"
+      },
+      {
+        "choiceId": "c3",
+        "text": "LEVEL and STATION"
+      },
+      {
+        "choiceId": "c4",
+        "text": "All three"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "LEVEL loses all L and E,leaving V. TICKET loses both T,leaving ICKE. STATION loses both T,leaving SAION. The remainders have1,4,5 letters respectively and are all distinct,so only STATION is also LONG. Removing just one copy instead of every occurrence would wrongly preserve length in TICKET or LEVEL.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-31",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For this fictional comparison,repeatability is measured by the RANGE of three readings(smaller is better);mean accuracy is measured by the absolute difference between their MEAN and the known true value(smaller is better). The true value is50. Method A gives48,48,49;method B gives45,50,55. Which paired assessment follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A is more repeatable;B has the more accurate mean"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A is more repeatable;A has the more accurate mean"
+      },
+      {
+        "choiceId": "c3",
+        "text": "B is more repeatable;B has the more accurate mean"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B is more repeatable;A has the more accurate mean"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A’s range is1 versus B’s10,so A is more repeatable. A’s mean is48⅓,1⅔ from50;B’s mean is50,zero from truth. Thus the mean-accuracy ordering reverses. A narrow spread alone does not establish a correct central value.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-32",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two fictional cities use24-hour clocks. City B is exactly5 hours BEHIND city A. Both calendars have30 days in Month V,followed immediately by Month W. A traveller departs A at23:15 on V30 and arrives B at01:45 on W1. All times are local to the named city. The trip lasts less than24 hours. What is its elapsed time?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2 hours30 minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5 hours"
+      },
+      {
+        "choiceId": "c3",
+        "text": "7 hours30 minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "26 hours30 minutes"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "B’s arrival01:45 onW1 corresponds to A’s06:45 onW1. From A23:15 V30 to A06:45 W1 is7h30m. Subtracting displayed clock values without the5-hour offset gives2h30m;the month boundary is a next-day transition,not an extra24 hours beyond that.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-33",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Fill a4×4 grid with1,2,3,4,each exactly once per row AND column. The fixed rows,where ? is unknown,are [1,?,?,4];[?,4,1,?];[?,1,4,?];[4,?,?,1]. Additionally,the entry in row1,column2 PLUS the entry in row2,column1 equals5. Which list gives ALL possible ordered pairs(row1,column2;row3,column4)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(2,3) or (3,2)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(2,2) or (3,3)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(2,3) only"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(3,2) only"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Before the sum clue,the missing2/3 choices in the first and second rows give four Latin grids. The sum clue retains exactly those with(r1c2,r2c1)=(2,3) or(3,2). Column constraints then force r3c4=3 or2 respectively. Both pairs occur in complete grids;neither single-pair alternative is exhaustive. The verifier enumerates all row permutations and column restrictions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-34",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Each of A,B,C,D is either a truth-speaker or a liar. Truth-speakers make true statements and liars false ones. A says:“Exactly one of B and C is a truth-speaker.” B says:“A or D is a truth-speaker”(inclusive or). C says:“B is a liar.” D says:“Exactly THREE of us four are truth-speakers.” Which list gives ALL consistent types,in A/B/C/D order,where T means truth-speaker and L liar?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "T,T,L,L and T,T,L,T"
+      },
+      {
+        "choiceId": "c2",
+        "text": "T,T,L,L only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "T,L,T,L and T,T,L,T"
+      },
+      {
+        "choiceId": "c4",
+        "text": "T,T,L,T only"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Check all16 type assignments against the truth of each speaker’s own statement. The only fixed points are T,T,L,L and T,T,L,T. In each,B is true and C false;A’s exactly-one claim is true. D’s statement is false when there are two truth-speakers and true when there are three. Omitting either self-consistent D case is incomplete.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-35",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four different objects A,B,C,D have DISTINCT whole-number masses selected from1,2,3,4,5 units. A balance shows A+B equal to C plus a1-unit weight. Another shows A+C equal to B+D. D is heavier than B. What is the COMPLETE mass assignment(A,B,C,D)?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(3,2,4,5)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(2,4,5,3)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(2,3,4,5)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(2,1,3,4)"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Equations a+b=c+1 and a+c=b+d give d=2a−1. With distinct masses1–5,a cannot1 and is at most3. If a2,d3,the additional d>b rule leaves b1 or2,which duplicate a mass or make c=a. Thus a3,d5;testing b below5 distinct from3 leaves b2,c4. Every offered assignment uses distinct allowed masses:the(2,4,5,3)case satisfies both balances but reverses d>b;(2,3,4,5)satisfies only the first balance;(2,1,3,4)satisfies only the second. All conditions must therefore be checked.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-36",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A3×3 panel has nine binary cells,each either0 or1. Row totals from top to bottom are2,1,2;column totals left to right are1,2,2. The main diagonal(top-left,centre,bottom-right)totals2. Which list contains ALL cells that MUST be1? Use(r,c)for row,column.",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "(1,2) and (3,3)"
+      },
+      {
+        "choiceId": "c2",
+        "text": "(1,2) and (2,2)"
+      },
+      {
+        "choiceId": "c3",
+        "text": "(2,2) and (3,3)"
+      },
+      {
+        "choiceId": "c4",
+        "text": "(1,3) and (3,3)"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Exhausting all512 panels leaves two: rows011/010/101 and110/001/011. Their common1 cells are exactly(1,2)and(3,3). Centre1 occurs only in the first;top-right1 only in the first;the other variable cells cannot be called necessary. Both all row/column totals and the diagonal are enforced.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-37",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two unmarked jugs hold exactly7 L and4 L. Initially both are empty. One move either fills ONE jug from the tap,empties ONE jug,or pours from one jug into the other until the source is empty or the destination full. No partial fill,partial empty or early-stop pour is allowed. What is the fewest moves to obtain exactly5 L in either jug?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "6"
+      },
+      {
+        "choiceId": "c2",
+        "text": "7"
+      },
+      {
+        "choiceId": "c3",
+        "text": "8"
+      },
+      {
+        "choiceId": "c4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "A shortest path uses eight moves:fill4;pour4→7;fill4;pour4→7;empty7;pour4→7;fill4;pour4→7. The resulting(7-jug,4-jug)states are(0,4),(4,0),(4,4),(7,1),(0,1),(1,0),(1,4),(5,0). Breadth-first search over all permitted states finds no5-L state through seven moves. Measuring a partial amount by sight is outside the move rules.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-38",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Eight teams have distinct seeds1(best)through8. A knockout bracket begins with1vs8,4vs5,2vs7,3vs6. The winners of the first TWO matches meet in one semifinal;the winners of the last TWO meet in the other;semifinal winners meet in the final. There are no draws. An UPSET means the larger seed number beats the smaller. Exactly THREE of all seven matches are upsets,and seed5 is champion. Which list gives ALL possible final opponents of5?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2 only"
+      },
+      {
+        "choiceId": "c2",
+        "text": "3 only"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2 or3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "6 or7"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Seed5 first upsets4. In its semifinal,either it upsets1,or8 previously upset1 and then loses normally to5;both paths use two upsets in that half. If the final opponent is2 or3,5 beating it adds a third upset,so the OTHER half must have no upsets. With no upsets,that half is won by seed2,not3. For6 or7 to win that half requires at least two upsets,already exceeding the available count even if5 wins the final normally. Thus only opponent2 is possible;both the global upset count and the bracket are needed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-39",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "In the addition AB+BA=CDC,letters stand for digits;different letters mean different digits,and A,B,C are nonzero. AB and BA are two-digit numbers and CDC is a three-digit number. Also A is even and A>B. Which list contains ALL possible numbers AB?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "65 or83"
+      },
+      {
+        "choiceId": "c2",
+        "text": "47 or65"
+      },
+      {
+        "choiceId": "c3",
+        "text": "65 or74"
+      },
+      {
+        "choiceId": "c4",
+        "text": "74 or83"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The sum is11(A+B),at most187 with distinct digits,so C=1. Divisibility by11 forces1−D+1=0,so D=2. Hence A+B=11. Excluding digits1/2 and requiring even A>B leaves A6,B5 or A8,B3:65/83. Both produce121. Alternatives either make A odd or reverse A>B. The carry into the hundreds and all-different restriction are essential.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-analytical-logic-40",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Five products A–E are ranked best-to-worst on THREE independent criteria. Durability:A,B,C,D,E. Portability:A,B,C,E,D. Repairability:C,D,E,A,B. Add the three rank numbers(1=best);the LOWEST sum wins. If a product is withdrawn,it is removed from ALL three lists and each remaining list is renumbered from1 with no gaps. Which single withdrawal,excluding the original winner,changes the UNIQUE winner?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Withdraw B"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Withdraw C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Withdraw D"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Withdraw E"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Originally rank sums are A6,B9,C7,D11,E12,so A wins. Removing B produces A6,C5,D9,E10,so C wins. Removing C gives A5,B8,D8,E9;removing D gives A5,B8,C7,E10;removing E gives A5,B8,C7,D10. Thus A still uniquely wins in those three cases. Removing a low-ranked product can change other criteria’s relative rank gaps,so merely deleting its old sum is not a valid recalculation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and finite-model author checks; separate AI reviewer evidence recorded in family05-analytical-review.md; human approval and learner calibration pending",
+      "sources": [
+        "Original complete fictional Family 05 premises and mathematical relations, authored 2026-11-03. No actual CSC examination material."
+      ]
+    }
+  }
+]

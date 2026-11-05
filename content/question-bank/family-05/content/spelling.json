@@ -1,0 +1,419 @@
+[
+  {
+    "questionId": "f05-spelling-01",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is the correctly spelled word?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "assesment"
+      },
+      {
+        "choiceId": "c2",
+        "text": "assessment"
+      },
+      {
+        "choiceId": "c3",
+        "text": "assessmant"
+      },
+      {
+        "choiceId": "c4",
+        "text": "asessment"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Assessment has double s in both the initial assess and the second ss sequence; the ending is ment. The other forms omit an s or replace the ending vowel.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword assessment; https://www.dictionary.com/browse/assessment; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-02",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the correctly spelled word in“The clerk attached an ___.”",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "ammandment"
+      },
+      {
+        "choiceId": "c2",
+        "text": "amendement"
+      },
+      {
+        "choiceId": "c3",
+        "text": "ammendment"
+      },
+      {
+        "choiceId": "c4",
+        "text": "amendment"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "The headword is amendment, formed from amend plus ment. The other forms double a consonant unnecessarily or insert/change a vowel.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword amendment; https://www.dictionary.com/browse/amendment; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-03",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which correctly spells the noun in“The named ___ signed the form”?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "beneficiary"
+      },
+      {
+        "choiceId": "c2",
+        "text": "benificiary"
+      },
+      {
+        "choiceId": "c3",
+        "text": "beneficary"
+      },
+      {
+        "choiceId": "c4",
+        "text": "beneficiaryy"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Beneficiary retains bene and the sequence ici before ary. The alternatives change a vowel, omit i, or add a final y.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword beneficiary; https://www.dictionary.com/browse/beneficiary; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-04",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only:“The collaterel list contains a discrepency.” Which pair corrects BOTH misspellings?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "collateral; discrepency"
+      },
+      {
+        "choiceId": "c2",
+        "text": "collaterel; discrepancy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "collateral; discrepancy"
+      },
+      {
+        "choiceId": "c4",
+        "text": "collaterral; discrepancy"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Collateral ends ateral, not aterel; discrepancy ends ancy, not ency. Crossed pairs leave one error; collaterral adds an extra r.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword collateral; https://www.dictionary.com/browse/collateral; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword discrepancy; https://www.dictionary.com/browse/discrepancy; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-05",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only:“The reimbursment relates to a liabilty.” Which replacement pair repairs BOTH forms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "reimbursement; liability"
+      },
+      {
+        "choiceId": "c2",
+        "text": "reimbursement; liabilty"
+      },
+      {
+        "choiceId": "c3",
+        "text": "reimbursment; liability"
+      },
+      {
+        "choiceId": "c4",
+        "text": "reimburssement; liability"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Reimbursement preserves the e in reimburse before ment. Liability includes the i after l. Each other pair leaves an original omission or adds an unwarranted s.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword reimbursement; https://www.dictionary.com/browse/reimbursement; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword liability; https://www.dictionary.com/browse/liability; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-06",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread the three numbered forms:(1) procurement,(2) expendature,(3) procuremant. Which COMPLETE set contains the misspelled forms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1 and 2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 and 3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "None"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2 and 3"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Procurement is already correct. Expendature must become expenditure, and procuremant must become procurement. Therefore only forms 2 and 3 need correction; the correct form 1 must be preserved.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword procurement; https://www.dictionary.com/browse/procurement; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword expenditure; https://www.dictionary.com/browse/expenditure; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-07",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only:“The adjournmant followed the written endorsment.” Which pair corrects BOTH forms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "adjournment; endorsment"
+      },
+      {
+        "choiceId": "c2",
+        "text": "adjournment; endorsement"
+      },
+      {
+        "choiceId": "c3",
+        "text": "adjournmant; endorsement"
+      },
+      {
+        "choiceId": "c4",
+        "text": "adjourment; endorsement"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Adjournment has the ending ment and keeps the n before m. Endorsement retains the e in endorse. The variants indorse and indorsement are not offered as errors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword adjournment; https://www.dictionary.com/browse/adjournment; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword endorsement; https://www.dictionary.com/browse/endorsement; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-08",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Edit ONLY misspelled tokens in this list:(1) memorandum,(2) apendix,(3) memoranda,(4) appendixes. Which instruction is complete?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Correct 2 to appendix; leave 1,3,4 unchanged"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Correct 2 to appendix and 3 to memorandums"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Correct 2 to appendix and 4 to appendices"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Correct 3 to memorandums and 4 to appendices"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Only apendix is misspelled; its correct form is appendix. Memoranda and memorandums are both accepted plurals of memorandum, and appendixes and appendices are both accepted plurals of appendix. Changing either already-correct plural violates the instruction to edit only misspellings. The source pages verify these inflected forms as well as the headwords.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword memorandum; https://www.dictionary.com/browse/memorandum; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword appendix; https://www.dictionary.com/browse/appendix; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-09",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread ALL four tokens:(1) complience,(2) compliance,(3) contingency,(4) contingincy. How many tokens require spelling corrections?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "None"
+      },
+      {
+        "choiceId": "c2",
+        "text": "One"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Two"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Three"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Two corrections are needed:complience→compliance andcontingincy→contingency. Compliance andcontingency are already correct and must remain. Counting only one word family misses an error; changing a correctly spelled token adds an unnecessary edit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword compliance; https://www.dictionary.com/browse/compliance; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword contingency; https://www.dictionary.com/browse/contingency; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-spelling-10",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "spelling",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Proofread spelling only:“The jursidiction note includes an authorizaton.” Which pair repairs BOTH forms?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "jurisdiction; authorizaton"
+      },
+      {
+        "choiceId": "c2",
+        "text": "jursidiction; authorization"
+      },
+      {
+        "choiceId": "c3",
+        "text": "juristiction; authorization"
+      },
+      {
+        "choiceId": "c4",
+        "text": "jurisdiction; authorization"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Jurisdiction keeps the sequence risdic; authorization includes the i in ation. Each other pair retains a transposition/omission or changes d to t. The accepted British spelling authorisation is deliberately not offered as an error.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": [
+        "Dictionary.com, headword jurisdiction; https://www.dictionary.com/browse/jurisdiction; retrieved 2026-11-03; verifies spelling; original sentences and distractors.",
+        "Dictionary.com, headword authorization; https://www.dictionary.com/browse/authorization; retrieved 2026-11-03; verifies spelling; original sentences and distractors."
+      ]
+    }
+  }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "questionId": "f02-vocabulary-filipino-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Salat sa kagamitan ang pagawaan kaya nanghiram ito ng kasangkapan. Ano ang kahulugan ng SALAT dito?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Kulang"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Marumi"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Malawak"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Mabagal"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Kakulangan ng kagamitan ang dahilan ng panghihiram. Hindi nito tuwirang inilalarawan ang kalinisan, sukat, o bilis.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://kwfdiksiyonaryo.ph/?query=sal%C3%A1t; headword and applicable sense checked 2026-11-01; bilingual editorial review still pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-filipino-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Masinop mag-ingat ng resibo si Elen; bawat isa ay may petsa at lagayan. Ano ang MASINOP sa konteksto?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Matulin at padalos-dalos"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Mahigpit ngunit pabaya"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Matahimik ngunit malilimutin"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Maingat at maayos"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang paglalagay ng petsa at wastong lagayan ay nagpapakita ng kaayusan at pag-iingat, hindi lamang katahimikan o higpit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://kwfdiksiyonaryo.ph/?query=mas%C3%ADnop; headword and applicable sense checked 2026-11-01; bilingual editorial review still pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-filipino-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Lantad sa sinuman ang nakapaskil na talaan. Ano ang kasalungat ng LANTAD sa gamit na ito?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Nakalista"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Nakalimbag"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Nakatago"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Nakasulat"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Lantad ang nakikita o hayag. Ang nakatago ang kabaligtaran; maaaring nakalimbag ang isang talaan ngunit lantad pa rin.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://kwfdiksiyonaryo.ph/?query=lant%C3%A1d; headword and applicable sense checked 2026-11-01; bilingual editorial review still pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-filipino-04",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Pinili ni Ada na PUMANIG sa mungkahing may sapat na ebidensiya, hindi sa grupong kaibigan niya. Alin ang pinakamalapit na kahulugan?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Nagpaliban ng pagpupulong"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Sumuporta sa isang panig"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Umiwas sa anumang pasiya"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Nagtala lamang ng pangalan"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Pumanig ang pagpili o pagsuporta sa isang panig. Ang batayan ay ebidensiya, kaya hindi ipinahihiwatig ang awtomatikong pagkiling sa kaibigan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://kwfdiksiyonaryo.ph/?query=panig; headword and applicable sense checked 2026-11-01; bilingual editorial review still pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-vocabulary-filipino-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Salungat ang dalawang ulat: sinasabi ng isa na bukas ang daan at ng isa na sarado ito sa parehong oras. Ano ang ugnayan ng SALUNGAT dito?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Hindi maaaring parehong wasto sa ibinigay na oras at kahulugan"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Magkaiba lamang ang pagkakasulat ngunit iisa ang pahayag"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Kapwa walang anumang detalye"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Parehong kailangang tanggapin bilang tiyak"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Sa iisang daan at oras, magkasalungat ang bukas at sarado. Hindi sapat ang pagkakaiba ng estilo upang ipaliwanag ang tunggalian.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md.",
+        "https://kwfdiksiyonaryo.ph/?query=salung%C3%A1t; headword and applicable sense checked 2026-11-01; bilingual editorial review still pending."
+      ]
+    }
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "referenceId": "f01-seedlings",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Community seedlings distributed",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-seedlings-chart",
+        "caption": "Seedlings distributed from January through June",
+        "alt": "Bar chart of seedlings distributed from January to June.",
+        "description": "January: 20; February: 30; March: 40; April: 35; May: 50; June: 60 seedlings."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "referenceId": "f01-nursery-composition",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Seedling nursery records",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-nursery-composition-image",
+        "caption": "Seedling nursery records",
+        "alt": "Seedling nursery records",
+        "description": "May: 50 total seedlings, native trees 60%, other trees 40%. June: 60 total seedlings, locally raised 75%, externally raised 25%."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "referenceId": "f01-river-patrol",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "River patrol distance",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-river-patrol-image",
+        "caption": "River patrol distance",
+        "alt": "River patrol distance",
+        "description": "Kilometres patrolled: January 24, February 32, March 48, April 40, May 56, June 72."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "referenceId": "f01-club-allocations",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "School club seedling allocations",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-club-allocations-image",
+        "caption": "School club seedling allocations",
+        "alt": "School club seedling allocations",
+        "description": "Garden Club 12 seedlings; Science Club 18; Nature Club unknown. Mean per club 15 seedlings."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  },
+  {
+    "referenceId": "f01-nursery-allocations",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Nursery seedling allocations",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-nursery-allocations-image",
+        "caption": "Nursery seedling allocations",
+        "alt": "Nursery seedling allocations",
+        "description": "North 5 seedlings, East 8, South 12, West unknown. Mean per nursery 10 seedlings. Total seedlings available 60."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted drafting; maintainer review pending",
+      "sources": ["Reference images batch 1; see batch ledger"]
+    }
+  }
+]

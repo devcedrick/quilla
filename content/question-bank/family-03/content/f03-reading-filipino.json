@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f03-reading-filipino-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Saan dapat isumite ang piyesa?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sa bulwagan tuwing Sabado"
+      },
+      {
+        "choiceId": "b",
+        "text": "Sa silid ng samahan hanggang Biyernes"
+      },
+      {
+        "choiceId": "c",
+        "text": "Sa tagapangasiwa ng bulwagan anumang araw"
+      },
+      {
+        "choiceId": "d",
+        "text": "Sa entablado bago ang pagtatanghal"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Tahasang inilaan ang silid ng samahan sa pagsusumite. Lugar at araw ng ensayo ang Sabado sa bulwagan; hindi iyon ang itinakdang paraan ng pagsusumite.",
+    "reference": {
+      "referenceId": "f03-reading-filipino-01-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-filipino-02",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang pangunahing tungkulin ng paglipat mula 'bato' tungong 'bintana'?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mula sa pananahimik tungo sa hayagang pagsasalita"
+      },
+      {
+        "choiceId": "b",
+        "text": "Mula sa hindi pagkakasundo tungo sa ganap na paglutas nito"
+      },
+      {
+        "choiceId": "c",
+        "text": "Mula sa paglalarawan sa bahay tungo sa paglalarawan sa ama"
+      },
+      {
+        "choiceId": "d",
+        "text": "Mula sa hadlang tungo sa daan ng pag-unawa"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Nagbago ang pagtingin ni Sela sa parehong katahimikan: mula sa hadlang tungo sa daan ng pag-unawa. Hindi nagbago ang katahimikan sa malakas na pagsasalita, at hindi ipinahayag na nalutas na ang lahat ng suliranin. Bato at bintana ang mga talinghaga sa katahimikan, hindi paglalarawan sa materyales ng bahay.",
+    "reference": {
+      "referenceId": "f03-reading-filipino-02-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-filipino-03",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Anong pagkakaiba ang binibigyang-diin?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Katumpakan ng timbangan, hindi katapatan ng nanghiram"
+      },
+      {
+        "choiceId": "b",
+        "text": "Pagkakaiba ng lumang kagamitan at makabagong pagtitimbang"
+      },
+      {
+        "choiceId": "c",
+        "text": "Pagmamay-ari ng timbangan, hindi kalidad ng panimbang"
+      },
+      {
+        "choiceId": "d",
+        "text": "Pagpapatunay ng pandaraya, hindi pagsusuri ng kasangkapan"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang katumpakan ng timbangan ang pinatutunayan bago muling gamitin, hindi ang katapatan ng nanghiram. Walang paghahambing ng luma at makabagong teknolohiya o usapin ng pagmamay-ari. Ang pagsusuri sa kasangkapan ay hindi pa patunay ng pandaraya.",
+    "reference": {
+      "referenceId": "f03-reading-filipino-03-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-filipino-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling paliwanag ang kumikilala sa pahintulot, sa natitirang kondisyon at sa saklaw ng pagtanggi?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "May pahintulot na kaya malaya nang gamitin ang sinulid; tala lamang ang kulang at hindi ito kondisyon."
+      },
+      {
+        "choiceId": "b",
+        "text": "Walang bisa ang pahintulot dahil wala ang tagatala; hindi na maaaring gamitin ang bagong kulay kailanman."
+      },
+      {
+        "choiceId": "c",
+        "text": "May pahintulot na ngunit kulang ang bagong tala; ipinagpapaliban ang paggamit, hindi ipinagbabawal ang kulay."
+      },
+      {
+        "choiceId": "d",
+        "text": "Kulang ang bagong tala kaya dapat ulitin ang lahat ng order; sakop ng pagtanggi pati ang hindi nakalaang sinulid."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Magkasamang kondisyon ang pahintulot at bagong tala para sa nakalaang sinulid. Natugunan ang una, hindi ang ikalawa. Paggamit muna ang ipinagpapaliban, hindi permanenteng kulay o lahat ng ibang sinulid.",
+    "reference": {
+      "referenceId": "f03-reading-filipino-04-passage",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-filipino-05",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling pagtataya ang pinakamatibay na nabubuo mula sa pagsubok, layunin at hindi pa nasusuring bahagi ng pagmamarka?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Hindi sapat ang pagtatago ng pangalan para sa pare-parehong pamantayan; kailangang subukin pa ang paglalapat ng gabay."
+      },
+      {
+        "choiceId": "b",
+        "text": "Pinatutunayan ng magkaibang marka na walang pakinabang ang pagtatago ng pangalan; dapat ibalik ito bago subukin ang gabay."
+      },
+      {
+        "choiceId": "c",
+        "text": "Natutukoy ang problema sa pamantayan; ang pagkakasundo sa pulong ay sapat nang patunay ng pare-parehong paglalapat nito."
+      },
+      {
+        "choiceId": "d",
+        "text": "Dapat gawing literal ang ebidensiya sa lahat ng anyo; ang tuntuning iyon ay kapuwa nasubok na nila sa tula at sa sanaysay."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Magkaiba ang pagtanggap nila sa ebidensiya ng iisang tula kahit walang pangalan, kaya hindi sapat ang pagiging walang pangalan para sa pagkakapareho ng pamantayan. Hindi nito pinatutunayang walang pakinabang ang pagtatago ng pangalan: walang paghahambing na may pangalan laban sa walang pangalan. Ang pagkakasundo sa isang prinsipyo ay hindi pa pagsubok sa magkahiwalay na paglalapat ng gabay. Ang pag-aatas ng literal na patunay sa lahat ng anyo ay hindi rin tumutugon sa layuning kilalanin ang bisa ng magkaibang anyo.",
+    "reference": {
+      "referenceId": "f03-reading-filipino-05-passage",
+      "referenceVersion": 2
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-reading-filipino-06",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling pagbasa ang pinakamahusay na nag-uugnay sa unang paghatol ng tagapagsalaysay, sa kilos ni Sinta at sa huling paglalarawan ng kanyang kamay?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "May ibang paliwanag sa pagtanggi; ang tasa ay pag-ayon sa lahat ng mungkahi, at ang kamay ay kahandaang makinig."
+      },
+      {
+        "choiceId": "b",
+        "text": "Tiyak na ang buong dahilan ng pagtanggi dahil sa daliri; hindi lubos na pag-ayon ang tasa, at pakikinig ang ipinahihiwatig ng kamay."
+      },
+      {
+        "choiceId": "c",
+        "text": "May ibang posibleng dahilan ng pagtanggi; hindi lubos na pag-ayon ang tasa, at ang kamay ay tanda ng tiyak na pagkakilala kay Sinta."
+      },
+      {
+        "choiceId": "d",
+        "text": "May ibang posibleng dahilan ng pagtanggi; hindi lubos na pag-ayon ang tasa, at ang kamay ay kahandaang makinig bago humatol."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Totoo ang pagtanggi sa pluma, ngunit ang namamagang daliri at hirap sa paghawak ay nagbibigay ng ibang posibleng paliwanag bukod sa pagmamataas; hindi nito ibinubunyag ang buong isip ni Sinta. Magkasama ang pagbibigay ng mainit na inumin at ang pagtutol sa mungkahi, kaya maaaring may mabuting pakikitungo nang walang lubos na pagsang-ayon. Ang ginuhitang bansag, patlang na walang kapalit, inilapag na pluma at bukas na kamay habang naghihintay ay magkakaugnay na kilos ng pakikinig at pagsuspinde ng tiyak na paghatol. Ang mga katunggaling pagbasa ay nagpapanatili ng dalawang ugnayan ngunit ginagawang lubos na pag-ayon ang tasa, ganap na katiyakan ang pisikal na palatandaan, o tiyak na pagkakilala ang bukas na kamay.",
+    "reference": {
+      "referenceId": "f03-reading-filipino-06-passage",
+      "referenceVersion": 2
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original question and passage; independent bilingual editorial approval pending",
+      "sources": [
+        "Evidence is confined to its dedicated passage; item-level explanation and originality review in docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]

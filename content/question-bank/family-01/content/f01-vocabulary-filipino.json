@@ -1,0 +1,292 @@
+[
+  {
+    "questionId": "f01-vocabulary-filipino-01",
+    "version": 4,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "'Pinasubalian' ng lupon ang paratang na sobra ang isang bayad gamit ang magkatugmang resibo at tala ng bangko. Kinilala rin nitong kulang ang lagda sa hiwalay na tala ng paghahatid; hindi pa nito nasuri ang ibang bayad. Aling paglalahad ang nagpapanatili sa kilos, batayan, at magkakaibang saklaw ng mga konklusyon?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kinontra nang may katibayan ang paratang sa bayad; kinilala ang kulang na lagda; itinuring na wala na ring kamalian ang ibang bayad."
+      },
+      {
+        "choiceId": "b",
+        "text": "Kinontra nang may katibayan ang paratang sa bayad; itinuring na pinabubulaanan din nito ang kulang na lagda; hindi hinatulan ang ibang bayad."
+      },
+      {
+        "choiceId": "c",
+        "text": "Kinontra ang paratang bilang hinalang walang katibayan; kinilala ang kulang na lagda; hindi hinatulan ang ibang bayad."
+      },
+      {
+        "choiceId": "d",
+        "text": "Kinontra nang may katibayan ang paratang sa bayad; kinilala ang kulang na lagda; hindi pa hinatulan ang ibang bayad."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ang pinasubalian ay kinontra o itinanggi gamit ang paliwanag o katibayan. Tumutugon ang resibo at tala ng bangko sa partikular na paratang sa halaga, hindi sa hiwalay na kakulangan ng lagda o sa ibang bayad na hindi pa nasusuri. Dapat sabay na mapanatili ang may-batayang pagtutol, ang kinilalang kakulangan, at ang hindi pa hinahatulan. Ang mga alternatibo ay nagpapawalang-sala sa labas ng saklaw, binabawi ang kinilalang kakulangan, o nag-aalis sa tahasang katibayan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 5, kasingkahulugan item 1; target nauulinigan; task kasingkahulugan. See vocabulary-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-filipino-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Si Dina ang mag-aaruga sa mga kuting habang ginagamot ang kanilang ina. Piliin ang kasingkahulugan ng MAG-AARUGA.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "mag-aalaga"
+      },
+      {
+        "choiceId": "b",
+        "text": "magbibilang"
+      },
+      {
+        "choiceId": "c",
+        "text": "magbebenta"
+      },
+      {
+        "choiceId": "d",
+        "text": "maghahanap"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang mag-aaruga ay mag-aalaga o magbibigay ng kalinga. Sa pangungusap, si Dina ang tutugon sa pangangailangan ng mga kuting; hindi sinabing bibilangin, ibebenta, o hahanapin niya ang mga ito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 5, kasingkahulugan item 2; target mag-aaruga; task kasingkahulugan. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-filipino-03",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Nagugulumihanan ang tagapamahala dahil magkasalungat ang dalawang utos na natanggap niya. Ano ang kasingkahulugan ng NAGUGULUMIHANAN?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "nagagalak"
+      },
+      {
+        "choiceId": "b",
+        "text": "nalilito"
+      },
+      {
+        "choiceId": "c",
+        "text": "nagmamadali"
+      },
+      {
+        "choiceId": "d",
+        "text": "nanghihinayang"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ang nagugulumihanan ay nalilito o hindi malaman kung ano ang dapat isipin o gawin. Ang magkasalungat na utos ang dahilan ng pagkalito; hindi ito katumbas ng saya, pagmamadali, o panghihinayang.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 5, kasingkahulugan item 3; target nagugulumihanan; task kasingkahulugan. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-filipino-04",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "'Tigib ng pangamba si Leni habang naghihintay ng resulta, bagaman mahinahon ang kaniyang pagsasalita.' Aling pagbabago ang nagpapanatili sa kahulugan at sa pagsalungat ng dalawang sugnay?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mabilis na nawala ang pangamba ni Leni kaya naging mahinahon ang kaniyang pagsasalita."
+      },
+      {
+        "choiceId": "b",
+        "text": "Nagkunwari lamang na nangangamba si Leni habang hinihintay ang resulta."
+      },
+      {
+        "choiceId": "c",
+        "text": "Matindi ang pangamba ni Leni kahit hindi ito nahalata sa mahinahon niyang pagsasalita."
+      },
+      {
+        "choiceId": "d",
+        "text": "Nag-alinlangan si Leni kung dapat pa siyang magsalita bago lumabas ang resulta."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang tigib ay punong-puno; sa kontekstong ito, matindi ang damdaming pangamba. Ipinapakita ng bagaman ang kaibahan ng loob at panlabas na pagsasalita. Hindi sinabing nawala o nagkunwari lamang ang pangamba, at walang pag-aalinlangan sa pagsasalita na binanggit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 5, kasingkahulugan item 4; target tigib; task kasingkahulugan. See vocabulary-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-filipino-05",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Sa loob ng limang taon, yumabong ang kalakalan sa daungan. Alin ang kasalungat ng YUMABONG sa gamit nito sa pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "nagpatuloy"
+      },
+      {
+        "choiceId": "b",
+        "text": "nagbago"
+      },
+      {
+        "choiceId": "c",
+        "text": "umunlad"
+      },
+      {
+        "choiceId": "d",
+        "text": "humina"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Ang yumabong na kalakalan ay lumago o umunlad. Ang humina ang kasalungat sa kontekstong ito dahil nagpapahiwatig ito ng paghina ng kalakalan. Ang nagpatuloy ay hindi nagsasaad kung lumago o humina, at ang nagbago ay hindi rin tumutukoy sa tiyak na direksiyon. Ang umunlad ay malapit sa kahulugan ng yumabong.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 6, kasalungat item 2; target yumabong; task kasalungat. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-filipino-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "May lumbay sa tinig ni Nena habang nagpapaalam siya sa matalik na kaibigan. Piliin ang kasalungat ng LUMBAY.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "tuwa"
+      },
+      {
+        "choiceId": "b",
+        "text": "lungkot"
+      },
+      {
+        "choiceId": "c",
+        "text": "pag-aalinlangan"
+      },
+      {
+        "choiceId": "d",
+        "text": "pananabik"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ang lumbay ay lungkot, kaya tuwa ang pinakamalinaw na kasalungat nito. Ang lungkot ay kasingkahulugan. Ang pag-aalinlangan ay kawalan ng katiyakan, samantalang ang pananabik ay matinding paghahangad o pag-asam; maaaring manabik ang isang tao habang nalulungkot, kaya hindi ito tiyak na kabaligtaran ng lumbay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 6, kasalungat item 3; target lumbay; task kasalungat. See vocabulary-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-vocabulary-filipino-07",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Inihanda ng mga kawani ang pantalan para sa pagdaong ng lantsa. Alin ang kasalungat ng PAGDAONG sa pangungusap?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "paglalayag sa dagat"
+      },
+      {
+        "choiceId": "b",
+        "text": "pag-alis mula sa pantalan"
+      },
+      {
+        "choiceId": "c",
+        "text": "paghimpil sa pantalan"
+      },
+      {
+        "choiceId": "d",
+        "text": "paglubog sa dagat"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Ang pagdaong ay paglapit at paghimpil ng sasakyang pandagat sa pantalan. Ang pag-alis mula sa pantalan ang kasalungat na kilos. Ang paglalayag ay paglalakbay sa dagat at hindi mismo ang pag-alis sa pantalan. Ang paghimpil ay kaugnay ng pagdaong, samantalang ang paglubog ay pagpunta sa ilalim ng tubig.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; maintainer bilingual review pending",
+      "sources": [
+        "Vocabulary reference batch: Image 6, kasalungat item 4; target pagdaong; task kasalungat. See vocabulary-family01-ledger.md."
+      ]
+    }
+  }
+]

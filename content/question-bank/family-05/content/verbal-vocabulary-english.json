@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f05-vocabulary-english-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The foreman gave a TERSE instruction: “Use the west gate.” Which meaning best fits TERSE?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Brief and direct"
+      },
+      {
+        "choiceId": "b",
+        "text": "Warm and affectionate"
+      },
+      {
+        "choiceId": "c",
+        "text": "Uncertain in purpose"
+      },
+      {
+        "choiceId": "d",
+        "text": "Repeated at regular intervals"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Terse concerns brevity and directness. It does not by itself indicate warmth, uncertainty or a schedule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword terse; https://www.merriam-webster.com/dictionary/terse; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-english-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The signal failures were SPORADIC rather than continuous. What does SPORADIC mean here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Predictable every hour"
+      },
+      {
+        "choiceId": "b",
+        "text": "Occurring in scattered irregular instances"
+      },
+      {
+        "choiceId": "c",
+        "text": "Permanent after the first failure"
+      },
+      {
+        "choiceId": "d",
+        "text": "Confined to a single known cause"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Sporadic describes occasional, scattered or irregular occurrence. It does not establish a regular schedule, permanence or one cause.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword sporadic; https://www.merriam-webster.com/dictionary/sporadic; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-english-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The witness gave a CREDIBLE account supported by independent records. Which word best matches CREDIBLE?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Detailed"
+      },
+      {
+        "choiceId": "b",
+        "text": "Entertaining"
+      },
+      {
+        "choiceId": "c",
+        "text": "Believable"
+      },
+      {
+        "choiceId": "d",
+        "text": "Complete"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Credible concerns reasonable grounds for belief. Detail, entertainment and completeness are different qualities and do not alone establish credibility.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword credible; https://www.merriam-webster.com/dictionary/credible; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-english-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A reviewer calls a method “novel but untested,” while describing a book as “a historical novel.” Which pair preserves the uses of NOVEL?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "New or original; a factual official history"
+      },
+      {
+        "choiceId": "b",
+        "text": "Effective beyond doubt; a long fictional prose narrative"
+      },
+      {
+        "choiceId": "c",
+        "text": "Not previously used; a long fictional prose narrative"
+      },
+      {
+        "choiceId": "d",
+        "text": "Recently printed; an official history"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The adjective denotes newness/originality, not demonstrated effectiveness or merely recent printing. The noun denotes a long fictional prose narrative. One rival keeps the adjective but misreads the noun as factual history; another keeps the noun but turns novelty into proven effectiveness.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword novel; https://www.merriam-webster.com/dictionary/novel; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-english-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "“The editor tempered her praise with reservations but did not withdraw it.” Which paraphrase best preserves TEMPERED and the stated limit?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "She moderated the praise with qualifications while retaining a favourable assessment"
+      },
+      {
+        "choiceId": "b",
+        "text": "She retained the favourable assessment but made it unconditional by removing reservations"
+      },
+      {
+        "choiceId": "c",
+        "text": "She retained reservations but withdrew every favourable judgement"
+      },
+      {
+        "choiceId": "d",
+        "text": "She retained praise and reservations without allowing the reservations to qualify the praise"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Tempered means moderated or qualified: praise remains but reservations constrain it. Keeping praise while removing qualifications, keeping only reservations, or making reservations irrelevant each loses part of that combination.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword temper; https://www.merriam-webster.com/dictionary/temper; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-vocabulary-english-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "“The letter gives the workshop’s address and addresses its lack of storage.” Which pair matches the two uses of ADDRESS?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A formal speech; provides directions to"
+      },
+      {
+        "choiceId": "b",
+        "text": "A location for contact; deals with"
+      },
+      {
+        "choiceId": "c",
+        "text": "A formal speech; deals with"
+      },
+      {
+        "choiceId": "d",
+        "text": "A location for contact; delivers a speech to"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The noun identifies a reachable location; the verb means deal with a problem. The partial-correct rivals retain only one of those senses, while delivering a speech does not describe tackling storage.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword address; https://www.merriam-webster.com/dictionary/address; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  }
+]

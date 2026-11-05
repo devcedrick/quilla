@@ -1,0 +1,392 @@
+[
+  {
+    "questionId": "f07-alphabetizing-01",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare letter by letter, ignoring case and spaces; a complete shorter key comes first. Records: P: Elm Bay; Q: Elm Arc; R: Elm Ash; S: Elm Bee. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Q → R → P → S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q → P → R → S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q → R → S → P"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Q → S → P → R"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=elmbay; Q=elmarc; R=elmash; S=elmbee. Ascending order is Q → R → P → S. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-02",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "File surname first, then given name, alphabetically ignoring case; no titles occur. Records: P: Reed, Nila; Q: Reed, Niko; R: Reed, Nina; S: Reed, Noah. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Q → P → R → S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q → R → P → S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q → P → S → R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Q → S → R → P"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=reed nila; Q=reed niko; R=reed nina; S=reed noah. Ascending order is Q → P → R → S. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-03",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare the complete organization name letter by letter; ignore spaces and hyphens but keep all letters. Records: P: North-Well; Q: North Wave; R: North Wall; S: North West. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R → Q → P → S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R → P → Q → S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R → Q → S → P"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R → S → P → Q"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=northwell; Q=northwave; R=northwall; S=northwest. Ascending order is R → Q → P → S. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-04",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare each code prefix alphabetically, then its numeric part as a number. Records: P: KF-12; Q: KF-3; R: KF-21; S: KF-8. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Q → S → P → R"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q → P → S → R"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q → S → R → P"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Q → R → P → S"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=kf 012; Q=kf 003; R=kf 021; S=kf 008. Ascending order is Q → S → P → R. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-05",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare word by word, ignoring case. Shorter whole words precede their extensions. Keep leading articles. Records: P: The Cove; Q: The Covent; R: The Cove Annex; S: The Cover. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P → R → Q → S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P → Q → R → S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P → R → S → Q"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P → S → Q → R"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=the cove; Q=the covent; R=the cove annex; S=the cover. Ascending order is P → R → Q → S. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-06",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Ignore initial The or A, then compare letter by letter ignoring spaces; retain other words. Records: P: The Amber Yard; Q: A Amber Vale; R: Amber Tree; S: The Amber Way. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R → Q → S → P"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R → S → Q → P"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R → Q → P → S"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R → P → S → Q"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=amberyard; Q=ambervale; R=ambertree; S=amberway. Ascending order is R → Q → S → P. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-07",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Expand St. to Saint and Dept. to Department; then compare letter by letter ignoring spaces and periods. Records: P: St. Iris Dept.; Q: Saint Iris Depot; R: St. Iris Departmental; S: Saint Iris Dental. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "S → P → R → Q"
+      },
+      {
+        "choiceId": "c2",
+        "text": "S → R → P → Q"
+      },
+      {
+        "choiceId": "c3",
+        "text": "S → P → Q → R"
+      },
+      {
+        "choiceId": "c4",
+        "text": "S → Q → R → P"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=saintirisdepartment; Q=saintirisdepot; R=saintirisdepartmental; S=saintirisdental. Ascending order is S → P → R → Q. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-08",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For people ignore Dr. and Ms.; compare surname, then given name, then middle initial. Ignore periods and case. Records: P: Dr. Venn, Ira B.; Q: Ms. Venn, Ira A.; R: Venn, Ina C.; S: Venn, Iris A.. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R → Q → P → S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R → P → Q → S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R → Q → S → P"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R → S → P → Q"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=venn ira b; Q=venn ira a; R=venn ina c; S=venn iris a. Ascending order is R → Q → P → S. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-09",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Ignore an initial The; expand & to and; compare WORD BY WORD ignoring other punctuation and case. Identical normalized names are ordered by the numeric ID ascending. Records: P: The Oak & Ash [ID 12]; Q: Oak and Ash [ID 3]; R: Oak and Ashes [ID 1]; S: Oak & Ash Annex [ID 8]; T: The Oak and Aspen [ID 2]. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Q → P → S → R → T"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Q → P → R → S → T"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Q → S → P → R → T"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Q → P → S → T → R"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalize names first, without IDs: P=oak and ash; Q=oak and ash; R=oak and ashes; S=oak and ash annex; T=oak and aspen. Word-by-word comparison puts the shorter name oak and ash first, with Q(ID 3) before P(ID 12). Then S extends ash, R has ashes rather than ash, and T has aspen. Full order Q → P → S → R → T.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f07-alphabetizing-10",
+    "version": 1,
+    "family": 7,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Compare surname including particles, then given name; ignore titles, case, apostrophes, hyphens and spaces within each surname. An exact name tie uses department alphabetically then numeric ID ascending. Records: P: Dr. De-Lin, Mara; Works; ID 11; Q: De Lin, Mara; Works; ID 2; R: Ms. Delin, Mara; Audit; ID 7; S: De-Lin, Marah; Audit; ID 1; T: De-Lin, Mara; Works; ID 8. Which is the complete filing order?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R → Q → T → P → S"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R → T → Q → P → S"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R → Q → T → S → P"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R → S → P → T → Q"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Normalized comparison keys: P=delin mara works 011; Q=delin mara works 002; R=delin mara audit 007; S=delin marah audit 001; T=delin mara works 008. Ascending order is R → Q → T → P → S. Each alternative reverses at least one adjacent comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

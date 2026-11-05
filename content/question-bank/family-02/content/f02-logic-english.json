@@ -1,0 +1,1682 @@
+[
+  {
+    "questionId": "f02-logic-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the instrument-to-measure analogy: THERMOMETER : TEMPERATURE :: BAROMETER : ?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Air pressure"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Wind direction"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Rain volume"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Elapsed time"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A thermometer measures temperature; a barometer measures air pressure. The relation is instrument to measured quantity, not simply any weather observation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the part-to-whole analogy: CHAPTER : BOOK :: ACT : ?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Actor"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Audience"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Stage lamp"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Play"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A chapter is a structural division of a book, and an act is a structural division of a play, not its performer or equipment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the material-to-maker analogy: CLAY : POTTER :: TIMBER : ?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Tailor"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Baker"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Carpenter"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Librarian"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The second term names a worker shaping the material into products. Timber is worked by a carpenter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the scale-change analogy: ENLARGE : SMALLER IMAGE :: REDUCE : ?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Unfinished image"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Larger image"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Identical image"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Hidden image"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Enlarging acts on an image to make it bigger; reducing acts on a larger image to make it smaller. The paired nouns identify the input relative to the operation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which pair matches AUTHOR : MANUSCRIPT as creator to written work?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Composer : score"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Reader : novel"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Printer : ink"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Ticket : concert"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A composer creates a score as an author creates a manuscript. Reading, supplying material, and granting admission are different relations.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Complete the transformation analogy: WATER : ICE :: LIQUID WAX : ?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Steam"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Sand"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Oil"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Solid wax"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The analogy preserves substance while changing liquid to solid. Choosing a different substance would lose the relation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "No archived box is empty. Box J is archived. What follows?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Box J contains exactly ten files."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "No unarchived box is empty."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Box J is not empty."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Every nonempty box is archived."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The rule excludes empty archived boxes, so J is nonempty. It gives no exact count or converse about all nonempty boxes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-08",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In this code, replace each letter by the next alphabet letter, with Z wrapping to A. How is ZAP written?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "YZO"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "ABQ"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "ABP"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "AZQ"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Z wraps to A, A becomes B, and P becomes Q, giving ABQ. Each letter moves forward exactly once; reversing direction or leaving the final letter unchanged violates the supplied rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-09",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Exactly two of five lamps are lit. How many are unlit?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Three"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Two"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Four"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "One"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The five lamps partition into lit and unlit; 5−2=3. The statement says exactly, not at least.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "All sealed bags have tags. This bag has no tag. What follows?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "It is sealed."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "All tagged bags are sealed."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The bag must be empty."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "It is not sealed."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "An untagged bag cannot belong to the sealed class. The contents are not constrained.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-11",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Every route shown in blue is open. Route Q is shown in blue. Which statement must hold?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Q is the shortest route."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Q is closed at night."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Q is open."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Only blue routes are open."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Membership in blue routes establishes openness, not exclusivity, length, or a night schedule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-12",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A premise states: 'All sealed parcels are labelled.' Which sentence is the logical converse of that premise, whether or not the converse is true?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Some sealed parcels are unlabelled."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "All labelled parcels are sealed."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "All sealed parcels are labelled."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "No sealed parcels are labelled."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The converse interchanges the condition and conclusion: labelled implies sealed. This identifies a logical form, not a conclusion licensed by the original premise. Repeating or negating the original does not form its converse.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-13",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Complete the two-step analogy: INDEX : LOCATE :: LEGEND : ?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Interpret symbols"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Store pages"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Bind books"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Measure paper"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "An index enables locating content; a legend enables interpreting symbols. Both are interpretive aids rather than physical containers.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-14",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the relationship matching VACCINATION : PREVENTION, interpreted as intervention to intended outcome rather than guaranteed success.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Illness : treatment"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Failure : repair"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Receipt : expense"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Rehearsal : preparedness"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Rehearsal aims at preparedness as vaccination aims at prevention. The analogy concerns an intended outcome, not an assertion of certainty or a problem followed by its remedy.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-15",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In a code, each letter becomes its alphabet number and the numbers are added. If CAT is 24, what is DOG?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "30"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "28"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "26"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "D=4,O=15,G=7, summing to 26. The rule is summation, not concatenation or letter shifting.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-16",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A token moves north, east, south, and west by 3, 5, 1, and 2 grid units respectively. Where is it relative to its start?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "2 east and 3 north"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "3 east and 2 north"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "7 east and 4 north"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "3 west and 2 south"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Net eastward displacement is 5−2=3 and northward displacement is 3−1=2. Total distance is not displacement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-17",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Some auditors are trainers. Every trainer has a badge. Which conclusion is guaranteed?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Some auditors have badges."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Every auditor is a trainer."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "No auditor lacks a badge."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Every badge holder is an auditor."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The stated auditor-trainer witnesses inherit badges. No claim about all auditors or all badge holders follows.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-18",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A claim says every batch has a damaged item. Which observation would refute it?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "One batch containing only damaged items"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Two batches containing damaged items"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "One item whose batch is unknown"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "One batch containing no damaged items"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A universal is disproved by a single counterexample satisfying the batch category but not the alleged property.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-19",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A team concludes its leaflet caused higher turnout because turnout rose after distribution. Which fact most weakens this causal inference?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "The organisers counted turnout carefully."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Many copies were printed legibly."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "A free transport programme began at the same time."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The leaflet used the correct meeting date."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A simultaneous intervention offers an alternative cause. Accurate counting and printing do not isolate the leaflet’s effect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-20",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A reservoir alarm sounds only if the sensor detects a high level. The alarm sounded. What follows from the rule?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "No other sensors exist."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The sensor detected a high level."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The actual level must be high regardless of sensor faults."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Every high sensor reading causes an alarm."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Only if makes the detected reading necessary for sounding. The rule concerns sensor detection, not infallible real-world level or the converse.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-21",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four jobs have durations 2, 4, 3, and 1 hours and share one machine. No overlap is permitted. What additional information is unnecessary to determine the total machine time?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "The order in which the jobs run"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The duration of each job"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Whether overlap is allowed"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Whether every job is completed"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Without overlap, total busy time is the sum 10 regardless of order. Durations and completion assumptions are necessary to that total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-22",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If a pass is valid, it has both a date and a stamp. A pass has a date but no stamp. What can be concluded?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "It is valid because it has a date."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Every stamped pass is valid."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Its holder never applied for a pass."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "It is not valid."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Validity requires both features, so the missing stamp rules it out. Application history is unstated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-23",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Rafi is taller than Sela. Toma is shorter than Sela but taller than Uma. Who is second tallest?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Toma"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Uma"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Sela"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Rafi"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The complete chain is Rafi>Sela>Toma>Uma; Sela is second. Each relation must be kept in the same direction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-24",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A meeting happens after lunch but before the inspection. The delivery happens before lunch. Which event must precede the inspection?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "A return trip"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The delivery"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A second meeting"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The evening meal"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Delivery<lunch<meeting<inspection yields delivery before inspection. The other events are not ordered by the facts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-25",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An inspection card is accepted exactly when its date is current and at least one of two signatures, R or S, is present. Card A is current with R only; B is expired with both; C is current with neither; D is current with S only. Which cards are accepted?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "A and D only"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A, B, and D only"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A only"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "B and C only"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Apply current AND (R OR S) to every card. A and D each meet both requirements. B fails the date requirement despite two signatures, and C fails the signature requirement despite a current date. Either one signature is sufficient; both are not required.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-26",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A report finds a correlation between longer shifts and more errors. Which statement avoids asserting more than correlation?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Lengthening any shift will certainly cause errors."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Errors are the sole cause of long shifts."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Reducing shifts will eliminate every error."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Longer shifts and errors vary together in the observed data."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Correlation establishes observed association, not causal direction, exclusivity, or guaranteed elimination.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-27",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rule says recipients must be residents; some residents are not recipients. Which paraphrase is correct?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "No resident can receive assistance."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Every recipient is a nonresident."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Residence is necessary but is not enough by itself."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Residence is sufficient but not necessary."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The first condition makes residence necessary; nonrecipient residents demonstrate lack of sufficiency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-28",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three crates have labels A, B, C. A is heavier than B; C weighs the same as A. Which comparison follows?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "C is lighter than A."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "C is heavier than B."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "B is heavier than C."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "All three weigh the same."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Equal quantities inherit the same comparison: C=A>B. Equality is not strict inequality between C and A.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-29",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An office tests new reminders only on employees who volunteer and compares them with nonvolunteers. What is the main design concern?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "The groups may differ before the reminder is tested."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A reminder can never affect behaviour."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Any comparison proves causation."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Volunteer status measures the reminder’s success."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Self-selection may produce pre-existing differences that confound outcomes; it does not prove ineffectiveness.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-30",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A witness says the van arrived before dark, not necessarily before sunset. Which added assumption would incorrectly strengthen the claim?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "The van arrived."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The arrival preceded darkness."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "The witness discussed the arrival."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Darkness began exactly at sunset."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Equating dark with sunset adds an unstated timing condition. The other choices merely restate components of the account.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-31",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An inventory records 'at least three' cracked tiles. Which claim is not established?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Fewer than three is excluded."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Four cracked tiles remains possible."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Exactly three tiles are cracked."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Three or more tiles are cracked."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "At least provides a lower bound, not an exact count or upper bound.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-32",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "No equipment is moved until it is logged. A drill has been moved in full compliance with this rule. Which follows?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Unmoved equipment is never logged."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The drill was logged before being moved."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "All logged equipment has moved."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The drill was logged after moving."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Compliance with the timing condition establishes prior logging. The converse and after relation do not follow.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-33",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three switches A,B,C are either on or off. Exactly two are on. A and B cannot both be on. If C is on, A is off. Which switches are on?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "B and C"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A and B"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A and C"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Only C"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The two-on pairs are AB,AC,BC. AB is excluded directly; AC conflicts with C requiring A off. Only BC survives all constraints.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-34",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Six tasks J,K,L,M,N,P run once each. J is before K; L immediately follows J; P is immediately before M; M is before N. If K is third and N is sixth, which task is fifth?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "M"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "J"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "L"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "P"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "K third forces the J–L block into positions 1–2: J must precede K and L immediately follows J. N sixth leaves positions 4–5 for the P–M block, giving J,L,K,P,M,N. Thus M is fifth. Both adjacency and precedence conditions are needed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-35",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four identical gift boxes each hold either two pens or three pencils, never both. Altogether they contain ten writing tools. Pens cost PHP 9 each and pencils PHP 5 each. What is the total value of the contents?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "PHP 66"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 60"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 69"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 72"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "If p boxes contain pens, there are 2p+3(4−p)=10 tools, so p=2. The contents are four pens and six pencils. Their value is 4×9+6×5=66. Counting tools is not enough without separating the box types.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-36",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Exactly one of three notices is true. Notice A says the parcel is in Room 1; Notice B says it is not in Room 1; Notice C says it is in Room 2. The parcel is in exactly one of Rooms 1,2,3. Which conclusion follows?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "The parcel is in Room 2."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The parcel is not in Room 2, but Room 1 versus Room 3 is unresolved."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "The parcel must be in Room 1."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "The parcel must be in Room 3."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A and B are complementary, so exactly one is always true. C must therefore be false. Room 1 or 3 yields exactly one true notice; either unique-room claim overstates the result.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-37",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A service runs if power is available and at least one of two pumps works. Power is available. The service does not run, and the stated rule is an exact description of operation. What follows?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Both pumps fail."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Only one pump fails."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Power is unavailable."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "At least one pump works."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "With power present, service failure requires neither pump working. An exact operational rule permits this deduction; a mere policy could not prove actual behaviour.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-38",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Every square card is either blue or numbered, but not both. Every blue card has a border. No bordered card is selected. Card V is square and selected. Which pair of conclusions must follow?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "V is numbered and is not blue."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "V is blue and has a border."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "V has no border but its colour class is unresolved."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "V is numbered and has a border."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Selection rules out a border. Since blue implies bordered, V cannot be blue. Its square-card exclusive alternatives then force numbered. The conclusion uses exclusion, contraposition, and the exclusive alternatives, not the invalid claim that every numbered card is selected.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-39",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two people, Ivo and Jori, each either always tell truth or always lie. Ivo says 'We are both liars.' What must their types be?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Both tell truth."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Ivo tells truth and Jori lies."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Ivo lies and Jori tells truth."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Both lie."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "If Ivo told truth, his statement would make him a liar, impossible. Thus he lies and the claim that both lie is false; Jori must tell truth. This determines types without an extra statement from Jori.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-logic-english-40",
+    "version": 1,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A selection contains exactly three of A,B,C,D,E. Selecting A requires B. Selecting C forbids B. Selecting D requires E. If C is selected, which full selection is possible?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "B,C,E"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "C,D,E"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "A,C,D"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A,B,C"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "C excludes B and thus A, leaving D and E as the only remaining pair. CDE satisfies D requiring E; each alternative violates an explicit requirement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

@@ -1,0 +1,276 @@
+[
+  {
+    "questionId": "f01-paragraph-english-01",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The fixed labels P1, P2, and so on identify paragraph parts, not answer-option letters. Arrange all parts into the most coherent paragraph. Which part should begin the paragraph?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 introduces the overall procedure. P1 gives its first action, P4 follows the completed check, and P2 ends with shelving the item. The order is P3–P1–P4–P2.",
+    "reference": {
+      "referenceId": "f01-paragraph-english-01-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-english-02",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The fixed labels P1, P2, and so on identify paragraph parts, not answer-option letters. Arrange all parts into the most coherent paragraph. Which part provides the most appropriate concluding sentence?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P3 draws a conclusion from the problem, response, and observed result. The sequence is P2–P4–P1–P3: delays, a schedule to address them, fewer interruptions, and a concluding assessment.",
+    "reference": {
+      "referenceId": "f01-paragraph-english-02-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-english-03",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed labels P1, P2, and so on identify paragraph parts, not answer-option letters. Arrange all parts into the most coherent paragraph. After arranging the parts into a coherent paragraph, which part should be third?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P5"
+      },
+      {
+        "choiceId": "e",
+        "text": "P3"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P4 introduces the plan and P2 establishes the permission step. P5 must follow permission and precede P1, because the transcript requires a recording. P3 follows the transcript check. Therefore the order is P4–P2–P5–P1–P3, with P5 third.",
+    "reference": {
+      "referenceId": "f01-paragraph-english-03-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-english-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed labels P1, P2, and so on identify paragraph parts, not answer-option letters. Arrange all parts into the most coherent paragraph. Which sequence forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2-P1-P4-P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4-P2-P3-P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1-P3-P2-P4"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 states the request, and In response in P4 introduces the trial. During the trial in P1 depends on that trial already being introduced. That damage in P3 refers to the damaged books in P1. The coherent sequence is P2–P4–P1–P3.",
+    "reference": {
+      "referenceId": "f01-paragraph-english-04-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-english-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed labels P1, P2, and so on identify paragraph parts, not answer-option letters. Arrange all parts into the most coherent paragraph. Which sequence best develops the paragraph’s argument?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P5-P2-P1-P4-P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2-P4-P5-P1-P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P5-P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P5-P4-P1-P2-P3"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P5 introduces the communication problem. P2 presents the printed notice, P4 identifies households it may miss, and P1 offers a second channel for those households. P3 can then refer to both channels. The order is P5–P2–P4–P1–P3.",
+    "reference": {
+      "referenceId": "f01-paragraph-english-05-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-paragraph-english-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed labels P1, P2, and so on identify paragraph parts, not answer-option letters. Arrange all parts into the most coherent paragraph. Which sequence forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P5-P1-P3-P6-P4-P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P5-P3-P1-P4-P6-P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3-P5-P1-P6-P4-P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P5-P3-P1-P6-P4-P2"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P5 establishes twenty recorded instruments; P3 contrasts the count of eighteen and introduces the volunteers. They in P1 refers to those volunteers. Those initials in P6 requires P1, and P6 establishes the duplicates before P4 removes them. P2 concludes from the reconciled counts. Thus P5–P3–P1–P6–P4–P2 is coherent.",
+    "reference": {
+      "referenceId": "f01-paragraph-english-06-parts",
+      "referenceVersion": 1
+    },
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  }
+]

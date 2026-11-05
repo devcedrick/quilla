@@ -1,0 +1,1682 @@
+[
+  {
+    "questionId": "f02-numerical-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A label roll has 144 labels arranged equally on 12 sheets. How many labels are on one sheet?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "12"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "10"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "14"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "18"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Divide 144 by 12. Multiplying or subtracting the sheet count does not give labels per sheet.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is 3/8 of 64?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "8"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "16"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "32"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "64 divided by 8 is 8; three such parts total 24.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A file is 0.075 metres thick. How many millimetres is that?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "750"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "0.75"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "75"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "7.5"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "One metre is 1000 millimetres, so multiply 0.075 by 1000.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Evaluate 18 − 3 × 4 + 2.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "14"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "8"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "62"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "−8"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Multiplication first gives 18−12+2=8. The remaining operations proceed left to right.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A clerk checks 7 forms per minute at a constant rate. How many forms in 9 minutes?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "63"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "16"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "49"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "72"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The count is rate times time: 7×9=63.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What is the smallest positive common multiple of 6 and 8?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "12"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "14"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "48"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "24"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "24 is the first number divisible by both; 48 works but is not smallest.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What fraction of an hour is 18 minutes?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "3/5"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "9/20"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "3/10"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "1/3"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "18/60 simplifies by 6 to 3/10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A package costs PHP 85 and postage is PHP 27. What change comes from PHP 150?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "PHP 65"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 38"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 58"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 42"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The total is 112; 150−112=38.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-09",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The temperatures are −4, 3, and 8 degrees. What is their range?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "12 degrees"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "4 degrees"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "11 degrees"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "15 degrees"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Range is highest minus lowest: 8−(−4)=12.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which is greatest: 0.62, 3/5, 61%, or 0.602?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "3/5"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "61%"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "0.602"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "0.62"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Expressed as decimals the values are .62,.60,.61,.602. Comparing equal place values identifies .62.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-11",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A square notice board has side 13 cm. What is its perimeter?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "169 cm"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "39 cm"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "52 cm"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "26 cm"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A square has four equal sides, so 4×13=52. Squaring gives area, not perimeter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-12",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Solve 5x + 6 = 41.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "35"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "7"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "9"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Subtract 6 to get 5x=35, then divide by 5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-13",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A machine produces 240 usable copies from 250 sheets. At the same usable fraction, how many sheets are needed for 720 usable copies?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "750"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "730"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "700"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "800"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Usable output is 96% of input. 720/.96=750 sheets, not 720 plus a fixed ten-sheet loss.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-14",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three adults and two children pay PHP 460. An adult pays twice a child's fare. What is one adult fare?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "PHP 92"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 57.50"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 153.33"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 115"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "If child fare is c, 3(2c)+2c=460, giving c=57.50 and adult fare 115.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-15",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An item marked PHP 1250 receives a 12% discount. A mandatory PHP 40 delivery fee is added after the discount and is not discounted. A buyer has PHP 1120. How much more is needed?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "PHP 30"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 40"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 20"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 0"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The discounted item is 1250×0.88=1100. Delivery makes the payable total 1140, so the buyer is short 1140−1120=20. The fee is outside the discount base, and comparing the budget with the item price alone misses the shortfall.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-16",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The mean of five parcel weights is 8 kg. Removing a 12-kg parcel leaves what mean?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "10 kg"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "7 kg"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "8 kg"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "6 kg"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The original total is 40; the remaining four total 28, so the mean is 7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-17",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two taps separately fill a tank in 6 and 3 hours. At constant rates, how long together?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "2 hours"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "4.5 hours"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "9 hours"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "3 hours"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Rates add: 1/6+1/3=1/2 tank per hour, so one tank takes two hours.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-18",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A bus covers 90 km at 45 km/h and returns at 30 km/h. What is its whole-trip average speed, excluding stops?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "37.5 km/h"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "35 km/h"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "40 km/h"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "36 km/h"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Total distance is 180 and total time 2+3=5 hours. The speeds cannot simply be averaged.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-19",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rectangle has area 96 cm² and width 8 cm. How much longer is its length than its width?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "6 cm"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "16 cm"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "4 cm"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "12 cm"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Length is 96/8=12; difference is 12−8=4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-20",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A positive integer leaves remainder 3 when divided by 7. What remainder does twice that integer leave when divided by 7?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "0"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "6"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "3"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "1"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Write n=7k+3; 2n=14k+6, so the remainder is 6.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-21",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A bag contains 5 green and 3 yellow counters. Two are drawn at random without replacement. Given that the first counter is yellow, what is the probability the second is green?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "5/7"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "5/8"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "4/7"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "3/7"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The first yellow draw leaves five green and two yellow counters: seven in total. Thus the probability is 5/7. Keeping eight in the denominator ignores removal; reducing the green count removes the wrong colour.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-22",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A savings account earns simple interest at 4% yearly. What principal earns PHP 720 in three years?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "PHP 18000"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 9600"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 5400"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 6000"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Using I=Prt gives P=720/(.04×3)=6000. Simple interest does not compound.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-23",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A drawing uses 1 cm for 2.5 km. The original route measures 7.2 cm, including a closed 1.2-cm section that must be replaced by a 2.0-cm bypass. What is the revised real route length?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "18 km"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "23 km"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "20 km"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "15 km"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The replacement route measures 7.2−1.2+2.0=8.0 cm, corresponding to 8×2.5=20 km. Removing without replacing gives 15 km; ignoring the closure gives 18 km; adding the bypass without removing the closed section gives 23 km.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-24",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The ratio of red to white paint is 3:5. How much red paint is needed for 24 litres of mixture?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "8 litres"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "9 litres"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "15 litres"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "14.4 litres"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "There are eight ratio parts; each is 3 litres. Red occupies three parts, or 9 litres.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-25",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A sequence begins 2, 6, 12, 20, 30. Consecutive differences increase by 2. What is next?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "42"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "40"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "44"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "60"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Differences are 4,6,8,10; next is 12, giving 42. The stated difference rule removes pattern ambiguity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-26",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A shop earns PHP 180 profit by selling an item for PHP 780. What is profit as a percentage of cost?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "23.08%"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "18%"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "130%"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "30%"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Cost is 600 and profit/cost=180/600=.30. Dividing by sale price computes margin instead.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-27",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four workers finish a fixed job in 15 days. At equal constant rates, how long would six workers take?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "12 days"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "9 days"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "10 days"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "22.5 days"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The job requires 60 worker-days, so six workers require 10 days. More workers reduce duration.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-28",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A clock gains 4 minutes every actual hour. It is correct at noon. What does it show after 3 actual hours?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "3:16 p.m."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "3:12 p.m."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "3:04 p.m."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "2:48 p.m."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "It gains 3×4=12 minutes, added to the actual time of 3 p.m.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-29",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A container is 3/5 full. After 18 litres are removed it is 2/5 full. Then 27 litres are added. What fraction of capacity is filled?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "7/10"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "1/2"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "4/5"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "9/10"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The removed fifth is 18 litres, so capacity is 90. It holds 36 after removal and 63 after addition: 63/90=7/10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-30",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A contractor completes 1/3 of a job in four days. A second crew joins and together they finish the rest in five days. At constant rates, how many days would the second crew alone need for the whole job?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "12"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "15"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "30"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "20"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "First rate is 1/12. Combined rate for the remainder is (2/3)/5=2/15. Difference is 1/20, so the second crew needs 20 days.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-31",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A price is reduced by 20%, then increased by PHP 96, restoring the original price. What would the price be after instead reducing it by 20% and then increasing the reduced price by 20%?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "PHP 441.60"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 576"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 460.80"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 480"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The original is 96/.20=480. Applying factors .8 and 1.2 yields 480×.96=460.80; equal opposite percentage changes do not cancel.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-32",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A two-digit number has digit sum 11. Reversing its digits increases it by 27. What is the number?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "56"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "47"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "74"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "38"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Let tens a and units b. Then a+b=11 and 9(b−a)=27. Thus b−a=3, giving a=4,b=7.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-33",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A 30-litre solution is 40% concentrate. How much mixture must be removed and replaced by water to leave 30% concentrate at the same total volume?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "7.5 litres"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "3 litres"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "10 litres"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "12 litres"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Initially concentrate is 12 litres; target is 9. Removing x litres of 40% mixture removes .4x concentrate. Set .4x=3, giving 7.5.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-34",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two fair dice are rolled. Given that their sum is even, what is the probability both show odd numbers?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "1/4"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "1/3"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "2/3"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "1/2"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Even sums require both odd or both even: 9+9=18 ordered outcomes. Nine have both odd, so the conditional probability is 9/18.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-35",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An item costs PHP 640. It is marked so a 20% discount still leaves profit equal to 25% of cost. What marked price is required?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "PHP 800"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 1066.67"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 1000"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 960"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The discounted selling price must be 640×1.25=800. Since this is 80% of the mark, the mark is 1000.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-36",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "An agency pays PHP 40 per completed unit for the first 50 units and PHP 60 per unit thereafter. A contractor incurs a fixed PHP 900 cost plus PHP 25 per unit. Only whole units count. What is the fewest units needed for profit of at least PHP 1000?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "127"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "83"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "82"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "87"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "At 50 units profit is 50×40−900−50×25=−150, so the target is not reached in the first tier. Each later unit adds 60−25=35 profit. At least ceiling((1000+150)/35)=33 additional units are needed: 83 in total. At 82 units profit is 970; at 83 it is 1005. Applying the first margin to every unit or ignoring the earlier-tier shortfall gives different, invalid thresholds.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-37",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A shipment has 120 units. After 15% fail inspection, 1/6 of the remaining units are reserved. How many saleable units are left?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "85"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "82"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "90"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "100"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Inspection leaves 102. Reserving 102/6=17 leaves 85; the second fraction applies to the remainder rather than the original shipment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-38",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A student needs an average of 78 across six equally weighted tests. The first four average 75 and the fifth is 82. What sixth score is needed?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "82"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "80"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "90"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "86"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Required total is 468. Existing total is 4×75+82=382; the gap is 86. Averaging the averages without weights is incorrect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-39",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rectangular lot has perimeter 70 m. A path reduces both usable length and usable width by 2 m. The usable area is 216 m². What was the original area?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "250 m²"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "280 m²"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "282 m²"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "286 m²"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "L+W=35. Expanding (L−2)(W−2)=216 gives LW−70+4=216, hence original area LW=282; no individual side solution is needed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-numerical-english-40",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "numerical_ability",
+    "subtopicId": "numerical_reasoning",
+    "conceptId": "numerical_reasoning",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A courier travels outward at 40 km/h. Returning along the same road includes a 30-minute stop and driving at 60 km/h. Total time is 3 hours. How far is the destination?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "80 km"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "60 km"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "72 km"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "50 km"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Driving time is 2.5 hours, so d/40+d/60=2.5. Since 1/40+1/60=1/24, d=60. The stop must be removed before solving.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

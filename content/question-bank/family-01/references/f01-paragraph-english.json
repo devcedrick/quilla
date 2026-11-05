@@ -1,0 +1,134 @@
+[
+  {
+    "referenceId": "f01-paragraph-english-01-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Returning a borrowed item",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: At the desk, a volunteer first checks the returned item against its borrowing record.\nP2: Finally, the labelled item is placed on the shelf for its next borrower.\nP3: The neighbourhood equipment room follows a short procedure for returned items.\nP4: Once that check is complete, the volunteer attaches a label showing that the item is available."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-english-02-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "A garden arrangement",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: After the schedule began, members reported fewer interruptions while waiting for tools.\nP2: Garden members often had to interrupt their work because several people needed the same tools.\nP3: Thus, the simple borrowing schedule made shared work easier to organise.\nP4: To address those delays, the group agreed on a borrowing schedule."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-english-03-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "An interview project",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The recording was then used to prepare a transcript for the interviewee to check.\nP2: Before making a recording, they asked the interviewee for permission.\nP3: After the checked transcript was corrected, a copy was returned to the interviewee.\nP4: Two pupils planned to preserve a local craft worker’s account through a recorded interview.\nP5: With that permission granted, the pupils recorded the interview."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-english-04-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "A return-box trial",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: During the trial, rain entered the box and damaged some of the returned books.\nP2: Readers asked the library for a way to return books after the building closed.\nP3: Because of that damage, the librarian moved the box beneath a sheltered entrance.\nP4: In response, the library tried placing a return box outside the gate."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-english-05-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Announcing a change",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: To reach those households as well, a member proposed sending a short text message.\nP2: One proposal was to display a printed notice beside the community hall.\nP3: The committee therefore chose both channels rather than relying on the printed notice alone.\nP4: However, households that rarely passed the hall might never see that notice.\nP5: A committee considered how to announce a change in the collection schedule."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-english-06-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Checking the collection ledger",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: They traced the two unmatched entries to receipts bearing donor initials instead of full names.\nP2: The discrepancy therefore came from duplicate records rather than missing instruments.\nP3: A shelf count, however, found only eighteen, so volunteers checked the ledger for a discrepancy.\nP4: Removing the two duplicate entries brought the ledger total into agreement with the shelf count.\nP5: A collection ledger listed twenty donated instruments.\nP6: Matching those initials with the full-name entries showed that each of the two receipts had been entered twice."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  }
+]

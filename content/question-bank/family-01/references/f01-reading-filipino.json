@@ -1,0 +1,141 @@
+[
+  {
+    "referenceId": "f01-reading-filipino-01-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Bago Magsimula ang Klase",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Pagkaisauli ng hiniram na kagamitan, nagtungo si Rami sa silid ng mga mapa upang kopyahin ang bagong talaan ng mga lumang ruta. May paalala sa pinto: pinagsama sa talaan ang dalawang salaysay na hindi pa lubusang nagtutugma. Naalala niyang iba ang pangalan ng isang sapa sa kuwaderno ng kaniyang lolo. Nang sabihin ng guro na darating mamaya ang tagapangasiwang may hawak ng orihinal na kuwaderno, naupo muna si Rami sa labas. Hindi niya hiniling na burahin ang pangalan sa bagong talaan. Sa kaniyang papel, isinulat niya ang dalawang pangalan at nag-iwan ng puwang para sa pinagmulan ng bawat isa."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Hanapin ang tahasang binanggit na patutunguhan; image 3, question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-02-passage",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Ang Panukalang Bakod",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Tatlong gawain lamang ang saklaw ng pasiya para sa Sabado: pagtitipon ng dahon, paglalagay ng pangalan sa mga tanim, at pagtatala ng mga sirang bangko. Sa panukalang pagpipintura ng bakod, kailangan muna ang pahintulot ng may-ari at pagtataya ng gastos; pagkatapos lamang nito maaaring bumoto ang lupon sa hiwalay na pulong. Hindi itinakda ng pasiya na awtomatikong maidaragdag ang gawain kapag natugunan ang dalawang kailangan. Dumating ang pahintulot noong Biyernes, ngunit wala pa ang pagtataya. Sinabi ng tagapangulo na kahit matapos nang maaga ang tatlong gawain ay hindi iyon dagdag na pahintulot. Ang pagpapaliban, paliwanag niya, ay hindi pagtanggi sa layunin at hindi rin pag-apruba sa pagpipintura."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Tukuyin ang hindi kabilang ayon sa teksto; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-03-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Sa Aking Paglalakad",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa silid-aklatan ko nais magtagal,\nsa mesang may ilaw at tahimik na sulok.\nHindi upang ikubli ang ingay ng lansangan,\nkundi upang marinig ang tanong kong napuputol.\nSa pahinang hindi ko agad sinasang-ayunan,\nhindi ko isasara ang aklat sa unang pagtutol.\nPaglabas ko, nais kong may maiuwing puwang\nsa pakikinig sa tinig na hindi ko katulad."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Tahasang patutunguhan o nais na lugar sa orihinal na tula; image 3, question 1. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-04-passage",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga Pahintulot sa Eksibit",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Dalawang larawan ang isinumite ni Neri, ngunit iisa lamang mula sa bawat kasapi ang pinipili. Napili ang larawang Lawa; hindi napili ang larawang Daan. Sa magkahiwalay na kahon ng pormularyo para sa Lawa, pinayagan niya ang pisikal na pagtatanghal ngunit hindi pa ang paglalathala sa katalogong maaaring i-download. Tahasang nakasaad sa gabay na ang pahintulot ay para lamang sa tinukoy na larawan at gamit. Ang pagputol sa larawan upang alisin ang makikilalang tao ay hindi awtomatikong nagpapalawak sa pahintulot. Kung magpapalit ng napiling larawan, kailangan ang bagong pagpili at kaukulang pahintulot. Ipinagpaliban ng tagapangasiwa ang pagsasama ng Lawa sa katalogo, hindi ang pagtatanghal nito o ang buong eksibit."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Suriin ang hindi suportadong pangkalahatang pahayag; image 4, question 4. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 independently rewritten dedicated passage for a higher-demand inference task; see family01-difficulty-revision.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-05-passage",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Sa Himpilan ng Tubig",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Mahaba ang pila sa himpilan ng tubig kahit sapat ang mga gripo. Napansin ni Bea na paulit-ulit na bumabalik sa unahan ang mga tao upang itanong kung anong lalagyan ang maaaring gamitin. Naglagay siya ng malinaw na paalala sa pasukan at nagpakita ng mga halimbawa ng pinapayagang lalagyan. Kinabukasan, bihira nang may bumalik upang magtanong. Hindi nagdagdag ng gripo o tauhan ang himpilan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Pangangatwirang sanhi batay sa detalye; image 1, passage A question 1, extended in Filipino. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-reading-filipino-06-passage",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Sa Silid ng Pagsasanay",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Tatlong ulit nang tinugtog ni Elio ang maikling piyesa, ngunit sa iisang bahagi siya bumibilis. Sa halip na agad tukuyin ang mali, ipinarinig ng guro ang dalawang rekording: ang unang pagsubok ni Elio at ang pagtugtog niya kasabay ng metronomo. Hiniling nitong lagyan niya ng marka ang bahaging hindi na nagtutugma ang dalawang takbo. Nang maituro ni Elio ang bahaging iyon, saka sila nagplano ng mas mabagal na pagsasanay. Hindi sinabi ng guro na wala nang kailangang itama."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original passage, question and explanation; bilingual editorial review pending",
+      "sources": [
+        "Reading reference batch: Hinuha sa layunin batay sa kilos ng tauhan; extension of the supplied comprehension formats. Original scenario or verse, not a quotation or translation. See reading-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  }
+]

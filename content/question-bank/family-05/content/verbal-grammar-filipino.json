@@ -1,0 +1,289 @@
+[
+  {
+    "questionId": "f05-grammar-filipino-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Ipinapahayag ng pangungusap na walang bagay sa loob ng kahon. Aling salita ang angkop? “___ laman ang kahon.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Hindi"
+      },
+      {
+        "choiceId": "b",
+        "text": "Walang"
+      },
+      {
+        "choiceId": "c",
+        "text": "Ayaw"
+      },
+      {
+        "choiceId": "d",
+        "text": "Huwag"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Walang laman ang kahon ang wastong pagpapahayag ng kawalan ng nilalaman. Hindi ay karaniwang pagtanggi sa panaguri, ayaw ay di-pagkagusto, at huwag ay pagbabawal; hindi nila nabubuo ang nilalayong pahayag dito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-filipino-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling ayos ang gumagamit ng AY nang hindi pinaghihiwalay ang simuno sa bahagi nito?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Ang lumang ay bangka matibay pa."
+      },
+      {
+        "choiceId": "b",
+        "text": "Matibay ay pa ang lumang bangka."
+      },
+      {
+        "choiceId": "c",
+        "text": "Ang lumang bangka ay matibay pa."
+      },
+      {
+        "choiceId": "d",
+        "text": "Ang ay lumang bangka matibay pa."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Buong simuno ang ang lumang bangka, na sinusundan ng ay at panaguring matibay pa. Pinagpuputol ng ibang ayos ang parirala o maling inilalagay ang ay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-filipino-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Hangarin lamang ni Nena na gumanda ang panahon; samantala, may tungkulin ang pangkat na magdala ng tolda kahit umaraw. Aling pangungusap ang naghihiwalay sa hangarin at sa obligasyong hindi nakasalalay sa panahon?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sana ay gumanda ang panahon; dapat magdala ng tolda ang pangkat kahit umaraw"
+      },
+      {
+        "choiceId": "b",
+        "text": "Sana ay gumanda ang panahon; dapat magdala ng tolda lamang kung umulan"
+      },
+      {
+        "choiceId": "c",
+        "text": "Dapat gumanda ang panahon; sana magdala ng tolda ang pangkat kahit umaraw"
+      },
+      {
+        "choiceId": "d",
+        "text": "Dapat gumanda ang panahon; dapat magdala ng tolda lamang kung umulan"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Sana ang hangarin sa panahon; dapat ang tungkulin ng pangkat, at kahit umaraw ang nagpapanatili sa obligasyong hindi kondisyunal sa ulan. Ang mga karibal ay ginagawang utos ang panahon, hangarin lamang ang tungkulin, o nililimitahan ang tungkulin sa ulan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-filipino-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ipinag-uutos ang pagsusuri bago pagkukulay. Kapag nasuri na, maaari nang kulayan, ngunit hindi ito obligadong kulayan. Aling panuto ang nagpapanatili sa prayoridad, pahintulot at kawalan ng obligasyon?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kulayan muna bago suriin; maaari lamang suriin pagkatapos"
+      },
+      {
+        "choiceId": "b",
+        "text": "Suriin muna bago kulayan; maaaring kulayan pagkatapos, ngunit hindi kailangang gawin iyon"
+      },
+      {
+        "choiceId": "c",
+        "text": "Suriin muna bago kulayan; pagkatapos ay kailangang kulayan ang lahat ng nasuri"
+      },
+      {
+        "choiceId": "d",
+        "text": "Suriin muna bago kulayan; pagkatapos ay bawal pa ring kulayan kailanman"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Muna/bago ang prayoridad; maaaring ang pahintulot; hindi kailangang ang kawalan ng obligasyon. Ang mga karibal ay binabaligtad ang prayoridad, ginagawang sapilitan ang pinapayagan, o ginagawang permanenteng pagbabawal ang pansamantalang paghihintay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-filipino-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ipinahihiwatig na ihahanda ang entablado bago dumating ang mga bisita. Hindi pa alam kung matutuloy ang pagtatanghal. Alin ang nagpapanatili sa dalawang diwa?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Ihahanda ang entablado pagkatapos dumating ang mga bisita, kaya tiyak ang pagtatanghal."
+      },
+      {
+        "choiceId": "b",
+        "text": "Bago dumating ang mga bisita ay ihahanda ang entablado; hindi pa tiyak ang pagtatanghal."
+      },
+      {
+        "choiceId": "c",
+        "text": "Dahil dumating na ang mga bisita, natapos na ang pagtatanghal."
+      },
+      {
+        "choiceId": "d",
+        "text": "Ihahanda ang entablado bago dumating ang mga bisita, kaya tiyak nang matutuloy ang pagtatanghal."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Itinatakda ng bago ang ugnayang temporal, samantalang ang hiwalay na sugnay ay nagpapanatili sa kawalang-katiyakan. Hindi nangangako ng pagtatanghal ang paghahanda lamang; kailangang mapanatili ang oras at limitasyon.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-filipino-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Sabay na nangyayari ang dalawang gawain sa magkaibang silid: nag-eensayo ang mga mananayaw at naghahanda ng kasuotan ang mga mananahi. Aling pang-ugnay ang angkop sa paglalahad ng magkasabay na gawain?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "dahil"
+      },
+      {
+        "choiceId": "b",
+        "text": "upang"
+      },
+      {
+        "choiceId": "c",
+        "text": "samantala"
+      },
+      {
+        "choiceId": "d",
+        "text": "bunga nito"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Sa kontekstong ito, samantala ang naglalahad ng kasabay na pangyayari. Dahil ay sanhi, upang ay layunin, at bunga nito ay resulta; walang gayong ugnayang sanhi o layunin sa ibinigay na dalawang kilos.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-filipino-07",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Maaaring pumili ang pangkat ng alinmang kasapi bilang boluntaryo, ngunit eksaktong isa lamang ang kailangan. Aling pahayag ang nagpapanatili sa lawak ng pagpili at sa bilang ng gagawa?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Kahit sino ay maaaring piliin; lahat ng kasapi ang kailangang gumawa"
+      },
+      {
+        "choiceId": "b",
+        "text": "Isa lamang ang gagawa; ang pinakamatandang kasapi lamang ang maaaring piliin"
+      },
+      {
+        "choiceId": "c",
+        "text": "Kahit sinong kasapi ay maaaring piliin; isa lamang ang gagawa"
+      },
+      {
+        "choiceId": "d",
+        "text": "Isa lamang ang gagawa; walang kasaping maaaring piliin"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Kahit sinong kasapi ang nagpapanatili sa malayang pagpili, habang isa lamang ang bilang ng gagawa. Ang isang karibal ay tama ang pagpili ngunit ginagawang lahat ang gagawa; ang isa ay tama ang bilang ngunit nagdaragdag ng limitasyon sa edad. Ang walang kasapi ay sumasalungat sa pinapahintulutang pagpili.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "DepEd ALS Elementary Level Lessons 23–24 and 31: independent construction/substitution analysis, not a claim that the portal supplies this answer; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  }
+]

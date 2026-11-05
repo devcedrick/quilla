@@ -1,0 +1,1970 @@
+[
+  {
+    "questionId": "f04-analytical-logic-01",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Use the relation word part to its stated position: PREFIX : BEFORE THE ROOT :: SUFFIX : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "after the root"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "before the root"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "the whole sentence"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "the meaning of the root"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A prefix precedes a root; a suffix follows it. The task concerns position, not meaning or the larger sentence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-02",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Use the relation guiding mechanism to permitted movement: HINGE : SWING :: STRAIGHT RAIL : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "slide along a straight line"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "swing around a fixed hinge"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "remain without any movement"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "rotate around a centre"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A straight rail guides sliding along its line, as a hinge guides swinging about its axis. The other movements do not match the stated guiding relation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-03",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In a local system, a circle means START and a square means STOP. Complete the symbol-to-command analogy: CIRCLE : START :: SQUARE : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "wait"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "stop"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "repeat"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "start"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The supplied dictionary maps square to STOP. Real-world symbol conventions are irrelevant; the question supplies the complete local mapping.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-04",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "For this analogy, the relation is one of two equal shares to its whole: HALF : WHOLE :: SEMICIRCLE : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "a circle"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "a radius"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "a quarter-circle"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "a triangle"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A semicircle is one of two equal halves of a circle, matching half to whole. A radius is a length, a quarter-circle is a smaller fraction, and a triangle is a different figure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-05",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A stack is read from top to bottom. Its complete order is red, green, blue. Which colour is immediately ABOVE blue?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "red"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "green"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "blue"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No colour is above blue."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Green is directly above blue; red is above green but is not adjacent to blue. Blue cannot be above itself.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-06",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local display repeats TRIANGLE, CIRCLE, SQUARE in that order. The first symbol is TRIANGLE. What symbol occupies position 6?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "TRIANGLE"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "CIRCLE"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "SQUARE"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "The position is undefined."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Each cycle has3 symbols. Position6 completes the second cycle, so it is SQUARE. The position is defined by the stated repeating order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-07",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A diagram key says that a boxed instruction is optional and an unboxed instruction is required. Instruction J is boxed. Which statement follows under this key?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "J may be skipped."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "J must be performed."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "J must be performed twice."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "J cannot be performed."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Boxed means optional, so J may be skipped or performed. Optional does not mean forbidden, and the key imposes no repetition.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-08",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The claim “Every container has a lid” is false. Which observation must therefore exist?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A container without a lid."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A lid without a container."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A container with two lids."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No containers at all."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Falsifying a universal claim requires at least one container with no lid. A stray lid or a second lid does not contradict it; an empty collection would not make the universal false.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-09",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Only the digits 1, 3 and 5 are permitted in a three-digit local code. Repetition is allowed. Which code is permitted?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "315"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "305"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "3511"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "132"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "315 has three permitted digits.305 contains0;3511 has four digits;132 contains2. No uniqueness restriction is imposed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-10",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A counter accepts EITHER one large token OR two small tokens, but no mixed payment. Which payment is allowed?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "One large token and one small token."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Two small tokens."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "One small token."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Two large tokens."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Two small tokens exactly match one permitted payment. The mixed option is explicitly excluded; the other quantities do not match either stated alternative.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-11",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local legend defines dotted lines as proposed routes and solid lines as existing routes. Route V is dotted. What does the legend identify V as?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "An existing route."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A proposed route."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A closed route."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "A longer route."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Dotted means proposed under the supplied legend. Status, closure and length cannot be substituted for that explicit mapping.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-12",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Ala arrived earlier than Beni, and Beni arrived earlier than Cora. No arrivals were simultaneous. Who arrived last?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Ala"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Beni"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Cora"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "The information is insufficient."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Earlier-than is transitive here:Ala precedes Beni, who precedes Cora. Cora is last among the three.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-13",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A colour is selected from red, blue and green. It is neither red nor green. Which colour is selected?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Red"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Blue"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Green"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "More than one colour must be selected."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The given set is exhaustive and exactly one colour is selected. Eliminating red and green leaves blue.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-14",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Two cards are identical in shape but have different numbers. Which statement follows?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "They have the same number."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "They must have different shapes."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Same shape does not establish same number."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Neither card can have a number."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The premises explicitly combine equal shapes with unequal numbers. They refute identity of number from shape; they do not remove the numbers or alter the shapes.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-15",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Mira faces north and Lito faces south across a table. Each points horizontally straight to their own right. Relative to the room, which directions do they point?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Mira east; Lito west."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Both east."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Mira west; Lito east."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Both west."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A right turn from north points east; a right turn from south points west. Personal right is relative to the person, so opposite-facing people point to opposite room directions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-16",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Five scores are distinct. D exceeds A; A exceeds B; E exceeds D; C exceeds B but is below A. Which exact rank is forced?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A is second."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "D is second."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C is fourth or fifth."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "B is fourth."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The chain is E>D>A>C>B, so D is second. A is third,C fourth,B fifth. Combining the two C comparisons with the other chain removes any ambiguity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-17",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Four folders P,Q,R,S fill four positions left to right, once each. P is somewhere left of R. Q is NOT adjacent to P. S is at an end. Which order can satisfy every condition?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "P-R-Q-S"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Q-P-R-S"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "S-R-Q-P"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "P-Q-S-R"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "P-R-Q-S puts P before R, Q two positions from P, and S at an end. Q-P-R-S violates nonadjacency; S-R-Q-P reverses P/R; P-Q-S-R both puts Q next to P and leaves S away from an end.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-18",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two repeating signals start at position 1. Signal X repeats ON, OFF. Signal Y repeats ON, ON, OFF. At which earliest position after position 1 are BOTH OFF?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "3"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "6"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "8"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "X is OFF at even positions2,4,6,...;Y is OFF at3,6,9,... . Their first shared OFF after1 is6. Checking each cycle separately avoids treating the starts as synchronized OFF states.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-19",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A statement says, “Each of four volunteers worked on at least one weekend.” Which finding is consistent with that statement while REFUTING the stronger claim that some single weekend was worked by all four?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Each volunteer worked exactly one weekend, and no two chose the same weekend."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "All four worked the same Saturday and no other weekend."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "One volunteer worked no weekends, while the others worked every weekend."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "All four worked every weekend in the period."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Four distinct single weekends give each volunteer weekend work but no weekend shared by all. The common Saturday and every-weekend cases satisfy the original but do not refute the stronger claim. The no-weekend volunteer contradicts the original. Two quantifier scopes must be distinguished.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-20",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three trays initially contain one card each: tray1 has P, tray2 has Q, tray3 has R. In round1 move every card simultaneously one tray forward, with3 wrapping to1. In round2 exchange the entire contents of trays1 and2. Where are P and R at the end?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "P in1; R in2."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "P in2; R in1."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "P in3; R in2."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "P in1; R in3."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "After round1 the tray contents are [R,P,Q]. Exchanging trays1 and2 gives [P,R,Q]. Thus P is in1 andR in2. Applying exchanges to initial locations or moving sequentially instead of simultaneously yields the distractors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-21",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Exactly one of T and U attends. U attends only if V attends. V does not attend. What follows?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "T attends and U does not."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "U attends and T does not."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Neither T nor U attends."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "V attends and T does not."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "U implies V, so V absent forces U absent. Exactly one of T/U then forces T present. The rule does not imply that V follows from T.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-22",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rewriting step replaces every AB pair present in a string simultaneously with X, without overlapping pairs. No other characters change. Apply exactly TWO steps to AABB. What remains?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "XX"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "AXB"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "AX"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "AAX"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "In AABB only the middle positions2–3 form AB, so step1 gives AXB. That string contains no adjacent AB pair;step2 leaves AXB. Replacing nonadjacent A and B would incorrectly give XX.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-23",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "To assess whether a workshop programme prevents business closures, an analyst studies only businesses still operating after five years; most survivors used the programme. Which additional evidence most directly addresses the selection problem?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Programme use among businesses that closed during the same five years."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Programme use among a larger sample of surviving businesses."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Current profits of surviving businesses that used the programme."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Participants' satisfaction scores recorded after five years."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Closed businesses are excluded by selecting survivors, so use and nonuse among those failures are needed to compare closure rates. More survivors, profits among survivors, and satisfaction among participants still omit the closed group and cannot address that specific selection problem. They may inform other questions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-24",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Team A met its target in 18 of 20 trials; Team B met its target in 20 of 25 trials. A report calls B more reliable solely because 20 exceeds 18. What is the strongest correction?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Compare success proportions: A90%, B80%; the raw count alone does not support greater reliability for B."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Compare only failures: A2, B5; trial totals never matter."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Declare equal reliability because both have more successes than failures."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Compare20 with18 again after discarding the trial totals."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The different denominators matter:18/20=.90 and20/25=.80. The observed proportion is higher for A even though B has more successes. Raw failures alone also depend on how many trials were attempted; these finite records do not guarantee future reliability.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-25",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Some singers are dancers, and some dancers are painters. Which extra premise is enough to establish that some singers are painters?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Every dancer is a painter."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Some painters are not dancers."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Every painter owns a brush."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Some singers are not dancers."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "At least one singer is a dancer; if all dancers paint, that person is a singer-painter. Two original “some” groups could otherwise involve different dancers. The other premises do not bridge the singer-dancer witness to painting.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-26",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A log states that a gate was open at 09:00 and closed at 09:10. A witness says it stayed open continuously from 09:00 THROUGH 09:10, including both endpoints. Can all statements be true if “open” and “closed” are mutually exclusive states at each instant?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Yes, because the log says nothing about09:05."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "No, because they disagree about the state at09:10."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "No, because a gate cannot ever change state."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Yes, because09:00 and09:10 are different times."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The continuous claim includes09:10 and requires open then, while the log requires closed then. They conflict at that endpoint. State changes in general are allowed, but that does not reconcile these particular statements.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-27",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In a diagram, P points to Q and R, and Q points to S; these are its ONLY arrows. A second diagram has W pointing to X and Z, and Z pointing to Y, with no others. To preserve every arrow direction and branch, P corresponds to W. Which correspondences for Q and S complete the structural analogy?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Q→Z; S→Y."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Q→X; S→Y."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Q→Z; S→X."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Q→Y; S→Z."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Q is the child of P that itself has a child S. In the second diagram Z is the child of W with a child Y, soQ maps toZ andS toY;R maps toX. MappingQ toX loses the second-level arrow, mappingS toX moves it to a sibling, and mappingQ toY reverses the hierarchy.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-28",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A policy says, “An unescorted visitor must wear a red badge.” An observer sees an unescorted visitor wearing a blue badge and NO red badge. No fact establishes compliance. Which conclusion is justified?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "The person is not a visitor."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "The policy was violated in this observed case."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Blue must mean red under the policy."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Every escorted visitor must wear blue."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The observation satisfies the rule's visitor/unescorted conditions but not its required red badge, so this is a violation. Policies may be broken; one cannot erase an observed premise by assuming compliance. The rule says nothing about escorted visitors.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-29",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "In a local game a row wins exactly when it contains at least one triangle AND no circles. Which change turns the row [square, circle, square] into a winning row in ONE replacement?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Replace the circle with a triangle."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Replace either square with a triangle."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Replace the circle with a square."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Replace a square with a circle."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Replacing the circle with a triangle simultaneously removes the forbidden shape and supplies the required one. Replacing a square leaves a circle; replacing the circle with a square leaves no triangle. Both conditions must hold.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-30",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A survey reports that60% of40 responses support a proposal. Ten additional responses all oppose it. What changes and what stays the same?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "The number supporting stays24; the support proportion falls to48%."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "The number supporting falls to20; the proportion stays60%."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "The number supporting stays24; the proportion stays60%."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "The number supporting rises to30; the proportion rises to60%."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Initially.60×40=24 support. The ten new opponents change total to50 but add no supporters, so24/50=48%. A percentage need not stay fixed when its denominator grows.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-31",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Parcels K and L occupy different rooms, each chosen from1,2,3. K is in1 or2. L is in2 or3. If K is in2, L is NOT in3. What must follow?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "K is in1."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "K is in2."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "L is in2."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "L is in3."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "If K were2, L could not be2 because rooms differ and could not be3 by the conditional; its permitted2/3 set would be empty. Thus K must be1. Both L2 andL3 remain possible, so neither exact L location follows.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-32",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Three devices A,B,C need separate distinct labels1,2,3, one each. A cannot receive1. B must receive a larger number than C. Which label is forced for B?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "1"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "2"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "3"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No single label is forced."
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "B cannot be1, but can be2 with C1,A3, or3 with C1,A2. Both arrangements satisfy all conditions. The two countermodels show that choosing the largest available label for B is an unwarranted strengthening.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-33",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A list contains each of P,Q,R once. It is read cyclically, so the item after the last is the first. P is immediately followed by Q. Which statement must hold?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "R is immediately followed by P."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Q is immediately followed by P."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "P must be written first."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "R must be written first."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "In a three-item cycle P→Q leaves Q→R and R→P. The written starting point can rotate, so neither P nor R must appear first on the page.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-34",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An argument says, “The room was quiet, so no one was inside.” Which added premise makes that inference valid?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Whenever anyone is inside, the room is noisy; quiet and noisy cannot both hold."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Whenever the room is empty, it is quiet."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Sometimes occupied rooms are quiet."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "This room is larger than the neighbouring room."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "If occupied implies noisy, quiet rules out occupancy by contradiction. Empty implies quiet is the converse direction and allows quiet occupied rooms; “sometimes” even supplies such counterexamples. Size is irrelevant to the inference.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-35",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two reports cover the SAME10 deliveries. One records6 as late; the other records5 as damaged. What is the smallest possible number that were BOTH late and damaged?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "5"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "For subsets of the same10, intersection≥6+5−10=1. This is attainable with1 both,5 late-only,4 damaged-only. Assuming the groups are disjoint would require11 deliveries;5 is possible but not the minimum.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-36",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A random sample of30 records from a100-record file contains30 distinct IDs. Without assuming anything about uninspected records, which pair gives the minimum and maximum possible number of DISTINCT IDs in the full file?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "30 and100"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1 and100"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "30 and70"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "31 and100"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "At least the30 already-distinct IDs exist. All70 uninspected records could reuse those IDs, attaining30;or each could have a fresh ID, attaining100. A minimum of1 contradicts the sample,31 assumes a new ID, and70 mistakenly counts only uninspected records as an upper bound.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-37",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two complete lists contain volunteer names. List X has exactly A,B,C; List Y has exactly B,C,D. Everyone on BOTH lists must receive a green badge, and everyone on exactly one list must receive a white badge. Which complete allocation satisfies the rules?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Green:B,C; white:A,D."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Green:A,D; white:B,C."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Green:A,B,C; white:D."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Green:B; white:A,C,D."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The intersection is B,C and the symmetric difference is A,D. The key applies the two different rules to those disjoint sets. The union is A,B,C,D, but membership of the union alone does not qualify someone for green;C belongs on both lists just likeB.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-38",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every learner completes two practice sessions, always receiving reminders in the second session and never in the first. Scores rise in the second session. Which redesign most directly separates a reminder effect from a session-order effect?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Randomly assign half to reminders first and half to reminders second, using otherwise comparable sessions."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Keep reminders second for everyone but recruit twice as many learners."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Keep the same order but use a longer reminder message in the second session."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Compare only second-session scores of learners who liked the reminders."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Counterbalancing reminder order across randomly assigned learners breaks the fixed link between reminders and practice order. More learners preserve that confounding;longer reminders add a different treatment while retaining order;restricting analysis to those who liked reminders adds selection without an order comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-39",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Six people A,B,C,D,E,F occupy a round table, once each. Positions increase clockwise from A at position1. C is immediately clockwise from A. B sits opposite E. D is immediately clockwise from E. F is not next to A. Who must sit opposite D?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "F"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "C occupies2. Test E at3,4,5,6 (E cannot be1or2). E3 putsD4,B6,F5, which works. E4 putsD5,B1, colliding withA. E5 putsD6,B2, colliding withC. E6 putsD1, colliding withA. Thus clockwise order is A,C,E,D,F,B. OppositeD at4 isA at1. All four constraints and wraparound must be respected.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-40",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Six staff A,B,C,D,E,F must fill Rooms1,2,3 with exactly two staff per room. A/B work in design, C/D in legal, E/F in IT; department-mates may not share a room. Initially Room1 has A,B; Room2 C,D; Room3 E,F. A must stay in Room1; B may not be in Room2; C may not be in Room3; E may not be in Room1; D and F may not share a room. A staff member changing rooms incurs a one-time transfer cost: A1, B4, C2, D3, E5, F2 budget units. Staying costs zero. What is the smallest total transfer cost of a complete valid allocation?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "9 budget units"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "11 budget units"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "12 budget units"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "14 budget units"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Because A stays in1 and B cannot share with A or enter2, B is in3. Enumerating the remaining capacity, department and exclusion rules gives exactly four allocations in A,B,C,D,E,F order: (1,3,2,1,3,2), cost9; (1,3,1,2,2,3), cost11; (1,3,2,1,2,3), cost12; (1,3,2,3,2,1), cost14. The minimum has rooms1:A,D;2:C,F;3:B,E. Only B,D,F move, costing4+3+2=9. Every offered amount is the cost of a feasible allocation; choosing any feasible assignment is not enough to minimize it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-41",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A machine is in exactly one of six states A–F. Four yes/no tests always give these outcomes (0=no,1=yes), listed in order T1,T2,T3,T4: A=0111; B=0000; C=1011; D=1101; E=0101; F=1001. You must select exactly THREE tests in advance. Which selection always distinguishes all six states?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "T1,T2,T3"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "T1,T2,T4"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "T1,T3,T4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "T2,T3,T4"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "T1,T2,T3 produce A011,B000,C101,D110,E010,F100, all distinct. T1,T2,T4 makes C and F both101. T1,T3,T4 makes D and F both101. T2,T3,T4 makes D and E both101. Thus each rival loses an essential distinction; no assumption about test independence is needed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-42",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two identical workers must complete six noninterruptible jobs. Durations in hours: A4,B3,C2,D5,E2,F3. C starts only after A ends; D after B; E after BOTH C and D; F after C. C and D additionally require the same inspection bench, so cannot overlap. Each running job occupies one worker. All jobs are available at time0 subject to prerequisites. What is the earliest possible finish time for all jobs?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "10 hours"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "11 hours"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "12 hours"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "13 hours"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "If C uses the bench before D, C cannot finish before6 (A4+C2);D then ends no earlier than11 andE no earlier than13. If D uses it first, D ends no earlier than8 (B3+D5);C ends no earlier than10, thenF cannot finish before13. Both cases give a lower bound13. It is attained with B0–3,D3–8,C8–10,F10–13 on one worker, and A0–4,E10–12 on the other. Ignoring the bench gives an invalid10-hour schedule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-43",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Exactly two of Lockers1–4 contain parcels. Three notices make these claims: A: “Lockers1 AND2 contain parcels.” B: “Exactly one of Lockers2 and3 contains a parcel.” C: “Locker4 contains a parcel.” Exactly two notices are true. Which list gives ALL possible occupied-locker pairs?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "{1,2}, {2,4}, {3,4}"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "{1,2}, {1,4}, {3,4}"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "{1,3}, {2,4}, {3,4}"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "{1,2}, {2,3}, {2,4}"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Enumerate all six pairs. {1,2} gives true,true,false;{1,3} gives false,true,false;{1,4} gives false,false,true;{2,3} gives false,false,false;{2,4} gives false,true,true;{3,4} gives false,true,true. Exactly two truths therefore allow only {1,2},{2,4},{3,4}. The alternatives retain some compatible pairs but insert an incompatible one or omit another.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-44",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A,B,C,D,E,F attend two sessions, morning and afternoon, exactly three per session and each person once. The FIXED requirements A morning and F afternoon cannot be changed. Four additional rules are R1: B and C attend together; R2: A and D attend different sessions; R3: B and E attend different sessions; R4: E attends an earlier session than C. Exactly ONE additional rule will be removed; all other requirements remain. Which list contains ALL and ONLY the single rules whose removal permits a complete allocation?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "R1 or R2"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "R2 or R4"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "R1 or R4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "R3 or R4"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "With all rules, R4 forces E morning and C afternoon; R1 adds B afternoon, R2 adds D afternoon and fixed F is also afternoon, exceeding capacity. Removing R2 permits morning A,D,E and afternoon B,C,F. Removing R4 permits morning A,B,C and afternoon D,E,F. Removing R1 still forces E morning/C afternoon through R4, B afternoon through R3 and D afternoon through R2, overfilling with F. Removing R3 leaves B,C,D,F forced afternoon through R1,R2,R4. Thus only R2 and R4 individually repair the system; each requires its own consistent witness.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-45",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A directed network has ONLY these links, with their closure costs in budget units: S→A4, S→B3, A→B2, A→C3, B→C2, A→T5, B→T6, C→T4. Travel follows arrows; no reversed links are allowed. At most THREE links may be closed, and S→A and S→B may NOT both be closed. What is the least total closure cost that leaves NO route from S to T?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "9 budget units"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "12 budget units"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "14 budget units"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "15 budget units"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "A successful cut using at most3 links is one of {S→A,B→C,B→T}, cost4+2+6=12; {S→A,B→T,C→T}, cost14; or {A→T,B→T,C→T}, cost15. To see exhaustion, if S→A is closed, S→B stays open: B→T must close and the B→C→T path requires either B→C or C→T closed. If S→A stays open but S→B closes, the A→T, A→B→T and A→C→T routes require three further closures, exceeding3. If both S exits stay open, the direct A→T and B→T links must close, leaving only one closure to block both paths through C: close C→T. A two-link S-exit cut is forbidden. Thus12 is the minimum, not the cost15 of simply closing every T entrance.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-46",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A four-digit code uses1,2,3,4 exactly once. In the reading1234, exactly TWO digits are in their correct positions. In a second reading2314, NO digit is in its correct position. Which list contains ALL possible true codes?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "1243,1432,4231"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1243,1324,4231"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "1432,2134,4231"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "1243,1432,3214"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Exactly two positional matches with1234 mean exactly one pair of its positions was swapped. The six such codes are2134,3214,4231,1324,1432,1243. Compare each against2314:2134 has matching2 inposition1 and4 inposition4;3214 has1 inposition3 and4 inposition4;1324 has3 inposition2 and4 inposition4. The remaining4231,1432,1243 have zero matches. Every offered list preserves two valid candidates but substitutes an invalid third.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-47",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four teams A,B,C,D each play every other team once. A win earns3 points, a draw1 per team, a loss0. Final totals are A6,B4,C5,D1. A beat B; C drew with D. What were the results of A versus C and B versus D?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "C beat A; B beat D."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A beat C; B beat D."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "C beat A; B drew with D."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "A drew with C; D beat B."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A already earned3 againstB; to reach6 over its two remaining matches it must win one and lose one. D has1 from its draw withC, so loses toA andB. Therefore A beatsD, loses toC;B beatsD. C has1 againstD and3 againstA, needing1 againstB;B has0 againstA and3 againstD, also needing1 againstC. Thus all six results consistently produce the totals; options sharing only one correct match fail another team's total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-analytical-logic-48",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Each card has one letter on one side and one positive integer on the other. Vowels are A,E,I,O,U. Two claims apply to EVERY card: (1) If its letter is a vowel, its integer is even. (2) If its integer is divisible by3, its letter is a vowel. Four cards show the faces A, T, 6, 7. Which cards must be turned over to test for ALL possible violations of these two claims, turning as few cards as possible?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A,T,6,7"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A,6,7 only"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A,T,6 only"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "T,6,7 only"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A must be checked for an odd integer (violates1). T must be checked for a multiple of3 (violates2). The6 must be checked for a consonant (violates2). The7 must be checked for a vowel (violates1). Each unturned card has a possible hidden violating face compatible with what is visible, so all four are necessary. Checking only the named antecedents would miss contrapositive tests.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring with separate AI review; human editorial approval and learner calibration pending",
+      "sources": [
+        "Original fictional Family 04 premises, authored 2026-11-02; see docs/content/family04-analytical-review.md. No actual CSC examination questions."
+      ]
+    }
+  }
+]

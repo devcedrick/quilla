@@ -1,0 +1,232 @@
+[
+  {
+    "questionId": "f02-paragraph-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the fixed paragraph-part labels into the most coherent complete paragraph. Every label must occur once.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "P2-P1-P4-P3"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "P4-P2-P1-P3"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "P2-P4-P3-P1"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "P2 creates the plan; P4 verifies it before posting; P1 posts it; P3 uses the posted version. Posting before verification conflicts with the explicit before clause.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-paragraph-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-paragraph-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the fixed paragraph-part labels into the most coherent complete paragraph. Every label must occur once.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "P2-P3-P4-P1"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "P4-P2-P3-P1"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "P2-P4-P3-P1"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The leak motivates repair, the old washer is removed before a replacement can go in its place, and only then can the replacement stop the drip.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-paragraph-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-paragraph-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange the fixed paragraph-part labels into the most coherent complete paragraph. Every label must occur once.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "P4-P2-P1-P3"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "P2-P4-P3-P1"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "P2-P1-P4-P3"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A draft precedes checking; that check points back to duplicate review. Invitations precede replies, so meal estimates come last.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-paragraph-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-paragraph-english-04",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange the fixed paragraph-part labels into the most coherent complete paragraph. Every label must occur once.",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "P2-P4-P5-P1-P3"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "P4-P2-P5-P3-P1"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "P4-P2-P3-P5-P1"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "P4-P5-P2-P3-P1"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "P4 establishes purpose; P2 supplies the incentive design; P5 reports the contrary outcome; P3 interprets that result; P1 draws the remedy. The alternatives misplace a dependent interpretation, reverse the penalty sequence, or put therefore before its justification.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-paragraph-english-04-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-paragraph-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange the fixed paragraph-part labels into the most coherent complete paragraph. Every label must occur once.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "P5-P2-P3-P4-P1"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "P5-P2-P4-P1-P3"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "P5-P3-P2-P4-P1"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "P2-P3-P5-P1-P4"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "P5 sets the constraint; P2 supplies the first count; P3 adds the second observation; P4 distinguishes visibility from completeness using both; P1 applies that distinction. First and second observers, therefore, and that distinction anchor the dependencies.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-paragraph-english-05-reference",
+      "referenceVersion": 1
+    }
+  }
+]

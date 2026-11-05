@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f07-reading-filipino-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Bakit may ikalawang bersiyon ng awit sa inilabas na rekording?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Upang malinaw na marinig ng mga nag-aaral ang bawat linya"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Upang palitan ang unang bersiyong hindi inilabas"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Upang itago kung sino ang kasabay sa unang bersiyon"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Upang dagdagan ang mga linyang hindi kasama sa unang awit"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Tahasang ibinigay ang layuning marinig nang malinaw ang bawat linya. Parehong inilabas ang bersiyon; walang sinabing pagtatago ng kalahok o pagdaragdag ng linya.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-filipino-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Aling mga sapin ang nakalaan sa sayaw?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Lahat ng sampu"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Ang anim para sa pagbabasa"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ang apat na hindi muna ipinahihiram habang may ensayo"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Ang mga bagong darating na sapin"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Ang apat ang tahasang itinalaga sa ensayo. Hindi binanggit ang darating na sapin at hindi mapagpapalit ang anim at apat.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-filipino-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang nagbago sa pagtingin ni Kardo?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Ang inakala niyang depekto ay naunawaan niyang bahagi ng kapaki-pakinabang na disenyo"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Napatunayan niyang hindi na dapat magsabit ng habi"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Naisip niyang kailangang takpan ang lahat ng puwang"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Nalaman niyang si Ema ang naglagay ng larawan sa sahig"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Ang liwanag na dumaraan sa habi ang nagbago sa kaniyang pagtataya. Hindi binanggit na may hiwalay na larawang inilagay o na pinatungan ang puwang.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-filipino-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling hinuha tungkol sa ginawa ni Pio ang pinakasuportado?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Nagdagdag siya ng nakasulat na sanggunian habang nanatili ang bilis ng programa"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Pinalitan niya ng nakasulat na talaan ang pasalitang pagtawag sa buong programa"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Naglaan siya ng talaan upang makapagpatuloy si Luning sa mas mabagal na pagtawag"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Inihanda niya ang talaan bilang kapalit na programang tatapusin sa ibang araw"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Karagdagang sanggunian sa tabi ni Luning ang talaan; walang pagbago sa bilis at natapos ang pagtawag sa takdang oras. Hindi nito pinalitan ang pasalitang gawain, pinabagal ito o inilipat sa ibang araw.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-filipino-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ano ang layunin ng pagmamarka bago bumili ng pandilig?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Alamin ang lugar at oras ng kakulangan upang maitugma rito ang dagdag na pagdidilig"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Alamin ang lugar ng tuyong sulok upang mapantay ang oras ng pagdidilig sa lahat ng kama"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Alamin ang oras ng pagkatuyo upang lagyan ng dagdag na pandilig ang bawat kama"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Alamin ang bilang ng basang kama upang doon lamang ilagay ang bagong pandilig"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Parehong lokasyon at oras ng kakulangan ang kailangang matukoy upang ituon ang dagdag. Ang pantay na oras o pantay na dagdag sa lahat ay salungat sa magkakaibang pangangailangan; hindi basang kama lamang ang target.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-reading-filipino-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Aling paliwanag ang pinakamahusay na nag-uugnay sa talinghaga at sa magkakaibang pagtrato sa petsa at salaysay?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Pinagdurugtong ang bahagyang pananaw; nililinaw ng tiket ang petsa ngunit hindi nito inaalis ang hiwalay na ambag ng salaysay tungkol sa paghahanda"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Pinagdurugtong ang bahagyang pananaw; dahil may ambag ang salaysay, pareho nang tama ang magkaibang petsa"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ang tiket ang lumulutas sa petsa; kaya wala nang saysay ang lahat ng alaala ng sinumang nagkamali rito"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Ibig sabihin ng talinghaga na walang mapagtitibay na detalye; kaya nananatiling pantay ang tiket at lahat ng petsang naalala"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "May bahagi at dugtungan ang salamin: magkakaiba ang ambag ng mga sanggunian. Ang tiket ay nakapaglinaw ng partikular na petsa, samantalang ang alaala ay may ibang impormasyong hindi kinakailangang mali. Hindi pinapantay ang dalawang magkasalungat na petsa o itinatakwil ang buong salaysay.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-reading-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

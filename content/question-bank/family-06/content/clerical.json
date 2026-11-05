@@ -1,0 +1,782 @@
+[
+  {
+    "questionId": "f06-clerical-01",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The master code is RN-407-BQ. Which entry matches it exactly?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "RN-470-BQ"
+      },
+      {
+        "choiceId": "c2",
+        "text": "RN-407-BQ"
+      },
+      {
+        "choiceId": "c3",
+        "text": "RN-407-BO"
+      },
+      {
+        "choiceId": "c4",
+        "text": "RM-407-BQ"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Compare all characters and their positions: only RN-407-BQ matches; alternatives transpose digits or substitute letters.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-02",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A fictional office sends requests for copies to Records and requests for repairs to Facilities. Where should a request to replace a broken desk hinge go?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Records"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Facilities"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Both in sequence"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Neither unit"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Replacing a broken hinge is a repair, so the supplied rule selects Facilities. The rule is local to this exercise.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-03",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A register uses DD/MM/YYYY exclusively. What date is 04/09/2026?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "9 April2026"
+      },
+      {
+        "choiceId": "c2",
+        "text": "4 September2026"
+      },
+      {
+        "choiceId": "c3",
+        "text": "9 April2024"
+      },
+      {
+        "choiceId": "c4",
+        "text": "4 September2029"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The first field is day 4 and second is month 9, September. Do not substitute MM/DD conventions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-04",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Receipt numbers issued in order are 601,602,604,605. Which number is absent?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "600"
+      },
+      {
+        "choiceId": "c2",
+        "text": "603"
+      },
+      {
+        "choiceId": "c3",
+        "text": "606"
+      },
+      {
+        "choiceId": "c4",
+        "text": "614"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "603 is the only integer missing inside the displayed consecutive interval 601 through 605.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-05",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local rule requires one three-page document per envelope, pages 1,2,3 in that order. Which packet complies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "1,1,2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1,3,2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1,2,3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "2,3,3"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Every required page must occur once and in order. Other packets duplicate a page or reverse the sequence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-06",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A stock card opens at 47 folders, records 12 received and 9 issued. What closing balance should be entered?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "26"
+      },
+      {
+        "choiceId": "c2",
+        "text": "44"
+      },
+      {
+        "choiceId": "c3",
+        "text": "50"
+      },
+      {
+        "choiceId": "c4",
+        "text": "68"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "47+12−9=50. Receipts add stock and issues reduce it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-07",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: process complete urgent files before complete routine files; hold incomplete files. Within a class use earliest arrival. Files: A urgent incomplete 08:00; B routine complete 08:05; C urgent complete 08:15; D urgent complete 08:10. Which is processed first?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C"
+      },
+      {
+        "choiceId": "c4",
+        "text": "D"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "A is held. D and C are eligible urgent files; D arrived earlier. B waits despite arriving before them.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-08",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A local rule treats records as duplicates only when BOTH date and code match. Existing entries:06 Nov/R 18,07 Nov/R 18,06 Nov/R 19. Which proposed entry is a duplicate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "07Nov/R19"
+      },
+      {
+        "choiceId": "c2",
+        "text": "06Nov/R18"
+      },
+      {
+        "choiceId": "c3",
+        "text": "08Nov/R18"
+      },
+      {
+        "choiceId": "c4",
+        "text": "07Nov/R20"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "06 Nov/R 18 matches both fields of the first entry. A shared code on another date alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-09",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Office rule: use the highest approved version; ignore drafts regardless of number. Available: v 2 approved, v 3 draft, v 4 approved, v 5 draft. Which should be distributed?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "v2"
+      },
+      {
+        "choiceId": "c2",
+        "text": "v3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "v4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "v5"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "v 4 is the highest approved version. v 5 has a higher number but remains a draft under the local rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-10",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An interview lasts 25 minutes followed by 5 minutes reset. The room is free 09:00–10:00. Interviews must finish by 10:00; no reset after the last is required. What is the latest possible start of a second back-to-back interview if the first starts 09:00?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "09:25"
+      },
+      {
+        "choiceId": "c2",
+        "text": "09:30"
+      },
+      {
+        "choiceId": "c3",
+        "text": "09:35"
+      },
+      {
+        "choiceId": "c4",
+        "text": "09:40"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "First ends 09:25, reset ends 09:30, so the second starts 09:30 and ends 09:55. Back-to-back rules prevent a later optional gap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-11",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An order requests 12 packs of 5 labels and 8 packs of 10 labels. A delivery contains 10 packs of 5 and 9 packs of 10. The local check compares labels in total, not pack types. What is the discrepancy?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "10labels short"
+      },
+      {
+        "choiceId": "c2",
+        "text": "No total discrepancy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "10labels extra"
+      },
+      {
+        "choiceId": "c4",
+        "text": "20labels extra"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Ordered 60+80=140 labels; delivered 50+90=140. Pack-type differences cancel in the stated total-only check.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-12",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local workflow: check completeness, obtain supervisor approval, then release. Any correction after approval requires completeness recheck and renewed approval. A signed file was approved, then its requested quantity was corrected. Which remaining sequence complies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Renew approval, then recheck completeness, then release"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Recheck completeness, renew approval, then release"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Recheck completeness, release under original approval"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Renew approval and release without another completeness check"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The correction invalidates the prior completeness and approval steps. Recheck must precede renewed approval; merely repeating approval or retaining the original approval omits a required dependency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-13",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local public-summary rule: remove names and addresses; publish totals by district only when at least 3 people contribute; otherwise MUST combine all small districts as Other when their combined total reaches 3. District counts are North 5, East 2, West 1. Which extract complies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "North 5; East 2; West 1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "North 5; Other 3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "North 5; Other 2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "North 5; omit East and West without combining"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "North meets the threshold. East and West individually fail but together form Other 3. Publishing the small cells breaches the rule, Other 2 loses a contributor, and omission ignores the required combining instruction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-14",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A desk measures elapsed processing minutes excluding a 12:00–13:00 closure. A file arrives 11:40 and finishes 13:25 the same day. What time is recorded?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "25minutes"
+      },
+      {
+        "choiceId": "c2",
+        "text": "45minutes"
+      },
+      {
+        "choiceId": "c3",
+        "text": "85minutes"
+      },
+      {
+        "choiceId": "c4",
+        "text": "105minutes"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "20 minutes before closure plus 25 after reopening equals 45. The 60-minute closure is excluded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-15",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local routing rules: ordinary equipment faults go to Maintenance; active smoke goes first to Safety; an equipment fault that has stopped producing smoke goes to Maintenance unless a person reports breathing discomfort, which takes Safety first. A printer smoked earlier but has stopped; its operator reports no discomfort. A separate copier is now smoking. What first routes apply to printer/copier?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Safety / Safety"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Maintenance / Safety"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Safety / Maintenance"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Maintenance / Maintenance"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The printer has stopped smoking and has no reported discomfort, so its fault follows Maintenance. The copier has active smoke and goes first to Safety. Both current condition and exception criteria must be applied.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-16",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A register stores whole sheets. Opening stock is 3 reams of 500 sheets;720 sheets are issued and 2 packs of 100 received. What closing figure is entered?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "780"
+      },
+      {
+        "choiceId": "c2",
+        "text": "980"
+      },
+      {
+        "choiceId": "c3",
+        "text": "1020"
+      },
+      {
+        "choiceId": "c4",
+        "text": "1482"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "1500−720+200=980 sheets. Packages must be converted to the register unit before reconciliation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-17",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "One room is free 09:00–11:00. A takes 40 minutes, B 30, C 20; allow 10 minutes between meetings. A must end before B starts, and C cannot start before 10:00. Which schedule fits all rules?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A09:00; B09:50; C10:30"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A09:00; C10:00; B10:20"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A09:20; B10:00; C10:40"
+      },
+      {
+        "choiceId": "c4",
+        "text": "C09:00; A09:30; B10:20"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "A 09:00–09:40,B 09:50–10:20,C 10:30–10:50 fits. In A 09:00/C 10:00/B 10:20 no reset follows C. A 09:20 ends 10:00 and leaves no reset before B. Starting C 09:00 breaks its earliest-start limit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-18",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A till begins PHP 500, receives PHP 360 and refunds PHP 80. A duplicate receipt of PHP 60 was included in the recorded 360. A separate valid PHP 40 receipt was omitted. What corrected closing cash should be recorded?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "720"
+      },
+      {
+        "choiceId": "c2",
+        "text": "740"
+      },
+      {
+        "choiceId": "c3",
+        "text": "760"
+      },
+      {
+        "choiceId": "c4",
+        "text": "820"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Correct receipts 360−60+40=340; cash 500+340−80=760. Undo the duplicate and restore the omission before closing.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-19",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local rule: batch by destination; within each destination complete urgent files precede complete routine files, with ascending file number within each class. Hold incomplete files outside batches. East files: E 08 routine complete, E 03 urgent complete, E 01 urgent incomplete, E 02 urgent complete, E 06 routine complete. West files: W 04 urgent complete, W 02 routine complete, W 01 urgent complete. Which pair of batches complies?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "East E02,E03,E06,E08; West W01,W04,W02"
+      },
+      {
+        "choiceId": "c2",
+        "text": "East E02,E03,E08,E06; West W01,W04,W02"
+      },
+      {
+        "choiceId": "c3",
+        "text": "East E02,E03,E06,E08; West W01,W02,W04"
+      },
+      {
+        "choiceId": "c4",
+        "text": "East E01,E02,E03,E06,E08; West W01,W04,W02"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Hold incomplete E 01. East urgent E 02,E 03 precede routine E 06,E 08, with both classes internally ascending. West urgent W 01,W 04 precede routine W 02. Alternatives reverse a routine tie-break, sort West globally, or include a held file.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f06-clerical-20",
+    "version": 1,
+    "family": 6,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two desks must each remain staffed 10:00–11:00. A is qualified for either desk and takes a fixed 10:20–10:40 break. B is qualified only for desk 1 and available until 10:40. C is qualified only for desk 2 and available all hour. D is qualified for either desk, available 10:20–10:40 only. All intervals end exactly when the next begins. Which allocation covers both desks?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "C desk2 all hour; A desk1 outside break; B desk1 during A break"
+      },
+      {
+        "choiceId": "c2",
+        "text": "C desk2 all hour; B desk1 until10:40; D desk1 after10:40"
+      },
+      {
+        "choiceId": "c3",
+        "text": "B desk1 until10:20; D desk1 10:20–10:40; C desk2 all hour; A desk2 after10:40"
+      },
+      {
+        "choiceId": "c4",
+        "text": "B desk1 until10:40; A desk1 after10:40; C desk2 until10:20; D desk2 10:20–10:40"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The first allocation covers desk 1 with A 10:00–10:20 and 10:40–11:00, B during the break, and desk 2 with C throughout. The second uses D after availability ends; the third leaves desk 1 uncovered after 10:40; the fourth leaves desk 2 uncovered after 10:40. Each must be checked across all three time intervals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate answer checks; human editorial approval and calibration pending",
+      "sources": []
+    }
+  }
+]

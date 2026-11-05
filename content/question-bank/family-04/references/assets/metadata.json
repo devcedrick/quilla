@@ -1,0 +1,82 @@
+[
+  {
+    "assetId": "f04-commute-chart",
+    "path": "references/assets/f04-commute.png",
+    "mediaType": "image/png",
+    "sha256": "1fb747d0676ef1271e0dd59025b7110ade85151e33a9d545df9b05fbe5f1ee06",
+    "width": 1600,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "assetId": "f04-test-chart",
+    "path": "references/assets/f04-test.png",
+    "mediaType": "image/png",
+    "sha256": "422de9072acb611664e98d2490996a1715ba637f8d7cdc93f1861f2d1e587c88",
+    "width": 1600,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "assetId": "f04-scanners-chart",
+    "path": "references/assets/f04-scanners.png",
+    "mediaType": "image/png",
+    "sha256": "9d386de71db19b157f3c2a55eb1cad45f5562750add7a24ef8032a5ade669cce",
+    "width": 1600,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "assetId": "f04-bands-chart",
+    "path": "references/assets/f04-bands.png",
+    "mediaType": "image/png",
+    "sha256": "9c94b355ab8a62ad81e4ba7f6c9927874d83949a4fa28128b2f247c12fc46f4d",
+    "width": 1600,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "assetId": "f04-grid-chart",
+    "path": "references/assets/f04-grid.png",
+    "mediaType": "image/png",
+    "sha256": "206322b559e3db10a687f04ee9f9873131b1ea5653b6daa6762ad6fc04884f49",
+    "width": 1600,
+    "height": 1100,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  }
+]

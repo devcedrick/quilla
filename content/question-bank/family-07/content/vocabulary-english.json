@@ -1,0 +1,290 @@
+[
+  {
+    "questionId": "f07-vocabulary-english-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The conservator used an OPAQUE sleeve so light could not pass through to the print. What does OPAQUE mean here?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Blocking the passage of light"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Letting some light pass diffusely"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Letting light pass clearly"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Reflecting every sound"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The physical sense of opaque is not transmitting light. Translucent and transparent sleeves permit light; sound reflection is a different property.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, opaque, adjective1; https://www.merriam-webster.com/dictionary/opaque; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-english-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The panel will RESERVE judgment until it hears the second witness. What does RESERVE mean here?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Announce"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Defer"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Divide"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Record"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Reserve judgment means hold it over to a future time, not announce or merely record it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword reserve, relevant adjective/verb sense; https://www.merriam-webster.com/dictionary/reserve; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-english-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A date discrepancy was MATERIAL to deciding which contract applied. Which meaning fits MATERIAL?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Made of cloth"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Widely circulated"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Significant to the issue"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Recently discovered"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The adjective concerns importance/consequence for the decision, not physical fabric, circulation or recency.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword material, relevant adjective/verb sense; https://www.merriam-webster.com/dictionary/material; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-english-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A guide shook each visitor’s hand but did not look up from his screen; he later spent ten minutes answering a visitor’s questions carefully. A note calls only the greeting PERFUNCTORY. Which interpretation preserves the word and its scope?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The greeting was mechanical or superficial; that description need not apply to his later careful answers"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The greeting was mechanical or superficial; his later answers therefore lacked care as well"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The greeting was warmly attentive; his later answers alone were mechanical"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The greeting was delayed; his later answers were therefore brief"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Perfunctory describes routine/superficial performance. The note limits this judgment to the greeting; it does not erase the care explicitly shown later or refer simply to lateness.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, perfunctory, adjective1–2; https://www.merriam-webster.com/dictionary/perfunctory; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-english-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The mediator follows the case closely but owns no stake in either outcome. The account calls her DISINTERESTED. Which interpretation fits this use?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Impartial despite paying attention"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Uninformed because she lacks a stake"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Indifferent because she follows the case"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Biased because she knows the facts"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The context selects freedom from personal interest or bias. It does not use the word to mean bored; close attention is compatible with impartiality.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword disinterested, relevant adjective/verb sense; https://www.merriam-webster.com/dictionary/disinterested; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-english-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Machine X costs less to buy; machine Y costs more but wastes much less fuel. The report calls Y more ECONOMICAL over five years. Which inference preserves the word’s scope?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Y uses resources more efficiently over that period, although its purchase price is higher"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Y must have the lower initial price because economical means cheap to buy"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Y must operate faster because economical means rapid"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Y must have the simpler mechanism because economical means uncomplicated"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Economical concerns prudent resource use or savings in operation. The specified five-year perspective allows a higher initial price; speed and mechanical simplicity are not entailed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword economical, relevant adjective/verb sense; https://www.merriam-webster.com/dictionary/economical; retrieved 2026-11-04."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-vocabulary-english-07",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The map note calls the boundary EQUIVOCAL because two readings remain possible. It calls the chosen route PROVISIONAL: the route is stated clearly but will be reviewed after a survey. Which revision preserves both distinctions?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "The boundary permits competing readings; the route is clearly stated but temporary"
+      },
+      {
+        "choiceId": "c2",
+        "text": "The boundary permits competing readings; the route is a permanent commitment despite review"
+      },
+      {
+        "choiceId": "c3",
+        "text": "The boundary has one settled reading; the route is clearly stated but temporary"
+      },
+      {
+        "choiceId": "c4",
+        "text": "The boundary has one settled reading; the route is a permanent commitment despite review"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Equivocal concerns competing interpretations; provisional concerns temporary status. A clear temporary choice need not be ambiguous, and choosing it does not settle the separate boundary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, headword equivocal, relevant adjective/verb sense; https://www.merriam-webster.com/dictionary/equivocal; retrieved 2026-11-04.",
+        "Merriam-Webster, headword provisional, relevant adjective/verb sense; https://www.merriam-webster.com/dictionary/provisional; retrieved 2026-11-04."
+      ]
+    }
+  }
+]

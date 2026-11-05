@@ -1,0 +1,114 @@
+[
+  {
+    "assetId": "f05-data-pictograms-chart",
+    "path": "references/assets/f05-data-pictograms.png",
+    "mediaType": "image/png",
+    "sha256": "fb82b80ad9154c30d022befa0598b6fe7abacc9527cdc67a33cd76709a682342",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f05-data-rain-chart",
+    "path": "references/assets/f05-data-rain.png",
+    "mediaType": "image/png",
+    "sha256": "39adb91f1fedcb8dae58ae4e51b0e9105a44e7cf1f7362892bea02e0868e9a29",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f05-data-contest-chart",
+    "path": "references/assets/f05-data-contest.png",
+    "mediaType": "image/png",
+    "sha256": "0027be59a39245fc1c19881743222e83f3409e04e0d83c3a9ce515aff675c956",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f05-data-packing-chart",
+    "path": "references/assets/f05-data-packing.png",
+    "mediaType": "image/png",
+    "sha256": "524747cdc115697760b7b7610146709eec7ea71163158250b7cc0df99c6a4612",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f05-data-percentiles-chart",
+    "path": "references/assets/f05-data-percentiles.png",
+    "mediaType": "image/png",
+    "sha256": "5f54e921a06bff3ea33470ff9015d2c44d6eeeb93463c091d1be9fb8602a3e47",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f05-data-ranking-chart",
+    "path": "references/assets/f05-data-ranking.png",
+    "mediaType": "image/png",
+    "sha256": "65b8d04783c2ecb393e4ccefd868660400b0cf8419c340009f82c2a1dfec7e84",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "assetId": "f05-data-cutting-chart",
+    "path": "references/assets/f05-data-cutting.png",
+    "mediaType": "image/png",
+    "sha256": "88382f0275cf02d1aeed0e074846c3cecbd9a7b49548cb6c0e35d146315b31cd",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  }
+]

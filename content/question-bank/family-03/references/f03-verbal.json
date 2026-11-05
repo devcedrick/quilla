@@ -1,0 +1,506 @@
+[
+  {
+    "referenceId": "f03-reading-english-01-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Reading passage 1",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "At the village cinema, tickets are collected at the front gate. Seats are unnumbered. Visitors needing the step-free entrance should use the courtyard door, where an usher also collects tickets. The side door opens only for deliveries."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-english-02-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Reading passage 2",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The potter fired two bowls made from the same clay. One had a thin wall and the other a thick wall. Only the thick bowl cracked. Asked whether wall thickness caused the crack, she noted that she had also placed the thick bowl closer to the kiln's hottest point. She proposed another firing with the positions reversed."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-english-03-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Reading passage 3",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A local historian writes, 'The station became the town's clock: shutters opened when the morning train arrived and stalls closed after the evening departure.' The next paragraph notes that mechanical clocks were already common in houses before the railway opened."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-english-04-passage",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Reading passage 4",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A repair cooperative promises free adjustment when an installation fault causes the reported malfunction and the malfunction is reported within 30 days of the work. Replacement of a part damaged later by an impact is charged separately. A drawer was reported as jamming on day 28 and examined on day 34. Its runner had been fitted at the wrong angle, and its handle had been bent by a later impact. With a straight borrowed handle but the original runner, it still jammed. With a correctly fitted runner but the bent handle, it moved freely. The owner requests a runner adjustment and a new handle. No decision on either request has yet been made."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-english-05-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Reading passage 5",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A translator prepares a bilingual exhibition. The curator wants source quotations distinguished from explanations, while the designer wants each label short enough to read at a glance. Version K silently replaces an unfamiliar metaphor with its explanation. Version L keeps the quotation intact and adds a long explanatory note in the same type. Version M keeps a short marked quotation and places a separately marked explanation on an optional foldout. The curator accepts shortening only if quotation marks never enclose words absent from the source. Visitors may choose not to open a foldout."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-english-06-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Reading passage 6",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A ferry association must choose one of two timetables for a month. It promises a connection for the 7:00 clinic shuttle and a final boat after the 18:00 market closing. Schedule P arrives at 6:50 and leaves at 17:50. Schedule Q arrives at 7:10 and leaves at 18:20. A proposed extra morning boat would fix Q's clinic connection, but it needs the only spare engine, already reserved for emergency replacement. The association permits that reserve to be reassigned only if another replacement engine is secured. No replacement has yet been secured. The committee distinguishes a schedule that currently meets both promises from one that could meet them after a condition is fulfilled."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-filipino-01-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Babasahin 1",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa paligsahan ng maikling dula, maaaring magsumite ng piyesa hanggang Biyernes sa silid ng samahan. Ang ensayo ay sa Sabado sa bulwagan. Hindi tumatanggap ng piyesa ang tagapangasiwa ng bulwagan; paghahanda lamang sa pagtatanghal ang tungkulin niya."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-filipino-02-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Babasahin 2",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa unang bersiyon ng tula, 'bato' ang tawag ni Sela sa katahimikan ng ama. Sa huling saknong, naging 'bintana' ang katahimikang iyon nang maunawaan niyang nakikinig pala ito sa mga tunog na matagal na niyang hindi napapansin. Hindi nawala ang katahimikan; nagbago ang pagtingin dito."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-filipino-03-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Babasahin 3",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Nagpahiram si Kardo ng timbangan sa kapuwa mangingisda. Nang ibalik ito, inihambing nila ang basa nito sa isang kilalang panimbang. Hindi itinuring ni Kardo na pagdududa sa pagkatao ng nanghiram ang pagsusuri; nais niyang tiyaking pareho pa rin ang sukatan bago ito muling gamitin."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-filipino-04-passage",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Babasahin 4",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa gawaan ng habi, maaaring magpalit ng kulay ang kasapi kung walang nakalaang order para sa sinulid. Ang sinulid na nakalaan na ay maaaring pakawalan lamang kapag pumayag ang may-order at nagtala ng bagong alokasyon ang tagatala. Nakatanggap si Umi ng pahintulot mula sa may-order, ngunit wala ang tagatala. Nais niyang humabi agad at ipatala na lamang sa susunod na araw. Ipinaliwanag ng tagapangasiwa na hindi niya tinatanggihan ang bagong kulay; hindi pa lamang kumpleto ang batayan upang gamitin ang nakalaang sinulid."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-filipino-05-passage",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Babasahin 5",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Sa paligsahang tumatanggap ng tula at maikling sanaysay, hindi nakikita ng mga hurado ang pangalan ng may-akda. Layunin ng paligsahan na makilala ang bisa ng bawat anyo, hindi gawing magkatulad ang dalawa. Sa isang pagsubok, iisang talinghaga mula sa tula ang binasa ng dalawang hurado. Ibinasura ito ng una dahil hindi literal na mapatutunayan; tinanggap ito ng ikalawa dahil iniuugnay ito sa iba pang taludtod. Sa mga sanaysay, kapuwa nila tinanggap ang paghihinuha kapag may malinaw na batayan. Nagkasundo sila sa pulong na mahalaga ang ebidensiya. Hindi pa nila namarkahan nang magkahiwalay ang panibagong tula gamit ang isang magkatuwang na gabay. Wala ring paghahambing dito ng mga markang may pangalan at walang pangalan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-reading-filipino-06-passage",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Babasahin 6",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Nang hindi abutin ni Sinta ang plumang iniaalok ko, isinulat ko sa kuwaderno ang salitang mapagmataas. Hapon na nang mapansin kong namamaga ang kanyang mga daliri. Sa sumunod na gawain, itinulak niya ang papel papalapit sa kaliwang kamay at inilapag muli ang pluma matapos itong subukang hawakan. Kinabukasan, iniabot niya sa akin ang tasang mainit pa. Sa pulong, mariin pa rin niyang tinutulan ang isa kong mungkahi, saka iniusog sa akin ang pitsel nang maubos ang laman ng tasa ko. Pagkaraan, binalikan ko ang kuwaderno. Ginuhitan ko ang mapagmataas, ngunit iniwang walang kapalit ang patlang sa tabi nito. Nang maupo muli si Sinta, inilapag ko muna ang pluma; ang kamay kong kanina ay nakatikom sa bulsa ay nakabukas sa ibabaw ng mesa habang hinihintay ko siyang magsalita."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted independently authored dedicated passage; bilingual review pending",
+      "sources": ["Original fiction; no external factual premise required."]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-english-01-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Paragraph parts 1",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Once the ink is dry, fold the card along the marked line.\nP2: Begin by writing your name on the flat card.\nP3: Finally, stand the folded card on your desk.\nP4: Leave the writing untouched until the ink dries."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-english-02-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Paragraph parts 2",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: That gap allowed rain to enter the room.\nP2: The carpenter then sealed the gap.\nP3: A narrow gap had opened beside the window frame.\nP4: After the repair, the room stayed dry during the next shower."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-english-03-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Paragraph parts 3",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: The members therefore kept the evening performance but added an afternoon one.\nP2: Yet several parents could not attend after dark.\nP3: The drama club had chosen an evening performance to avoid the midday heat.\nP4: This addition let those families attend without removing the cooler evening session.\nP5: Moving the only performance earlier would solve their difficulty while reviving the original heat problem."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-english-04-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Paragraph parts 4",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Those marks differed from the pale lines left by ordinary wear.\nP2: A jeweller noticed several dark marks beneath a ring's surface.\nP3: She therefore inspected the ring with a stronger lens rather than polishing it immediately.\nP4: The enlarged view revealed trapped material that polishing alone would not remove.\nP5: That finding justified a cleaning method designed for the trapped material."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-english-05-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Paragraph parts 5",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: She implemented that requirement by comparing exposed and covered samples from each batch.\nP2: That result weakened the material-batch explanation without establishing a cause beyond the tested conditions.\nP3: An exposed print faded, and the printer initially blamed a newly purchased batch of ink.\nP4: Under the same lamp, exposed prints from both batches faded while covered prints from both stayed dark.\nP5: A colleague noted that the print had also been moved from a shaded shelf to a bright window.\nP6: The comparison therefore had to vary exposure without confounding it with the choice of ink batch."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-english-06-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "english",
+    "title": "Paragraph parts 6",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: That distinction led the essayist to favour assistance offered without dictating how recipients must describe their experience.\nP2: Yet the invitation came with a script telling each guest exactly what gratitude should sound like.\nP3: The essay begins by praising a host who opens her house to displaced neighbours.\nP4: The problem, then, is not that shelter is worthless but that receiving it is made conditional on a prescribed voice.\nP5: The praise initially seems uncomplicated because the guests have a safe place to sleep.\nP6: Such a condition treats welcome and control as if they were the same generosity."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-filipino-01-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga bahagi 1",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Pagkatapos maligo, nagbihis siya ng malinis na damit.\nP2: Sa wakas, lumabas siya upang salubungin ang mga panauhin.\nP3: Pagdating mula sa bukid, naligo muna si Alma.\nP4: Nang makapagbihis, inayos niya ang hapag."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-filipino-02-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga bahagi 2",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Kaya naglaan sila ng hiwalay na lalagyan para sa mga hiwang maaaring matulis.\nP2: Nais ng pangkat na magamit muli ang mga piraso ng salamin sa likhang-sining.\nP3: Ang paghihiwalay na iyon ay hindi pagtanggi sa proyekto kundi paghahanda sa ligtas na pagpili ng materyal.\nP4: Ngunit may ilang pirasong kailangang suriin muna dahil sa talim.\nP5: Mula sa lalagyang iyon pipili lamang ang guro ng mga pirasong maaari nang hawakan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-filipino-03-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga bahagi 3",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Napansin niyang hindi ito tugma sa bilang na nakasulat sa orihinal na sobre.\nP2: Muling binilang ni Dado ang mga buto bago magsimula ang pagtatanim.\nP3: Sa pagbubukas ng isa pang supot, nakita niya ang nawawalang bahagi ng laman.\nP4: Dahil dito, hinanap niya kung may naihiwalay na supot noong paghahanda.\nP5: Nang mapagsama ang dalawang supot, tumugma na ang kabuuan sa orihinal na tala."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-filipino-04-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga bahagi 4",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Ang katahimikang iyon ang nagbigay ng puwang upang marinig ang mahinang kampanilya.\nP2: Kaya sa paglalarawan niya, ang paghinto ay bahagi ng paglalakbay, hindi kabaligtaran nito.\nP3: Sa kaniyang sanaysay, inilarawan ni Mila ang paglalakad sa makitid na kalye.\nP4: Ang tunog na iyon ang gumabay sa kaniya patungo sa maliit na pagawaan.\nP5: Sa gitna ng pagmamadali, huminto siya at nanahimik."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-filipino-05-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga bahagi 5",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Kaya hindi niya itinakwil ang buong talaarawan; itinama niya ang oras habang pinanatili ang hiwalay na napatunayang pagdating.\nP2: Subalit napag-alamang sira na noon ang orasang ginamit ng sumulat.\nP3: Ayon sa talaarawan, dumating ang bangka nang ikasiyam, batay sa orasang nakikita mula sa pantalan.\nP4: Dahil sa pagkakaibang iyon, iminungkahi ng mananaliksik na suriin nang magkahiwalay ang oras at ang mismong pangyayari.\nP5: Ipinakikita ng dalawang katibayan na maaaring mali ang batayan ng oras kahit totoo ang naobserbahang pagdating.\nP6: Samantala, pinatutunayan ng hiwalay na tala ng daungan na dumating nga ang bangka, ngunit hindi nito tinutukoy ang oras."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  },
+  {
+    "referenceId": "f03-paragraph-filipino-06-parts",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga bahagi 6",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Ngunit ang pagtukoy sa pagkukulang ay hindi pa kapareho ng paghusga na walang mabuting nagawa ang unang pangkat.\nP2: Dito nakabatay ang kaniyang mungkahing magdagdag ng pahinang nagpapakita ng hindi pa nalulutas, sa halip na itapon ang buong ulat.\nP3: Maayos na inilista ng ulat ang mga natapos na tulay, ngunit wala itong tala ng mga bahay na nanatiling hiwalay sa kalsada.\nP4: Kaya itinuring ni Vina na kulang ang larawan ng pagbangon kung natapos na proyekto lamang ang isasalaysay.\nP5: Sa kaniyang pagbasa, maaaring kilalanin ang natapos habang ipinakikita rin kung sino ang hindi pa naaabot.\nP6: Ang mga bahay na iyon ang nagpakitang hindi sapat na panukat ng pagbangon ang dami ng tulay."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original dedicated paragraph parts; bilingual review pending",
+      "sources": [
+        "Original synthetic discourse; full order and competing alternatives reviewed in the linked question explanation."
+      ]
+    }
+  }
+]

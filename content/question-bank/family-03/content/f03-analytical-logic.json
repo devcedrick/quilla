@@ -1,0 +1,1689 @@
+[
+  {
+    "questionId": "f03-analytical-logic-01",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Using the relation instruction to intended action, complete: INVITATION : ATTEND :: WARNING : ? ",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "exercise caution"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "send a warning"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "attend a meeting"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "ignore a risk"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "An invitation asks its recipient to attend; a warning asks its recipient to exercise caution. Sending the message reverses the recipient relationship; attendance belongs to the first pair.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-02",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Using the relation measurement to comparison standard, complete: LENGTH : METRE :: MASS : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "litre"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "kilogram"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "second"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "degree"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Length is measured against a metre standard; mass against a kilogram standard. The alternatives measure volume, time or angle rather than mass.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-03",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A room has four marked exits. Exactly one is blocked, and the others are usable. Which statement follows?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "At least two exits are blocked."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Every exit is usable."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Exactly three exits are usable."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Only one exit is usable."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Four exits minus the single blocked exit leaves three usable exits. The other counts contradict the exhaustive description.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-04",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A booking number consists of a letter followed by two digits. Which entry follows that format?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "7 A 2"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A 27"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "AB 2"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "27 A"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "A 27 has one initial letter and then two digits. The alternatives change the positions or supply two letters.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-05",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "All tokens in tray A are triangular. A circular token cannot be triangular. Which placement is impossible?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A circular token in tray A"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "A triangular token outside tray A"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A triangular token in tray A"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "A circular token outside tray A"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The circular token would violate tray A's universal triangular rule. The rule does not restrict other trays or require every triangle to be in A.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-06",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A clerk uses the symbol ★ to mean 'repeat the immediately preceding instruction once'. The sequence is TAP, CLAP, ★. What action is performed twice?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "TAP"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "CLAP"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Both TAP and CLAP"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Neither action"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The immediately preceding instruction is CLAP, so it is repeated once. The symbol does not repeat the entire sequence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-07",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local rule defines a complete pair as one lid and one base. A package contains a lid but no base. Which statement is certain?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "It contains two lids."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "It contains a complete pair."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "It does not contain a complete pair."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "It contains neither component."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "A base is necessary for a complete pair, and it is absent. The rule says nothing about additional lids.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-08",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Three cards show 2, 5, and 8. A selection must contain exactly two cards and have an even total. Which selection qualifies?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "2 and 5"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "5 and 8"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "2, 5 and 8"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "2 and 8"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Two even numbers give an even total: 2+8=10. Each pair containing 5 is odd, and selecting all three violates the count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-09",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Use the relation representation to represented object: FLOOR PLAN : BUILDING :: STREET MAP : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "road network"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "mapmaker"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "compass"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "journey duration"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A floor plan represents a building's layout; a street map represents a road network. A maker, tool and time are different relationships.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-10",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A path is defined as accessible when it has no steps. Path R has two steps. Which statement follows from this definition?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "R is accessible."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "R is not accessible."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "R is the shortest path."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "R has no ramp."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The stated no-steps definition is not satisfied. Accessibility here is a supplied classification, not a general claim about real accessibility standards.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-11",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A notice says that at most one visitor may enter a booth. Which set lists all permitted visitor counts?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "0 or 1"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Exactly 1"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "1 or 2"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "0, 1 or 2"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "At most one allows either zero or one. Exactly one excludes an allowed empty booth; either range containing two wrongly permits a violation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-12",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Using the relation removal of an obstruction to restored passage, complete: UNBLOCK : DRAIN :: UNLOCK : ?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "key"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "locksmith"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "metal"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "door"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Unblocking makes passage through a drain possible; unlocking makes passage through a door possible. A key is an instrument rather than the obstructed passage.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-13",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An argument says: 'All successful applicants submitted a portfolio. Nila submitted one, so Nila succeeded.' Which possibility exposes the gap?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A successful applicant submitted a portfolio."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "An unsuccessful applicant also submitted a portfolio."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "No successful applicants omitted portfolios."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Portfolios were required of successful applicants."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "The premise gives a necessary condition, not a sufficient condition. An unsuccessful portfolio submitter satisfies the premise but refutes the inference; the other statements merely repeat it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-14",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Surveyors questioned only people leaving a bicycle shop and concluded most town residents cycle daily. What change best addresses the sampling weakness?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Question more customers at the same shop."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Ask shop employees instead of customers."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Sample residents across the town independently of shop visits."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Count bicycles parked outside the shop."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "A town-wide sampling frame includes noncustomers. More observations from the same selected group do not repair its systematic exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-15",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A lamp failed to light at socket P. Without otherwise changing the lamp, a technician moved it to a verified working socket Q, where it lit. Which assessment best distinguishes what was tested from what remains uncertain?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "The lamp works at Q, which supports a fault at P and excludes intermittent lamp behaviour, although the defective socket component remains unknown."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "The lamp works at Q, which establishes that both sockets supply power and favours a temporary connection fault, although that connection has not been identified."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "The lamp works at Q, which isolates the earlier failure to P, although it does not show whether P's wiring or contacts caused it."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "The lamp works at Q; a P-related fault, intermittent lamp fault or intermittent connection could still explain the earlier failure."
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Lighting at Q establishes that the lamp was capable of operating in that test. A dead socket, a temporary connection fault, or intermittent lamp behaviour is compatible with both observations. The test does not establish power at P, uniquely diagnose P, or rule out an intermittent fault. Thus even a cautiously worded claim is too strong if it declares one rival explanation eliminated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-16",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A walker faces north, turns right and walks 2 blocks, turns left and walks 1 block, then turns around and walks 3 blocks. Where is the walker relative to the start?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "2 blocks east and 2 blocks south"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "2 blocks west and 2 blocks south"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "2 blocks east and 4 blocks north"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "2 blocks west and 4 blocks north"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The first leg is east 2, the second north 1, and after turning around the third is south 3. Net position is east 2, south 2. The distractors reverse the first turn or fail to subtract opposite-direction legs.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-17",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A display repeats RED, BLUE, BLUE continuously. Position 1 is RED. Which pair of positions must have the same colour?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "7 and 8"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "8 and 9"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "9 and 10"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "10 and 11"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Positions congruent to 2 or 0 modulo 3 are BLUE. Thus 8 and 9 are BLUE; each other pair combines RED with BLUE.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-18",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Every ferry inspector has a badge. Some badge holders are mechanics. Which conclusion is justified?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Some inspectors are mechanics."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Every mechanic is an inspector."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "The facts do not determine whether any inspector is a mechanic."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No inspector can be a mechanic."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The overlap occurs within badge holders but need not involve inspectors. Models with and without inspector-mechanics both satisfy the premises.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-19",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A proposal is adopted only if both committees approve it. Committee A approved; Committee B has not yet decided. Which claim is justified?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Adoption is guaranteed."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Rejection is guaranteed."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "A's approval is unnecessary."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Adoption has not been established."
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "A necessary approval remains unresolved. B may later approve or reject; neither final outcome is yet forced.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-20",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which evidence most directly tests the claim 'No shipment with a broken seal passes inspection'?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Inspection records for shipments whose seals were broken"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "The total number of shipments"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "The number of inspectors employed"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Seal colours on approved shipments only"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "A broken-seal shipment that passed would refute the universal claim. General totals, staffing and selected colours do not identify the relevant condition and outcome together.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-21",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A team says a new roster reduced delays. The same week, its workload halved. Which comparison best separates the roster effect from the workload effect?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Compare delays in low-workload weeks before and after the roster, using comparable teams."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Compare delays across all weeks before and after without matching workloads."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Compare only the best new-roster day with the worst old-roster day."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Compare new-roster workers' estimates of delay with old-roster recorded delays."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Matching workload and comparable teams addresses the rival explanation. Unmatched periods, selected extremes and different measurement methods leave systematic differences.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-22",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A code swaps each adjacent pair of letters, then reverses the entire result. What does MARKET become?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "AMKRTE"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "ETRKMA"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "TEKRAM"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "KRAMET"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Pair swapping yields AMKRTE. Reversing those six characters yields ETRKMA. AMKRTE stops early; TEKRAM reverses the unswapped original; KRAMET transforms only part.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-23",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "P is a prerequisite for Q and for R. Both Q and R are prerequisites for S. Which must hold in every compliant schedule?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Q is before R."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "R is before Q."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "S is before P."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "P is before S."
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Q and R may occur in either order, but each depends on P and each precedes S. Therefore P precedes S. The other relative orders are either undetermined or reversed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-24",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A report asserts BOTH that most returned items were damaged and that most damaged returns were repaired; 'most' means more than half. Records show 20 returns, 12 damaged returns, and 7 repaired returns, of which 5 were damaged. How do the records assess the two claims?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Both claims are supported."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "The damage claim is supported; the repair claim is contradicted."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "The damage claim is contradicted; the repair claim is supported."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Both claims are contradicted."
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Damaged returns are 12/20, exceeding half. Repaired damaged returns are only 5/12, below half. The repair denominator is the 12 damaged returns, not all 20 returns or the 7 repaired items. Five of seven would reverse the conditioning and incorrectly support the second claim.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-25",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A rule says volunteers may enter only after training. Volunteer Daro entered in full compliance. Which extra claim is NOT established?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Daro completed training before entering."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Daro was a volunteer, as stated in the record."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Training was sufficient by itself to guarantee admission."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Daro did not enter before the required training."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Daro's volunteer status and compliant entry establish prior training. Training is necessary, but is not stated sufficient: capacity or other rules may also affect admission. The other claims describe facts already established about Daro.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-26",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "For this review, a report is included if and only if it BOTH originates from a district office and bears a signature. J is from a district office but unsigned. K is signed, but its origin is not recorded. Which assessment follows without assuming an unrecorded fact?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "J is excluded; K's inclusion is undetermined."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "J is excluded; K is included."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "J's inclusion is undetermined; K is excluded."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Both J's and K's inclusion are undetermined."
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "J fails a necessary signature requirement, so it is excluded despite its origin. K meets the signature requirement but could come from either a district or a nondistrict office. Those two compatible origins give different inclusion results, so K remains undetermined. Missing origin information is not evidence of nondistrict origin, and a signature alone is not sufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-27",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A pilot compares two teaching methods. Method A's group starts with higher test scores. A ends with higher scores. Which missing comparison matters most for claiming greater improvement under A?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Total final scores without starting scores"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Change from each group's own baseline under comparable tests"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Only A's highest final score"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "The larger group's final score without adjusting for group size"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Improvement is a change relative to starting performance. Comparing gains on comparable tests addresses that claim; totals, maxima and unadjusted group-size comparisons do not.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-28",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Two independent rules are guaranteed: every green tag is numbered; no numbered tag is disposable. Tag H is green. Which pair follows?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Numbered and disposable"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Unnumbered and reusable"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Disposable and green"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Numbered and not disposable"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Green implies numbered, which excludes disposable. Not disposable does not by itself establish the separate undefined property reusable.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-29",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A token starts at grid point (0, 0), moves to (2, 0), then reflects across the vertical axis. It is then translated upward 3 units. Where does it finish?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "(-2, 3)"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "(2, 3)"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "(-2, -3)"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "(3, -2)"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "Reflection across the vertical axis changes x to -x; upward translation adds 3 to y. The other coordinates skip or misapply one operation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-30",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "All six teams must receive at least one slot. Eight indivisible slots are allocated. What is the greatest number any one team can receive?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "2"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "3"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "5"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Reserve one slot for each of the other five teams, leaving three. Four or five would leave too few slots; two is feasible but not maximal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-31",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A manager concludes every shift is understaffed because each shift reported at least one delay. What assumption is needed to make that reasoning valid?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "An understaffed shift can experience a delay."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Some fully staffed shifts can have delays."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Any shift with a delay is understaffed."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "No shifts reported delays."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The argument needs delay to imply understaffing. The reverse implication does not exclude equipment or demand as other causes; allowing fully staffed delays breaks the inference.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-32",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The statement 'Not all inspected boxes were dry' is true. Which paraphrase preserves exactly that information?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "All inspected boxes were wet."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "No inspected boxes were dry."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Most inspected boxes were not dry."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "At least one inspected box was not dry."
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "Negating all produces at least one counterexample, not a claim about every box or a majority. Not dry need not mean fully wet.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-33",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Six jobs A, B, C, D, E, F each occupy one of slots 1–6, once each. B immediately follows A. C occurs before D. E occurs exactly two slots after D. F is in slot 3. Which job must occupy slot 5?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "A"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "B"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "D"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "E"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "D must occupy one of slots 1–4 to leave room for E. D cannot be slot 1 because E would clash with F in slot 3, and D cannot be slot 3 because F is there. If D were slot 4, E would be slot 6; C would have to precede D, but the consecutive A,B block would need slots 1,2, leaving no earlier slot for C. Thus D is slot 2 and E slot 4. C must be slot 1, leaving A,B in slots 5,6. The unique order is C-D-F-E-A-B.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-34",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four tiles begin in the order A-B-C-D. One move is either R: move the leftmost tile to the right end without changing the order of the others; or S: swap only the two middle tiles. Moves may be repeated. What is the fewest moves needed to reach D-C-B-A?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "5"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "6"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "7"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "Six moves suffice: R,R,S,R,R,S gives ABCD → BCDA → CDAB → CADB → ADBC → DBCA → DCBA. To prove a smaller number cannot work, expand the distinct reachable orders by distance, omitting states seen earlier: 1 {BCDA, ACBD}; 2 {CDAB, BDCA, CBDA}; 3 {DABC, CADB, DCAB, BDAC, CDBA}; 4 {DBAC, ADBC, CABD, DACB, BADC}; 5 {BACD, DBCA, ABDC, CBAD, ADCB}. DCBA is absent through distance 5 and first appears at distance 6. A shorter-looking reversal must not silently swap the outside tiles or rotate in the opposite direction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-35",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three crates, one each of red, blue and green, occupy positions 1–3. Each has one distinct weight 1, 2, 3 kg. Position 2 weighs 3 kg. Red weighs 2 kg. Blue is left of green, and green is heavier than blue. Which colour is in position 1?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Red"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Blue"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Green"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Cannot be determined"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Red cannot be position 2 because that position weighs 3 kg. If red is 1, blue 2 weighs 3 kg and green 3 weighs 1 kg, contradicting green heavier than blue. Hence red 3; blue 1 weighs 1 kg and green 2 weighs 3 kg. The colour order alone permits red 1 and red 3, so weight constraints are essential.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-36",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A file is accepted exactly when it is signed and has exactly one of the archive and encryption flags. The COMPLETE initial flags are K: signed, archived; L: signed, archived, encrypted; M: encrypted only. K must stay unchanged. A configuration change must flip exactly one flag on L and exactly one on M. Which change leaves exactly TWO files accepted, including at least one accepted encrypted file?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Remove L's archive flag; add M's signature flag."
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Remove L's encryption flag; add M's signature flag."
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "Remove L's archive flag; remove M's encryption flag."
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "Remove L's encryption flag; remove M's encryption flag."
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "K remains an accepted archived file. Removing L's archive produces an accepted encrypted L; removing L's encryption instead produces an accepted archived L. Adding M's signature makes M accepted, whereas removing its encryption leaves it unsigned and unaccepted. The two signature-addition choices therefore produce three accepted files. Both encryption-removal choices on M produce two, but only the archive-removal change on L leaves an accepted encrypted file. Both the count and the flag requirement must be satisfied.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-37",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Three notices A, B, C concern an integer in {1, 2, 3, 4}. A says it is even; B says it exceeds 2; C says it is not 4. Exactly two notices are true. A second clue states that exactly one of A and C is true. Which integers remain possible?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "Only 2"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "Only 3"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "3 and 4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "2 and 4"
+      }
+    ],
+    "correctChoiceId": "choice-3",
+    "explanation": "The first condition permits 2, 3, 4: their truth triples are T, F, T; F, T, T; T, T, F. The second condition rejects 2 because A and C are both true, while 3 and 4 have exactly one true. Both clues matter; 1 fails the first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-38",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Undirected paths have costs AB 4, AC 2, BC 1, BD 5, CD 8. No other paths exist. A traveller goes from A to D without repeating a town and may waive the cost of exactly one traversed edge, but only if that edge normally costs at most 5. What is the minimum paid cost?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "2"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "3"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "4"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "choice-2",
+    "explanation": "Simple routes ABD, ACD, ABCD, ACBD have minimum paid costs 4, 8, 9, 3 respectively after the best eligible waiver. ACBD costs 2+1+5 and waives BD 5, leaving 3. CD 8 cannot be waived, which blocks the tempting 2-cost ACD route. Ignoring the detour gives 4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-39",
+    "version": 2,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four inspections W, X, Y, Z occur on four consecutive days, one per day and each once. X occurs before Z. W and Y are on adjacent days. Exactly one of these statements is true: 'Y is first' and 'Z is second'. Which set lists ALL possible day orders?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "{XZWY, XZYW, YWXZ}"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "{XZWY, XYWZ, YWXZ}"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "{XZYW, YWXZ, YWZX}"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "{XZWY, XZYW, WYXZ}"
+      }
+    ],
+    "correctChoiceId": "choice-1",
+    "explanation": "The exclusive statement splits the models into two cases. If Y is first, W must be second by adjacency, and X before Z forces Y-W-X-Z; here Z is not second. If Z is second, X must be first, leaving W,Y in either order: X-Z-W-Y or X-Z-Y-W. These exhaust the cases. XYWZ and WYXZ make both quoted statements false; YWZX reverses X and Z.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review.",
+        "2026-11-02 substantive quality revision; supersedes version 1. See docs/content/family03-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-analytical-logic-40",
+    "version": 1,
+    "family": 3,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "logic_and_analogy",
+    "conceptId": "word_analogy_and_logic_test",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Four stations A, B, C, D are initially off. Pressing switch 1 toggles A and B; switch 2 toggles B and C; switch 3 toggles C and D. Each switch may be pressed at most once and toggling reverses on/off. The final requirement is A on and D on, with exactly two stations on altogether. Which switches must be pressed?",
+    "choices": [
+      {
+        "choiceId": "choice-1",
+        "text": "1 and 3 only"
+      },
+      {
+        "choiceId": "choice-2",
+        "text": "1 and 2 only"
+      },
+      {
+        "choiceId": "choice-3",
+        "text": "2 and 3 only"
+      },
+      {
+        "choiceId": "choice-4",
+        "text": "All three"
+      }
+    ],
+    "correctChoiceId": "choice-4",
+    "explanation": "A on forces switch 1; D on forces switch 3. Pressing just 1 and 3 leaves all four stations on. Pressing 2 additionally toggles B and C off while leaving A, D on. Omitting either end switch cannot meet the end requirements, so all three are necessary.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and mathematical review; independent human approval and empirical calibration pending",
+      "sources": [
+        "Original synthetic Family 03 reasoning tasks; no actual CSC examination content.",
+        "See docs/content/family03-analytical-review.md for solutions, difficulty and originality review."
+      ]
+    }
+  }
+]

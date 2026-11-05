@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f07-paragraph-english-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The fixed P labels identify parts. Which complete order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P3 → P1 → P4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P1 → P3 → P4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P3 → P2 → P4 → P1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P3 → P4 → P1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 introduces the defect; P3 supplies the adhesive that P1 says must set before testing; P4 requires that test to have succeeded. The other orders test too soon or return the chest before the test.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-english-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed P labels identify parts. Which complete order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P1 → P2 → P3 → P4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P1 → P3 → P4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Definition P2 licenses example P1; that ridge in P4 refers to P1. P3 then qualifies the usefulness just explained. Placing the qualification before the explanation breaks the example’s development; the other orders lack the needed antecedent. P3’s “that independence from a printed sign” explicitly requires P4 first. P3’s “that independence from a printed sign” explicitly requires P4 first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-english-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed P labels identify parts. Which complete order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P4 → P2 → P3 → P1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P4 → P3 → P1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 establishes the proposal, P4 objects to whole-booklet replacement, P1 accepts that objection with a targeted change, and P3 identifies what the revised design retains. P3 requires the revision to exist first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-english-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The fixed P labels identify parts. Which complete order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P4 → P1 → P3 → P2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P4 → P3 → P1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 establishes the initial attribution; later discovery P4 supplies the earlier note identified in P1; P3 then withdraws a claim the note contradicts. The notebook’s older content does not mean its discovery belongs before the team’s initial view.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-english-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The fixed P labels identify parts. Which complete order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P2 → P5 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P2 → P5 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P2 → P1 → P5 → P4 → P3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P2 → P5 → P1 → P3 → P4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P2 is the proposal; P5 objects to phone exclusion; P1 introduces the alternative response; P4 explains precisely how that reply revises only into two channels; P3’s that safeguard and revised form close after that clarification. The plausible final swap approves before the textual explanation establishing the revised form.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f07-paragraph-english-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "The fixed P labels identify parts. Which complete order forms the most coherent paragraph?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "P5 → P2 → P3 → P4 → P6 → P1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "P5 → P2 → P3 → P6 → P1 → P4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "P5 → P3 → P2 → P4 → P6 → P1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "P5 → P2 → P4 → P3 → P6 → P1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "P5 states the problem; one explanation P2 must precede a second P3; P4 compares their limited support; P6 qualifies that support for the whole damage pattern; accordingly P1 concludes. The alternatives either reverse one/second, compare before introducing both, or move supporting comparison after the conclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Original fictional passage/parts and assessment; no external factual claim or actual examination content."
+      ]
+    },
+    "reference": {
+      "referenceId": "f07-paragraph-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

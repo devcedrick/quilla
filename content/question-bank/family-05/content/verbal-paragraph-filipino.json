@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f05-paragraph-filipino-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3 → P4 → P1 → P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3 → P1 → P2 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3 → P1 → P4 → P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1 → P3 → P4 → P2"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 ang dalawang uri ng upuan; P1 ang ayos; P4 ang pakinabang habang nanonood; P2 ang dagdag na pakinabang sa paglabas matapos ang programa. Tahasang binabalikan ng P2 ang naipaliwanag nang pakinabang habang nanonood, kaya dapat mauna ang P4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-filipino-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-filipino-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P3 → P4 → P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P4 → P2 → P3 → P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P4 → P3 → P1"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P2 ang unang talinghaga; P4 ang aktuwal na paghihiwalay ng tinig; P3 ang epekto nito sa pananaw; P1 ang talinghagang ginagamit sa dulo. Hindi dapat mauna ang paghihiwalay na iyon sa hakbang na lumilikha nito o ang dulong larawan sa paglilinaw ng pananaw.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-filipino-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-filipino-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P4 → P3 → P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4 → P2 → P1 → P3"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P2 ang hindi narinig; P4 ang hinuha at paglapit; P1 ang natuklasan doon; P3 ang rebisyon ng hinuha at pagsubok. Ang doon at pagkakatuklas na iyon ay may tiyak na naunang batayan; binabaligtad ito ng ibang ayos.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-filipino-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-filipino-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P5 → P4 → P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P5 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P5 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P5 → P1 → P3 → P4"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 ang kondisyunal na pangako; P5 ang kalagayan noon; P1 ang paglipat sa bagong pulong; P4 ang pagbabagong nagbibigay-kahulugan sa paglipat; P3 ang paghiling na bunga ng pagkakaiba ng dalawang kalagayan. Pinananatili ng ibang ayos ang simula ngunit pinauuna ang tugon sa kailangan nitong panahon o ebidensiya.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-filipino-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-filipino-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P5 → P4 → P3"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P5 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P5 → P1 → P4 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P5 → P1 → P3 → P4"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P2 ang hindi pagtutugma; P5 ang kumpirmasyon ng iisang pook; P1 ang pagtatala na may petsa; P4 ang magkaibang bisa ng pangalan noon at ngayon; P3 ang konklusyong tahasang nakabatay sa paliwanag na iyon. Nauuna ang kumpirmasyon sa pagtatala at ang petsa sa paliwanag at konklusyon nito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-filipino-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f05-paragraph-filipino-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Ayusin ang lahat ng bahagi upang mabuo ang pinakamalinaw na talata.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P4 → P5 → P3 → P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P5 → P3 → P4 → P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P5 → P4 → P1 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P5 → P4 → P3 → P1"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P2 ang pagpili; P5 ang hindi pagkakait sa iba; P4 ang pagkakaibang binuo mula rito; P3 ang tanong kung paano palalawakin ang pagpipilian; P1 ang tahasang sagot sa tanong na ito. Pinipigilan ng huling pangungusap ang pagbabaligtad ng tanong at panukalang sagot.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Independently authored original supporting text and evidence analysis; reviewed 2026-11-03. No external factual premise required."
+      ]
+    },
+    "reference": {
+      "referenceId": "f05-paragraph-filipino-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

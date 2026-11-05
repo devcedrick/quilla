@@ -1,0 +1,207 @@
+[
+  {
+    "questionId": "f06-vocabulary-english-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The tool shed is adjacent to the greenhouse. Which meaning of adjacent fits this location?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Next to or near"
+      },
+      {
+        "choiceId": "b",
+        "text": "Directly above"
+      },
+      {
+        "choiceId": "c",
+        "text": "Much older than"
+      },
+      {
+        "choiceId": "d",
+        "text": "Owned separately from"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Adjacent describes spatial closeness, not height, age or ownership.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster adjacent, adjective senses1a–b; https://www.merriam-webster.com/dictionary/adjacent; retrieved2026-11-03."
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-english-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The resilient foam regained its shape after the equipment was removed. Which meaning fits resilient?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Unable to bend"
+      },
+      {
+        "choiceId": "c",
+        "text": "Easy to dissolve"
+      },
+      {
+        "choiceId": "d",
+        "text": "Likely to tear"
+      },
+      {
+        "choiceId": "a",
+        "text": "Able to spring back"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Here resilient refers to recovery of physical shape, not rigidity or fragility.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Cambridge resilient, physical sense; publisher-indexed full definition retrieved 2026-11-03; https://dictionary.cambridge.org/us/dictionary/english/resilient?q=resilient%29"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-english-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "After checking the original log, Ben had to concede that his date was wrong. Which word best replaces concede?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "Conceal"
+      },
+      {
+        "choiceId": "d",
+        "text": "Request"
+      },
+      {
+        "choiceId": "a",
+        "text": "Admit"
+      },
+      {
+        "choiceId": "b",
+        "text": "Predict"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "He acknowledges an established error; he neither predicts nor hides it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, concede dictionary sense; https://www.merriam-webster.com/dictionary/concede; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-english-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The reviewer gave qualified approval to the exhibition: the lighting worked, but the captions needed revision. What does qualified mean here?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "Granted without limitation"
+      },
+      {
+        "choiceId": "a",
+        "text": "Subject to reservations"
+      },
+      {
+        "choiceId": "b",
+        "text": "Awarded by a licensed professional"
+      },
+      {
+        "choiceId": "c",
+        "text": "Withdrawn completely"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Qualified approval is limited/modified; it does not describe the reviewer’s credentials or unreserved support.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, qualified dictionary sense; https://www.merriam-webster.com/dictionary/qualified; retrieved 2026-11-03"
+      ]
+    }
+  },
+  {
+    "questionId": "f06-vocabulary-english-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Lower rent partly offset the extra delivery cost. Which interpretation preserves both offset and partly?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The saving counterbalanced some, but not all, of the extra cost"
+      },
+      {
+        "choiceId": "b",
+        "text": "The saving eliminated every extra cost"
+      },
+      {
+        "choiceId": "c",
+        "text": "The saving caused the delivery cost to rise"
+      },
+      {
+        "choiceId": "d",
+        "text": "The saving was unrelated to delivery cost"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Offset means counterbalance; partly limits the amount compensated, so full elimination is too strong.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Merriam-Webster, offset dictionary sense; https://www.merriam-webster.com/dictionary/offset; retrieved 2026-11-03"
+      ]
+    }
+  }
+]

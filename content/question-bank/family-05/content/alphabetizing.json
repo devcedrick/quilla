@@ -1,0 +1,392 @@
+[
+  {
+    "questionId": "f05-alphabetizing-01",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Each personal name is displayed Given name Surname. File by surname first, then given name. Ignore case; compare letters alphabetically. No name has an unshown middle name.\nR1: Mila Abel\nR2: Cora Abel\nR3: Bela Abano\nR4: Ana Abel\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R2, R4, R1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R4, R2, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R4, R1, R2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R1, R2, R4"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Abano precedes Abel. Within Abel, the given names sort Ana, Cora, Mila. The displayed given-name-first order must be converted before comparing. Thus R3, R4, R2, R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-02",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The digits before the dash are accession metadata. Ignore them COMPLETELY and alphabetize the subject after the dash, case-insensitively.\nR1: 09—Travel\nR2: 12—Training\nR3: 03—Trade\nR4: 10—Transit\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R2, R4, R1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R4, R2, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R2, R1, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R1, R2, R4"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Compare Trade, Training, Transit, Travel. The decisive letters after tra are d, i, n, v. Numeric accession order is not the filing key. Thus R3, R2, R4, R1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-03",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "File by surname, then given name, ignoring case and the comma. Only if those names match, use this local generation order: Sr., then Jr., then III. Do not interpret a suffix as part of the surname.\nR1: Reyes, Lino; Jr.\nR2: Reyes, Lino; Sr.\nR3: Reyes, Lino; III\nR4: Reyes, Lina; Jr.\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R1, R2, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R2, R3, R1"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R3, R2, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R2, R1, R3"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Lina precedes Lino, so R4 begins. The three Lino records then use the supplied generation order Sr., Jr., III rather than alphabetical suffix order. Thus R4, R2, R1, R3.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-04",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Index each heading by its FINAL word first; if that word ties, compare the remaining heading alphabetically. Ignore case. All names contain exactly two words.\nR1: Rosewater Planning\nR2: Rosefield Audit\nR3: Rosebank Planning\nR4: Roseland Audit\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R3, R4, R1"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R4, R1, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R2, R4, R3, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R1, R4, R3"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Audit precedes Planning. Inside Audit, Rosefield precedes Roseland; inside Planning, Rosebank precedes Rosewater. Thus R2, R4, R3, R1. Sorting only from the displayed left edge mixes the two primary subjects.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-05",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare whole names alphabetically after ignoring case. A shorter exact name precedes its extension. ONLY if whole names tie under that comparison, use case as a tie-break: at the first differing position, an uppercase letter precedes the corresponding lowercase letter.\nR1: Maple\nR2: MAPLE\nR3: maple\nR4: maples\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R2, R1, R4, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R2, R1, R3, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R2, R3, R1, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R2, R4, R1, R3"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The first three names tie as maple and all precede maples. In their case tie-break, MAPLE comes before Maple, which comes before maple. Thus R2, R1, R3, R4. Applying case before comparing the full folded names could move the extension incorrectly.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-06",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Replace&with a separate word and; treat a hyphen as a space. Then compare word by word, ignoring case. A shorter exact word comes first.\nR1: Lane&Bell\nR2: Lane and Abbot\nR3: Lantern Desk\nR4: Land&Sea\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R2, R1, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R1, R2, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R2, R3, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R3, R2, R1"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Expanded headings begin Land, Lane, Lane, Lantern, in that order. Within Lane and…, Abbot precedes Bell. Thus R4, R2, R1, R3. Keeping&as a symbol rather than expanding it changes the stipulated comparison.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-07",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Use this local alphabet: the ordinary English letters, with the DISTINCT letterñplaced immediately AFTER n and BEFORE o. Do not convertñto n. Compare words letter by letter, ignoring case.\nR1: Pina\nR2: Piña\nR3: Pino\nR4: Pinta\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R1, R2, R3, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R1, R3, R2, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R1, R4, R3, R2"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R1, R3, R4, R2"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "Pina, Pino andPinta have n after pi; Piña has the later letterñ. Inside the n group, the following a, o, t determine order. Thus R1, R3, R4, R2. Treatingñas n would incorrectly place Piña among the n words.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-08",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Remove spaces and hyphens and ignore case. Then file in DESCENDING alphabetical order, so the later alphabetic string comes first. In ascending order, a shorter exact prefix would come first; reverse that rule here.\nR1: Zori Annex\nR2: Zora Wing\nR3: Zorin Centre\nR4: Zora Annex\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R3, R2, R1, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R3, R1, R4, R2"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R3, R1, R2, R4"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R3, R4, R2, R1"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The normalized strings are zoriannex, zorawing, zorincentre, zoraannex. In descending order, the zori strings precede zora; zorincentre precedes zoriannex, and zorawing precedes zoraannex. Thus R3, R1, R2, R4.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-09",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Create ONE filing key per record. For PERSON records, join the written surname and given name in that order. For ORG records, drop an initial The, then use the remaining name. For both, remove spaces, commas, hyphens and periods, ignore case, and compare letter by letter; shorter exact keys come first. Tied keys use ascending numeric code.\nR1: PERSON: Di Mar, Al; code 20\nR2: ORG: The Di Mar Al; code 4\nR3: PERSON: Di Mara, L; code 2\nR4: ORG: Dimar Annex; code 1\nR5: PERSON: Di Mar, A; code 5\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R5, R2, R3, R1, R4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R5, R3, R1, R2, R4"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R5, R3, R2, R4, R1"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R5, R3, R2, R1, R4"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "R5 becomes dimara, an exact prefix of dimaral. R1, R2, R3 all become dimaral despite their different displayed fields, and numeric codes order them 2,4,20. R4 becomes dimarannex, which follows dimaral because n follows l. Thus R5, R3, R2, R1, R4. Retaining personal field boundaries or comparing codes as text breaks a tie incorrectly.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f05-alphabetizing-10",
+    "version": 1,
+    "family": 5,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "File by filename STEM first, ignoring its case, spaces and hyphens. Compare stems alphabetically, shorter exact stems first. For tied stems, compare the EXTENSION alphabetically. Only when stem AND extension tie, put larger numeric revision FIRST. The period separates stem and extension; rev is metadata.\nR1: Field-Note.pdf; rev 2\nR2: Field Note.docx; rev 3\nR3: Field Notes.docx; rev 1\nR4: fieldnote.docx; rev 12\nR5: Field-Note.pdf; rev 11\nWhich complete sequence follows the rule?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "R4, R2, R5, R1, R3"
+      },
+      {
+        "choiceId": "c2",
+        "text": "R4, R2, R1, R5, R3"
+      },
+      {
+        "choiceId": "c3",
+        "text": "R4, R5, R2, R1, R3"
+      },
+      {
+        "choiceId": "c4",
+        "text": "R4, R5, R1, R2, R3"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "R1, R2, R4, R5 share stem fieldnote, which precedes fieldnotes inR3. Within fieldnote, docx precedes pdf. The docx revisions sort 12 before 3, and the pdf revisions 11 before 2. Thus R4, R2, R5, R1, R3. Neither a global revision sort nor an ascending numeric tie-break follows the rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship and independent deterministic checks; human editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

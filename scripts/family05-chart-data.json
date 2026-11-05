@@ -1,0 +1,117 @@
+{
+  "f05-data-pictograms": {
+    "type": "table",
+    "caption": "Fictional shelter pictogram register",
+    "headers": ["Shelter", "Diamonds", "Circles", "Staff"],
+    "rows": [
+      ["A", "3", "2", "2"],
+      ["B", "2", "4", "5"],
+      ["C", "4", "1", "4"]
+    ]
+  },
+  "f05-data-rain": {
+    "type": "table",
+    "caption": "One fictional rainstorm",
+    "headers": ["Elapsed interval (minutes)", "Rainfall (mm)"],
+    "rows": [
+      ["0–15", "3"],
+      ["15–45", "4"],
+      ["45–60", "0"],
+      ["60–90", "5"]
+    ]
+  },
+  "f05-data-contest": {
+    "type": "table",
+    "caption": "Four-event practice competition",
+    "headers": ["Entrant", "Event1", "Event2", "Event3", "Event4"],
+    "rows": [
+      ["A", "8", "3", "7", "6"],
+      ["B", "9", "6", "6", "4"],
+      ["C", "7", "7", "5", "6"],
+      ["D", "10", "2", "5", "4"]
+    ]
+  },
+  "f05-data-calendar": {
+    "type": "table",
+    "caption": "Recurring fictional demonstrations",
+    "headers": [
+      "Demonstration",
+      "First scheduled day",
+      "Repeat interval (days)"
+    ],
+    "rows": [
+      ["X", "4", "4"],
+      ["Y", "1", "3"],
+      ["Z", "1", "2"]
+    ]
+  },
+  "f05-data-packing": {
+    "type": "table",
+    "caption": "Fictional display-box loading",
+    "headers": ["Layout", "Number of 2-cm strips", "Number of 3-cm strips"],
+    "rows": [
+      ["P", "3", "0"],
+      ["Q", "0", "2"],
+      ["R", "2", "1"]
+    ]
+  },
+  "f05-data-exchange": {
+    "type": "table",
+    "caption": "Fictional token-conversion booth",
+    "headers": [
+      "Conversion",
+      "Gross output per input token",
+      "Output fee per transaction"
+    ],
+    "rows": [
+      ["X→Y", "4", "10 Y"],
+      ["Y→Z", "2", "8 Z"],
+      ["X→Z", "5", "8 Z"]
+    ]
+  },
+  "f05-data-percentiles": {
+    "type": "table",
+    "caption": "Exact scores in a fictional exercise",
+    "headers": ["Score", "People"],
+    "rows": [
+      ["40", "2"],
+      ["50", "3"],
+      ["60", "4"],
+      ["70", "3"],
+      ["80", "2"],
+      ["90", "1"]
+    ]
+  },
+  "f05-data-calibration": {
+    "type": "table",
+    "caption": "Ideal instrument rules",
+    "headers": ["Instrument", "Scale", "Bias"],
+    "rows": [
+      ["A", "1", "2"],
+      ["B", "2", "-1"],
+      ["C", "0.5", "3"]
+    ]
+  },
+  "f05-data-ranking": {
+    "type": "table",
+    "caption": "Two-criterion fictional shortlist",
+    "headers": ["Candidate", "Quality", "Service"],
+    "rows": [
+      ["A", "9", "3"],
+      ["B", "6", "7"],
+      ["C", "4", "8"],
+      ["D", "5", "5"]
+    ]
+  },
+  "f05-data-cutting": {
+    "type": "table",
+    "caption": "Permitted fictional cutting patterns",
+    "headers": ["Pattern", "A strips", "B strips"],
+    "rows": [
+      ["P", "5", "0"],
+      ["Q", "2", "2"],
+      ["R", "3", "1"],
+      ["S", "0", "3"]
+    ]
+  }
+}

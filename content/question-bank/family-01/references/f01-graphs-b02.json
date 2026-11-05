@@ -1,0 +1,102 @@
+[
+  {
+    "referenceId": "f01-b02-clinic-visits",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Clinic Visits by Session",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-b02-clinic-visits-image",
+        "caption": "Clinic Visits by Session",
+        "alt": "Clinic Visits by Session",
+        "description": "Morning and afternoon visits respectively: Monday 40 and 20; Tuesday 30 and 30; Wednesday 50 and 30; Thursday 60 and 40."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-b02-water-use",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Community Water Use",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-b02-water-use-image",
+        "caption": "Community Water Use",
+        "alt": "Community Water Use",
+        "description": "Cubic metres used: Monday 100, Tuesday 120, Wednesday 90, Thursday 150, Friday 140."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-b02-project-budget",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Community Project Budget",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-b02-project-budget-image",
+        "caption": "Community Project Budget",
+        "alt": "Community Project Budget",
+        "description": "Total PHP 240,000. Health 40%, Transport 25%, Education 20%, Parks 15%."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-b02-relief-packs",
+    "version": 1,
+    "family": 1,
+    "module": "analytical",
+    "language": "english",
+    "title": "Relief Pack Deliveries",
+    "blocks": [
+      {
+        "type": "image",
+        "assetId": "f01-b02-relief-packs-image",
+        "caption": "Relief Pack Deliveries",
+        "alt": "Relief Pack Deliveries",
+        "description": "District A: planned 80, delivered 72; B: planned 100, delivered 90; C: planned 120, delivered 108; D: planned 100, delivered unknown. Mean delivered per district: 90 packs."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original drafting and imagegen; maintainer review pending",
+      "sources": [
+        "Original batch 2 scenarios; earlier source images informed skill categories only. See graphs-batch-02-ledger.md."
+      ]
+    }
+  }
+]

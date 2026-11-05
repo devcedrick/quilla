@@ -1,0 +1,289 @@
+[
+  {
+    "questionId": "f05-grammar-english-01",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the articles matching standard pronunciation: “The guide took ___ umbrella and ___ uniform from the locker.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "a; an"
+      },
+      {
+        "choiceId": "b",
+        "text": "an; an"
+      },
+      {
+        "choiceId": "c",
+        "text": "an; a"
+      },
+      {
+        "choiceId": "d",
+        "text": "a; a"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Umbrella begins with a vowel sound, requiring an; uniform begins with the consonant /y/ sound, requiring a. The written initial u does not determine both articles.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Articles: A versus An, sound-based rule and /y/ exception; https://owl.purdue.edu/owl/general_writing/grammar/articles_a_versus_an.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-english-02",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the pronoun required after the preposition: “The remaining supplies are for Liza and ___.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "I"
+      },
+      {
+        "choiceId": "b",
+        "text": "my"
+      },
+      {
+        "choiceId": "c",
+        "text": "mine"
+      },
+      {
+        "choiceId": "d",
+        "text": "me"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The preposition for takes an object form: me. I is a subject form, while my/mine are possessives and do not fill this coordinated personal-object slot.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Pronoun Case, objective case after prepositions and compound structures; https://owl.purdue.edu/owl/general_writing/grammar/pronouns/pronoun_case.html; retrieved 2026-11-03. Original sentence analysis."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-english-03",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the form that completes the sentence: “To protect the wet ink, avoid ___ the printed surface.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "touching"
+      },
+      {
+        "choiceId": "b",
+        "text": "to touch"
+      },
+      {
+        "choiceId": "c",
+        "text": "touch"
+      },
+      {
+        "choiceId": "d",
+        "text": "touched"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "When avoid is followed by a verb, the -ing form is used: avoid touching. The infinitive, bare form and past form do not fit this construction.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Cambridge Dictionary blog, Infinitive or -ing verb?,2024-02-21, avoid/finish/imagine examples; https://dictionaryblog.cambridge.org/2024/02/21/infinitive-or-ing-verb/; retrieved 2026-11-03. Original sentence analysis."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-english-04",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Intended meaning: the bell rang, and as a result the audience stood. Choose the revision that keeps that relation and avoids joining two independent clauses with only a comma.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The bell rang, the audience stood."
+      },
+      {
+        "choiceId": "b",
+        "text": "The bell rang, so the audience stood."
+      },
+      {
+        "choiceId": "c",
+        "text": "Because the audience stood, the bell rang."
+      },
+      {
+        "choiceId": "d",
+        "text": "The bell rang although the audience stood."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "So joins the independent clauses and expresses the intended result. A comma alone creates a splice; because reverses cause and effect, while although introduces a concession not intended here.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Purdue OWL, Commas Quick Rules, coordinating independent clauses; original cause/result check; https://owl.purdue.edu/owl/general_writing/punctuation/commas/index.html; retrieved 2026-11-03. Original question, not quoted examination content."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-english-05",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Mila formerly worked at night but now works days. Neri still works at night and finds that schedule familiar. Which pair preserves these different meanings in standard English?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Mila is used to working nights; Neri used to work nights."
+      },
+      {
+        "choiceId": "b",
+        "text": "Mila used to working nights; Neri is used to work nights."
+      },
+      {
+        "choiceId": "c",
+        "text": "Mila used to work nights; Neri is used to working nights."
+      },
+      {
+        "choiceId": "d",
+        "text": "Mila is used to work nights; Neri used to working nights."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Used to plus a base verb describes the former habit; is used to plus an -ing form describes present familiarity. Reversing the constructions swaps the intended states; the other combinations use incompatible forms.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Cambridge Dictionary blog,2016-02-10, used to versus be used to; https://dictionaryblog.cambridge.org/2016/02/10/i-used-to-work-hardim-used-to-working-hard-phrases-with-used-to/; retrieved 2026-11-03. Original sentence analysis."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-english-06",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The intended relation is that work continued in spite of the heavy rain. Which sentence expresses that relation with a complete grammatical construction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Despite the rain was heavy, work continued."
+      },
+      {
+        "choiceId": "b",
+        "text": "Although the heavy rain, work continued."
+      },
+      {
+        "choiceId": "c",
+        "text": "Because of the heavy rain, work continued."
+      },
+      {
+        "choiceId": "d",
+        "text": "Despite the heavy rain, work continued."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Despite takes the noun phrase the heavy rain; although would need a clause such as although the rain was heavy. Because of is grammatical with a noun phrase but changes concession to cause.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Cambridge English Grammar Today, indexed excerpt In spite of and despite; direct page retrieval blocked, not full-page verification; https://dictionary.cambridge.org/us/grammar/british-grammar/in-spite-of-and-despite; retrieved 2026-11-03. Original sentence analysis."
+      ]
+    }
+  },
+  {
+    "questionId": "f05-grammar-english-07",
+    "version": 1,
+    "family": 5,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The original statement is “The old lift seldom stops between floors.” Which formal revision begins with SELDOM, uses standard inversion and preserves the frequency?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Seldom does the old lift stop between floors."
+      },
+      {
+        "choiceId": "b",
+        "text": "Seldom the old lift does stop between floors."
+      },
+      {
+        "choiceId": "c",
+        "text": "Seldom does the old lift stops between floors."
+      },
+      {
+        "choiceId": "d",
+        "text": "Seldom does the old lift never stop between floors."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Fronted negative-frequency seldom calls for auxiliary-subject inversion, with does plus base stop. Retaining ordinary order or adding -s after does is faulty; adding never changes the frequency meaning.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate AI peer review recorded in ledger, human editorial approval pending",
+      "sources": [
+        "Cambridge English Grammar Today, indexed excerpt Inversion, negative fronted adverbs; direct page retrieval blocked, not full-page verification; https://dictionary.cambridge.org/uk/grammar/british-grammar/inversion; retrieved 2026-11-03. Original sentence analysis."
+      ]
+    }
+  }
+]

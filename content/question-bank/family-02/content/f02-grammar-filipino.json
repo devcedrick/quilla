@@ -1,0 +1,422 @@
+[
+  {
+    "questionId": "f02-grammar-filipino-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang wastong pantukoy: Ibinigay ___ Mina ang susi sa bantay.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "ni"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "ng"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "nina"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "sina"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ni ang pananda sa iisang tiyak na personal na pangalang gumaganap. Nila o nina ay para sa ibang bilang o kayarian.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang wastong pang-ugnay: May dalang lapis ___ papel ang bawat kalahok.",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "ngunit"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "dahil"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "kaya"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "at"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "At ang nag-uugnay sa dalawang bagay sa talaan. Walang ipinapahayag na salungatan o sanhi rito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang pangungusap na nagsasaad na tapos na ang kilos bago magsimula ang pulong.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Isinusulat pa lamang ni Leo ang ulat habang nagpupulong."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Balak ni Leo na magsumite kapag natapos ang pulong."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Naisumite na ni Leo ang ulat bago nagsimula ang pulong."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Isusumite pa ni Leo ang ulat pagkatapos ng pulong."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang naisumite na at bago nagsimula ay nagtatakda ng natapos na kilos bago ang ibang pangyayari. Iba ang panahon sa natitirang pagpipilian.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-04",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Aling pangungusap ang gumagamit ng pang-ugnay na tuwirang nagpapakilala sa dahilan ng hindi pagtuloy ng biyahe?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Hindi nasira ang sasakyan at natuloy ang biyahe."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Hindi natuloy ang biyahe dahil nasira ang sasakyan."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Nasira ang sasakyan kaya hindi natuloy ang biyahe."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Nasira ang sasakyan ngunit natuloy ang biyahe."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang dahil ay nagpapakilala sa dahilan: nasira ang sasakyan. Ang kaya ay nagpapakilala sa bunga; ang ngunit ay sa pagsalungat. Parehong may ugnayang sanhi at bunga ang mga pangungusap na may dahil at kaya, ngunit ang gamit ng pang-ugnay ang tinatanong.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Piliin ang wastong pangungusap para sa kilos na paulit-ulit na ginagawa ngayon.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Araw-araw na sinusuri ng pangkat ang kalidad ng tubig."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Araw-araw na susuriin ng pangkat ang kalidad ng tubig simula bukas."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Araw-araw na sinuri ng pangkat ang tubig noong nakaraang buwan."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Minsan lamang sinuri ng pangkat ang tubig noong Lunes."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Sinusuri ang di-ganap na aspektong angkop sa kasalukuyang inuulit na kilos. Ang susuriin simula bukas ay balak pa, ang sinuri noong nakaraang buwan ay nakalipas, at ang minsan lamang ay hindi pag-uulit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-06",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Kausap ni Bea ang mga panauhin. Nais niyang sabihing siya at ang kaniyang mga kasamahang kawani lamang, hindi ang kausap na panauhin, ang maghahanda ng silid. Aling pahayag ang angkop?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Kami ang maghahanda ng silid."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Tayo ang maghahanda ng silid."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Kayo ang maghahanda ng silid."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Sila ang maghahanda ng silid."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang kami ay tumutukoy sa nagsasalita at kaniyang pangkat na hindi kabilang ang kausap. Isinasama ng tayo ang kausap; kayo ay para sa kausap, at sila ay hindi isinasama ang nagsasalita.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-07",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Piliin ang pangungusap na nagpapanatili sa kondisyong kailangan muna ang pag-apruba bago maglabas ng pondo.",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Naaprubahan ang plano dahil naubos ang pondo."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Maglalabas ng pondo sa halip na aprubahan ang plano."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Maglalabas lamang ng pondo kapag naaprubahan na ang plano."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Maglalabas ng pondo kahit hindi naaprubahan ang plano."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Lamang kapag ang nagpapahayag ng kinakailangang kondisyon. Hindi nito sinasabing sapat ang anumang ibang hakbang upang maglabas ng pondo.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-08",
+    "version": 2,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Isinumite ang liham noong Lunes at sinuri noong Martes. Aling pangungusap ang malinaw na nagpapanatili sa dalawang kilos at sa kani-kanilang petsa?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Parehong Martes ang pagpasa at pagsusuri sa liham."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Isinumite ang liham noong Lunes at sinuri ito noong Martes."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Isinumite at sinuri ang liham noong Lunes."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Sinuri ang liham noong Lunes bago ito isumite noong Martes."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang tamang rebisyon ay nag-uugnay sa pagpasa sa Lunes at pagsusuri sa Martes. Ang magkakaparehong petsa ay nagbabago sa mga katotohanan; ang pagsusuri sa Lunes bago pagpasa sa Martes ay nagpapalit sa ibinigay na pagkakasunod.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-09",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Piliin ang rebisyong hindi nagpapalit sa gumawa at tumanggap: ang guro ang nagpadala at ang aklatan ang tumanggap.",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Nagpadala ang guro ng sipi sa aklatan."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Nagpadala ang aklatan ng sipi sa guro."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Tumanggap ang guro ng sipi mula sa aklatan."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Kapwa tumanggap ang guro at aklatan ngunit walang nagpadala."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang guro ang gumaganap at aklatan ang patutunguhan sa wastong sagot. Baligtad o hindi kumpleto ang mga tungkulin sa iba.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-grammar-filipino-10",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Panatilihin ang DALAWANG pahayag: hindi lahat ng dumalo ay bumoto; lahat ng bumoto ay nakarehistro. Aling rebisyon ang hindi nagdaragdag ng kabaligtarang implikasyon?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Hindi lahat ng nakarehistro ay dumalo, at bumoto ang bawat dumalo."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Bumoto ang bawat nakarehistro, ngunit may dumalong hindi nakarehistro."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Hindi bumoto ang lahat ng dumalo dahil walang nakarehistro."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "May dumalong hindi bumoto, at nakarehistro ang bawat bumoto."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Ang hindi lahat ay nangangahulugang may eksepsiyon, hindi walang sinuman. Ang pagiging nakarehistro ng bumoto ay hindi nangangahulugang bumoto ang lahat ng nakarehistro.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

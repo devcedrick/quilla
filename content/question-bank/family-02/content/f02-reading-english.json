@@ -1,0 +1,232 @@
+[
+  {
+    "questionId": "f02-reading-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "What must a visitor bring to have a lamp examined?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "The damaged lamp"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Only a photograph"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "A paid booking receipt"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "A clock instead"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The passage requires the item itself. Advance photographs are optional and cannot replace it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which conclusion stays within the evidence?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "The labels proved that every visitor learned more."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Attendance rose because the labels were longer."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Trade questions caused the labels to be replaced."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "The new labels were followed by more trade-route questions, but improved learning was not measured."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The observation concerns questions, not measured learning or attendance. Timing alone does not prove a causal learning effect.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Why were scheduled checks retained?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "They made garden access permanently unnecessary."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "They proved that the bell had never worked."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "They could find visitors who had not or could not activate the bell."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "They guaranteed that every visitor would press the bell."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The bell depends on activation and power; checks provide another way to notice waiting visitors. The text does not establish universal bell use or failure.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which evaluation best integrates the grower’s objection and the evidence?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "Matching outdoor plots would make germination speed irrelevant to every crop."
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Faster indoor germination does not settle outdoor survival; matched outdoor tests would improve comparability."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Outdoor survival proves Y will outperform X under every condition."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Earlier measurement is sufficient to choose X because survival is unmeasurable."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The two observed advantages concern different outcomes under different conditions. The objection targets that mismatch, not a universal superiority claim or the uselessness of germination measures.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f02-reading-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which interpretation best explains both the cautious causal claim and the retained restrictions?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Concurrent publicity complicates attribution, and discoverability does not by itself settle permission to release originals."
+      },
+      {
+        "choiceId": "option-2",
+        "text": "More requests prove the catalogue caused the increase, although originals may remain restricted."
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Uncertain attribution means the catalogue cannot improve access and originals must be withheld forever."
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Publishing descriptions settles consent, although publicity might explain requests."
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "One issue is causal attribution; another is disclosure authority. The publicity prevents a unique causal conclusion, while catalogue availability does not resolve consent or sensitivity of originals.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-reading-english-05-reference",
+      "referenceVersion": 1
+    }
+  }
+]

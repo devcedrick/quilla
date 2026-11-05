@@ -1,0 +1,1842 @@
+[
+  {
+    "questionId": "f02-data-english-01",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many loans were issued by Cedar?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "50"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "45"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "80"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "150"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Read Cedar’s issued column, not the on-time return column.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-01-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-02",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many loans were issued across all four branches?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "327"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "350"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "450"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "400"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Add 80+120+50+150=400. The on-time column answers a different question.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-02-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-03",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which branch had the highest on-time return percentage?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Pine"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Ash"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Cedar"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Elm"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Rates are 75%,85%,90%,80% respectively. The branch with the largest count is not necessarily highest-rate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-03-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-04",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "If each branch must achieve at least 85% on-time returns without changing issued totals, what is the minimum additional number of loans that must be reclassified as on time?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "25"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "16"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "13"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "21"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Elm needs 68−60=8; Pine and Cedar already qualify; Ash needs ceiling(.85×150)=128, hence 8 more. Total 16; whole-loan targets must round up.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-04-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-05",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "On which day was generation 54 kWh?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Wednesday"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Monday"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Tuesday"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Thursday"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Wednesday is the 54-kWh row; the use column is not the generation column.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-05-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-06",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If all generation not used on site is exported, how much was exported over the four days?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "180 kWh"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "132 kWh"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "36 kWh"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "48 kWh"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Generation totals 180 and use totals 132. Their difference is 48 kWh.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-06-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-07",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What percentage of Tuesday’s generation was used on site, to the nearest whole percent?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "113%"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "67%"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "89%"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "75%"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "32/36×100≈88.89%, rounding to 89%. Reversing the ratio gives an impossible used share above 100%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-07-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-08",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Assume unused energy can be stored with 80% retention. Monday and Tuesday surpluses alone are stored, and 5 kWh is withdrawn before Wednesday. How much stored energy remains?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "8.8 kWh"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "7.8 kWh"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "11 kWh"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "12.8 kWh"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Surpluses are 12 and 4, so retained energy is 16×.8=12.8; subtract withdrawal 5 to get 7.8. The loss acts before the specified withdrawal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-08-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-09",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many experienced trainees enrolled in First aid?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "25"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "15"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "40"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "16"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Read the experienced count for First aid; 40 would be the combined course total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-09-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-10",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What fraction of all Navigation trainees are experienced?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "3/7"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "7/10"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "9/140"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "3/10"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Navigation has 30 trainees, of whom 9 are experienced. 9/30 simplifies to 3/10.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-10-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-11",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the overall beginner-to-experienced ratio in simplest form?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "78:140"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "3:2"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "39:31"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "31:39"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Beginner total 78 and experienced total 62 give 78:62=39:31. Combining course percentages would weight them incorrectly.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-11-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-12",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Two-thirds of Radio beginners and one-half of Radio experienced trainees pass. A retest admits all failures but only 75% of them attend. How many Radio trainees attend the retest?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "24"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "12"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "8"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "16"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Radio passes are 16+8=24 out of 40, leaving 16 failures. Retest attendance is .75×16=12; the rate applies to failures, not all trainees.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-12-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-13",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many washers were received?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "50"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "80"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "45"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "85"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Received washers are 50. Closing stock requires a calculation and is not the requested field.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-13-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-14",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which item has the largest closing stock?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "Bolts"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Nuts"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Clips"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Washers"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Closing stocks are opening+received−dispatched: 60,80,85,60. Washers have 85.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-14-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-15",
+    "version": 4,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An audit flags any item whose dispatches exceeded receipts by at least 30 units, even if opening stock kept closing stock positive. What is the combined closing stock of the flagged items?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "200 units"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "285 units"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "140 units"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "145 units"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Dispatches minus receipts are Bolts 30, Nuts 40, Washers −5, and Clips 5. Only Bolts and Nuts meet the at-least-30 threshold. Their closing stocks are 90+40−70=60 and 120+20−60=80, totalling 140. A positive closing balance does not exempt a flagged item, and counting all dispatch-heavy items would incorrectly include Clips.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-15-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-16",
+    "version": 4,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Tomorrow's order needs 77 bolts and 94 washers, supplied from closing stock plus new packs. A standard pack has 8 units of one item and costs PHP 40. A mixed pack has 5 bolts and 3 washers and costs PHP 35; at most two mixed packs are available. Packs cannot be divided for purchase, and leftovers are allowed. What is the minimum purchase cost?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "PHP 200"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 150"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "PHP 155"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 160"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Closing stock is 60 bolts and 85 washers, leaving deficits 17 and 9. With zero mixed packs, 3 bolt packs + 2 washer packs cost 200. With one mixed pack, deficits 12 and 6 require 2+1 standard packs, costing 155. With two mixed packs, deficits 7 and 3 require 1+1 standard packs, costing 150. These exhaust the permitted mixed-pack counts, so 150 is minimal; separate whole-pack rounding and both item requirements matter.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-16-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-17",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many children travelled at 10:00?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "15"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "10"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "25"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "70"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The child column in the 10:00 row is 15; the row total is a different quantity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-17-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-18",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Each adult pays PHP 60, each student PHP 45, and each child PHP 30. What is revenue for the 08:00 departure?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "PHP 4200"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "PHP 3300"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "PHP 3900"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "PHP 3600"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "40×60+20×45+10×30=2400+900+300=3600. Not every passenger pays adult fare.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-18-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-19",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What percentage of all passengers are students, to one decimal place?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "33.3%"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "40.0%"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "28.6%"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "25.0%"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Students total 60 and all passengers total 210, giving 28.571...%, or 28.6%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-19-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-20",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Capacity is 75 per departure. Ten additional adults seek the 12:00 sailing. Overflow must move to 10:00, which cannot exceed capacity. How many of the ten cannot be accommodated on either sailing?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "15"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "0"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "5"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "10"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Noon already has 70; it admits five. The 10:00 sailing also has 70 and admits the remaining five. Both capacity constraints must be checked rather than rejecting all noon overflow.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-20-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-21",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which month had the least recorded rainfall?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "September"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "July"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "August"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "October"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "September’s 150 mm is the smallest rainfall total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-21-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-22",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What was mean rainfall per recorded rainy day across all months?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "15.6 mm"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "195 mm"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "15 mm"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "18 mm"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Total rain is 780 mm over 10+15+12+13=50 rainy days, giving 15.6 mm per rainy day. The monthly average 195 uses a different denominator, and monthly rain-per-day rates are unequal.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-22-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-23",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "If November records 220 mm, what is the five-month mean rainfall?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "205 mm"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "210 mm"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "200 mm"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "195 mm"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "The four-month sum 780 plus 220 is 1000; divide by five for 200.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-23-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-24",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "A tank harvests 0.6 litres per millimetre of rain. It begins July empty, has capacity 100 litres, and is emptied after each month. How much water overflows during July–October altogether?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "0 litres"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "78 litres"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "68 litres"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "100 litres"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Monthly inflows are 108,144,90,126. Individual overflow amounts 8,44,0,26 total 78. Monthly emptying prevents unused capacity in a dry month from absorbing overflow in a later month.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-24-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-25",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many Mechanical tickets were closed?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "24"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "30"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "6"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "18"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Read the Mechanical closed column. Six is the number left open, not closed.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-25-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-26",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What fraction of all opened tickets remain unclosed?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "11/14"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "1/4"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "3/7"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "3/14"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Opened total 84, closed total 66, leaving 18. 18/84=3/14.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-26-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-27",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which type has the highest closure rate?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "Mechanical"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "Carpentry"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "Plumbing"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Electrical"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Rates are 18/24=.75,24/30=.8,15/18≈.833,9/12=.75. Highest count and highest rate differ.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-27-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-28",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "One team closes two remaining Electrical tickets per day; a second closes three Mechanical tickets per day. A third begins Plumbing and Carpentry only after both first teams finish, closing three tickets per day. How many whole days until all remaining tickets close?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "7"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "5"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "4"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Electrical remainder six takes three days; Mechanical six takes two. The third team starts after day three and handles 3+3=6 tickets in two days. Total five days, not the sum of parallel durations.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-28-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-29",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many notebooks are in Box B?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "12"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "8"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "20"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "9"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Box B contains 12 notebooks; eight is its book count.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-29-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-30",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which pair contains exactly 22 books?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "A and D"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "B and C"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "C and D"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "A and B"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "A+B contains 14+8=22 books. A+D and B+C each contain 25, while C+D contains 28; only one listed pair meets the target.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-30-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-31",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the percentage of notebooks among all donated items?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "37.5%"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "30%"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "40%"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "62.5%"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Notebooks total 30 among 80 items, giving 37.5%. Books occupy the complementary 62.5%.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-31-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-32",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Make the maximum possible number of study kits, each containing two books and three notebooks. Send all leftover books equally to three libraries, using boxes that each hold at most four books. A box may serve only one library. How many boxes are needed?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "9"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "8"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "10"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "There are 50 books and 30 notebooks. Notebooks limit kits to ten, consuming 20 books and all notebooks. Thirty books remain, ten per library. Each library needs ceiling(10/4)=3 boxes, so nine total. Pooling library leftovers would incorrectly give eight.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-32-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-33",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many calls were missed at midday?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "4"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "36"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "40"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "6"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Read midday missed count four rather than answered or total.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-33-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-34",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What percentage of all calls were answered?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "87.5%"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "90%"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "80%"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "86.25%"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Answered total 138 and attempted total 160 give 86.25%. Averaging session rates without session weights is inappropriate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-34-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-35",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "How many additional morning calls would have had to be answered rather than missed to reach a 90% morning answer rate with total calls fixed?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "4"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "9"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "6"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "12"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Morning has 60 attempts; 90% means 54 answered, six more than 48.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-35-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-36",
+    "version": 3,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the ratio of missed morning calls to all missed calls?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "3:5"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "6:11"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "1:5"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "12:160"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Missed total is 22; morning missed is 12. Thus 12:22=6:11.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-36-reference",
+      "referenceVersion": 3
+    }
+  },
+  {
+    "questionId": "f02-data-english-37",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which crop has nine crates?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "Tomato"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "Beans"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "Squash"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "All three"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Read the crate count rather than weight per crate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-37-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-38",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "How many crates are listed altogether?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "18"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "22"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "38"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "19"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "6+4+9=19. Adding weight-per-crate values would mix units.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-38-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-39",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What is the total mass of all listed produce?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "228 kg"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "194 kg"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "216 kg"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "144 kg"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Each crop contributes 72 kg: 6×12,4×18,9×8. Total is 216 kg.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-39-reference",
+      "referenceVersion": 2
+    }
+  },
+  {
+    "questionId": "f02-data-english-40",
+    "version": 2,
+    "family": 2,
+    "module": "analytical",
+    "subjectId": "analytical_ability",
+    "subtopicId": "data_reasoning",
+    "conceptId": "graphs_charts_and_data",
+    "levelApplicability": ["professional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A vehicle carries 150 kg. All Beans and all Squash are loaded first. How many whole Tomato crates can be added without exceeding capacity?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "3"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "0"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "1"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "2"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Beans and Squash already weigh 144 kg, leaving six. A whole Tomato crate weighs eight, so none can be added.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    },
+    "reference": {
+      "referenceId": "f02-data-english-40-reference",
+      "referenceVersion": 2
+    }
+  }
+]

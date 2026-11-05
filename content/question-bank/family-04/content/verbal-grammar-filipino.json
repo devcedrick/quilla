@@ -1,0 +1,289 @@
+[
+  {
+    "questionId": "f04-grammar-filipino-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang pang-angkop sa pormal na pangungusap: “Ito ang tahimik ___ silid para sa panayam.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "-ng"
+      },
+      {
+        "choiceId": "b",
+        "text": "na"
+      },
+      {
+        "choiceId": "c",
+        "text": "nang"
+      },
+      {
+        "choiceId": "d",
+        "text": "ng"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Nagtatapos sa katinig na k ang tahimik, kaya hiwalay na na ang pang-angkop: tahimik na silid. Ang -ng ay hindi basta idinaragdag sa katinig na k; magkaiba ang tungkulin ng ng at nang.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "DepEd ALS Learning Strand 1 Filipino, grammar construction; independently checked adjective-noun linker; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-filipino-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Tapos na ang paghahatid kahapon. Aling anyo ng pandiwa ang angkop? “Kahapon ay ___ ni Rina ang mga sulat.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "inihahatid"
+      },
+      {
+        "choiceId": "b",
+        "text": "ihahatid"
+      },
+      {
+        "choiceId": "c",
+        "text": "inihatid"
+      },
+      {
+        "choiceId": "d",
+        "text": "maghahatid"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang inihatid ay naglalahad ng natapos na kilos. Ang inihahatid ay nagpapatuloy o paulit-ulit, at ang ihahatid/maghahatid ay hindi pa nagaganap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "DepEd ALS Learning Strand 1 Filipino, Lesson 24; original completed-aspect construction; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-filipino-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Alin ang wastong pagpuno sa dalawang patlang? “Tahi ___ tahi si Mila habang binibilang ni Olan ang mga piraso ___ tela.”",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "nang; ng"
+      },
+      {
+        "choiceId": "b",
+        "text": "ng; nang"
+      },
+      {
+        "choiceId": "c",
+        "text": "nang; nang"
+      },
+      {
+        "choiceId": "d",
+        "text": "ng; ng"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Nang ang nasa pagitan ng inuulit na pandiwa; ng ang nag-uugnay sa mga piraso at sa telang tinutukoy. Hindi magkapalit ang dalawang tungkuling ito.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "KWF Gabay sa Ortograpiyang Pambansa, indexed excerpt on MGA GAMIT NG NANG; full PDF retrieval unavailable; plus original ng-phrase analysis; https://kwfdiksiyonaryo.ph/public/files/gabay_op.pdf; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-filipino-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Layunin ng pangungusap na ipahayag ang pagsalungat sa inaasahan: kaunti ang nakuhang ani, ngunit nagpatuloy ang pagbabahagi. Aling pangungusap ang angkop?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Dahil kaunti ang ani, tiyak na marami ang naibahagi."
+      },
+      {
+        "choiceId": "b",
+        "text": "Upang kaunti ang ani, nagbahagi pa rin sila."
+      },
+      {
+        "choiceId": "c",
+        "text": "Kung marami ang ani, wala silang ibabahagi."
+      },
+      {
+        "choiceId": "d",
+        "text": "Bagaman kaunti ang ani, nagbahagi pa rin sila sa kapitbahay."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Bagaman at pa rin ang nagpapahayag ng pagpapatuloy sa kabila ng limitasyon. Ang dahil ay sanhi, ang upang ay layunin, at binabago ng kung-pahayag ang ipinapakitang pangyayari.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "DepEd ALS Learning Strand 1 Filipino, Lesson 31, conjunctions; concessive meaning independently checked; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-filipino-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Parehong naroon sina Tala at Neri. Si Neri ang may-akda ng ulat, at si Tala ang humiling ng paglilinaw. Aling rebisyon ang malinaw at hindi nagpapalitan sa dalawang tungkulin?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Humiling si Neri kay Tala ng paglilinaw sa ulat ni Tala."
+      },
+      {
+        "choiceId": "b",
+        "text": "Hiniling ni Tala kay Neri na linawin ni Neri ang isinulat nitong ulat."
+      },
+      {
+        "choiceId": "c",
+        "text": "Hiniling niya sa kaniya na linawin ang ulat niya."
+      },
+      {
+        "choiceId": "d",
+        "text": "Nilinaw ni Tala ang ulat na hiniling ni Neri."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Tiyak na pinangalanan ang humiling at ang may-akdang maglilinaw. Malabo ang magkakasunod na niya/kaniya, samantalang nagpapalit ng tungkulin ang iba pang pangungusap.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "DepEd ALS Learning Strand 1 Filipino, clear expression and pronoun use; original actor/antecedent analysis; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-filipino-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Hindi pa nasusuri ang materyal. Ang paggawa ay maaari lamang magsimula matapos itong aprubahan sa pagsusuri; hindi ipinapalagay na tiyak ang pag-apruba. Aling pangungusap ang nagpapanatili sa kahulugang iyon?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Sisimulan ang paggawa dahil pumasa na ang materyal."
+      },
+      {
+        "choiceId": "b",
+        "text": "Sisimulan ang paggawa kahit bumagsak ang materyal."
+      },
+      {
+        "choiceId": "c",
+        "text": "Sisimulan lamang ang paggawa kung pumasa ang materyal."
+      },
+      {
+        "choiceId": "d",
+        "text": "Sisimulan ang paggawa upang maituring na pumasa ang materyal."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Ang kung ay nagpapanatili sa hindi pa tiyak na kondisyon. Ipinapalagay ng dahil na tapos na ang pagpasa, tinatanggal ng kahit ang kundisyon, at ginagawang layunin ng upang ang pagpasa.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "DepEd ALS Learning Strand 1 Filipino, Lesson 31, conditional and causal conjunctions; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  },
+  {
+    "questionId": "f04-grammar-filipino-07",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Ang ulat ay dapat magpahayag lamang ng sinabi ni Lino; hindi pa nasusuri kung totoo iyon. Alin ang malinaw na naghihiwalay sa kaniyang pahayag at sa napatunayang pangyayari?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Ayon kay Lino, naibalik na ang bangka; hindi pa ito napapatunayan ng pangkat."
+      },
+      {
+        "choiceId": "b",
+        "text": "Napatunayan ng pangkat na naibalik na ang bangka dahil sinabi ito ni Lino."
+      },
+      {
+        "choiceId": "c",
+        "text": "Tiyak nang naibalik ang bangka, ayon man kay Lino o hindi."
+      },
+      {
+        "choiceId": "d",
+        "text": "Hindi sinabi ni Lino na naibalik ang bangka, kaya napatunayan itong nawawala."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Ipinakikilala ng ayon kay ang pinagmulan ng pahayag at nililinaw ng ikalawang sugnay ang kakulangan ng beripikasyon. Ginagawang patunay ng iba ang sabi lamang, o binabaligtad ang kaniyang sinabi.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "DepEd ALS Learning Strand 1 Filipino, Lessons 28 and 31; attribution and fact/opinion distinction independently analysed; https://sites.google.com/deped.gov.ph/als-indang/learning-competencies/learning-strand-1-filipino; retrieved 2026-11-02. Original application, not an examination quotation."
+      ]
+    }
+  }
+]

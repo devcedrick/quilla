@@ -1,0 +1,422 @@
+[
+  {
+    "questionId": "f02-alphabetizing-english-01",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare complete organisation names letter by letter, ignoring case and spaces.\nR1. Dawn Services\nR2. Coral Services\nR3. Fern Services\nR4. Birch Services\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "R4-R2-R1-R3"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R4-R1-R2-R3"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R4-R2-R3-R1"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R4-R3-R1-R2"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R4 (birchservices); R2 (coralservices); R1 (dawnservices); R3 (fernservices). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-02",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare surnames first, then given names; ignore the comma and case.\nR1. Vega, Liza\nR2. Acosta, Neri\nR3. Miranda, Paz\nR4. Dizon, Teri\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "R2-R3-R4-R1"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R2-R4-R1-R3"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R2-R1-R3-R4"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R2-R4-R3-R1"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R2 (acosta, neri); R4 (dizon, teri); R3 (miranda, paz); R1 (vega, liza). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-03",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Compare the complete words alphabetically, ignoring case.\nR1. cabinet\nR2. cable\nR3. cactus\nR4. cabin\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "R4-R1-R3-R2"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R4-R3-R2-R1"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R4-R1-R2-R3"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R4-R2-R1-R3"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R4 (cabin); R1 (cabinet); R2 (cable); R3 (cactus). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-04",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare complete names letter by letter; ignore spaces and punctuation, and treat abbreviations literally.\nR1. Coast View Institute\nR2. Coastal Learning Centre\nR3. Coastline Academy\nR4. Coat Makers Guild\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "R2-R4-R1-R3"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R2-R3-R1-R4"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R2-R1-R3-R4"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R2-R3-R4-R1"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R2 (coastallearningcentre); R3 (coastlineacademy); R1 (coastviewinstitute); R4 (coatmakersguild). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-05",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare surname, then given name; a shorter exact prefix comes first.\nR1. Nolasco, Anita\nR2. Nolasco, Ann\nR3. Nolasco, Ana\nR4. Nolasco, Anabel\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "R3-R4-R1-R2"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R3-R1-R4-R2"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R3-R4-R2-R1"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R3-R2-R1-R4"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R3 (nolasco, ana); R4 (nolasco, anabel); R1 (nolasco, anita); R2 (nolasco, ann). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-06",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Compare names letter by letter, ignoring spaces and hyphens; do not expand abbreviations.\nR1. North-East Data\nR2. North End Records\nR3. North-East Design\nR4. Northern Accounts\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "R1-R2-R3-R4"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R1-R3-R4-R2"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R1-R4-R2-R3"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R1-R3-R2-R4"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R1 (northeastdata); R3 (northeastdesign); R2 (northendrecords); R4 (northernaccounts). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-07",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Ignore initial The, then compare complete names letter by letter, ignoring spaces.\nR1. The Brook Office\nR2. Brookfield Office\nR3. The Bronze Office\nR4. Brook Office Supplies\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-3",
+        "text": "R3-R2-R4-R1"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R3-R4-R1-R2"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R3-R2-R1-R4"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R3-R1-R2-R4"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R3 (bronzeoffice); R2 (brookfieldoffice); R1 (brookoffice); R4 (brookofficesupplies). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-08",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "File by surname then given name. Ignore Mr., Ms., and Dr.; entries are already surname-first.\nR1. Dr. Lacson, Ria\nR2. Ms. Lacson, Rio\nR3. Mr. Lacuesta, Ramon\nR4. Dr. Lacson, Rian\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-4",
+        "text": "R1-R3-R2-R4"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R1-R4-R2-R3"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R1-R2-R4-R3"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R1-R4-R3-R2"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R1 (lacson, ria); R4 (lacson, rian); R2 (lacson, rio); R3 (lacuesta, ramon). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-09",
+    "version": 2,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Drop initial A, An, or The; expand Dept. to Department; ignore punctuation and spaces; compare letter by letter with shorter exact prefixes first.\nR1. The Dept. of Marine Maps\nR2. Department of Marine Mapping\nR3. A Department of Marsh Records\nR4. Dept. of Marine Maps Annex\nR5. A Department of Marine Markers\nR6. Department of Marine Map\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-1",
+        "text": "R6-R2-R1-R4-R5-R3"
+      },
+      {
+        "choiceId": "option-2",
+        "text": "R6-R1-R2-R4-R5-R3"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R6-R2-R4-R1-R5-R3"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R6-R4-R1-R2-R5-R3"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R6 (departmentofmarinemap); R2 (departmentofmarinemapping); R1 (departmentofmarinemaps); R4 (departmentofmarinemapsannex); R5 (departmentofmarinemarkers); R3 (departmentofmarshrecords). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f02-alphabetizing-english-10",
+    "version": 1,
+    "family": 2,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "alphabetizing",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Ignore professional titles. Compare surname first, then given name, then suffix; ignore punctuation and spaces within each field. A shorter exact field prefix comes first.\nR1. Dr. De Mesa, Lia, Jr.\nR2. Ms. De Mesa, Lian\nR3. Mr. De-Mesa, Lia\nR4. Dr. De Mesa, Liana\nR5. Ms. De Mesa, Lia, Sr.\nR6. Mr. De Mesa, Liam\nWhich full order is correct?",
+    "choices": [
+      {
+        "choiceId": "option-2",
+        "text": "R3-R5-R1-R6-R2-R4"
+      },
+      {
+        "choiceId": "option-3",
+        "text": "R3-R1-R6-R5-R2-R4"
+      },
+      {
+        "choiceId": "option-4",
+        "text": "R3-R6-R5-R1-R2-R4"
+      },
+      {
+        "choiceId": "option-1",
+        "text": "R3-R1-R5-R6-R2-R4"
+      }
+    ],
+    "correctChoiceId": "option-1",
+    "explanation": "Applying the stated comparison fields yields R3 (demesa, lia); R1 (demesa, lia, jr); R5 (demesa, lia, sr); R6 (demesa, liam); R2 (demesa, lian); R4 (demesa, liana). Each distractor swaps later entries; the first entry alone cannot identify the answer.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; independent human/domain/bilingual approval and calibration pending",
+      "sources": [
+        "Original fictional practice scenario; mathematical or textual reasoning, not a claim about a real office.",
+        "Family 02 authoring/review record: docs/content/family02-review.md."
+      ]
+    }
+  }
+]

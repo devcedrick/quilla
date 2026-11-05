@@ -1,0 +1,784 @@
+[
+  {
+    "questionId": "f03-clerical-operations-01",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local rule: enter dates as YYYY-MM-DD. Which entry correctly records 7 February 2027?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "2027-02-07"
+      },
+      {
+        "choiceId": "c2",
+        "text": "2027-07-02"
+      },
+      {
+        "choiceId": "c3",
+        "text": "07-02-2027"
+      },
+      {
+        "choiceId": "c4",
+        "text": "02/07/27"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "The required order is year, two-digit month, two-digit day; February is 02.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-02",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A register requires a leading zero for every code below 100, making three digits. Which is the proper entry for code 8?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "8"
+      },
+      {
+        "choiceId": "c2",
+        "text": "08"
+      },
+      {
+        "choiceId": "c3",
+        "text": "008"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0008"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Three positions require two leading zeros: 008.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-03",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local rule: a form missing a signature goes to the completion desk; a fully signed form goes to scanning. This form has all fields filled but no signature. Where does it go?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Scanning"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Completion desk"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Archive"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Dispatch"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "All fields being filled does not replace the missing signature; completion precedes scanning.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-04",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "A local checklist uses ✓ for checked, ? for awaiting verification, and — for not applicable. Which mark records a field that has not yet been verified?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "✓"
+      },
+      {
+        "choiceId": "c2",
+        "text": "?"
+      },
+      {
+        "choiceId": "c3",
+        "text": "—"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Leave blank"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The supplied legend assigns ? to awaiting verification; blank is not a stated status.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-05",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Local rule: electronic filenames end with the revision number. Which filename explicitly identifies revision 3 of the visitor list?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "visitors_2027.pdf"
+      },
+      {
+        "choiceId": "c2",
+        "text": "visitors_final.pdf"
+      },
+      {
+        "choiceId": "c3",
+        "text": "visitors_rev3.pdf"
+      },
+      {
+        "choiceId": "c4",
+        "text": "visitors_copy3.pdf"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "rev3 explicitly labels revision; year, final and copy count do not identify the required revision.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-06",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Office rule: an acknowledgement confirms receipt, not approval. Which message follows it?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Received; review pending."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Received and approved."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Review complete; approved."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Receipt confirms eligibility."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Receipt alone supports acknowledgement, not completion, approval or eligibility.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-07",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Reference record: account 0518, amount PHP 1,460, date 2027-04-09. Which transcription matches ALL fields?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "0518; PHP 1,460; 2027-04-09"
+      },
+      {
+        "choiceId": "c2",
+        "text": "0518; PHP 1,640; 2027-04-09"
+      },
+      {
+        "choiceId": "c3",
+        "text": "0581; PHP 1,460; 2027-04-09"
+      },
+      {
+        "choiceId": "c4",
+        "text": "0518; PHP 1,460; 2027-09-04"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Only the exact record preserves account digits, amount and month/day; each alternative transposes one field.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-08",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: flag duplicate rows only when BOTH email and event code match; names are irrelevant. Original: Lio, lio@test.invalid, E04. Which row is a duplicate?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Lio; lio2@test.invalid; E04"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Mara; lio@test.invalid; E04"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Lio; lio@test.invalid; E05"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Mara; mara@test.invalid; E04"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "The Mara row shares both identifying fields. Matching the name or only one identifying field is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-09",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Office rule: process files with complete attachments by oldest receipt time; hold incomplete files. A complete 09:20, B incomplete 08:00, C complete 09:05. What is the processing order, excluding held files?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "B, C, A"
+      },
+      {
+        "choiceId": "c2",
+        "text": "A, C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "C, A"
+      },
+      {
+        "choiceId": "c4",
+        "text": "C, B, A"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "B is excluded first. Of the eligible files, C at 09:05 precedes A at 09:20.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-10",
+    "version": 2,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local summary rule: publish exact category counts only when at least 3 comments belong to that category. A withheld count must also be impossible to recover by subtracting published category counts from the overall total; withhold the total when necessary. There are exactly three categories: Facilities 5, Access 2, Hours 4. Do not alter any published count. Which public summary follows ALL rules?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Facilities 5; Access withheld; Hours 4; total 11."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Facilities 5; Access 2; Hours withheld; total withheld."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Facilities 5; Access withheld; Hours 4; total withheld."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Facilities 5; Access withheld; Hours 4; total 9."
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Access has fewer than 3 comments and must be withheld. Publishing the total of 11 alongside 5 and 4 would reveal the withheld 2 by subtraction, so the total must also be withheld. Publishing Access 2 breaks primary suppression even if another count is hidden; changing the total to 9 alters the count rather than suppressing it. This is the supplied office rule, not a universal legal disclosure rule.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted substantive quality repair; independent human editorial approval and learner calibration pending",
+      "sources": [
+        "2026-11-02 original interacting-constraint repair after critical audit; proof and deterministic tests: docs/content/family03-numerical-clerical-review.md and scripts/family03-numerical-clerical.test.mjs."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-11",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A register permits release only when quantity and serial range both match. Order: 6 units, serials 201–206 inclusive. Delivery: 6 units, serials 202–207 inclusive. What result follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Release: quantity matches."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Hold: serial range differs."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Release: range length matches."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Hold: quantity differs."
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Both counts are 6, but the requested identities differ: serial 201 is missing and serial 207 is extra. Matching the count alone is insufficient.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-12",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: count five calendar days AFTER receipt; receipt day is day zero. A request arrives 27 June. What is its due date?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "30 June"
+      },
+      {
+        "choiceId": "c2",
+        "text": "1 July"
+      },
+      {
+        "choiceId": "c3",
+        "text": "2 July"
+      },
+      {
+        "choiceId": "c4",
+        "text": "3 July"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "28 June is day 1, 29 June is day 2, 30 June is day 3, 1 July is day 4, and 2 July is day 5. No business-day exclusion is stated.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-13",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "An office routes an application to Desk A unless a fee waiver is requested; waiver requests go first to Desk B, then to A after a decision. A request seeks a waiver but includes payment. What is the first desk?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A, because payment is included."
+      },
+      {
+        "choiceId": "c2",
+        "text": "B, because waiver is requested."
+      },
+      {
+        "choiceId": "c3",
+        "text": "A, then B."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Either desk may decide."
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Routing is triggered by the waiver request, not by whether money accompanies it; B acts first.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-14",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Stock cards record usable stock separately from items awaiting inspection. Opening usable 26; receive 12 pending inspection; approve 9 of those; issue 7 usable. What is closing usable stock?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "22"
+      },
+      {
+        "choiceId": "c2",
+        "text": "28"
+      },
+      {
+        "choiceId": "c3",
+        "text": "31"
+      },
+      {
+        "choiceId": "c4",
+        "text": "40"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "26 + 9 − 7 = 28. The three unapproved arrivals are excluded, and the full delivery of 12 must not also be added.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-15",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Local rule: book a room only if the entire interval is free; an ending time can equal the next starting time. Existing bookings: 09:00–09:40 and 10:10–11:00. Which 30-minute slot fits?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "09:30–10:00"
+      },
+      {
+        "choiceId": "c2",
+        "text": "09:40–10:10"
+      },
+      {
+        "choiceId": "c3",
+        "text": "09:50–10:20"
+      },
+      {
+        "choiceId": "c4",
+        "text": "10:00–10:30"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "09:40–10:10 exactly fills the gap without overlapping either booking. Each other interval overlaps at least one.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-16",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A notice must go to everyone in either list, once each. List A: Cora, Dino, Esme. List B: Dino, Fina, Cora. Which distribution follows?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Cora, Dino, Esme"
+      },
+      {
+        "choiceId": "c2",
+        "text": "Cora, Dino, Fina"
+      },
+      {
+        "choiceId": "c3",
+        "text": "Cora, Dino, Esme, Fina"
+      },
+      {
+        "choiceId": "c4",
+        "text": "Cora, Dino, Esme, Dino, Fina, Cora"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "The union has four unique recipients; intersection-only or duplication omits or repeats intended recipients.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-17",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "At 09:00 an indexer and a scanner start work in parallel. Each handles only one file at a time. Every file must finish indexing before scanning; the scanner follows the indexer's file order and starts each file as soon as possible. A needs 10 minutes indexing and 20 scanning, B needs 20 indexing and 10 scanning, C needs 10 indexing and 10 scanning. Deadlines: A 09:35, B 09:45, C 09:50. Which indexing order meets ALL deadlines?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "A, B, C"
+      },
+      {
+        "choiceId": "c2",
+        "text": "B, A, C"
+      },
+      {
+        "choiceId": "c3",
+        "text": "A, C, B"
+      },
+      {
+        "choiceId": "c4",
+        "text": "C, A, B"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "For A, B, C, indexing ends at minutes 10, 30 and 40; scanning ends at minutes 30, 40 and 50, meeting all deadlines. For B, A, C, scanning finishes B at minute 30, A at 50 and C at 60, missing A's and C's deadlines. For A, C, B, it finishes A at 30, C at 40 and B at 50, missing B's deadline. For C, A, B, it finishes C at 20, A at 40 and B at 50, missing A's and B's deadlines. All schedules respect dependencies, but only one meets every deadline.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-18",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local rule: a file's reviewer and approver must be different people. Reviews take 10 minutes and approvals 5; each person handles only one task at a time. Ava can review red or blue; Ben can review blue or approve red; Cia can approve blue but starts at 09:20. Red must finish by 09:15 and blue by 09:25. Tasks start no earlier than 09:00. Which complete plan works?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Ava reviews red and Ben reviews blue at 09:00; Ben approves red at 09:10; Cia approves blue at 09:20."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Ben reviews blue at 09:00 and approves red at 09:05; Ava reviews red at 09:00; Cia approves blue at 09:20."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ava reviews blue at 09:00 and red at 09:10; Ben approves red at 09:20; Cia approves blue at 09:20."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Ava reviews red at 09:00 and Ben reviews blue at 09:10; Ben approves red at 09:10; Cia approves blue at 09:20."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "In the valid plan both reviews end at 09:10. Ben then approves red by 09:15, and Cia approves blue during 09:20–09:25. The competing plans respectively overlap Ben's tasks while preceding completion of red's review; finish red late; or double-book Ben during 09:10–09:15. Availability, sequencing, permissions and both deadlines must all hold.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-19",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Local ledger rule: use only the latest APPROVED revision of each receipt; ignore drafts. An approved full reversal excludes that receipt entirely. Pending reversals have no effect. Opening balance PHP 2,000. R1: approved v1 PHP 600, draft v2 PHP 900; R2: approved v1 PHP 400, approved v2 PHP 450, pending reversal; R3: approved PHP 300, approved full reversal; confirmed payment PHP 250. What is the posted balance?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "PHP 2,800"
+      },
+      {
+        "choiceId": "c2",
+        "text": "PHP 3,100"
+      },
+      {
+        "choiceId": "c3",
+        "text": "PHP 2,350"
+      },
+      {
+        "choiceId": "c4",
+        "text": "PHP 3,050"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "R1 contributes PHP 600, not the draft PHP 900. R2 contributes its latest approved PHP 450, not PHP 400 or both revisions; its pending reversal has no effect. R3 contributes zero because its full reversal is approved. Thus 2,000 + 600 + 450 − 250 = PHP 2,800. Competing totals add the draft increase, apply the pending reversal, or omit the payment.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  },
+  {
+    "questionId": "f03-clerical-operations-20",
+    "version": 1,
+    "family": 3,
+    "module": "clerical",
+    "subjectId": "clerical_ability",
+    "subtopicId": "clerical_operations",
+    "conceptId": "clerical_operations",
+    "levelApplicability": ["subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Dispatch rules: each parcel holds at most 10 kg; fragile items may share only with fragile items; items cannot split. Fragile weights are 6, 6, 4, 4 kg; ordinary weights are 8, 8, 3, 1 kg. What is the fewest parcels?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "4"
+      },
+      {
+        "choiceId": "c2",
+        "text": "5"
+      },
+      {
+        "choiceId": "c3",
+        "text": "6"
+      },
+      {
+        "choiceId": "c4",
+        "text": "7"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "Fragile items fit two parcels, each containing 6 + 4 kg. Ordinary items total 20 kg, suggesting two by weight alone, but the two 8-kg items must be separate and the 3-kg item fits with neither. Thus ordinary items require at least three parcels, attainable as 8 + 1, 8, and 3. The minimum is 2 + 3 = 5; the total-weight lower bound of four is unattainable.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and deterministic checks; independent editorial approval and learner calibration pending",
+      "sources": []
+    }
+  }
+]

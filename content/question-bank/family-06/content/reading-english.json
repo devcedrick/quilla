@@ -1,0 +1,362 @@
+[
+  {
+    "questionId": "f06-reading-english-01",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "When do seed swaps end?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Noon"
+      },
+      {
+        "choiceId": "b",
+        "text": "Nine"
+      },
+      {
+        "choiceId": "c",
+        "text": "Three"
+      },
+      {
+        "choiceId": "d",
+        "text": "At sunset"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The text explicitly sets noon for swaps; three is the display closing time.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-02",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which observation belongs to Rafi’s recorded first walk?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "A red gate"
+      },
+      {
+        "choiceId": "c",
+        "text": "A blue bicycle"
+      },
+      {
+        "choiceId": "d",
+        "text": "A silver drum"
+      },
+      {
+        "choiceId": "a",
+        "text": "A bicycle bell"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The first walk records sounds, including the bell. No colours are recorded.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-03",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Why does the writer mention the cheapest bowl?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "To explain why it broke"
+      },
+      {
+        "choiceId": "d",
+        "text": "To prove that expensive pieces were never lent"
+      },
+      {
+        "choiceId": "a",
+        "text": "To rule out interpreting the numbers as prices"
+      },
+      {
+        "choiceId": "b",
+        "text": "To show that all bowls cost the same"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The example blocks a price-ranking interpretation; it says nothing about breakage or a ban on lending.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-04",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Which change is central to the passage?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "From varied yields to identical yields"
+      },
+      {
+        "choiceId": "a",
+        "text": "From a claim of perfection to an invitation to examine results"
+      },
+      {
+        "choiceId": "b",
+        "text": "From public access to secrecy"
+      },
+      {
+        "choiceId": "c",
+        "text": "From growing plants to selling boards"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The transparent record invites questions about differing results. The passage does not say that yields became identical.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-05",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "What does companions suggest here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The formats serve complementary uses"
+      },
+      {
+        "choiceId": "b",
+        "text": "One format will replace the other"
+      },
+      {
+        "choiceId": "c",
+        "text": "The interviews concern friendship only"
+      },
+      {
+        "choiceId": "d",
+        "text": "The transcripts contain different interviews"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Both are retained for different uses; replacement or different content is unsupported.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-06",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which assessment respects both the measured result and the missing information?",
+    "choices": [
+      {
+        "choiceId": "b",
+        "text": "Crossings improved, so every passenger’s full trip improved"
+      },
+      {
+        "choiceId": "c",
+        "text": "The total journey worsened by exactly five minutes including travel to the pier"
+      },
+      {
+        "choiceId": "d",
+        "text": "Queues grew, so the crossing measurement must be false"
+      },
+      {
+        "choiceId": "a",
+        "text": "Crossings improved, but measured queue-plus-crossing time rose and full journey effects remain unknown"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The measured components together rise by five minutes; pier travel is unknown. Crossing improvement remains true but cannot establish full-trip improvement.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-06-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-07",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which distinction is necessary to interpret the catalogue?",
+    "choices": [
+      {
+        "choiceId": "c",
+        "text": "A restricted letter has neither a scan nor metadata"
+      },
+      {
+        "choiceId": "d",
+        "text": "Preservation permission makes display restrictions ineffective"
+      },
+      {
+        "choiceId": "a",
+        "text": "Listing metadata shows neither public-text permission nor absence of a preservation scan"
+      },
+      {
+        "choiceId": "b",
+        "text": "A catalogue entry proves public-text permission but not scanning"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Catalogue presence, preservation scanning and public text access are separate. A restricted entry can have a scan and metadata while withholding readable text.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-07-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f06-reading-english-08",
+    "version": 1,
+    "family": 6,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "reading",
+    "conceptId": "reading_comprehension_test",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Which interpretation best integrates the repair and her reply?",
+    "choices": [
+      {
+        "choiceId": "d",
+        "text": "She retains the knot as evidence that her own repairs must reproduce every detail of his work"
+      },
+      {
+        "choiceId": "a",
+        "text": "She restores the net’s usefulness while retaining a trace of connection to her father"
+      },
+      {
+        "choiceId": "b",
+        "text": "She restores the net’s usefulness while treating the retained knot as proof that her father opposed repairs"
+      },
+      {
+        "choiceId": "c",
+        "text": "She retains a connection to her father while deciding that the net should serve only as a display"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The net becomes usable while one deliberate trace preserves connection. No opposition to repair is stated; display-only contradicts renewed usability, and the replaced mesh contradicts reproducing every detail.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate review pass; human editorial approval pending",
+      "sources": [
+        "Original independent passage/order analysis; verified against supplied text 2026-11-03."
+      ]
+    },
+    "reference": {
+      "referenceId": "f06-reading-english-08-reference",
+      "referenceVersion": 1
+    }
+  }
+]

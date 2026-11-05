@@ -1,0 +1,172 @@
+[
+  {
+    "assetId": "f07-bins-chart",
+    "path": "references/assets/f07-bins.png",
+    "mediaType": "image/png",
+    "sha256": "2e85f3473ee5137afd2c0445d5975ee96dacdfc63f6f5e099e08d55ebe7829ed",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-cumulative-chart",
+    "path": "references/assets/f07-cumulative.png",
+    "mediaType": "image/png",
+    "sha256": "4ba10e9bf6eb9c51e1264397ca7201da22ffc2edb02321f17a6fad514e3aaa77",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-stacks-chart",
+    "path": "references/assets/f07-stacks.png",
+    "mediaType": "image/png",
+    "sha256": "ab392908d15b3d373ab97ad064dd0437d471d9137f12d421c53b0ec8bc40272d",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-indexes-chart",
+    "path": "references/assets/f07-indexes.png",
+    "mediaType": "image/png",
+    "sha256": "bae53970cc5099a2ff030c5936d5b932a4ee95b93fed72863961c80d130552f8",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-scatter-chart",
+    "path": "references/assets/f07-scatter.png",
+    "mediaType": "image/png",
+    "sha256": "e4c2d72a7f56888d58275166e31808219d0dd14802f688f2b87b79a2d70420a4",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-pie-chart",
+    "path": "references/assets/f07-pie.png",
+    "mediaType": "image/png",
+    "sha256": "fdb33d6480f2ec472a04e8b9b6a3c3c03947bf3f1afcb07408d08d217eb8c2f4",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-intervals-chart",
+    "path": "references/assets/f07-intervals.png",
+    "mediaType": "image/png",
+    "sha256": "41ab6b22dbcac15a7d8377f47ca613f818d095a03b09e58ec5c905e8121888b3",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-waterfall-chart",
+    "path": "references/assets/f07-waterfall.png",
+    "mediaType": "image/png",
+    "sha256": "92aa8ca550a0061ef843913abdb988e4d9d0c609a2adf03122a88408bbb6524d",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-projects-chart",
+    "path": "references/assets/f07-projects.png",
+    "mediaType": "image/png",
+    "sha256": "a96b5d35391935667c75d39200f0fbb19d439644d96c6da72ed1b12313196290",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  },
+  {
+    "assetId": "f07-matrix-chart",
+    "path": "references/assets/f07-matrix.png",
+    "mediaType": "image/png",
+    "sha256": "9800a16f93dd52a199b220c7498f94b64429632e8ea8d9e99531b2150807333f",
+    "width": 1600,
+    "height": 1000,
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; separate author review recorded; human editorial approval and calibration pending",
+      "sources": [
+        "Original fictional Family 07 premises and canonical datasets authored 2026-11-04. No actual CSC examination material.",
+        "https://openstax.org/books/introductory-statistics-2e/pages/2-2-histograms-frequency-polygons-and-time-series-graphs (retrieved 2026-11-04, section 2.2: adjoining histogram bins and frequency/relative-frequency definitions only; no source question or dataset reused)."
+      ]
+    }
+  }
+]

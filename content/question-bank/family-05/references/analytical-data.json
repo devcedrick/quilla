@@ -1,0 +1,309 @@
+[
+  {
+    "referenceId": "f05-data-pictograms",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional shelter pictogram register",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each diamond represents six blankets; each circle represents two. Counts of symbols are exact; do not assume both symbol types have equal value. Staff counts are distinct people assigned for this shift."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-pictograms-chart",
+        "caption": "Fictional shelter pictogram register",
+        "alt": "Pictogram for Fictional shelter pictogram register. Exact values in description.",
+        "description": "A: Diamonds = 3, Circles = 2, Staff = 2. B: Diamonds = 2, Circles = 4, Staff = 5. C: Diamonds = 4, Circles = 1, Staff = 4."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-rain",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "One fictional rainstorm",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The chart records rainfall separately during each interval. Minutes are elapsed since the storm began. Intervals have no gaps or overlap. The whole-storm average includes dry intervals."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-rain-chart",
+        "caption": "One fictional rainstorm",
+        "alt": "Interval rainfall bar chart for One fictional rainstorm. Exact values in description.",
+        "description": "0–15: Rainfall (mm) = 3. 15–45: Rainfall (mm) = 4. 45–60: Rainfall (mm) = 0. 60–90: Rainfall (mm) = 5."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-contest",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Four-event practice competition",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Every event is scored independently. For each entrant discard exactly ONE lowest event score, then add the other three. A tie in this total is broken by the higher single-event score among all four. If that also ties, entrants share the place. Scores are nonnegative whole numbers."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-contest-chart",
+        "caption": "Four-event practice competition",
+        "alt": "Small-multiple event score bars for Four-event practice competition. Exact values in description.",
+        "description": "A: Event1 = 8, Event2 = 3, Event3 = 7, Event4 = 6. B: Event1 = 9, Event2 = 6, Event3 = 6, Event4 = 4. C: Event1 = 7, Event2 = 7, Event3 = 5, Event4 = 6. D: Event1 = 10, Event2 = 2, Event3 = 5, Event4 = 4."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-calendar",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Recurring fictional demonstrations",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The month has days1–28. X occurs every4 days starting day4; Y every3 days starting day1; Z every2 days starting day1. Demonstrations do not occur on a closed day, even if their cycle would otherwise call for one. The facility is closed on days7,14,21,28. Each visit can attend only one demonstration."
+      },
+      {
+        "type": "table",
+        "caption": "Recurring fictional demonstrations",
+        "headers": [
+          "Demonstration",
+          "First scheduled day",
+          "Repeat interval (days)"
+        ],
+        "rows": [
+          ["X", "4", "4"],
+          ["Y", "1", "3"],
+          ["Z", "1", "2"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-packing",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional display-box loading",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "A box stands2 cm high and has a3 cm by2 cm base; each weighs0.8 kg. The inside of the crate is10 cm by7 cm by5 cm. Boxes stay upright. A layer is formed from full straight strips across the10-cm side: a strip2 cm deep holds three boxes; a strip3 cm deep holds five boxes. Only these strip layouts are allowed: P=three2-cm strips; Q=two3-cm strips; R=two2-cm strips plus one3-cm strip. A layout leaves unused depth when necessary; boxes do not hang over the crate. Whole full layers only, with at most two layers. Total load must not exceed16 kg."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-packing-chart",
+        "caption": "Fictional display-box loading",
+        "alt": "Grouped strip-count bars for Fictional display-box loading. Exact values in description.",
+        "description": "P: Number of 2-cm strips = 3, Number of 3-cm strips = 0. Q: Number of 2-cm strips = 0, Number of 3-cm strips = 2. R: Number of 2-cm strips = 2, Number of 3-cm strips = 1."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-exchange",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional token-conversion booth",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "All rates are invented game-token rules, not real currencies. Each positive transaction deducts its stated fee from its OUTPUT. A route X→Y→Z uses two transactions and pays both fees. A direct X→Z transaction pays only its own fee. X inputs must be whole numbers. Any performed transaction must have positive output. The Y→Z booth accepts at most60 Y tokens in total per day. All tokens must finish as Z; leaving X or Y is not allowed."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional token-conversion booth",
+        "headers": [
+          "Conversion",
+          "Gross output per input token",
+          "Output fee per transaction"
+        ],
+        "rows": [
+          ["X→Y", "4", "10 Y"],
+          ["Y→Z", "2", "8 Z"],
+          ["X→Z", "5", "8 Z"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-percentiles",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Exact scores in a fictional exercise",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each person has exactly one score. Define the percentile P(s) as100 times the number of people with scores STRICTLY BELOW s divided by the total number of people. For an even count, the median is the mean of the two middle sorted scores. Newcomer questions retain every original person."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-percentiles-chart",
+        "caption": "Exact scores in a fictional exercise",
+        "alt": "Score frequency bar chart for Exact scores in a fictional exercise. Exact values in description.",
+        "description": "40: People = 2. 50: People = 3. 60: People = 4. 70: People = 3. 80: People = 2. 90: People = 1."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-calibration",
+    "version": 1,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Ideal instrument rules",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The unrounded reading equals scale times true value plus bias. Displayed readings are rounded to the nearest whole unit; halfway values round upward. Thus display r means an unrounded reading at least r−0.5 but less than r+0.5. Apart from this rounding, the rules are exact. Values and biases are fictional dimensionless units."
+      },
+      {
+        "type": "table",
+        "caption": "Ideal instrument rules",
+        "headers": ["Instrument", "Scale", "Bias"],
+        "rows": [
+          ["A", "1", "2"],
+          ["B", "2", "-1"],
+          ["C", "0.5", "3"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-ranking",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Two-criterion fictional shortlist",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Larger quality and service scores are better. For integer weight w with0≤w≤10, the aggregate score is w×quality+(10−w)×service. A candidate strictly dominates another when it is at least as good on both criteria and better on at least one. Equal aggregate scores are tied; there is no other tie-break."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-ranking-chart",
+        "caption": "Two-criterion fictional shortlist",
+        "alt": "Quality / service scatter plot for Two-criterion fictional shortlist. Exact values in description.",
+        "description": "A: Quality = 9, Service = 3. B: Quality = 6, Service = 7. C: Quality = 4, Service = 8. D: Quality = 5, Service = 5."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f05-data-cutting",
+    "version": 2,
+    "family": 5,
+    "module": "analytical",
+    "language": "english",
+    "title": "Permitted fictional cutting patterns",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each sheet is20 cm wide. Type A strips are3 cm wide; type B strips5 cm. Each produced strip consumes its width plus1 cm for its own cut, including its trailing cut; unused width is discarded. Only the FOUR patterns in the chart may be used, once per sheet; patterns may repeat on different sheets. Count entire strips; joining scraps is forbidden."
+      },
+      {
+        "type": "image",
+        "assetId": "f05-data-cutting-chart",
+        "caption": "Permitted fictional cutting patterns",
+        "alt": "Grouped strip-count bars for Permitted fictional cutting patterns. Exact values in description.",
+        "description": "P: A strips = 5, B strips = 0. Q: A strips = 2, B strips = 2. R: A strips = 3, B strips = 1. S: A strips = 0, B strips = 3."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring and separate mathematical verification; independent peer review recorded separately; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 05 data and explicit mathematical premises; authored 2026-11-03. No actual CSC examination material. See docs/content/family05-analytical-review.md."
+      ]
+    }
+  }
+]

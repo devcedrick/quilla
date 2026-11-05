@@ -1,0 +1,23 @@
+# Family 05 chart revision 2
+
+2026-11-04. Replaces seven table-only references with original PNG charts derived deterministically from exact canonical source tables in scripts/family05-chart-data.json. The canonical table data were compared with HEAD revision1, preserving all cells verbatim. Renderer scripts/render-family05-charts.py uses Pillow and Windows Arial, creating1600×1000PNG images. No image-generation model or outside artwork used. Quilla is not affiliated with the Philippine Civil Service Commission.
+
+| Reference            | Version | Chart / review                                                                                                                                                       |
+| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| f05-data-pictograms  | 2       | Pictogram: A3diamonds/2circles/2staff; B2/4/5; C4/1/4. Shapes encode six/two blankets, staff labelled separately. No totals or blankets-per-staff answers disclosed. |
+| f05-data-rain        | 2       | Rainfall amount bars for0–15,15–45,45–60,60–90minutes:3,4,0,5mm. Explicit unequal-duration warning avoids confusing amount with rate.                                |
+| f05-data-contest     | 2       | Four independently scaled event-score panels retain all16rawscores. No discarded-score totals or ranking answers shown.                                              |
+| f05-data-packing     | 2       | Strip-count panels retain P3/0,Q0/2,R2/1. Panels show rawstripcounts, not derived boxcapacities or weight-limited combinations.                                      |
+| f05-data-percentiles | 2       | Score-frequency bars retain40:2,50:3,60:4,70:3,80:2,90:1. No cumulativecounts, percentileanswers or median revealed.                                                 |
+| f05-data-ranking     | 2       | Scatter plot quality/service: A9/3,B6/7,C4/8,D5/5; axes0–10. No weightedaggregate lines, domination annotations or winner answers.                                   |
+| f05-data-cutting     | 2       | A/Bstrip-count panels retain P5/0,Q2/2,R3/1,S0/3; no derived widths or waste answers.                                                                                |
+
+Retained tables: f05-data-calendar gives first-day/repeat parameters, not a precomputed attendance calendar; f05-data-exchange lists conversion rates and transaction fees with different output units; f05-data-calibration lists scale/bias parameters including a negative bias. Plotting these as outcomes would require new assumptions or expose derived quantities. Their references and12linked questions remain version1.
+
+All seven chart assets were visually inspected individually with view_image. Exact labels, baseline zeroes, panel scale distinctions, picture counts, point positions, axes and margins were checked against canonical cells. Initial rain-label mojibake from an encoding error was corrected by explicitly UTF-8-decoding Git source; final rain image reinspected. No title or label clipping remains. Shapes and text provide non-colour identification. Image descriptions contain every original table cell, no derived answer, while retained text blocks preserve original assumptions. These are author/AI review checks, not human approval or learner calibration.
+
+Seven references and28linked questions now version2; the40questionchoices,keys,difficulty and mathematical premises remain unchanged. Family manifest revision2 has34references,7assets,270questions. Metadata pins actual PNG SHA-256 and dimensions. Analytical independent verification PASS80questions/16hardcases. Seed validation PASS, no errors/warnings; dataset SHA-256 fda9e925818518e70800d88eba022056fb15eb8c64010813366f82d832c305af. Root run supplies whole-repository checks. No import,publication,deployment,commit or push performed.
+
+## Integration verification
+
+Final integration passes all 387 unit tests across 32 files, including the new chart asset/version and unchanged-answer fingerprint regressions. Lint, typecheck, Knip, changed-file formatting and git diff --check pass. The first concurrent unit run had one existing CLI-test timeout; the complete standalone rerun passed without changing the timeout or tests. All three pinned seed manifests pass with zero errors/warnings. Build/E2E are skipped because no runtime or user journey changes. Authoring and visual checks are AI review; human editorial approval remains pending. No commit, import, publication or deployment was performed.

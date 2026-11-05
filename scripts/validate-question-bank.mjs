@@ -1,8 +1,8 @@
-import { readFile, realpath } from "node:fs/promises";
+import { readFile, readdir, realpath } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
-import { policy } from "./question-bank-policy.mjs";
+import { policy as legacyPolicy, seedPolicy } from "./question-bank-policy.mjs";
 
 const canonical = (v) =>
   JSON.stringify(v, (_, x) =>
@@ -37,8 +37,10 @@ const levels = (module) =>
     : [module === "clerical" ? "subprofessional" : "professional"];
 
 export async function validateQuestionBank(manifestPath, mode = "draft") {
-  if (!["draft", "release"].includes(mode))
-    throw new Error("Mode must be draft or release");
+  if (!["draft", "release", "seed"].includes(mode))
+    throw new Error("Mode must be draft, release or seed");
+  const seed = mode === "seed";
+  const policy = seed ? seedPolicy : legacyPolicy;
   const root = await realpath(path.dirname(path.resolve(manifestPath)));
   const issues = [];
   const add = (file, recordId, rule, expected, actual, severity = "error") =>
@@ -53,7 +55,7 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
   const check = (ok, ...args) => {
     if (!ok) add(...args);
   };
-  async function safeFile(relative) {
+  function safePath(relative) {
     if (
       typeof relative !== "string" ||
       !relative ||
@@ -63,6 +65,10 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
       relative.split("/").some((p) => p === ".." || p === "." || !p)
     )
       throw new Error(`Unsafe corpus path: ${relative}`);
+    return relative;
+  }
+  async function safeFile(relative) {
+    safePath(relative);
     const resolved = await realpath(path.join(root, relative));
     const rel = path.relative(root, resolved);
     if (rel.startsWith("..") || path.isAbsolute(rel))
@@ -120,6 +126,7 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
         "assetFiles",
         "datasetChecksum",
         "signOff",
+        ...(seed ? ["sources", "seedFamilies"] : []),
       ],
       manifestFile,
       null,
@@ -127,13 +134,13 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
   )
     return { mode, issues, checksum: null, summary: {} };
   check(
-    manifest.formatVersion === 1 &&
+    manifest.formatVersion === (seed ? 2 : 1) &&
       id(manifest.corpusId) &&
       positive(manifest.revision),
     manifestFile,
     null,
     "manifest-identity",
-    "formatVersion=1, stable corpusId, positive revision",
+    `formatVersion=${seed ? 2 : 1}, stable corpusId, positive revision`,
     manifest,
   );
   check(
@@ -147,33 +154,135 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
   );
   const records = { questions: [], references: [], assets: [] };
   const seenFiles = new Set();
-  for (const [field, kind] of [
+  const fileKinds = [
     ["questionFiles", "questions"],
     ["referenceFiles", "references"],
     ["assetFiles", "assets"],
-  ]) {
+  ];
+  let sources = [manifest];
+  if (seed) {
     check(
-      Array.isArray(manifest[field]),
+      Array.isArray(manifest.seedFamilies) &&
+        manifest.seedFamilies.length > 0 &&
+        new Set(manifest.seedFamilies).size === manifest.seedFamilies.length &&
+        manifest.seedFamilies.every(
+          (f) => Number.isInteger(f) && f >= 1 && f <= 8,
+        ),
       manifestFile,
       null,
-      "file-list",
-      "array",
-      manifest[field],
+      "seed-families",
+      "unique family numbers in 1..8",
+      manifest.seedFamilies,
     );
-    for (const file of Array.isArray(manifest[field]) ? manifest[field] : []) {
+    for (const [field] of fileKinds)
       check(
-        !seenFiles.has(file),
+        manifest[field] === undefined,
         manifestFile,
         null,
-        "duplicate-file",
-        "one declaration per file",
-        file,
+        "seed-file-lists",
+        "file lists inside sources only",
+        field,
       );
-      seenFiles.add(file);
-      const data = await json(file);
-      check(Array.isArray(data), file, null, "records", "array", data);
-      if (Array.isArray(data))
-        records[kind].push(...data.map((value) => ({ file, value })));
+    check(
+      Array.isArray(manifest.sources) && manifest.sources.length > 0,
+      manifestFile,
+      null,
+      "sources",
+      "nonempty source inventory",
+      manifest.sources,
+    );
+    sources = (Array.isArray(manifest.sources) ? manifest.sources : []).filter(
+      (source) =>
+        shape(
+          source,
+          ["root", ...fileKinds.map(([field]) => field)],
+          manifestFile,
+          null,
+        ),
+    );
+  }
+  const sourceRoots = new Set();
+  for (const source of sources) {
+    const prefix = seed ? source.root : "";
+    if (seed) {
+      // Empty root means this manifest's directory, useful for standalone inventories.
+      if (prefix !== "") safePath(prefix);
+      check(
+        !sourceRoots.has(prefix),
+        manifestFile,
+        null,
+        "duplicate-source",
+        "unique source roots",
+        prefix,
+      );
+      sourceRoots.add(prefix);
+    }
+    const sourcePath = (file) => {
+      safePath(file);
+      return prefix ? `${prefix}/${file}` : file;
+    };
+    for (const [field, kind] of fileKinds) {
+      check(
+        Array.isArray(source[field]),
+        manifestFile,
+        null,
+        "file-list",
+        "array",
+        source[field],
+      );
+      for (const relative of Array.isArray(source[field])
+        ? source[field]
+        : []) {
+        const file = sourcePath(relative);
+        check(
+          !seenFiles.has(file),
+          manifestFile,
+          null,
+          "duplicate-file",
+          "one declaration per file",
+          file,
+        );
+        seenFiles.add(file);
+        const data = await json(file);
+        check(Array.isArray(data), file, null, "records", "array", data);
+        if (Array.isArray(data))
+          records[kind].push(...data.map((value) => ({ file, value, prefix })));
+      }
+    }
+    if (seed) {
+      // Catch undeclared JSON in the documented record directories, not just
+      // an inventory whose declared subset happens to have the right count.
+      async function inventory(relative) {
+        const folder = sourcePath(relative);
+        let entries;
+        try {
+          const resolved = await realpath(path.join(root, folder));
+          const rel = path.relative(root, resolved);
+          if (rel.startsWith("..") || path.isAbsolute(rel))
+            throw new Error(`Path leaves corpus: ${folder}`);
+          entries = await readdir(resolved, { withFileTypes: true });
+        } catch (error) {
+          if (error.code === "ENOENT") return;
+          throw error;
+        }
+        for (const entry of entries) {
+          const file = `${relative}/${entry.name}`;
+          if (entry.isSymbolicLink())
+            throw new Error(`Unsafe inventory symlink: ${sourcePath(file)}`);
+          if (entry.isDirectory()) await inventory(file);
+          else if (entry.name.endsWith(".json"))
+            check(
+              seenFiles.has(sourcePath(file)),
+              manifestFile,
+              null,
+              "undeclared-file",
+              "declare every JSON record file",
+              sourcePath(file),
+            );
+        }
+      }
+      for (const folder of ["content", "families", "references"])
+        await inventory(folder);
     }
   }
   const maps = {};
@@ -263,7 +372,7 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
       }
     }
   }
-  for (const { value: a, file } of records.assets) {
+  for (const { value: a, file, prefix } of records.assets) {
     check(
       sha(a.sha256) && positive(a.width) && positive(a.height),
       file,
@@ -272,7 +381,8 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
       "SHA-256 and positive dimensions",
       a,
     );
-    const bytes = await safeFile(a.path);
+    safePath(a.path);
+    const bytes = await safeFile(prefix ? `${prefix}/${a.path}` : a.path);
     let dimensions;
     if (
       bytes.length >= 33 &&
@@ -543,10 +653,74 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
         "unreferenced",
         "referenced record",
         v[field],
-        mode === "release" ? "error" : "warning",
+        mode === "release" || seed ? "error" : "warning",
       );
   const coverage = [];
-  for (let family = 1; family <= 8; family++) {
+  if (seed) {
+    const families = Array.isArray(manifest.seedFamilies)
+      ? manifest.seedFamilies
+      : [];
+    for (const { value: q, file } of records.questions)
+      check(
+        families.includes(q.family),
+        file,
+        q.questionId,
+        "seed-assignment",
+        "family declared in seedFamilies",
+        q.family,
+      );
+    for (const family of families) {
+      const items = records.questions
+        .map((r) => r.value)
+        .filter((q) => q.family === family);
+      const gaps = [];
+      const subjects = {};
+      for (const [subject, expected] of Object.entries(policy.seedSubjects)) {
+        const selected = items.filter((q) => q.subjectId === subject);
+        const actual = selected.length;
+        subjects[subject] = {
+          expected,
+          actual,
+          difficulties: Object.fromEntries(
+            ["easy", "medium", "hard"].map((difficulty) => [
+              difficulty,
+              selected.filter((q) => q.difficulty === difficulty).length,
+            ]),
+          ),
+        };
+        if (actual !== expected)
+          gaps.push({ rule: "seed-subject-count", subject, expected, actual });
+      }
+      if (items.length !== 270)
+        gaps.push({
+          rule: "seed-question-count",
+          expected: 270,
+          actual: items.length,
+        });
+      for (const language of ["english", "filipino"]) {
+        const actual = items.filter(
+          (q) => q.subjectId === "verbal_ability" && q.language === language,
+        ).length;
+        if (actual !== 25)
+          gaps.push({
+            rule: "verbal-language",
+            language,
+            expected: 25,
+            actual,
+          });
+      }
+      coverage.push({
+        family,
+        questions: items.length,
+        subjects,
+        complete: gaps.length === 0,
+        gaps,
+      });
+      for (const gap of gaps)
+        add(manifestFile, `family-${family}`, gap.rule, gap.expected, gap);
+    }
+  }
+  for (let family = 1; !seed && family <= 8; family++) {
     const items = records.questions
       .map((r) => r.value)
       .filter((q) => q.family === family);
@@ -637,8 +811,17 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
       questions: records.questions.length,
       references: records.references.length,
       assets: records.assets.length,
-      professionalExams: coverage.filter((c) => c.complete).length,
-      subprofessionalExams: coverage.filter((c) => c.complete).length,
+      ...(seed
+        ? {
+            completeSeedFamilies: issues.some((i) => i.severity === "error")
+              ? 0
+              : coverage.filter((c) => c.complete).length,
+            examReadiness: "not-evaluated",
+          }
+        : {
+            professionalExams: coverage.filter((c) => c.complete).length,
+            subprofessionalExams: coverage.filter((c) => c.complete).length,
+          }),
       distributions,
       coverage,
     },
@@ -663,7 +846,7 @@ if (
         flags[args[i]] = args[++i];
       else
         throw new Error(
-          "Usage: --manifest <path> --mode draft|release [--json]",
+          "Usage: --manifest <path> --mode draft|release|seed [--json]",
         );
     }
     if (!flags["--manifest"] || !flags["--mode"])
@@ -675,7 +858,7 @@ if (
     console.log(
       flags.json
         ? JSON.stringify(result)
-        : `${result.mode}: ${result.summary.questions ?? 0} questions; checksum ${result.checksum}\n${result.issues.map((i) => `${i.severity}: ${i.file} ${i.recordId ?? ""} ${i.rule}: expected ${canonical(i.expected)}, actual ${canonical(i.actual)}`).join("\n")}\n${result.summary.coverage?.filter((c) => c.complete).length ?? 0}/8 complete paired families`,
+        : `${result.mode}: ${result.summary.questions ?? 0} questions; checksum ${result.checksum}\n${result.issues.map((i) => `${i.severity}: ${i.file} ${i.recordId ?? ""} ${i.rule}: expected ${canonical(i.expected)}, actual ${canonical(i.actual)}`).join("\n")}\n${result.mode === "seed" ? `${result.summary.completeSeedFamilies ?? 0} complete seed families; exam readiness not evaluated` : `${result.summary.coverage?.filter((c) => c.complete).length ?? 0}/8 complete paired families`}`,
     );
     process.exitCode = result.issues.some((i) => i.severity === "error")
       ? 1

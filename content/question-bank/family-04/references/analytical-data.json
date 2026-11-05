@@ -1,0 +1,267 @@
+[
+  {
+    "referenceId": "f04-data-commute",
+    "version": 2,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "One morning: recorded commuter movements",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each entry counts distinct commuters travelling from its row origin to its column destination. Within-district journeys are included on the diagonal. Each commuter makes one recorded journey. These are fictional counts."
+      },
+      {
+        "type": "image",
+        "assetId": "f04-commute-chart",
+        "caption": "One morning: recorded commuter movements",
+        "alt": "One morning: recorded commuter movements. Exact labelled data are fully described below.",
+        "description": "East: East = 18; North = 24; South = 12. North: East = 16; North = 20; South = 14. South: East = 10; North = 22; South = 24."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-quotes",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Fictional printing quotations",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "All quantities are whole booklets. A supplier charges its setup fee once whenever a positive quantity is ordered, plus its unit price. No fee is charged for a zero order. Delivery days are measured from the same order time. Suppliers may be combined and have independent capacity."
+      },
+      {
+        "type": "table",
+        "caption": "Fictional printing quotations",
+        "headers": [
+          "Supplier",
+          "Setup fee (PHP)",
+          "Price per booklet (PHP)",
+          "Maximum booklets",
+          "Delivery days"
+        ],
+        "rows": [
+          ["A", "240", "8", "80", "3"],
+          ["B", "0", "12", "100", "2"],
+          ["C", "500", "6", "150", "4"],
+          ["D", "100", "10", "60", "2"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-test",
+    "version": 2,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Tile inspection verification",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "All 200 tiles were machine-tested and then independently checked with a perfect reference inspection, giving this cross-classification. These figures describe only this fictional batch, not any medical test."
+      },
+      {
+        "type": "image",
+        "assetId": "f04-test-chart",
+        "caption": "Tile inspection verification",
+        "alt": "Tile inspection verification. Exact labelled data are fully described below.",
+        "description": "Defective: Flagged by machine = 36; Not flagged = 4. Sound: Flagged by machine = 24; Not flagged = 136."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-ballots",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Ranked preferences for a workshop theme",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Every voter submits the complete ranking shown for that group. In each round count each participating voter for their highest-ranked remaining theme. If no theme has more than half the participating votes, eliminate the theme with the fewest votes. Then recount among the two remaining themes; the larger count wins. Assume no ties unless an item explicitly asks about one."
+      },
+      {
+        "type": "table",
+        "caption": "Ranked preferences for a workshop theme",
+        "headers": [
+          "Voter group",
+          "Number of voters",
+          "First preference",
+          "Second preference",
+          "Third preference"
+        ],
+        "rows": [
+          ["G1", "18", "A", "B", "C"],
+          ["G2", "14", "B", "C", "A"],
+          ["G3", "10", "C", "A", "B"],
+          ["G4", "8", "C", "B", "A"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-scanners",
+    "version": 2,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Scanner logs for one 60-minute window",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "The page count covers only productive time, which is 60 minus downtime. Each scanner works at a constant productive rate derived from this log. Future-window questions use those same rates. Whole batches may be assigned to any scanner unless a question restricts them. A scanner handles one batch at a time."
+      },
+      {
+        "type": "image",
+        "assetId": "f04-scanners-chart",
+        "caption": "Scanner logs for one 60-minute window",
+        "alt": "Scanner logs for one 60-minute window. Exact labelled data are fully described below.",
+        "description": "P: Pages scanned = 360; Downtime within window (minutes) = 15; Pages per whole batch = 30. Q: Pages scanned = 300; Downtime within window (minutes) = 10; Pages per whole batch = 25. R: Pages scanned = 280; Downtime within window (minutes) = 20; Pages per whole batch = 40."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-venues",
+    "version": 1,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Facilities at five fictional venues",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Yes means available and No unavailable. A feature is covered by a set when at least one selected venue has it. Costs are in arbitrary budget units. Each listed feature at each venue is lost if that venue becomes unavailable. No additional features exist."
+      },
+      {
+        "type": "table",
+        "caption": "Facilities at five fictional venues",
+        "headers": [
+          "Venue",
+          "Step-free entrance",
+          "Backup power",
+          "Meeting room",
+          "Secure storage",
+          "Parking",
+          "Cost"
+        ],
+        "rows": [
+          ["J", "Yes", "Yes", "No", "Yes", "Yes", "4"],
+          ["K", "No", "Yes", "Yes", "Yes", "No", "3"],
+          ["L", "Yes", "No", "No", "Yes", "Yes", "2"],
+          ["M", "No", "Yes", "Yes", "No", "Yes", "5"],
+          ["N", "Yes", "No", "Yes", "Yes", "Yes", "6"]
+        ]
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-bands",
+    "version": 2,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Task times grouped into intervals",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Each task took a whole number of minutes. Only these grouped counts are known; individual times within each interval are not supplied. The median of an even number of observations is the mean of the two central sorted values."
+      },
+      {
+        "type": "image",
+        "assetId": "f04-bands-chart",
+        "caption": "Task times grouped into intervals",
+        "alt": "Task times grouped into intervals. Exact labelled data are fully described below.",
+        "description": "0\u20134 inclusive: Number of tasks = 6. 5\u20139 inclusive: Number of tasks = 10. 10\u201314 inclusive: Number of tasks = 8. 15\u201319 inclusive: Number of tasks = 6."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  },
+  {
+    "referenceId": "f04-data-grid",
+    "version": 2,
+    "family": 4,
+    "module": "analytical",
+    "language": "english",
+    "title": "Coordinates of fictional service points",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "Coordinates refer to an unobstructed rectangular street grid. Travel follows horizontal and vertical blocks only, in either direction. The shortest grid distance between points is the sum of the absolute east-coordinate and north-coordinate differences."
+      },
+      {
+        "type": "image",
+        "assetId": "f04-grid-chart",
+        "caption": "Coordinates of fictional service points",
+        "alt": "Coordinates of fictional service points. Exact labelled data are fully described below.",
+        "description": "A: East coordinate (blocks) = 1; North coordinate (blocks) = 1; Has a ramp = Yes. B: East coordinate (blocks) = 1; North coordinate (blocks) = 5; Has a ramp = No. C: East coordinate (blocks) = 4; North coordinate (blocks) = 2; Has a ramp = Yes. D: East coordinate (blocks) = 6; North coordinate (blocks) = 5; Has a ramp = Yes."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authoring; separate AI review recorded in family04-analytical-review.md; human approval and empirical calibration pending",
+      "sources": [
+        "Original fictional Family 04 tables and explicit reasoning premises, authored 2026-11-02; not actual CSC examination content."
+      ]
+    }
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "questionId": "f01-grammar-english-01",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the revision that corrects the agreement error without changing which staff member is responsible. Sentence: The supervisor, together with the two assistants who check the forms, are responsible for the final signature.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Change “are responsible” to “is responsible”."
+      },
+      {
+        "choiceId": "b",
+        "text": "Change “who check” to “who checks”."
+      },
+      {
+        "choiceId": "c",
+        "text": "Change “together with” to “and”."
+      },
+      {
+        "choiceId": "d",
+        "text": "Change “the final signature” to “the final signatures”."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The head subject is the singular supervisor; together with does not create a compound subject. The relative clause who check correctly refers to the plural assistants. Using and would assign responsibility to all three people rather than preserving the stated responsibility.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 1; singular indefinite subject. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-02",
+    "version": 3,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Choose the sentence that preserves the intended meaning and uses parallel structure: the clerk must verify identities, record payments, and return original documents.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The clerk is responsible for verifying identities, recording payments, and the return of original documents."
+      },
+      {
+        "choiceId": "b",
+        "text": "The clerk is responsible for verifying identities, recording payments, and returning original documents."
+      },
+      {
+        "choiceId": "c",
+        "text": "The clerk is responsible for verifying identities, to record payments, and returning original documents."
+      },
+      {
+        "choiceId": "d",
+        "text": "The clerk is responsible for identity verification, recording payments, and to return original documents."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The revision using 'verifying', 'recording', and 'returning' coordinates three gerund phrases governed by 'for'. The alternatives mix gerunds with a noun phrase or an infinitive. The parallel revision retains all three required actions without depending on an option's displayed position.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 4; compound subject joined by and. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-03",
+    "version": 4,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A report must make clear that the inspector, not the driver, found the damaged seal. Which revision also avoids a dangling modifier?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "After examining the crate, the damaged seal was reported to the driver by the inspector."
+      },
+      {
+        "choiceId": "b",
+        "text": "After examining the crate, the driver received the inspector’s report of a damaged seal."
+      },
+      {
+        "choiceId": "c",
+        "text": "After examining the crate, a damaged seal appeared in the inspector’s report to the driver."
+      },
+      {
+        "choiceId": "d",
+        "text": "After examining the crate, the inspector reported a damaged seal to the driver."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The understood subject of 'after examining' must be the subject of the main clause. In the revision with the inspector as that subject, the inspector both examines and reports the finding. The driver revision assigns examination to the wrong person; the other grammatical subjects cannot examine a crate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 1, identifying errors item 6; recognise a correct sentence. Task identifying-errors. See grammar-family01-ledger.md.",
+        "2026-11-01 substantive difficulty revision; see family01-difficulty-revision.md. Prior source notes describe the superseded version.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-04",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the word that correctly completes the sentence. The volunteers labelled ___ equipment before lending it to the team.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "they’re"
+      },
+      {
+        "choiceId": "b",
+        "text": "there"
+      },
+      {
+        "choiceId": "c",
+        "text": "there’s"
+      },
+      {
+        "choiceId": "d",
+        "text": "their"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "Their is the possessive determiner showing whose equipment it is. They’re means they are, there indicates a place, and there’s means there is or there has. None can replace the possessive their here.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 2, correct usage item 4; possessive their versus homophones. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-05",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the word that correctly completes the sentence. The caretaker agreed ___ unlock the storage room at dawn.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "to"
+      },
+      {
+        "choiceId": "b",
+        "text": "too"
+      },
+      {
+        "choiceId": "c",
+        "text": "two"
+      },
+      {
+        "choiceId": "d",
+        "text": "then"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Agreed is followed here by the to-infinitive: agreed to unlock. Too means also or excessively, two is a number, and then does not supply the required infinitive marker.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 2, correct usage item 3; infinitive to. Task correct-usage. See grammar-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f01-grammar-english-06",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The office's approved minute must retain two facts: the panel postponed the inspection, and the date of the later inspection is still undecided. Which revision uses an idiomatic expression without changing either fact?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The panel put forward the inspection; its later date remains undecided."
+      },
+      {
+        "choiceId": "b",
+        "text": "The panel put off deciding whether an inspection would occur at all."
+      },
+      {
+        "choiceId": "c",
+        "text": "The panel put off the inspection; its new date has not yet been set."
+      },
+      {
+        "choiceId": "d",
+        "text": "The panel called off the inspection; it will not be rescheduled."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Put off the inspection means postpone it. The correct revision also preserves the undecided new date. Put forward does not express the stated postponement here; putting off a decision about whether to inspect changes the object of the delay; calling it off with no rescheduling changes postponement into cancellation.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contexts and explanations; bilingual editorial review pending",
+      "sources": [
+        "Grammar reference batch: Image 3, correct usage items 34–37; context-appropriate phrasal verb; new verb/particle example. Task correct-usage. See grammar-family01-ledger.md.",
+        "2026-11-01 editorial repair, manifest revision 5; current task and review evidence: docs/content/family01-quality-revision.md. Earlier source notes describe prior versions."
+      ]
+    }
+  }
+]

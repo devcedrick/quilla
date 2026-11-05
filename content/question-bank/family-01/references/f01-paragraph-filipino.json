@@ -1,0 +1,134 @@
+[
+  {
+    "referenceId": "f01-paragraph-filipino-01-parts",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Dalawang uri ng tala",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Sa ikalawa, ipinaliliwanag ng mag-aaral kung ano ang kahulugan sa kaniya ng mga nakita.\nP2: Sa lakbay-aral ng klase, magkaiba ang gamit ng talang obserbasyon at talang pagninilay.\nP3: Kaya ang paglalarawan ng nakita at ang pagbibigay rito ng sariling kahulugan ay hindi itinuturing na iisang uri ng tala.\nP4: Sa una, inilalarawan ng mag-aaral ang hugis, kulay, at iba pang detalyeng tuwirang napansin."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-filipino-02-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Pagbabahagi ng aralin",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Nahihirapan ang ilang kasapi na sundan ang sabay-sabay na pagpapaliwanag sa pagpupulong.\nP2: Sa sumunod na pagpupulong, mas marami ang nakapagtanong at nakapagsalita.\nP3: Kaya nagtakda ang pangkat ng oras para sa bawat tagapagsalita at hiwalay na oras para sa mga tanong.\nP4: Sa ganitong paraan, naging mas maayos at mas bukas sa pakikilahok ang talakayan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-filipino-03-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Mga larawang itatanghal",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Pagkatapos ng pagtatanghal, ibinalik sa kani-kanilang may-ari ang mga larawang iyon.\nP2: Batay sa takdang oras na iyon, dinala ng mga may-ari ang mga larawan sa bulwagan.\nP3: Nagplano ang samahan ng isang araw na pagtatanghal ng mga lumang larawan.\nP4: Nang maihatid ang mga larawan, inayos at nilagyan ang mga ito ng pangalan bago pinapasok ang mga panauhin.\nP5: Bago tumanggap ng larawan, nagtakda muna sila ng oras ng paghahatid at lugar ng pagtanggap."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-filipino-04-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Pag-aayos ng mga aklat",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Sa ganitong pagkakahati, mas madaling makita kung saang kahon dapat ilagay ang susunod na donasyon.\nP2: Naghalo-halo ang mga aklat na pambata at mga aklat na sanggunian sa mesa ng pagtanggap.\nP3: Upang maiwasan ang patuloy na paghahalo, nagpasya ang mga kasapi na gumamit ng magkahiwalay na kahon para sa dalawang uri.\nP4: Nilagyan nila ng magkaibang pangalan ang dalawang kahon at inilipat doon ang mga aklat ayon sa uri."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-filipino-05-parts",
+    "version": 2,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Ang napulot na kuwaderno",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Dahil sa pangalang nabasa, natukoy ni Elisa kung kanino niya dapat ibalik ang kuwaderno.\nP2: Sa pabalat nito, nakita niya ang isang larawang may nakasulat sa likod.\nP3: Nang maibalik ang kuwaderno, nagpasalamat ang may-ari sa pag-iingat ni Elisa rito.\nP4: Ang nakasulat sa likod ng larawang iyon ay pangalan ng isang kasamahan niya sa pagsasanay, na tahasang nakatala roon bilang may-ari ng kuwaderno.\nP5: Nakakita si Elisa ng isang kuwadernong naiwan sa bangko matapos ang pagsasanay."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  },
+  {
+    "referenceId": "f01-paragraph-filipino-06-parts",
+    "version": 1,
+    "family": 1,
+    "module": "shared-core",
+    "language": "filipino",
+    "title": "Pagpili ng bagong lalagyan",
+    "blocks": [
+      {
+        "type": "text",
+        "text": "P1: Bago pumili ng modelo, itinala muna nila ang taas at lapad ng mga estanteng paglalagyan nito.\nP2: Upang matugunan ang pagkakaibang iyon, gumawa ang pangkat ng dalawang pansamantalang modelong may magkaibang hugis.\nP3: Ang modelong matagumpay na nasubok sa parehong hanay ang piniling gawing permanenteng lalagyan.\nP4: Nais ng samahan na palitan ang malalaking lalagyan ng mas madaling ipasok sa kanilang mga estante.\nP5: Sa pagsubok sa dalawang modelo, isa lamang ang naipasok at nailabas sa parehong hanay ng estante nang hindi sumasabit.\nP6: Ipinakita ng tala na magkaiba ang sukat ng dalawang hanay ng estante, kaya hindi sapat ang dating iisang sukat ng lalagyan."
+      }
+    ],
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original paragraph parts and explanations; bilingual review pending",
+      "sources": [
+        "Paragraph-organisation reference image batch; original scenarios, not quoted legal or historical claims. See paragraph-family01-ledger.md."
+      ]
+    }
+  }
+]

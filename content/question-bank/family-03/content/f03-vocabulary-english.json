@@ -1,0 +1,260 @@
+[
+  {
+    "questionId": "f03-vocabulary-english-01",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "In 'The battery no longer holds a charge,' what does CHARGE refer to?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A formal accusation"
+      },
+      {
+        "choiceId": "b",
+        "text": "Stored electrical energy"
+      },
+      {
+        "choiceId": "c",
+        "text": "An entrance fee"
+      },
+      {
+        "choiceId": "d",
+        "text": "A duty assigned to someone"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "The subject is a battery and its ability to retain energy. The other senses fit legal, commercial or responsibility contexts, not this sentence.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Merriam-Webster, charge, contextual senses; https://www.merriam-webster.com/dictionary/charge; headword retrieved 2026-11-01. Fine acceptable/small-mesh senses checked in entry; no dictionary wording reproduced."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-vocabulary-english-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "The cook set aside a RESERVE of rice for unexpected guests. What is the reserve?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "A supply kept for later use"
+      },
+      {
+        "choiceId": "b",
+        "text": "A refusal to speak openly"
+      },
+      {
+        "choiceId": "c",
+        "text": "A place reserved for wildlife"
+      },
+      {
+        "choiceId": "d",
+        "text": "A charge for advance booking"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Setting rice aside establishes the stored-supply sense. The other choices are different meanings or related expressions, not a supply of food.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Merriam-Webster, reserve, contextual senses; https://www.merriam-webster.com/dictionary/reserve; headword retrieved 2026-11-01. Fine acceptable/small-mesh senses checked in entry; no dictionary wording reproduced."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-vocabulary-english-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "'The supplier yielded to the revised terms, but the trial crop yielded less grain.' Which pair preserves the two uses of YIELDED?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "produced; surrendered"
+      },
+      {
+        "choiceId": "b",
+        "text": "surrendered; produced"
+      },
+      {
+        "choiceId": "c",
+        "text": "delayed; destroyed"
+      },
+      {
+        "choiceId": "d",
+        "text": "approved; consumed"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Yielding to terms means giving way; a crop yielding grain means producing it. Reversing the senses or treating acceptance as approval changes the claims.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Merriam-Webster, yield, contextual senses; https://www.merriam-webster.com/dictionary/yield; headword retrieved 2026-11-01. Fine acceptable/small-mesh senses checked in entry; no dictionary wording reproduced."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-vocabulary-english-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "'The report qualifies its initial assurance: the seal resists ordinary rain, not immersion.' What does QUALIFIES do here?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Adds a limitation without withdrawing the assurance completely"
+      },
+      {
+        "choiceId": "b",
+        "text": "Confirms that every use is safe without exception"
+      },
+      {
+        "choiceId": "c",
+        "text": "Withdraws the assurance and alleges deliberate deception"
+      },
+      {
+        "choiceId": "d",
+        "text": "Makes the report eligible for a competition"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "The rain/immersion boundary limits the claim. It neither gives universal assurance nor retracts everything; eligibility is another sense of qualify.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Merriam-Webster, qualify, contextual senses; https://www.merriam-webster.com/dictionary/qualify; headword retrieved 2026-11-01. Fine acceptable/small-mesh senses checked in entry; no dictionary wording reproduced."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-vocabulary-english-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "A committee can SANCTION a pilot project, while a regulator can impose a SANCTION for a violation. Which pair correctly distinguishes these uses?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "punish; approval"
+      },
+      {
+        "choiceId": "b",
+        "text": "inspect; recommendation"
+      },
+      {
+        "choiceId": "c",
+        "text": "authorize; penalty"
+      },
+      {
+        "choiceId": "d",
+        "text": "finance; warning"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "The verb can authorize a proposal; the noun can denote a penalty. Inspection or finance alone is not authorization, and a recommendation or warning is not necessarily the penalty described.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Merriam-Webster, sanction, contextual senses; https://www.merriam-webster.com/dictionary/sanction; headword retrieved 2026-11-01. Fine acceptable/small-mesh senses checked in entry; no dictionary wording reproduced."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-vocabulary-english-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "vocabulary",
+    "conceptId": "vocabulary_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "'A fine mesh catches fine particles, but the finish is merely fine, not exceptional.' Which paraphrase preserves all three uses of FINE?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Expensive mesh catches delicate particles; the finish is exact"
+      },
+      {
+        "choiceId": "b",
+        "text": "Closely woven mesh catches very small particles; the finish is satisfactory"
+      },
+      {
+        "choiceId": "c",
+        "text": "Satisfactory mesh catches costly particles; the finish is delicate"
+      },
+      {
+        "choiceId": "d",
+        "text": "Delicate mesh catches satisfactory particles; the finish is very small"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Mesh openings are small, particles are small, and 'merely fine' contrasts satisfactory with exceptional. Expense, precision and delicacy do not fit all three contexts.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Merriam-Webster, fine, contextual senses; https://www.merriam-webster.com/dictionary/fine; headword retrieved 2026-11-01. Fine acceptable/small-mesh senses checked in entry; no dictionary wording reproduced."
+      ]
+    }
+  }
+]

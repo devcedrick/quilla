@@ -1,0 +1,272 @@
+[
+  {
+    "questionId": "f04-paragraph-english-01",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange all the parts into the most coherent paragraph. Choose the full order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P1 → P4 → P3 → P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1 → P3 → P4 → P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1 → P4 → P2 → P3"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4 → P1 → P3 → P2"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P1 introduces the symptom and peg; P4 tests it under a comparison; P3 interprets that result and introduces the replacement decision; P2 carries out and verifies that decision. P3 before P4 lacks the isolating test; P2 before P3 invokes a decision not yet introduced. P4 cannot introduce an already suspect peg without P1.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-english-01-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-english-02",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange all the parts into the most coherent paragraph. Choose the full order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P4 → P3 → P1"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P3 → P4 → P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3 → P2 → P4 → P1"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P3 → P1 → P4"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 creates the strips, P3 introduces their spacing, P4 links that spacing to drying before storage, and P1 records completed drying and sealing. The other orders introduce strips/spacing too early or place the pre-storage explanation after the stated completion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-english-02-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-english-03",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "Arrange all the parts into the most coherent paragraph. Choose the full order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P3 → P1 → P4 → P2 → P5"
+      },
+      {
+        "choiceId": "b",
+        "text": "P3 → P4 → P2 → P5 → P1"
+      },
+      {
+        "choiceId": "c",
+        "text": "P3 → P4 → P1 → P2 → P5"
+      },
+      {
+        "choiceId": "d",
+        "text": "P4 → P3 → P1 → P2 → P5"
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "P3 supplies diagrams; P4 introduces their print-related limitation; P1 concedes that limitation while preserving usefulness; P2 draws a qualified recommendation; P5 explains what borrowing permits. Moving P1 ahead removes the obstacle to which even so responds, and delaying it until after the recommendation separates the support from its conclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-english-03-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-english-04",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange all the parts into the most coherent paragraph. Choose the full order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P3 → P5 → P1 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P3 → P1 → P4 → P5"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P1 → P3 → P5 → P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P3 → P1 → P5 → P4"
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "P2 establishes app-only recruitment, P3 finds its imbalance, P1 draws a limited inference, P5 proposes broader recruitment, and P4 qualifies that addition. The alternatives keep the same opening but detach imbalance from its finding, qualify an addition before introducing it, or place the remedy before the criticism that motivates it.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-english-04-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-english-05",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange all the parts into the most coherent paragraph. Choose the full order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P1 → P4 → P3 → P5 → P2"
+      },
+      {
+        "choiceId": "b",
+        "text": "P1 → P4 → P5 → P3 → P2"
+      },
+      {
+        "choiceId": "c",
+        "text": "P1 → P3 → P4 → P5 → P2"
+      },
+      {
+        "choiceId": "d",
+        "text": "P1 → P4 → P3 → P2 → P5"
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "P1 provides the diary, P4 introduces the conflicting April catalogue, P3 adds programme evidence and its comparison with that date, P5 combines the sources to exclude April conditionally, and P2 limits that exclusion to an estimate. Each distractor preserves P1 but reverses an evidence/interpretation dependency or puts the exclusion’s qualification before the exclusion.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-english-05-reference",
+      "referenceVersion": 1
+    }
+  },
+  {
+    "questionId": "f04-paragraph-english-06",
+    "version": 1,
+    "family": 4,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "discourse",
+    "conceptId": "paragraph_organization_test_questions",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "hard",
+    "stem": "Arrange all the parts into the most coherent paragraph. Choose the full order.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "P2 → P1 → P3 → P5 → P4"
+      },
+      {
+        "choiceId": "b",
+        "text": "P2 → P3 → P1 → P5 → P4"
+      },
+      {
+        "choiceId": "c",
+        "text": "P2 → P3 → P5 → P1 → P4"
+      },
+      {
+        "choiceId": "d",
+        "text": "P2 → P3 → P1 → P4 → P5"
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "P2 introduces the adaptation, P3 identifies its novelty alongside continued teaching, P1 distinguishes preservation from freezing practice, P5 turns that distinction into a criterion, and P4 applies the criterion. The alternatives either invoke novelty/distinction before their referents or apply the criterion before it is introduced as such.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; peer review and bilingual/domain editorial gates recorded separately",
+      "sources": [
+        "Independently authored original passage/parts; no external factual premise required; reviewed 2026-11-02."
+      ]
+    },
+    "reference": {
+      "referenceId": "f04-paragraph-english-06-reference",
+      "referenceVersion": 1
+    }
+  }
+]

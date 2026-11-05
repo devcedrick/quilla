@@ -1,0 +1,248 @@
+[
+  {
+    "questionId": "f07-grammar-filipino-01",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Paikliin ang “Tapos na ang pagtatanghal” sa pamamagitan ng pagsasanib ng NA at ANG. Aling baybay ang gumagamit ng kudlit upang ipakita ang nawawalang titik?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Tapos na’ng pagtatanghal."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tapos nang pagtatanghal."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Tapos ng pagtatanghal."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Tapos na nang pagtatanghal."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Ayon sa KWF §9.2, na’ng na may kudlit ang anyo ng pinaikling na at ang; hindi ito dapat ipagkamali sa nang. Ang patlang/anyo ay hindi panandang ng para sa pangngalan.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "KWF Manwal sa Masinop na Pagsulat §9.2, printed p38, na’ng contraction distinguished from nang; official indexed text retrieved2026-11-04 at https://kwf.gov.ph/wp-content/uploads/MMP_Full.pdf; directPDF403, not a fullPDF read."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-filipino-02",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "easy",
+    "stem": "Piliin ang wastong pananda: “Ang takip ___ kahon ay inilagay sa mesa.”",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "nang"
+      },
+      {
+        "choiceId": "c2",
+        "text": "kay"
+      },
+      {
+        "choiceId": "c3",
+        "text": "ng"
+      },
+      {
+        "choiceId": "c4",
+        "text": "kina"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "Ng ang nag-uugnay sa takip at kahon; hindi ito pang-abay na paraan o panandang pantao.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "KWF Manwal sa Masinop na Pagsulat, Section 9.1, printed p.38, https://kwf.gov.ph/wp-content/uploads/MMP_Full.pdf; relevant official indexed text retrieved 2026-11-04; direct PDF returned 403, not claimed fully read. Other meaning-preservation judgments are editorial, pending bilingual review."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-filipino-03",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Hawak ng nagsasalita ang isang mapa; hawak naman ng kaniyang kausap ang isang tiket. Aling pahayag ang angkop kung ang unang panghalip ay tumutukoy sa mapang hawak ng nagsasalita at ang ikalawa sa tiket na hawak ng kausap?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "“Ito ang mapa; iyan ang tiket.”"
+      },
+      {
+        "choiceId": "c2",
+        "text": "“Iyan ang mapa; ito ang tiket.”"
+      },
+      {
+        "choiceId": "c3",
+        "text": "“Ito ang mapa; iyon ang tiket sa malayo.”"
+      },
+      {
+        "choiceId": "c4",
+        "text": "“Iyon ang mapa sa malayo; iyan ang tiket.”"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Ito ang karaniwang tumutukoy sa malapit/hawak ng nagsasalita; iyan sa malapit/hawak ng kausap. Ang iyon ay para sa malayo sa kanilang dalawa, na hindi tumutugma sa nakasaad.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, itó (pnh), iyán and iyón; https://diksiyonaryo.ph/search/ito; https://diksiyonaryo.ph/word/iyan; https://diksiyonaryo.ph/search/iyon; retrieved2026-11-04. Proximity to speaker/addressee/both verified."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-filipino-04",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Tumutunog ang kampana sa alas-sais araw-araw. Sa buong panahong tumutunog ito, humihinto ang mga naglalakad. Aling pangungusap ang nagpapanatili sa pag-uulit at sa tagal ng paghinto?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Tuwing alas-sais ay tumutunog ang kampana; habang tumutunog ito, humihinto ang mga naglalakad."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Tuwing alas-sais ay tumutunog ang kampana; pagkatapos tumunog, humihinto ang mga naglalakad."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Minsan nang tumunog ang kampana sa alas-sais; habang tumutunog ito, humihinto ang mga naglalakad."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Minsan nang tumunog ang kampana sa alas-sais; bago ito tumunog, humihinto ang mga naglalakad."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Tuwing ang umuulit na alas-sais; habang ang magkasabay na tagal ng pagtunog at paghinto. Ang pagkatapos/bago ay nagbabago sa panahon ng paghinto, at minsan ay nag-aalis sa araw-araw na pag-uulit.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, tuwî (lagi) and hábang (samantala); https://diksiyonaryo.ph/search/tuwi; https://diksiyonaryo.ph/search/habang; retrieved2026-11-04. Original temporal-scope application; bilingual editorial approval pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-filipino-05",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "medium",
+    "stem": "Hindi guro si Leon, ngunit may aklat siyang ginagamit sa pag-aaral. Aling pangungusap ang wastong naghihiwalay sa pagtanggi sa propesyon at sa pag-iral ng pag-aari?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Hindi guro si Leon, ngunit mayroon siyang aklat."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Walang guro si Leon, ngunit mayroon siyang aklat."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Hindi guro si Leon, ngunit wala siyang aklat."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Walang guro si Leon, at wala siyang aklat."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Hindi ang nagtanggi sa pagiging guro ni Leon; mayroon ang nagpapahayag ng aklat na taglay niya. Walang guro ay tungkol sa kawalan ng guro, hindi sa kaniyang propesyon, at wala siyang aklat ay salungat sa pag-aari.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "Diksiyonaryo.ph, hindî, mayroon and walâ (hindi umiiral/hindi taglay); https://diksiyonaryo.ph/search/hindi; https://diksiyonaryo.ph/search/mayroon; https://diksiyonaryo.ph/search/wala; retrieved2026-11-04. Original grammatical-scope application; bilingual editorial approval pending."
+      ]
+    }
+  },
+  {
+    "questionId": "f07-grammar-filipino-06",
+    "version": 1,
+    "family": 7,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "filipino",
+    "difficulty": "hard",
+    "stem": "Dapat sabihin ng abiso na lahat ng kalahok ay maaaring magsumite ng burador, ngunit ang mga napiling burador lamang ang ililimbag at hindi pa pinal ang pagpili. Aling rebisyon ang nagpapanatili sa lahat ng saklaw na ito?",
+    "choices": [
+      {
+        "choiceId": "c1",
+        "text": "Maaaring magsumite ng burador ang lahat; ang mapipili lamang ang ililimbag, at wala pang pinal na pagpili."
+      },
+      {
+        "choiceId": "c2",
+        "text": "Maaaring magsumite ang lahat; lahat ng isusumite ay ililimbag kapag may pinal na pagpili."
+      },
+      {
+        "choiceId": "c3",
+        "text": "Ang mga napili lamang ang maaaring magsumite; ang kanilang burador lamang ang ililimbag."
+      },
+      {
+        "choiceId": "c4",
+        "text": "Maaaring magsumite ang lahat; ang napili lamang ang ililimbag sapagkat pinal na ang pagpili."
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "Magkahiwalay ang bukas na pagsusumite, limitadong paglilimbag at di-pinal na pagpili. Pinapalawak ng isang katunggali ang paglilimbag, pinakikitid ng isa ang pagsusumite, at ginagawang pinal ng isa ang pagpili.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original authorship; distinct review pass; human editorial approval pending",
+      "sources": [
+        "KWF Manwal sa Masinop na Pagsulat, Section 9.1, printed p.38, https://kwf.gov.ph/wp-content/uploads/MMP_Full.pdf; relevant official indexed text retrieved 2026-11-04; direct PDF returned 403, not claimed fully read. Other meaning-preservation judgments are editorial, pending bilingual review."
+      ]
+    }
+  }
+]

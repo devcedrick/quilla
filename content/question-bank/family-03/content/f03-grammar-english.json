@@ -1,0 +1,297 @@
+[
+  {
+    "questionId": "f03-grammar-english-01",
+    "version": 2,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the sentence with correct subject–verb agreement.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The news from the islands are encouraging."
+      },
+      {
+        "choiceId": "b",
+        "text": "The news from the islands is encouraging."
+      },
+      {
+        "choiceId": "c",
+        "text": "The news from the islands have been encouraging."
+      },
+      {
+        "choiceId": "d",
+        "text": "The news from the islands were encouraging."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "News takes a singular verb even though it ends in s. The plural islands belongs to a modifying phrase and does not control agreement. Is agrees; are, have and were require a plural subject in these constructions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md.",
+        "Purdue OWL, Making Subjects and Verbs Agree, rules 5 and 7; https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html; retrieved 2026-11-02; intervening phrases and singular news."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-english-02",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Choose the complete sentence rather than a fragment.",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Although the ferry arrived late."
+      },
+      {
+        "choiceId": "b",
+        "text": "The ferry arriving after sunset."
+      },
+      {
+        "choiceId": "c",
+        "text": "Because the crossing was rough."
+      },
+      {
+        "choiceId": "d",
+        "text": "The ferry arrived after sunset."
+      }
+    ],
+    "correctChoiceId": "d",
+    "explanation": "The ferry arrived contains a subject and finite main verb without an uncompleted subordinating clause. Although and because leave dependent clauses; arriving alone does not make a complete predicate.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-english-03",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "easy",
+    "stem": "Which sentence correctly expresses possession by one editor?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The editors desk is beside the window."
+      },
+      {
+        "choiceId": "b",
+        "text": "The editor's desk is beside the window."
+      },
+      {
+        "choiceId": "c",
+        "text": "The editors' desk belongs to one editor."
+      },
+      {
+        "choiceId": "d",
+        "text": "The editor desk's is beside the window."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Editor's marks one editor as possessor. Editors' denotes plural possessors; missing or misplaced apostrophes do not mark the intended possession.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-english-04",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The notice must say that Rina alone, not any colleague, checked the accounts. Which wording expresses that intended scope?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Rina checked only the accounts."
+      },
+      {
+        "choiceId": "b",
+        "text": "Rina only checked the accounts."
+      },
+      {
+        "choiceId": "c",
+        "text": "Only Rina checked the accounts."
+      },
+      {
+        "choiceId": "d",
+        "text": "Rina checked the accounts only yesterday."
+      }
+    ],
+    "correctChoiceId": "c",
+    "explanation": "Placing only before Rina restricts the actor. The alternatives restrict the object, the action or the time and therefore do not clearly express the requested exclusivity.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-english-05",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "At noon, the writer refers to an inspection completed at ten and a fault discovered at eleven. Which sentence makes that order clear?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "The inspector had completed the inspection before the fault was discovered."
+      },
+      {
+        "choiceId": "b",
+        "text": "The inspector will complete the inspection before the fault was discovered."
+      },
+      {
+        "choiceId": "c",
+        "text": "The inspector completes the inspection after the fault had been discovered."
+      },
+      {
+        "choiceId": "d",
+        "text": "The inspector had discovered the fault before completing the inspection."
+      }
+    ],
+    "correctChoiceId": "a",
+    "explanation": "Had completed establishes the earlier completed action before the past discovery. Future completion conflicts with the supplied times; the other constructions reverse their order.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-english-06",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The writer means that the umbrellas, not their owners, were wet. Which revision removes the ambiguity in 'Lena gave the umbrellas to the visitors because they were wet'?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Because they were wet, Lena gave the umbrellas to the visitors."
+      },
+      {
+        "choiceId": "b",
+        "text": "Lena gave the wet umbrellas to the visitors."
+      },
+      {
+        "choiceId": "c",
+        "text": "Lena gave the umbrellas to the wet visitors."
+      },
+      {
+        "choiceId": "d",
+        "text": "Lena gave them to the visitors because they were wet."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Wet directly modifies umbrellas in the intended revision. Repeated they leaves an uncertain antecedent; wet visitors changes which objects had the property.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  },
+  {
+    "questionId": "f03-grammar-english-07",
+    "version": 1,
+    "family": 3,
+    "module": "shared-core",
+    "subjectId": "verbal_ability",
+    "subtopicId": "grammar_and_usage",
+    "conceptId": "idiomatic_expressions_and_correct_grammar",
+    "levelApplicability": ["professional", "subprofessional"],
+    "language": "english",
+    "difficulty": "medium",
+    "stem": "The writer means that checking may occur after either event, but shipping requires both approval and payment. Which sentence preserves that distinction?",
+    "choices": [
+      {
+        "choiceId": "a",
+        "text": "Checking and shipping may begin after approval or payment."
+      },
+      {
+        "choiceId": "b",
+        "text": "Checking may begin after approval or payment, but shipping requires approval and payment."
+      },
+      {
+        "choiceId": "c",
+        "text": "Checking requires approval and payment, but shipping may begin after either."
+      },
+      {
+        "choiceId": "d",
+        "text": "Checking may begin after payment only, while shipping requires approval only."
+      }
+    ],
+    "correctChoiceId": "b",
+    "explanation": "Or permits either event for checking, while and requires both for shipping. The other revisions merge, reverse or narrow the two separate conditions.",
+    "provenance": {
+      "kind": "original",
+      "author": "Quilla",
+      "assistance": "AI-assisted original contextual language task; independent bilingual editorial approval pending",
+      "sources": [
+        "Original synthetic sentences; sense and intended meaning reviewed in context, not quoted dictionary text.",
+        "2026-11-01 language-reference access limitations and item-level reasoning: docs/content/family03-general-verbal-review.md."
+      ]
+    }
+  }
+]
