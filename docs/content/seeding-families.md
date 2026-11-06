@@ -2,7 +2,9 @@
 
 This is the current authoring policy, approved 1 November 2026 in
 [ADR 0013](../ADR/0013-seeding-families-and-pooled-exam-selection.md). It replaces
-the earlier assumption that one family is one paired exam set.
+the earlier assumption that one family is one paired exam set. The initial scope
+is seven families, Families 01–07, under
+[ADR 0016](../ADR/0016-seven-family-scope-and-deferred-audit.md).
 
 ## Definitions and allocation
 
@@ -12,18 +14,39 @@ authored content, publication, technical import, empirical calibration, and exam
 availability are separate states. Existing question-level review evidence must
 remain truthful.
 
-| Subject             | Each family | Families 01–08 combined | Professional exam | Subprofessional exam |
+| Subject             | Each family | Families 01–07 combined | Professional exam | Subprofessional exam |
 | ------------------- | ----------: | ----------------------: | ----------------: | -------------------: |
-| General Information |          40 |                     320 |                20 |                   20 |
-| Verbal Ability      |          50 |                     400 |                50 |                   50 |
-| Numerical Ability   |          60 |                     480 |                40 |                   35 |
-| Analytical Ability  |          80 |                     640 |                40 |                    0 |
-| Clerical Ability    |          40 |                     320 |                 0 |                   40 |
-| **Total**           |     **270** |               **2,160** |           **150** |              **145** |
+| General Information |          40 |                     280 |                20 |                   20 |
+| Verbal Ability      |          50 |                     350 |                50 |                   50 |
+| Numerical Ability   |          60 |                     420 |                40 |                   35 |
+| Analytical Ability  |          80 |                     560 |                40 |                    0 |
+| Clerical Ability    |          40 |                     280 |                 0 |                   40 |
+| **Total**           |     **270** |               **1,890** |           **150** |              **145** |
 
-**Family 01 is complete for seeding, as confirmed by the maintainer.** Families
-02–08 will each contain another 270 unique questions with these subject totals.
-This is not a promise of eight fixed or non-overlapping mocks per level.
+**Families 01–07 constitute the initial offline seeding delivery**, with 270
+questions each. Family 08 is outside this delivery. This is not a promise of
+seven fixed or non-overlapping mocks per level.
+
+## Review and acceptance boundaries
+
+Per-family authoring reviews and automated validation support the initial offline
+delivery. The maintainer deferred the supplemental exhaustive cross-family audit
+to [#98](https://github.com/devcedrick/quilla/issues/98); it is not a merge gate
+for that delivery. Saved checkpoints and unresolved findings remain evidence of
+unfinished work, not a clean audit acceptance recommendation.
+
+Automated verification checks structural and reproducible properties. AI editorial
+review records reasoning, source limitations and defects without claiming human
+inspection. Maintainer batch acceptance identifies the exact revision/checksum,
+decision, actor, date and remaining exceptions; it is distinct from both review
+methods. Empirical difficulty and distractor discrimination require learner data
+and remain unmeasured. Editorial 30/50/20 targets still apply.
+
+Offline acceptance does not approve import, publication or learner serving.
+General contributor self-review restrictions and backend authorization remain
+unchanged. Any proposed initial-maintainer bootstrap exception must be resolved
+explicitly in [#31](https://github.com/devcedrick/quilla/issues/31); a manifest,
+sign-off file or audit report cannot grant publication authority.
 
 Family 01's content breakdown is an inventory, not a new per-exam concept quota
 or an additional fixed concept allocation for later seed families:
@@ -44,7 +67,7 @@ independently match an exam's cells.
 
 ## Exam selection
 
-For example, all eight families provide 320 authored General questions. A mock
+For example, all seven families provide 280 authored General questions. A mock
 selects 20 eligible General versions from their combined pool. Apply that same
 principle to every subject. Only eligible published versions may be served;
 authored count does not mean every question is already published.
@@ -91,6 +114,6 @@ and the [Family 01 validation report](family01-validation.md). Seed success is
 structural evidence, not independent editorial sign-off or permission to serve.
 
 V3 pooled selection and exam-feasibility validation still require implementation. Initial activation
-still requires integration of the planned eight families and an eligible combined
+still requires integration of the seven initial families and an eligible combined
 pool satisfying each level's exam cells. Pooled shortages and release checks are
 exam-readiness work, not a demand to discard completed seed content.

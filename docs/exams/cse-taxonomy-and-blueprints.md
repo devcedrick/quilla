@@ -191,11 +191,18 @@ activation; this documentation does not change the v1 corpus or runtime.
 
 ## Seeding families and generated exam sets
 
-A seeding family is an authoring batch, not an exam. The initial plan is eight
+A seeding family is an authoring batch, not an exam. The initial scope is seven
 families of 270 unique questions each: 40 General, 50 Verbal, 60 Numerical,
 80 Analytical, and 40 Clerical. Family 01 is complete for seeding by maintainer
 confirmation. See the [seeding policy](../content/seeding-families.md) for the
 allocation table and the distinction between content completion and exam readiness.
+
+[ADR 0016](../ADR/0016-seven-family-scope-and-deferred-audit.md) limits the initial
+delivery to Families 01–07 and defers the supplemental exhaustive audit. Family 08
+is excluded. Per-family authoring reviews, automated verification, maintainer
+batch acceptance and empirical calibration remain separate from publication and
+the pooled feasibility checks below. This scope decision changes no exam cells,
+taxonomy identifiers, eligibility or backend publication authority.
 
 Mock exams randomly select eligible published versions from all seed families
 combined, constrained by the exam tables below. They need not be drawn from one
@@ -258,16 +265,16 @@ reproduce CSC's rating methodology.
 ## Coverage and activation
 
 Seed-authoring completion and exam activation are separate. The planned initial
-corpus has eight 270-question seeding families, totaling 2,160 unique questions:
+corpus has seven 270-question seeding families, totaling 1,890 unique questions:
 
-| Subject             | Per seed family | Eight-family total |
+| Subject             | Per seed family | Seven-family total |
 | ------------------- | --------------: | -----------------: |
-| General Information |              40 |                320 |
-| Verbal Ability      |              50 |                400 |
-| Numerical Ability   |              60 |                480 |
-| Analytical Ability  |              80 |                640 |
-| Clerical Ability    |              40 |                320 |
-| **Total**           |         **270** |          **2,160** |
+| General Information |              40 |                280 |
+| Verbal Ability      |              50 |                350 |
+| Numerical Ability   |              60 |                420 |
+| Analytical Ability  |              80 |                560 |
+| Clerical Ability    |              40 |                280 |
+| **Total**           |         **270** |          **1,890** |
 
 Family 01's final authored status does not depend on its independently matching
 exam difficulty cells. New seeding batches still target honest 30/50/20 difficulty;
