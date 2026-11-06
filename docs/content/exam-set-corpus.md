@@ -11,9 +11,15 @@ network access, or Convex deployment is needed. Policy comes from
 [ADR 0013](../ADR/0013-seeding-families-and-pooled-exam-selection.md) supersedes
 the paired-exam family interpretation. Each seed family has 270 unique authored
 questions: 40 General, 50 Verbal, 60 Numerical, 80 Analytical, and 40 Clerical.
-Eight families yield 2,160 unique questions. Family 01 is complete for seeding;
+Seven families yield 1,890 unique questions. Family 01 is complete for seeding;
 exams draw from all eligible published families combined, subject to their own
 quotas. See [seeding families](seeding-families.md) for completion and reuse rules.
+
+[ADR 0016](../ADR/0016-seven-family-scope-and-deferred-audit.md) excludes
+Family 08 from the initial delivery and defers the supplemental exhaustive audit
+to follow-up work. Per-family review and seed validation do not certify all items
+as accurate, grant publication approval, or measure learner difficulty. See the
+[review and acceptance boundaries](seeding-families.md#review-and-acceptance-boundaries).
 
 The existing validator now has a separate `seed` mode implementing seed-count
 and taxonomy-v2 structural checks. Legacy `draft`/`release` modes remain pinned
@@ -88,7 +94,7 @@ need human review. Do not relabel content to make authoring ratios look exact.
 The JSON result contains per-family subject/difficulty totals,
 `completeSeedFamilies`, and `examReadiness: "not-evaluated"`; it does not claim a
 number of feasible exams. A successful seed run neither publishes anything nor
-certifies legal accuracy, difficulty calibration, eight-family completion, or
+certifies legal accuracy, difficulty calibration, seven-family completion, or
 pooled exam activation. Review the [Family 01 report](family01-validation.md).
 All modes retain exit codes 0/1/2 as described above.
 
@@ -281,7 +287,7 @@ Several questions may link to one exact reference version. They may appear
 separately and each must display the full reference. Do not hardcode "For items
 18–20"; future rendering derives any range from actual attempt positions. A
 question must not require another question's answer. References/assets never
-count toward the current 2,160-unique-question seeding plan or earn scores.
+count toward the current 1,890-unique-question seeding plan or earn scores.
 
 ## Checksums and handoff
 

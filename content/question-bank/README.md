@@ -1,7 +1,14 @@
 # CSE seeding families
 
-Agents authoring or reviewing complete Families 02–08 should first read the
+Agents authoring or reviewing complete Families 02–07 should first read the
 [family-generation and quality-review rules](rules.md).
+
+The initial offline delivery is Families 01–07: 270 questions each, 1,890 total.
+Family 08 is excluded. [ADR 0016](../../docs/ADR/0016-seven-family-scope-and-deferred-audit.md)
+records the scope and deferred supplemental audit. Existing per-family checks
+are distinct from exhaustive acceptance, publication and learner-data calibration.
+Known findings and stashed repairs remain follow-up work in
+[#98](https://github.com/devcedrick/quilla/issues/98).
 
 Each seeding family has its own question bank and manifest. Family 01 is in
 **[family-01/](family-01/manifest.json)** with 270 questions. Future families use

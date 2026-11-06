@@ -1,14 +1,25 @@
 # Agent rules for complete seeding families
 
-Read this file before authoring or reviewing Families 02–08. A request to generate
+Read this file before authoring or reviewing Families 02–07. A request to generate
 one family means completing its entire 270-question bank, not waiting for the
 maintainer to supply another subject, image batch, or set of counts. You may work
 in smaller internal passes and separate topic files; deliver a complete family
 with its references, manifest, review evidence, and validation results.
 
 This document guides future work. Creating or reading it does not authorize
-generating all seven families, importing data, publishing, deploying, or committing.
+generating additional families, importing data, publishing, deploying, or committing.
 Follow the actual user request and repository instructions for those actions.
+
+The initial delivery is Families 01–07: seven complete 270-question banks,
+1,890 canonical questions total. Family 08 is excluded under
+[ADR 0016](../../docs/ADR/0016-seven-family-scope-and-deferred-audit.md).
+Per-family authoring checks remain required. The supplemental exhaustive audit
+is deferred to [#98](https://github.com/devcedrick/quilla/issues/98), not a merge
+gate for the initial offline delivery. Preserve its findings and pending repairs;
+never report the audit as complete or AI review as human inspection.
+Distinguish automated verification, AI editorial review, maintainer acceptance
+of exact revisions/checksums, and later learner-data calibration. This decision
+changes no self-review restrictions, publication permissions or backend approvals.
 
 ## 1. Authority and scope
 
