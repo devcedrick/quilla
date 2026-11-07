@@ -17,6 +17,12 @@ cannot review it. The exclusion applies to all review outcomes, not just approva
 Retain the canonical contributor identity across revisions and imported origins;
 an editor or importer must not replace it to bypass the exclusion.
 
+Clarification following #32 implementation: separately retain the material
+version creator/editor as well as the canonical contributor. The independent
+reviewer must differ from both identities; the canonical-identity check alone
+does not establish independence. These exclusions also apply to duplicate
+rechecks and all negative review outcomes.
+
 No initial-maintainer bootstrap self-approval exception is introduced. The
 proposal discussed in #83 and the unresolved option recorded in ADR 0016 do not
 grant that permission. AI review, seed metadata and offline sign-off are evidence,
@@ -25,15 +31,15 @@ the same authorized lifecycle requirements are met.
 
 ## Workflow contract
 
-| Action            | Required state        | Actor and result                                                                                                  |
-| ----------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Submit            | Draft                 | Active contributor submits their version for review; state becomes pending review.                                |
-| Approve           | Pending review        | Different active admin approves the exact version; state becomes approved.                                        |
-| Request revision  | Pending review        | Different active admin records a nonblank reason; state becomes needs revision.                                   |
-| Reject            | Pending review        | Different active admin records a nonblank reason; state becomes rejected.                                         |
-| Revise materially | Existing version      | Authorized author/editor creates a new immutable draft version; previous content and decisions remain historical. |
-| Publish           | Approved              | Active admin passes publication validation; exact approved version becomes published.                             |
-| Archive           | Approved or published | Active admin removes the version from future eligibility without deleting history.                                |
+| Action            | Required state        | Actor and result                                                                                                         |
+| ----------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Submit            | Draft                 | Active authorized contributor or material version editor submits their version for review; state becomes pending review. |
+| Approve           | Pending review        | Different active admin approves the exact version; state becomes approved.                                               |
+| Request revision  | Pending review        | Different active admin records a nonblank reason; state becomes needs revision.                                          |
+| Reject            | Pending review        | Different active admin records a nonblank reason; state becomes rejected.                                                |
+| Revise materially | Existing version      | Authorized author/editor creates a new immutable draft version; previous content and decisions remain historical.        |
+| Publish           | Approved              | Active admin passes publication validation; exact approved version becomes published.                                    |
+| Archive           | Approved or published | Active admin removes the version from future eligibility without deleting history.                                       |
 
 Submission after a revision uses the new draft version. Rejected or archived
 versions do not jump directly to approved/published; corrective content follows a
@@ -42,6 +48,15 @@ admin need not be a second reviewer; the independent approval must already exist
 Changing a stem, choice, key, explanation, classification or adopted reference
 version is material and cannot inherit another version's approval. Existing
 published versions are not silently rewritten when a new draft is created.
+
+If the original contributor has left or is suspended, an active authorized admin
+editor may create a corrected draft and submit that draft as its recorded version
+creator. Preserve the original contributor attribution and record the editor
+separately. This uses the same Submit transition, expected revision, validation
+and audit checks, not an arbitrary-admin submission override. The suspended
+contributor remains unable to submit, and neither that contributor nor the editor
+may independently review the corrected version. Ordinary contributor integration
+remains subject to its own ownership and active-account checks in #37.
 
 ## Concurrency, authorization and evidence
 

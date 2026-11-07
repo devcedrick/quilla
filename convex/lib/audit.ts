@@ -22,6 +22,7 @@ type AuditEvent = {
   after: Snapshot;
 };
 
+/** Create a sanitized validation error without exposing snapshot contents. */
 function invalidAudit() {
   return new ConvexError({
     code: "INVALID_AUDIT_DATA",
@@ -29,10 +30,12 @@ function invalidAudit() {
   });
 }
 
+/** Validate bounded nonblank audit metadata. */
 export function validateAuditIdentifier(value: string, maximum: number) {
   if (!value.trim() || value.length > maximum) throw invalidAudit();
 }
 
+/** Serialize JSON snapshots without lossy values and enforce the UTF-8 limit. */
 function serialize(snapshot: Snapshot): string | null {
   if (snapshot === null) return null;
   try {

@@ -5,6 +5,7 @@ import { referenceContent } from "./lib/questionContent";
 import { createReferenceDraft } from "./lib/questionReferenceDrafts";
 import { questionWorkflowError as fail } from "./lib/questionWorkflow";
 
+/** Append an immutable reference only when its latest-version expectation matches. */
 export const createReferenceVersion = mutation({
   args: {
     referenceId: v.string(),

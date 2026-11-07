@@ -22,7 +22,9 @@ export const v2Concepts = [
   ["clerical_ability", "clerical_operations", "alphabetizing"],
   ["clerical_ability", "clerical_operations", "spelling"],
 ] as const;
+/** Derive a readable fixture label without changing its stable identifier. */
 const label = (key: string) => key.replaceAll("_", " ");
+/** Return the approved subject-level eligibility for the local V2 fixture. */
 const applicability = (subject: string) =>
   subject === "analytical_ability"
     ? [levels[0]]

@@ -60,6 +60,7 @@ const transitions: Record<
   archive: { approved: "archived", published: "archived" },
 };
 
+/** Reject a lifecycle operation using a stable, sanitized domain error code. */
 export function questionWorkflowError(code: string): never {
   throw new ConvexError({
     code,
@@ -84,6 +85,7 @@ export function nextQuestionState(
   return { state: next, workflowRevision: revision + 1 };
 }
 
+/** Exclude the canonical contributor and material editor from reviewing their version. */
 export function assertIndependentReviewer(
   reviewerId: string,
   contributorId: string,

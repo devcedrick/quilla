@@ -12,6 +12,7 @@ import {
 import { questionWorkflowError as fail } from "./lib/questionWorkflow";
 import schema from "./schema";
 
+/** Reserve immutable image metadata or reuse an identical authorized reservation. */
 export const beginAssetUpload = mutation({
   args: {
     assetId: v.string(),
@@ -67,6 +68,7 @@ export const beginAssetUpload = mutation({
     return id;
   },
 });
+/** Authorize protected asset access and enforce upload ownership or verified-read state. */
 export const getForAction = internalQuery({
   args: { assetId: v.id("questionAssets"), upload: v.boolean() },
   returns: schema.doc("questionAssets"),
@@ -84,6 +86,7 @@ export const getForAction = internalQuery({
     return asset;
   },
 });
+/** Bind a server-created blob after rechecking uploader, revision and storage metadata. */
 export const completeUpload = internalMutation({
   args: {
     assetId: v.id("questionAssets"),

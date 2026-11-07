@@ -69,6 +69,7 @@ export const referenceContent = v.object({
   ),
 });
 export type QuestionContent = Infer<typeof questionContent>;
+/** Serialize objects with sorted keys while preserving semantically ordered arrays. */
 export function canonical(value: unknown): string {
   if (value === null || typeof value !== "object") return JSON.stringify(value);
   if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
@@ -81,6 +82,7 @@ export function canonical(value: unknown): string {
     "}"
   );
 }
+/** Hash canonical UTF-8 content into a hexadecimal SHA-256 fingerprint. */
 export async function digest(value: unknown) {
   const data = new TextEncoder().encode(canonical(value));
   const hash = await crypto.subtle.digest("SHA-256", data);
@@ -88,17 +90,21 @@ export async function digest(value: unknown) {
     b.toString(16).padStart(2, "0"),
   ).join("");
 }
+/** Reject blank or executable-markup-like content strings. */
 export function text(value: string) {
   if (!value.trim() || /<\/?[a-z][^>]*>|javascript:/iu.test(value))
     fail("VALIDATION_FAILED");
 }
+/** Reject canonical content larger than the allowed UTF-8 byte count. */
 export function bounded(value: unknown, bytes: number) {
   if (new TextEncoder().encode(canonical(value)).length > bytes)
     fail("VALIDATION_FAILED");
 }
+/** Require a positive safe integer for counts and immutable versions. */
 export function positive(n: number) {
   if (!Number.isSafeInteger(n) || n < 1) fail("VALIDATION_FAILED");
 }
+/** Validate authoring attribution and required licensed-source evidence. */
 export function validateProvenance(p: Infer<typeof provenance>) {
   text(p.author);
   text(p.assistance);
@@ -108,6 +114,7 @@ export function validateProvenance(p: Infer<typeof provenance>) {
   )
     fail("VALIDATION_FAILED");
 }
+/** Validate immutable question content, eligibility and exact reference integrity. */
 export async function validateQuestion(
   ctx: Pick<QueryCtx, "db">,
   content: QuestionContent,

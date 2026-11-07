@@ -20,6 +20,7 @@ const complete = makeFunctionReference<
   },
   null
 >("questionAssets:completeUpload");
+/** Verify bounded image bytes before storage and compensate failed registration. */
 export const uploadAsset = action({
   args: {
     assetId: v.id("questionAssets"),
@@ -69,6 +70,7 @@ export const uploadAsset = action({
     return null;
   },
 });
+/** Return verified asset bytes only after active-admin authorization. */
 export const readAsset = action({
   args: { assetId: v.id("questionAssets") },
   returns: v.bytes(),

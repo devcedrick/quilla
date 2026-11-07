@@ -105,6 +105,50 @@ async function setup() {
   };
 }
 describe("question lifecycle", () => {
+  it("lets an active material editor submit a correction while retaining a suspended original contributor", async () => {
+    const { t, editor, reviewer, versionId, taxonomy } = await setup();
+    const original = (await t.run((ctx) =>
+      ctx.db.get("questionVersions", versionId),
+    ))!;
+    const question = (await t.run((ctx) =>
+      ctx.db.get("questions", original.questionId),
+    ))!;
+    await t.run((ctx) =>
+      ctx.db.patch("users", question.contributorId, { status: "suspended" }),
+    );
+    const corrected = await editor.mutation(api.questions.createRevision, {
+      questionId: question._id,
+      expectedCanonicalRevision: question.revision,
+      content: {
+        ...content,
+        explanation: "Independently recomputed: 2 + 3 = 5.",
+      },
+      taxonomyVersionId: taxonomy,
+    });
+    await editor.mutation(api.questions.submitForReview, {
+      questionVersionId: corrected,
+      expectedWorkflowRevision: 1,
+    });
+    await expect(
+      editor.mutation(api.questions.reviewVersion, {
+        questionVersionId: corrected,
+        expectedWorkflowRevision: 2,
+        ...review,
+      }),
+    ).rejects.toMatchObject({ data: { code: "SELF_REVIEW" } });
+    await reviewer.mutation(api.questions.reviewVersion, {
+      questionVersionId: corrected,
+      expectedWorkflowRevision: 2,
+      ...review,
+    });
+    expect(
+      (await t.run((ctx) => ctx.db.get("questions", question._id)))
+        ?.contributorId,
+    ).toBe(question.contributorId);
+    expect(
+      (await t.run((ctx) => ctx.db.get("questionVersions", corrected)))?.state,
+    ).toBe("approved");
+  });
   it("compensates stored blobs if completion fails and rejects corrupt bytes before storage", async () => {
     const app = defineTestApp({ schema });
     const broken = app.defineModules({

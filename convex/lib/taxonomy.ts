@@ -54,16 +54,19 @@ const foundation = {
   difficulty: ["easy", "medium", "hard"],
   language: ["english", "filipino"],
 };
+/** Reject a taxonomy operation with a stable domain error code. */
 export function taxonomyError(code: string): never {
   throw new ConvexError({
     code,
     message: "Taxonomy operation rejected: " + code,
   });
 }
+/** Validate the bounded stable taxonomy identifier format. */
 export function identifier(key: string) {
   if (!/^[a-z0-9_-]{1,100}$/.test(key)) taxonomyError("INVALID_IDENTIFIER");
 }
 
+/** Validate bounded catalogs, including archived paths and active-parent eligibility. */
 export function validateCatalog(entries: TaxonomyEntry[], complete = false) {
   if (entries.length > 128) taxonomyError("CATALOG_LIMIT");
   const keys = new Set<string>();
@@ -87,11 +90,13 @@ export function validateCatalog(entries: TaxonomyEntry[], complete = false) {
       e.levels.some((l) => !levels.includes(l))
     )
       taxonomyError("INVALID_ELIGIBILITY");
-    if (e.archived) continue;
     for (const level of e.levels)
       if (
         !entries.some(
-          (p) => p.kind === "level" && p.key === level && !p.archived,
+          (p) =>
+            p.kind === "level" &&
+            p.key === level &&
+            (e.archived || !p.archived),
         )
       )
         taxonomyError("MISSING_PARENT");
@@ -109,7 +114,10 @@ export function validateCatalog(entries: TaxonomyEntry[], complete = false) {
         taxonomyError("INVALID_ELIGIBILITY");
     } else {
       const parent = entries.find(
-        (p) => p.kind === "subject" && p.key === e.subjectKey && !p.archived,
+        (p) =>
+          p.kind === "subject" &&
+          p.key === e.subjectKey &&
+          (e.archived || !p.archived),
       );
       if (!parent || !("levels" in parent)) taxonomyError("MISSING_PARENT");
       if (e.levels.some((l) => !parent.levels.includes(l)))
@@ -117,7 +125,9 @@ export function validateCatalog(entries: TaxonomyEntry[], complete = false) {
       if (e.kind === "concept") {
         const sub = entries.find(
           (p) =>
-            p.kind === "subtopic" && p.key === e.subtopicKey && !p.archived,
+            p.kind === "subtopic" &&
+            p.key === e.subtopicKey &&
+            (e.archived || !p.archived),
         );
         if (!sub || sub.kind !== "subtopic" || sub.subjectKey !== e.subjectKey)
           taxonomyError("MISSING_PARENT");
@@ -144,6 +154,7 @@ export function validateCatalog(entries: TaxonomyEntry[], complete = false) {
   }
 }
 
+/** Load one bounded catalog through its version index. */
 export async function loadCatalog(
   ctx: Pick<QueryCtx, "db">,
   id: Id<"taxonomyVersions">,

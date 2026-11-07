@@ -36,6 +36,7 @@ const workflowArgs = {
   questionVersionId: v.id("questionVersions"),
   expectedWorkflowRevision: v.number(),
 };
+/** Authorize an admin and load the exact question version at its expected workflow revision. */
 async function load(
   ctx: MutationCtx,
   args: {
@@ -55,6 +56,7 @@ async function load(
   if (!question) fail("QUESTION_NOT_FOUND");
   return { actor, version, question };
 }
+/** Find bounded duplicate candidates while excluding all versions of this canonical question. */
 async function candidates(
   ctx: Pick<QueryCtx, "db">,
   version: { contentFingerprint: string; questionId: Id<"questions"> },
@@ -98,6 +100,7 @@ async function candidates(
     overflow: rows.length > 50,
   };
 }
+/** Atomically transition workflow state and append its admin audit event. */
 async function change(
   ctx: MutationCtx,
   version: Awaited<ReturnType<typeof load>>["version"],
@@ -121,6 +124,7 @@ async function change(
   });
   return next.workflowRevision;
 }
+/** Create an attributed canonical question and its initial immutable draft. */
 export const createDraft = mutation({
   args: { questionId: v.string(), ...contentArgs },
   returns: v.id("questionVersions"),
@@ -177,6 +181,7 @@ export const createDraft = mutation({
     return versionId;
   },
 });
+/** Append a corrected draft without changing prior content or original attribution. */
 export const createRevision = mutation({
   args: {
     questionId: v.id("questions"),
@@ -228,6 +233,7 @@ export const createRevision = mutation({
     return id;
   },
 });
+/** Submit a validated draft only for its authorized contributor or material editor. */
 export const submitForReview = mutation({
   args: workflowArgs,
   returns: v.number(),
@@ -249,6 +255,7 @@ const disposition = v.union(
   v.literal("adjudicated_distinct"),
   v.literal("unresolved"),
 );
+/** Record an independent version-specific review and its atomic state transition. */
 export const reviewVersion = mutation({
   args: {
     ...workflowArgs,
@@ -325,6 +332,7 @@ export const reviewVersion = mutation({
     return change(ctx, version, args.decision, args.reason);
   },
 });
+/** Publish only after rechecking approval, quality, duplicates and immutable content integrity. */
 export const publishVersion = mutation({
   args: workflowArgs,
   returns: v.number(),
@@ -377,6 +385,7 @@ export const publishVersion = mutation({
     return change(ctx, version, "publish");
   },
 });
+/** Record an independent recheck of the current duplicate candidate fingerprint. */
 export const reviewDuplicateCandidates = mutation({
   args: {
     ...workflowArgs,
@@ -432,12 +441,14 @@ export const reviewDuplicateCandidates = mutation({
     return version.workflowRevision + 1;
   },
 });
+/** Remove an approved or published version from future eligibility without deleting history. */
 export const archiveVersion = mutation({
   args: workflowArgs,
   returns: v.number(),
   handler: async (ctx, args) =>
     change(ctx, (await load(ctx, args)).version, "archive"),
 });
+/** Return full admin review context with bounded review and duplicate histories. */
 export const getAdminVersion = query({
   args: { questionVersionId: v.id("questionVersions") },
   returns: v.union(
@@ -486,6 +497,7 @@ export const getAdminVersion = query({
     };
   },
 });
+/** Return an indexed page of question versions to an active admin. */
 export const listAdminVersions = query({
   args: {
     state: v.optional(questionState),

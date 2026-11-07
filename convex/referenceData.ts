@@ -24,6 +24,7 @@ const expected = {
   taxonomyVersionId: v.id("taxonomyVersions"),
   expectedRevision: v.number(),
 };
+/** Authorize a taxonomy write and check its expected revision and editable state. */
 async function editable(
   ctx: MutationCtx,
   id: Id<"taxonomyVersions">,
@@ -39,10 +40,12 @@ async function editable(
     taxonomyError("IMMUTABLE_TAXONOMY");
   return version;
 }
+/** Reject invalid taxonomy pagination sizes. */
 function page(size: number) {
   if (!Number.isInteger(size) || size < 1 || size > 100)
     taxonomyError("INVALID_PAGE_SIZE");
 }
+/** Project entry fields into a stable, bounded audit snapshot. */
 function entryValue(row: TaxonomyEntry) {
   // Explicit projection prevents database metadata or caller extras entering snapshots.
   return {
@@ -56,6 +59,7 @@ function entryValue(row: TaxonomyEntry) {
   };
 }
 
+/** Create a unique admin-authored draft taxonomy and its audit event. */
 export const createDraft = mutation({
   args: { taxonomyId: v.string() },
   returns: v.id("taxonomyVersions"),
@@ -88,6 +92,7 @@ export const createDraft = mutation({
     return id;
   },
 });
+/** Validate and save a draft entry with atomic revision and audit updates. */
 export const upsertEntry = mutation({
   args: { ...expected, entry: taxonomyEntry },
   returns: v.number(),
@@ -133,6 +138,7 @@ export const upsertEntry = mutation({
     return version.revision + 1;
   },
 });
+/** Archive a draft entry only when no active child depends on it. */
 export const archiveEntry = mutation({
   args: { ...expected, kind: taxonomyKind, key: v.string() },
   returns: v.number(),
@@ -169,6 +175,7 @@ export const archiveEntry = mutation({
     return version.revision + 1;
   },
 });
+/** Seal or archive a version with atomic validation, revision and audit updates. */
 async function transition(
   ctx: MutationCtx,
   args: { taxonomyVersionId: Id<"taxonomyVersions">; expectedRevision: number },
@@ -217,16 +224,19 @@ async function transition(
   });
   return version.revision + 1;
 }
+/** Freeze a complete draft catalog after checking its expected revision. */
 export const sealVersion = mutation({
   args: expected,
   returns: v.number(),
   handler: (ctx, args) => transition(ctx, args, "sealed"),
 });
+/** Retire a catalog while preserving its entries and historical identity. */
 export const archiveVersion = mutation({
   args: expected,
   returns: v.number(),
   handler: (ctx, args) => transition(ctx, args, "archived"),
 });
+/** Return an indexed admin-only page of catalog versions. */
 export const listVersions = query({
   args: {
     state: v.optional(taxonomyState),
@@ -249,6 +259,7 @@ export const listVersions = query({
           .paginate(args.paginationOpts);
   },
 });
+/** Return an indexed admin-only page of entries for one catalog. */
 export const listEntries = query({
   args: {
     taxonomyVersionId: v.id("taxonomyVersions"),
@@ -276,6 +287,7 @@ export const listEntries = query({
           .paginate(args.paginationOpts);
   },
 });
+/** Resolve one exact taxonomy entry for authorized admin inspection. */
 export const getEntry = query({
   args: {
     taxonomyVersionId: v.id("taxonomyVersions"),

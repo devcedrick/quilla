@@ -10,6 +10,7 @@ import { validateAuditIdentifier } from "./lib/audit";
 
 const returns = paginationResultValidator(schema.doc("auditEvents"));
 
+/** Reject audit pages outside the supported integer range. */
 function validatePage(numItems: number) {
   if (!Number.isInteger(numItems) || numItems < 1 || numItems > 100) {
     throw new ConvexError({
@@ -19,6 +20,7 @@ function validatePage(numItems: number) {
   }
 }
 
+/** Return recent audit events to an authenticated active admin. */
 export const listRecent = query({
   args: { paginationOpts: paginationOptsValidator },
   returns,
@@ -33,6 +35,7 @@ export const listRecent = query({
   },
 });
 
+/** Page audit events for one durable actor identity. */
 export const listByActor = query({
   args: { actorId: v.id("users"), paginationOpts: paginationOptsValidator },
   returns,
@@ -49,6 +52,7 @@ export const listByActor = query({
   },
 });
 
+/** Page audit events for one exact entity identity. */
 export const listByEntity = query({
   args: {
     entityType: v.string(),

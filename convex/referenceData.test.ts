@@ -42,6 +42,165 @@ const selection = {
   difficulty: "hard",
 };
 describe("taxonomy", () => {
+  it("audits entry edits, archival and version transitions with exact attribution and snapshots", async () => {
+    const { t, admin, id, revision } = await setup();
+    const actor = (await t.run((ctx) => ctx.db.get("taxonomyVersions", id)))!
+      .createdBy;
+    const leaf = initialV2Catalog.find(
+      (e) => e.kind === "concept" && e.key === "data_sufficiency",
+    )!;
+    const changed = { ...leaf, label: "Reviewed Data Sufficiency" };
+    /** Assert the durable audit event, not merely the resulting domain state. */
+    async function expectEvent(
+      entityType: string,
+      entityId: string,
+      action: string,
+      before: unknown,
+      after: unknown,
+    ) {
+      const event = await t.run((ctx) =>
+        ctx.db
+          .query("auditEvents")
+          .withIndex("by_entityType_and_entityId_and_occurredAt", (q) =>
+            q.eq("entityType", entityType).eq("entityId", entityId),
+          )
+          .order("desc")
+          .first(),
+      );
+      expect(event).toMatchObject({
+        actorId: actor,
+        entityType,
+        entityId,
+        action,
+      });
+      expect(JSON.parse(event!.beforeJson!)).toEqual(before);
+      expect(JSON.parse(event!.afterJson!)).toEqual(after);
+    }
+    const entityId = `${selection.taxonomyId}:concept:data_sufficiency`;
+    let next = await admin.mutation(api.referenceData.upsertEntry, {
+      taxonomyVersionId: id,
+      expectedRevision: revision,
+      entry: changed,
+    });
+    await expectEvent("taxonomy_entry", entityId, "upsert", leaf, changed);
+    next = await admin.mutation(api.referenceData.archiveEntry, {
+      taxonomyVersionId: id,
+      expectedRevision: next,
+      kind: "concept",
+      key: leaf.key,
+    });
+    await expectEvent("taxonomy_entry", entityId, "archive", changed, {
+      ...changed,
+      archived: true,
+    });
+    next = await admin.mutation(api.referenceData.upsertEntry, {
+      taxonomyVersionId: id,
+      expectedRevision: next,
+      entry: changed,
+    });
+    await expectEvent(
+      "taxonomy_entry",
+      entityId,
+      "upsert",
+      { ...changed, archived: true },
+      changed,
+    );
+    const sealed = await admin.mutation(api.referenceData.sealVersion, {
+      taxonomyVersionId: id,
+      expectedRevision: next,
+    });
+    await expectEvent(
+      "taxonomy_version",
+      id,
+      "sealed",
+      { state: "draft", revision: next },
+      { state: "sealed", revision: sealed },
+    );
+    await admin.mutation(api.referenceData.archiveVersion, {
+      taxonomyVersionId: id,
+      expectedRevision: sealed,
+    });
+    await expectEvent(
+      "taxonomy_version",
+      id,
+      "archived",
+      { state: "sealed", revision: sealed },
+      { state: "archived", revision: sealed + 1 },
+    );
+  });
+  it("validates archived upsert paths while retaining archived ancestors", async () => {
+    const { t, admin, id, revision } = await setup();
+    for (const entry of [
+      {
+        kind: "subtopic" as const,
+        key: "dangling",
+        label: "Dangling",
+        archived: true,
+        subjectKey: "absent",
+        levels: ["professional"],
+      },
+      {
+        kind: "concept" as const,
+        key: "dangling",
+        label: "Dangling",
+        archived: true,
+        subjectKey: "absent",
+        subtopicKey: "numerical_reasoning",
+        levels: ["professional"],
+      },
+      {
+        kind: "concept" as const,
+        key: "dangling",
+        label: "Dangling",
+        archived: true,
+        subjectKey: "numerical_ability",
+        subtopicKey: "absent",
+        levels: ["professional"],
+      },
+    ])
+      await expect(
+        admin.mutation(api.referenceData.upsertEntry, {
+          taxonomyVersionId: id,
+          expectedRevision: revision,
+          entry,
+        }),
+      ).rejects.toMatchObject({ data: { code: "MISSING_PARENT" } });
+    expect(
+      (await t.run((ctx) => ctx.db.get("taxonomyVersions", id)))?.revision,
+    ).toBe(revision);
+    const archived = await admin.mutation(api.referenceData.createDraft, {
+      taxonomyId: "archived-paths",
+    });
+    let next = 1;
+    for (const entry of initialV2Catalog)
+      next = await admin.mutation(api.referenceData.upsertEntry, {
+        taxonomyVersionId: archived,
+        expectedRevision: next,
+        entry: { ...entry, archived: true },
+      });
+    await expect(
+      admin.mutation(api.referenceData.upsertEntry, {
+        taxonomyVersionId: archived,
+        expectedRevision: next,
+        entry: {
+          kind: "concept",
+          key: "active_child",
+          label: "Active child",
+          archived: false,
+          subjectKey: "numerical_ability",
+          subtopicKey: "numerical_reasoning",
+          levels: ["professional"],
+        },
+      }),
+    ).rejects.toMatchObject({ data: { code: "MISSING_PARENT" } });
+    expect(
+      await admin.query(api.referenceData.getEntry, {
+        taxonomyVersionId: archived,
+        kind: "concept",
+        key: "data_sufficiency",
+      }),
+    ).toMatchObject({ archived: true });
+  });
   it("matches the approved v2 concept relationships", () => {
     const actual = v2Concepts.map((r) => r.join(":"));
     const expected = Object.entries(seedPolicy.concepts).flatMap(
