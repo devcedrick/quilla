@@ -329,7 +329,7 @@ Under [ADR 0013](ADR/0013-seeding-families-and-pooled-exam-selection.md), a seed
 
 [ADR 0016](ADR/0016-seven-family-scope-and-deferred-audit.md) records the seven-family decision and the maintainer's deferral of the supplemental exhaustive audit. Per-family authoring reviews and structural validation support the initial offline delivery; they do not establish clean exhaustive-audit acceptance. Automated verification, AI editorial review, maintainer batch acceptance against an exact revision/checksum, and empirical calibration are distinct. AI review is not human inspection; difficulty and distractor discrimination remain unmeasured until learner data exists. Known findings remain tracked in [#98](https://github.com/devcedrick/quilla/issues/98).
 
-Offline delivery and acceptance grant no import or publication permissions. Ordinary contributor self-review restrictions and backend authorization remain unchanged. Any initial-maintainer bootstrap exception remains a decision for [#31](https://github.com/devcedrick/quilla/issues/31); no manifest or sign-off file supplies authorization.
+Offline delivery and acceptance grant no import or publication permissions. [ADR 0017](ADR/0017-independent-question-review-policy.md) resolves #31 with one independent active-admin approval per question version and no initial-maintainer self-approval exception. No manifest or sign-off file supplies authorization.
 
 Each mock randomly selects eligible published versions from all seed families combined, subject to the exam blueprint, without a single-family or equal-family quota. Professional retains 20 General, 50 Verbal, 40 Numerical, and 40 Analytical items (150 total); Subprofessional retains 20 General, 50 Verbal, 35 Numerical, and 40 Clerical items (145 total). The new pooled selection contract uses `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`, with `cse-taxonomy-2027-v2`. Historical v1/v2 policies and attempts are preserved. Runtime and validator adoption remain pending.
 
@@ -663,6 +663,27 @@ High-quality exams require a controlled workflow for creating, classifying, revi
 
 As an admin, I want to manage questions and contributions through explicit states and quality checks so only appropriate, explainable content reaches learners.
 
+### Approved review policy
+
+[ADR 0017](ADR/0017-independent-question-review-policy.md) requires exactly one
+approval from an active admin distinct from the question contributor for each
+version. Admin contributors and initial seed authors cannot review their own
+questions. AI editorial review and offline maintainer acceptance do not count as
+this backend approval. Approval is version-specific; a material change creates a
+new draft version and requires a fresh independent review.
+
+Review decisions apply only to the expected pending version and workflow
+revision. The backend must atomically authorize, validate, transition and audit
+the decision; stale or competing decisions fail without partial writes. Revision
+requests and rejections require nonblank reasons. Publishing is a separate
+authorized admin action that requires the exact version's approval and complete
+publication validation. [ADR 0020](ADR/0020-question-lifecycle-and-independent-publication.md)
+records the local #32 implementation: immutable question/reference versions,
+revision-checked admin lifecycle APIs, a five-criterion editorial quality gate,
+duplicate adjudication and protected asset verification. These APIs are not
+deployed; no live content has been imported or published. Admin UI, ordinary
+contribution submission and learner assessment serving remain separate work.
+
 ### Edge cases
 
 - An edit occurs while the question is part of an in-progress attempt.
@@ -702,6 +723,15 @@ The authoritative initial contract is [Initial CSE Taxonomy and Mock-Exam Bluepr
 ### Problem
 
 Exam structure and content taxonomy must be centrally managed and validated so practice remains aligned with each CSE level as coverage evolves.
+
+The local #29 implementation uses bounded, versioned draft catalogs with indexed
+active-admin management APIs and transactional audit logging. Sealed catalogs are
+immutable; new consumers must resolve exact sealed, nonarchived identities and
+validate the subject/subtopic/concept path and level applicability. Archived
+catalogs retain historical resolution. [ADR 0019](ADR/0019-versioned-taxonomy-management.md)
+records the design. Live initialization, deployment, blueprint activation and
+question/import adoption remain separate work; no taxonomy has been installed
+by this local implementation.
 
 ### User story
 
@@ -827,7 +857,6 @@ The following remain intentionally unresolved and require explicit product decis
 
 - whether contributions are visible before approval;
 - final report threshold and auto-exclusion policy;
-- whether a second reviewer is required beyond self-review prevention;
 - retention and resume window for abandoned attempts;
 - whether contributor rankings will ever be introduced;
 - minimum sample size for reliable mastery;

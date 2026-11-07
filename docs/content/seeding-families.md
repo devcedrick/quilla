@@ -44,9 +44,10 @@ and remain unmeasured. Editorial 30/50/20 targets still apply.
 
 Offline acceptance does not approve import, publication or learner serving.
 General contributor self-review restrictions and backend authorization remain
-unchanged. Any proposed initial-maintainer bootstrap exception must be resolved
-explicitly in [#31](https://github.com/devcedrick/quilla/issues/31); a manifest,
-sign-off file or audit report cannot grant publication authority.
+unchanged. [ADR 0017](../ADR/0017-independent-question-review-policy.md) resolves
+#31 with one independent active-admin approval per version and no bootstrap
+self-approval exception. A manifest, sign-off file or audit report cannot grant
+publication authority.
 
 Family 01's content breakdown is an inventory, not a new per-exam concept quota
 or an additional fixed concept allocation for later seed families:
