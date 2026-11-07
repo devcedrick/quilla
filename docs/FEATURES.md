@@ -677,7 +677,12 @@ revision. The backend must atomically authorize, validate, transition and audit
 the decision; stale or competing decisions fail without partial writes. Revision
 requests and rejections require nonblank reasons. Publishing is a separate
 authorized admin action that requires the exact version's approval and complete
-publication validation. These are implementation requirements, not shipped APIs.
+publication validation. [ADR 0020](ADR/0020-question-lifecycle-and-independent-publication.md)
+records the local #32 implementation: immutable question/reference versions,
+revision-checked admin lifecycle APIs, a five-criterion editorial quality gate,
+duplicate adjudication and protected asset verification. These APIs are not
+deployed; no live content has been imported or published. Admin UI, ordinary
+contribution submission and learner assessment serving remain separate work.
 
 ### Edge cases
 

@@ -4,8 +4,75 @@ import { userRole, userStatus } from "./lib/userAccess";
 import { examLevel } from "./lib/preparation";
 import { auditEventFields } from "./lib/audit";
 import { taxonomyEntry, taxonomyState } from "./lib/taxonomy";
+import {
+  questionContent,
+  referenceContent,
+  provenance,
+} from "./lib/questionContent";
+import { questionState, questionReview } from "./lib/questionWorkflow";
 
 export default defineSchema({
+  questions: defineTable({
+    questionId: v.string(),
+    contributorId: v.id("users"),
+    family: v.number(),
+    latestVersion: v.number(),
+    revision: v.number(),
+    createdAt: v.number(),
+  })
+    .index("by_questionId", ["questionId"])
+    .index("by_contributorId", ["contributorId"]),
+  questionVersions: defineTable({
+    questionId: v.id("questions"),
+    version: v.number(),
+    content: questionContent,
+    contentHash: v.string(),
+    contentFingerprint: v.string(),
+    taxonomyVersionId: v.id("taxonomyVersions"),
+    referenceVersionId: v.optional(v.id("questionReferenceVersions")),
+    creatorId: v.id("users"),
+    createdAt: v.number(),
+    state: questionState,
+    workflowRevision: v.number(),
+    approvalDecisionId: v.optional(v.id("questionReviews")),
+  })
+    .index("by_questionId_and_version", ["questionId", "version"])
+    .index("by_state", ["state"])
+    .index("by_contentFingerprint", ["contentFingerprint"])
+    .index("by_contentFingerprint_and_questionId", [
+      "contentFingerprint",
+      "questionId",
+    ]),
+  questionReviews: defineTable(questionReview)
+    .index("by_questionVersionId", ["questionVersionId"])
+    .index("by_reviewerId", ["reviewerId"]),
+  questionReferenceVersions: defineTable({
+    referenceId: v.string(),
+    version: v.number(),
+    content: referenceContent,
+    contentHash: v.string(),
+    creatorId: v.id("users"),
+    createdAt: v.number(),
+  }).index("by_referenceId_and_version", ["referenceId", "version"]),
+  questionAssets: defineTable({
+    assetId: v.string(),
+    sha256: v.string(),
+    mediaType: v.union(v.literal("image/png"), v.literal("image/webp")),
+    width: v.number(),
+    height: v.number(),
+    provenance,
+    uploaderId: v.id("users"),
+    createdAt: v.number(),
+    state: v.union(
+      v.literal("pending"),
+      v.literal("verified"),
+      v.literal("failed"),
+    ),
+    storageId: v.optional(v.id("_storage")),
+    revision: v.number(),
+  })
+    .index("by_assetId", ["assetId"])
+    .index("by_uploaderId_and_state", ["uploaderId", "state"]),
   taxonomyVersions: defineTable({
     taxonomyId: v.string(),
     state: taxonomyState,
