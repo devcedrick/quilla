@@ -1,6 +1,7 @@
 # Protected implementation proposal for #29: versioned taxonomy management
 
-**Status: proposed; schema and authorization changes await maintainer approval.**
+**Status: approved by the maintainer on 7 November 2026; implemented locally,
+not deployed. See [ADR 0019](../ADR/0019-versioned-taxonomy-management.md).**
 
 This is the next prerequisite after the locally implemented #24 audit foundation.
 It covers reference data only, not question storage, blueprint activation or live
@@ -126,11 +127,23 @@ Report the existing Next.js security build failure if it persists; do not upgrad
 dependencies or bypass a security gate as part of this change. E2E is unnecessary
 until a browser journey adopts these APIs. Do not hand-edit generated bindings.
 
-## Approval requested
+## Approved boundary
 
-Approve these two new tables, indexed admin-only management/read APIs, internal
-consumer validators and transactional audit integration for #29. Implementation
-will include an ADR and current documentation updates. This does not authorize
+The maintainer approved these two tables, indexed admin-only management/read
+APIs, internal consumer validators and transactional audit integration for #29.
+This does not authorize
 admin provisioning, changes to authentication, blueprint/question/import schemas,
 deployment, migration, live seeding, publication or commits/pushes. Those later
 protected changes still need their own concrete proposals and approvals.
+
+## Local verification — 7 November 2026
+
+The complete unit suite passed 410 tests. The final focused run passed all seven
+taxonomy tests after adding the explicit v2 sealing-completeness regression.
+Lint, typecheck, Knip, scoped formatting and whitespace checks passed. The build
+compiled, typechecked and generated all pages, then failed with the existing
+Next.js `SecurityFatalError` reporting a vulnerable installed version; dependency
+remediation remains separate. It also warned about a lockfile outside the repo.
+E2E was skipped because no browser journey changed. No deployment, live catalog
+installation or hand-edited generated bindings were involved. Normal supported
+API generation and live schema validation remain deferred until authorized.

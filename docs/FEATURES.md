@@ -719,6 +719,15 @@ The authoritative initial contract is [Initial CSE Taxonomy and Mock-Exam Bluepr
 
 Exam structure and content taxonomy must be centrally managed and validated so practice remains aligned with each CSE level as coverage evolves.
 
+The local #29 implementation uses bounded, versioned draft catalogs with indexed
+active-admin management APIs and transactional audit logging. Sealed catalogs are
+immutable; new consumers must resolve exact sealed, nonarchived identities and
+validate the subject/subtopic/concept path and level applicability. Archived
+catalogs retain historical resolution. [ADR 0019](ADR/0019-versioned-taxonomy-management.md)
+records the design. Live initialization, deployment, blueprint activation and
+question/import adoption remain separate work; no taxonomy has been installed
+by this local implementation.
+
 ### User story
 
 As an admin, I want to manage levels, subjects, subtopics, concepts, and exam blueprints so generated assessments are valid and content gaps are visible.
