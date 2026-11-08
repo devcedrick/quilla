@@ -3,6 +3,7 @@ import { questionWorkflowError as fail } from "./questionWorkflow";
 /** Validate supported container headers; editorial review still inspects the image. */
 export function imageDimensions(bytes: Uint8Array, mediaType: string) {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  /** Read an ASCII container tag from the bounded image buffer. */
   const tag = (offset: number, length: number) =>
     String.fromCharCode(...bytes.slice(offset, offset + length));
   if (

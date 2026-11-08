@@ -16,6 +16,7 @@ const event = {
   after: { version: 2 },
 };
 
+/** Create an isolated active admin for audit authorization and transaction tests. */
 async function fixture() {
   const t = createTest();
   const identity = { issuer: "https://identity.example", subject: "admin" };

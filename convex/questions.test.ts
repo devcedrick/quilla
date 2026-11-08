@@ -51,6 +51,7 @@ const review = {
   duplicateDisposition: "none_found" as const,
   duplicateEvidence: "No matching canonical question",
 };
+/** Create isolated actors, a sealed taxonomy and an attributed draft question. */
 async function setup() {
   const t = createTest();
   const ids = await t.run(async (ctx) => {
@@ -84,6 +85,7 @@ async function setup() {
       });
     return { taxonomy };
   });
+  /** Bind a synthetic identity to this isolated test application. */
   const client = (subject: string) =>
     t.withIdentity({ issuer: "https://test", subject });
   const author = client("author");
@@ -105,6 +107,83 @@ async function setup() {
   };
 }
 describe("question lifecycle", () => {
+  it.each(["reject", "needs_revision"] as const)(
+    "allows %s despite duplicate overflow while still blocking approval",
+    async (decision) => {
+      const { t, author, reviewer, versionId, taxonomy } = await setup();
+      const original = (await t.run((ctx) =>
+        ctx.db.get("questionVersions", versionId),
+      ))!;
+      await t.run(async (ctx) => {
+        for (let i = 0; i < 51; i++) {
+          const other = await ctx.db.insert("questions", {
+            questionId: `overflow-${i}`,
+            contributorId: original.creatorId,
+            family: 1,
+            latestVersion: 1,
+            revision: 1,
+            createdAt: 0,
+          });
+          await ctx.db.insert("questionVersions", {
+            questionId: other,
+            version: 1,
+            content,
+            contentHash: original.contentHash,
+            contentFingerprint: original.contentFingerprint,
+            taxonomyVersionId: taxonomy,
+            creatorId: original.creatorId,
+            createdAt: 0,
+            state: "draft",
+            workflowRevision: 1,
+          });
+        }
+      });
+      await author.mutation(api.questions.submitForReview, {
+        questionVersionId: versionId,
+        expectedWorkflowRevision: 1,
+      });
+      const context = (await reviewer.query(api.questions.getAdminVersion, {
+        questionVersionId: versionId,
+      }))!;
+      expect(context.duplicates.overflow).toBe(true);
+      expect(context.duplicates.ids).toHaveLength(50);
+      await expect(
+        reviewer.mutation(api.questions.reviewVersion, {
+          questionVersionId: versionId,
+          expectedWorkflowRevision: 2,
+          ...review,
+          duplicateDisposition: "adjudicated_distinct",
+        }),
+      ).rejects.toMatchObject({ data: { code: "DUPLICATE_OVERFLOW" } });
+      expect(
+        await reviewer.mutation(api.questions.reviewVersion, {
+          questionVersionId: versionId,
+          expectedWorkflowRevision: 2,
+          ...review,
+          decision,
+          reason: "Duplicate review requires content changes",
+          duplicateDisposition: "unresolved",
+        }),
+      ).toBe(3);
+      const stored = await t.run((ctx) =>
+        ctx.db
+          .query("questionReviews")
+          .withIndex("by_questionVersionId", (q) =>
+            q.eq("questionVersionId", versionId),
+          )
+          .unique(),
+      );
+      expect(stored).toMatchObject({
+        decision,
+        candidateFingerprint: context.duplicates.fingerprint,
+        duplicateDisposition: "unresolved",
+      });
+      expect(
+        (await t.run((ctx) => ctx.db.get("questionVersions", versionId)))
+          ?.state,
+      ).toBe(decision === "reject" ? "rejected" : "needs_revision");
+    },
+  );
   it("lets an active material editor submit a correction while retaining a suspended original contributor", async () => {
     const { t, editor, reviewer, versionId, taxonomy } = await setup();
     const original = (await t.run((ctx) =>

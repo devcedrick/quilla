@@ -10,6 +10,7 @@ const { api, createTest } = defineTestApp({ schema }).defineModules({
   referenceData,
 });
 const opts = { numItems: 100, cursor: null };
+/** Create an isolated admin and complete V2 draft for taxonomy integration tests. */
 async function setup() {
   const t = createTest();
   await t.run((ctx) =>

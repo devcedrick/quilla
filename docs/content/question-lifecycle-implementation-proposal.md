@@ -67,14 +67,13 @@ version creator, so an admin editor cannot approve their own correction.
 
 Provide unregistered draft-creation helpers for #95 that can preserve an explicit
 positive offline version number, including a first imported version greater than
-
-1. They still derive the authenticated acting account and create drafts only.
-   An offline author label such as `Quilla` is provenance, not an authenticated user
-   identity. A new imported canonical record is attributed to its authenticated
-   importing admin; existing contributors cannot be replaced. A future import must
-   resolve any genuine preexisting author mapping explicitly, not trust a JSON ID.
-   Matching ID/version/hash is an idempotent no-op; changed content with the same
-   identity is a conflict. Batch orchestration and manifest acceptance remain #95.
+one. They still derive the authenticated acting account and create drafts only.
+An offline author label such as `Quilla` is provenance, not an authenticated user
+identity. A new imported canonical record is attributed to its authenticated
+importing admin; existing contributors cannot be replaced. A future import must
+resolve any genuine preexisting author mapping explicitly, not trust a JSON ID.
+Matching ID/version/hash is an idempotent no-op; changed content with the same
+identity is a conflict. Batch orchestration and manifest acceptance remain #95.
 
 ## Lifecycle APIs and conflict handling
 

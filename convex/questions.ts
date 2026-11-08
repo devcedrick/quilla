@@ -293,7 +293,11 @@ export const reviewVersion = mutation({
     )
       fail("VALIDATION_FAILED");
     text(args.duplicateEvidence);
-    const duplicate = await candidates(ctx, version);
+    const duplicate = await candidates(
+      ctx,
+      version,
+      args.decision !== "approve",
+    );
     if (args.decision === "approve") {
       await validateQuestion(
         ctx,

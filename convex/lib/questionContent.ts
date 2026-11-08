@@ -208,6 +208,7 @@ export async function validateQuestion(
           fail("UNVERIFIED_ASSET");
       }
   }
+  /** Normalize text for duplicate detection without changing stored authoring content. */
   const normalize = (s: string) =>
     s.normalize("NFKC").trim().toLowerCase().replace(/\s+/g, " ");
   return {
