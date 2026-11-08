@@ -36,7 +36,11 @@ const levels = (module) =>
     ? ["professional", "subprofessional"]
     : [module === "clerical" ? "subprofessional" : "professional"];
 
-export async function validateQuestionBank(manifestPath, mode = "draft") {
+export async function validateQuestionBank(
+  manifestPath,
+  mode = "draft",
+  snapshot = false,
+) {
   if (!["draft", "release", "seed"].includes(mode))
     throw new Error("Mode must be draft, release or seed");
   const seed = mode === "seed";
@@ -153,6 +157,7 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
     [manifest.taxonomyId, manifest.blueprintIds],
   );
   const records = { questions: [], references: [], assets: [] };
+  const assetBytes = new Map();
   const seenFiles = new Set();
   const fileKinds = [
     ["questionFiles", "questions"],
@@ -383,6 +388,7 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
     );
     safePath(a.path);
     const bytes = await safeFile(prefix ? `${prefix}/${a.path}` : a.path);
+    if (snapshot) assetBytes.set(a.assetId, bytes);
     let dimensions;
     if (
       bytes.length >= 33 &&
@@ -807,6 +813,9 @@ export async function validateQuestionBank(manifestPath, mode = "draft") {
     mode,
     checksum,
     issues,
+    ...(snapshot && !issues.some((i) => i.severity === "error")
+      ? { snapshot: { manifest, records, assetBytes } }
+      : {}),
     summary: {
       questions: records.questions.length,
       references: records.references.length,
