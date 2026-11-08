@@ -2,7 +2,7 @@ import { v } from "convex/values";
 import { makeFunctionReference } from "convex/server";
 import { action } from "./_generated/server";
 import type { Doc, Id } from "./_generated/dataModel";
-import { imageDimensions } from "./lib/questionImage";
+import { storeVerifiedAsset } from "./lib/questionAssetUpload";
 import { questionWorkflowError as fail } from "./lib/questionWorkflow";
 
 // Explicit references avoid manual edits to generated bindings before authorized codegen.
@@ -33,41 +33,18 @@ export const uploadAsset = action({
       assetId: args.assetId,
       upload: true,
     });
-    if (
-      !Number.isSafeInteger(args.expectedRevision) ||
-      args.expectedRevision !== asset.revision
-    )
-      fail("STALE_REVISION");
-    if (!args.bytes.byteLength || args.bytes.byteLength > 1048576)
-      fail("VALIDATION_FAILED");
-    const dimensions = imageDimensions(
-      new Uint8Array(args.bytes),
-      asset.mediaType,
+    return storeVerifiedAsset(
+      ctx,
+      asset,
+      args.bytes,
+      args.expectedRevision,
+      (storageId) =>
+        ctx.runMutation(complete, {
+          assetId: asset._id,
+          expectedRevision: args.expectedRevision,
+          storageId,
+        }),
     );
-    const hash = Array.from(
-      new Uint8Array(await crypto.subtle.digest("SHA-256", args.bytes)),
-      (b) => b.toString(16).padStart(2, "0"),
-    ).join("");
-    if (
-      hash !== asset.sha256 ||
-      dimensions.width !== asset.width ||
-      dimensions.height !== asset.height
-    )
-      fail("VALIDATION_FAILED");
-    const storageId = await ctx.storage.store(
-      new Blob([args.bytes], { type: asset.mediaType }),
-    );
-    try {
-      await ctx.runMutation(complete, {
-        assetId: asset._id,
-        expectedRevision: args.expectedRevision,
-        storageId,
-      });
-    } catch (error) {
-      await ctx.storage.delete(storageId);
-      throw error;
-    }
-    return null;
   },
 });
 /** Return verified asset bytes only after active-admin authorization. */
