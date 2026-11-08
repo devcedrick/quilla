@@ -8,6 +8,7 @@ import {
   compareImport,
   applyImport,
   readImportStatus,
+  importFingerprint,
 } from "./import-question-bank.mjs";
 import {
   approvedImportTargets,
@@ -104,6 +105,43 @@ describe("offline import planning", () => {
       network.mockRestore();
     }
   }, 20000);
+
+  it("normalizes reference blocks before duplicate fingerprinting", async () => {
+    const question = {
+      stem: "Shared stem",
+      choices: [{ text: "A" }, { text: "B" }],
+    };
+    const normalized = await importFingerprint(question, {
+      blocks: [
+        { type: "text", text: "  Shared   reference " },
+        {
+          type: "table",
+          caption: " Table ",
+          headers: [" A ", "B"],
+          rows: [[" C ", "D"]],
+        },
+      ],
+    });
+    expect(normalized).toMatch(/^[a-f0-9]{64}$/);
+    expect(
+      await importFingerprint(question, {
+        blocks: [
+          { type: "text", text: "shared reference" },
+          {
+            type: "table",
+            caption: "table",
+            headers: ["a", "b"],
+            rows: [["c", "d"]],
+          },
+        ],
+      }),
+    ).toBe(normalized);
+    expect(
+      await importFingerprint(question, {
+        blocks: [{ type: "text", text: "Different reference" }],
+      }),
+    ).not.toBe(normalized);
+  });
 
   it("bounds batches by count and size and rejects oversized single records", () => {
     expect(

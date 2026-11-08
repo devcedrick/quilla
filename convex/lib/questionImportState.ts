@@ -11,6 +11,8 @@ import {
 } from "./questionImportProtocol";
 import { questionWorkflowError as fail } from "./questionWorkflow";
 import { digest, canonical, validateQuestion } from "./questionContent";
+import { validateAssetMetadata } from "./questionAssetMetadata";
+import { validateReferenceInput } from "./questionReferenceDrafts";
 
 /** Load a run only for its original active admin and exact target. */
 export async function ownedRun(
@@ -28,15 +30,43 @@ export async function ownedRun(
 export async function leasedRun(
   ctx: MutationCtx,
   args: { runId: Id<"questionImportRuns">; target: string; generation: number },
+  options: { allowComplete?: boolean } = {},
 ) {
   const run = await ownedRun(ctx, args);
-  if (
-    run.state === "complete" ||
-    run.generation !== args.generation ||
-    run.leaseUntil <= Date.now()
-  )
+  if (run.generation !== args.generation) fail("IMPORT_LEASE_LOST");
+  if (run.state === "complete") {
+    if (options.allowComplete) return run;
     fail("IMPORT_LEASE_LOST");
+  }
+  if (run.leaseUntil <= Date.now()) fail("IMPORT_LEASE_LOST");
+  // A different run may have acquired the deployment-wide target lease while
+  // this worker's transaction was in flight; the active index is the shared fence.
+  const active = await ctx.db
+    .query("questionImportRuns")
+    .withIndex("by_targetUrl_and_leaseUntil", (q) =>
+      q.eq("targetUrl", run.targetUrl).gt("leaseUntil", Date.now()),
+    )
+    .take(2);
+  if (active.some((other) => other._id !== run._id)) fail("IMPORT_LEASE_LOST");
   return run;
+}
+/** Project a persisted receipt onto the descriptor fields used for identity checks. */
+export function receiptDescriptor(entry: {
+  ordinal: number;
+  kind: "asset" | "reference" | "question";
+  sourceId: string;
+  version: number;
+  family: number;
+  sourceChecksum: string;
+}): Descriptor {
+  return {
+    ordinal: entry.ordinal,
+    kind: entry.kind,
+    sourceId: entry.sourceId,
+    version: entry.version,
+    family: entry.family,
+    sourceChecksum: entry.sourceChecksum,
+  };
 }
 /** Read an exact ordinal through the checkpoint index. */
 export async function entryAt(
@@ -135,6 +165,7 @@ export async function inspectSource(
   pin: Infer<typeof manifestPin>,
 ) {
   if (source.kind === "asset") {
+    validateAssetMetadata(source.value);
     const { path: _path, ...metadata } = source.value;
     void _path;
     const existing = await ctx.db
@@ -162,6 +193,8 @@ export async function inspectSource(
     };
   }
   if (source.kind === "reference") {
+    const { referenceId, version, ...content } = source.value;
+    validateReferenceInput({ referenceId, version, content });
     const resolved = await resolveReference(ctx, source.value);
     const existing = await ctx.db
       .query("questionReferenceVersions")

@@ -26,6 +26,7 @@ import {
   leasedRun,
   entryAt,
   matchSource,
+  receiptDescriptor,
   resolveQuestion,
   resolveReference,
   inspectSource,
@@ -183,13 +184,6 @@ export const begin = mutation({
       })) !== args.planChecksum
     )
       fail("INVALID_IMPORT_PLAN");
-    const active = await ctx.db
-      .query("questionImportRuns")
-      .withIndex("by_targetUrl_and_leaseUntil", (q) =>
-        q.eq("targetUrl", targetUrl).gt("leaseUntil", Date.now()),
-      )
-      .first();
-    if (active) fail("IMPORT_BUSY");
     const same = args.resumeRunId
       ? await ownedRun(ctx, { runId: args.resumeRunId, target: args.target })
       : await ctx.db
@@ -201,8 +195,18 @@ export const begin = mutation({
     if (same) {
       if (same.ownerId !== actor._id || same.planChecksum !== args.planChecksum)
         fail("IMPORT_RUN_FORBIDDEN");
+      // A completed plan is an idempotent acknowledgement, not a competing write.
       if (same.state === "complete")
         return { runId: same._id, generation: same.generation };
+    }
+    const active = await ctx.db
+      .query("questionImportRuns")
+      .withIndex("by_targetUrl_and_leaseUntil", (q) =>
+        q.eq("targetUrl", targetUrl).gt("leaseUntil", Date.now()),
+      )
+      .first();
+    if (active) fail("IMPORT_BUSY");
+    if (same) {
       await ctx.db.patch("questionImportRuns", same._id, {
         generation: same.generation + 1,
         leaseUntil: Date.now() + leaseMs,
@@ -275,6 +279,19 @@ export const stage = mutation({
   handler: async (ctx, args) => {
     const run = await leasedRun(ctx, args);
     batch(args.entries);
+    if (run.state === "running") {
+      // A lost response after the final staging batch is an idempotent replay;
+      // new or changed descriptors still fail closed.
+      for (const d of args.entries) {
+        const prior = await entryAt(ctx, run._id, d.ordinal);
+        if (
+          !prior ||
+          (await digest(receiptDescriptor(prior))) !== (await digest(d))
+        )
+          fail("IMPORT_NOT_PREPARING");
+      }
+      return null;
+    }
     if (run.state !== "preparing") fail("IMPORT_NOT_PREPARING");
     let chain = run.chain;
     let staged = run.staged;
@@ -285,15 +302,7 @@ export const stage = mutation({
         fail("INVALID_IMPORT_ENTRY");
       const prior = await entryAt(ctx, run._id, d.ordinal);
       if (prior) {
-        const saved = {
-          ordinal: prior.ordinal,
-          kind: prior.kind,
-          sourceId: prior.sourceId,
-          version: prior.version,
-          family: prior.family,
-          sourceChecksum: prior.sourceChecksum,
-        };
-        if ((await digest(saved)) !== (await digest(d)))
+        if ((await digest(receiptDescriptor(prior))) !== (await digest(d)))
           fail("IMPORT_SOURCE_CHANGED");
         continue;
       }
@@ -359,8 +368,24 @@ export const applyBatch = mutation({
   args: { ...runAccess, records: v.array(checkedSource) },
   returns: v.null(),
   handler: async (ctx, args) => {
-    const run = await leasedRun(ctx, args);
+    const run = await leasedRun(ctx, args, { allowComplete: true });
     batch(args.records);
+    if (run.state === "complete") {
+      // A retry of a committed batch whose response was lost only acknowledges
+      // matching receipts; it never writes or appends audit events.
+      for (const record of args.records) {
+        const entry = await entryAt(ctx, run._id, record.descriptor.ordinal);
+        if (
+          !entry ||
+          entry.state !== "done" ||
+          (await digest(receiptDescriptor(entry))) !==
+            (await digest(record.descriptor))
+        )
+          fail("IMPORT_LEASE_LOST");
+        await matchSource(record.source, record.descriptor);
+      }
+      return null;
+    }
     if (run.state !== "running") fail("IMPORT_NOT_RUNNING");
     let processed = run.processed;
     for (const record of args.records) {
@@ -368,14 +393,7 @@ export const applyBatch = mutation({
       if (
         !entry ||
         (await digest(record.descriptor)) !==
-          (await digest({
-            ordinal: entry.ordinal,
-            kind: entry.kind,
-            sourceId: entry.sourceId,
-            version: entry.version,
-            family: entry.family,
-            sourceChecksum: entry.sourceChecksum,
-          }))
+          (await digest(receiptDescriptor(entry)))
       )
         fail("IMPORT_SOURCE_CHANGED");
       await matchSource(record.source, record.descriptor);
@@ -522,11 +540,14 @@ export const uploadContext = internalQuery({
       fail("IMPORT_ORDER");
     const entry = await entryAt(ctx, run._id, args.ordinal);
     if (!entry || entry.kind !== "asset") fail("INVALID_IMPORT_ENTRY");
-    const asset = await ctx.db
-      .query("questionAssets")
-      .withIndex("by_assetId", (q) => q.eq("assetId", entry.sourceId))
-      .unique();
-    if (!asset || asset.uploaderId !== run.ownerId || asset.state !== "pending")
+    if (!entry.resultId) fail("IMPORT_ORDER");
+    const asset = await ctx.db.get(
+      "questionAssets",
+      entry.resultId as Id<"questionAssets">,
+    );
+    if (!asset || asset.assetId !== entry.sourceId)
+      fail("INVALID_IMPORT_ENTRY");
+    if (asset.uploaderId !== run.ownerId || asset.state !== "pending")
       fail("FORBIDDEN");
     return { asset, leaseUntil: run.leaseUntil };
   },
@@ -546,11 +567,13 @@ export const completeAsset = internalMutation({
       fail("IMPORT_ORDER");
     const entry = await entryAt(ctx, run._id, args.ordinal);
     if (!entry || entry.kind !== "asset") fail("INVALID_IMPORT_ENTRY");
-    const asset = await ctx.db
-      .query("questionAssets")
-      .withIndex("by_assetId", (q) => q.eq("assetId", entry.sourceId))
-      .unique();
-    if (!asset) fail("ASSET_NOT_FOUND");
+    if (!entry.resultId) fail("IMPORT_ORDER");
+    const asset = await ctx.db.get(
+      "questionAssets",
+      entry.resultId as Id<"questionAssets">,
+    );
+    if (!asset || asset.assetId !== entry.sourceId)
+      fail("INVALID_IMPORT_ENTRY");
     await ctx.runMutation(assetComplete, {
       assetId: asset._id,
       expectedRevision: args.expectedRevision,

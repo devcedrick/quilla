@@ -53,8 +53,9 @@ sealed taxonomy or matching content: target comparison is reported as not checke
    not paste a real token into a command committed to source or shared in chat.
    The standalone script deliberately does not load `.env.local`.
 
-For PowerShell 7, a hidden prompt can avoid entering the token directly in command
-history. Clear it afterward:
+For PowerShell 7.1 or later, where `Read-Host` supports `-MaskInput`, a hidden
+prompt can avoid entering the token directly in command history. Clear it
+afterward:
 
 ```powershell
 $env:QUESTION_BANK_IMPORT_TOKEN = Read-Host 'Short-lived Clerk token' -MaskInput
@@ -111,6 +112,12 @@ if necessary. Resume preserves the original owner and requires unchanged source
 content and the identical plan. A handled failure attempts to release its lease;
 a killed process or expired token may require waiting for the five-minute lease
 to expire. Do not override a live lease: another worker may still be running.
+
+If `begin` commits but its response is lost, the report and checkpoint may not
+contain the run ID. After the five-minute lease expires, the original owner can
+retry the identical `--apply` command without `--resume-run`; the server resolves
+the same target and plan to the existing run. Do not switch accounts or alter the
+plan to work around a lost response.
 
 Resume reads the server checkpoint rather than trusting local progress. A lost
 response after a committed batch or verified upload does not cause duplicate

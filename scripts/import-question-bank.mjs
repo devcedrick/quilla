@@ -16,6 +16,29 @@ import {
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 
+/** Normalize duplicate-detection text exactly as the seed validator does. */
+function normalizeImportText(value) {
+  return value.normalize("NFKC").replace(/\s+/gu, " ").trim().toLowerCase();
+}
+
+/** Normalize every reference-block string without changing block order. */
+function normalizeImportReference(blocks) {
+  return JSON.parse(
+    JSON.stringify(blocks, (_, value) =>
+      typeof value === "string" ? normalizeImportText(value) : value,
+    ),
+  );
+}
+
+/** Compute the offline duplicate fingerprint for a question and its exact reference. */
+export async function importFingerprint(question, reference) {
+  return importDigest({
+    stem: normalizeImportText(question.stem),
+    choices: question.choices.map((c) => normalizeImportText(c.text)).sort(),
+    reference: reference ? normalizeImportReference(reference.blocks) : null,
+  });
+}
+
 /** Load the exact validated snapshot, keeping private payloads out of reports. */
 export async function prepareImport(
   manifestPaths = Array.from({ length: 7 }, (_, i) =>
@@ -102,8 +125,6 @@ export async function prepareImport(
       throw new Error("IMPORT_CROSS_FAMILY_ID_CONFLICT");
     seen.add(canonicalIdentity);
     if (item.source.kind === "question") {
-      const normalize = (s) =>
-        s.normalize("NFKC").trim().toLowerCase().replace(/\s+/g, " ");
       const q = item.source.value;
       const ref = q.reference
         ? items.find(
@@ -113,11 +134,7 @@ export async function prepareImport(
               r.descriptor.version === q.reference.referenceVersion,
           )?.source.value
         : null;
-      const fingerprint = await importDigest({
-        stem: normalize(q.stem),
-        choices: q.choices.map((c) => normalize(c.text)).sort(),
-        reference: ref?.blocks ?? null,
-      });
+      const fingerprint = await importFingerprint(q, ref);
       if (fingerprints.has(fingerprint))
         duplicates.push({
           sourceId: item.descriptor.sourceId,

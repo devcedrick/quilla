@@ -260,6 +260,17 @@ describe("guarded question import", () => {
       ...access,
       entries: [p.entries[1]],
     });
+    // The final staging batch may be retried after its response was lost.
+    await admin.mutation(api.questionImports.stage, {
+      ...access,
+      entries: [p.entries[1]],
+    });
+    await expect(
+      admin.mutation(api.questionImports.stage, {
+        ...access,
+        entries: [{ ...p.entries[1], sourceChecksum: "b".repeat(64) }],
+      }),
+    ).rejects.toThrow("IMPORT_NOT_PREPARING");
     await admin.mutation(api.questionImports.applyBatch, {
       ...access,
       records: [p.records[0]],
@@ -322,6 +333,61 @@ describe("guarded question import", () => {
         planChecksum,
       }),
     ).rejects.toThrow("IMPORT_BUSY");
+  });
+
+  it("acknowledges a completed plan while another plan holds the target lease", async () => {
+    const { admin } = await setup(),
+      p = await plan(),
+      access = await start(admin, p);
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: p.records,
+    });
+    const second: SourceRecord = {
+      kind: "question",
+      value: {
+        ...question.value,
+        questionId: "fixture-second",
+        stem: "How much is three plus two?",
+      },
+    };
+    const other = await plan([second]);
+    await start(admin, other);
+    expect(
+      await admin.mutation(api.questionImports.begin, {
+        target: "fixture",
+        manifests: p.manifests,
+        inventoryHash: p.inventoryHash,
+        planChecksum: p.planChecksum,
+      }),
+    ).toEqual({ runId: access.runId, generation: access.generation });
+    await expect(
+      admin.mutation(api.questionImports.begin, {
+        target: "fixture",
+        manifests: other.manifests,
+        inventoryHash: other.inventoryHash,
+        planChecksum: other.planChecksum,
+      }),
+    ).rejects.toThrow("IMPORT_BUSY");
+  });
+
+  it("allows exactly one of two admins racing begin on the same plan", async () => {
+    const { t, admin } = await setup(),
+      p = await plan();
+    const other = t.withIdentity({ issuer: "https://test", subject: "other" });
+    const { manifests, inventoryHash, planChecksum } = p;
+    const results = await Promise.allSettled(
+      [admin, other].map((client) =>
+        client.mutation(api.questionImports.begin, {
+          target: "fixture",
+          manifests,
+          inventoryHash,
+          planChecksum,
+        }),
+      ),
+    );
+    expect(results.filter((r) => r.status === "fulfilled")).toHaveLength(1);
+    expect(results.filter((r) => r.status === "rejected")).toHaveLength(1);
   });
 
   it("preserves attribution and existing publication when explicit later versions are imported", async () => {
@@ -450,17 +516,7 @@ describe("guarded question import", () => {
         createdAt: 0,
         updatedAt: 0,
       });
-      await ctx.db.insert("questionImportEntries", {
-        runId,
-        ordinal: 0,
-        kind: "asset",
-        sourceId: "chart",
-        version: 0,
-        family: 1,
-        sourceChecksum: "c".repeat(64),
-        state: "pending",
-      });
-      await ctx.db.insert("questionAssets", {
+      const assetId = await ctx.db.insert("questionAssets", {
         assetId: "chart",
         sha256: hash,
         mediaType: "image/png",
@@ -471,6 +527,17 @@ describe("guarded question import", () => {
         createdAt: 0,
         state: "pending",
         revision: 1,
+      });
+      await ctx.db.insert("questionImportEntries", {
+        runId,
+        ordinal: 0,
+        kind: "asset",
+        sourceId: "chart",
+        version: 0,
+        family: 1,
+        sourceChecksum: "c".repeat(64),
+        state: "pending",
+        resultId: assetId,
       });
     });
     const admin = t.withIdentity({ issuer: "https://test", subject: "admin" });
@@ -493,6 +560,72 @@ describe("guarded question import", () => {
       );
     });
   });
+
+  it("rejects a late asset binding after another plan acquires the target", async () => {
+    const { t, admin } = await setup();
+    const hash = Array.from(
+      new Uint8Array(await crypto.subtle.digest("SHA-256", png)),
+      (b) => b.toString(16).padStart(2, "0"),
+    ).join("");
+    const asset: SourceRecord = {
+      kind: "asset",
+      value: {
+        assetId: "fixture-chart",
+        path: "references/assets/chart.png",
+        sha256: hash,
+        mediaType: "image/png",
+        width: 1,
+        height: 1,
+        provenance,
+      },
+    };
+    const p = await plan([asset]),
+      access = await start(admin, p);
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: p.records,
+    });
+    await t.run(async (ctx) => {
+      const owner = await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|admin"),
+        )
+        .unique();
+      await ctx.db.insert("questionImportRuns", {
+        target: "fixture",
+        targetUrl: "https://fixture.convex.cloud",
+        ownerId: owner!._id,
+        planChecksum: "d".repeat(64),
+        inventoryHash: "e".repeat(64),
+        chain: "e".repeat(64),
+        manifests: [],
+        stagedCounts: [],
+        expected: 1,
+        staged: 1,
+        processed: 0,
+        state: "running",
+        generation: 1,
+        leaseUntil: Date.now() + 300000,
+        createdAt: 0,
+        updatedAt: 0,
+      });
+    });
+    await expect(
+      admin.action(api.questionImportActions.uploadAsset, {
+        ...access,
+        ordinal: 0,
+        bytes: png,
+      }),
+    ).rejects.toThrow("IMPORT_LEASE_LOST");
+    await t.run(async (ctx) => {
+      expect(await ctx.db.system.query("_storage").take(10)).toHaveLength(0);
+      expect((await ctx.db.query("questionAssets").collect())[0].state).toBe(
+        "pending",
+      );
+    });
+  });
+
   it("preflights without writes, preserves exact versions and retries completed plans without audit duplicates", async () => {
     const { t, admin } = await setup(),
       p = await plan();
@@ -539,6 +672,26 @@ describe("guarded question import", () => {
         planChecksum,
       }),
     ).toEqual({ runId: access.runId, generation: access.generation });
+    // Retrying the committed final batch after a lost response only acknowledges
+    // the matching receipts; changed descriptors never write to a closed run.
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: p.records,
+    });
+    await expect(
+      admin.mutation(api.questionImports.applyBatch, {
+        ...access,
+        records: [
+          {
+            ...p.records[0],
+            descriptor: {
+              ...p.records[0].descriptor,
+              sourceChecksum: "b".repeat(64),
+            },
+          },
+        ],
+      }),
+    ).rejects.toThrow("IMPORT_LEASE_LOST");
     await t.run(async (ctx) => {
       expect(await ctx.db.query("auditEvents").collect()).toHaveLength(before);
     });
@@ -657,6 +810,15 @@ describe("guarded question import", () => {
         manifests,
         inventoryHash,
         planChecksum,
+      }),
+    ).rejects.toThrow("IMPORT_BUSY");
+    await expect(
+      admin.mutation(api.questionImports.begin, {
+        target: "fixture",
+        manifests,
+        inventoryHash,
+        planChecksum,
+        resumeRunId: access.runId,
       }),
     ).rejects.toThrow("IMPORT_BUSY");
     const other = t.withIdentity({ issuer: "https://test", subject: "other" });
@@ -956,5 +1118,76 @@ describe("guarded question import", () => {
         ],
       } as never),
     ).rejects.toThrow();
+  });
+
+  it("reports invalid asset and reference metadata as invalid during preflight", async () => {
+    const { t, admin } = await setup();
+    const asset: SourceRecord = {
+      kind: "asset",
+      value: {
+        assetId: "fixture-chart",
+        path: "references/assets/chart.png",
+        sha256: "a".repeat(64),
+        mediaType: "image/png",
+        width: 0,
+        height: 1,
+        provenance,
+      },
+    };
+    const invalidReference: Extract<SourceRecord, { kind: "reference" }> = {
+      kind: "reference",
+      value: { ...reference.value, title: "   " },
+    };
+    const p = await plan([asset, invalidReference]);
+    expect(
+      await admin.query(api.questionImports.preflight, {
+        target: "fixture",
+        manifest: p.manifests[0],
+        records: p.records,
+      }),
+    ).toEqual([
+      {
+        ordinal: 0,
+        status: "invalid",
+        duplicateCandidates: 0,
+        code: "VALIDATION_FAILED",
+      },
+      {
+        ordinal: 1,
+        status: "invalid",
+        duplicateCandidates: 0,
+        code: "VALIDATION_FAILED",
+      },
+    ]);
+    await t.run(async (ctx) => {
+      expect(await ctx.db.query("questionImportRuns").collect()).toHaveLength(
+        0,
+      );
+    });
+  });
+
+  it("refuses an image upload before applyBatch records the staged reservation", async () => {
+    const { admin } = await setup();
+    const asset: SourceRecord = {
+      kind: "asset",
+      value: {
+        assetId: "fixture-chart",
+        path: "references/assets/chart.png",
+        sha256: "a".repeat(64),
+        mediaType: "image/png",
+        width: 1,
+        height: 1,
+        provenance,
+      },
+    };
+    const p = await plan([asset]),
+      access = await start(admin, p);
+    await expect(
+      admin.action(api.questionImportActions.uploadAsset, {
+        ...access,
+        ordinal: 0,
+        bytes: png,
+      }),
+    ).rejects.toThrow("IMPORT_ORDER");
   });
 });

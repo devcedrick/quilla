@@ -31,8 +31,8 @@ These identify the offline snapshot, not deployment-specific database IDs.
 ## Checks
 
 - `npm run lint`, `npm run typecheck` and `npm run knip`: passed.
-- Complete unit suite: **468 tests in 40 files passed**, using
-  `node node_modules/vitest/vitest.mjs run --maxWorkers=4` for the final run.
+- Complete unit suite: **474 tests in 40 files passed**, using
+  `npm run test:unit` for the final run.
 - `npm run build`: passed on Next.js 16.4.5. The existing warning about an external
   `C:\Users\HP\package-lock.json` remained; that unrelated file was not modified.
 - Changed-file formatting and `git diff --check`: passed.
@@ -49,8 +49,10 @@ lease fencing/expiry, partial stage/apply recovery, atomic batch/audit rollback,
 exact-version conflicts, missing dependencies, forged approval fields, unknown
 taxonomy, invalid eligibility, protected uploads, corrupt bytes and compensation,
 lost upload responses, preserved contributor/publication state and completed-plan
-idempotency. CLI tests also verify bounded four-request read concurrency and
-bounded status traversal.
+idempotency. Additional coverage verifies preflight parity for asset/reference
+metadata, completed-batch and final-stage replays, staged upload reservations,
+shared target fencing and normalized reference blocks. CLI tests also verify
+bounded four-request read concurrency and bounded status traversal.
 
 ## Deferred or unavailable verification
 

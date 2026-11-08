@@ -12,17 +12,25 @@ import {
 } from "./questionContent";
 import { questionWorkflowError as fail } from "./questionWorkflow";
 
-/** Immutable reference creation for both interactive authoring and trusted imports. */
-export async function createReferenceDraft(
-  ctx: MutationCtx,
-  input: {
-    referenceId: string;
-    version: number;
-    content: Infer<typeof referenceContent>;
-  },
-  idempotent = true,
-) {
-  const actor = await requireAdmin(ctx);
+type ReferenceContentInput = Omit<Infer<typeof referenceContent>, "blocks"> & {
+  blocks: Array<
+    | { type: "text"; text: string }
+    | { type: "table"; caption: string; headers: string[]; rows: string[][] }
+    | {
+        type: "image";
+        assetId: string;
+        caption: string;
+        alt: string;
+        description: string;
+      }
+  >;
+};
+/** Validate immutable reference metadata without requiring database access. */
+export function validateReferenceInput(input: {
+  referenceId: string;
+  version: number;
+  content: ReferenceContentInput;
+}) {
   text(input.referenceId);
   text(input.content.title);
   positive(input.version);
@@ -46,6 +54,23 @@ export async function createReferenceDraft(
       text(block.caption);
       text(block.alt);
       text(block.description);
+    }
+  }
+}
+/** Immutable reference creation for both interactive authoring and trusted imports. */
+export async function createReferenceDraft(
+  ctx: MutationCtx,
+  input: {
+    referenceId: string;
+    version: number;
+    content: Infer<typeof referenceContent>;
+  },
+  idempotent = true,
+) {
+  const actor = await requireAdmin(ctx);
+  validateReferenceInput(input);
+  for (const block of input.content.blocks) {
+    if (block.type === "image") {
       const asset = await ctx.db.get("questionAssets", block.assetId);
       if (!asset || asset.state !== "verified" || !asset.storageId)
         fail("UNVERIFIED_ASSET");
