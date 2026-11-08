@@ -10,10 +10,6 @@ on:
 
 permissions: {}
 
-concurrency:
-  group: opencode-${{ github.event.pull_request.number || github.event.issue.number }}
-  cancel-in-progress: true
-
 jobs:
   review:
     if: >-
@@ -27,6 +23,9 @@ jobs:
           (contains(github.event.comment.body, '/opencode') ||
            contains(github.event.comment.body, '/oc')))
       )
+    concurrency:
+      group: opencode-${{ github.event.pull_request.number || github.event.issue.number }}
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -45,6 +44,7 @@ jobs:
           const { execFileSync } = require('node:child_process');
           const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
           const repo = process.env.GITHUB_REPOSITORY;
+          /** Read GitHub metadata without invoking a shell or executing request text. */
           const api = (path) => JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8' }));
           const permission = api(`repos/${repo}/collaborators/${process.env.GITHUB_ACTOR}/permission`).permission;
           let allowed = ['admin', 'maintain', 'write'].includes(permission);
@@ -120,7 +120,7 @@ jobs:
             "git log *":"allow","git status *":"allow"}}}
         shell: bash
         run: |
-          export PROMPT="$(node <<'NODE'
+          PROMPT="$(node <<'NODE'
           const fs = require('node:fs');
           const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
           const request = event.comment ? {
@@ -132,4 +132,5 @@ jobs:
           process.stdout.write(process.env.PROMPT + '\n\nUNTRUSTED REQUEST DATA:\n' + JSON.stringify(request));
           NODE
           )"
+          export PROMPT
           opencode github run

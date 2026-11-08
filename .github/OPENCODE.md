@@ -37,6 +37,10 @@ internally to inspect it; only same-repository PRs from trusted writers qualify.
 
 ## Runtime and validation
 
+Concurrency applies only to the gated review job. Pull-request events can cancel
+an active review for that PR; comment events cannot cancel an active run. Prompt
+preparation must succeed before the prompt is exported and OpenCode starts.
+
 OpenCode v1.19.5 is installed from its official Linux x64 release archive and
 verified against its release SHA-256. Checkout is pinned to a commit. Upgrading
 the CLI requires reviewing its GitHub runner/config behavior and updating both
