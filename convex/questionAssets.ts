@@ -38,6 +38,8 @@ export const beginAssetUpload = mutation({
         existing.state !== "verified" &&
         (existing.uploaderId !== actor._id || existing.state !== "pending")
       )
+        // Pending reservations stay with their uploader. An abandoned
+        // reservation requires the separately authorized reconciliation path.
         fail("FORBIDDEN");
       return existing._id;
     }

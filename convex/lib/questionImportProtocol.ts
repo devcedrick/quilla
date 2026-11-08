@@ -1,4 +1,5 @@
 import { v, type Infer } from "convex/values";
+import { env } from "../_generated/server";
 import {
   questionContent,
   referenceContent,
@@ -140,10 +141,12 @@ export function batch(values: unknown[]) {
 export function requireImportTarget(target: string) {
   const targets: Readonly<Record<string, string>> = approvedImportTargets;
   const url = Object.hasOwn(targets, target) ? targets[target] : undefined;
+  // CONVEX_CLOUD_URL is a typed platform value. The operator switch remains a
+  // runtime variable until a separately reviewed typed env declaration exists.
   if (
     !url ||
     process.env.QUESTION_BANK_IMPORT_ENABLED !== "true" ||
-    process.env.CONVEX_CLOUD_URL !== url
+    env.CONVEX_CLOUD_URL !== url
   )
     fail("IMPORT_TARGET_DISABLED");
   return url;

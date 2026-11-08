@@ -400,7 +400,16 @@ export const applyBatch = mutation({
       if (entry.state === "done") continue;
       if (entry.ordinal !== processed) fail("IMPORT_ORDER");
       const pin = run.manifests.find((p) => p.family === entry.family)!;
-      const classification = await inspectSource(ctx, record.source, pin);
+      // Resolve once, then reuse the validated input/hashes for classification,
+      // duplicate accounting and draft creation.
+      const resolved =
+        record.source.kind === "question"
+          ? await resolveQuestion(ctx, record.source.value, pin.taxonomyId)
+          : undefined;
+      const classification = await inspectSource(ctx, record.source, pin, {
+        ...(resolved ? { resolvedQuestion: resolved } : {}),
+        duplicateCandidates: false,
+      });
       if (classification.status === "conflict") fail("CONTENT_CONFLICT");
       let resultId: string;
       if (record.source.kind === "asset") {
@@ -426,14 +435,11 @@ export const applyBatch = mutation({
         if (!resolved) fail("UNVERIFIED_ASSET");
         resultId = await createReferenceDraft(ctx, resolved);
       } else {
-        const resolved = await resolveQuestion(
-          ctx,
-          record.source.value,
-          pin.taxonomyId,
-        );
+        if (!resolved) fail("INVALID_IMPORT_ENTRY");
         if (resolved.missingReference) fail("REFERENCE_NOT_FOUND");
-        resultId = (await importQuestionDraft(ctx, resolved.input))
-          .questionVersionId;
+        resultId = (
+          await importQuestionDraft(ctx, resolved.input, resolved.hashes)
+        ).questionVersionId;
       }
       await ctx.db.patch("questionImportEntries", entry._id, {
         state: "done",

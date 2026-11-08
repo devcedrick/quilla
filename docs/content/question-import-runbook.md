@@ -76,7 +76,11 @@ invalid or dependency-pending records by ordinal (joined to the reported source
 inventory). Dependency-pending means a supplied reference/image has not yet been
 created or uploaded; it does not permit substituting another version. Unknown
 taxonomy, invalid eligibility and conflicts block application. Duplicate-candidate
-counts are bounded at 51 and do not imply an exhaustive editorial review.
+counts are bounded at 51 and do not imply an exhaustive editorial review. Offline
+duplicate fingerprints normalize reference-block text and case; the stored server
+fingerprint hashes reference blocks as authored. Target comparison can therefore
+report fewer duplicate candidates than the offline report. Both remain advisory
+pending the editorial audit under #98.
 
 Preflight runs at most four read requests concurrently, with at most ten records
 and 256 KiB per request. Writes remain sequential. Token lifetime depends on the
@@ -118,6 +122,12 @@ contain the run ID. After the five-minute lease expires, the original owner can
 retry the identical `--apply` command without `--resume-run`; the server resolves
 the same target and plan to the existing run. Do not switch accounts or alter the
 plan to work around a lost response.
+
+Recovery is bound to the initiating admin account. If that account is suspended or
+removed, another admin cannot resume the run or complete its pending image
+reservations. A pending asset reservation is reusable only by its uploader; if the
+bytes were never uploaded, it requires a separately authorized reconciliation
+operation. No automatic takeover or storage sweep is provided.
 
 Resume reads the server checkpoint rather than trusting local progress. A lost
 response after a committed batch or verified upload does not cause duplicate

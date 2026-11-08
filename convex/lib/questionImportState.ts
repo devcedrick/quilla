@@ -159,10 +159,45 @@ export async function resolveQuestion(
   return { input, hashes, missingReference: Boolean(reference && !ref) };
 }
 /** Classify an exact existing identity using the lifecycle's immutable content contract. */
+type ResolvedQuestion = Awaited<ReturnType<typeof resolveQuestion>>;
+/** Count distinct cross-question matches without letting version history hide them. */
+async function duplicateCandidateCount(
+  ctx: Pick<QueryCtx, "db">,
+  fingerprint: string,
+  canonicalQuestionId?: Id<"questions">,
+) {
+  const seen = new Set<Id<"questions">>();
+  let scanned = 0;
+  const collect = async (side?: "lt" | "gt") => {
+    for await (const row of ctx.db
+      .query("questionVersions")
+      .withIndex("by_contentFingerprint_and_questionId", (q) => {
+        const base = q.eq("contentFingerprint", fingerprint);
+        if (!side || !canonicalQuestionId) return base;
+        return side === "lt"
+          ? base.lt("questionId", canonicalQuestionId)
+          : base.gt("questionId", canonicalQuestionId);
+      })) {
+      seen.add(row.questionId);
+      scanned++;
+      // Bound the advisory scan; the report is intentionally not exhaustive.
+      if (seen.size >= 51 || scanned >= 512) return;
+    }
+  };
+  if (canonicalQuestionId) {
+    await collect("lt");
+    if (seen.size < 51 && scanned < 512) await collect("gt");
+  } else await collect();
+  return Math.min(51, seen.size);
+}
 export async function inspectSource(
   ctx: QueryCtx,
   source: SourceRecord,
   pin: Infer<typeof manifestPin>,
+  options: {
+    resolvedQuestion?: ResolvedQuestion;
+    duplicateCandidates?: boolean;
+  } = {},
 ) {
   if (source.kind === "asset") {
     validateAssetMetadata(source.value);
@@ -249,7 +284,9 @@ export async function inspectSource(
       duplicateCandidates: 0,
     };
   }
-  const resolved = await resolveQuestion(ctx, source.value, pin.taxonomyId);
+  const resolved =
+    options.resolvedQuestion ??
+    (await resolveQuestion(ctx, source.value, pin.taxonomyId));
   const canonicalQuestion = await ctx.db
     .query("questions")
     .withIndex("by_questionId", (q) =>
@@ -296,14 +333,14 @@ export async function inspectSource(
     )
       return { status: "conflict" as const, duplicateCandidates: 0 };
   }
-  const duplicates = resolved.missingReference
-    ? []
-    : await ctx.db
-        .query("questionVersions")
-        .withIndex("by_contentFingerprint", (q) =>
-          q.eq("contentFingerprint", resolved.hashes.contentFingerprint),
-        )
-        .take(51);
+  const duplicateCandidates =
+    resolved.missingReference || options.duplicateCandidates === false
+      ? 0
+      : await duplicateCandidateCount(
+          ctx,
+          resolved.hashes.contentFingerprint,
+          canonicalQuestion?._id,
+        );
   return {
     status: resolved.missingReference
       ? ("dependency_pending" as const)
@@ -316,8 +353,6 @@ export async function inspectSource(
               source.value.version <= canonicalQuestion.latestVersion)
           ? ("conflict" as const)
           : ("new" as const),
-    duplicateCandidates: duplicates.filter(
-      (d) => d.questionId !== canonicalQuestion?._id,
-    ).length,
+    duplicateCandidates,
   };
 }

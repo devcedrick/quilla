@@ -218,6 +218,86 @@ describe("guarded question import", () => {
       "conflict",
     ]);
   });
+  it("counts distinct duplicate question IDs without hiding them behind version history", async () => {
+    const { t, admin } = await setup();
+    const {
+      questionId: _questionId,
+      version: _version,
+      ...content
+    } = question.value;
+    void _questionId;
+    void _version;
+    const fingerprint = await digest({
+      stem: "what is two plus three?",
+      choices: ["5", "6"],
+      reference: null,
+    });
+    await t.run(async (ctx) => {
+      const owner = await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|admin"),
+        )
+        .unique();
+      const taxonomy = await ctx.db
+        .query("taxonomyVersions")
+        .withIndex("by_taxonomyId", (q) =>
+          q.eq("taxonomyId", "cse-taxonomy-2027-v2"),
+        )
+        .unique();
+      const canonicalId = await ctx.db.insert("questions", {
+        questionId: "fixture-question",
+        contributorId: owner!._id,
+        family: 1,
+        latestVersion: 51,
+        revision: 51,
+        createdAt: 0,
+      });
+      for (let version = 1; version <= 51; version++)
+        await ctx.db.insert("questionVersions", {
+          questionId: canonicalId,
+          version,
+          content,
+          contentHash: "a".repeat(64),
+          contentFingerprint: fingerprint,
+          taxonomyVersionId: taxonomy!._id,
+          creatorId: owner!._id,
+          createdAt: version,
+          state: "draft",
+          workflowRevision: 1,
+        });
+      const otherId = await ctx.db.insert("questions", {
+        questionId: "fixture-question-copy",
+        contributorId: owner!._id,
+        family: 1,
+        latestVersion: 1,
+        revision: 1,
+        createdAt: 0,
+      });
+      await ctx.db.insert("questionVersions", {
+        questionId: otherId,
+        version: 1,
+        content,
+        contentHash: "b".repeat(64),
+        contentFingerprint: fingerprint,
+        taxonomyVersionId: taxonomy!._id,
+        creatorId: owner!._id,
+        createdAt: 0,
+        state: "draft",
+        workflowRevision: 1,
+      });
+    });
+    const next = await plan([
+      { kind: "question", value: { ...question.value, version: 52 } },
+    ]);
+    const [classification] = await admin.query(api.questionImports.preflight, {
+      target: "fixture",
+      manifest: next.manifests[0],
+      records: next.records,
+    });
+    expect(classification.duplicateCandidates).toBe(1);
+  });
+
   it("resumes partially staged and processed plans without recreating records", async () => {
     const { t, admin } = await setup();
     const second: SourceRecord = {
@@ -383,6 +463,48 @@ describe("guarded question import", () => {
           manifests,
           inventoryHash,
           planChecksum,
+        }),
+      ),
+    );
+    expect(results.filter((r) => r.status === "fulfilled")).toHaveLength(1);
+    expect(results.filter((r) => r.status === "rejected")).toHaveLength(1);
+  });
+
+  it("refuses another admin's resume handle and allows one of two different plans", async () => {
+    const { t, admin } = await setup(),
+      p = await plan(),
+      access = await start(admin, p);
+    const other = t.withIdentity({ issuer: "https://test", subject: "other" });
+    const { manifests, inventoryHash, planChecksum } = p;
+    await expect(
+      other.mutation(api.questionImports.begin, {
+        target: "fixture",
+        manifests,
+        inventoryHash,
+        planChecksum,
+        resumeRunId: access.runId,
+      }),
+    ).rejects.toThrow("IMPORT_RUN_FORBIDDEN");
+    await t.run(async (ctx) =>
+      ctx.db.patch("questionImportRuns", access.runId, { leaseUntil: 0 }),
+    );
+    const second = await plan([
+      {
+        kind: "question",
+        value: {
+          ...question.value,
+          questionId: "fixture-other-plan",
+          stem: "How much is five plus five?",
+        },
+      },
+    ]);
+    const results = await Promise.allSettled(
+      [admin, other].map((client) =>
+        client.mutation(api.questionImports.begin, {
+          target: "fixture",
+          manifests: second.manifests,
+          inventoryHash: second.inventoryHash,
+          planChecksum: second.planChecksum,
         }),
       ),
     );
@@ -759,6 +881,33 @@ describe("guarded question import", () => {
       ).rejects.toThrow();
     },
   );
+
+  it("applies the maximum ten-question batch through the sealed taxonomy", async () => {
+    const { t, admin } = await setup();
+    const sources: SourceRecord[] = Array.from({ length: 10 }, (_, i) => ({
+      kind: "question",
+      value: {
+        ...question.value,
+        questionId: `fixture-batch-${i + 1}`,
+        version: 1,
+        stem: `What is ${i + 2} plus three?`,
+        choices: [
+          { choiceId: "a", text: `${i + 5}` },
+          { choiceId: "b", text: "not-a-number" },
+        ],
+        explanation: `${i + 2} plus three equals ${i + 5}.`,
+      },
+    }));
+    const p = await plan(sources),
+      access = await start(admin, p);
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: p.records,
+    });
+    await t.run(async (ctx) => {
+      expect(await ctx.db.query("questionVersions").collect()).toHaveLength(10);
+    });
+  });
 
   it("refuses unapproved, disabled and mismatched targets before writes", async () => {
     const { t, admin } = await setup(),

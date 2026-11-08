@@ -15,6 +15,14 @@ import {
   importDigest,
   importCanonical,
 } from "../lib/question-import-contract.mjs";
+import {
+  batch as validateBatch,
+  validateDescriptor,
+} from "../convex/lib/questionImportProtocol";
+import {
+  canonical as serverCanonical,
+  digest as serverDigest,
+} from "../convex/lib/questionContent";
 import { createHash } from "node:crypto";
 
 /** Create a transport double whose durable checkpoint survives lost client responses. */
@@ -85,6 +93,14 @@ describe("offline import planning", () => {
       expect(p.report.targetComparison).toBe("not-checked");
       expect(network).not.toHaveBeenCalled();
       expect(p.items).toHaveLength(2214);
+      for (const item of p.items) validateDescriptor(item.descriptor);
+      expect(() =>
+        validateBatch(
+          p.items
+            .filter((item) => item.source.kind === "question")
+            .slice(0, 10),
+        ),
+      ).not.toThrow();
       expect(p.report.inventory).toHaveLength(2214);
       expect(p.report.manifests.every((m) => m.questions === 270)).toBe(true);
       expect(p.report).not.toHaveProperty("items");
@@ -141,6 +157,22 @@ describe("offline import planning", () => {
         blocks: [{ type: "text", text: "Different reference" }],
       }),
     ).not.toBe(normalized);
+  });
+
+  it("keeps the CLI and server canonical checksum implementations in parity", async () => {
+    const fixture = {
+      z: null,
+      empty: {},
+      list: [],
+      optional: undefined,
+      nested: {
+        second: [3, 2, 1],
+        first: { é: "café", 日本: ["🙂", "✓"] },
+      },
+      values: [true, false, 0, -1, 1.5, "a", "Z"],
+    };
+    expect(importCanonical(fixture)).toBe(serverCanonical(fixture));
+    expect(await importDigest(fixture)).toBe(await serverDigest(fixture));
   });
 
   it("bounds batches by count and size and rejects oversized single records", () => {
@@ -235,6 +267,12 @@ describe("import orchestration", () => {
       run: { staged: 2 },
       entries: [{ ordinal: 0 }],
     });
+    await expect(readImportStatus(client, "fixture", "run")).rejects.toThrow(
+      "IMPORT_INVALID_CHECKPOINT",
+    );
+    client.query
+      .mockResolvedValueOnce({ run: { staged: 2 }, entries: [{ ordinal: 0 }] })
+      .mockResolvedValueOnce({ run: { staged: 2 }, entries: [] });
     await expect(readImportStatus(client, "fixture", "run")).rejects.toThrow(
       "IMPORT_INVALID_CHECKPOINT",
     );

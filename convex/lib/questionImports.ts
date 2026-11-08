@@ -10,7 +10,8 @@ import {
 } from "./questionContent";
 import { questionWorkflowError as fail } from "./questionWorkflow";
 
-/** Trusted integration only: callers provide validated source metadata, never authority. */
+/** Trusted integration only: callers provide validated source metadata, never authority.
+ * `validatedHashes` may only be supplied by `resolveQuestion` for the same input. */
 export async function importQuestionDraft(
   ctx: MutationCtx,
   input: {
@@ -20,17 +21,20 @@ export async function importQuestionDraft(
     taxonomyVersionId: Id<"taxonomyVersions">;
     referenceVersionId?: Id<"questionReferenceVersions">;
   },
+  validatedHashes?: { contentHash: string; contentFingerprint: string },
 ) {
   const actor = await requireAdmin(ctx);
   positive(input.version);
   text(input.questionId);
   if (input.questionId.length > 100) fail("VALIDATION_FAILED");
-  const hashes = await validateQuestion(
-    ctx,
-    input.content,
-    input.taxonomyVersionId,
-    input.referenceVersionId,
-  );
+  const hashes =
+    validatedHashes ??
+    (await validateQuestion(
+      ctx,
+      input.content,
+      input.taxonomyVersionId,
+      input.referenceVersionId,
+    ));
   let question = await ctx.db
     .query("questions")
     .withIndex("by_questionId", (q) => q.eq("questionId", input.questionId))

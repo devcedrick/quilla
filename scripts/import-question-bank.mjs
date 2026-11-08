@@ -260,6 +260,8 @@ export async function readImportStatus(client, target, runId) {
     after = next;
     if (entries.length > 10000) throw new Error("IMPORT_INVALID_CHECKPOINT");
   } while (entries.length < run.staged);
+  if (entries.length !== run.staged)
+    throw new Error("IMPORT_INVALID_CHECKPOINT");
   return { mode: "status", run, entries };
 }
 
