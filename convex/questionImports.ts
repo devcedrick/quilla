@@ -30,6 +30,7 @@ import {
   resolveQuestion,
   resolveReference,
   inspectSource,
+  newDuplicateScanBudget,
 } from "./lib/questionImportState";
 import { importQuestionDraft } from "./lib/questionImports";
 import { createReferenceDraft } from "./lib/questionReferenceDrafts";
@@ -98,6 +99,7 @@ export const preflight = query({
       )
       .unique();
     if (!taxonomy || taxonomy.state !== "sealed") fail("TAXONOMY_UNAVAILABLE");
+    const duplicateScanBudget = newDuplicateScanBudget();
     const results = [];
     for (const record of args.records) {
       try {
@@ -106,7 +108,9 @@ export const preflight = query({
           fail("INVALID_IMPORT_ENTRY");
         results.push({
           ordinal: record.descriptor.ordinal,
-          ...(await inspectSource(ctx, record.source, args.manifest)),
+          ...(await inspectSource(ctx, record.source, args.manifest, {
+            duplicateScanBudget,
+          })),
         });
       } catch (error) {
         const data = error instanceof ConvexError ? error.data : null;

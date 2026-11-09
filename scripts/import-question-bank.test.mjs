@@ -305,6 +305,29 @@ describe("import orchestration", () => {
     );
     expect(client.mutation).not.toHaveBeenCalled();
   });
+  it("blocks apply through applyImport when preflight reports a conflict", async () => {
+    const { client } = transport();
+    client.query.mockResolvedValueOnce([
+      { ordinal: 0, status: "conflict", code: "CONTENT_CONFLICT" },
+      { ordinal: 1, status: "new" },
+    ]);
+    let caught;
+    try {
+      await applyImport(fixture, client, {
+        target: "fixture",
+        expectedPlan: "plan",
+      });
+    } catch (error) {
+      caught = error;
+    }
+    expect(caught).toBeInstanceOf(Error);
+    expect(caught.message).toBe("IMPORT_TARGET_CONFLICT");
+    expect(caught.importConflicts).toEqual([
+      { ordinal: 0, family: 1, code: "CONTENT_CONFLICT" },
+    ]);
+    expect(client.mutation).not.toHaveBeenCalled();
+    expect(client.upload).not.toHaveBeenCalled();
+  });
   it("applies bounded batches then reuses a completed server checkpoint without rewriting content", async () => {
     const first = transport();
     expect(

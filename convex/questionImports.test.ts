@@ -7,7 +7,8 @@ import * as questionImports from "./questionImports";
 import * as questionImportActions from "./questionImportActions";
 import * as questionAssets from "./questionAssets";
 import { initialV2Catalog } from "./lib/taxonomyCatalog";
-import { digest } from "./lib/questionContent";
+import { canonical, digest } from "./lib/questionContent";
+import { inspectSource } from "./lib/questionImportState";
 import type { SourceRecord, Descriptor } from "./lib/questionImportProtocol";
 import { importChainStart } from "../lib/question-import-contract.mjs";
 
@@ -1338,5 +1339,258 @@ describe("guarded question import", () => {
         bytes: png,
       }),
     ).rejects.toThrow("IMPORT_ORDER");
+  });
+
+  it("rejects blank or oversized image asset IDs during reference preflight", async () => {
+    const { admin } = await setup();
+    const blank: SourceRecord = {
+      kind: "reference",
+      value: {
+        ...reference.value,
+        referenceId: "fixture-blank-asset",
+        version: 4,
+        blocks: [
+          {
+            type: "image",
+            assetId: "   ",
+            caption: "Chart",
+            alt: "Counters",
+            description: "Counters",
+          },
+        ],
+      },
+    };
+    const oversized: SourceRecord = {
+      kind: "reference",
+      value: {
+        ...reference.value,
+        referenceId: "fixture-oversized-asset",
+        version: 4,
+        blocks: [
+          {
+            type: "image",
+            assetId: "a".repeat(101),
+            caption: "Chart",
+            alt: "Counters",
+            description: "Counters",
+          },
+        ],
+      },
+    };
+    const p = await plan([blank, oversized]);
+    expect(
+      await admin.query(api.questionImports.preflight, {
+        target: "fixture",
+        manifest: p.manifests[0],
+        records: p.records,
+      }),
+    ).toEqual([
+      {
+        ordinal: 0,
+        status: "invalid",
+        duplicateCandidates: 0,
+        code: "VALIDATION_FAILED",
+      },
+      {
+        ordinal: 1,
+        status: "invalid",
+        duplicateCandidates: 0,
+        code: "VALIDATION_FAILED",
+      },
+    ]);
+  });
+
+  it("rejects a reference that exceeds the size limit after resolving asset IDs", async () => {
+    const { admin } = await setup();
+    const hash = Array.from(
+      new Uint8Array(await crypto.subtle.digest("SHA-256", png)),
+      (b) => b.toString(16).padStart(2, "0"),
+    ).join("");
+    const asset: SourceRecord = {
+      kind: "asset",
+      value: {
+        assetId: "a",
+        path: "references/assets/a.png",
+        sha256: hash,
+        mediaType: "image/png",
+        width: 1,
+        height: 1,
+        provenance,
+      },
+    };
+    const baseContent = {
+      family: reference.value.family,
+      module: reference.value.module,
+      language: reference.value.language,
+      title: reference.value.title,
+      provenance: reference.value.provenance,
+    };
+    const contentFor = (length: number) => ({
+      ...baseContent,
+      blocks: [
+        { type: "text" as const, text: "a".repeat(length) },
+        {
+          type: "image" as const,
+          assetId: "a",
+          caption: "Chart",
+          alt: "Counters",
+          description: "Counters",
+        },
+      ],
+    });
+    const utf8Size = (value: unknown) =>
+      new TextEncoder().encode(canonical(value)).length;
+    const length = 130000 + 131072 - utf8Size(contentFor(130000));
+    expect(utf8Size(contentFor(length))).toBe(131072);
+    const ref: SourceRecord = {
+      kind: "reference",
+      value: {
+        ...reference.value,
+        referenceId: "fixture-large-reference",
+        version: 4,
+        blocks: contentFor(length).blocks,
+      },
+    };
+    const p = await plan([asset, ref]),
+      access = await start(admin, p);
+    const [portable] = await admin.query(api.questionImports.preflight, {
+      target: "fixture",
+      manifest: p.manifests[0],
+      records: [p.records[1]],
+    });
+    expect(portable.status).toBe("dependency_pending");
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: [p.records[0]],
+    });
+    await admin.action(api.questionImportActions.uploadAsset, {
+      ...access,
+      ordinal: 0,
+      bytes: png,
+    });
+    const [classification] = await admin.query(api.questionImports.preflight, {
+      target: "fixture",
+      manifest: p.manifests[0],
+      records: [p.records[1]],
+    });
+    expect(classification).toMatchObject({
+      status: "invalid",
+      code: "VALIDATION_FAILED",
+    });
+  });
+
+  it("rejects an active non-owner admin uploading a reserved asset", async () => {
+    const { t, admin } = await setup();
+    const hash = Array.from(
+      new Uint8Array(await crypto.subtle.digest("SHA-256", png)),
+      (b) => b.toString(16).padStart(2, "0"),
+    ).join("");
+    const asset: SourceRecord = {
+      kind: "asset",
+      value: {
+        assetId: "fixture-chart",
+        path: "references/assets/chart.png",
+        sha256: hash,
+        mediaType: "image/png",
+        width: 1,
+        height: 1,
+        provenance,
+      },
+    };
+    const p = await plan([asset]),
+      access = await start(admin, p);
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: [p.records[0]],
+    });
+    const other = t.withIdentity({ issuer: "https://test", subject: "other" });
+    await expect(
+      other.action(api.questionImportActions.uploadAsset, {
+        ...access,
+        ordinal: 0,
+        bytes: png,
+      }),
+    ).rejects.toThrow("IMPORT_RUN_FORBIDDEN");
+    await t.run(async (ctx) => {
+      expect(await ctx.db.system.query("_storage").take(10)).toHaveLength(0);
+      expect((await ctx.db.query("questionAssets").collect())[0].state).toBe(
+        "pending",
+      );
+    });
+  });
+
+  it("stops duplicate scanning when its read budget is exhausted", async () => {
+    const { t } = await setup();
+    const source: SourceRecord = {
+      kind: "question",
+      value: {
+        ...question.value,
+        questionId: "fixture-budget-question",
+        version: 1,
+      },
+    };
+    const p = await plan([source]);
+    const normalize = (value: string) =>
+      value.normalize("NFKC").trim().toLowerCase().replace(/\s+/g, " ");
+    const fingerprint = await digest({
+      stem: normalize(question.value.stem),
+      choices: question.value.choices.map((c) => normalize(c.text)).sort(),
+      reference: null,
+    });
+    const versionContent = {
+      family: question.value.family,
+      module: question.value.module,
+      subjectId: question.value.subjectId,
+      subtopicId: question.value.subtopicId,
+      conceptId: question.value.conceptId,
+      levelApplicability: question.value.levelApplicability,
+      language: question.value.language,
+      difficulty: question.value.difficulty,
+      stem: question.value.stem,
+      choices: question.value.choices,
+      correctChoiceId: question.value.correctChoiceId,
+      explanation: "a".repeat(5000),
+      provenance: question.value.provenance,
+    };
+    const result = await t.run(async (ctx) => {
+      const admin = await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|admin"),
+        )
+        .unique();
+      const taxonomy = await ctx.db
+        .query("taxonomyVersions")
+        .withIndex("by_taxonomyId", (q) =>
+          q.eq("taxonomyId", "cse-taxonomy-2027-v2"),
+        )
+        .unique();
+      for (let i = 0; i < 5; i++) {
+        const questionId = await ctx.db.insert("questions", {
+          questionId: `budget-${i}`,
+          contributorId: admin!._id,
+          family: 1,
+          latestVersion: 1,
+          revision: 1,
+          createdAt: 0,
+        });
+        await ctx.db.insert("questionVersions", {
+          questionId,
+          version: 1,
+          content: versionContent,
+          contentHash: "a".repeat(64),
+          contentFingerprint: fingerprint,
+          taxonomyVersionId: taxonomy!._id,
+          creatorId: admin!._id,
+          createdAt: 0,
+          state: "draft",
+          workflowRevision: 1,
+        });
+      }
+      return inspectSource(ctx, source, p.manifests[0], {
+        duplicateScanBudget: { remainingBytes: 1000 },
+      });
+    });
+    expect(result).toMatchObject({ status: "new", duplicateCandidates: 1 });
   });
 });

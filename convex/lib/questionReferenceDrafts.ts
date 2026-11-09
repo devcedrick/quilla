@@ -10,6 +10,7 @@ import {
   text,
   validateProvenance,
 } from "./questionContent";
+import { validateAssetId } from "./questionAssetMetadata";
 import { questionWorkflowError as fail } from "./questionWorkflow";
 
 type ReferenceContentInput = Omit<Infer<typeof referenceContent>, "blocks"> & {
@@ -51,6 +52,7 @@ export function validateReferenceInput(input: {
       )
         fail("VALIDATION_FAILED");
     } else {
+      validateAssetId(block.assetId);
       text(block.caption);
       text(block.alt);
       text(block.description);

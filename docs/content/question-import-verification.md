@@ -1,6 +1,7 @@
 # Issue #95: local implementation verification
 
-Date: 2026-11-08. Branch: `feat/s19-4-guarded-draft-import`, based on merged
+Date: 2026-11-08; review fixes re-verified 2026-11-10. Branch:
+`feat/s19-4-guarded-draft-import`, based on merged
 `main` commit `576164d`. This is local implementation evidence, not a deployment,
 live import, editorial acceptance, publication or empirical calibration report.
 
@@ -31,7 +32,7 @@ These identify the offline snapshot, not deployment-specific database IDs.
 ## Checks
 
 - `npm run lint`, `npm run typecheck` and `npm run knip`: passed.
-- Complete unit suite: **478 tests in 40 files passed**, using
+- Complete unit suite: **483 tests in 40 files passed**, using
   `npm run test:unit` for the final run.
 - `npm run build`: passed on Next.js 16.4.5. The existing warning about an external
   `C:\Users\HP\package-lock.json` remained; that unrelated file was not modified.
@@ -52,10 +53,13 @@ lost upload responses, preserved contributor/publication state and completed-pla
 idempotency. Additional coverage verifies preflight parity for asset/reference
 metadata, completed-batch and final-stage replays, staged upload reservations,
 shared target fencing and normalized reference blocks. Further coverage verifies
-CLI/server checksum parity, truncated-status rejection, distinct cross-question
-duplicate counting, a maximum ten-question server batch, real-corpus descriptor and
-batch validation, and different-admin begin/resume ownership. CLI tests also verify
-bounded four-request read concurrency and bounded status traversal.
+resolved-reference size parity, blank/oversized image asset IDs, active non-owner
+upload rejection, a shared duplicate-scan byte budget, and CLI conflict blocking
+through `applyImport`. Additional coverage verifies CLI/server checksum parity,
+truncated-status rejection, distinct cross-question duplicate counting, a maximum
+ten-question server batch, real-corpus descriptor and batch validation, and
+different-admin begin/resume ownership. CLI tests also verify bounded four-request
+read concurrency and bounded status traversal.
 
 ## Deferred or unavailable verification
 

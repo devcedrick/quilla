@@ -14,6 +14,14 @@ import { digest, canonical, validateQuestion } from "./questionContent";
 import { validateAssetMetadata } from "./questionAssetMetadata";
 import { validateReferenceInput } from "./questionReferenceDrafts";
 
+/** Leave half of the 16 MiB transaction read limit for the rest of preflight. */
+const duplicateScanByteLimit = 8 * 1024 * 1024;
+export type DuplicateScanBudget = { remainingBytes: number };
+/** Share one duplicate-scan read budget across every record in a preflight query. */
+export function newDuplicateScanBudget(): DuplicateScanBudget {
+  return { remainingBytes: duplicateScanByteLimit };
+}
+
 /** Load a run only for its original active admin and exact target. */
 export async function ownedRun(
   ctx: QueryCtx,
@@ -165,10 +173,12 @@ async function duplicateCandidateCount(
   ctx: Pick<QueryCtx, "db">,
   fingerprint: string,
   canonicalQuestionId?: Id<"questions">,
+  budget: DuplicateScanBudget = newDuplicateScanBudget(),
 ) {
   const seen = new Set<Id<"questions">>();
   let scanned = 0;
   const collect = async (side?: "lt" | "gt") => {
+    if (budget.remainingBytes <= 0) return;
     for await (const row of ctx.db
       .query("questionVersions")
       .withIndex("by_contentFingerprint_and_questionId", (q) => {
@@ -180,13 +190,16 @@ async function duplicateCandidateCount(
       })) {
       seen.add(row.questionId);
       scanned++;
+      budget.remainingBytes -= new TextEncoder().encode(canonical(row)).length;
       // Bound the advisory scan; the report is intentionally not exhaustive.
-      if (seen.size >= 51 || scanned >= 512) return;
+      if (seen.size >= 51 || scanned >= 512 || budget.remainingBytes <= 0)
+        return;
     }
   };
   if (canonicalQuestionId) {
     await collect("lt");
-    if (seen.size < 51 && scanned < 512) await collect("gt");
+    if (seen.size < 51 && scanned < 512 && budget.remainingBytes > 0)
+      await collect("gt");
   } else await collect();
   return Math.min(51, seen.size);
 }
@@ -197,6 +210,7 @@ export async function inspectSource(
   options: {
     resolvedQuestion?: ResolvedQuestion;
     duplicateCandidates?: boolean;
+    duplicateScanBudget?: DuplicateScanBudget;
   } = {},
 ) {
   if (source.kind === "asset") {
@@ -231,6 +245,9 @@ export async function inspectSource(
     const { referenceId, version, ...content } = source.value;
     validateReferenceInput({ referenceId, version, content });
     const resolved = await resolveReference(ctx, source.value);
+    // Asset IDs are replaced during resolution, so the size check must run on
+    // the exact content that apply will validate and store.
+    if (resolved) validateReferenceInput(resolved);
     const existing = await ctx.db
       .query("questionReferenceVersions")
       .withIndex("by_referenceId_and_version", (q) =>
@@ -340,6 +357,7 @@ export async function inspectSource(
           ctx,
           resolved.hashes.contentFingerprint,
           canonicalQuestion?._id,
+          options.duplicateScanBudget,
         );
   return {
     status: resolved.missingReference

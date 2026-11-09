@@ -15,12 +15,16 @@ export type AssetMetadataInput = {
   provenance: Infer<typeof provenance>;
 };
 
+/** Validate a portable asset identifier used by metadata and reference images. */
+export function validateAssetId(value: string) {
+  text(value);
+  if (value.length > 100) fail("VALIDATION_FAILED");
+}
 /** Validate immutable image metadata identically for authoring and import preflight. */
 export function validateAssetMetadata(args: AssetMetadataInput) {
-  text(args.assetId);
+  validateAssetId(args.assetId);
   positive(args.width);
   positive(args.height);
   validateProvenance(args.provenance);
-  if (args.assetId.length > 100 || !/^[a-f0-9]{64}$/.test(args.sha256))
-    fail("VALIDATION_FAILED");
+  if (!/^[a-f0-9]{64}$/.test(args.sha256)) fail("VALIDATION_FAILED");
 }
