@@ -243,7 +243,12 @@ export async function inspectSource(
   }
   if (source.kind === "reference") {
     const { referenceId, version, ...content } = source.value;
-    validateReferenceInput({ referenceId, version, content });
+    // Portable asset IDs can be longer than their resolved document IDs, so
+    // metadata is checked now and the size limit is applied after resolution.
+    validateReferenceInput(
+      { referenceId, version, content },
+      { enforceSize: false },
+    );
     const resolved = await resolveReference(ctx, source.value);
     // Asset IDs are replaced during resolution, so the size check must run on
     // the exact content that apply will validate and store.

@@ -26,17 +26,23 @@ type ReferenceContentInput = Omit<Infer<typeof referenceContent>, "blocks"> & {
       }
   >;
 };
-/** Validate immutable reference metadata without requiring database access. */
-export function validateReferenceInput(input: {
-  referenceId: string;
-  version: number;
-  content: ReferenceContentInput;
-}) {
+/**
+ * Validate immutable reference metadata without requiring database access.
+ * Imports defer the size limit until portable asset IDs are resolved.
+ */
+export function validateReferenceInput(
+  input: {
+    referenceId: string;
+    version: number;
+    content: ReferenceContentInput;
+  },
+  options: { enforceSize?: boolean } = {},
+) {
   text(input.referenceId);
   text(input.content.title);
   positive(input.version);
   positive(input.content.family);
-  bounded(input.content, 131072);
+  if (options.enforceSize !== false) bounded(input.content, 131072);
   validateProvenance(input.content.provenance);
   if (input.referenceId.length > 100 || !input.content.blocks.length)
     fail("VALIDATION_FAILED");

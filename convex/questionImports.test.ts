@@ -1479,6 +1479,99 @@ describe("guarded question import", () => {
     });
   });
 
+  it("accepts a reference that is oversized only before resolving asset IDs", async () => {
+    const { t, admin } = await setup();
+    const hash = Array.from(
+      new Uint8Array(await crypto.subtle.digest("SHA-256", png)),
+      (b) => b.toString(16).padStart(2, "0"),
+    ).join("");
+    const portableAssetId = "a".repeat(100);
+    const asset: SourceRecord = {
+      kind: "asset",
+      value: {
+        assetId: portableAssetId,
+        path: "references/assets/portable-large.png",
+        sha256: hash,
+        mediaType: "image/png",
+        width: 1,
+        height: 1,
+        provenance,
+      },
+    };
+    const baseContent = {
+      family: reference.value.family,
+      module: reference.value.module,
+      language: reference.value.language,
+      title: reference.value.title,
+      provenance: reference.value.provenance,
+    };
+    const contentFor = (length: number) => ({
+      ...baseContent,
+      blocks: [
+        { type: "text" as const, text: "a".repeat(length) },
+        {
+          type: "image" as const,
+          assetId: portableAssetId,
+          caption: "Chart",
+          alt: "Counters",
+          description: "Counters",
+        },
+      ],
+    });
+    const utf8Size = (value: unknown) =>
+      new TextEncoder().encode(canonical(value)).length;
+    const length = 130000 + 131073 - utf8Size(contentFor(130000));
+    expect(utf8Size(contentFor(length))).toBe(131073);
+    const ref: SourceRecord = {
+      kind: "reference",
+      value: {
+        ...reference.value,
+        referenceId: "fixture-portable-large",
+        version: 4,
+        blocks: contentFor(length).blocks,
+      },
+    };
+    const p = await plan([asset, ref]),
+      access = await start(admin, p);
+    const [pending] = await admin.query(api.questionImports.preflight, {
+      target: "fixture",
+      manifest: p.manifests[0],
+      records: [p.records[1]],
+    });
+    expect(pending.status).toBe("dependency_pending");
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: [p.records[0]],
+    });
+    await admin.action(api.questionImportActions.uploadAsset, {
+      ...access,
+      ordinal: 0,
+      bytes: png,
+    });
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: [p.records[0]],
+    });
+    const [classification] = await admin.query(api.questionImports.preflight, {
+      target: "fixture",
+      manifest: p.manifests[0],
+      records: [p.records[1]],
+    });
+    expect(classification).toMatchObject({
+      status: "new",
+      duplicateCandidates: 0,
+    });
+    await admin.mutation(api.questionImports.applyBatch, {
+      ...access,
+      records: [p.records[1]],
+    });
+    await t.run(async (ctx) => {
+      expect(
+        await ctx.db.query("questionReferenceVersions").collect(),
+      ).toHaveLength(1);
+    });
+  });
+
   it("rejects an active non-owner admin uploading a reserved asset", async () => {
     const { t, admin } = await setup();
     const hash = Array.from(
