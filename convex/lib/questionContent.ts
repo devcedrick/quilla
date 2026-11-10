@@ -217,6 +217,8 @@ export async function validateQuestion(
       taxonomyVersionId,
       referenceVersionId: referenceVersionId ?? null,
     }),
+    // Stored fingerprints hash reference blocks as authored. The offline CLI
+    // normalizes reference text separately for advisory duplicate triage.
     contentFingerprint: await digest({
       stem: normalize(content.stem),
       choices: content.choices.map((c) => normalize(c.text)).sort(),

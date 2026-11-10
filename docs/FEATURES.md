@@ -684,6 +684,14 @@ duplicate adjudication and protected asset verification. These APIs are not
 deployed; no live content has been imported or published. Admin UI, ordinary
 contribution submission and learner assessment serving remain separate work.
 
+[ADR 0021](ADR/0021-guarded-restartable-draft-import.md) records the local #95
+importer: offline zero-write planning, explicit development-target preflight,
+active-admin draft-only application, pinned source identities/checksums and
+restartable bounded batches. Import targets remain disabled and unregistered;
+no live import, deployment or publication is included. The
+[operator runbook](content/question-import-runbook.md) describes future authorized
+use and recovery. Import validation does not replace the deferred editorial audit.
+
 ### Edge cases
 
 - An edit occurs while the question is part of an in-progress attempt.

@@ -2,13 +2,8 @@ import { v } from "convex/values";
 import { internalMutation, internalQuery, mutation } from "./_generated/server";
 import { requireAdmin } from "./lib/auth";
 import { appendAdminAudit } from "./lib/audit";
-import {
-  provenance,
-  positive,
-  text,
-  validateProvenance,
-  canonical,
-} from "./lib/questionContent";
+import { provenance, canonical } from "./lib/questionContent";
+import { validateAssetMetadata } from "./lib/questionAssetMetadata";
 import { questionWorkflowError as fail } from "./lib/questionWorkflow";
 import schema from "./schema";
 
@@ -25,12 +20,7 @@ export const beginAssetUpload = mutation({
   returns: v.id("questionAssets"),
   handler: async (ctx, args) => {
     const actor = await requireAdmin(ctx);
-    text(args.assetId);
-    positive(args.width);
-    positive(args.height);
-    validateProvenance(args.provenance);
-    if (args.assetId.length > 100 || !/^[a-f0-9]{64}$/.test(args.sha256))
-      fail("VALIDATION_FAILED");
+    validateAssetMetadata(args);
     const existing = await ctx.db
       .query("questionAssets")
       .withIndex("by_assetId", (q) => q.eq("assetId", args.assetId))
@@ -48,6 +38,8 @@ export const beginAssetUpload = mutation({
         existing.state !== "verified" &&
         (existing.uploaderId !== actor._id || existing.state !== "pending")
       )
+        // Pending reservations stay with their uploader. An abandoned
+        // reservation requires the separately authorized reconciliation path.
         fail("FORBIDDEN");
       return existing._id;
     }

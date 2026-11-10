@@ -10,8 +10,20 @@ import {
   provenance,
 } from "./lib/questionContent";
 import { questionState, questionReview } from "./lib/questionWorkflow";
+import { runFields, entryFields } from "./lib/questionImportProtocol";
 
 export default defineSchema({
+  questionImportRuns: defineTable(runFields)
+    .index("by_targetUrl_and_leaseUntil", ["targetUrl", "leaseUntil"])
+    .index("by_target_and_planChecksum", ["target", "planChecksum"]),
+  questionImportEntries: defineTable(entryFields)
+    .index("by_runId_and_ordinal", ["runId", "ordinal"])
+    .index("by_runId_and_kind_and_sourceId_and_version", [
+      "runId",
+      "kind",
+      "sourceId",
+      "version",
+    ]),
   questions: defineTable({
     questionId: v.string(),
     contributorId: v.id("users"),

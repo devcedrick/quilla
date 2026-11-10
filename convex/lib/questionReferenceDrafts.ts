@@ -10,24 +10,39 @@ import {
   text,
   validateProvenance,
 } from "./questionContent";
+import { validateAssetId } from "./questionAssetMetadata";
 import { questionWorkflowError as fail } from "./questionWorkflow";
 
-/** Immutable reference creation for both interactive authoring and trusted imports. */
-export async function createReferenceDraft(
-  ctx: MutationCtx,
+type ReferenceContentInput = Omit<Infer<typeof referenceContent>, "blocks"> & {
+  blocks: Array<
+    | { type: "text"; text: string }
+    | { type: "table"; caption: string; headers: string[]; rows: string[][] }
+    | {
+        type: "image";
+        assetId: string;
+        caption: string;
+        alt: string;
+        description: string;
+      }
+  >;
+};
+/**
+ * Validate immutable reference metadata without requiring database access.
+ * Imports defer the size limit until portable asset IDs are resolved.
+ */
+export function validateReferenceInput(
   input: {
     referenceId: string;
     version: number;
-    content: Infer<typeof referenceContent>;
+    content: ReferenceContentInput;
   },
-  idempotent = true,
+  options: { enforceSize?: boolean } = {},
 ) {
-  const actor = await requireAdmin(ctx);
   text(input.referenceId);
   text(input.content.title);
   positive(input.version);
   positive(input.content.family);
-  bounded(input.content, 131072);
+  if (options.enforceSize !== false) bounded(input.content, 131072);
   validateProvenance(input.content.provenance);
   if (input.referenceId.length > 100 || !input.content.blocks.length)
     fail("VALIDATION_FAILED");
@@ -43,9 +58,27 @@ export async function createReferenceDraft(
       )
         fail("VALIDATION_FAILED");
     } else {
+      validateAssetId(block.assetId);
       text(block.caption);
       text(block.alt);
       text(block.description);
+    }
+  }
+}
+/** Immutable reference creation for both interactive authoring and trusted imports. */
+export async function createReferenceDraft(
+  ctx: MutationCtx,
+  input: {
+    referenceId: string;
+    version: number;
+    content: Infer<typeof referenceContent>;
+  },
+  idempotent = true,
+) {
+  const actor = await requireAdmin(ctx);
+  validateReferenceInput(input);
+  for (const block of input.content.blocks) {
+    if (block.type === "image") {
       const asset = await ctx.db.get("questionAssets", block.assetId);
       if (!asset || asset.state !== "verified" || !asset.storageId)
         fail("UNVERIFIED_ASSET");
