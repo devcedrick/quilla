@@ -27,6 +27,7 @@ import {
   changeWorkflow,
   safeWorkflowFailure,
 } from "./lib/questionLifecycle";
+import { bulkModerationBatchSize } from "../lib/question-import-contract.mjs";
 
 const contentArgs = {
   content: questionContent,
@@ -412,6 +413,94 @@ export const archiveVersion = mutation({
   returns: v.number(),
   handler: async (ctx, args) =>
     changeWorkflow(ctx, (await loadWorkflow(ctx, args)).version, "archive"),
+});
+const bulkResult = v.array(
+  v.object({
+    questionVersionId: v.id("questionVersions"),
+    workflowRevision: v.optional(v.number()),
+    code: v.optional(v.string()),
+  }),
+);
+/** Run each item in its own error boundary after one authorization check. */
+async function runBulk(
+  ctx: Parameters<typeof changeWorkflow>[0],
+  items: Array<{
+    questionVersionId: Id<"questionVersions">;
+    expectedWorkflowRevision: number;
+  }>,
+  operation: (
+    ctx: Parameters<typeof changeWorkflow>[0],
+    actor: Awaited<ReturnType<typeof requireAdmin>>,
+    item: (typeof items)[number],
+  ) => Promise<number>,
+) {
+  const actor = await requireAdmin(ctx);
+  if (!items.length || items.length > bulkModerationBatchSize)
+    fail("INVALID_BATCH");
+  const results: Array<{
+    questionVersionId: Id<"questionVersions">;
+    workflowRevision?: number;
+    code?: string;
+  }> = [];
+  for (const item of items) {
+    try {
+      results.push({
+        questionVersionId: item.questionVersionId,
+        workflowRevision: await operation(ctx, actor, item),
+      });
+    } catch (error) {
+      const code = safeWorkflowFailure(error);
+      // Unexpected failures must abort the transaction rather than commit an
+      // item whose audit event or invariant could not be completed.
+      if (code === "OPERATION_FAILED") throw error;
+      results.push({
+        questionVersionId: item.questionVersionId,
+        code,
+      });
+    }
+  }
+  return results;
+}
+/** Submit up to ten drafts and report each item's independent outcome. */
+export const bulkSubmitForReview = mutation({
+  args: { items: v.array(v.object(workflowArgs)) },
+  returns: bulkResult,
+  handler: async (ctx, args) =>
+    runBulk(ctx, args.items, async (ctx, actor, item) => {
+      const { version, question } = await loadWorkflow(ctx, item, actor);
+      if (
+        actor._id !== question.contributorId &&
+        actor._id !== version.creatorId
+      )
+        fail("FORBIDDEN");
+      await validateQuestion(
+        ctx,
+        version.content,
+        version.taxonomyVersionId,
+        version.referenceVersionId,
+      );
+      return changeWorkflow(ctx, version, "submit");
+    }),
+});
+/** Publish up to ten approved versions with the same per-version checks. */
+export const bulkPublishVersions = mutation({
+  args: { items: v.array(v.object(workflowArgs)) },
+  returns: bulkResult,
+  handler: async (ctx, args) =>
+    runBulk(ctx, args.items, async (ctx, actor, item) => {
+      const { version, question } = await loadWorkflow(ctx, item, actor);
+      return publishOne(ctx, version, question);
+    }),
+});
+/** Archive up to ten approved or published versions without deleting history. */
+export const bulkArchiveVersions = mutation({
+  args: { items: v.array(v.object(workflowArgs)) },
+  returns: bulkResult,
+  handler: async (ctx, args) =>
+    runBulk(ctx, args.items, async (ctx, actor, item) => {
+      const { version } = await loadWorkflow(ctx, item, actor);
+      return changeWorkflow(ctx, version, "archive");
+    }),
 });
 /** Return full admin review context with bounded review and duplicate histories. */
 export const getAdminVersion = query({
