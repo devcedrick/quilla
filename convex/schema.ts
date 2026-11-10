@@ -11,6 +11,7 @@ import {
 } from "./lib/questionContent";
 import { questionState, questionReview } from "./lib/questionWorkflow";
 import { runFields, entryFields } from "./lib/questionImportProtocol";
+import { seedRunFields, seedItemFields } from "./lib/seedPublicationProtocol";
 
 export default defineSchema({
   questionImportRuns: defineTable(runFields)
@@ -24,6 +25,15 @@ export default defineSchema({
       "sourceId",
       "version",
     ]),
+  seedPublicationRuns: defineTable(seedRunFields)
+    .index("by_targetUrl_and_leaseUntil", ["targetUrl", "leaseUntil"])
+    .index("by_target_and_planChecksum", ["target", "planChecksum"]),
+  seedPublicationItems: defineTable(seedItemFields)
+    .index("by_runId_and_ordinal", ["runId", "ordinal"])
+    .index("by_runId_and_importOrdinal", ["runId", "importOrdinal"])
+    .index("by_runId_and_family", ["runId", "family"])
+    .index("by_questionVersionId", ["questionVersionId"])
+    .index("by_runId_and_questionVersionId", ["runId", "questionVersionId"]),
   questions: defineTable({
     questionId: v.string(),
     contributorId: v.id("users"),
