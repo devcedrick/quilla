@@ -19,6 +19,7 @@ import {
   batch as validateBatch,
   validateDescriptor,
 } from "../convex/lib/questionImportProtocol";
+import { verifySeedPlan } from "./publish-seed-question-bank.mjs";
 import {
   canonical as serverCanonical,
   digest as serverDigest,
@@ -103,6 +104,12 @@ describe("offline import planning", () => {
       ).not.toThrow();
       expect(p.report.inventory).toHaveLength(2214);
       expect(p.report.manifests.every((m) => m.questions === 270)).toBe(true);
+      expect(verifySeedPlan(p)).toEqual({
+        families: 7,
+        questions: 1890,
+        references: 265,
+        assets: 59,
+      });
       expect(p.report).not.toHaveProperty("items");
       const output = JSON.stringify(p.report);
       expect(output).not.toContain('"correctChoiceId"');
@@ -116,6 +123,13 @@ describe("offline import planning", () => {
           manifests: p.manifests,
           inventoryHash: p.inventoryHash,
         }),
+      );
+      // The one-time seed exception is bound to these exact reviewed bytes.
+      expect(p.planChecksum).toBe(
+        "71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38",
+      );
+      expect(p.inventoryHash).toBe(
+        "c793d1fa22c9db9de587924f8ba55686001a54ade0ebce3ae1386488ea5f11e0",
       );
     } finally {
       network.mockRestore();
