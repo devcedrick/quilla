@@ -142,6 +142,39 @@ blob and binding it can leave a private orphan blob; inventory such blobs only
 through a separately authorized reconciliation operation. No automatic sweep or
 hard deletion of question/reference/history records is provided.
 
+## One-time seed publication rehearsal — future approval required
+
+Issue #96 adds a separate seed protocol after a completed import. Import still
+creates drafts only. [ADR 0022](../ADR/0022-one-time-seed-bootstrap-publication.md),
+policy issue [#104](https://github.com/devcedrick/quilla/issues/104) and
+[the development rehearsal](development-import-rehearsal.md) define the
+one-time exception: exactly 1,890 questions (seven families at 270), 265 references
+and 59 images, accepted and published all-or-nothing by two distinct active admins.
+
+Do not run this against production. It requires the same reviewed development
+target as the importer, plus:
+
+- `SEED_PUBLICATION_ENABLED=true` on that exact backend;
+- `SEED_PUBLICATION_PLAN_CHECKSUM` set to the reviewed plan checksum;
+- `SEED_PUBLICATION_APPROVER` set to the approver's Clerk token identifier;
+- a completed import run owned by the importer;
+- short-lived tokens for the importer and the approver in separate environment
+  variables. The backend enforces independence even though one CLI coordinates
+  both phases.
+
+```powershell
+node scripts/publish-seed-question-bank.mjs --apply --target approved-dev --expect-plan <plan-checksum> --import-run <completed-import-run-id> --checkpoint <private-checkpoint-path> --json
+node scripts/publish-seed-question-bank.mjs --status --target approved-dev --run <seed-run-id> --json
+node scripts/publish-seed-question-bank.mjs --pause --target approved-dev --run <seed-run-id>
+node scripts/publish-seed-question-bank.mjs --rollback --target approved-dev --run <seed-run-id> --reason <incident-reference>
+```
+
+Serving remains blocked until every pinned version is published. A second plan for
+the same target is rejected. Pause releases the lease without losing progress; a
+partial rollback leaves the run paused and cannot be resumed. Rollback archives
+versions and always preserves questions, reviews and history. Do not renumber,
+replace content, bypass the plan or delete records to force completion.
+
 ## Acceptance boundary
 
 Successful import means validated source identities were staged as drafts or

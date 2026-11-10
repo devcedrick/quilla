@@ -1,9 +1,9 @@
 # ADR 0020: Version Question Content and Gate Publication Independently
 
-- **Status:** Accepted design; local implementation, not deployed
+- **Status:** Accepted design; local implementation, not deployed; seed bootstrap clarified by ADR 0022
 - **Date:** 2026-11-07
 - **Decision owner:** Quilla maintainer
-- **Related:** #32, #31, #24, #29 and #95
+- **Related:** #32, #31, #24, #29, #95, #96 and ADR 0022
 
 The maintainer approved the [question lifecycle proposal](../content/question-lifecycle-implementation-proposal.md),
 including its five-criterion editorial quality rubric. Canonical questions retain
@@ -39,3 +39,14 @@ Authentication/roles are unchanged. No deployment, live import or publication is
 part of local verification. Typed in-memory test references avoid manual
 generated-binding edits; normal supported API generation and live schema
 validation require a later authorized Convex workflow.
+
+## Seed bootstrap fence
+
+[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a distinct seed
+publication protocol for the exact initial corpus. While a run is incomplete,
+ordinary submission, review, publication and archive operations on a pinned
+version fail with `SEED_PUBLICATION_REQUIRED`. Seed acceptance uses a separate
+immutable review kind and a global serving gate; a version that reaches
+`published` early is not servable until all 1,890 are published. Rollback archives
+pinned versions and never hard-deletes them. These additions do not weaken the
+ordinary lifecycle: they fence only versions pinned by an active seed run.

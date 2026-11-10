@@ -1,9 +1,9 @@
 # ADR 0021: Guarded Restartable Question-Bank Draft Import
 
-- **Status:** Accepted design; local implementation, not deployed
+- **Status:** Accepted design; local implementation, not deployed; seed publication clarified by ADR 0022
 - **Date:** 2026-11-08
 - **Decision owner:** Quilla maintainer
-- **Related:** #95; ADRs 0018–0020; deferred editorial audit #98
+- **Related:** #95, #96; ADRs 0018–0020, 0022; deferred editorial audit #98
 
 The maintainer approved the [implementation contract](../content/question-import-implementation-proposal.md).
 The CLI reuses the offline seed validator and consumes its exact validated
@@ -32,3 +32,14 @@ release or expire their lease, and can resume under the same owner and plan with
 fresh authentication. Stale workers cannot complete writes after generation
 changes. No publication, learner-serving API, deployment, live import, taxonomy
 installation, automatic storage sweep or historical-attempt mutation is included.
+
+## Seed publication handoff
+
+[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a separate protocol
+that consumes a completed import run; import itself still never publishes.
+The seed CLI verifies the frozen 7 × 270 corpus, requires two distinct admins and
+a pinned plan, then stages and submits as the importer before the approver accepts
+and publishes. The target registry remains empty, and no live import or publication
+is included in this local implementation. Interrupted seed runs pause and resume
+under the same plan; rollback archives rather than deletes. The supplemental audit
+in #98 remains open.

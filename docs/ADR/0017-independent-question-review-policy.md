@@ -1,9 +1,9 @@
 # ADR 0017: Require One Independent Admin Approval per Question Version
 
-- **Status:** Accepted policy; backend implementation pending in #32
+- **Status:** Accepted policy; backend implementation pending in #32; seed bootstrap clarified by ADR 0022
 - **Date:** 2026-11-06
 - **Decision owner:** Quilla maintainer
-- **Related:** #31, #32, #95 and ADR 0016
+- **Related:** #31, #32, #95, #96 and ADRs 0016, 0022
 
 ## Context and decision
 
@@ -84,3 +84,14 @@ decisions cannot both commit. Publication without exact-version approval fails.
 This ADR specifies behavior for #32; it does not deploy a schema, publish content,
 complete the supplemental audit, or establish empirical item calibration. A
 second active admin is operationally necessary when the contributor is an admin.
+
+## Seed bootstrap clarification
+
+[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a distinct,
+plan-level acceptance for the exact 1,890-question seed corpus, recorded as a
+`seed_acceptance` review. It does not relax the self-approval prohibition above:
+the seed approver is a second active admin who differs from the importer,
+canonical contributor and material version creator. It creates no reusable
+exception and does not count as ordinary editorial review. Every later question
+version and every material correction still requires the independent version
+review described here.
