@@ -2,7 +2,6 @@ import type { QueryCtx } from "../_generated/server";
 import type { Id } from "../_generated/dataModel";
 import { validateQuestion } from "./questionContent";
 import { questionWorkflowError as fail } from "./questionWorkflow";
-import { assertSeedServingComplete } from "./seedPublicationProtocol";
 
 /** Trusted selector primitive. The caller must authorize the assessment operation. */
 export async function loadPublishedQuestion(
@@ -12,7 +11,6 @@ export async function loadPublishedQuestion(
   const version = await ctx.db.get("questionVersions", id);
   if (!version || version.state !== "published" || !version.approvalDecisionId)
     fail("QUESTION_UNAVAILABLE");
-  await assertSeedServingComplete(ctx, version._id);
   const verified = await validateQuestion(
     ctx,
     version.content,

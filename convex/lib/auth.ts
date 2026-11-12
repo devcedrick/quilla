@@ -44,7 +44,7 @@ export async function requireActiveUser(ctx: AuthContext) {
       message: "Account setup is required.",
     });
   }
-  if (user.status !== "active") {
+  if (user.status !== "active" || user.role === "system") {
     throw new ConvexError({
       code: "ACCOUNT_SUSPENDED",
       message: "This account cannot access Quilla learning features.",

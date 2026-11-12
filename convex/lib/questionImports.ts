@@ -1,7 +1,7 @@
 import type { MutationCtx } from "../_generated/server";
-import type { Id } from "../_generated/dataModel";
+import type { Doc, Id } from "../_generated/dataModel";
 import { requireAdmin } from "./auth";
-import { appendAdminAudit } from "./audit";
+import { appendActorAudit } from "./audit";
 import {
   validateQuestion,
   type QuestionContent,
@@ -22,8 +22,13 @@ export async function importQuestionDraft(
     referenceVersionId?: Id<"questionReferenceVersions">;
   },
   validatedHashes?: { contentHash: string; contentFingerprint: string },
+  options: {
+    actor?: Doc<"users">;
+    bootstrapRunId?: Id<"questionImportRuns">;
+  } = {},
 ) {
-  const actor = await requireAdmin(ctx);
+  const actor = options.actor ?? (await requireAdmin(ctx));
+  if (actor.role !== "admin" && actor.role !== "system") fail("FORBIDDEN");
   positive(input.version);
   text(input.questionId);
   if (input.questionId.length > 100) fail("VALIDATION_FAILED");
@@ -88,8 +93,11 @@ export async function importQuestionDraft(
     createdAt: Date.now(),
     state: "draft",
     workflowRevision: 1,
+    ...(options.bootstrapRunId
+      ? { bootstrapRunId: options.bootstrapRunId }
+      : {}),
   });
-  await appendAdminAudit(ctx, {
+  await appendActorAudit(ctx, actor, {
     entityType: "question_version",
     entityId: questionVersionId,
     action: "import_draft",

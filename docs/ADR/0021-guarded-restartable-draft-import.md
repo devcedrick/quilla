@@ -1,6 +1,6 @@
 # ADR 0021: Guarded Restartable Question-Bank Draft Import
 
-- **Status:** Accepted design; local implementation, not deployed; seed publication clarified by ADR 0022
+- **Status:** Accepted design; local implementation, not deployed; seed bootstrap clarified by ADR 0022
 - **Date:** 2026-11-08
 - **Decision owner:** Quilla maintainer
 - **Related:** #95, #96; ADRs 0018–0020, 0022; deferred editorial audit #98
@@ -33,13 +33,15 @@ fresh authentication. Stale workers cannot complete writes after generation
 changes. No publication, learner-serving API, deployment, live import, taxonomy
 installation, automatic storage sweep or historical-attempt mutation is included.
 
-## Seed publication handoff
+## Seed bootstrap handoff
 
-[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a separate protocol
-that consumes a completed import run; import itself still never publishes.
-The seed CLI verifies the frozen 7 × 270 corpus, requires two distinct admins and
-a pinned plan, then stages and submits as the importer before the approver accepts
-and publishes. The target registry remains empty, and no live import or publication
-is included in this local implementation. Interrupted seed runs pause and resume
-under the same plan; rollback archives rather than deletes. The supplemental audit
-in #98 remains open.
+[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a separate developer-only
+protocol for the same frozen corpus. It creates its own bootstrap run rather than
+consuming a completed draft import; import through this ADR still never publishes.
+The bootstrap CLI verifies the frozen 7 × 270 corpus, runs internal Convex functions
+through deployment CLI credentials, and lets two non-login system identities import,
+accept and publish each version as it lands. No Clerk account, active admin or human
+approver is required, and the target registry remains empty. Interrupted bootstrap
+runs pause and resume under the same plan; a fully rolled-back run may be retried as a
+fresh run; rollback archives rather than deletes. The supplemental audit in #98
+remains open.

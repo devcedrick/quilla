@@ -7,7 +7,6 @@ import {
   nextQuestionState,
   questionWorkflowError as fail,
 } from "./questionWorkflow";
-import { assertSeedLifecycleFree } from "./seedPublicationProtocol";
 
 export const workflowArgs = {
   questionVersionId: v.id("questionVersions"),
@@ -19,7 +18,7 @@ export type WorkflowArgs = {
 };
 type Transition = Parameters<typeof nextQuestionState>[3];
 
-/** Load the exact version at its expected revision, including the seed-run fence. */
+/** Load the exact version at its expected revision. */
 export async function loadWorkflow(
   ctx: MutationCtx,
   args: WorkflowArgs,
@@ -35,7 +34,6 @@ export async function loadWorkflow(
     fail("STALE_REVISION");
   const question = await ctx.db.get("questions", version.questionId);
   if (!question) fail("QUESTION_NOT_FOUND");
-  await assertSeedLifecycleFree(ctx, version._id);
   return { actor: admin, version, question };
 }
 

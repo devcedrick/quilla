@@ -1,5 +1,6 @@
 import { ConvexError, v } from "convex/values";
 import type { MutationCtx } from "../_generated/server";
+import type { Doc, Id } from "../_generated/dataModel";
 import { requireAdmin } from "./auth";
 
 export const auditEventFields = {
@@ -66,13 +67,16 @@ function serialize(snapshot: Snapshot): string | null {
 }
 
 /** Call inside the domain mutation; pass only explicitly allowlisted snapshots. */
-export async function appendAdminAudit(ctx: MutationCtx, event: AuditEvent) {
-  const actor = await requireAdmin(ctx);
+async function insertAudit(
+  ctx: MutationCtx,
+  actorId: Id<"users">,
+  event: AuditEvent,
+) {
   validateAuditIdentifier(event.entityType, 100);
   validateAuditIdentifier(event.entityId, 256);
   validateAuditIdentifier(event.action, 100);
   return await ctx.db.insert("auditEvents", {
-    actorId: actor._id,
+    actorId,
     entityType: event.entityType,
     entityId: event.entityId,
     action: event.action,
@@ -80,4 +84,42 @@ export async function appendAdminAudit(ctx: MutationCtx, event: AuditEvent) {
     afterJson: serialize(event.after),
     occurredAt: Date.now(),
   });
+}
+
+/** Attribute an event to an already-authorized admin or system actor. */
+export async function appendActorAudit(
+  ctx: MutationCtx,
+  actor: Doc<"users">,
+  event: AuditEvent,
+) {
+  if (
+    actor.status !== "active" ||
+    (actor.role !== "admin" && actor.role !== "system")
+  )
+    throw new ConvexError({
+      code: "FORBIDDEN",
+      message: "This actor cannot write audit events.",
+    });
+  return insertAudit(ctx, actor._id, event);
+}
+
+/** Call inside an authorized domain mutation; the actor is resolved from identity. */
+export async function appendAdminAudit(ctx: MutationCtx, event: AuditEvent) {
+  const actor = await requireAdmin(ctx);
+  return insertAudit(ctx, actor._id, event);
+}
+
+/** Internal bootstrap path only: attribute an event to a non-login system actor. */
+export async function appendSystemAudit(
+  ctx: MutationCtx,
+  actorId: Id<"users">,
+  event: AuditEvent,
+) {
+  const actor = await ctx.db.get("users", actorId);
+  if (!actor || actor.role !== "system" || actor.status !== "active")
+    throw new ConvexError({
+      code: "BOOTSTRAP_SYSTEM_ACTOR_REQUIRED",
+      message: "System audit attribution is unavailable.",
+    });
+  return insertAudit(ctx, actorId, event);
 }

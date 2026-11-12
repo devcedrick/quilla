@@ -1,8 +1,8 @@
-# Development import and seed publication rehearsal
+# Development import and bootstrap publication rehearsal
 
 Issue [#96](https://github.com/devcedrick/quilla/issues/96) rehearses the
-one-time publication of the initial question bank without contacting a deployment
-or writing content. The policy is recorded in
+one-time developer bootstrap of the initial question bank without contacting a
+deployment or writing content. The policy is recorded in
 [ADR 0022](../ADR/0022-one-time-seed-bootstrap-publication.md) and tracked in
 [#104](https://github.com/devcedrick/quilla/issues/104). This is local
 implementation evidence, not a live import, deployment, editorial acceptance or
@@ -10,9 +10,11 @@ empirical calibration report.
 
 ## Current status
 
-- The rehearsal uses deterministic synthetic fixtures and mocked admin identities.
+- The rehearsal uses deterministic synthetic fixtures; the CLI policy test uses the
+  real offline plan.
 - No import target is registered; `approvedImportTargets` remains empty.
-- No credentials were used and no Convex database, storage or audit write occurred.
+- No Clerk account, admin user, credential or deploy key was used, and no Convex
+  database, storage or audit write occurred.
 - No production or development deployment was changed.
 - The deferred supplemental audit in
   [#98](https://github.com/devcedrick/quilla/issues/98) remains open.
@@ -42,127 +44,136 @@ The one-time exception is bound to the exact offline plan produced by
 The unit test in `scripts/import-question-bank.test.mjs` recomputes this shape and
 fails if any family, total or checksum drifts.
 
-## Two-admin protocol
+## Developer-only protocol
 
-The bootstrap requires two distinct active admins:
+No active admin, human approver or Clerk session participates. The CLI runs the
+installed Convex CLI's `convex run` command (the same entry point as
+`npx convex run`) through Node without a shell, using the developer's Convex CLI
+login or `CONVEX_DEPLOY_KEY`. Running the CLI directly keeps JSON arguments intact
+on Windows, where spawning `npx.cmd` would reinterpret quotes and question text.
 
-1. **Importer/submitter** owns the completed import run and the draft versions.
-   It stages the exact question pins and submits them for review.
-2. **Approver/publisher** is pinned by `SEED_PUBLICATION_APPROVER`. It records a
-   plan-level `seed_acceptance` review for each version and publishes only after
-   the whole batch is approved.
+1. **System importer** (`system:seed-bootstrap-importer`) owns the bootstrap run,
+   creates drafts, submits versions and reserves asset uploads.
+2. **System approver** (`system:seed-bootstrap-approver`) records a plan-level
+   `bootstrap_acceptance` review and publishes each version.
 
-The backend derives both identities from `ctx.auth`. It rejects an approver who
-matches the importer, canonical contributor or material version creator. No
-client-supplied user ID, manifest note or offline sign-off supplies authority.
+Both are non-login users with role `system`. `requireActiveUser`,
+`ensureCurrentUser` and `currentAccess` reject them, so they cannot enter the
+learner or admin application. The backend creates them idempotently on first use;
+no client-supplied identity is trusted.
 
-The seed path reuses `questionReviews` but writes a distinct review kind:
-`seed_acceptance`, decision `accept`, rubric `seed-bootstrap-v1`, carrying the
+The bootstrap reuses `questionReviews` but writes a distinct review kind:
+`bootstrap_acceptance`, decision `accept`, rubric `seed-bootstrap-v1`, carrying the
 run ID and plan checksum. The review records backend-generated evidence for the
-completed import, pinned plan/inventory, frozen policy, revalidated content and
-independent approver. It is not an ordinary `review` decision and does not
-create a reusable publication shortcut.
+processed pinned inventory, reviewed inventory checksum, frozen corpus policy,
+revalidated content and reference, and the distinct system approver. It is not an
+ordinary `review` decision and does not create a reusable publication shortcut.
 
 ## State and serving contract
 
-Seed runs move through `preparing`, `running`, `paused`, `complete` or
-`rolled_back`. Pinned items move through `staged`, `submitted`, `approved`,
-`published` or `rolled_back`.
+Bootstrap runs move through `preparing`, `running`, `paused`, `complete` or
+`rolled_back`. Entries move through `pending` and `done` and retain their source
+descriptor, outcome and resulting version ID.
 
-- A second plan for the same target is rejected, including after completion.
-- Staging is ordered, bounded and idempotent at the server checkpoint.
-- Submit, accept and publish run in batches of ten; staging uses fifty.
+- A second bootstrap run uses the same frozen plan, not a different corpus.
+- A completed run is idempotent; a paused or lease-expired run resumes with a new
+  generation. A live lease is refused.
+- A fully rolled-back run may be retried as a fresh run; a partially rolled-back run
+  must finish rolling back first.
+- Staging is ordered, bounded and idempotent at the server checkpoint; staging uses
+  50 descriptors per call.
+- Import, submit, accept and publish run in batches of at most ten records and
+  256 KiB. Each published version becomes learner-visible as it lands.
 - A fenced lease and generation prevent stale workers from writing.
-- Ordinary lifecycle actions on a pinned version fail with
-  `SEED_PUBLICATION_REQUIRED` until the run is complete or rolled back.
-- `loadPublishedQuestion` refuses every pinned version until **all** 1,890 are
-  published. A partially published seed is never learner-visible.
-- Pause releases the lease without discarding staged or accepted work.
-- Rollback archives pinned versions in bounded batches, records audit events and
-  never hard-deletes questions, versions, reviews or attempt history. Partial
-  rollback leaves the run paused and blocks resumption.
+- `SEED_BOOTSTRAP_ENABLED=true` is required only for the bootstrap window and only
+  for begin, preflight, staging and application. Status, pause and rollback still
+  work after the window is disabled.
+- Pause releases the lease without discarding published or staged work.
+- Rollback archives bootstrap-published versions in bounded batches, records audit
+  events and never hard-deletes questions, versions, reviews or attempt history. A
+  partial rollback leaves the run paused and blocks resumption.
+- Rollback removes archived versions from serving; previously published versions
+  from a paused run remain servable until archived.
 
 ## Local rehearsal coverage
 
-The synthetic rehearsal in `convex/questionImportRehearsal.test.ts` uses a
-two-family, two-question policy with a sealed test taxonomy and a completed
-synthetic import. Its production policy constant is mocked only for that small
-fixture. It proves:
+`convex/seedBootstrap.test.ts` uses a synthetic two-family, six-record corpus with a
+sealed test taxonomy. Its production plan/policy constants are mocked only for that
+small fixture. It proves:
 
-- staging, independent acceptance and publication of the complete synthetic batch;
-- serving denial before completion and serving after completion;
-- the ordinary-lifecycle fence while the run is incomplete;
-- pause, resume with a new generation, and stale-generation rejection;
-- distinct active-admin and pinned-approver enforcement;
-- unauthenticated, wrong-role, suspended, nonparticipant, expired-lease and
-  mismatched-target denial;
-- ordered staging, duplicate pins, batch bounds and phase ordering;
-- archive-only rollback with retained questions and reviews;
-- idempotent completed retries and rejection of a second plan.
+- system-actor creation, distinct identities and login denial;
+- public admin import calls rejecting a bootstrap run;
+- exact plan/policy and bootstrap-window guards;
+- ordered staging, serve-as-landed publication and run completion;
+- `bootstrap_acceptance` evidence and system audit events;
+- idempotent completed reruns and resume with a new generation;
+- stale-generation and lease rejection;
+- deterministic source mismatch before content writes;
+- archive-only rollback, full-rollback retry and archived-version reactivation.
 
 `convex/questions.test.ts` covers the #34 bulk submit, publish and archive
 mutations: per-item success/failure results, stale revisions, missing approval,
 invalid transitions, nonadmin denial and batch bounds. It does not add bulk
 editorial review or approval.
 
-`scripts/publish-seed-question-bank.test.mjs` covers plan verification, pin
-derivation, batching, bounded status reads, the two-client orchestration,
-idempotency, recovery metadata and rollback. A separate assertion runs the real
-offline plan through the frozen 7 × 270 policy.
+`scripts/bootstrap-question-bank.test.mjs` covers plan verification, batching,
+bounded status reads, deployment selection, transient retries, replayed batches,
+asset upload, preflight conflicts, recovery metadata, pause and rollback. A separate
+assertion in `scripts/import-question-bank.test.mjs` runs the real offline plan
+through the frozen 7 × 270 policy.
 
 ## Future authorized rehearsal commands
 
 The CLI is inert by default. It does not load `.env.local`, and no target name is
 registered. After separate approval of an exact development deployment, taxonomy
-installation and registry change, the operator would provide short-lived Clerk
-user tokens for both admins. Never paste real tokens into a command committed to
-source or shared in chat.
+installation and registry change, the operator selects the deployment with
+`--deployment <name>`, `--prod --confirm-production`, or `CONVEX_DEPLOY_KEY`.
 
 ```powershell
 # Offline: validates the real corpus and prints the plan checksum. No writes.
-node scripts/publish-seed-question-bank.mjs
-node scripts/publish-seed-question-bank.mjs --json
+node scripts/bootstrap-question-bank.mjs
+node scripts/bootstrap-question-bank.mjs --json
 
 # Read-only status after a separately authorized run exists.
-node scripts/publish-seed-question-bank.mjs --status --target <approved-dev> --run <seed-run-id> --json
+node scripts/bootstrap-question-bank.mjs --status --target <approved-target> --deployment <development-name> --run <run-id> --json
 
-# Stage, submit, accept and publish the exact plan with two admin tokens.
-$env:QUESTION_BANK_IMPORT_TOKEN = <importer-token>
-$env:SEED_PUBLICATION_APPROVER_TOKEN = <approver-token>
-node scripts/publish-seed-question-bank.mjs --apply --target <approved-dev> --expect-plan 71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38 --import-run <completed-import-run-id> --checkpoint <private-checkpoint-path> --json
+# Import, accept and publish the exact plan with deployment credentials.
+node scripts/bootstrap-question-bank.mjs --apply --target <approved-target> --deployment <development-name> --expect-plan 71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38 --checkpoint <private-checkpoint-path> --json
 
 # Recovery.
-node scripts/publish-seed-question-bank.mjs --pause --target <approved-dev> --run <seed-run-id>
-node scripts/publish-seed-question-bank.mjs --rollback --target <approved-dev> --run <seed-run-id> --reason <incident-reference>
+node scripts/bootstrap-question-bank.mjs --pause --target <approved-target> --deployment <development-name> --run <run-id>
+node scripts/bootstrap-question-bank.mjs --rollback --target <approved-target> --deployment <development-name> --run <run-id> --reason <incident-reference>
 ```
 
-Required backend values on the exact development deployment:
+Required backend values on the exact target deployment:
 
-- `SEED_PUBLICATION_ENABLED=true`
-- `SEED_PUBLICATION_PLAN_CHECKSUM=71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38`
-- `SEED_PUBLICATION_APPROVER=<approver Clerk token identifier>`
+- `SEED_BOOTSTRAP_ENABLED=true` during the bootstrap window;
+- the target registry entry and `CONVEX_CLOUD_URL` must match;
+- the v2 taxonomy must already be installed and sealed.
 
-The registry entry and `CONVEX_CLOUD_URL` must match. Leave these unset/empty
-everywhere else. The checkpoint contains only target, plan, import-run and seed-run
-identities; it contains no tokens or content.
+The ordinary draft importer's `QUESTION_BANK_IMPORT_ENABLED` guard is not used by the
+bootstrap. The checkpoint contains only target, plan and run identities; it contains
+no credentials, tokens or content.
 
 ## Blockers and boundaries
 
-The live rehearsal remains blocked until all of the following are separately
-approved and completed:
+The live development and production runs remain blocked until all of the following
+are separately approved and completed:
 
-1. Exact development deployment approval and target registry registration.
+1. Exact deployment approval and target registry registration.
 2. Matching taxonomy installation and sealing.
-3. Two distinct active admin accounts with short-lived Clerk tokens.
-4. A completed import run with the pinned plan and inventory.
-5. Explicit approval to enable the seed guard on that deployment.
+3. A completed, reviewed offline plan matching both frozen checksums.
+4. Explicit approval to enable `SEED_BOOTSTRAP_ENABLED` on that deployment for the
+   bootstrap window.
+5. For production, fresh explicit approval of the exact production deployment and
+   its `--prod --confirm-production` invocation.
 
 The #34 admin UI and Playwright journeys remain blocked because the #33 admin
-workspace does not yet exist. The bulk backend is available without a UI. This
-work does not establish editorial correctness, replace #98, activate pooled exam
+workspace does not yet exist. The bulk backend is available without a UI. This work
+does not establish editorial correctness, replace #98, activate pooled exam
 selection, calibrate difficulty or guarantee CSC alignment.
 
 ## Verification
 
-See [the seed rehearsal verification](seed-publication-verification.md) for the
+See [the bootstrap rehearsal verification](seed-bootstrap-verification.md) for the
 local commands and results recorded with this change.

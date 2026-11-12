@@ -11,12 +11,12 @@ import {
 } from "./lib/questionContent";
 import { questionState, questionReview } from "./lib/questionWorkflow";
 import { runFields, entryFields } from "./lib/questionImportProtocol";
-import { seedRunFields, seedItemFields } from "./lib/seedPublicationProtocol";
 
 export default defineSchema({
   questionImportRuns: defineTable(runFields)
     .index("by_targetUrl_and_leaseUntil", ["targetUrl", "leaseUntil"])
-    .index("by_target_and_planChecksum", ["target", "planChecksum"]),
+    .index("by_target_and_planChecksum", ["target", "planChecksum"])
+    .index("by_mode_and_target", ["mode", "target"]),
   questionImportEntries: defineTable(entryFields)
     .index("by_runId_and_ordinal", ["runId", "ordinal"])
     .index("by_runId_and_kind_and_sourceId_and_version", [
@@ -25,15 +25,6 @@ export default defineSchema({
       "sourceId",
       "version",
     ]),
-  seedPublicationRuns: defineTable(seedRunFields)
-    .index("by_targetUrl_and_leaseUntil", ["targetUrl", "leaseUntil"])
-    .index("by_target_and_planChecksum", ["target", "planChecksum"]),
-  seedPublicationItems: defineTable(seedItemFields)
-    .index("by_runId_and_ordinal", ["runId", "ordinal"])
-    .index("by_runId_and_importOrdinal", ["runId", "importOrdinal"])
-    .index("by_runId_and_family", ["runId", "family"])
-    .index("by_questionVersionId", ["questionVersionId"])
-    .index("by_runId_and_questionVersionId", ["runId", "questionVersionId"]),
   questions: defineTable({
     questionId: v.string(),
     contributorId: v.id("users"),
@@ -57,6 +48,7 @@ export default defineSchema({
     state: questionState,
     workflowRevision: v.number(),
     approvalDecisionId: v.optional(v.id("questionReviews")),
+    bootstrapRunId: v.optional(v.id("questionImportRuns")),
   })
     .index("by_questionId_and_version", ["questionId", "version"])
     .index("by_state", ["state"])
@@ -64,7 +56,8 @@ export default defineSchema({
     .index("by_contentFingerprint_and_questionId", [
       "contentFingerprint",
       "questionId",
-    ]),
+    ])
+    .index("by_bootstrapRunId_and_state", ["bootstrapRunId", "state"]),
   questionReviews: defineTable(questionReview)
     .index("by_questionVersionId", ["questionVersionId"])
     .index("by_reviewerId", ["reviewerId"]),

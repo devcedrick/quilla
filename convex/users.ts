@@ -16,7 +16,7 @@ export const ensureCurrentUser = mutation({
     const identity = await requireIdentity(ctx);
     const existing = await findUserByIdentity(ctx, identity.tokenIdentifier);
     if (existing) {
-      if (existing.status !== "active") {
+      if (existing.status !== "active" || existing.role === "system") {
         throw new ConvexError({
           code: "ACCOUNT_SUSPENDED",
           message: "This account cannot access Quilla learning features.",
@@ -47,7 +47,8 @@ export const currentAccess = query({
     const identity = await requireIdentity(ctx);
     const user = await findUserByIdentity(ctx, identity.tokenIdentifier);
     if (!user) return { status: "missing_profile" as const };
-    if (user.status !== "active") return { status: "suspended" as const };
+    if (user.status !== "active" || user.role === "system")
+      return { status: "suspended" as const };
     return { status: "active" as const, userId: user._id, role: user.role };
   },
 });

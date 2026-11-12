@@ -142,38 +142,53 @@ blob and binding it can leave a private orphan blob; inventory such blobs only
 through a separately authorized reconciliation operation. No automatic sweep or
 hard deletion of question/reference/history records is provided.
 
-## One-time seed publication rehearsal — future approval required
+## One-time developer bootstrap — separate approval required
 
-Issue #96 adds a separate seed protocol after a completed import. Import still
-creates drafts only. [ADR 0022](../ADR/0022-one-time-seed-bootstrap-publication.md),
+Issue #96 adds a developer-only bootstrap for the initial 1,890-question bank.
+Import through the ordinary #95 path still creates drafts only; this bootstrap
+instead imports, accepts and publishes the exact reviewed corpus through internal
+Convex functions and two non-login system identities. It needs no Clerk account,
+active admin or human approver. [ADR 0022](../ADR/0022-one-time-seed-bootstrap-publication.md),
 policy issue [#104](https://github.com/devcedrick/quilla/issues/104) and
-[the development rehearsal](development-import-rehearsal.md) define the
-one-time exception: exactly 1,890 questions (seven families at 270), 265 references
-and 59 images, accepted and published all-or-nothing by two distinct active admins.
+[the development rehearsal](development-import-rehearsal.md) define the exception:
+exactly 1,890 questions (seven families at 270), 265 references and 59 images.
 
-Do not run this against production. It requires the same reviewed development
-target as the importer, plus:
+Do not run this against production without fresh explicit approval. It requires the
+same reviewed target registry as the importer, plus:
 
-- `SEED_PUBLICATION_ENABLED=true` on that exact backend;
-- `SEED_PUBLICATION_PLAN_CHECKSUM` set to the reviewed plan checksum;
-- `SEED_PUBLICATION_APPROVER` set to the approver's Clerk token identifier;
-- a completed import run owned by the importer;
-- short-lived tokens for the importer and the approver in separate environment
-  variables. The backend enforces independence even though one CLI coordinates
-  both phases.
+- `SEED_BOOTSTRAP_ENABLED=true` on that exact backend during the bootstrap window;
+- a sealed `cse-taxonomy-2027-v2` taxonomy;
+- deployment credentials for the Convex CLI `run` command: a Convex CLI login or
+  `CONVEX_DEPLOY_KEY`, selected with `--deployment <name>`, `--prod
+--confirm-production`, or the environment variable;
+- the reviewed plan checksum
+  `71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38`.
 
 ```powershell
-node scripts/publish-seed-question-bank.mjs --apply --target approved-dev --expect-plan <plan-checksum> --import-run <completed-import-run-id> --checkpoint <private-checkpoint-path> --json
-node scripts/publish-seed-question-bank.mjs --status --target approved-dev --run <seed-run-id> --json
-node scripts/publish-seed-question-bank.mjs --pause --target approved-dev --run <seed-run-id>
-node scripts/publish-seed-question-bank.mjs --rollback --target approved-dev --run <seed-run-id> --reason <incident-reference>
+# Offline plan check; no writes.
+node scripts/bootstrap-question-bank.mjs
+node scripts/bootstrap-question-bank.mjs --json
+
+# Read-only status.
+node scripts/bootstrap-question-bank.mjs --status --target <approved-target> --deployment <development-name> --run <run-id> --json
+
+# Import, accept and publish in restartable batches.
+node scripts/bootstrap-question-bank.mjs --apply --target <approved-target> --deployment <development-name> --expect-plan <plan-checksum> --checkpoint <private-checkpoint-path> --json
+
+# Recovery.
+node scripts/bootstrap-question-bank.mjs --pause --target <approved-target> --deployment <development-name> --run <run-id>
+node scripts/bootstrap-question-bank.mjs --rollback --target <approved-target> --deployment <development-name> --run <run-id> --reason <incident-reference>
 ```
 
-Serving remains blocked until every pinned version is published. A second plan for
-the same target is rejected. Pause releases the lease without losing progress; a
-partial rollback leaves the run paused and cannot be resumed. Rollback archives
-versions and always preserves questions, reviews and history. Do not renumber,
-replace content, bypass the plan or delete records to force completion.
+The CLI reuses the exact offline validated records, uploads the 59 images through the
+protected Convex storage path, and retries transient transport or lease failures
+against the server checkpoint. A live lease is refused; a paused or expired run
+resumes with a new generation. Published versions become servable as their batches
+land; there is no global all-or-nothing gate. Pause releases the lease without losing
+progress. Rollback archives bootstrap-published versions and always preserves
+questions, reviews and history; a partial rollback leaves the run paused and cannot
+be resumed. A fully rolled-back run may be retried as a fresh run. Do not renumber,
+replace content, bypass the frozen plan or delete records to force completion.
 
 ## Acceptance boundary
 

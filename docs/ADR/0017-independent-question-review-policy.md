@@ -89,9 +89,10 @@ second active admin is operationally necessary when the contributor is an admin.
 
 [ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a distinct,
 plan-level acceptance for the exact 1,890-question seed corpus, recorded as a
-`seed_acceptance` review. It does not relax the self-approval prohibition above:
-the seed approver is a second active admin who differs from the importer,
-canonical contributor and material version creator. It creates no reusable
-exception and does not count as ordinary editorial review. Every later question
-version and every material correction still requires the independent version
-review described here.
+`bootstrap_acceptance` review by a non-login system approver. It does not relax the
+self-approval prohibition above: the system approver differs from the system
+importer and from every canonical contributor and material version creator, and a
+system identity cannot review human-authored content through the ordinary path. It
+creates no reusable exception and does not count as ordinary editorial review.
+Every later question version and every material correction still requires the
+independent version review described here.

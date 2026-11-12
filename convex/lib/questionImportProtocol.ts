@@ -86,7 +86,10 @@ export type Descriptor = Infer<typeof descriptor>;
 export const runFields = {
   target: v.string(),
   targetUrl: v.string(),
+  /** Missing means the ordinary guarded draft import. */
+  mode: v.optional(v.union(v.literal("draft"), v.literal("bootstrap"))),
   ownerId: v.id("users"),
+  approverId: v.optional(v.id("users")),
   planChecksum: v.string(),
   inventoryHash: v.string(),
   chain: v.string(),
@@ -94,10 +97,14 @@ export const runFields = {
   expected: v.number(),
   staged: v.number(),
   processed: v.number(),
+  rolledBack: v.optional(v.number()),
+  rollbackReason: v.optional(v.string()),
   state: v.union(
     v.literal("preparing"),
     v.literal("running"),
+    v.literal("paused"),
     v.literal("complete"),
+    v.literal("rolled_back"),
   ),
   generation: v.number(),
   leaseUntil: v.number(),

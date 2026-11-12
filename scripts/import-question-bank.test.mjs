@@ -19,7 +19,7 @@ import {
   batch as validateBatch,
   validateDescriptor,
 } from "../convex/lib/questionImportProtocol";
-import { verifySeedPlan } from "./publish-seed-question-bank.mjs";
+import { verifyBootstrapPlan } from "./bootstrap-question-bank.mjs";
 import {
   canonical as serverCanonical,
   digest as serverDigest,
@@ -104,7 +104,7 @@ describe("offline import planning", () => {
       ).not.toThrow();
       expect(p.report.inventory).toHaveLength(2214);
       expect(p.report.manifests.every((m) => m.questions === 270)).toBe(true);
-      expect(verifySeedPlan(p)).toEqual({
+      expect(verifyBootstrapPlan(p)).toEqual({
         families: 7,
         questions: 1890,
         references: 265,

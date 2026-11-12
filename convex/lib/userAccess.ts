@@ -1,6 +1,10 @@
 import { v, type Infer } from "convex/values";
 
-export const userRole = v.union(v.literal("user"), v.literal("admin"));
+export const userRole = v.union(
+  v.literal("user"),
+  v.literal("admin"),
+  v.literal("system"),
+);
 export const userStatus = v.union(v.literal("active"), v.literal("suspended"));
 
 export const activeAccess = v.object({

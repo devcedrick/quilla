@@ -11,6 +11,7 @@ import { requireAdmin } from "./lib/auth";
 import { appendAdminAudit } from "./lib/audit";
 import { digest, positive, bounded } from "./lib/questionContent";
 import { questionWorkflowError as fail } from "./lib/questionWorkflow";
+import { importLeaseMs } from "../lib/question-import-contract.mjs";
 import {
   batch,
   checksum,
@@ -19,7 +20,6 @@ import {
   sourceRecord,
   runAccess,
   requireImportTarget,
-  validateDescriptor,
 } from "./lib/questionImportProtocol";
 import {
   ownedRun,
@@ -31,6 +31,7 @@ import {
   resolveReference,
   inspectSource,
   newDuplicateScanBudget,
+  stageDescriptors,
 } from "./lib/questionImportState";
 import { importQuestionDraft } from "./lib/questionImports";
 import { createReferenceDraft } from "./lib/questionReferenceDrafts";
@@ -39,7 +40,7 @@ import {
   safeImportFailure,
 } from "../lib/question-import-contract.mjs";
 import schema from "./schema";
-const leaseMs = 5 * 60 * 1000;
+
 const assetReserve = makeFunctionReference<
   "mutation",
   {
@@ -89,7 +90,7 @@ export const preflight = query({
   },
   returns: v.array(classification),
   handler: async (ctx, args) => {
-    await requireAdmin(ctx);
+    const actor = await requireAdmin(ctx);
     requireImportTarget(args.target);
     batch(args.records);
     const taxonomy = await ctx.db
@@ -110,6 +111,7 @@ export const preflight = query({
           ordinal: record.descriptor.ordinal,
           ...(await inspectSource(ctx, record.source, args.manifest, {
             duplicateScanBudget,
+            actor,
           })),
         });
       } catch (error) {
@@ -197,7 +199,11 @@ export const begin = mutation({
           )
           .unique();
     if (same) {
-      if (same.ownerId !== actor._id || same.planChecksum !== args.planChecksum)
+      if (
+        same.mode === "bootstrap" ||
+        same.ownerId !== actor._id ||
+        same.planChecksum !== args.planChecksum
+      )
         fail("IMPORT_RUN_FORBIDDEN");
       // A completed plan is an idempotent acknowledgement, not a competing write.
       if (same.state === "complete")
@@ -213,7 +219,7 @@ export const begin = mutation({
     if (same) {
       await ctx.db.patch("questionImportRuns", same._id, {
         generation: same.generation + 1,
-        leaseUntil: Date.now() + leaseMs,
+        leaseUntil: Date.now() + importLeaseMs,
         updatedAt: Date.now(),
       });
       await appendAdminAudit(ctx, {
@@ -249,7 +255,7 @@ export const begin = mutation({
       processed: 0,
       state: "preparing",
       generation: 1,
-      leaseUntil: Date.now() + leaseMs,
+      leaseUntil: Date.now() + importLeaseMs,
       createdAt: Date.now(),
       updatedAt: Date.now(),
     });
@@ -270,7 +276,7 @@ export const renew = mutation({
   handler: async (ctx, args) => {
     await leasedRun(ctx, args);
     await ctx.db.patch("questionImportRuns", args.runId, {
-      leaseUntil: Date.now() + leaseMs,
+      leaseUntil: Date.now() + importLeaseMs,
       updatedAt: Date.now(),
     });
     return null;
@@ -283,87 +289,15 @@ export const stage = mutation({
   handler: async (ctx, args) => {
     const run = await leasedRun(ctx, args);
     batch(args.entries);
-    if (run.state === "running") {
-      // A lost response after the final staging batch is an idempotent replay;
-      // new or changed descriptors still fail closed.
-      for (const d of args.entries) {
-        const prior = await entryAt(ctx, run._id, d.ordinal);
-        if (
-          !prior ||
-          (await digest(receiptDescriptor(prior))) !== (await digest(d))
-        )
-          fail("IMPORT_NOT_PREPARING");
-      }
-      return null;
-    }
-    if (run.state !== "preparing") fail("IMPORT_NOT_PREPARING");
-    let chain = run.chain;
-    let staged = run.staged;
-    const counts = run.stagedCounts.map((c) => ({ ...c }));
-    for (const d of args.entries) {
-      validateDescriptor(d);
-      if (!run.manifests.some((p) => p.family === d.family))
-        fail("INVALID_IMPORT_ENTRY");
-      const prior = await entryAt(ctx, run._id, d.ordinal);
-      if (prior) {
-        if ((await digest(receiptDescriptor(prior))) !== (await digest(d)))
-          fail("IMPORT_SOURCE_CHANGED");
-        continue;
-      }
-      if (d.ordinal !== staged || staged >= run.expected) fail("IMPORT_ORDER");
-      const previous = staged ? await entryAt(ctx, run._id, staged - 1) : null;
-      const rank = { asset: 0, reference: 1, question: 2 };
-      if (previous && rank[previous.kind] > rank[d.kind]) fail("IMPORT_ORDER");
-      const duplicate = await ctx.db
-        .query("questionImportEntries")
-        .withIndex("by_runId_and_kind_and_sourceId_and_version", (q) =>
-          q
-            .eq("runId", run._id)
-            .eq("kind", d.kind)
-            .eq("sourceId", d.sourceId)
-            .eq("version", d.version),
-        )
-        .unique();
-      if (duplicate) fail("IMPORT_DUPLICATE_ID");
-      const count = counts.find((c) => c.family === d.family)!;
-      const field =
-        d.kind === "question"
-          ? "questions"
-          : d.kind === "reference"
-            ? "references"
-            : "assets";
-      count[field]++;
-      if (
-        count[field] > run.manifests.find((p) => p.family === d.family)![field]
-      )
-        fail("INVALID_IMPORT_PLAN");
-      await ctx.db.insert("questionImportEntries", {
-        runId: run._id,
-        ...d,
-        state: "pending",
-      });
-      chain = await digest({ chain, entry: d });
-      staged++;
-    }
-    if (staged === run.expected && chain !== run.inventoryHash)
-      fail("INVALID_IMPORT_PLAN");
-    if (staged !== run.staged) {
-      await ctx.db.patch("questionImportRuns", run._id, {
-        chain,
-        staged,
-        stagedCounts: counts,
-        state: staged === run.expected ? "running" : "preparing",
-        leaseUntil: Date.now() + leaseMs,
-        updatedAt: Date.now(),
-      });
+    const result = await stageDescriptors(ctx, run, args.entries);
+    if (result.after !== result.before)
       await appendAdminAudit(ctx, {
         entityType: "question_import",
         entityId: run._id,
         action: "stage_inventory",
-        before: { staged: run.staged },
-        after: { staged, chain },
+        before: { staged: result.before },
+        after: { staged: result.after, chain: result.chain },
       });
-    }
     return null;
   },
 });
@@ -373,6 +307,7 @@ export const applyBatch = mutation({
   returns: v.null(),
   handler: async (ctx, args) => {
     const run = await leasedRun(ctx, args, { allowComplete: true });
+    const actor = await requireAdmin(ctx);
     batch(args.records);
     if (run.state === "complete") {
       // A retry of a committed batch whose response was lost only acknowledges
@@ -413,6 +348,7 @@ export const applyBatch = mutation({
       const classification = await inspectSource(ctx, record.source, pin, {
         ...(resolved ? { resolvedQuestion: resolved } : {}),
         duplicateCandidates: false,
+        actor,
       });
       if (classification.status === "conflict") fail("CONTENT_CONFLICT");
       let resultId: string;
@@ -437,12 +373,14 @@ export const applyBatch = mutation({
       } else if (record.source.kind === "reference") {
         const resolved = await resolveReference(ctx, record.source.value);
         if (!resolved) fail("UNVERIFIED_ASSET");
-        resultId = await createReferenceDraft(ctx, resolved);
+        resultId = await createReferenceDraft(ctx, resolved, { actor });
       } else {
         if (!resolved) fail("INVALID_IMPORT_ENTRY");
         if (resolved.missingReference) fail("REFERENCE_NOT_FOUND");
         resultId = (
-          await importQuestionDraft(ctx, resolved.input, resolved.hashes)
+          await importQuestionDraft(ctx, resolved.input, resolved.hashes, {
+            actor,
+          })
         ).questionVersionId;
       }
       await ctx.db.patch("questionImportEntries", entry._id, {
@@ -459,7 +397,7 @@ export const applyBatch = mutation({
     await ctx.db.patch("questionImportRuns", run._id, {
       processed,
       state: processed === run.expected ? "complete" : "running",
-      leaseUntil: processed === run.expected ? 0 : Date.now() + leaseMs,
+      leaseUntil: processed === run.expected ? 0 : Date.now() + importLeaseMs,
       updatedAt: Date.now(),
       lastFailure: undefined,
     });

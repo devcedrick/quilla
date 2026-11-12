@@ -40,13 +40,15 @@ part of local verification. Typed in-memory test references avoid manual
 generated-binding edits; normal supported API generation and live schema
 validation require a later authorized Convex workflow.
 
-## Seed bootstrap fence
+## Seed bootstrap boundary
 
-[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a distinct seed
-publication protocol for the exact initial corpus. While a run is incomplete,
-ordinary submission, review, publication and archive operations on a pinned
-version fail with `SEED_PUBLICATION_REQUIRED`. Seed acceptance uses a separate
-immutable review kind and a global serving gate; a version that reaches
-`published` early is not servable until all 1,890 are published. Rollback archives
-pinned versions and never hard-deletes them. These additions do not weaken the
-ordinary lifecycle: they fence only versions pinned by an active seed run.
+[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a distinct developer-only
+bootstrap for the exact initial corpus. It uses two non-login system identities and
+internal Convex functions rather than an active admin or ordinary lifecycle caller.
+Versions are published as their batches land, so serving is not gated on all 1,890
+being present at once. `bootstrapRunId` is attribution only; ordinary archive and
+serving rules still apply to those versions. Ordinary publication does not treat
+`bootstrap_acceptance` as a normal approval, so reactivation after rollback uses the
+bootstrap path. Rollback archives bootstrap-published versions and never hard-deletes
+them. These additions do not weaken the ordinary lifecycle or change the human review
+requirements for any other content.
