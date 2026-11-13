@@ -106,7 +106,8 @@ reply run uses the runner from the same-repository PR head instead of failing.
 After merge, the trusted default-branch runner is used. Inline reply and PR
 review modes are additionally gated by the same open, non-draft,
 same-repository PR checks. A run can incur provider and GitHub Actions usage
-under the account's existing settings; the job is capped at 20 minutes.
+under the account's existing settings; the job is capped at 30 minutes and the
+model step at 20.
 
 Validation after merge: update a same-repository PR and confirm the review has
 inline comments; reply to one and confirm the answer appears in the same thread;
@@ -115,13 +116,14 @@ explanation using `/oc`. Confirm bot replies do not trigger new runs. Local
 checks cannot establish provider credential/model availability or successful
 comment delivery.
 
-Local verification on 13 November 2026: `npm run test:unit` (563 tests),
+Local verification on 13 November 2026: `npm run test:unit` (566 tests),
 `npm run lint`, `npm run typecheck`, and `npm run knip` passed; the new runner
 tests cover JSON event parsing, structured review parsing, new-side diff line
 validation (including added content that resembles a file header), out-of-diff
-fallback, inline comment caps, reply-thread resolution, mode orchestration, and
-GitHub payload construction. Build/E2E were not run for this workflow-only
-change; no application runtime or user journey was modified.
+fallback, inline comment caps, reply-thread resolution, mode orchestration,
+GitHub payload construction, and the model process contract (pinned flags,
+20-minute cap, and partial-output diagnostics). Build/E2E were not run for this
+workflow-only change; no application runtime or user journey was modified.
 
 References: [GitHub pull request reviews](https://docs.github.com/en/rest/pulls/reviews),
 [review comment replies](https://docs.github.com/en/rest/pulls/comments#create-a-reply-for-a-review-comment),

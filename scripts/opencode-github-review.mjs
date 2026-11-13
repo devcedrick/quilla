@@ -10,7 +10,7 @@ const MAX_INLINE_COMMENTS = 50;
 const MAX_COMMENT_CHARS = 12000;
 const MAX_REVIEW_CHARS = 60000;
 const MAX_MODEL_BUFFER = 64 * 1024 * 1024;
-const MAX_MODEL_MS = 10 * 60 * 1000;
+const MAX_MODEL_MS = 20 * 60 * 1000;
 const MAX_GH_BUFFER = 32 * 1024 * 1024;
 const SEVERITIES = new Set([
   "critical",
@@ -527,7 +527,7 @@ export function isBotThread(comment, ancestors, botLogin) {
   );
 }
 
-function runModel(prompt, env = process.env, spawn = spawnSync) {
+export function runModel(prompt, env = process.env, spawn = spawnSync) {
   const model = env.OPENCODE_REVIEW_MODEL || env.MODEL;
   if (!model)
     throw new Error(
@@ -536,18 +536,33 @@ function runModel(prompt, env = process.env, spawn = spawnSync) {
 
   const result = spawn(
     env.OPENCODE_BIN || "opencode",
-    ["run", "--format", "json", "--model", model],
+    [
+      "run",
+      "--format",
+      "json",
+      "--model",
+      model,
+      "--print-logs",
+      "--log-level",
+      "ERROR",
+    ],
     {
       cwd: env.PR_HEAD_DIR || process.cwd(),
       input: prompt,
       encoding: "utf8",
+      stdio: ["pipe", "pipe", "inherit"],
       env: { ...process.env, ...env, SHARE: "false", USE_GITHUB_TOKEN: "true" },
       maxBuffer: MAX_MODEL_BUFFER,
       timeout: MAX_MODEL_MS,
     },
   );
-  if (result.error)
-    throw new Error(`OpenCode failed to run: ${result.error.message}`);
+  if (result.error) {
+    const partial = String(result.stdout || "")
+      .trim()
+      .slice(-2000);
+    const detail = partial ? `\nPartial output:\n${partial}` : "";
+    throw new Error(`OpenCode failed to run: ${result.error.message}${detail}`);
+  }
 
   const events = parseJsonLines(result.stdout);
   const modelError = extractModelError(events);

@@ -22,6 +22,7 @@ import {
   parseUnifiedDiff,
   prepareReview,
   resolveThread,
+  runModel,
   unwrapFence,
 } from "./opencode-github-review.mjs";
 
@@ -370,6 +371,67 @@ describe("OpenCode JSON event parsing", () => {
   it("returns empty text when no assistant text was emitted", () => {
     expect(extractFinalText([])).toBe("");
     expect(extractFinalText([{ type: "step_start" }])).toBe("");
+  });
+});
+
+describe("model invocation", () => {
+  it("pins format, logs, cwd, and a timeout above the previous failure", () => {
+    const calls = [];
+    const spawn = (command, args, options) => {
+      calls.push({ command, args, options });
+      return {
+        status: 0,
+        stdout: JSON.stringify({
+          type: "text",
+          part: { messageID: "m", text: "answer" },
+        }),
+        stderr: "",
+      };
+    };
+    const text = runModel(
+      "prompt",
+      {
+        OPENCODE_REVIEW_MODEL: "opencode/model",
+        PR_HEAD_DIR: "/tmp/pr-head",
+      },
+      spawn,
+    );
+
+    expect(text).toBe("answer");
+    expect(calls[0].command).toBe("opencode");
+    expect(calls[0].args).toEqual([
+      "run",
+      "--format",
+      "json",
+      "--model",
+      "opencode/model",
+      "--print-logs",
+      "--log-level",
+      "ERROR",
+    ]);
+    expect(calls[0].options).toMatchObject({
+      cwd: "/tmp/pr-head",
+      input: "prompt",
+      stdio: ["pipe", "pipe", "inherit"],
+    });
+    expect(calls[0].options.timeout).toBeGreaterThanOrEqual(15 * 60 * 1000);
+  });
+
+  it("includes partial output when the model process times out", () => {
+    const spawn = () => ({
+      error: new Error("spawnSync opencode ETIMEDOUT"),
+      stdout: JSON.stringify({ type: "tool_use", part: { tool: "read" } }),
+      stderr: "",
+    });
+    expect(() =>
+      runModel("prompt", { OPENCODE_REVIEW_MODEL: "opencode/model" }, spawn),
+    ).toThrow(/ETIMEDOUT[\s\S]*Partial output[\s\S]*tool_use/);
+  });
+
+  it("requires an explicit model identifier", () => {
+    expect(() => runModel("prompt", {}, () => ({}))).toThrow(
+      "Set OPENCODE_REVIEW_MODEL",
+    );
   });
 });
 
