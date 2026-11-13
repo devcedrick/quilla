@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import schema from "./schema";
 import * as seedBootstrap from "./seedBootstrap";
 import * as questionImports from "./questionImports";
+import * as questionAssets from "./questionAssets";
 import * as usersModule from "./users";
 import { initialV2Catalog } from "./lib/taxonomyCatalog";
 import type { Id } from "./_generated/dataModel";
@@ -34,6 +35,7 @@ vi.mock("../lib/question-import-contract.mjs", async (original) => {
 const { api, internal, createTest } = defineTestApp({ schema }).defineModules({
   seedBootstrap,
   questionImports,
+  questionAssets,
   users: usersModule,
 });
 const plan = await bootstrapFixturePlan();
@@ -342,6 +344,151 @@ describe("bootstrap publication", () => {
     await expect(
       t.run((ctx) => ctx.db.system.get("_storage", storageId)),
     ).resolves.not.toBeNull();
+  });
+
+  it("verifies a direct upload and binds the storage object", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    const reserved = await t.mutation(internal.seedBootstrap.applyBatch, {
+      ...access,
+      records: [plan.records[0]],
+    });
+    const storageId = await t.run((ctx) =>
+      ctx.storage.store(new Blob([plan.pngBytes], { type: "image/png" })),
+    );
+    await expect(
+      t.action(internal.seedBootstrap.verifyAsset, {
+        ...access,
+        ordinal: 0,
+        storageId,
+      }),
+    ).resolves.toBeNull();
+    const asset = await t.run((ctx) => ctx.db.query("questionAssets").first());
+    expect(asset).toMatchObject({
+      state: "verified",
+      storageId,
+      revision: reserved.uploadRevision! + 1,
+    });
+    await expect(
+      t.run((ctx) => ctx.db.system.get("_storage", storageId)),
+    ).resolves.not.toBeNull();
+  });
+
+  it("replays a verified upload after a lost completion response", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    const reserved = await t.mutation(internal.seedBootstrap.applyBatch, {
+      ...access,
+      records: [plan.records[0]],
+    });
+    const storageId = await t.run((ctx) =>
+      ctx.storage.store(new Blob([plan.pngBytes], { type: "image/png" })),
+    );
+    const verify = {
+      ...access,
+      ordinal: 0,
+      storageId,
+    };
+    await t.mutation(internal.seedBootstrap.completeAsset, {
+      ...verify,
+      expectedRevision: reserved.uploadRevision!,
+    });
+    await expect(
+      t.action(internal.seedBootstrap.verifyAsset, verify),
+    ).resolves.toBeNull();
+    await expect(
+      t.run((ctx) => ctx.db.system.get("_storage", storageId)),
+    ).resolves.not.toBeNull();
+  });
+
+  it("deletes an unbound blob when upload verification fails", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    await t.mutation(internal.seedBootstrap.applyBatch, {
+      ...access,
+      records: [plan.records[0]],
+    });
+    const storageId = await t.run((ctx) =>
+      ctx.storage.store(
+        new Blob([Uint8Array.from([1, 2, 3])], { type: "image/png" }),
+      ),
+    );
+    await expect(
+      t.action(internal.seedBootstrap.verifyAsset, {
+        ...access,
+        ordinal: 0,
+        storageId,
+      }),
+    ).rejects.toThrow("VALIDATION_FAILED");
+    await expect(
+      t.run((ctx) => ctx.db.system.get("_storage", storageId)),
+    ).resolves.toBeNull();
+  });
+
+  it("retains a bound blob when upload completion fails", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    await t.mutation(internal.seedBootstrap.applyBatch, {
+      ...access,
+      records: [plan.records[0]],
+    });
+    const pending = await t.run((ctx) =>
+      ctx.db.query("questionAssets").first(),
+    );
+    const storageId = await t.run(async (ctx) => {
+      const stored = await ctx.storage.store(
+        new Blob([plan.pngBytes], { type: "image/webp" }),
+      );
+      const asset = pending!;
+      await ctx.db.insert("questionAssets", {
+        assetId: "bound-elsewhere",
+        sha256: asset.sha256,
+        mediaType: asset.mediaType,
+        width: asset.width,
+        height: asset.height,
+        provenance: asset.provenance,
+        uploaderId: asset.uploaderId,
+        createdAt: asset.createdAt,
+        storageId: stored,
+        state: "verified",
+        revision: asset.revision + 1,
+      });
+      return stored;
+    });
+    await expect(
+      t.action(internal.seedBootstrap.verifyAsset, {
+        ...access,
+        ordinal: 0,
+        storageId,
+      }),
+    ).rejects.toThrow("VALIDATION_FAILED");
+    await expect(
+      t.run((ctx) => ctx.db.system.get("_storage", storageId)),
+    ).resolves.not.toBeNull();
+  });
+
+  it("refuses a stale automatic pause", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    await expect(
+      t.mutation(internal.seedBootstrap.pause, {
+        target: "fixture",
+        runId: access.runId,
+        code: "BOOTSTRAP_OPERATION_FAILED",
+        generation: access.generation + 1,
+      }),
+    ).rejects.toThrow("BOOTSTRAP_LEASE_LOST");
+    await expect(
+      t.run((ctx) => ctx.db.get("questionImportRuns", access.runId)),
+    ).resolves.toMatchObject({ state: "running", generation: 1 });
+    await expect(
+      t.mutation(internal.seedBootstrap.pause, {
+        target: "fixture",
+        runId: access.runId,
+        code: "BOOTSTRAP_OPERATION_FAILED",
+        generation: access.generation,
+      }),
+    ).resolves.toBeNull();
   });
 
   it("refuses to adopt a draft created outside the bootstrap importer", async () => {

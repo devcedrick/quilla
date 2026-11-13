@@ -82,6 +82,7 @@ const uploadContextRef = makeFunctionReference<
     target: string;
     generation: number;
     ordinal: number;
+    storageId: Id<"_storage">;
   },
   { asset: Doc<"questionAssets">; leaseUntil: number }
 >("seedBootstrap:assetUploadContext");
@@ -238,6 +239,22 @@ export const begin = internalMutation({
       },
     });
     return { runId, generation: 1 };
+  },
+});
+
+/** Return the newest bootstrap run for a target without exposing question text. */
+export const latest = internalQuery({
+  args: { target: v.string() },
+  returns: v.union(v.null(), schema.doc("questionImportRuns")),
+  handler: async (ctx, args) => {
+    requireBootstrapTarget(args.target);
+    return ctx.db
+      .query("questionImportRuns")
+      .withIndex("by_mode_and_target", (q) =>
+        q.eq("mode", "bootstrap").eq("target", args.target),
+      )
+      .order("desc")
+      .first();
   },
 });
 
@@ -660,7 +677,7 @@ export const assetUploadUrl = internalMutation({
 
 /** Internal query used by the verification action to recheck the upload fence. */
 export const assetUploadContext = internalQuery({
-  args: { ...runAccess, ordinal: v.number() },
+  args: { ...runAccess, ordinal: v.number(), storageId: v.id("_storage") },
   returns: v.object({
     asset: schema.doc("questionAssets"),
     leaseUntil: v.number(),
@@ -679,10 +696,16 @@ export const assetUploadContext = internalQuery({
     if (
       !asset ||
       asset.uploaderId !== run.ownerId ||
-      asset.state !== "pending" ||
       asset.assetId !== entry.sourceId
     )
       fail("FORBIDDEN");
+    // A retried verification may find the first completion already committed.
+    // Accept only the same verified storage binding so the action can replay
+    // its idempotent completion after a lost response.
+    const pending = asset.state === "pending";
+    const replay =
+      asset.state === "verified" && asset.storageId === args.storageId;
+    if (!pending && !replay) fail("FORBIDDEN");
     return { asset, leaseUntil: run.leaseUntil };
   },
 });
@@ -724,7 +747,10 @@ export const verifyAsset = internalAction({
   returns: v.null(),
   handler: async (ctx, args) => {
     const { storageId, ...access } = args;
-    const { asset, leaseUntil } = await ctx.runQuery(uploadContextRef, access);
+    const { asset, leaseUntil } = await ctx.runQuery(uploadContextRef, {
+      ...access,
+      storageId,
+    });
     if (leaseUntil <= Date.now()) fail("BOOTSTRAP_LEASE_LOST");
     return verifyStoredAsset(
       ctx,
@@ -758,10 +784,20 @@ export const renew = internalMutation({
 
 /** Release the lease without undoing committed work. */
 export const pause = internalMutation({
-  args: { ...runFields, code: v.optional(v.string()) },
+  args: {
+    ...runFields,
+    code: v.optional(v.string()),
+    generation: v.optional(v.number()),
+  },
   returns: v.null(),
   handler: async (ctx, args) => {
     const run = await bootstrapRun(ctx, args);
+    if (
+      args.generation !== undefined &&
+      (!Number.isSafeInteger(args.generation) ||
+        args.generation !== run.generation)
+    )
+      fail("BOOTSTRAP_LEASE_LOST");
     if (run.state === "complete" || run.state === "rolled_back")
       fail("BOOTSTRAP_INVALID_STATE");
     if (args.code && safeBootstrapFailure(args.code) !== args.code)

@@ -86,6 +86,8 @@ function transportPlan(plan, options = {}) {
   const run = {
     _id: "run-1",
     target: "fixture",
+    mode: "bootstrap",
+    inventoryHash: plan.inventoryHash,
     planChecksum: plan.planChecksum,
     state: "preparing",
     staged: 0,
@@ -100,6 +102,7 @@ function transportPlan(plan, options = {}) {
   let leaseFailures = options.leaseFailures ?? 0;
   let transientFailures = options.transientFailures ?? 0;
   let rollbackRounds = options.rollbackRounds ?? 2;
+  let beginAttempts = 0;
   const calls = [];
   const snapshot = () => ({ ...run });
   return {
@@ -109,6 +112,8 @@ function transportPlan(plan, options = {}) {
       query: vi.fn(async (name, args) => {
         expect(args.target).toBe("fixture");
         calls.push(["query", name, args]);
+        if (name === "latest")
+          return options.latest === false ? null : snapshot();
         if (name === "status") {
           if (args.after === Number.MAX_SAFE_INTEGER)
             return { run: snapshot(), entries: [] };
@@ -127,6 +132,15 @@ function transportPlan(plan, options = {}) {
         expect(args.target).toBe("fixture");
         calls.push(["mutation", name, args]);
         if (name === "begin") {
+          if (!args.resumeRunId) {
+            beginAttempts++;
+            if (options.beginLostResponse && beginAttempts === 1)
+              throw Object.assign(new Error("transport"), { transient: true });
+            if (options.beginLostResponse && beginAttempts > 1)
+              throw Object.assign(new Error("busy"), {
+                code: "BOOTSTRAP_BUSY",
+              });
+          }
           if (args.resumeRunId) {
             expect(args.resumeRunId).toBe(run._id);
             run.generation++;
@@ -148,6 +162,17 @@ function transportPlan(plan, options = {}) {
             expectedRevision: 1,
           };
         if (name === "pause") {
+          if (options.pauseFails)
+            throw Object.assign(new Error("pause"), {
+              code: "BOOTSTRAP_OPERATION_FAILED",
+            });
+          if (
+            args.generation !== undefined &&
+            args.generation !== run.generation
+          )
+            throw Object.assign(new Error("lease"), {
+              code: "BOOTSTRAP_LEASE_LOST",
+            });
           run.state = "paused";
           return null;
         }
@@ -158,6 +183,10 @@ function transportPlan(plan, options = {}) {
           return null;
         }
         if (name === "applyBatch") {
+          if (options.applyFailure)
+            throw Object.assign(new Error("apply"), {
+              code: "VALIDATION_FAILED",
+            });
           if (leaseFailures) {
             leaseFailures--;
             throw Object.assign(new Error("lease"), {
@@ -479,6 +508,99 @@ describe("apply bootstrap", () => {
         ([kind, name]) => kind === "mutation" && name === "applyBatch",
       ),
     ).toHaveLength(3);
+  });
+  it("adopts the run created by a lost begin response", async () => {
+    const plan = fixturePlan();
+    const { client, run, calls } = transportPlan(plan, {
+      beginLostResponse: true,
+    });
+    const result = await applyBootstrap(
+      plan,
+      { "--expect-plan": plan.planChecksum, "--target": "fixture" },
+      client,
+      {
+        checkpoint: null,
+        fetchImpl: async () => uploadResponse,
+        policy,
+        expectedPlanChecksum: plan.planChecksum,
+        sleep: async () => {},
+      },
+    );
+    expect(result).toMatchObject({ mode: "apply", state: "complete" });
+    expect(run.generation).toBe(2);
+    expect(
+      calls.filter(([kind, name]) => kind === "query" && name === "latest"),
+    ).toHaveLength(1);
+  });
+  it("records only an explicitly selected deployment", async () => {
+    const plan = fixturePlan();
+    const run = (flags) =>
+      applyBootstrap(plan, flags, transportPlan(plan).client, {
+        checkpoint: null,
+        fetchImpl: async () => uploadResponse,
+        policy,
+        expectedPlanChecksum: plan.planChecksum,
+        sleep: async () => {},
+      });
+    const explicit = await run({
+      "--expect-plan": plan.planChecksum,
+      "--target": "fixture",
+      "--deployment": "development",
+    });
+    expect(explicit.deployment).toBe("development");
+    const deployKey = await run({
+      "--expect-plan": plan.planChecksum,
+      "--target": "fixture",
+    });
+    expect(deployKey).not.toHaveProperty("deployment");
+  });
+  it("keeps conflict details when the pause fails", async () => {
+    const plan = fixturePlan();
+    const { client } = transportPlan(plan, {
+      preflightConflict: true,
+      pauseFails: true,
+    });
+    await expect(
+      applyBootstrap(
+        plan,
+        { "--expect-plan": plan.planChecksum, "--target": "fixture" },
+        client,
+        {
+          checkpoint: null,
+          fetchImpl: async () => uploadResponse,
+          policy,
+          expectedPlanChecksum: plan.planChecksum,
+          sleep: async () => {},
+        },
+      ),
+    ).rejects.toMatchObject({
+      code: "BOOTSTRAP_TARGET_CONFLICT",
+      conflicts: expect.arrayContaining([
+        expect.objectContaining({ code: "CONTENT_CONFLICT" }),
+      ]),
+    });
+  });
+  it("fences automatic pauses with the current generation", async () => {
+    const plan = fixturePlan();
+    const { client, calls } = transportPlan(plan, { applyFailure: true });
+    await expect(
+      applyBootstrap(
+        plan,
+        { "--expect-plan": plan.planChecksum, "--target": "fixture" },
+        client,
+        {
+          checkpoint: null,
+          fetchImpl: async () => uploadResponse,
+          policy,
+          expectedPlanChecksum: plan.planChecksum,
+          sleep: async () => {},
+        },
+      ),
+    ).rejects.toMatchObject({ code: "VALIDATION_FAILED" });
+    const pause = calls.find(
+      ([kind, name]) => kind === "mutation" && name === "pause",
+    );
+    expect(pause?.[2]).toMatchObject({ generation: 1 });
   });
   it("retries a lost response without applying a record twice", async () => {
     const plan = fixturePlan();

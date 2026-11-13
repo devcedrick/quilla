@@ -395,23 +395,56 @@ export async function applyBootstrap(
     throw new BootstrapError("BOOTSTRAP_PLAN_MISMATCH");
   const policyCounts = verifyBootstrapPlan(plan, policy);
   const target = flags["--target"];
-  const created = await withBootstrapRetry(
-    () =>
-      client.mutation("begin", {
-        target,
-        planChecksum: plan.planChecksum,
-        inventoryHash: plan.inventoryHash,
-        manifests: plan.manifests,
-        ...(flags["--resume-run"]
-          ? { resumeRunId: flags["--resume-run"] }
-          : {}),
-      }),
-    { sleep },
-  );
+  const beginArgs = {
+    target,
+    planChecksum: plan.planChecksum,
+    inventoryHash: plan.inventoryHash,
+    manifests: plan.manifests,
+  };
+  let created;
+  try {
+    created = await withBootstrapRetry(
+      () =>
+        client.mutation("begin", {
+          ...beginArgs,
+          ...(flags["--resume-run"]
+            ? { resumeRunId: flags["--resume-run"] }
+            : {}),
+        }),
+      { sleep },
+    );
+  } catch (error) {
+    // A lost response can leave the just-created run holding the target lease.
+    // Adopt only the newest matching plan, then resume it so the retry advances
+    // the generation and fences any stale worker.
+    if (error?.code !== "BOOTSTRAP_BUSY" || flags["--resume-run"]) throw error;
+    let latest;
+    try {
+      latest = await client.query("latest", { target });
+    } catch {
+      throw error;
+    }
+    if (
+      !latest ||
+      latest.mode !== "bootstrap" ||
+      latest.planChecksum !== plan.planChecksum ||
+      latest.inventoryHash !== plan.inventoryHash
+    )
+      throw error;
+    created = await withBootstrapRetry(
+      () =>
+        client.mutation("begin", {
+          ...beginArgs,
+          resumeRunId: latest._id,
+        }),
+      { sleep },
+    );
+  }
   let access = { ...created, target };
+  const deployment = flags["--prod"] ? "prod" : flags["--deployment"];
   const recovery = {
     target,
-    deployment: flags["--deployment"] ?? "prod",
+    ...(deployment ? { deployment } : {}),
     runId: access.runId,
     planChecksum: plan.planChecksum,
   };
@@ -426,6 +459,7 @@ export async function applyBootstrap(
         target,
         recovery.runId,
         "BOOTSTRAP_OPERATION_FAILED",
+        created.generation,
       );
     } catch {
       /* A completed or unreachable run still needs its identity reported. */
@@ -516,12 +550,18 @@ export async function applyBootstrap(
       ["conflict", "invalid"].includes(result.status),
     );
     if (conflicts.length) {
-      await pauseBootstrap(
-        client,
-        target,
-        recovery.runId,
-        "BOOTSTRAP_TARGET_CONFLICT",
-      );
+      try {
+        await pauseBootstrap(
+          client,
+          target,
+          recovery.runId,
+          "BOOTSTRAP_TARGET_CONFLICT",
+          run.generation,
+        );
+      } catch {
+        // Preserve the conflict details even when the deployment credential or
+        // the pause itself is unavailable.
+      }
       throw new BootstrapError("BOOTSTRAP_TARGET_CONFLICT", {
         conflicts: conflicts.map((result) => ({
           ...plan.items[result.ordinal].descriptor,
@@ -609,6 +649,7 @@ export async function applyBootstrap(
         target,
         recovery.runId,
         bootstrapErrorCode(error),
+        access.generation,
       );
     } catch {
       /* A completed run or lost deployment credential must not authorize a fallback write. */
@@ -619,12 +660,13 @@ export async function applyBootstrap(
 }
 
 /** Pause a running bootstrap without discarding committed work. */
-async function pauseBootstrap(client, target, runId, code) {
+async function pauseBootstrap(client, target, runId, code, generation) {
   await withBootstrapRetry(() =>
     client.mutation("pause", {
       target,
       runId,
       ...(code ? { code } : {}),
+      ...(generation !== undefined ? { generation } : {}),
     }),
   );
   return readBootstrapRun(client, target, runId);
@@ -635,7 +677,13 @@ export async function rollbackBootstrap(client, target, runId, reason) {
   if (!reason?.trim()) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   let run = await readBootstrapRun(client, target, runId);
   if (run.state === "preparing" || run.state === "running")
-    run = await pauseBootstrap(client, target, runId, "BOOTSTRAP_NOT_PAUSED");
+    run = await pauseBootstrap(
+      client,
+      target,
+      runId,
+      "BOOTSTRAP_NOT_PAUSED",
+      run.generation,
+    );
   for (let round = 0; round < 500; round++) {
     if (run.state === "rolled_back")
       return {

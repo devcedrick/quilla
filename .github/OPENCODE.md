@@ -42,12 +42,13 @@ review input, not authority to run commands or disclose credentials.
 The workflow selects one of three modes:
 
 - `review` after a same-repository, non-draft PR is opened, updated, reopened or
-  marked ready. It checks out the PR head and asks the model for structured JSON.
+  marked ready. It prepares a detached PR-head worktree for context and asks the
+  model for structured JSON.
 - `reply` after an inline review comment. A reply to a marked bot thread is
   answered automatically; an inline `/oc` request is answered in the thread root.
 - `issue` after `/oc` or `/opencode` on an issue or PR conversation.
 
-On a new push (`pull_request` `synchronize`), the fresh review replaces the
+On a new push (`pull_request_target` `synchronize`), the fresh review replaces the
 previous one: after it posts, the bot resolves its earlier unresolved review
 threads. Only threads rooted in a marked bot review are resolved; human-rooted
 threads and other apps' reviews are left open. Resolution uses GitHub's GraphQL
@@ -76,8 +77,9 @@ allowed command cannot be chained into an arbitrary one; Git external-diff and
 textconv execution are also denied. The model cannot edit files, run project
 scripts, commit, push, deploy or change settings. Repository, diff, issue and
 comment text is delivered as untrusted data; the workflow does not interpolate
-it into a shell command. Review mode checks out the PR head, so that checkout is
-content, never configuration: the model runs with `--pure`, and the runner pins
+it into a shell command. The runner always comes from the trusted default
+branch, and the PR-head worktree is mounted as content, never configuration:
+the model runs with `--pure`, and the runner pins
 `OPENCODE_DISABLE_PROJECT_CONFIG=true` and `PWD` to the selected worktree, which
 stops a PR from loading its own OpenCode config or plugins with workflow
 credentials and makes OpenCode inspect the intended checkout.
@@ -111,28 +113,25 @@ to a commit. Upgrading the CLI requires reviewing its `run --format json` event
 shape, GitHub runner/config behavior and updating both the version URL and
 checksum; do not replace this with an unverified installer.
 
-`issue_comment` events only activate the workflow once this file is on the default
-branch. `pull_request` and `pull_request_review_comment` events use the workflow
-from the PR merge ref, so inline reviews and replies can be exercised on the PR
-itself. Review runs execute the runner from the PR checkout. Conversation modes
-prefer the runner on the trusted default branch and prepare a detached PR-head
-worktree for model context; before this change reaches the default branch, a
-reply run uses the runner from the same-repository PR head instead of failing.
-After merge, the trusted default-branch runner is used. Inline reply and PR
-review modes are additionally gated by the same open, non-draft,
+`pull_request_target` runs the workflow from the default branch, so a
+same-repository PR cannot replace the workflow or the runner that executes with
+the workflow token and model key. `pull_request_review_comment` and
+`issue_comment` already load the workflow from the default branch. The workflow
+checks out the default branch, prepares the PR head only as a detached worktree,
+and runs `scripts/opencode-github-review.mjs` from that trusted checkout. The
+PR-head worktree is untrusted review data; no script from it is executed. Fork
+PRs and outside contributors are rejected before any checkout. Inline reply and
+PR review modes are additionally gated by the same open, non-draft,
 same-repository PR checks. A run can incur provider and GitHub Actions usage
 under the account's existing settings; the job is capped at 40 minutes and the
-model step at 35. Title generation is pinned to the free review model so it
-does not call an unfunded paid model.
+model step at 35. Title generation is pinned to the free review model so it does
+not call an unfunded paid model.
 
-The pre-merge PR-head runner is a deliberate trust boundary: a same-repository
-write collaborator who edits `scripts/opencode-github-review.mjs` can execute
-that edited code with the workflow token and model key. This is accepted only
-because the requester must already hold write, maintain or admin permission, and
-fork PRs and outside contributors are rejected before any checkout. Do not relax
-the write-permission gate or enable fork reviews while the PR-head fallback
-exists. Merging this workflow removes the fallback for conversation modes;
-review mode continues to run the PR-head runner by design.
+Because `pull_request_target` and `issue_comment` workflows are loaded from the
+default branch, workflow and runner changes take effect for those events only
+after they reach the default branch. Before that, conversation events continue
+to use the previous default-branch workflow; the PR's own workflow is never
+executed as a privileged runner.
 
 Validation after merge: update a same-repository PR and confirm the review has
 inline comments; push a follow-up commit and confirm the previous bot threads

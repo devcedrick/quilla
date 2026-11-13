@@ -194,12 +194,40 @@ describe("diff line validation", () => {
   });
 
   it("normalizes model paths and rejects traversal", () => {
-    expect(normalizeRepoPath("b/src/example.ts")).toBe("src/example.ts");
+    expect(normalizeRepoPath("b/src/example.ts")).toBe("b/src/example.ts");
     expect(normalizeRepoPath("./src/example.ts")).toBe("src/example.ts");
     expect(normalizeRepoPath("src\\example.ts")).toBe("src/example.ts");
     expect(normalizeRepoPath("../secret.ts")).toBeNull();
     expect(normalizeRepoPath("/etc/passwd")).toBeNull();
     expect(normalizeRepoPath("src//example.ts")).toBeNull();
+  });
+
+  it("strips exactly one diff prefix and unquotes git paths", () => {
+    const prefixed = parseUnifiedDiff(
+      [
+        "diff --git a/b/foo.ts b/b/foo.ts",
+        "--- a/b/foo.ts",
+        "+++ b/b/foo.ts",
+        "@@ -1,1 +1,1 @@",
+        "-old",
+        "+new",
+        "",
+      ].join("\n"),
+    );
+    expect([...prefixed.keys()]).toEqual(["b/foo.ts"]);
+
+    const quoted = parseUnifiedDiff(
+      [
+        'diff --git "a/dir with space/x.ts" "b/dir with space/x.ts"',
+        '--- "a/dir with space/x.ts"',
+        '+++ "b/dir with space/x.ts"',
+        "@@ -1,1 +1,1 @@",
+        "-old",
+        "+new",
+        "",
+      ].join("\n"),
+    );
+    expect([...quoted.keys()]).toEqual(["dir with space/x.ts"]);
   });
 
   it("splits findings into inline and body-only sets", () => {

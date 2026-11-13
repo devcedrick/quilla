@@ -78,13 +78,77 @@ export function normalizeRepoPath(value) {
   if (typeof value !== "string") return null;
   let path = value.trim().replaceAll("\\", "/");
   if (path.startsWith("./")) path = path.slice(2);
-  if (path.startsWith("a/") || path.startsWith("b/")) path = path.slice(2);
   if (!path || path.startsWith("/") || path.includes("\0")) return null;
   if (
     path.split("/").some((part) => part === "" || part === "." || part === "..")
   )
     return null;
   return path;
+}
+
+/**
+ * Decode a git-quoted path (for example `"b/dir with space/x.ts"`). Git uses
+ * C-style escapes and octal byte escapes for non-printable path bytes.
+ */
+function unquoteGitPath(value) {
+  if (!value.startsWith('"')) return value;
+  if (value.length < 2 || !value.endsWith('"')) return null;
+  const inner = value.slice(1, -1);
+  const bytes = [];
+  const encoder = new TextEncoder();
+  const escapes = {
+    a: 7,
+    b: 8,
+    t: 9,
+    n: 10,
+    v: 11,
+    f: 12,
+    r: 13,
+    '"': 34,
+    "\\": 92,
+  };
+  for (let index = 0; index < inner.length; index += 1) {
+    const char = inner[index];
+    if (char !== "\\") {
+      bytes.push(...encoder.encode(char));
+      continue;
+    }
+    const next = inner[(index += 1)];
+    if (next === undefined) return null;
+    if (next >= "0" && next <= "7") {
+      let octal = next;
+      while (
+        octal.length < 3 &&
+        inner[index + 1] >= "0" &&
+        inner[index + 1] <= "7"
+      )
+        octal += inner[(index += 1)];
+      const byte = Number.parseInt(octal, 8);
+      if (byte > 255) return null;
+      bytes.push(byte);
+      continue;
+    }
+    if (!(next in escapes)) return null;
+    bytes.push(escapes[next]);
+  }
+  try {
+    return new TextDecoder("utf-8", { fatal: true }).decode(
+      new Uint8Array(bytes),
+    );
+  } catch {
+    return null;
+  }
+}
+
+/** Parse one `+++` diff target, stripping its single `b/` prefix. */
+function parseDiffPath(value) {
+  const raw = String(value ?? "")
+    .split("\t")[0]
+    .trim();
+  const unquoted = unquoteGitPath(raw);
+  if (unquoted === null) return null;
+  const path = unquoted.startsWith("b/") ? unquoted.slice(2) : unquoted;
+  return normalizeRepoPath(path);
 }
 
 /** Return the set of new-file (RIGHT side) line numbers for each changed file. */
@@ -107,9 +171,7 @@ export function parseUnifiedDiff(diff) {
         inHunk = false;
         continue;
       }
-      path = normalizeRepoPath(
-        target.startsWith("b/") ? target.slice(2) : target,
-      );
+      path = parseDiffPath(target);
       if (path && !files.has(path)) files.set(path, new Set());
       inHunk = false;
       continue;

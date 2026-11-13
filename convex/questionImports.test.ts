@@ -416,6 +416,43 @@ describe("guarded question import", () => {
     ).rejects.toThrow("IMPORT_BUSY");
   });
 
+  it("fails deterministically when a plan has multiple run rows", async () => {
+    const { t, admin } = await setup(),
+      p = await plan([question]);
+    const access = await start(admin, p);
+    await t.run(async (ctx) => {
+      const run = (await ctx.db.get("questionImportRuns", access.runId))!;
+      await ctx.db.insert("questionImportRuns", {
+        target: run.target,
+        targetUrl: run.targetUrl,
+        mode: run.mode,
+        ownerId: run.ownerId,
+        approverId: run.approverId,
+        planChecksum: run.planChecksum,
+        inventoryHash: run.inventoryHash,
+        chain: run.chain,
+        manifests: run.manifests,
+        stagedCounts: run.stagedCounts,
+        expected: run.expected,
+        staged: 0,
+        processed: 0,
+        state: "paused",
+        generation: 1,
+        leaseUntil: 0,
+        createdAt: run.createdAt + 1,
+        updatedAt: run.updatedAt + 1,
+      });
+    });
+    await expect(
+      admin.mutation(api.questionImports.begin, {
+        target: "fixture",
+        manifests: p.manifests,
+        inventoryHash: p.inventoryHash,
+        planChecksum: p.planChecksum,
+      }),
+    ).rejects.toThrow("IMPORT_RUN_FORBIDDEN");
+  });
+
   it("acknowledges a completed plan while another plan holds the target lease", async () => {
     const { admin } = await setup(),
       p = await plan(),

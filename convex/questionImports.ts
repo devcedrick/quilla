@@ -197,17 +197,22 @@ export const begin = mutation({
           .withIndex("by_target_and_planChecksum", (q) =>
             q.eq("target", args.target).eq("planChecksum", args.planChecksum),
           )
-          .unique();
-    if (same) {
+          .take(2);
+    // A fully rolled-back bootstrap may be retried under the same plan, so this
+    // lookup is not unique. Fail deterministically instead of raising a raw
+    // "multiple documents" error from a `.unique()` scan.
+    if (Array.isArray(same) && same.length > 1) fail("IMPORT_RUN_FORBIDDEN");
+    const sameRun = Array.isArray(same) ? (same[0] ?? null) : same;
+    if (sameRun) {
       if (
-        same.mode === "bootstrap" ||
-        same.ownerId !== actor._id ||
-        same.planChecksum !== args.planChecksum
+        sameRun.mode === "bootstrap" ||
+        sameRun.ownerId !== actor._id ||
+        sameRun.planChecksum !== args.planChecksum
       )
         fail("IMPORT_RUN_FORBIDDEN");
       // A completed plan is an idempotent acknowledgement, not a competing write.
-      if (same.state === "complete")
-        return { runId: same._id, generation: same.generation };
+      if (sameRun.state === "complete")
+        return { runId: sameRun._id, generation: sameRun.generation };
     }
     const active = await ctx.db
       .query("questionImportRuns")
@@ -216,20 +221,20 @@ export const begin = mutation({
       )
       .first();
     if (active) fail("IMPORT_BUSY");
-    if (same) {
-      await ctx.db.patch("questionImportRuns", same._id, {
-        generation: same.generation + 1,
+    if (sameRun) {
+      await ctx.db.patch("questionImportRuns", sameRun._id, {
+        generation: sameRun.generation + 1,
         leaseUntil: Date.now() + importLeaseMs,
         updatedAt: Date.now(),
       });
       await appendAdminAudit(ctx, {
         entityType: "question_import",
-        entityId: same._id,
+        entityId: sameRun._id,
         action: "resume",
-        before: { generation: same.generation },
-        after: { generation: same.generation + 1 },
+        before: { generation: sameRun.generation },
+        after: { generation: sameRun.generation + 1 },
       });
-      return { runId: same._id, generation: same.generation + 1 };
+      return { runId: sameRun._id, generation: sameRun.generation + 1 };
     }
     const expected = args.manifests.reduce(
       (n, p) => n + p.questions + p.references + p.assets,

@@ -24,7 +24,7 @@ const botComment = {
 function inferEventName(event) {
   if (event.comment?.path) return "pull_request_review_comment";
   if (event.issue) return "issue_comment";
-  return "pull_request";
+  return "pull_request_target";
 }
 
 /** Execute the extracted authorization guard with bounded, synthetic GitHub responses. */
@@ -129,15 +129,15 @@ describe("OpenCode workflow authorization", () => {
     const cancellation = workflow.match(
       /cancel-in-progress: \$\{\{ (.*?) \}\}/,
     )?.[1];
-    expect(cancellation).toBe("github.event_name == 'pull_request'");
+    expect(cancellation).toBe("github.event_name == 'pull_request_target'");
     for (const eventName of [
-      "pull_request",
+      "pull_request_target",
       "issue_comment",
       "pull_request_review_comment",
     ])
       expect(
         runInNewContext(cancellation, { github: { event_name: eventName } }),
-      ).toBe(eventName === "pull_request");
+      ).toBe(eventName === "pull_request_target");
     expect(authorize("read", issueComment).allowed).toBe(false);
   });
 
@@ -174,26 +174,26 @@ describe("OpenCode workflow authorization", () => {
   it("authorizes PR reviews only for open, non-draft, same-repository PRs", () => {
     const event = { pull_request: { number: 102 } };
     expect(
-      authorize("write", event, { eventName: "pull_request" }),
+      authorize("write", event, { eventName: "pull_request_target" }),
     ).toMatchObject({
       allowed: true,
       outputs: { mode: "review", pr: "102", target: "102" },
     });
     expect(
       authorize("write", event, {
-        eventName: "pull_request",
+        eventName: "pull_request_target",
         pr: { ...sameRepoPR, head: { repo: { full_name: "outsider/fork" } } },
       }).allowed,
     ).toBe(false);
     expect(
       authorize("write", event, {
-        eventName: "pull_request",
+        eventName: "pull_request_target",
         pr: { ...sameRepoPR, draft: true },
       }).allowed,
     ).toBe(false);
     expect(
       authorize("write", event, {
-        eventName: "pull_request",
+        eventName: "pull_request_target",
         pr: { ...sameRepoPR, state: "closed" },
       }).allowed,
     ).toBe(false);
@@ -400,10 +400,12 @@ describe("OpenCode workflow authorization", () => {
     expect(workflow).toMatch(/contents: read/);
     expect(workflow).toMatch(/pull-requests: write/);
     expect(workflow).toMatch(/issues: write/);
-    expect(workflow).not.toMatch(
-      /contents: write|pull_request_target|AGENT_GITHUB_TOKEN/,
+    expect(workflow).not.toMatch(/contents: write|AGENT_GITHUB_TOKEN/);
+    expect(workflow).toMatch(/^on:\r?\n  pull_request_target:/m);
+    expect(workflow).toMatch(
+      /Checkout trusted default branch[\s\S]*?ref: \$\{\{ github\.event\.repository\.default_branch \}\}/,
     );
-    expect(workflow.match(/persist-credentials: false/g)).toHaveLength(2);
+    expect(workflow.match(/persist-credentials: false/g)).toHaveLength(1);
     expect(workflow).toContain('SHARE: "false"');
     expect(workflow).toContain('OPENCODE_DISABLE_PROJECT_CONFIG: "true"');
     expect(workflow).toContain(
@@ -415,11 +417,13 @@ describe("OpenCode workflow authorization", () => {
       "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-linux-x64.tar.gz",
     );
     expect(workflow).toContain('node "$RUNNER"');
-    expect(workflow).toContain('[ "$OPENCODE_REVIEW_MODE" = "reply" ]');
-    expect(workflow).toContain('RUNNER="$PR_HEAD_DIR/$RUNNER"');
+    expect(workflow).not.toContain('RUNNER="$PR_HEAD_DIR/$RUNNER"');
     expect(workflow).not.toContain("opencode github run");
-    expect(workflow).toContain(
+    expect(workflow).not.toContain(
       "ref: ${{ github.event.pull_request.head.sha }}",
+    );
+    expect(workflow).toContain(
+      'git worktree add --detach "$RUNNER_TEMP/pr-head"',
     );
     expect(workflow).toContain(
       "ref: ${{ github.event.repository.default_branch }}",

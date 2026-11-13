@@ -63,10 +63,10 @@ export async function verifyStoredAsset(
     expectedRevision !== asset.revision
   )
     fail("STALE_REVISION");
-  const blob = await ctx.storage.get(storageId);
-  if (!blob) fail("ASSET_NOT_FOUND");
-  await assertImageBytes(asset, await blob.arrayBuffer());
   try {
+    const blob = await ctx.storage.get(storageId);
+    if (!blob) fail("ASSET_NOT_FOUND");
+    await assertImageBytes(asset, await blob.arrayBuffer());
     await complete(storageId);
   } catch (error) {
     let bound = true;
@@ -75,7 +75,13 @@ export async function verifyStoredAsset(
     } catch {
       // Unknown binding state: retain the caller's blob for reconciliation.
     }
-    if (!bound) await ctx.storage.delete(storageId);
+    if (!bound) {
+      try {
+        await ctx.storage.delete(storageId);
+      } catch {
+        // Preserve the original verification error; reconciliation can retry.
+      }
+    }
     throw error;
   }
   return null;
