@@ -55,9 +55,10 @@ jobs:
           /** Read GitHub metadata without a shell or request text execution. */
           const api = (path) => JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8' }));
           const write = (key, value) => fs.appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${value}\n`);
-          const isBotComment = (comment, login) =>
-            Boolean(login) &&
-            comment?.user?.login === login &&
+          /** Only GitHub App bots may own review threads; a copied marker is not enough. */
+          const isBotComment = (comment) =>
+            Boolean(comment?.user?.login) &&
+            String(comment.user.login).endsWith('[bot]') &&
             String(comment?.body ?? '').includes(MARKER);
 
           let allowed = false;
@@ -95,13 +96,18 @@ jobs:
             ) {
               mode = 'reply';
               prNumber = event.pull_request.number;
-              botLogin = api('user').login ?? '';
               const requested = REQUEST.test(event.comment.body ?? '');
               let current = event.comment;
-              let botThread = isBotComment(current, botLogin);
+              let botThread = false;
+              const noteBotThread = (comment) => {
+                if (!isBotComment(comment)) return;
+                botThread = true;
+                botLogin = comment.user.login;
+              };
+              noteBotThread(current);
               while (current?.in_reply_to_id) {
                 current = api(`repos/${repo}/pulls/comments/${current.in_reply_to_id}`);
-                if (isBotComment(current, botLogin)) botThread = true;
+                noteBotThread(current);
               }
               target = current?.id ?? event.comment.id;
               if (!requested && !botThread) {
@@ -212,6 +218,7 @@ jobs:
           OPENCODE_PR_NUMBER: ${{ steps.authorize.outputs.pr }}
           OPENCODE_TARGET_ID: ${{ steps.authorize.outputs.target }}
           OPENCODE_BOT_LOGIN: ${{ steps.authorize.outputs.bot_login }}
+          OPENCODE_DISABLE_PROJECT_CONFIG: "true"
           SHARE: "false"
           USE_GITHUB_TOKEN: "true"
           OPENCODE_CONFIG_CONTENT: >-

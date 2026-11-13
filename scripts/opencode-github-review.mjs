@@ -492,12 +492,24 @@ export function createGitHubClient({
       ["api", path, "--method", "POST", "--input", "-"],
       JSON.stringify(payload),
     );
+  /**
+   * `GET /user` needs a user-to-server token, so the workflow's installation
+   * token makes this fail. It is only a fallback: the workflow passes the
+   * marker-bearing bot's login through OPENCODE_BOT_LOGIN.
+   */
+  const getBotLogin = () => {
+    try {
+      return getJson("user")?.login ?? "";
+    } catch {
+      return "";
+    }
+  };
 
   return {
     getPull: (pr) => getJson(`repos/${repo}/pulls/${pr}`),
     getPullDiff: (pr) => gh(["pr", "diff", String(pr), "--repo", repo]),
     getComment: (id) => getJson(`repos/${repo}/pulls/comments/${id}`),
-    getBotLogin: () => getJson("user")?.login ?? "",
+    getBotLogin,
     createReview: (pr, payload) =>
       postJson(`repos/${repo}/pulls/${pr}/reviews`, payload),
     replyToReviewComment: (pr, id, body) =>
@@ -543,6 +555,7 @@ export function runModel(prompt, env = process.env, spawn = spawnSync) {
       "json",
       "--model",
       model,
+      "--pure",
       "--print-logs",
       "--log-level",
       "ERROR",

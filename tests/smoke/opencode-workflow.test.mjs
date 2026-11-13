@@ -60,10 +60,6 @@ function authorize(permission, event, options = {}) {
             const path = args[1];
             if (path.endsWith("/permission"))
               return JSON.stringify({ permission });
-            if (path === "user")
-              return JSON.stringify({
-                login: options.botLogin ?? "github-actions[bot]",
-              });
             if (path.includes("/pulls/comments/")) {
               const id = Number(path.split("/").pop());
               return JSON.stringify(comments[id] ?? null);
@@ -216,12 +212,11 @@ describe("OpenCode workflow authorization", () => {
   });
 
   it("auto-replies only to bot review threads or explicit inline requests", () => {
-    expect(
-      authorize("write", inlineReply, {
-        eventName: "pull_request_review_comment",
-        comments: { 700: botComment },
-      }),
-    ).toMatchObject({
+    const thread = authorize("write", inlineReply, {
+      eventName: "pull_request_review_comment",
+      comments: { 700: botComment },
+    });
+    expect(thread).toMatchObject({
       allowed: true,
       outputs: {
         mode: "reply",
@@ -230,6 +225,7 @@ describe("OpenCode workflow authorization", () => {
         bot_login: "github-actions[bot]",
       },
     });
+    expect(thread.calls.map(([, , path]) => path)).not.toContain("user");
 
     expect(
       authorize("write", inlineRequest, {
@@ -260,6 +256,19 @@ describe("OpenCode workflow authorization", () => {
         },
       ).allowed,
     ).toBe(false);
+  });
+
+  it("derives the bot login from the marker-bearing ancestor without /user", () => {
+    const appBot = { ...botComment, user: { login: "quilla-reviewer[bot]" } };
+    const result = authorize("write", inlineReply, {
+      eventName: "pull_request_review_comment",
+      comments: { 700: appBot },
+    });
+    expect(result).toMatchObject({
+      allowed: true,
+      outputs: { bot_login: "quilla-reviewer[bot]" },
+    });
+    expect(result.calls.map(([, , path]) => path)).not.toContain("user");
   });
 
   it("does not trust a marker copied by a non-bot author", () => {
@@ -317,6 +326,7 @@ describe("OpenCode workflow authorization", () => {
     );
     expect(workflow.match(/persist-credentials: false/g)).toHaveLength(2);
     expect(workflow).toContain('SHARE: "false"');
+    expect(workflow).toContain('OPENCODE_DISABLE_PROJECT_CONFIG: "true"');
     expect(workflow).toContain(
       '"small_model":"opencode/deepseek-v4.1-flash-free"',
     );

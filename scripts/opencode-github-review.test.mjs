@@ -405,6 +405,7 @@ describe("model invocation", () => {
       "json",
       "--model",
       "opencode/model",
+      "--pure",
       "--print-logs",
       "--log-level",
       "ERROR",
@@ -701,6 +702,44 @@ describe("mode orchestration", () => {
     expect(replies[0].body).toContain("Because the guard fails.");
   });
 
+  it("answers an explicit inline request without a known bot login", () => {
+    const replies = [];
+    main(
+      reviewEnv({
+        OPENCODE_REVIEW_MODE: "reply",
+        OPENCODE_TARGET_ID: "901",
+        OPENCODE_BOT_LOGIN: "",
+      }),
+      {
+        readEvent: () => ({
+          pull_request: { number: 105 },
+          comment: {
+            id: 902,
+            in_reply_to_id: 901,
+            user: { login: "maintainer" },
+            body: "/oc why does this fail?",
+            path: "src/example.ts",
+            line: 2,
+          },
+        }),
+        client: {
+          getBotLogin: () => "",
+          getComment: () => ({
+            id: 901,
+            in_reply_to_id: null,
+            user: { login: "maintainer" },
+            body: "A user comment",
+          }),
+          replyToReviewComment: (pr, id, body) =>
+            replies.push({ pr, id, body }),
+        },
+        runModel: () => "Because of the guard.",
+      },
+    );
+    expect(replies).toHaveLength(1);
+    expect(replies[0]).toMatchObject({ pr: 105, id: 901 });
+  });
+
   it("does not answer an unrelated inline comment", () => {
     const replies = [];
     main(
@@ -822,7 +861,7 @@ describe("GitHub client", () => {
     expect(JSON.parse(calls[2].input)).toEqual({ body: "answer" });
   });
 
-  it("reads the bot login and fails closed on API errors", () => {
+  it("reads the bot login when available and degrades when /user is forbidden", () => {
     const success = fakeSpawn(JSON.stringify({ login: "github-actions[bot]" }));
     const client = createGitHubClient({
       repo: "devcedrick/quilla",
@@ -831,18 +870,17 @@ describe("GitHub client", () => {
     });
     expect(client.getBotLogin()).toBe("github-actions[bot]");
 
-    const failure = () => ({
+    const forbidden = () => ({
       status: 1,
       stdout: "",
-      stderr: "HTTP 422: line must be part of the diff",
+      stderr: "gh: Not Found (HTTP 404)",
     });
-    const failing = createGitHubClient({
+    const installation = createGitHubClient({
       repo: "devcedrick/quilla",
       env: {},
-      spawn: failure,
+      spawn: forbidden,
     });
-    expect(() => failing.createReview(105, {})).toThrow(
-      "line must be part of the diff",
-    );
+    expect(installation.getBotLogin()).toBe("");
+    expect(() => installation.createReview(105, {})).toThrow(/HTTP 404/);
   });
 });
