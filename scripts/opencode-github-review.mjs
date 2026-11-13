@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
+import { isAbsolute, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 export const REVIEW_MARKER = "<!-- opencode-github-review -->";
@@ -487,29 +488,24 @@ export function createGitHubClient({
     const output = gh(["api", path]).trim();
     return output ? JSON.parse(output) : null;
   };
+  const getAll = (path) => {
+    const output = gh(["api", path, "--paginate", "--slurp"]).trim();
+    if (!output) return [];
+    const pages = JSON.parse(output);
+    return Array.isArray(pages) ? pages.flat() : [];
+  };
   const postJson = (path, payload) =>
     gh(
       ["api", path, "--method", "POST", "--input", "-"],
       JSON.stringify(payload),
     );
-  /**
-   * `GET /user` needs a user-to-server token, so the workflow's installation
-   * token makes this fail. It is only a fallback: the workflow passes the
-   * marker-bearing bot's login through OPENCODE_BOT_LOGIN.
-   */
-  const getBotLogin = () => {
-    try {
-      return getJson("user")?.login ?? "";
-    } catch {
-      return "";
-    }
-  };
 
   return {
     getPull: (pr) => getJson(`repos/${repo}/pulls/${pr}`),
     getPullDiff: (pr) => gh(["pr", "diff", String(pr), "--repo", repo]),
     getComment: (id) => getJson(`repos/${repo}/pulls/comments/${id}`),
-    getBotLogin,
+    getPullComments: (pr) =>
+      getAll(`repos/${repo}/pulls/${pr}/comments?per_page=100`),
     createReview: (pr, payload) =>
       postJson(`repos/${repo}/pulls/${pr}/reviews`, payload),
     replyToReviewComment: (pr, id, body) =>
@@ -540,6 +536,32 @@ export function isBotThread(comment, ancestors, botLogin) {
   );
 }
 
+/**
+ * Resolve the root of a review comment within a full comment list. GitHub
+ * review replies target the top-level comment, so a human follow-up can point
+ * at a human root even when a bot reply exists elsewhere in the thread.
+ */
+function commentRootId(comment, byId) {
+  let current = comment;
+  const seen = new Set();
+  while (current?.in_reply_to_id) {
+    if (seen.has(current.id)) break;
+    seen.add(current.id);
+    const parent = byId.get(current.in_reply_to_id);
+    if (!parent) return current.in_reply_to_id;
+    current = parent;
+  }
+  return current?.id;
+}
+
+/** Select every comment that shares the top-level thread with `comment`. */
+export function sameThreadComments(comment, comments = []) {
+  const list = comments.filter(Boolean);
+  const byId = new Map(list.map((item) => [item.id, item]));
+  const root = commentRootId(comment, byId);
+  return list.filter((item) => commentRootId(item, byId) === root);
+}
+
 export function runModel(prompt, env = process.env, spawn = spawnSync) {
   const model = env.OPENCODE_REVIEW_MODEL || env.MODEL;
   if (!model)
@@ -547,6 +569,8 @@ export function runModel(prompt, env = process.env, spawn = spawnSync) {
       "Set OPENCODE_REVIEW_MODEL to a provider/model identifier.",
     );
 
+  const target = env.PR_HEAD_DIR || process.cwd();
+  const directory = isAbsolute(target) ? target : resolve(target);
   const result = spawn(
     env.OPENCODE_BIN || "opencode",
     [
@@ -555,17 +579,26 @@ export function runModel(prompt, env = process.env, spawn = spawnSync) {
       "json",
       "--model",
       model,
+      "--dir",
+      directory,
       "--pure",
       "--print-logs",
       "--log-level",
       "ERROR",
     ],
     {
-      cwd: env.PR_HEAD_DIR || process.cwd(),
+      cwd: directory,
       input: prompt,
       encoding: "utf8",
       stdio: ["pipe", "pipe", "inherit"],
-      env: { ...process.env, ...env, SHARE: "false", USE_GITHUB_TOKEN: "true" },
+      env: {
+        ...process.env,
+        ...env,
+        PWD: directory,
+        OPENCODE_DISABLE_PROJECT_CONFIG: "true",
+        SHARE: "false",
+        USE_GITHUB_TOKEN: "true",
+      },
       maxBuffer: MAX_MODEL_BUFFER,
       timeout: MAX_MODEL_MS,
     },
@@ -675,12 +708,22 @@ export function main(env = process.env, dependencies = {}) {
     const comment = event.comment;
     if (!comment || !pr)
       throw new Error("Reply mode needs an inline review comment.");
-    const botLogin = env.OPENCODE_BOT_LOGIN || client.getBotLogin();
+    const botLogin = env.OPENCODE_BOT_LOGIN || "";
     const thread = resolveThread(comment, client);
+    let botThread = isBotThread(comment, thread.ancestors, botLogin);
     if (
-      !isBotThread(comment, thread.ancestors, botLogin) &&
-      !isBotRequest(comment.body)
+      !botThread &&
+      botLogin &&
+      typeof client.getPullComments === "function"
     ) {
+      const comments = client.getPullComments(pr) ?? [];
+      botThread = isBotThread(
+        comment,
+        [...thread.ancestors, ...sameThreadComments(comment, comments)],
+        botLogin,
+      );
+    }
+    if (!botThread && !isBotRequest(comment.body)) {
       console.log("Not a bot review thread and no /oc request; skipping.");
       return;
     }

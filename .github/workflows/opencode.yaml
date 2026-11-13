@@ -54,6 +54,11 @@ jobs:
           const REQUEST = /(^|\s)\/(?:opencode|oc)(?=\s|$)/i;
           /** Read GitHub metadata without a shell or request text execution. */
           const api = (path) => JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8' }));
+          const apiList = (path) => {
+            const output = execFileSync('gh', ['api', path, '--paginate', '--slurp'], { encoding: 'utf8' });
+            const pages = JSON.parse(output || '[]');
+            return Array.isArray(pages) ? pages.flat() : [];
+          };
           const write = (key, value) => fs.appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${value}\n`);
           /** Only GitHub App bots may own review threads; a copied marker is not enough. */
           const isBotComment = (comment) =>
@@ -108,6 +113,28 @@ jobs:
               while (current?.in_reply_to_id) {
                 current = api(`repos/${repo}/pulls/comments/${current.in_reply_to_id}`);
                 noteBotThread(current);
+              }
+              if (!botThread && !requested) {
+                const comments = apiList(`repos/${repo}/pulls/${prNumber}/comments?per_page=100`);
+                const byId = new Map(comments.map((comment) => [comment.id, comment]));
+                const rootId = (comment) => {
+                  let node = comment;
+                  const seen = new Set();
+                  while (node?.in_reply_to_id) {
+                    if (seen.has(node.id)) break;
+                    seen.add(node.id);
+                    const parent = byId.get(node.in_reply_to_id);
+                    if (!parent) return node.in_reply_to_id;
+                    node = parent;
+                  }
+                  return node?.id;
+                };
+                const threadRoot = rootId(event.comment);
+                for (const candidate of comments) {
+                  if (rootId(candidate) !== threadRoot) continue;
+                  noteBotThread(candidate);
+                  if (botThread) break;
+                }
               }
               target = current?.id ?? event.comment.id;
               if (!requested && !botThread) {

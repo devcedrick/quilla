@@ -64,6 +64,8 @@ function authorize(permission, event, options = {}) {
               const id = Number(path.split("/").pop());
               return JSON.stringify(comments[id] ?? null);
             }
+            if (path.includes("/pulls/") && path.includes("/comments"))
+              return JSON.stringify([options.threadComments ?? []]);
             if (path.includes("/pulls/")) return JSON.stringify(pr);
             throw new Error(`Unexpected API path: ${path}`);
           },
@@ -290,6 +292,83 @@ describe("OpenCode workflow authorization", () => {
         },
       ).allowed,
     ).toBe(false);
+  });
+
+  it("recognizes a bot reply in a human-rooted thread", () => {
+    const humanRoot = {
+      id: 800,
+      in_reply_to_id: null,
+      user: { login: "maintainer" },
+      body: "A human comment",
+    };
+    const botReply = {
+      id: 801,
+      in_reply_to_id: 800,
+      user: { login: "github-actions[bot]" },
+      body: `<!-- opencode-github-review -->\n\nA bot reply`,
+    };
+    const followUp = {
+      ...inlineReply.comment,
+      id: 802,
+      in_reply_to_id: 800,
+      body: "A later reply without a command",
+    };
+    expect(
+      authorize(
+        "write",
+        { ...inlineReply, comment: followUp },
+        {
+          eventName: "pull_request_review_comment",
+          comments: { 800: humanRoot },
+          threadComments: [humanRoot, botReply, followUp],
+        },
+      ),
+    ).toMatchObject({
+      allowed: true,
+      outputs: {
+        mode: "reply",
+        target: "800",
+        bot_login: "github-actions[bot]",
+      },
+    });
+  });
+
+  it("does not treat a bot marker in another thread as this thread's bot", () => {
+    const humanRoot = {
+      id: 810,
+      in_reply_to_id: null,
+      user: { login: "maintainer" },
+      body: "A human comment",
+    };
+    const otherRoot = {
+      id: 820,
+      in_reply_to_id: null,
+      user: { login: "maintainer" },
+      body: "Another human comment",
+    };
+    const botElsewhere = {
+      id: 821,
+      in_reply_to_id: 820,
+      user: { login: "github-actions[bot]" },
+      body: `<!-- opencode-github-review -->\n\nA bot reply`,
+    };
+    const followUp = {
+      ...inlineReply.comment,
+      id: 812,
+      in_reply_to_id: 810,
+      body: "A later reply without a command",
+    };
+    expect(
+      authorize(
+        "write",
+        { ...inlineReply, comment: followUp },
+        {
+          eventName: "pull_request_review_comment",
+          comments: { 810: humanRoot },
+          threadComments: [humanRoot, otherRoot, botElsewhere, followUp],
+        },
+      ),
+    ).toMatchObject({ allowed: false });
   });
 
   it("walks nested replies to a bot comment and targets the thread root", () => {

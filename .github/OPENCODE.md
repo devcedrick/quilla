@@ -11,12 +11,13 @@ the review body instead.
 
 Every inline comment and review body carries an invisible marker,
 `<!-- opencode-github-review -->`. Reply to any inline bot comment and the
-workflow answers in that same review thread; no command is required. The reply
-keeps the marker so a later reply in the thread is recognized too. Bot-authored
-comments are excluded from triggering another run, which prevents reply loops.
-Thread ownership comes from the marker plus a `[bot]` author login on the
-thread's ancestor; the workflow never calls `GET /user`, which an installation
-token cannot use.
+workflow answers in that same review thread; no command is required. A bot
+reply in a thread started by a human is also recognized, so a later reply in
+that thread is answered without a command. The reply keeps the marker so a
+later reply in the thread is recognized too. Bot-authored comments are excluded
+from triggering another run, which prevents reply loops. Thread ownership comes
+from the marker plus a `[bot]` author login anywhere in the thread; the workflow
+never calls `GET /user`, which an installation token cannot use.
 
 On an issue, PR conversation or inline PR comment, `/opencode` or `/oc` still
 requests an answer, for example:
@@ -46,7 +47,7 @@ The workflow selects one of three modes:
   answered automatically; an inline `/oc` request is answered in the thread root.
 - `issue` after `/oc` or `/opencode` on an issue or PR conversation.
 
-The model is invoked with `opencode run --format json`. The runner reads only the
+The model is invoked with `opencode run --format json --dir <worktree>`. The runner reads only the
 final assistant text from the JSONL event stream, never executes model output,
 and posts through GitHub's pull request review, review-comment reply, or issue
 comment endpoints. Review payloads use the `COMMENT` event; the bot never
@@ -69,9 +70,10 @@ textconv execution are also denied. The model cannot edit files, run project
 scripts, commit, push, deploy or change settings. Repository, diff, issue and
 comment text is delivered as untrusted data; the workflow does not interpolate
 it into a shell command. Review mode checks out the PR head, so that checkout is
-content, never configuration: the model runs with `--pure` and
-`OPENCODE_DISABLE_PROJECT_CONFIG=true`, which stops a PR from loading its own
-OpenCode config or plugins with workflow credentials.
+content, never configuration: the model runs with `--pure`, and the runner pins
+`OPENCODE_DISABLE_PROJECT_CONFIG=true` and `PWD` to the selected worktree, which
+stops a PR from loading its own OpenCode config or plugins with workflow
+credentials and makes OpenCode inspect the intended checkout.
 
 ## Settings
 
@@ -123,15 +125,16 @@ explanation using `/oc`. Confirm bot replies do not trigger new runs. Local
 checks cannot establish provider credential/model availability or successful
 comment delivery.
 
-Local verification on 13 November 2026: `npm run test:unit` (568 tests),
-`npm run lint`, `npm run typecheck`, and `npm run knip` passed; the new runner
-tests cover JSON event parsing, structured review parsing, new-side diff line
-validation (including added content that resembles a file header), out-of-diff
-fallback, inline comment caps, reply-thread resolution, bot-login derivation
-without `GET /user`, mode orchestration, GitHub payload construction, and the
-model process contract (pinned flags, 35-minute cap, and partial-output
-diagnostics). Build/E2E were not run for this workflow-only change; no
-application runtime or user journey was modified.
+Local verification on 13 November 2026: `npm run test:unit`, `npm run lint`,
+`npm run typecheck`, and `npm run knip` passed; the new runner tests cover JSON
+event parsing, structured review parsing, new-side diff line validation
+(including added content that resembles a file header), out-of-diff fallback,
+inline comment caps, reply-thread resolution, bot-login derivation without
+`GET /user`, human-rooted threads with bot replies, mode orchestration, GitHub
+payload construction, and the model process contract (pinned worktree/isolation
+flags, 35-minute cap, and partial-output diagnostics). Build/E2E were not run
+for this workflow-only change; no application runtime or user journey was
+modified.
 
 References: [GitHub pull request reviews](https://docs.github.com/en/rest/pulls/reviews),
 [review comment replies](https://docs.github.com/en/rest/pulls/comments#create-a-reply-for-a-review-comment),

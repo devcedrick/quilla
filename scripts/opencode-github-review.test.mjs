@@ -23,6 +23,7 @@ import {
   prepareReview,
   resolveThread,
   runModel,
+  sameThreadComments,
   unwrapFence,
 } from "./opencode-github-review.mjs";
 
@@ -375,7 +376,7 @@ describe("OpenCode JSON event parsing", () => {
 });
 
 describe("model invocation", () => {
-  it("pins format, logs, cwd, and a timeout above the previous failure", () => {
+  it("pins the PR worktree, isolation flags, logs, and a bounded timeout", () => {
     const calls = [];
     const spawn = (command, args, options) => {
       calls.push({ command, args, options });
@@ -405,6 +406,8 @@ describe("model invocation", () => {
       "json",
       "--model",
       "opencode/model",
+      "--dir",
+      "/tmp/pr-head",
       "--pure",
       "--print-logs",
       "--log-level",
@@ -414,6 +417,10 @@ describe("model invocation", () => {
       cwd: "/tmp/pr-head",
       input: "prompt",
       stdio: ["pipe", "pipe", "inherit"],
+      env: {
+        PWD: "/tmp/pr-head",
+        OPENCODE_DISABLE_PROJECT_CONFIG: "true",
+      },
     });
     expect(calls[0].options.timeout).toBeGreaterThanOrEqual(15 * 60 * 1000);
   });
@@ -565,6 +572,48 @@ describe("thread resolution", () => {
     expect(isBotThread(reply, [root], "")).toBe(false);
   });
 
+  it("finds sibling comments in a human-rooted thread", () => {
+    const humanRoot = {
+      id: 10,
+      in_reply_to_id: null,
+      body: "A human comment",
+      user: { login: "maintainer" },
+    };
+    const botReply = {
+      id: 11,
+      in_reply_to_id: 10,
+      body: `${REVIEW_MARKER}\n\nA bot reply`,
+      user: { login: "github-actions[bot]" },
+    };
+    const followUp = {
+      id: 12,
+      in_reply_to_id: 10,
+      body: "A later human reply",
+      user: { login: "maintainer" },
+    };
+    const otherThread = {
+      id: 13,
+      in_reply_to_id: null,
+      body: "Elsewhere",
+      user: { login: "maintainer" },
+    };
+    expect(
+      sameThreadComments(followUp, [
+        humanRoot,
+        botReply,
+        followUp,
+        otherThread,
+      ]).map((comment) => comment.id),
+    ).toEqual([10, 11, 12]);
+    expect(
+      isBotThread(
+        followUp,
+        sameThreadComments(followUp, [humanRoot, botReply, followUp]),
+        "github-actions[bot]",
+      ),
+    ).toBe(true);
+  });
+
   it("returns no root when the parent cannot be fetched", () => {
     const thread = resolveThread(nested, fakeClient([]));
     expect(thread.root).toBe(nested);
@@ -702,6 +751,52 @@ describe("mode orchestration", () => {
     expect(replies[0].body).toContain("Because the guard fails.");
   });
 
+  it("answers a command-free follow-up in a human-rooted thread", () => {
+    const humanRoot = {
+      id: 800,
+      in_reply_to_id: null,
+      user: { login: "maintainer" },
+      body: "A human comment",
+    };
+    const botReply = {
+      id: 801,
+      in_reply_to_id: 800,
+      user: { login: "github-actions[bot]" },
+      body: `${REVIEW_MARKER}\n\nA bot reply`,
+    };
+    const followUp = {
+      id: 802,
+      in_reply_to_id: 800,
+      user: { login: "maintainer" },
+      body: "Follow up without a command",
+      path: "src/example.ts",
+      line: 2,
+    };
+    const replies = [];
+    main(
+      reviewEnv({
+        OPENCODE_REVIEW_MODE: "reply",
+        OPENCODE_TARGET_ID: "800",
+        OPENCODE_BOT_LOGIN: "github-actions[bot]",
+      }),
+      {
+        readEvent: () => ({
+          pull_request: { number: 105 },
+          comment: followUp,
+        }),
+        client: {
+          getComment: (id) => (id === 800 ? humanRoot : null),
+          getPullComments: () => [humanRoot, botReply, followUp],
+          replyToReviewComment: (pr, id, body) =>
+            replies.push({ pr, id, body }),
+        },
+        runModel: () => "A later answer.",
+      },
+    );
+    expect(replies).toHaveLength(1);
+    expect(replies[0]).toMatchObject({ pr: 105, id: 800 });
+  });
+
   it("answers an explicit inline request without a known bot login", () => {
     const replies = [];
     main(
@@ -723,7 +818,6 @@ describe("mode orchestration", () => {
           },
         }),
         client: {
-          getBotLogin: () => "",
           getComment: () => ({
             id: 901,
             in_reply_to_id: null,
@@ -861,26 +955,21 @@ describe("GitHub client", () => {
     expect(JSON.parse(calls[2].input)).toEqual({ body: "answer" });
   });
 
-  it("reads the bot login when available and degrades when /user is forbidden", () => {
-    const success = fakeSpawn(JSON.stringify({ login: "github-actions[bot]" }));
+  it("lists every review comment in the pull request with pagination", () => {
+    const { calls, spawn } = fakeSpawn(
+      JSON.stringify([[{ id: 1 }], [{ id: 2 }]]),
+    );
     const client = createGitHubClient({
       repo: "devcedrick/quilla",
       env: {},
-      spawn: success.spawn,
+      spawn,
     });
-    expect(client.getBotLogin()).toBe("github-actions[bot]");
-
-    const forbidden = () => ({
-      status: 1,
-      stdout: "",
-      stderr: "gh: Not Found (HTTP 404)",
-    });
-    const installation = createGitHubClient({
-      repo: "devcedrick/quilla",
-      env: {},
-      spawn: forbidden,
-    });
-    expect(installation.getBotLogin()).toBe("");
-    expect(() => installation.createReview(105, {})).toThrow(/HTTP 404/);
+    expect(client.getPullComments(105)).toEqual([{ id: 1 }, { id: 2 }]);
+    expect(calls[0].args).toEqual([
+      "api",
+      "repos/devcedrick/quilla/pulls/105/comments?per_page=100",
+      "--paginate",
+      "--slurp",
+    ]);
   });
 });
