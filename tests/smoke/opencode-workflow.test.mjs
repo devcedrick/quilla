@@ -1,14 +1,4 @@
-import {
-  readFileSync,
-  mkdtempSync,
-  writeFileSync,
-  existsSync,
-  unlinkSync,
-  rmdirSync,
-} from "node:fs";
-import { spawnSync } from "node:child_process";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { readFileSync } from "node:fs";
 import { runInNewContext } from "node:vm";
 import { describe, expect, it } from "vitest";
 
@@ -18,16 +8,39 @@ const authorization = workflow.match(
 );
 if (!authorization) throw new Error("OpenCode authorization script not found");
 
+const sameRepoPR = {
+  number: 102,
+  state: "open",
+  draft: false,
+  head: { repo: { full_name: "devcedrick/quilla" } },
+};
+const botComment = {
+  id: 700,
+  in_reply_to_id: null,
+  user: { login: "github-actions[bot]" },
+  body: "<!-- opencode-github-review -->\n\nA finding",
+};
+
+function inferEventName(event) {
+  if (event.comment?.path) return "pull_request_review_comment";
+  if (event.issue) return "issue_comment";
+  return "pull_request";
+}
+
 /** Execute the extracted authorization guard with bounded, synthetic GitHub responses. */
-function authorize(permission, event, pr = {}) {
+function authorize(permission, event, options = {}) {
   let output = "";
   const calls = [];
+  const eventName = options.eventName ?? inferEventName(event);
+  const pr = options.pr ?? sameRepoPR;
+  const comments = options.comments ?? {};
   runInNewContext(authorization[1], {
     process: {
       env: {
         GITHUB_EVENT_PATH: "event.json",
         GITHUB_REPOSITORY: "devcedrick/quilla",
         GITHUB_ACTOR: "maintainer",
+        GITHUB_EVENT_NAME: eventName,
         GITHUB_OUTPUT: "output",
       },
     },
@@ -44,9 +57,19 @@ function authorize(permission, event, pr = {}) {
         return {
           execFileSync(command, args) {
             calls.push([command, ...args]);
-            if (args[1].endsWith("/permission"))
+            const path = args[1];
+            if (path.endsWith("/permission"))
               return JSON.stringify({ permission });
-            return JSON.stringify(pr);
+            if (path === "user")
+              return JSON.stringify({
+                login: options.botLogin ?? "github-actions[bot]",
+              });
+            if (path.includes("/pulls/comments/")) {
+              const id = Number(path.split("/").pop());
+              return JSON.stringify(comments[id] ?? null);
+            }
+            if (path.includes("/pulls/")) return JSON.stringify(pr);
+            throw new Error(`Unexpected API path: ${path}`);
           },
         };
       throw new Error("Unexpected module");
@@ -55,17 +78,48 @@ function authorize(permission, event, pr = {}) {
   expect(
     calls.every(([command, method]) => command === "gh" && method === "api"),
   ).toBe(true);
-  return output === "allowed=true\n";
+  const outputs = Object.fromEntries(
+    output
+      .trim()
+      .split(/\r?\n/)
+      .filter(Boolean)
+      .map((line) => {
+        const index = line.indexOf("=");
+        return [line.slice(0, index), line.slice(index + 1)];
+      }),
+  );
+  return { allowed: outputs.allowed === "true", outputs, calls };
 }
 
 const issueComment = {
   issue: { number: 95 },
   comment: { body: "/oc explain this issue" },
 };
-const sameRepoPR = {
-  state: "open",
-  draft: false,
-  head: { repo: { full_name: "devcedrick/quilla" } },
+const conversationComment = {
+  issue: { number: 102, pull_request: { url: "api" } },
+  comment: { body: "/oc review this PR" },
+};
+const inlineRequest = {
+  pull_request: { number: 102 },
+  comment: {
+    id: 701,
+    in_reply_to_id: null,
+    user: { login: "maintainer" },
+    body: "/oc check this line",
+    path: "src/example.ts",
+    line: 2,
+  },
+};
+const inlineReply = {
+  pull_request: { number: 102 },
+  comment: {
+    id: 702,
+    in_reply_to_id: 700,
+    user: { login: "maintainer" },
+    body: "Why is this wrong?",
+    path: "src/example.ts",
+    line: 2,
+  },
 };
 
 describe("OpenCode workflow authorization", () => {
@@ -86,135 +140,203 @@ describe("OpenCode workflow authorization", () => {
       expect(
         runInNewContext(cancellation, { github: { event_name: eventName } }),
       ).toBe(eventName === "pull_request");
-    expect(authorize("read", issueComment)).toBe(false);
+    expect(authorize("read", issueComment).allowed).toBe(false);
   });
-  it("exports the guarded prompt only after successful command substitution", () => {
-    expect(workflow).not.toContain('export PROMPT="$(');
-    expect(workflow).toMatch(
-      /PROMPT="\$\(node <<'NODE'[\s\S]*?\r?\n\s+NODE\r?\n\s+\)"\r?\n\s+export PROMPT\r?\n\s+opencode github run/,
-    );
-    expect(workflow).toContain("shell: bash");
-  });
-  it("stops before OpenCode when prompt preparation fails and preserves the guard on success", () => {
-    const directory = mkdtempSync(join(tmpdir(), "quilla-prompt-"));
-    const eventPath = join(directory, "event.json");
-    const marker = join(directory, "called.txt");
-    const bash =
-      process.platform === "win32"
-        ? join(
-            process.env.ProgramFiles || "C:/Program Files",
-            "Git",
-            "bin",
-            "bash.exe",
-          )
-        : "bash";
-    const script = workflow
-      .slice(workflow.lastIndexOf("        run: |") + "        run: |".length)
-      .split(/\r?\n/)
-      .map((line) => line.replace(/^ {10}/, ""))
-      .join("\n")
-      .replace(
-        "node <<'NODE'",
-        `"${process.execPath.replaceAll("\\", "/")}" <<'NODE'`,
-      );
-    try {
-      writeFileSync(eventPath, "{");
-      const options = {
-        encoding: "utf8",
-        env: {
-          ...process.env,
-          GITHUB_EVENT_PATH: eventPath,
-          PROMPT: "GUARDED INSTRUCTIONS",
-          OUTPUT_MARKER: marker.replaceAll("\\", "/"),
-        },
-        timeout: 10000,
-      };
-      const stub = 'opencode() { printf "%s" "$PROMPT" > "$OUTPUT_MARKER"; }\n';
-      const failed = spawnSync(
-        bash,
-        ["-e", "-o", "pipefail", "-c", stub + script],
-        options,
-      );
-      expect(failed.error).toBeUndefined();
-      expect(failed.status).not.toBe(0);
-      expect(existsSync(marker)).toBe(false);
-      writeFileSync(
-        eventPath,
-        JSON.stringify({ comment: { body: "/oc $(do-not-execute)" } }),
-      );
-      const succeeded = spawnSync(
-        bash,
-        ["-e", "-o", "pipefail", "-c", stub + script],
-        options,
-      );
-      expect(succeeded.error).toBeUndefined();
-      expect(succeeded.status, succeeded.stderr).toBe(0);
-      expect(readFileSync(marker, "utf8")).toContain(
-        'GUARDED INSTRUCTIONS\n\nUNTRUSTED REQUEST DATA:\n{"comment":"/oc $(do-not-execute)"',
-      );
-    } finally {
-      if (existsSync(marker)) unlinkSync(marker);
-      if (existsSync(eventPath)) unlinkSync(eventPath);
-      rmdirSync(directory);
-    }
-  });
+
   it.each(["admin", "maintain", "write"])(
     "allows %s requesters to ask about an issue",
     (permission) => {
-      expect(authorize(permission, issueComment)).toBe(true);
+      expect(authorize(permission, issueComment)).toMatchObject({
+        allowed: true,
+        outputs: { mode: "issue", pr: "", target: "95" },
+      });
     },
   );
+
   it.each(["read", "triage", "none"])("refuses %s requesters", (permission) => {
-    expect(authorize(permission, issueComment)).toBe(false);
+    expect(authorize(permission, issueComment)).toMatchObject({
+      allowed: false,
+      outputs: { mode: "", pr: "", target: "" },
+    });
   });
-  it("checks conversation and inline PR comments against the current PR origin", () => {
-    const conversation = {
-      ...issueComment,
-      issue: { number: 102, pull_request: { url: "api" } },
-    };
-    const inline = {
-      pull_request: { number: 102 },
-      comment: { body: "/opencode review this line" },
-    };
-    for (const event of [
-      conversation,
-      inline,
-      { pull_request: { number: 102 } },
-    ]) {
-      expect(authorize("write", event, sameRepoPR)).toBe(true);
-      expect(
-        authorize("write", event, {
-          ...sameRepoPR,
-          head: { repo: { full_name: "outsider/fork" } },
-        }),
-      ).toBe(false);
-      expect(authorize("write", event, { ...sameRepoPR, draft: true })).toBe(
-        false,
-      );
-      expect(
-        authorize("write", event, { ...sameRepoPR, state: "closed" }),
-      ).toBe(false);
-    }
-  });
+
   it("does not match an unrelated slash word as a bot request", () => {
     expect(
-      authorize("write", { ...issueComment, comment: { body: "/octopus" } }),
+      authorize("write", { ...issueComment, comment: { body: "/octopus" } })
+        .allowed,
     ).toBe(false);
     expect(
       authorize("write", {
         ...issueComment,
         comment: { body: "Please /OPENCODE explain" },
-      }),
+      }).allowed,
     ).toBe(true);
   });
-  it("keeps the workflow token read-only for repository content and disables sharing", () => {
+
+  it("authorizes PR reviews only for open, non-draft, same-repository PRs", () => {
+    const event = { pull_request: { number: 102 } };
+    expect(
+      authorize("write", event, { eventName: "pull_request" }),
+    ).toMatchObject({
+      allowed: true,
+      outputs: { mode: "review", pr: "102", target: "102" },
+    });
+    expect(
+      authorize("write", event, {
+        eventName: "pull_request",
+        pr: { ...sameRepoPR, head: { repo: { full_name: "outsider/fork" } } },
+      }).allowed,
+    ).toBe(false);
+    expect(
+      authorize("write", event, {
+        eventName: "pull_request",
+        pr: { ...sameRepoPR, draft: true },
+      }).allowed,
+    ).toBe(false);
+    expect(
+      authorize("write", event, {
+        eventName: "pull_request",
+        pr: { ...sameRepoPR, state: "closed" },
+      }).allowed,
+    ).toBe(false);
+  });
+
+  it("applies the same PR origin checks to issue conversation comments", () => {
+    expect(
+      authorize("write", conversationComment, {
+        eventName: "issue_comment",
+      }),
+    ).toMatchObject({ allowed: true, outputs: { mode: "issue", pr: "102" } });
+    expect(
+      authorize("write", conversationComment, {
+        eventName: "issue_comment",
+        pr: { ...sameRepoPR, draft: true },
+      }).allowed,
+    ).toBe(false);
+  });
+
+  it("auto-replies only to bot review threads or explicit inline requests", () => {
+    expect(
+      authorize("write", inlineReply, {
+        eventName: "pull_request_review_comment",
+        comments: { 700: botComment },
+      }),
+    ).toMatchObject({
+      allowed: true,
+      outputs: {
+        mode: "reply",
+        pr: "102",
+        target: "700",
+        bot_login: "github-actions[bot]",
+      },
+    });
+
+    expect(
+      authorize("write", inlineRequest, {
+        eventName: "pull_request_review_comment",
+        comments: {},
+      }),
+    ).toMatchObject({
+      allowed: true,
+      outputs: { mode: "reply", target: "701" },
+    });
+
+    const userRoot = {
+      id: 800,
+      in_reply_to_id: null,
+      user: { login: "maintainer" },
+      body: "A normal inline comment",
+    };
+    expect(
+      authorize(
+        "write",
+        {
+          ...inlineReply,
+          comment: { ...inlineReply.comment, in_reply_to_id: 800 },
+        },
+        {
+          eventName: "pull_request_review_comment",
+          comments: { 800: userRoot },
+        },
+      ).allowed,
+    ).toBe(false);
+  });
+
+  it("does not trust a marker copied by a non-bot author", () => {
+    const forged = {
+      ...botComment,
+      id: 900,
+      user: { login: "maintainer" },
+    };
+    expect(
+      authorize(
+        "write",
+        {
+          ...inlineReply,
+          comment: { ...inlineReply.comment, in_reply_to_id: 900 },
+        },
+        {
+          eventName: "pull_request_review_comment",
+          comments: { 900: forged },
+        },
+      ).allowed,
+    ).toBe(false);
+  });
+
+  it("walks nested replies to a bot comment and targets the thread root", () => {
+    const firstReply = {
+      id: 901,
+      in_reply_to_id: 700,
+      user: { login: "maintainer" },
+      body: "First reply",
+    };
+    const secondReply = {
+      id: 902,
+      in_reply_to_id: 901,
+      user: { login: "maintainer" },
+      body: "Second reply",
+    };
+    expect(
+      authorize(
+        "write",
+        { ...inlineReply, comment: secondReply },
+        {
+          eventName: "pull_request_review_comment",
+          comments: { 700: botComment, 901: firstReply },
+        },
+      ),
+    ).toMatchObject({ allowed: true, outputs: { target: "700" } });
+  });
+
+  it("keeps the workflow token read-only for content and runs a trusted runner", () => {
     expect(workflow).toMatch(/contents: read/);
+    expect(workflow).toMatch(/pull-requests: write/);
+    expect(workflow).toMatch(/issues: write/);
     expect(workflow).not.toMatch(
       /contents: write|pull_request_target|AGENT_GITHUB_TOKEN/,
     );
-    expect(workflow).toContain("persist-credentials: false");
+    expect(workflow.match(/persist-credentials: false/g)).toHaveLength(2);
     expect(workflow).toContain('SHARE: "false"');
     expect(workflow).toContain("github.event.sender.type != 'Bot'");
     expect(workflow).toContain("sha256sum --check --strict");
+    expect(workflow).toContain(
+      "https://github.com/anomalyco/opencode/releases/download/v1.19.5/opencode-linux-x64.tar.gz",
+    );
+    expect(workflow).toContain('node "$RUNNER"');
+    expect(workflow).toContain('[ "$OPENCODE_REVIEW_MODE" = "reply" ]');
+    expect(workflow).toContain('RUNNER="$PR_HEAD_DIR/$RUNNER"');
+    expect(workflow).not.toContain("opencode github run");
+    expect(workflow).toContain(
+      "ref: ${{ github.event.pull_request.head.sha }}",
+    );
+    expect(workflow).toContain(
+      "ref: ${{ github.event.repository.default_branch }}",
+    );
+    expect(workflow).toMatch(/"permission":\{"\*":"deny","read":"allow"/);
+    expect(workflow).toContain('"*>*":"deny"');
+    expect(workflow).toContain('"*--ext-diff*":"deny"');
+    expect(workflow).toContain(
+      "OPENCODE_REVIEW_MODE: ${{ steps.authorize.outputs.mode }}",
+    );
   });
 });
