@@ -157,10 +157,12 @@ exactly 1,890 questions (seven families at 270), 265 references and 59 images.
 
 Run this against a development target first. A production bootstrap is permitted
 only after a separately reviewed target registry change and fresh explicit approval
-for that exact production deployment, and must use `--prod --confirm-production`;
-`--deployment prod` is rejected so production cannot be selected without that
-confirmation. The bootstrap requires the same reviewed target registry as the
-importer, plus:
+for that exact production deployment, and must use `--prod --confirm-production`.
+The CLI rejects the `--deployment prod` alias, but that guard covers only the alias:
+when `CONVEX_DEPLOY_KEY` is set and no deployment flag is passed, the CLI does not
+require `--prod --confirm-production`. Never point a production deploy key at this
+command without that approval. The bootstrap requires the same reviewed target
+registry as the importer, plus:
 
 - `SEED_BOOTSTRAP_ENABLED=true` on that exact backend during the bootstrap window;
 - a sealed `cse-taxonomy-2027-v2` taxonomy;
