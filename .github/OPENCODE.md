@@ -106,8 +106,9 @@ reply run uses the runner from the same-repository PR head instead of failing.
 After merge, the trusted default-branch runner is used. Inline reply and PR
 review modes are additionally gated by the same open, non-draft,
 same-repository PR checks. A run can incur provider and GitHub Actions usage
-under the account's existing settings; the job is capped at 30 minutes and the
-model step at 20.
+under the account's existing settings; the job is capped at 40 minutes and the
+model step at 35. Title generation is pinned to the free review model so it
+does not call an unfunded paid model.
 
 Validation after merge: update a same-repository PR and confirm the review has
 inline comments; reply to one and confirm the answer appears in the same thread;

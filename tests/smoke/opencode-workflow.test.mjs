@@ -317,6 +317,9 @@ describe("OpenCode workflow authorization", () => {
     );
     expect(workflow.match(/persist-credentials: false/g)).toHaveLength(2);
     expect(workflow).toContain('SHARE: "false"');
+    expect(workflow).toContain(
+      '"small_model":"opencode/deepseek-v4.1-flash-free"',
+    );
     expect(workflow).toContain("github.event.sender.type != 'Bot'");
     expect(workflow).toContain("sha256sum --check --strict");
     expect(workflow).toContain(

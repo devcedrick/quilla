@@ -10,7 +10,7 @@ const MAX_INLINE_COMMENTS = 50;
 const MAX_COMMENT_CHARS = 12000;
 const MAX_REVIEW_CHARS = 60000;
 const MAX_MODEL_BUFFER = 64 * 1024 * 1024;
-const MAX_MODEL_MS = 20 * 60 * 1000;
+const MAX_MODEL_MS = 35 * 60 * 1000;
 const MAX_GH_BUFFER = 32 * 1024 * 1024;
 const SEVERITIES = new Set([
   "critical",
@@ -388,6 +388,7 @@ export function buildReviewPrompt({ repo, pr, title, body, baseRef }) {
     `Untrusted pull request description:\n<untrusted-description>\n${truncate(body || "(empty)", 12000)}\n</untrusted-description>`,
     `The pull request head is checked out in the current working directory. ${diffInstruction}`,
     "Read the relevant files and tests. If the description references issues, inspect them with `gh issue view`. Focus on concrete correctness, security, authorization, data integrity, and relevant missing tests. Do not report style-only nits unless they hide a defect.",
+    "Work from the pull request diff. Read a file only when it is needed to confirm or reject a candidate finding; do not exhaustively read the repository or unrelated files. Report at most 10 findings, highest severity first, and stop once the diff and the highest-risk paths are covered.",
     "Return only a JSON object with this shape:",
     '{"summary":"<markdown summary>","findings":[{"path":"<repository-relative path>","line":<new-file line number>,"severity":"critical|high|major|medium|minor|low|nit|info","body":"<markdown finding>"}]}',
     "Rules:",

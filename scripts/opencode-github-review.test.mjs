@@ -449,6 +449,8 @@ describe("prompts", () => {
     expect(prompt).toContain("gh pr diff 105");
     expect(prompt).toContain("Prefer a line that is part");
     expect(prompt).toContain("Findings outside the diff are listed");
+    expect(prompt).toContain("Report at most 10 findings");
+    expect(prompt).toContain("do not exhaustively read");
     expect(prompt).toContain("untrusted data");
   });
 

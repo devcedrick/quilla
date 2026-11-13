@@ -31,7 +31,7 @@ jobs:
       group: opencode-${{ github.event.pull_request.number || github.event.issue.number }}
       cancel-in-progress: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     permissions:
       contents: read
       pull-requests: write
@@ -215,7 +215,8 @@ jobs:
           SHARE: "false"
           USE_GITHUB_TOKEN: "true"
           OPENCODE_CONFIG_CONTENT: >-
-            {"$schema":"https://opencode.ai/config.json","share":"disabled","plugin":[],
+            {"$schema":"https://opencode.ai/config.json","share":"disabled",
+            "small_model":"opencode/deepseek-v4.1-flash-free","plugin":[],
             "permission":{"*":"deny","read":"allow","glob":"allow","grep":"allow",
             "external_directory":"deny","bash":{"*":"deny",
             "gh issue view *":"allow","gh pr view *":"allow","gh pr diff *":"allow",
