@@ -245,6 +245,13 @@ describe("bootstrap plan policy", () => {
       verifyFrozenBootstrapPlan(changed, policy, planChecksum, inventoryHash),
     ).toThrow("BOOTSTRAP_PLAN_MISMATCH");
   });
+  it("defaults to the frozen checksums when the caller omits them", () => {
+    // The CLI calls verifyFrozenBootstrapPlan(plan) at line 711. A missing
+    // import for either default would throw ReferenceError before the body.
+    expect(() => verifyFrozenBootstrapPlan(fixturePlan(), policy)).toThrow(
+      "BOOTSTRAP_PLAN_MISMATCH",
+    );
+  });
 });
 
 describe("command batches", () => {

@@ -196,17 +196,20 @@ export async function bootstrapLeasedRun(
   return run;
 }
 
-/** Project the acceptance evidence recorded for each bootstrap-published item. */
-export function bootstrapAssessment(run: Doc<"questionImportRuns">) {
+/** Project the acceptance evidence recorded for one bootstrap-published item. */
+export function bootstrapAssessment(
+  run: Doc<"questionImportRuns">,
+  item: { versionId: Id<"questionVersions">; contentHash: string },
+) {
   const policy = seedBootstrapPolicy;
   return [
     {
       passed: true,
-      evidence: `Plan ${run.planChecksum} processed the pinned ${run.expected}-record inventory.`,
+      evidence: `Accepted question version ${item.versionId} with content hash ${item.contentHash} under plan ${run.planChecksum}.`,
     },
     {
       passed: true,
-      evidence: `Inventory checksum ${run.inventoryHash} matches the reviewed initial corpus.`,
+      evidence: `Plan ${run.planChecksum} pins ${run.expected} records with inventory checksum ${run.inventoryHash}, matching the reviewed initial corpus.`,
     },
     {
       passed: true,

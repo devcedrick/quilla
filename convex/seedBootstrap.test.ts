@@ -272,6 +272,21 @@ describe("bootstrap publication", () => {
     );
     expect(reviewerIds).toEqual(new Set([state.run!.approverId!]));
     expect(reviewerIds.has(state.run!.ownerId)).toBe(false);
+    // Each acceptance names the version it approved instead of implying the
+    // whole inventory had already been processed at that point.
+    for (const review of state.reviews) {
+      if (review.kind !== "bootstrap_acceptance")
+        throw new Error("unexpected review kind");
+      const version = state.versions.find(
+        (item) => item._id === review.questionVersionId,
+      );
+      if (!version) throw new Error("review version missing");
+      const evidence = review.assessment.map((item) => item.evidence).join(" ");
+      expect(evidence).toContain(String(review.questionVersionId));
+      expect(evidence).toContain(version.contentHash);
+      expect(evidence).toContain(plan.planChecksum);
+      expect(evidence).not.toContain("processed the pinned");
+    }
     expect(
       state.questions.every(
         (question) => question.contributorId === state.run!.ownerId,
@@ -475,6 +490,50 @@ describe("bootstrap publication", () => {
         entries: [],
       }),
     ).rejects.toThrow("BOOTSTRAP_LEASE_LOST");
+  });
+
+  it("refuses to resume a paused run while another run holds the target lease", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    await t.mutation(internal.seedBootstrap.pause, {
+      target: "fixture",
+      runId: access.runId,
+      code: "BOOTSTRAP_OPERATION_FAILED",
+    });
+    const template = (await t.run((ctx) =>
+      ctx.db.get("questionImportRuns", access.runId),
+    ))!;
+    // A competing worker on the same target is still inside its lease.
+    await t.run(async (ctx) => {
+      await ctx.db.insert("questionImportRuns", {
+        target: template.target,
+        targetUrl: template.targetUrl,
+        mode: "bootstrap",
+        ownerId: template.ownerId,
+        approverId: template.approverId,
+        planChecksum: template.planChecksum,
+        inventoryHash: template.inventoryHash,
+        chain: template.chain,
+        manifests: template.manifests,
+        stagedCounts: template.stagedCounts,
+        expected: template.expected,
+        staged: 0,
+        processed: 0,
+        rolledBack: 0,
+        state: "preparing",
+        generation: 1,
+        leaseUntil: Date.now() + 60_000,
+        createdAt: template.createdAt + 1,
+        updatedAt: template.updatedAt,
+      });
+    });
+    await expect(begin(t, { resumeRunId: access.runId })).rejects.toThrow(
+      "BOOTSTRAP_BUSY",
+    );
+    // The rejected resume must not advance the paused run's generation.
+    await expect(
+      t.run((ctx) => ctx.db.get("questionImportRuns", access.runId)),
+    ).resolves.toMatchObject({ state: "paused", generation: 1 });
   });
 
   it("stops on a deterministic source mismatch before writing content", async () => {

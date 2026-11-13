@@ -158,6 +158,17 @@ export const begin = internalMutation({
         fail("BOOTSTRAP_TARGET_CONFLICT");
       if (resume.state !== "paused" && resume.leaseUntil > Date.now())
         fail("BOOTSTRAP_BUSY");
+      // Resuming a paused or expired run must not create a second live worker
+      // on the same target. The paused run itself holds no lease, so any
+      // active lease here belongs to a competing run.
+      const competing = await ctx.db
+        .query("questionImportRuns")
+        .withIndex("by_targetUrl_and_leaseUntil", (q) =>
+          q.eq("targetUrl", targetUrl).gt("leaseUntil", Date.now()),
+        )
+        .take(2);
+      if (competing.some((other) => other._id !== resume._id))
+        fail("BOOTSTRAP_BUSY");
       await ctx.db.patch("questionImportRuns", resume._id, {
         generation: resume.generation + 1,
         state: resume.staged === resume.expected ? "running" : "preparing",
@@ -407,7 +418,10 @@ async function acceptAndPublishQuestion(
     reason: bootstrapReviewReason(run),
     rubric: "seed-bootstrap-v1",
     score: 5,
-    assessment: bootstrapAssessment(run),
+    assessment: bootstrapAssessment(run, {
+      versionId: version._id,
+      contentHash: version.contentHash,
+    }),
     importRunId: run._id,
     planChecksum: run.planChecksum,
     decidedAt: Date.now(),

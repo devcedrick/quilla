@@ -5,6 +5,7 @@ import { writeFile } from "node:fs/promises";
 import { prepareImport } from "./import-question-bank.mjs";
 import {
   bootstrapBatchSize,
+  bootstrapInventoryChecksum,
   bootstrapPlanChecksum,
   bootstrapStageBatchSize,
   seedBootstrapPolicy,
