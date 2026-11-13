@@ -24,7 +24,7 @@ const botComment = {
 function inferEventName(event) {
   if (event.comment?.path) return "pull_request_review_comment";
   if (event.issue) return "issue_comment";
-  return "pull_request_target";
+  return "pull_request";
 }
 
 /** Execute the extracted authorization guard with bounded, synthetic GitHub responses. */
@@ -129,15 +129,15 @@ describe("OpenCode workflow authorization", () => {
     const cancellation = workflow.match(
       /cancel-in-progress: \$\{\{ (.*?) \}\}/,
     )?.[1];
-    expect(cancellation).toBe("github.event_name == 'pull_request_target'");
+    expect(cancellation).toBe("github.event_name == 'pull_request'");
     for (const eventName of [
-      "pull_request_target",
+      "pull_request",
       "issue_comment",
       "pull_request_review_comment",
     ])
       expect(
         runInNewContext(cancellation, { github: { event_name: eventName } }),
-      ).toBe(eventName === "pull_request_target");
+      ).toBe(eventName === "pull_request");
     expect(authorize("read", issueComment).allowed).toBe(false);
   });
 
@@ -174,26 +174,26 @@ describe("OpenCode workflow authorization", () => {
   it("authorizes PR reviews only for open, non-draft, same-repository PRs", () => {
     const event = { pull_request: { number: 102 } };
     expect(
-      authorize("write", event, { eventName: "pull_request_target" }),
+      authorize("write", event, { eventName: "pull_request" }),
     ).toMatchObject({
       allowed: true,
       outputs: { mode: "review", pr: "102", target: "102" },
     });
     expect(
       authorize("write", event, {
-        eventName: "pull_request_target",
+        eventName: "pull_request",
         pr: { ...sameRepoPR, head: { repo: { full_name: "outsider/fork" } } },
       }).allowed,
     ).toBe(false);
     expect(
       authorize("write", event, {
-        eventName: "pull_request_target",
+        eventName: "pull_request",
         pr: { ...sameRepoPR, draft: true },
       }).allowed,
     ).toBe(false);
     expect(
       authorize("write", event, {
-        eventName: "pull_request_target",
+        eventName: "pull_request",
         pr: { ...sameRepoPR, state: "closed" },
       }).allowed,
     ).toBe(false);
@@ -396,14 +396,14 @@ describe("OpenCode workflow authorization", () => {
     ).toMatchObject({ allowed: true, outputs: { target: "700" } });
   });
 
-  it("keeps the workflow token read-only for content and runs a trusted runner", () => {
+  it("keeps the workflow token read-only for content and isolates thread resolution", () => {
     expect(workflow).toMatch(/contents: read/);
     expect(workflow).toMatch(/pull-requests: write/);
     expect(workflow).toMatch(/issues: write/);
     expect(workflow).not.toMatch(/contents: write|AGENT_GITHUB_TOKEN/);
-    expect(workflow).toMatch(/^on:\r?\n  pull_request_target:/m);
-    expect(workflow).toMatch(
-      /Checkout trusted default branch[\s\S]*?ref: \$\{\{ github\.event\.repository\.default_branch \}\}/,
+    expect(workflow).toMatch(/^on:\r?\n  pull_request:/m);
+    expect(workflow).toContain(
+      "ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.event.repository.default_branch }}",
     );
     expect(workflow.match(/persist-credentials: false/g)).toHaveLength(1);
     expect(workflow).toContain('SHARE: "false"');
@@ -419,14 +419,8 @@ describe("OpenCode workflow authorization", () => {
     expect(workflow).toContain('node "$RUNNER"');
     expect(workflow).not.toContain('RUNNER="$PR_HEAD_DIR/$RUNNER"');
     expect(workflow).not.toContain("opencode github run");
-    expect(workflow).not.toContain(
-      "ref: ${{ github.event.pull_request.head.sha }}",
-    );
     expect(workflow).toContain(
       'git worktree add --detach "$RUNNER_TEMP/pr-head"',
-    );
-    expect(workflow).toContain(
-      "ref: ${{ github.event.repository.default_branch }}",
     );
     expect(workflow).toMatch(/"permission":\{"\*":"deny","read":"allow"/);
     expect(workflow).toContain('"*>*":"deny"');
@@ -457,7 +451,7 @@ describe("OpenCode thread resolver workflow", () => {
       "github.event.workflow_run.conclusion == 'success'",
     );
     expect(resolverWorkflow).toContain(
-      "github.event.workflow_run.event == 'pull_request_target'",
+      "github.event.workflow_run.event == 'pull_request'",
     );
     expect(resolverWorkflow).toContain(
       "ref: ${{ github.event.repository.default_branch }}",

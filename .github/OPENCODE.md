@@ -48,7 +48,7 @@ The workflow selects one of three modes:
   answered automatically; an inline `/oc` request is answered in the thread root.
 - `issue` after `/oc` or `/opencode` on an issue or PR conversation.
 
-On a new push (`pull_request_target` `synchronize`), the review runner captures
+On a new push (`pull_request` `synchronize`), the review runner captures
 the bot's unresolved review threads before posting the fresh review and writes
 them to a small artifact only after the review succeeds. The separate
 `OpenCode resolve threads` workflow consumes that artifact and resolves the
@@ -81,12 +81,13 @@ allowed command cannot be chained into an arbitrary one; Git external-diff and
 textconv execution are also denied. The model cannot edit files, run project
 scripts, commit, push, deploy or change settings. Repository, diff, issue and
 comment text is delivered as untrusted data; the workflow does not interpolate
-it into a shell command. The runner always comes from the trusted default
-branch, and the PR-head worktree is mounted as content, never configuration:
-the model runs with `--pure`, and the runner pins
-`OPENCODE_DISABLE_PROJECT_CONFIG=true` and `PWD` to the selected worktree, which
-stops a PR from loading its own OpenCode config or plugins with workflow
-credentials and makes OpenCode inspect the intended checkout.
+it into a shell command. Runner changes are testable before merge: push reviews
+use the PR-head runner, while conversation events use the default-branch runner.
+The PR-head worktree is mounted as content, never configuration: the model runs
+with `--pure`, and the runner pins `OPENCODE_DISABLE_PROJECT_CONFIG=true` and
+`PWD` to the selected worktree, which stops a PR from loading its own OpenCode
+config or plugins with workflow credentials and makes OpenCode inspect the
+intended checkout.
 
 ## Settings
 
@@ -107,7 +108,7 @@ default branch, never checks out or executes PR code, and re-validates every
 artifact id against live unresolved bot-rooted threads before resolving it. No
 PAT, `AGENT_GITHUB_TOKEN`, GitHub App installation or OIDC permission is needed.
 Session sharing and plugins are disabled in the runner config. The review
-checkout does not persist credentials; conversation modes use GitHub CLI's
+checkout does not persist credentials; PR modes use GitHub CLI's
 environment-token credential helper for the temporary PR worktree, without
 writing a token into the checkout.
 
@@ -122,41 +123,44 @@ to a commit. Upgrading the CLI requires reviewing its `run --format json` event
 shape, GitHub runner/config behavior and updating both the version URL and
 checksum; do not replace this with an unverified installer.
 
-`pull_request_target` runs the workflow from the default branch, so a
-same-repository PR cannot replace the workflow or the runner that executes with
-the workflow token and model key. `pull_request_review_comment` and
-`issue_comment` already load the workflow from the default branch. The workflow
-checks out the default branch, prepares the PR head only as a detached worktree,
-and runs `scripts/opencode-github-review.mjs` from that trusted checkout. The
-PR-head worktree is untrusted review data; no script from it is executed. Fork
-PRs and outside contributors are rejected before any checkout. Inline reply and
-PR review modes are additionally gated by the same open, non-draft,
-same-repository PR checks. A run can incur provider and GitHub Actions usage
-under the account's existing settings; the job is capped at 40 minutes and the
-model step at 35. Title generation is pinned to the free review model so it does
-not call an unfunded paid model.
+`pull_request` is used for push reviews because `pull_request_target` is loaded
+only from the default branch. The custom runner is not on the default branch
+until this workflow merges, so a `pull_request_target`-only workflow would stop
+reviewing every push. The review job still has no contents write. It checks out
+the PR head for `pull_request` events and runs the branch runner so runner
+changes are testable before merge; `pull_request_review_comment` and
+`issue_comment` events are loaded from and check out the default branch. Fork
+PRs, draft PRs and contributors without write access are rejected before the
+model runs. The trade-off is that the workflow YAML and runner executed for a
+same-repository push are PR-controlled, and `OPENCODE_API_KEY` is available to
+that run. This matches the default branch's existing `pull_request` posture, and
+only repository write collaborators can push such a branch. The separate
+resolver remains default-branch code with the contents-write token. If stronger
+workflow-definition isolation is needed, migrate push events to
+`pull_request_target` after the runner is on the default branch.
 
-Because `pull_request_target` and `issue_comment` workflows are loaded from the
-default branch, workflow and runner changes take effect for those events only
-after they reach the default branch. Before that, conversation events continue
-to use the previous default-branch workflow; the PR's own workflow is never
-executed as a privileged runner.
+A run can incur provider and GitHub Actions usage under the account's existing
+settings; the job is capped at 40 minutes and the model step at 35. Title
+generation is pinned to the free review model so it does not call an unfunded
+paid model.
 
 The resolver is a second workflow triggered by `workflow_run` after
-`OpenCode review` completes. It runs only for a successful
-`pull_request_target` run, downloads the `opencode-resolve-threads` artifact
-(one-day retention) with `actions: read`, and executes the default-branch
-runner in `resolve` mode. It takes effect only after it reaches the default
-branch, like the review workflow. The review job remains at contents read.
+`OpenCode review` completes. It runs only for a successful `pull_request` run,
+downloads the `opencode-resolve-threads` artifact (one-day retention) with
+`actions: read`, and executes the default-branch runner in `resolve` mode. It
+takes effect only after it reaches the default branch, like the review workflow.
+The review job remains at contents read.
 
-Validation after merge: update a same-repository PR and confirm the review has
-inline comments and the companion `OpenCode resolve threads` run is green; push
-a follow-up commit and confirm the previous bot threads are resolved and the
-fresh review posts new ones; reply to one and confirm the answer appears in the
-same thread; reply again without a command and confirm the bot answers; then
-request an issue explanation using `/oc`. Confirm bot replies do not trigger new
-runs and human-rooted threads stay open. Local checks cannot establish provider
-credential/model availability or successful comment delivery.
+Validation after pushing this PR: confirm the `OpenCode review` run starts for
+the new head and posts inline comments. The resolver does not run until this
+change is on the default branch. After merge, push a follow-up commit and
+confirm the review posts fresh inline threads and the companion
+`OpenCode resolve threads` run resolves the previous bot threads; reply to one
+and confirm the answer appears in the same thread; reply again without a command
+and confirm the bot answers; then request an issue explanation using `/oc`.
+Confirm bot replies do not trigger new runs and human-rooted threads stay open.
+Local checks cannot establish provider credential/model availability or
+successful comment delivery.
 
 Local verification on 14 November 2026: `npm run test:unit`, `npm run lint`,
 `npm run typecheck`, and `npm run knip` passed; the runner tests cover JSON
@@ -167,8 +171,9 @@ inline comment caps, reply-thread resolution, bot-login derivation without
 resolve-mode candidate revalidation and partial-failure reporting, mode
 orchestration, GitHub payload construction, and the model process contract
 (pinned worktree/isolation flags, 35-minute cap, and partial-output diagnostics).
-Workflow smoke tests check the capture upload and the resolver's trigger,
-permissions and default-branch checkout. Build/E2E were not run for this
+Workflow smoke tests check the `pull_request` trigger, the PR-head runner
+checkout, the capture upload, and the resolver's trigger, permissions and
+default-branch checkout. Build/E2E were not run for this
 workflow-only change; no application runtime or user journey was modified.
 The resolver's Contents: write requirement is documented in the GitHub
 community discussion below; the GraphQL reference does not list it.

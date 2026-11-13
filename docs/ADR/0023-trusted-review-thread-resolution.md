@@ -1,9 +1,13 @@
 # ADR 0023: Trusted Review-Thread Resolution Workflow
 
-- **Status:** Accepted implementation; active after merge to the default branch
+- **Status:** Accepted implementation; push trigger superseded by ADR 0024
 - **Date:** 2026-11-14
 - **Decision owner:** Quilla maintainer
 - **Related:** PR #105; `.github/OPENCODE.md`
+
+> **Superseded trigger:** ADR 0024 replaced the `pull_request_target` push
+> trigger with `pull_request` and a branch-head runner for push reviews. The
+> resolver permission boundary in this ADR remains in force.
 
 ## Context
 
