@@ -8,6 +8,7 @@ import {
   buildReplyPrompt,
   buildReviewPayload,
   buildReviewPrompt,
+  botReviewThreadIds,
   classifyFindings,
   createGitHubClient,
   extractFinalText,
@@ -619,6 +620,50 @@ describe("thread resolution", () => {
     expect(thread.root).toBe(nested);
     expect(thread.ancestors).toEqual([]);
   });
+
+  it("selects only unresolved bot-rooted review threads", () => {
+    const thread = (id, isResolved, author, body) => ({
+      id,
+      isResolved,
+      comments: { nodes: [{ author, body }] },
+    });
+    expect(
+      botReviewThreadIds([
+        thread(
+          "rest-bot",
+          false,
+          { login: "github-actions[bot]" },
+          `${REVIEW_MARKER}\n\nfinding`,
+        ),
+        thread(
+          "graphql-bot",
+          false,
+          { login: "github-actions", __typename: "Bot" },
+          `${REVIEW_MARKER}\n\nfinding`,
+        ),
+        thread(
+          "resolved",
+          true,
+          { login: "github-actions", __typename: "Bot" },
+          REVIEW_MARKER,
+        ),
+        thread(
+          "human",
+          false,
+          { login: "maintainer", __typename: "User" },
+          REVIEW_MARKER,
+        ),
+        thread(
+          "unmarked",
+          false,
+          { login: "github-actions", __typename: "Bot" },
+          "finding",
+        ),
+        thread("deleted", false, null, REVIEW_MARKER),
+        { id: "empty", isResolved: false, comments: { nodes: [] } },
+      ]),
+    ).toEqual(["rest-bot", "graphql-bot"]);
+  });
 });
 
 describe("mode orchestration", () => {
@@ -665,6 +710,149 @@ describe("mode orchestration", () => {
     expect(reviews[0].pr).toBe(105);
     expect(reviews[0].payload.comments).toHaveLength(1);
     expect(reviews[0].payload.body).toContain("Outside");
+  });
+
+  it("resolves previous bot threads after a review on a new push", () => {
+    const order = [];
+    const resolved = [];
+    main(reviewEnv(), {
+      readEvent: () => ({ action: "synchronize" }),
+      client: {
+        getPull: () => pull,
+        getPullDiff: () => diff,
+        listReviewThreads: () => {
+          order.push("list");
+          return [
+            {
+              id: "PRRT_old",
+              isResolved: false,
+              comments: {
+                nodes: [
+                  {
+                    author: { login: "github-actions", __typename: "Bot" },
+                    body: `${REVIEW_MARKER}\n\nOld finding`,
+                  },
+                ],
+              },
+            },
+            {
+              id: "PRRT_human",
+              isResolved: false,
+              comments: {
+                nodes: [
+                  { author: { login: "maintainer" }, body: "Human thread" },
+                ],
+              },
+            },
+          ];
+        },
+        createReview: () => order.push("review"),
+        resolveReviewThread: (id) => {
+          order.push(`resolve:${id}`);
+          resolved.push(id);
+        },
+      },
+      runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+    });
+    expect(order).toEqual(["list", "review", "resolve:PRRT_old"]);
+    expect(resolved).toEqual(["PRRT_old"]);
+  });
+
+  it("does not list or resolve threads on a non-push review", () => {
+    let listed = false;
+    let resolved = 0;
+    main(reviewEnv(), {
+      readEvent: () => ({ action: "opened" }),
+      client: {
+        getPull: () => pull,
+        getPullDiff: () => diff,
+        listReviewThreads: () => {
+          listed = true;
+          return [];
+        },
+        createReview: () => {},
+        resolveReviewThread: () => {
+          resolved += 1;
+        },
+      },
+      runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+    });
+    expect(listed).toBe(false);
+    expect(resolved).toBe(0);
+  });
+
+  it("keeps previous threads open when the fresh review fails", () => {
+    let resolved = 0;
+    expect(() =>
+      main(reviewEnv(), {
+        readEvent: () => ({ action: "synchronize" }),
+        client: {
+          getPull: () => pull,
+          getPullDiff: () => diff,
+          listReviewThreads: () => [
+            {
+              id: "PRRT_old",
+              isResolved: false,
+              comments: {
+                nodes: [
+                  {
+                    author: { login: "github-actions[bot]" },
+                    body: REVIEW_MARKER,
+                  },
+                ],
+              },
+            },
+          ],
+          createReview: () => {
+            throw new Error("review rejected");
+          },
+          resolveReviewThread: () => {
+            resolved += 1;
+          },
+        },
+        runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+      }),
+    ).toThrow("review rejected");
+    expect(resolved).toBe(0);
+  });
+
+  it("keeps the posted review when thread cleanup is denied", () => {
+    const reviews = [];
+    const warnings = [];
+    const originalWarn = console.warn;
+    console.warn = (message) => warnings.push(String(message));
+    try {
+      main(reviewEnv(), {
+        readEvent: () => ({ action: "synchronize" }),
+        client: {
+          getPull: () => pull,
+          getPullDiff: () => diff,
+          listReviewThreads: () => [
+            {
+              id: "PRRT_old",
+              isResolved: false,
+              comments: {
+                nodes: [
+                  {
+                    author: { login: "github-actions[bot]" },
+                    body: REVIEW_MARKER,
+                  },
+                ],
+              },
+            },
+          ],
+          createReview: (_pr, payload) => reviews.push(payload),
+          resolveReviewThread: () => {
+            throw new Error("Resource not accessible");
+          },
+        },
+        runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+      });
+    } finally {
+      console.warn = originalWarn;
+    }
+    expect(reviews).toHaveLength(1);
+    expect(warnings.join(" ")).toContain("Resource not accessible");
   });
 
   it("skips a review when the PR head changed during the run", () => {
@@ -971,5 +1159,85 @@ describe("GitHub client", () => {
       "--paginate",
       "--slurp",
     ]);
+  });
+
+  it("lists review threads through GraphQL pagination", () => {
+    const pages = [
+      {
+        data: {
+          repository: {
+            pullRequest: {
+              reviewThreads: {
+                pageInfo: { hasNextPage: true, endCursor: "cursor-1" },
+                nodes: [{ id: "PRRT_1" }],
+              },
+            },
+          },
+        },
+      },
+      {
+        data: {
+          repository: {
+            pullRequest: {
+              reviewThreads: {
+                pageInfo: { hasNextPage: false, endCursor: null },
+                nodes: [{ id: "PRRT_2" }],
+              },
+            },
+          },
+        },
+      },
+    ];
+    const calls = [];
+    let page = 0;
+    const spawn = (command, args) => {
+      calls.push({ command, args });
+      return { status: 0, stdout: JSON.stringify(pages[page++]), stderr: "" };
+    };
+    const client = createGitHubClient({
+      repo: "devcedrick/quilla",
+      env: {},
+      spawn,
+    });
+    expect(client.listReviewThreads(105)).toEqual([
+      { id: "PRRT_1" },
+      { id: "PRRT_2" },
+    ]);
+    expect(calls).toHaveLength(2);
+    expect(calls[0].args.slice(0, 3)).toEqual(["api", "graphql", "-f"]);
+    expect(calls[0].args[3]).toContain("reviewThreads(first: 100");
+    for (const arg of ["owner=devcedrick", "repo=quilla", "pull=105"])
+      expect(calls[0].args).toContain(arg);
+    expect(calls[0].args).not.toContain("after=cursor-1");
+    expect(calls[1].args).toContain("after=cursor-1");
+  });
+
+  it("resolves a review thread and surfaces GraphQL errors", () => {
+    const { calls, spawn } = fakeSpawn(
+      JSON.stringify({
+        data: { resolveReviewThread: { thread: { id: "PRRT_1" } } },
+      }),
+    );
+    const client = createGitHubClient({
+      repo: "devcedrick/quilla",
+      env: {},
+      spawn,
+    });
+    client.resolveReviewThread("PRRT_1");
+    expect(calls[0].args.slice(0, 3)).toEqual(["api", "graphql", "-f"]);
+    expect(calls[0].args[3]).toContain("resolveReviewThread");
+    expect(calls[0].args).toContain("threadId=PRRT_1");
+
+    const failing = fakeSpawn(
+      JSON.stringify({ errors: [{ message: "Resource not accessible" }] }),
+    );
+    const denied = createGitHubClient({
+      repo: "devcedrick/quilla",
+      env: {},
+      spawn: failing.spawn,
+    });
+    expect(() => denied.resolveReviewThread("PRRT_2")).toThrow(
+      "Resource not accessible",
+    );
   });
 });

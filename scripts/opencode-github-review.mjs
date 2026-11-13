@@ -7,6 +7,28 @@ import { pathToFileURL } from "node:url";
 export const REVIEW_MARKER = "<!-- opencode-github-review -->";
 const REQUEST_PATTERN = /(^|\s)\/(?:opencode|oc)(?=\s|$)/i;
 
+const REVIEW_THREADS_QUERY = `query($owner: String!, $repo: String!, $pull: Int!, $after: String) {
+  repository(owner: $owner, name: $repo) {
+    pullRequest(number: $pull) {
+      reviewThreads(first: 100, after: $after) {
+        pageInfo { hasNextPage endCursor }
+        nodes {
+          id
+          isResolved
+          comments(first: 1) {
+            nodes { body author { login __typename } }
+          }
+        }
+      }
+    }
+  }
+}`;
+const RESOLVE_REVIEW_THREAD_MUTATION = `mutation($threadId: ID!) {
+  resolveReviewThread(input: { threadId: $threadId }) {
+    thread { id isResolved }
+  }
+}`;
+
 const MAX_INLINE_COMMENTS = 50;
 const MAX_COMMENT_CHARS = 12000;
 const MAX_REVIEW_CHARS = 60000;
@@ -499,6 +521,23 @@ export function createGitHubClient({
       ["api", path, "--method", "POST", "--input", "-"],
       JSON.stringify(payload),
     );
+  const graphql = (query, variables = {}) => {
+    const args = ["api", "graphql", "-f", `query=${query}`];
+    for (const [key, value] of Object.entries(variables)) {
+      if (value === undefined || value === null) continue;
+      args.push(Number.isInteger(value) ? "-F" : "-f", `${key}=${value}`);
+    }
+    const output = gh(args).trim();
+    const payload = output ? JSON.parse(output) : {};
+    if (Array.isArray(payload.errors) && payload.errors.length) {
+      const message = payload.errors
+        .map((error) => error?.message ?? String(error))
+        .join("; ");
+      throw new Error(`GitHub GraphQL failed: ${message}`);
+    }
+    return payload.data;
+  };
+  const [owner, name] = repo.split("/");
 
   return {
     getPull: (pr) => getJson(`repos/${repo}/pulls/${pr}`),
@@ -506,6 +545,26 @@ export function createGitHubClient({
     getComment: (id) => getJson(`repos/${repo}/pulls/comments/${id}`),
     getPullComments: (pr) =>
       getAll(`repos/${repo}/pulls/${pr}/comments?per_page=100`),
+    listReviewThreads: (pr) => {
+      const threads = [];
+      let after;
+      do {
+        const data = graphql(REVIEW_THREADS_QUERY, {
+          owner,
+          repo: name,
+          pull: pr,
+          after,
+        });
+        const connection = data?.repository?.pullRequest?.reviewThreads ?? null;
+        threads.push(...(connection?.nodes ?? []));
+        after = connection?.pageInfo?.hasNextPage
+          ? connection.pageInfo.endCursor
+          : null;
+      } while (after);
+      return threads;
+    },
+    resolveReviewThread: (threadId) =>
+      graphql(RESOLVE_REVIEW_THREAD_MUTATION, { threadId }),
     createReview: (pr, payload) =>
       postJson(`repos/${repo}/pulls/${pr}/reviews`, payload),
     replyToReviewComment: (pr, id, body) =>
@@ -534,6 +593,28 @@ export function isBotThread(comment, ancestors, botLogin) {
   return [comment, ...ancestors].some(
     (item) => item?.user?.login === botLogin && hasReviewMarker(item.body),
   );
+}
+
+/**
+ * Select unresolved threads rooted in a marked bot review. Human-rooted
+ * threads and other apps' markers are left untouched. GraphQL reports a bot
+ * actor as `__typename: "Bot"` with the bare login (for example
+ * `github-actions`), so the REST-style `[bot]` suffix is only a fallback for
+ * REST-shaped fixtures.
+ */
+export function botReviewThreadIds(threads = []) {
+  return (threads ?? [])
+    .filter((thread) => {
+      if (!thread || thread.isResolved) return false;
+      const root = thread.comments?.nodes?.[0];
+      const author = root?.author;
+      const isBot =
+        author?.__typename === "Bot" ||
+        String(author?.login ?? "").endsWith("[bot]");
+      return Boolean(root) && hasReviewMarker(root.body) && isBot;
+    })
+    .map((thread) => thread.id)
+    .filter(Boolean);
 }
 
 /**
@@ -675,6 +756,19 @@ export function main(env = process.env, dependencies = {}) {
     });
     const review = parseReviewOutput(run(prompt, env));
     const prepared = prepareReview(review, diff);
+    // Capture threads before posting so the fresh review's own inline threads
+    // are never resolved. Cleanup is best-effort: a GraphQL hiccup must not
+    // discard an otherwise valid review.
+    let staleThreadIds = [];
+    if (event.action === "synchronize") {
+      try {
+        staleThreadIds = botReviewThreadIds(client.listReviewThreads(pr));
+      } catch (error) {
+        console.warn(
+          `Could not list previous bot threads: ${error instanceof Error ? error.message : String(error)}`,
+        );
+      }
+    }
     console.log(
       `Posting review with ${prepared.comments.length} inline comment(s) and ${prepared.outside.length} out-of-diff finding(s).`,
     );
@@ -699,6 +793,22 @@ export function main(env = process.env, dependencies = {}) {
           prepared,
           pull.head?.sha ?? env.OPENCODE_HEAD_SHA,
         ),
+      );
+    }
+    if (staleThreadIds.length) {
+      let resolved = 0;
+      for (const threadId of staleThreadIds) {
+        try {
+          client.resolveReviewThread(threadId);
+          resolved += 1;
+        } catch (error) {
+          console.warn(
+            `Could not resolve review thread ${threadId}: ${error instanceof Error ? error.message : String(error)}`,
+          );
+        }
+      }
+      console.log(
+        `Resolved ${resolved}/${staleThreadIds.length} previous bot thread(s) after the new push.`,
       );
     }
     return;
