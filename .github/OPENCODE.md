@@ -48,12 +48,16 @@ The workflow selects one of three modes:
   answered automatically; an inline `/oc` request is answered in the thread root.
 - `issue` after `/oc` or `/opencode` on an issue or PR conversation.
 
-On a new push (`pull_request_target` `synchronize`), the fresh review replaces the
-previous one: after it posts, the bot resolves its earlier unresolved review
-threads. Only threads rooted in a marked bot review are resolved; human-rooted
-threads and other apps' reviews are left open. Resolution uses GitHub's GraphQL
-`resolveReviewThread` mutation and is best-effort, so a cleanup failure is
-logged without discarding the posted review.
+On a new push (`pull_request_target` `synchronize`), the review runner captures
+the bot's unresolved review threads before posting the fresh review and writes
+them to a small artifact only after the review succeeds. The separate
+`OpenCode resolve threads` workflow consumes that artifact and resolves the
+captured threads through GitHub's GraphQL `resolveReviewThread` mutation. The
+fresh review's threads are created after the capture, so they stay open. Only
+ids re-validated as unresolved, bot-rooted threads are resolved; human-rooted
+threads and other apps' reviews are never touched. If the review fails or is
+skipped, no artifact is written, so no earlier thread is resolved. A resolver
+failure is reported by its own workflow and never discards the posted review.
 
 The model is invoked with `opencode run --format json --dir <worktree>`. The runner reads only the
 final assistant text from the JSONL event stream, never executes model output,
@@ -94,13 +98,18 @@ These existing repository settings are reused; no secret values belong in files:
 - Actions variable `OPENCODE_BOT_ENABLED=true`; set it to `false` to pause the bot
   independently of normal CI.
 
-The built-in GitHub token grants contents read plus issue/PR write for review
-comments, replies, review submission and resolving the bot's own review threads.
-It has no repository contents write permission. No PAT, `AGENT_GITHUB_TOKEN`,
-GitHub App installation or OIDC permission is needed. Session sharing and
-plugins are disabled in the runner config. The review checkout does not persist
-credentials; conversation modes use GitHub CLI's environment-token credential
-helper for the temporary PR worktree, without writing a token into the checkout.
+The review job's built-in token grants contents read plus issue/PR write for
+review comments, replies and review submission. It has no repository contents
+write permission. Resolving a review thread requires Contents: write in
+addition to Pull requests: write, so that mutation runs only in the separate
+`OpenCode resolve threads` job. That job is loaded from and checks out the
+default branch, never checks out or executes PR code, and re-validates every
+artifact id against live unresolved bot-rooted threads before resolving it. No
+PAT, `AGENT_GITHUB_TOKEN`, GitHub App installation or OIDC permission is needed.
+Session sharing and plugins are disabled in the runner config. The review
+checkout does not persist credentials; conversation modes use GitHub CLI's
+environment-token credential helper for the temporary PR worktree, without
+writing a token into the checkout.
 
 ## Runtime and validation
 
@@ -133,26 +142,39 @@ after they reach the default branch. Before that, conversation events continue
 to use the previous default-branch workflow; the PR's own workflow is never
 executed as a privileged runner.
 
-Validation after merge: update a same-repository PR and confirm the review has
-inline comments; push a follow-up commit and confirm the previous bot threads
-are resolved and the fresh review posts new ones; reply to one and confirm the
-answer appears in the same thread; reply again without a command and confirm the
-bot answers; then request an issue explanation using `/oc`. Confirm bot replies
-do not trigger new runs and human-rooted threads stay open. Local checks cannot
-establish provider credential/model availability or successful comment delivery.
+The resolver is a second workflow triggered by `workflow_run` after
+`OpenCode review` completes. It runs only for a successful
+`pull_request_target` run, downloads the `opencode-resolve-threads` artifact
+(one-day retention) with `actions: read`, and executes the default-branch
+runner in `resolve` mode. It takes effect only after it reaches the default
+branch, like the review workflow. The review job remains at contents read.
 
-Local verification on 13 November 2026: `npm run test:unit`, `npm run lint`,
-`npm run typecheck`, and `npm run knip` passed; the new runner tests cover JSON
+Validation after merge: update a same-repository PR and confirm the review has
+inline comments and the companion `OpenCode resolve threads` run is green; push
+a follow-up commit and confirm the previous bot threads are resolved and the
+fresh review posts new ones; reply to one and confirm the answer appears in the
+same thread; reply again without a command and confirm the bot answers; then
+request an issue explanation using `/oc`. Confirm bot replies do not trigger new
+runs and human-rooted threads stay open. Local checks cannot establish provider
+credential/model availability or successful comment delivery.
+
+Local verification on 14 November 2026: `npm run test:unit`, `npm run lint`,
+`npm run typecheck`, and `npm run knip` passed; the runner tests cover JSON
 event parsing, structured review parsing, new-side diff line validation
 (including added content that resembles a file header), out-of-diff fallback,
 inline comment caps, reply-thread resolution, bot-login derivation without
-`GET /user`, human-rooted threads with bot replies, GraphQL review-thread
-resolution on new pushes, mode orchestration, GitHub payload construction, and
-the model process contract (pinned worktree/isolation flags, 35-minute cap, and
-partial-output diagnostics). Build/E2E were not run for this workflow-only
-change; no application runtime or user journey was modified.
+`GET /user`, human-rooted threads with bot replies, thread capture artifacts,
+resolve-mode candidate revalidation and partial-failure reporting, mode
+orchestration, GitHub payload construction, and the model process contract
+(pinned worktree/isolation flags, 35-minute cap, and partial-output diagnostics).
+Workflow smoke tests check the capture upload and the resolver's trigger,
+permissions and default-branch checkout. Build/E2E were not run for this
+workflow-only change; no application runtime or user journey was modified.
+The resolver's Contents: write requirement is documented in the GitHub
+community discussion below; the GraphQL reference does not list it.
 
 References: [GitHub pull request reviews](https://docs.github.com/en/rest/pulls/reviews),
 [review comment replies](https://docs.github.com/en/rest/pulls/comments#create-a-reply-for-a-review-comment),
+[review-thread resolution permissions](https://github.com/orgs/community/discussions/44650),
 [official OpenCode GitHub integration](https://opencode.ai/docs/github/) and
 [pinned runner source](https://github.com/anomalyco/opencode/blob/v1.19.5/packages/opencode/src/cli/cmd/run.ts).

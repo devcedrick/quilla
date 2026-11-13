@@ -1,3 +1,12 @@
+import {
+  existsSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   REVIEW_MARKER,
@@ -716,6 +725,36 @@ describe("mode orchestration", () => {
     head: { sha: "abc123" },
   };
 
+  const botThread = {
+    id: "PRRT_old",
+    isResolved: false,
+    comments: {
+      nodes: [
+        {
+          author: { login: "github-actions", __typename: "Bot" },
+          body: `${REVIEW_MARKER}\n\nOld finding`,
+        },
+      ],
+    },
+  };
+  const humanThread = {
+    id: "PRRT_human",
+    isResolved: false,
+    comments: {
+      nodes: [{ author: { login: "maintainer" }, body: "Human thread" }],
+    },
+  };
+
+  function withCapturePath(run) {
+    const directory = mkdtempSync(join(tmpdir(), "opencode-review-"));
+    const path = join(directory, "threads.json");
+    try {
+      return run(path);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  }
+
   it("posts a review with inline findings and body-only findings", () => {
     const reviews = [];
     main(reviewEnv(), {
@@ -740,112 +779,110 @@ describe("mode orchestration", () => {
     expect(reviews[0].payload.body).toContain("Outside");
   });
 
-  it("resolves previous bot threads after a review on a new push", () => {
-    const order = [];
-    const resolved = [];
-    main(reviewEnv(), {
-      readEvent: () => ({ action: "synchronize" }),
-      client: {
-        getPull: () => pull,
-        getPullDiff: () => diff,
-        listReviewThreads: () => {
-          order.push("list");
-          return [
-            {
-              id: "PRRT_old",
-              isResolved: false,
-              comments: {
-                nodes: [
-                  {
-                    author: { login: "github-actions", __typename: "Bot" },
-                    body: `${REVIEW_MARKER}\n\nOld finding`,
-                  },
-                ],
-              },
-            },
-            {
-              id: "PRRT_human",
-              isResolved: false,
-              comments: {
-                nodes: [
-                  { author: { login: "maintainer" }, body: "Human thread" },
-                ],
-              },
-            },
-          ];
-        },
-        createReview: () => order.push("review"),
-        resolveReviewThread: (id) => {
-          order.push(`resolve:${id}`);
-          resolved.push(id);
-        },
-      },
-      runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
-    });
-    expect(order).toEqual(["list", "review", "resolve:PRRT_old"]);
-    expect(resolved).toEqual(["PRRT_old"]);
-  });
-
-  it("does not list or resolve threads on a non-push review", () => {
-    let listed = false;
-    let resolved = 0;
-    main(reviewEnv(), {
-      readEvent: () => ({ action: "opened" }),
-      client: {
-        getPull: () => pull,
-        getPullDiff: () => diff,
-        listReviewThreads: () => {
-          listed = true;
-          return [];
-        },
-        createReview: () => {},
-        resolveReviewThread: () => {
-          resolved += 1;
-        },
-      },
-      runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
-    });
-    expect(listed).toBe(false);
-    expect(resolved).toBe(0);
-  });
-
-  it("keeps previous threads open when the fresh review fails", () => {
-    let resolved = 0;
-    expect(() =>
-      main(reviewEnv(), {
+  it("captures previous bot threads for the trusted resolver after a new push", () => {
+    withCapturePath((capturePath) => {
+      const order = [];
+      const resolved = [];
+      main(reviewEnv({ OPENCODE_RESOLVE_THREADS_PATH: capturePath }), {
         readEvent: () => ({ action: "synchronize" }),
         client: {
           getPull: () => pull,
           getPullDiff: () => diff,
-          listReviewThreads: () => [
-            {
-              id: "PRRT_old",
-              isResolved: false,
-              comments: {
-                nodes: [
-                  {
-                    author: { login: "github-actions[bot]" },
-                    body: REVIEW_MARKER,
-                  },
-                ],
-              },
-            },
-          ],
-          createReview: () => {
-            throw new Error("review rejected");
+          listReviewThreads: () => {
+            order.push("list");
+            return [botThread, humanThread];
           },
+          createReview: () => order.push("review"),
+          resolveReviewThread: (id) => resolved.push(id),
+        },
+        runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+      });
+      expect(order).toEqual(["list", "review"]);
+      expect(resolved).toEqual([]);
+      expect(JSON.parse(readFileSync(capturePath, "utf8"))).toEqual({
+        version: 1,
+        pull: 105,
+        threadIds: ["PRRT_old"],
+      });
+    });
+  });
+
+  it("does not list or write a capture on a non-push review", () => {
+    withCapturePath((capturePath) => {
+      let listed = false;
+      main(reviewEnv({ OPENCODE_RESOLVE_THREADS_PATH: capturePath }), {
+        readEvent: () => ({ action: "opened" }),
+        client: {
+          getPull: () => pull,
+          getPullDiff: () => diff,
+          listReviewThreads: () => {
+            listed = true;
+            return [];
+          },
+          createReview: () => {},
           resolveReviewThread: () => {
-            resolved += 1;
+            throw new Error("must not resolve");
           },
         },
         runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
-      }),
-    ).toThrow("review rejected");
-    expect(resolved).toBe(0);
+      });
+      expect(listed).toBe(false);
+      expect(existsSync(capturePath)).toBe(false);
+    });
   });
 
-  it("keeps the posted review when thread cleanup is denied", () => {
-    const reviews = [];
+  it("does not write a capture when the fresh review fails", () => {
+    withCapturePath((capturePath) => {
+      expect(() =>
+        main(reviewEnv({ OPENCODE_RESOLVE_THREADS_PATH: capturePath }), {
+          readEvent: () => ({ action: "synchronize" }),
+          client: {
+            getPull: () => pull,
+            getPullDiff: () => diff,
+            listReviewThreads: () => [botThread],
+            createReview: () => {
+              throw new Error("review rejected");
+            },
+            resolveReviewThread: () => {
+              throw new Error("must not resolve");
+            },
+          },
+          runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+        }),
+      ).toThrow("review rejected");
+      expect(existsSync(capturePath)).toBe(false);
+    });
+  });
+
+  it("posts the review when the previous-thread listing is denied", () => {
+    withCapturePath((capturePath) => {
+      const reviews = [];
+      const warnings = [];
+      const originalWarn = console.warn;
+      console.warn = (message) => warnings.push(String(message));
+      try {
+        main(reviewEnv({ OPENCODE_RESOLVE_THREADS_PATH: capturePath }), {
+          readEvent: () => ({ action: "synchronize" }),
+          client: {
+            getPull: () => pull,
+            getPullDiff: () => diff,
+            listReviewThreads: () => {
+              throw new Error("Resource not accessible");
+            },
+            createReview: (_pr, payload) => reviews.push(payload),
+          },
+          runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
+        });
+      } finally {
+        console.warn = originalWarn;
+      }
+      expect(reviews).toHaveLength(1);
+      expect(warnings.join(" ")).toContain("Resource not accessible");
+      expect(existsSync(capturePath)).toBe(false);
+    });
+  });
+
+  it("warns when no resolver path is configured", () => {
     const warnings = [];
     const originalWarn = console.warn;
     console.warn = (message) => warnings.push(String(message));
@@ -855,32 +892,15 @@ describe("mode orchestration", () => {
         client: {
           getPull: () => pull,
           getPullDiff: () => diff,
-          listReviewThreads: () => [
-            {
-              id: "PRRT_old",
-              isResolved: false,
-              comments: {
-                nodes: [
-                  {
-                    author: { login: "github-actions[bot]" },
-                    body: REVIEW_MARKER,
-                  },
-                ],
-              },
-            },
-          ],
-          createReview: (_pr, payload) => reviews.push(payload),
-          resolveReviewThread: () => {
-            throw new Error("Resource not accessible");
-          },
+          listReviewThreads: () => [botThread],
+          createReview: () => {},
         },
         runModel: () => JSON.stringify({ summary: "Summary", findings: [] }),
       });
     } finally {
       console.warn = originalWarn;
     }
-    expect(reviews).toHaveLength(1);
-    expect(warnings.join(" ")).toContain("Resource not accessible");
+    expect(warnings.join(" ")).toContain("OPENCODE_RESOLVE_THREADS_PATH");
   });
 
   it("skips a review when the PR head changed during the run", () => {
@@ -1109,6 +1129,201 @@ describe("mode orchestration", () => {
     expect(comments[0]).toMatchObject({ number: 95 });
     expect(comments[0].body).toContain(REVIEW_MARKER);
     expect(comments[0].body).toContain("Here is the explanation.");
+  });
+});
+
+describe("thread resolution mode", () => {
+  function resolveEnv(capturePath, overrides = {}) {
+    return {
+      GITHUB_REPOSITORY: "devcedrick/quilla",
+      OPENCODE_REVIEW_MODE: "resolve",
+      OPENCODE_RESOLVE_THREADS_PATH: capturePath,
+      ...overrides,
+    };
+  }
+
+  const thread = (id, author, body = REVIEW_MARKER, isResolved = false) => ({
+    id,
+    isResolved,
+    comments: { nodes: [{ author, body }] },
+  });
+
+  function withCapture(capture, run) {
+    const directory = mkdtempSync(join(tmpdir(), "opencode-resolve-"));
+    const path = join(directory, "threads.json");
+    writeFileSync(path, JSON.stringify(capture), "utf8");
+    try {
+      return run(path);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  }
+
+  it("resolves only captured, still-unresolved bot threads", () => {
+    withCapture(
+      {
+        version: 1,
+        pull: 105,
+        threadIds: ["PRRT_old", "PRRT_human", "PRRT_done"],
+      },
+      (capturePath) => {
+        const resolved = [];
+        main(resolveEnv(capturePath), {
+          client: {
+            listReviewThreads: (pull) => {
+              expect(pull).toBe(105);
+              return [
+                thread("PRRT_old", {
+                  login: "github-actions",
+                  __typename: "Bot",
+                }),
+                thread("PRRT_human", { login: "maintainer" }),
+                thread("PRRT_not_captured", {
+                  login: "github-actions",
+                  __typename: "Bot",
+                }),
+                thread(
+                  "PRRT_done",
+                  { login: "github-actions", __typename: "Bot" },
+                  REVIEW_MARKER,
+                  true,
+                ),
+              ];
+            },
+            resolveReviewThread: (id) => resolved.push(id),
+          },
+        });
+        expect(resolved).toEqual(["PRRT_old"]);
+      },
+    );
+  });
+
+  it("accepts an empty capture without listing threads", () => {
+    withCapture({ version: 1, pull: 105, threadIds: [] }, (capturePath) => {
+      main(resolveEnv(capturePath), {
+        client: {
+          listReviewThreads: () => {
+            throw new Error("must not list");
+          },
+          resolveReviewThread: () => {
+            throw new Error("must not resolve");
+          },
+        },
+      });
+    });
+  });
+
+  it("refuses a capture for a different pull request", () => {
+    withCapture(
+      { version: 1, pull: 104, threadIds: ["PRRT_old"] },
+      (capturePath) => {
+        expect(() =>
+          main(resolveEnv(capturePath, { OPENCODE_PR_NUMBER: "105" }), {
+            client: {
+              listReviewThreads: () => {
+                throw new Error("must not list");
+              },
+            },
+          }),
+        ).toThrow("belong to pull request 104");
+      },
+    );
+  });
+
+  it("refuses an unsupported or malformed capture", () => {
+    withCapture({ version: 2, pull: 105, threadIds: [] }, (capturePath) => {
+      expect(() => main(resolveEnv(capturePath), { client: {} })).toThrow(
+        "Unsupported thread capture version: 2",
+      );
+    });
+    withCapture(
+      { version: 1, pull: 105, threadIds: "PRRT_old" },
+      (capturePath) => {
+        expect(() => main(resolveEnv(capturePath), { client: {} })).toThrow(
+          "threadIds array",
+        );
+      },
+    );
+  });
+
+  it("requires a repository and a capture path", () => {
+    expect(() =>
+      main({ OPENCODE_REVIEW_MODE: "resolve" }, { client: {} }),
+    ).toThrow("GITHUB_REPOSITORY and OPENCODE_REVIEW_MODE are required.");
+    expect(() =>
+      main(
+        {
+          GITHUB_REPOSITORY: "devcedrick/quilla",
+          OPENCODE_REVIEW_MODE: "resolve",
+        },
+        { client: {} },
+      ),
+    ).toThrow("OPENCODE_RESOLVE_THREADS_PATH");
+  });
+
+  it("attempts every captured thread and reports partial failures", () => {
+    withCapture(
+      { version: 1, pull: 105, threadIds: ["PRRT_one", "PRRT_two"] },
+      (capturePath) => {
+        const attempted = [];
+        const warnings = [];
+        const originalWarn = console.warn;
+        console.warn = (message) => warnings.push(String(message));
+        try {
+          expect(() =>
+            main(resolveEnv(capturePath), {
+              client: {
+                listReviewThreads: () => [
+                  thread("PRRT_one", {
+                    login: "github-actions",
+                    __typename: "Bot",
+                  }),
+                  thread("PRRT_two", {
+                    login: "github-actions",
+                    __typename: "Bot",
+                  }),
+                ],
+                resolveReviewThread: (id) => {
+                  attempted.push(id);
+                  if (id === "PRRT_one")
+                    throw new Error("Resource not accessible");
+                },
+              },
+            }),
+          ).toThrow("Could not resolve 1 of 2 captured bot thread(s).");
+        } finally {
+          console.warn = originalWarn;
+        }
+        expect(attempted).toEqual(["PRRT_one", "PRRT_two"]);
+        expect(warnings.join(" ")).toContain("Resource not accessible");
+      },
+    );
+  });
+
+  it("does not touch threads that were not captured", () => {
+    withCapture(
+      { version: 1, pull: 105, threadIds: ["PRRT_old"] },
+      (capturePath) => {
+        const resolved = [];
+        main(resolveEnv(capturePath), {
+          client: {
+            listReviewThreads: () => [
+              thread("PRRT_old", {
+                login: "github-actions",
+                __typename: "Bot",
+              }),
+              thread("PRRT_new", {
+                login: "github-actions",
+                __typename: "Bot",
+              }),
+              thread("PRRT_human", { login: "maintainer" }),
+            ],
+            resolveReviewThread: (id) => resolved.push(id),
+          },
+        });
+        expect(resolved).toEqual(["PRRT_old"]);
+      },
+    );
   });
 });
 

@@ -233,6 +233,7 @@ jobs:
           OPENCODE_PR_NUMBER: ${{ steps.authorize.outputs.pr }}
           OPENCODE_TARGET_ID: ${{ steps.authorize.outputs.target }}
           OPENCODE_BOT_LOGIN: ${{ steps.authorize.outputs.bot_login }}
+          OPENCODE_RESOLVE_THREADS_PATH: ${{ runner.temp }}/opencode-resolve-threads.json
           OPENCODE_DISABLE_PROJECT_CONFIG: "true"
           SHARE: "false"
           USE_GITHUB_TOKEN: "true"
@@ -256,3 +257,18 @@ jobs:
           export OPENCODE_HEAD_SHA="${PR_HEAD_SHA:-}"
           export PR_HEAD_DIR="${PR_HEAD_DIR:-}"
           node "$RUNNER"
+
+      # The review job only nominates old threads. Resolving them needs
+      # Contents: write, so a separate workflow with that permission consumes
+      # this artifact instead of granting it to the job that runs here.
+      - name: Upload captured review threads
+        if: >-
+          success() &&
+          steps.authorize.outputs.allowed == 'true' &&
+          steps.authorize.outputs.mode == 'review'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: opencode-resolve-threads
+          path: ${{ runner.temp }}/opencode-resolve-threads.json
+          if-no-files-found: ignore
+          retention-days: 1

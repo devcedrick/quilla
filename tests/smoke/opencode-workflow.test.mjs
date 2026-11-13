@@ -434,5 +434,53 @@ describe("OpenCode workflow authorization", () => {
     expect(workflow).toContain(
       "OPENCODE_REVIEW_MODE: ${{ steps.authorize.outputs.mode }}",
     );
+    expect(workflow).toContain("Upload captured review threads");
+    expect(workflow).toContain("opencode-resolve-threads");
+    expect(workflow).toContain(
+      "OPENCODE_RESOLVE_THREADS_PATH: ${{ runner.temp }}/opencode-resolve-threads.json",
+    );
+    expect(workflow).toContain("success() &&");
+  });
+});
+
+const resolverWorkflow = readFileSync(
+  ".github/workflows/opencode-resolve.yaml",
+  "utf8",
+);
+
+describe("OpenCode thread resolver workflow", () => {
+  it("runs only for successful push reviews from the trusted default branch", () => {
+    expect(resolverWorkflow).toMatch(/^on:\r?\n  workflow_run:/m);
+    expect(resolverWorkflow).toContain('workflows: ["OpenCode review"]');
+    expect(resolverWorkflow).toContain("types: [completed]");
+    expect(resolverWorkflow).toContain(
+      "github.event.workflow_run.conclusion == 'success'",
+    );
+    expect(resolverWorkflow).toContain(
+      "github.event.workflow_run.event == 'pull_request_target'",
+    );
+    expect(resolverWorkflow).toContain(
+      "ref: ${{ github.event.repository.default_branch }}",
+    );
+    expect(resolverWorkflow).toContain("persist-credentials: false");
+    expect(resolverWorkflow).not.toContain(
+      "ref: ${{ github.event.workflow_run.head_sha }}",
+    );
+  });
+
+  it("limits the contents-write token to review-thread resolution", () => {
+    expect(resolverWorkflow).toMatch(/contents: write/);
+    expect(resolverWorkflow).toMatch(/pull-requests: write/);
+    expect(resolverWorkflow).toMatch(/actions: read/);
+    expect(resolverWorkflow).not.toMatch(/issues: write/);
+    expect(resolverWorkflow).toContain("OPENCODE_REVIEW_MODE: resolve");
+    expect(resolverWorkflow).toContain(
+      "OPENCODE_RESOLVE_THREADS_PATH: ${{ steps.capture.outputs.path }}",
+    );
+    expect(resolverWorkflow).toContain("gh run download");
+    expect(resolverWorkflow).toContain("opencode-resolve-threads.json");
+    expect(resolverWorkflow).toContain(
+      "node scripts/opencode-github-review.mjs",
+    );
   });
 });

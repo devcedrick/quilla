@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import { isAbsolute, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -46,6 +46,7 @@ const SEVERITIES = new Set([
   "info",
 ]);
 const SAFE_REF = /^[A-Za-z0-9._/-]+$/;
+const THREAD_CAPTURE_VERSION = 1;
 
 /** Truncate untrusted text before it reaches a GitHub comment body. */
 function truncate(value, limit) {
@@ -779,19 +780,99 @@ function positiveInteger(value) {
   return Number.isInteger(number) && number > 0 ? number : null;
 }
 
+/** Write the candidate thread ids for the separate, contents-write resolver. */
+function writeThreadCapture(path, capture) {
+  writeFileSync(path, `${JSON.stringify(capture)}\n`, "utf8");
+}
+
+function readThreadCapture(path) {
+  const capture = JSON.parse(readFileSync(path, "utf8"));
+  if (capture?.version !== THREAD_CAPTURE_VERSION)
+    throw new Error(
+      `Unsupported thread capture version: ${String(capture?.version)}.`,
+    );
+  const pull = positiveInteger(capture.pull);
+  if (!pull)
+    throw new Error("Thread capture needs a positive pull request number.");
+  if (!Array.isArray(capture.threadIds))
+    throw new Error("Thread capture needs a threadIds array.");
+  const threadIds = capture.threadIds.filter(
+    (threadId) => typeof threadId === "string" && threadId.length > 0,
+  );
+  return { pull, threadIds: [...new Set(threadIds)] };
+}
+
+/**
+ * Resolve captured threads with a token that has the contents write permission
+ * GitHub requires for `resolveReviewThread`. The capture only nominates
+ * candidates; every id is re-checked against live unresolved bot-rooted
+ * threads, so a stale or misleading capture cannot close a human thread.
+ */
+function resolveCapturedThreads(env, { client }) {
+  const capturePath = env.OPENCODE_RESOLVE_THREADS_PATH;
+  if (!capturePath)
+    throw new Error("Resolve mode needs OPENCODE_RESOLVE_THREADS_PATH.");
+  const capture = readThreadCapture(capturePath);
+  const expectedPull = positiveInteger(env.OPENCODE_PR_NUMBER);
+  if (expectedPull && expectedPull !== capture.pull)
+    throw new Error(
+      `Captured threads belong to pull request ${capture.pull}, not ${expectedPull}.`,
+    );
+  if (capture.threadIds.length === 0) {
+    console.log("No previous bot threads were captured.");
+    return;
+  }
+  const captured = new Set(capture.threadIds);
+  const live = botReviewThreadIds(
+    client.listReviewThreads(capture.pull),
+  ).filter((threadId) => captured.has(threadId));
+  const cleared = captured.size - live.length;
+  if (cleared > 0)
+    console.log(
+      `${cleared} captured thread(s) are already resolved or no longer qualify.`,
+    );
+  let resolved = 0;
+  const failures = [];
+  for (const threadId of live) {
+    try {
+      client.resolveReviewThread(threadId);
+      resolved += 1;
+    } catch (error) {
+      failures.push(threadId);
+      console.warn(
+        `Could not resolve review thread ${threadId}: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
+  console.log(
+    `Resolved ${resolved}/${live.length} captured bot thread(s) on pull request ${capture.pull}.`,
+  );
+  if (failures.length)
+    throw new Error(
+      `Could not resolve ${failures.length} of ${live.length} captured bot thread(s).`,
+    );
+}
+
 export function main(env = process.env, dependencies = {}) {
   const repo = env.GITHUB_REPOSITORY;
   const mode = env.OPENCODE_REVIEW_MODE;
-  const eventPath = env.GITHUB_EVENT_PATH;
-  if (!repo || !mode || !eventPath)
-    throw new Error(
-      "GITHUB_REPOSITORY, OPENCODE_REVIEW_MODE and GITHUB_EVENT_PATH are required.",
-    );
+  if (!repo || !mode)
+    throw new Error("GITHUB_REPOSITORY and OPENCODE_REVIEW_MODE are required.");
 
+  const client = dependencies.client ?? createGitHubClient({ repo, env });
+  if (mode === "resolve") {
+    resolveCapturedThreads(env, { client });
+    return;
+  }
+
+  const eventPath = env.GITHUB_EVENT_PATH;
+  if (!eventPath)
+    throw new Error(
+      "GITHUB_EVENT_PATH is required for review, reply and issue modes.",
+    );
   const event = dependencies.readEvent
     ? dependencies.readEvent(eventPath)
     : JSON.parse(readFileSync(eventPath, "utf8"));
-  const client = dependencies.client ?? createGitHubClient({ repo, env });
   const run = dependencies.runModel ?? runModel;
   const pr = positiveInteger(env.OPENCODE_PR_NUMBER);
   const target = positiveInteger(env.OPENCODE_TARGET_ID);
@@ -819,12 +900,14 @@ export function main(env = process.env, dependencies = {}) {
     const review = parseReviewOutput(run(prompt, env));
     const prepared = prepareReview(review, diff);
     // Capture threads before posting so the fresh review's own inline threads
-    // are never resolved. Cleanup is best-effort: a GraphQL hiccup must not
-    // discard an otherwise valid review.
+    // are never resolved. The capture is only released after the review posts;
+    // a failed review therefore leaves the previous threads open.
     let staleThreadIds = [];
+    let capturedPreviousThreads = false;
     if (event.action === "synchronize") {
       try {
         staleThreadIds = botReviewThreadIds(client.listReviewThreads(pr));
+        capturedPreviousThreads = true;
       } catch (error) {
         console.warn(
           `Could not list previous bot threads: ${error instanceof Error ? error.message : String(error)}`,
@@ -857,21 +940,22 @@ export function main(env = process.env, dependencies = {}) {
         ),
       );
     }
-    if (staleThreadIds.length) {
-      let resolved = 0;
-      for (const threadId of staleThreadIds) {
-        try {
-          client.resolveReviewThread(threadId);
-          resolved += 1;
-        } catch (error) {
-          console.warn(
-            `Could not resolve review thread ${threadId}: ${error instanceof Error ? error.message : String(error)}`,
-          );
-        }
+    if (capturedPreviousThreads) {
+      const capturePath = env.OPENCODE_RESOLVE_THREADS_PATH;
+      if (capturePath) {
+        writeThreadCapture(capturePath, {
+          version: THREAD_CAPTURE_VERSION,
+          pull: pr,
+          threadIds: staleThreadIds,
+        });
+        console.log(
+          `Captured ${staleThreadIds.length} previous bot thread(s) for the trusted resolver.`,
+        );
+      } else {
+        console.warn(
+          "OPENCODE_RESOLVE_THREADS_PATH is not set; previous bot threads were not handed to the resolver.",
+        );
       }
-      console.log(
-        `Resolved ${resolved}/${staleThreadIds.length} previous bot thread(s) after the new push.`,
-      );
     }
     return;
   }
