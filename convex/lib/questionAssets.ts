@@ -72,8 +72,12 @@ export async function completeAssetUploadForActor(
   },
 ) {
   const asset = await ctx.db.get("questionAssets", args.assetId);
-  if (!asset || asset.uploaderId !== actor._id || asset.state !== "pending")
-    fail("FORBIDDEN");
+  if (!asset || asset.uploaderId !== actor._id) fail("FORBIDDEN");
+  // A retried completion must not fail after another identical call committed
+  // the same binding; callers may otherwise compensate by deleting the blob.
+  if (asset.state === "verified" && asset.storageId === args.storageId)
+    return null;
+  if (asset.state !== "pending") fail("CONTENT_CONFLICT");
   if (asset.revision !== args.expectedRevision) fail("STALE_REVISION");
   const stored = await ctx.db.system.get("_storage", args.storageId);
   if (

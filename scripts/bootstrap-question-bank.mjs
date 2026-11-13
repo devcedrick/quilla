@@ -66,6 +66,22 @@ export function verifyBootstrapPlan(plan, policy = seedBootstrapPolicy) {
   };
 }
 
+/** Verify both the plan shape and the frozen reviewed checksums. */
+export function verifyFrozenBootstrapPlan(
+  plan,
+  policy = seedBootstrapPolicy,
+  expectedPlanChecksum = bootstrapPlanChecksum,
+  expectedInventoryHash = bootstrapInventoryChecksum,
+) {
+  const counts = verifyBootstrapPlan(plan, policy);
+  if (
+    plan.planChecksum !== expectedPlanChecksum ||
+    plan.inventoryHash !== expectedInventoryHash
+  )
+    throw new BootstrapError("BOOTSTRAP_PLAN_MISMATCH");
+  return counts;
+}
+
 /** Split records into command-line-safe batches by count and UTF-8 size. */
 export function commandBatches(values, maxBytes = 16 * 1024, maxCount = 10) {
   if (
@@ -219,6 +235,10 @@ export function parseBootstrapArgs(args) {
   );
   if (modes.length > 1) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   if (flags["--prod"] && flags["--deployment"])
+    throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+  // `--deployment prod` selects production without the explicit confirmation
+  // required by `--prod`; the production path must use the confirmed flag.
+  if (flags["--deployment"] === "prod")
     throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   if (flags["--confirm-production"] && !flags["--prod"])
     throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
@@ -394,7 +414,25 @@ export async function applyBootstrap(
     runId: access.runId,
     planChecksum: plan.planChecksum,
   };
-  await saveCheckpoint(checkpoint, recovery);
+  try {
+    await saveCheckpoint(checkpoint, recovery);
+  } catch {
+    // The run exists even when its recovery file cannot be written. Pause it
+    // and return the run identity so status, pause or rollback remain usable.
+    try {
+      await pauseBootstrap(
+        client,
+        target,
+        recovery.runId,
+        "BOOTSTRAP_OPERATION_FAILED",
+      );
+    } catch {
+      /* A completed or unreachable run still needs its identity reported. */
+    }
+    throw Object.assign(new BootstrapError("BOOTSTRAP_OPERATION_FAILED"), {
+      recovery,
+    });
+  }
   let lastRenewal = now();
   const call = async (kind, name, args) => {
     // A long apply can outlive one CLI invocation's lease. Renew before the
@@ -670,13 +708,16 @@ if (
       );
     } else {
       const plan = await prepareImport();
-      const policy = verifyBootstrapPlan(plan);
+      const policy = verifyFrozenBootstrapPlan(plan);
       result = {
         ...plan.report,
         mode: "dry-run",
         seedPolicy: { ...policy, verified: true },
       };
-      if (flags["--apply"]) result = await applyBootstrap(plan, flags, client);
+      if (flags["--apply"])
+        result = await applyBootstrap(plan, flags, client, {
+          checkpoint: flags["--checkpoint"],
+        });
     }
     if (flags["--json"] || result.mode === "status")
       console.log(JSON.stringify(result));

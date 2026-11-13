@@ -45,6 +45,18 @@ export const getForAction = internalQuery({
     return asset;
   },
 });
+/** Report whether a storage object is already committed to an asset binding. */
+export const storageBinding = internalQuery({
+  args: { storageId: v.id("_storage") },
+  returns: v.boolean(),
+  handler: async (ctx, args) => {
+    const asset = await ctx.db
+      .query("questionAssets")
+      .withIndex("by_storageId", (q) => q.eq("storageId", args.storageId))
+      .first();
+    return asset !== null;
+  },
+});
 /** Bind a server-created blob after rechecking uploader, revision and storage metadata. */
 export const completeUpload = internalMutation({
   args: {

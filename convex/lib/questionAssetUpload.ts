@@ -56,6 +56,7 @@ export async function verifyStoredAsset(
   storageId: Id<"_storage">,
   expectedRevision: number,
   complete: (storageId: Id<"_storage">) => Promise<null>,
+  isBound: (storageId: Id<"_storage">) => Promise<boolean>,
 ) {
   if (
     !Number.isSafeInteger(expectedRevision) ||
@@ -68,7 +69,13 @@ export async function verifyStoredAsset(
   try {
     await complete(storageId);
   } catch (error) {
-    await ctx.storage.delete(storageId);
+    let bound = true;
+    try {
+      bound = await isBound(storageId);
+    } catch {
+      // Unknown binding state: retain the caller's blob for reconciliation.
+    }
+    if (!bound) await ctx.storage.delete(storageId);
     throw error;
   }
   return null;

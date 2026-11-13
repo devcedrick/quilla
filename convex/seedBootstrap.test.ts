@@ -13,6 +13,8 @@ import {
   systemImporterIdentifier,
 } from "./lib/seedBootstrapProtocol";
 import { loadPublishedQuestion } from "./lib/questionServing";
+import { importQuestionDraft } from "./lib/questionImports";
+import { resolveQuestion } from "./lib/questionImportState";
 
 vi.mock("../lib/question-import-contract.mjs", async (original) => {
   const real = await original<Record<string, unknown>>();
@@ -300,6 +302,160 @@ describe("bootstrap publication", () => {
     });
     const second = await begin(t);
     expect(second).toEqual({ runId: access.runId, generation: 1 });
+  });
+
+  it("treats an identical asset completion as idempotent", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    const reserved = await t.mutation(internal.seedBootstrap.applyBatch, {
+      ...access,
+      records: [plan.records[0]],
+    });
+    const storageId = await t.run((ctx) =>
+      ctx.storage.store(new Blob([plan.pngBytes], { type: "image/png" })),
+    );
+    const completion = {
+      ...access,
+      ordinal: 0,
+      storageId,
+      expectedRevision: reserved.uploadRevision!,
+    };
+    await t.mutation(internal.seedBootstrap.completeAsset, completion);
+    await expect(
+      t.mutation(internal.seedBootstrap.completeAsset, completion),
+    ).resolves.toBeNull();
+    await expect(
+      t.run((ctx) => ctx.db.system.get("_storage", storageId)),
+    ).resolves.not.toBeNull();
+  });
+
+  it("refuses to adopt a draft created outside the bootstrap importer", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    const source = plan.records[3].source;
+    if (source.kind !== "question")
+      throw new Error("fixture question record missing");
+    await t.run(async (ctx) => {
+      const admin = await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|admin"),
+        )
+        .unique();
+      const resolved = await resolveQuestion(
+        ctx,
+        source.value,
+        "cse-taxonomy-2027-v2",
+      );
+      await importQuestionDraft(ctx, resolved.input, resolved.hashes, {
+        actor: admin!,
+      });
+    });
+    await uploadAsset(t, access);
+    await expect(
+      t.mutation(internal.seedBootstrap.applyBatch, {
+        ...access,
+        records: plan.records.slice(1, 4),
+      }),
+    ).rejects.toThrow("CONTENT_CONFLICT");
+  });
+
+  it("does not reactivate a version archived outside the bootstrap rollback", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    await uploadAsset(t, access);
+    await t.mutation(internal.seedBootstrap.applyBatch, {
+      ...access,
+      records: plan.records.slice(1),
+    });
+    const versionId = await t.run(async (ctx) => {
+      const entry = await ctx.db
+        .query("questionImportEntries")
+        .withIndex("by_runId_and_ordinal", (q) =>
+          q.eq("runId", access.runId).eq("ordinal", 3),
+        )
+        .unique();
+      const version = await ctx.db.get(
+        "questionVersions",
+        entry!.resultId as Id<"questionVersions">,
+      );
+      await ctx.db.patch("questionVersions", version!._id, {
+        state: "archived",
+        workflowRevision: version!.workflowRevision + 1,
+      });
+      return version!._id;
+    });
+    await t.mutation(internal.seedBootstrap.rollbackBatch, {
+      target: "fixture",
+      runId: access.runId,
+      reason: "rehearsal reset",
+    });
+    const retry = await begin(t);
+    const retryAccess = {
+      runId: retry.runId,
+      generation: retry.generation,
+      target: "fixture",
+    };
+    await t.mutation(internal.seedBootstrap.stage, {
+      ...retryAccess,
+      entries: plan.descriptors,
+    });
+    await uploadAsset(t, retryAccess);
+    await expect(
+      t.mutation(internal.seedBootstrap.applyBatch, {
+        ...retryAccess,
+        records: plan.records.slice(1),
+      }),
+    ).rejects.toThrow("CONTENT_CONFLICT");
+    await expect(
+      t.run((ctx) => ctx.db.get("questionVersions", versionId)),
+    ).resolves.toMatchObject({ state: "archived" });
+  });
+
+  it("resumes the newest run when older attempts exceed the lookup bound", async () => {
+    const { t } = await setup();
+    // Seed the system actors, then replace the placeholder run with 20 older
+    // rolled-back attempts so the resumable run is the newest insertion.
+    const seed = await begin(t);
+    const template = (await t.run((ctx) =>
+      ctx.db.get("questionImportRuns", seed.runId),
+    ))!;
+    await t.run(async (ctx) => {
+      await ctx.db.delete("questionImportRuns", seed.runId);
+      for (let index = 0; index < 20; index++) {
+        await ctx.db.insert("questionImportRuns", {
+          target: template.target,
+          targetUrl: template.targetUrl,
+          mode: "bootstrap",
+          ownerId: template.ownerId,
+          approverId: template.approverId,
+          planChecksum: template.planChecksum,
+          inventoryHash: template.inventoryHash,
+          chain: template.chain,
+          manifests: template.manifests,
+          stagedCounts: template.stagedCounts,
+          expected: template.expected,
+          staged: 0,
+          processed: 0,
+          rolledBack: 0,
+          state: "rolled_back",
+          generation: 1,
+          leaseUntil: 0,
+          createdAt: template.createdAt - 1000 - index,
+          updatedAt: template.updatedAt - 1000 - index,
+        });
+      }
+    });
+    const access = await start(t);
+    await t.mutation(internal.seedBootstrap.pause, {
+      target: "fixture",
+      runId: access.runId,
+      code: "BOOTSTRAP_OPERATION_FAILED",
+    });
+    await expect(begin(t)).resolves.toEqual({
+      runId: access.runId,
+      generation: 2,
+    });
   });
 
   it("refuses a competing begin and resumes a paused run with a new generation", async () => {

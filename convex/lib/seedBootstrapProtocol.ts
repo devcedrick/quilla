@@ -45,8 +45,7 @@ export function requireKnownBootstrapTarget(target: string) {
 /** Require the reviewed target and an explicitly enabled bootstrap window. */
 export function requireBootstrapTarget(target: string) {
   const url = requireKnownBootstrapTarget(target);
-  if (process.env.SEED_BOOTSTRAP_ENABLED !== "true")
-    fail("BOOTSTRAP_TARGET_DISABLED");
+  if (env.SEED_BOOTSTRAP_ENABLED !== "true") fail("BOOTSTRAP_TARGET_DISABLED");
   return url;
 }
 
@@ -148,8 +147,11 @@ export async function bootstrapRun(
   return run;
 }
 
-/** Fence bootstrap mutations against expired, superseded, or competing workers. */
-export async function bootstrapLeasedRun(
+/**
+ * Fence read-only bootstrap calls without reading the wall clock. Lease expiry
+ * and competing workers are enforced by mutations and by the verifying action.
+ */
+export async function bootstrapQueryRun(
   ctx: Pick<QueryCtx, "db">,
   args: {
     runId: Id<"questionImportRuns">;
@@ -167,6 +169,21 @@ export async function bootstrapLeasedRun(
   }
   if (run.state !== "running" && run.state !== "preparing")
     fail("BOOTSTRAP_LEASE_LOST");
+  return run;
+}
+
+/** Fence bootstrap mutations against expired, superseded, or competing workers. */
+export async function bootstrapLeasedRun(
+  ctx: Pick<QueryCtx, "db">,
+  args: {
+    runId: Id<"questionImportRuns">;
+    target: string;
+    generation: number;
+  },
+  options: { allowComplete?: boolean } = {},
+) {
+  const run = await bootstrapQueryRun(ctx, args, options);
+  if (run.state === "complete") return run;
   if (run.leaseUntil <= Date.now()) fail("BOOTSTRAP_LEASE_LOST");
   const active = await ctx.db
     .query("questionImportRuns")

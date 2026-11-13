@@ -44,7 +44,7 @@ plan and inventory checksums are recorded in
 | ------------------- | --------------------------------------------------------------------------------- |
 | `npm run lint`      | Passed, no warnings or errors                                                     |
 | `npm run typecheck` | Passed, no diagnostics                                                            |
-| `npm run test:unit` | Passed: 42 files, 519 tests                                                       |
+| `npm run test:unit` | Passed: 42 files, 525 tests                                                       |
 | `npm run knip`      | Passed, no unused files, exports or dependencies                                  |
 | `npm run build`     | Passed; only the pre-existing Turbopack warning about an out-of-repo package-lock |
 | `git diff --check`  | Passed, no whitespace errors                                                      |
@@ -58,10 +58,10 @@ The files most directly affected by this change were run separately:
 
 | File                                       | Tests | Result |
 | ------------------------------------------ | ----- | ------ |
-| `convex/seedBootstrap.test.ts`             | 10    | Passed |
+| `convex/seedBootstrap.test.ts`             | 14    | Passed |
 | `convex/questionImports.test.ts`           | 29    | Passed |
 | `convex/questions.test.ts`                 | 15    | Passed |
-| `scripts/bootstrap-question-bank.test.mjs` | 24    | Passed |
+| `scripts/bootstrap-question-bank.test.mjs` | 26    | Passed |
 | `scripts/import-question-bank.test.mjs`    | 13    | Passed |
 
 The bootstrap test uses a mocked two-family, six-record corpus with a sealed test
@@ -77,7 +77,11 @@ taxonomy. It covers:
 - idempotent completed reruns and resume with a new generation;
 - stale-generation and lease rejection;
 - deterministic source mismatch before content writes;
-- archive-only rollback, full-rollback retry and archived-version reactivation.
+- idempotent asset completion without deleting the committed blob;
+- refusal to adopt a draft created outside the bootstrap importer;
+- archive-only rollback, full-rollback retry and archived-version reactivation;
+- preserving an ordinary editorial archive across bootstrap rollback and retry;
+- resuming the newest run when older attempts exceed the lookup bound.
 
 `convex/questions.test.ts` covers `bulkSubmitForReview`, `bulkPublishVersions` and
 `bulkArchiveVersions`: per-item success and failure results, stale revisions,
@@ -86,11 +90,13 @@ does not add bulk editorial review or approval. `convex/questionImports.test.ts`
 retains coverage for the ordinary draft-only importer and the actor-aware asset,
 reference and question helpers used by the bootstrap.
 
-`scripts/bootstrap-question-bank.test.mjs` covers plan verification, batching,
-bounded status reads, deployment selection, offline dry-run behavior, transient
-retries, replayed batches, asset upload, preflight conflicts, recovery metadata,
-pause and rollback. It also asserts that error reporting emits only allowlisted
-codes and never echoes a credential-bearing transport message.
+`scripts/bootstrap-question-bank.test.mjs` covers plan verification against both
+frozen checksums, batching, bounded status reads, deployment selection (including
+rejection of the unconfirmed `--deployment prod` alias), offline dry-run behavior,
+transient retries, replayed batches, asset upload, preflight conflicts, recovery
+metadata, initial-checkpoint failure, pause and rollback. It also asserts that
+error reporting emits only allowlisted codes and never echoes a credential-bearing
+transport message.
 
 ## Checks not run
 

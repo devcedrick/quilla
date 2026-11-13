@@ -1,3 +1,5 @@
+import path from "node:path";
+import os from "node:os";
 import { describe, it, expect, vi } from "vitest";
 import {
   applyBootstrap,
@@ -13,6 +15,7 @@ import {
   runConvex,
   selectDeployment,
   verifyBootstrapPlan,
+  verifyFrozenBootstrapPlan,
 } from "./bootstrap-question-bank.mjs";
 
 const policy = {
@@ -227,6 +230,21 @@ describe("bootstrap plan policy", () => {
       "BOOTSTRAP_POLICY_MISMATCH",
     );
   });
+  it("accepts only a plan matching both frozen checksums", () => {
+    expect(
+      verifyFrozenBootstrapPlan(
+        fixturePlan(),
+        policy,
+        planChecksum,
+        inventoryHash,
+      ),
+    ).toEqual({ families: 2, questions: 4, references: 1, assets: 1 });
+    const changed = fixturePlan();
+    changed.inventoryHash = "f".repeat(64);
+    expect(() =>
+      verifyFrozenBootstrapPlan(changed, policy, planChecksum, inventoryHash),
+    ).toThrow("BOOTSTRAP_PLAN_MISMATCH");
+  });
 });
 
 describe("command batches", () => {
@@ -279,6 +297,17 @@ describe("operator arguments", () => {
     expect(() => parseBootstrapArgs(["--status", "--prod"])).toThrow(
       "BOOTSTRAP_INVALID_ARGUMENTS",
     );
+    expect(() =>
+      parseBootstrapArgs([
+        "--status",
+        "--deployment",
+        "prod",
+        "--target",
+        "production",
+        "--run",
+        "run-1",
+      ]),
+    ).toThrow("BOOTSTRAP_INVALID_ARGUMENTS");
     expect(
       parseBootstrapArgs([
         "--status",
@@ -562,6 +591,35 @@ describe("apply bootstrap", () => {
         },
       ),
     ).rejects.toMatchObject({ code: "BOOTSTRAP_PLAN_MISMATCH" });
+  });
+  it("pauses and reports the run when the initial checkpoint cannot be written", async () => {
+    const plan = fixturePlan();
+    const { client, run, calls } = transportPlan(plan);
+    const checkpoint = path.join(
+      os.tmpdir(),
+      `quilla-missing-${process.pid}-${Date.now()}`,
+      "checkpoint.json",
+    );
+    await expect(
+      applyBootstrap(
+        plan,
+        { "--expect-plan": plan.planChecksum, "--target": "fixture" },
+        client,
+        {
+          checkpoint,
+          policy,
+          expectedPlanChecksum: plan.planChecksum,
+          sleep: async () => {},
+        },
+      ),
+    ).rejects.toMatchObject({
+      code: "BOOTSTRAP_OPERATION_FAILED",
+      recovery: { runId: "run-1" },
+    });
+    expect(run.state).toBe("paused");
+    expect(
+      calls.some(([kind, name]) => kind === "mutation" && name === "pause"),
+    ).toBe(true);
   });
 });
 

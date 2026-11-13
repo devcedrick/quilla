@@ -49,6 +49,7 @@ export default defineSchema({
     workflowRevision: v.number(),
     approvalDecisionId: v.optional(v.id("questionReviews")),
     bootstrapRunId: v.optional(v.id("questionImportRuns")),
+    archivedByBootstrapRunId: v.optional(v.id("questionImportRuns")),
   })
     .index("by_questionId_and_version", ["questionId", "version"])
     .index("by_state", ["state"])
@@ -87,7 +88,8 @@ export default defineSchema({
     revision: v.number(),
   })
     .index("by_assetId", ["assetId"])
-    .index("by_uploaderId_and_state", ["uploaderId", "state"]),
+    .index("by_uploaderId_and_state", ["uploaderId", "state"])
+    .index("by_storageId", ["storageId"]),
   taxonomyVersions: defineTable({
     taxonomyId: v.string(),
     state: taxonomyState,

@@ -109,18 +109,24 @@ small fixture. It proves:
 - idempotent completed reruns and resume with a new generation;
 - stale-generation and lease rejection;
 - deterministic source mismatch before content writes;
-- archive-only rollback, full-rollback retry and archived-version reactivation.
+- idempotent asset completion without deleting the committed blob;
+- refusal to adopt a draft created outside the bootstrap importer;
+- archive-only rollback, full-rollback retry and archived-version reactivation;
+- preserving an ordinary editorial archive across bootstrap rollback and retry;
+- resuming the newest run when older attempts exceed the lookup bound.
 
 `convex/questions.test.ts` covers the #34 bulk submit, publish and archive
 mutations: per-item success/failure results, stale revisions, missing approval,
 invalid transitions, nonadmin denial and batch bounds. It does not add bulk
 editorial review or approval.
 
-`scripts/bootstrap-question-bank.test.mjs` covers plan verification, batching,
-bounded status reads, deployment selection, transient retries, replayed batches,
-asset upload, preflight conflicts, recovery metadata, pause and rollback. A separate
-assertion in `scripts/import-question-bank.test.mjs` runs the real offline plan
-through the frozen 7 × 270 policy.
+`scripts/bootstrap-question-bank.test.mjs` covers plan verification against both
+frozen checksums, batching, bounded status reads, deployment selection (including
+rejection of the unconfirmed `--deployment prod` alias), transient retries, replayed
+batches, asset upload, preflight conflicts, recovery metadata, initial-checkpoint
+failure, pause and rollback. A separate assertion in
+`scripts/import-question-bank.test.mjs` runs the real offline plan through the
+frozen 7 × 270 policy.
 
 ## Future authorized rehearsal commands
 

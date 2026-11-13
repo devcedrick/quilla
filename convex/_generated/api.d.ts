@@ -26,6 +26,7 @@ import type * as lib_questionLifecycle from "../lib/questionLifecycle.js";
 import type * as lib_questionReferenceDrafts from "../lib/questionReferenceDrafts.js";
 import type * as lib_questionServing from "../lib/questionServing.js";
 import type * as lib_questionWorkflow from "../lib/questionWorkflow.js";
+import type * as lib_seedBootstrapFixture from "../lib/seedBootstrapFixture.js";
 import type * as lib_seedBootstrapProtocol from "../lib/seedBootstrapProtocol.js";
 import type * as lib_taxonomy from "../lib/taxonomy.js";
 import type * as lib_taxonomyCatalog from "../lib/taxonomyCatalog.js";
@@ -65,6 +66,7 @@ declare const fullApi: ApiFromModules<{
   "lib/questionReferenceDrafts": typeof lib_questionReferenceDrafts;
   "lib/questionServing": typeof lib_questionServing;
   "lib/questionWorkflow": typeof lib_questionWorkflow;
+  "lib/seedBootstrapFixture": typeof lib_seedBootstrapFixture;
   "lib/seedBootstrapProtocol": typeof lib_seedBootstrapProtocol;
   "lib/taxonomy": typeof lib_taxonomy;
   "lib/taxonomyCatalog": typeof lib_taxonomyCatalog;

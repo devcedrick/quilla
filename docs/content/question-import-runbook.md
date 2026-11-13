@@ -38,7 +38,9 @@ sealed taxonomy or matching content: target comparison is reported as not checke
    deployment. Verify its deployment type through trusted Convex administration;
    a URL or client-supplied `dev` label alone does not prove its type.
 2. Review a registry change binding an operator target name to that exact URL in
-   `lib/question-import-contract.mjs`. Never register production. Separately set
+   `lib/question-import-contract.mjs`. The registry ships empty and no production
+   target is registered by default. A production target requires its own reviewed
+   registry change and fresh explicit approval under ADR 0022. Separately set
    `QUESTION_BANK_IMPORT_ENABLED=true` only on that development backend. The guard
    compares the registered URL against its system `CONVEX_CLOUD_URL`.
 3. Provision an active Quilla admin and install/seal the matching v2 taxonomy
@@ -153,8 +155,12 @@ policy issue [#104](https://github.com/devcedrick/quilla/issues/104) and
 [the development rehearsal](development-import-rehearsal.md) define the exception:
 exactly 1,890 questions (seven families at 270), 265 references and 59 images.
 
-Do not run this against production without fresh explicit approval. It requires the
-same reviewed target registry as the importer, plus:
+Run this against a development target first. A production bootstrap is permitted
+only after a separately reviewed target registry change and fresh explicit approval
+for that exact production deployment, and must use `--prod --confirm-production`;
+`--deployment prod` is rejected so production cannot be selected without that
+confirmation. The bootstrap requires the same reviewed target registry as the
+importer, plus:
 
 - `SEED_BOOTSTRAP_ENABLED=true` on that exact backend during the bootstrap window;
 - a sealed `cse-taxonomy-2027-v2` taxonomy;

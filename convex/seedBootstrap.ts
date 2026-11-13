@@ -36,6 +36,7 @@ import {
   bootstrapBatch,
   bootstrapLeaseMs,
   bootstrapLeasedRun,
+  bootstrapQueryRun,
   bootstrapReviewReason,
   bootstrapRun,
   ensureSystemUser,
@@ -96,6 +97,11 @@ const completeRef = makeFunctionReference<
   },
   null
 >("seedBootstrap:completeAsset");
+const storageBindingRef = makeFunctionReference<
+  "query",
+  { storageId: Id<"_storage"> },
+  boolean
+>("questionAssets:storageBinding");
 
 /** Acquire or resume the one-time developer bootstrap run. */
 export const begin = internalMutation({
@@ -128,6 +134,7 @@ export const begin = internalMutation({
       .withIndex("by_mode_and_target", (q) =>
         q.eq("mode", "bootstrap").eq("target", args.target),
       )
+      .order("desc")
       .take(20);
     let resume = args.resumeRunId
       ? latest.find((run) => run._id === args.resumeRunId)
@@ -231,7 +238,7 @@ export const preflight = internalQuery({
   },
   returns: v.array(classification),
   handler: async (ctx, args) => {
-    const run = await bootstrapLeasedRun(ctx, args);
+    const run = await bootstrapQueryRun(ctx, args);
     bootstrapBatch(args.records);
     const importer = await ctx.db.get("users", run.ownerId);
     if (!importer || importer.role !== "system")
@@ -339,7 +346,8 @@ async function acceptAndPublishQuestion(
     if (
       !previous ||
       previous.mode !== "bootstrap" ||
-      previous.state !== "rolled_back"
+      previous.state !== "rolled_back" ||
+      version.archivedByBootstrapRunId !== previous._id
     )
       fail("CONTENT_CONFLICT");
     const revision = version.workflowRevision;
@@ -347,6 +355,7 @@ async function acceptAndPublishQuestion(
       state: "pending_review",
       workflowRevision: revision + 1,
       bootstrapRunId: run._id,
+      archivedByBootstrapRunId: undefined,
     });
     await appendSystemAudit(ctx, importer._id, {
       entityType: "question_version",
@@ -359,6 +368,13 @@ async function acceptAndPublishQuestion(
     if (!version) fail("QUESTION_NOT_FOUND");
   } else {
     if (version.state !== "draft") fail("CONTENT_CONFLICT");
+    const question = await ctx.db.get("questions", version.questionId);
+    if (
+      version.creatorId !== importer._id ||
+      !question ||
+      question.contributorId !== importer._id
+    )
+      fail("CONTENT_CONFLICT");
     if (version.bootstrapRunId !== run._id)
       await ctx.db.patch("questionVersions", version._id, {
         bootstrapRunId: run._id,
@@ -636,7 +652,7 @@ export const assetUploadContext = internalQuery({
     leaseUntil: v.number(),
   }),
   handler: async (ctx, args) => {
-    const run = await bootstrapLeasedRun(ctx, args);
+    const run = await bootstrapQueryRun(ctx, args);
     if (run.state !== "running" || run.processed !== args.ordinal)
       fail("BOOTSTRAP_ORDER");
     const entry = await entryAt(ctx, run._id, args.ordinal);
@@ -696,12 +712,18 @@ export const verifyAsset = internalAction({
     const { storageId, ...access } = args;
     const { asset, leaseUntil } = await ctx.runQuery(uploadContextRef, access);
     if (leaseUntil <= Date.now()) fail("BOOTSTRAP_LEASE_LOST");
-    return verifyStoredAsset(ctx, asset, storageId, asset.revision, (bound) =>
-      ctx.runMutation(completeRef, {
-        ...access,
-        storageId: bound,
-        expectedRevision: asset.revision,
-      }),
+    return verifyStoredAsset(
+      ctx,
+      asset,
+      storageId,
+      asset.revision,
+      (bound) =>
+        ctx.runMutation(completeRef, {
+          ...access,
+          storageId: bound,
+          expectedRevision: asset.revision,
+        }),
+      (bound) => ctx.runQuery(storageBindingRef, { storageId: bound }),
     );
   },
 });
@@ -804,6 +826,7 @@ export const rollbackBatch = internalMutation({
       await ctx.db.patch("questionVersions", version._id, {
         state: "archived",
         workflowRevision: version.workflowRevision + 1,
+        archivedByBootstrapRunId: run._id,
       });
       await appendSystemAudit(ctx, importer._id, {
         entityType: "question_version",
