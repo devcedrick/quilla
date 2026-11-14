@@ -2,7 +2,7 @@ import { ConvexError, v } from "convex/values";
 import type { MutationCtx } from "../_generated/server";
 import type { Doc, Id } from "../_generated/dataModel";
 import { requireAdmin } from "./auth";
-import { appendAdminAudit } from "./audit";
+import { insertPreparedAudit, prepareAdminAudit } from "./audit";
 import {
   nextQuestionState,
   questionWorkflowError as fail,
@@ -51,14 +51,18 @@ export async function changeWorkflow(
     action,
     reason,
   );
-  await ctx.db.patch("questionVersions", version._id, next);
-  await appendAdminAudit(ctx, {
+  // Validate and authorize the audit before patching. Bulk operations swallow
+  // coded failures per item, so an audit failure after the patch would commit
+  // an unauthorized or unaudited transition instead of aborting the item.
+  const audit = await prepareAdminAudit(ctx, {
     entityType: "question_version",
     entityId: version._id,
     action,
     before: { state: version.state, revision: version.workflowRevision },
     after: { state: next.state, revision: next.workflowRevision },
   });
+  await ctx.db.patch("questionVersions", version._id, next);
+  await insertPreparedAudit(ctx, audit);
   return next.workflowRevision;
 }
 

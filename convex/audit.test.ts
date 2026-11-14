@@ -3,7 +3,11 @@ import { defineTestApp } from "convex-test";
 import { describe, expect, it } from "vitest";
 import * as audit from "./audit";
 import schema from "./schema";
-import { appendAdminAudit } from "./lib/audit";
+import {
+  appendAdminAudit,
+  insertPreparedAudit,
+  prepareAdminAudit,
+} from "./lib/audit";
 
 // Typed in-memory API avoids deployment/codegen solely to execute tests.
 const { api, createTest } = defineTestApp({ schema }).defineModules({ audit });
@@ -245,6 +249,32 @@ describe("admin audit", () => {
         }),
       ).rejects.toMatchObject({ data: { code: "INVALID_AUDIT_DATA" } });
     }
+  });
+
+  it("prepares and validates an audit event before its domain write", async () => {
+    const { t, admin } = await fixture();
+    const prepared = await admin.run((ctx) => prepareAdminAudit(ctx, event));
+    expect(await t.run((ctx) => ctx.db.query("auditEvents").take(1))).toEqual(
+      [],
+    );
+    await admin.run((ctx) => insertPreparedAudit(ctx, prepared));
+    const stored = await t.run((ctx) => ctx.db.query("auditEvents").take(1));
+    expect(stored).toHaveLength(1);
+    expect(stored[0]).toMatchObject({
+      entityType: "question",
+      entityId: "q1",
+      action: "revise",
+      beforeJson: null,
+      afterJson: '{"version":2}',
+    });
+    await expect(
+      admin.run((ctx) =>
+        prepareAdminAudit(ctx, { ...event, entityId: "x".repeat(257) }),
+      ),
+    ).rejects.toMatchObject({ data: { code: "INVALID_AUDIT_DATA" } });
+    expect(
+      await t.run((ctx) => ctx.db.query("auditEvents").take(10)),
+    ).toHaveLength(1);
   });
 
   it("rolls back the domain change and audit insert when the transaction fails", async () => {

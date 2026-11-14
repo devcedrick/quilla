@@ -22,6 +22,14 @@ type AuditEvent = {
   before: Snapshot;
   after: Snapshot;
 };
+type PreparedAudit = {
+  actorId: Id<"users">;
+  entityType: string;
+  entityId: string;
+  action: string;
+  beforeJson: string | null;
+  afterJson: string | null;
+};
 
 /** Create a sanitized validation error without exposing snapshot contents. */
 function invalidAudit() {
@@ -66,24 +74,45 @@ function serialize(snapshot: Snapshot): string | null {
   }
 }
 
-/** Call inside the domain mutation; pass only explicitly allowlisted snapshots. */
-async function insertAudit(
-  ctx: MutationCtx,
-  actorId: Id<"users">,
-  event: AuditEvent,
-) {
+/** Validate and serialize an audit event without writing it. */
+function prepareAudit(actorId: Id<"users">, event: AuditEvent): PreparedAudit {
   validateAuditIdentifier(event.entityType, 100);
   validateAuditIdentifier(event.entityId, 256);
   validateAuditIdentifier(event.action, 100);
-  return await ctx.db.insert("auditEvents", {
+  return {
     actorId,
     entityType: event.entityType,
     entityId: event.entityId,
     action: event.action,
     beforeJson: serialize(event.before),
     afterJson: serialize(event.after),
+  };
+}
+
+/** Insert an event that was validated before its related state change. */
+export async function insertPreparedAudit(
+  ctx: MutationCtx,
+  prepared: PreparedAudit,
+) {
+  return await ctx.db.insert("auditEvents", {
+    ...prepared,
     occurredAt: Date.now(),
   });
+}
+
+/** Call inside the domain mutation; pass only explicitly allowlisted snapshots. */
+async function insertAudit(
+  ctx: MutationCtx,
+  actorId: Id<"users">,
+  event: AuditEvent,
+) {
+  return await insertPreparedAudit(ctx, prepareAudit(actorId, event));
+}
+
+/** Authorize and validate an audit event before its state change is written. */
+export async function prepareAdminAudit(ctx: MutationCtx, event: AuditEvent) {
+  const actor = await requireAdmin(ctx);
+  return prepareAudit(actor._id, event);
 }
 
 /** Attribute an event to an already-authorized admin or system actor. */
