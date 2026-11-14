@@ -44,6 +44,22 @@ contents-write job, runs default-branch code, and now accepts successful
 - If stronger workflow-definition isolation is needed later, push events can be
   migrated to `pull_request_target` once the runner is on the default branch.
 
+## Post-merge follow-up
+
+Merging this repository's first copy of the runner removes the only bootstrap
+dependency that prevents a default-branch workflow from running. The immediate
+follow-up is a separate pull request that:
+
+1. moves push reviews to `pull_request_target` for `opened`, `synchronize`,
+   `reopened` and `ready_for_review`;
+2. checks out and executes the runner from `github.event.repository.default_branch`;
+3. keeps the PR-head worktree only as untrusted `--dir` model input; and
+4. retains the existing fork, draft and requester-write gates before the model
+   runs.
+
+That follow-up prevents PR-controlled workflow YAML and runner code from
+receiving `OPENCODE_API_KEY` or the review job token on push reviews.
+
 ## Alternatives rejected
 
 - **Keep `pull_request_target` only:** no push reviews until the workflow is on
