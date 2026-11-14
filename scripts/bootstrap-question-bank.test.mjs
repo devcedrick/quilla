@@ -478,6 +478,72 @@ describe("convex transport", () => {
       expect(isTransientBootstrapError(error)).toBe(true);
     }
   });
+  it("reads every allowlisted deterministic code from the ConvexError payload", () => {
+    const failed = (code) => ({
+      status: 1,
+      stdout: "",
+      stderr: `Failed to run function:\nConvexError: ${JSON.stringify({ code, message: `Question operation rejected: ${code}` })}\n`,
+    });
+    for (const code of [
+      "ASSET_NOT_FOUND",
+      "INVALID_TRANSITION",
+      "INVALID_TAXONOMY_PATH",
+      "INVALID_ELIGIBILITY",
+      "UNKNOWN_TAXONOMY_ENTRY",
+      "SELF_REVIEW",
+      "QUESTION_NOT_FOUND",
+      "INVALID_AUDIT_DATA",
+    ]) {
+      try {
+        runConvex(
+          "seedBootstrap:applyBatch",
+          {},
+          { "--deployment": "development" },
+          { spawn: () => failed(code) },
+        );
+        throw new Error(`expected ${code} to fail`);
+      } catch (error) {
+        expect(error.code).toBe(code);
+        expect(isTransientBootstrapError(error)).toBe(false);
+      }
+    }
+  });
+  it("does not retry an unknown structured failure", () => {
+    try {
+      runConvex(
+        "seedBootstrap:applyBatch",
+        {},
+        { "--deployment": "development" },
+        {
+          spawn: () => ({
+            status: 1,
+            stdout: "",
+            stderr: 'ConvexError: {"code":"SOMETHING_NEW","message":"new"}',
+          }),
+        },
+      );
+      throw new Error("expected the call to fail");
+    } catch (error) {
+      expect(error.code).toBe("BOOTSTRAP_OPERATION_FAILED");
+      expect(isTransientBootstrapError(error)).toBe(false);
+    }
+  });
+  it("recognizes allowlisted codes printed outside a structured payload", () => {
+    expect(() =>
+      runConvex(
+        "seedBootstrap:applyBatch",
+        {},
+        { "--deployment": "development" },
+        {
+          spawn: () => ({
+            status: 1,
+            stdout: "",
+            stderr: "Error: ASSET_NOT_FOUND",
+          }),
+        },
+      ),
+    ).toThrow("ASSET_NOT_FOUND");
+  });
 });
 
 describe("apply bootstrap", () => {

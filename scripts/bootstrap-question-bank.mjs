@@ -8,6 +8,7 @@ import {
   bootstrapInventoryChecksum,
   bootstrapPlanChecksum,
   bootstrapStageBatchSize,
+  isKnownFailureCode,
   seedBootstrapPolicy,
   safeBootstrapFailure,
 } from "../lib/question-import-contract.mjs";
@@ -287,6 +288,33 @@ export function selectDeployment(flags, env = process.env) {
   throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
 }
 
+const failureCodePattern = /^[A-Z][A-Z0-9_]{0,63}$/;
+
+/** Parse the structured ConvexError payload printed by `convex run`. */
+function structuredFailureCode(output) {
+  for (const match of String(output ?? "").matchAll(/\{[^{}]*\}/g)) {
+    try {
+      const payload = JSON.parse(match[0]);
+      if (
+        payload &&
+        typeof payload.code === "string" &&
+        failureCodePattern.test(payload.code)
+      )
+        return payload.code;
+    } catch {
+      // CLI output can contain non-JSON braces; keep scanning.
+    }
+  }
+  return null;
+}
+
+/** Fallback for CLI output that names a known code outside a payload. */
+function labeledFailureCode(output) {
+  const candidates =
+    String(output ?? "").match(/\b[A-Z][A-Z0-9_]{2,63}\b/g) ?? [];
+  return candidates.find(isKnownFailureCode) ?? null;
+}
+
 /**
  * Invoke an internal Convex function with deployment CLI credentials.
  * Run the installed CLI through Node rather than spawning `npx.cmd`: no shell
@@ -321,11 +349,12 @@ export function runConvex(
   );
   if (result.error || result.status !== 0) {
     const output = `${result.stderr ?? ""}\n${result.stdout ?? ""}`;
-    const match = output.match(
-      /\b(BOOTSTRAP_[A-Z_]+|IMPORT_[A-Z_]+|CONTENT_CONFLICT|VALIDATION_FAILED|FORBIDDEN|UNAUTHENTICATED|STALE_REVISION|TAXONOMY_UNAVAILABLE|UNVERIFIED_ASSET|REFERENCE_NOT_FOUND|QUESTION_[A-Z_]+)\b/,
-    );
-    throw new BootstrapError(match ? match[1] : "BOOTSTRAP_OPERATION_FAILED", {
-      transient: !match,
+    // Convex CLI prints a ConvexError payload as JSON. Prefer the structured
+    // code so every allowlisted domain failure is deterministic; the labeled
+    // fallback covers older CLI output that only names the code.
+    const code = structuredFailureCode(output) ?? labeledFailureCode(output);
+    throw new BootstrapError(code ?? "BOOTSTRAP_OPERATION_FAILED", {
+      transient: !code,
     });
   }
   const text = result.stdout.trim();
