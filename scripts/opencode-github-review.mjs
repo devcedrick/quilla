@@ -814,7 +814,14 @@ function resolveCapturedThreads(env, { client }) {
     throw new Error("Resolve mode needs OPENCODE_RESOLVE_THREADS_PATH.");
   const capture = readThreadCapture(capturePath);
   const expectedPull = positiveInteger(env.OPENCODE_PR_NUMBER);
-  if (expectedPull && expectedPull !== capture.pull)
+  // The capture is written by the PR-controlled review runner. Without the
+  // workflow run's PR number there is no trustworthy cross-check, so refuse to
+  // resolve anything rather than accepting the artifact's pull number.
+  if (!expectedPull)
+    throw new Error(
+      "Resolve mode needs the pull request number of the completed review run.",
+    );
+  if (expectedPull !== capture.pull)
     throw new Error(
       `Captured threads belong to pull request ${capture.pull}, not ${expectedPull}.`,
     );

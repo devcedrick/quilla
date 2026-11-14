@@ -1138,6 +1138,7 @@ describe("thread resolution mode", () => {
       GITHUB_REPOSITORY: "devcedrick/quilla",
       OPENCODE_REVIEW_MODE: "resolve",
       OPENCODE_RESOLVE_THREADS_PATH: capturePath,
+      OPENCODE_PR_NUMBER: "105",
       ...overrides,
     };
   }
@@ -1226,6 +1227,28 @@ describe("thread resolution mode", () => {
             },
           }),
         ).toThrow("belong to pull request 104");
+      },
+    );
+  });
+
+  it("refuses to resolve when the review run's pull request number is missing", () => {
+    withCapture(
+      { version: 1, pull: 105, threadIds: ["PRRT_old"] },
+      (capturePath) => {
+        for (const missing of ["", undefined]) {
+          const env = resolveEnv(capturePath);
+          if (missing === undefined) delete env.OPENCODE_PR_NUMBER;
+          else env.OPENCODE_PR_NUMBER = missing;
+          expect(() =>
+            main(env, {
+              client: {
+                listReviewThreads: () => {
+                  throw new Error("must not list");
+                },
+              },
+            }),
+          ).toThrow("needs the pull request number");
+        }
       },
     );
   });

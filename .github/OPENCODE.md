@@ -105,8 +105,11 @@ write permission. Resolving a review thread requires Contents: write in
 addition to Pull requests: write, so that mutation runs only in the separate
 `OpenCode resolve threads` job. That job is loaded from and checks out the
 default branch, never checks out or executes PR code, and re-validates every
-artifact id against live unresolved bot-rooted threads before resolving it. No
-PAT, `AGENT_GITHUB_TOKEN`, GitHub App installation or OIDC permission is needed.
+artifact id against live unresolved bot-rooted threads before resolving it. It
+also refuses to run unless the triggering workflow run's pull request number is
+known and matches the capture, so a PR-controlled artifact cannot nominate
+another pull request's threads. No PAT, `AGENT_GITHUB_TOKEN`, GitHub App
+installation or OIDC permission is needed.
 Session sharing and plugins are disabled in the runner config. The review
 checkout does not persist credentials; PR modes use GitHub CLI's
 environment-token credential helper for the temporary PR worktree, without

@@ -42,6 +42,10 @@ Split the operation across two workflows with different permissions.
    unresolved and rooted in a marked bot review, and never resolves a
    human-rooted thread or another app's review. Resolution failures fail the
    resolver workflow; they do not discard the posted review.
+4. The resolver requires the triggering workflow run's pull request number and
+   rejects a capture that names a different pull request. A run whose
+   `pull_requests` payload is empty fails closed instead of accepting the
+   artifact's pull number.
 
 The review job captures ids before posting, so the fresh review's own threads
 are excluded by construction. If the review fails or is skipped, no capture
