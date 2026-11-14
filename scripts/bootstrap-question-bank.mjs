@@ -495,7 +495,11 @@ export async function applyBootstrap(
       lastRenewal = now();
     return result;
   };
-  /** Re-acquire the lease once and replay the fenced operation from checkpoint. */
+  /**
+   * Re-acquire the lease once and replay the fenced operation from checkpoint.
+   * An explicit pause or rollback is not a lease loss and must stop the worker;
+   * only expired or superseded leases are resumed automatically.
+   */
   const guarded = async (operation) => {
     for (let attempt = 0; attempt < 4; attempt++) {
       try {
@@ -643,16 +647,21 @@ export async function applyBootstrap(
       ...policyCounts,
     };
   } catch (error) {
-    try {
-      await pauseBootstrap(
-        client,
-        target,
-        recovery.runId,
-        bootstrapErrorCode(error),
-        access.generation,
-      );
-    } catch {
-      /* A completed run or lost deployment credential must not authorize a fallback write. */
+    const code = bootstrapErrorCode(error);
+    // A paused run is already stopped by the operator; do not overwrite its
+    // pause metadata with a redundant automatic pause.
+    if (code !== "BOOTSTRAP_PAUSED") {
+      try {
+        await pauseBootstrap(
+          client,
+          target,
+          recovery.runId,
+          code,
+          access.generation,
+        );
+      } catch {
+        /* A completed run or lost deployment credential must not authorize a fallback write. */
+      }
     }
     if (!error.recovery) error.recovery = recovery;
     throw error;

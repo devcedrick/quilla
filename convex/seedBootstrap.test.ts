@@ -491,6 +491,25 @@ describe("bootstrap publication", () => {
     ).resolves.toBeNull();
   });
 
+  it("reports an operator pause instead of a lost lease", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    await t.mutation(internal.seedBootstrap.pause, {
+      target: "fixture",
+      runId: access.runId,
+      code: "BOOTSTRAP_OPERATION_FAILED",
+    });
+    await expect(
+      t.mutation(internal.seedBootstrap.renew, access),
+    ).rejects.toThrow("BOOTSTRAP_PAUSED");
+    await expect(
+      t.mutation(internal.seedBootstrap.applyBatch, {
+        ...access,
+        records: [plan.records[0]],
+      }),
+    ).rejects.toThrow("BOOTSTRAP_PAUSED");
+  });
+
   it("refuses to adopt a draft created outside the bootstrap importer", async () => {
     const { t } = await setup();
     const access = await start(t);
@@ -520,6 +539,42 @@ describe("bootstrap publication", () => {
         records: plan.records.slice(1, 4),
       }),
     ).rejects.toThrow("CONTENT_CONFLICT");
+  });
+
+  it("flags an unadoptable identical draft during preflight", async () => {
+    const { t } = await setup();
+    const access = await start(t);
+    const record = plan.records[3];
+    const source = record.source;
+    if (source.kind !== "question")
+      throw new Error("fixture question record missing");
+    await t.run(async (ctx) => {
+      const admin = await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|admin"),
+        )
+        .unique();
+      const resolved = await resolveQuestion(
+        ctx,
+        source.value,
+        "cse-taxonomy-2027-v2",
+      );
+      await importQuestionDraft(ctx, resolved.input, resolved.hashes, {
+        actor: admin!,
+      });
+    });
+    const classifications = await t.query(internal.seedBootstrap.preflight, {
+      ...access,
+      records: [record],
+    });
+    expect(classifications).toEqual([
+      {
+        ordinal: record.descriptor.ordinal,
+        status: "conflict",
+        duplicateCandidates: 0,
+      },
+    ]);
   });
 
   it("does not reactivate a version archived outside the bootstrap rollback", async () => {

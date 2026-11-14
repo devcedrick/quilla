@@ -183,6 +183,13 @@ function transportPlan(plan, options = {}) {
           return null;
         }
         if (name === "applyBatch") {
+          if (options.pauseOnApply) {
+            run.state = "paused";
+            run.leaseUntil = 0;
+            throw Object.assign(new Error("paused"), {
+              code: "BOOTSTRAP_PAUSED",
+            });
+          }
           if (options.applyFailure)
             throw Object.assign(new Error("apply"), {
               code: "VALIDATION_FAILED",
@@ -601,6 +608,34 @@ describe("apply bootstrap", () => {
       ([kind, name]) => kind === "mutation" && name === "pause",
     );
     expect(pause?.[2]).toMatchObject({ generation: 1 });
+  });
+  it("stops when an operator pauses the run instead of resuming it", async () => {
+    const plan = fixturePlan();
+    const { client, run, calls } = transportPlan(plan, { pauseOnApply: true });
+    await expect(
+      applyBootstrap(
+        plan,
+        { "--expect-plan": plan.planChecksum, "--target": "fixture" },
+        client,
+        {
+          checkpoint: null,
+          fetchImpl: async () => uploadResponse,
+          policy,
+          expectedPlanChecksum: plan.planChecksum,
+          sleep: async () => {},
+        },
+      ),
+    ).rejects.toMatchObject({ code: "BOOTSTRAP_PAUSED" });
+    expect(run.state).toBe("paused");
+    expect(
+      calls.filter(
+        ([kind, name, args]) =>
+          kind === "mutation" && name === "begin" && args.resumeRunId,
+      ),
+    ).toHaveLength(0);
+    expect(
+      calls.filter(([kind, name]) => kind === "mutation" && name === "pause"),
+    ).toHaveLength(0);
   });
   it("retries a lost response without applying a record twice", async () => {
     const plan = fixturePlan();

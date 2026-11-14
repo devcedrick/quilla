@@ -167,6 +167,10 @@ export async function bootstrapQueryRun(
     if (options.allowComplete) return run;
     fail("BOOTSTRAP_LEASE_LOST");
   }
+  // A paused run is an explicit operator decision, not a recoverable lease
+  // loss. Report it distinctly so a live worker stops instead of resuming.
+  if (run.state === "paused") fail("BOOTSTRAP_PAUSED");
+  if (run.state === "rolled_back") fail("BOOTSTRAP_ALREADY_ROLLED_BACK");
   if (run.state !== "running" && run.state !== "preparing")
     fail("BOOTSTRAP_LEASE_LOST");
   return run;

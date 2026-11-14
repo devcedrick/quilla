@@ -5,6 +5,7 @@ import {
   internalMutation,
   internalQuery,
   type MutationCtx,
+  type QueryCtx,
 } from "./_generated/server";
 import type { Doc, Id } from "./_generated/dataModel";
 import schema from "./schema";
@@ -285,12 +286,28 @@ export const preflight = internalQuery({
           .unique();
         if (!taxonomy || taxonomy.state !== "sealed")
           fail("TAXONOMY_UNAVAILABLE");
+        let result = await inspectSource(ctx, record.source, pin, {
+          duplicateCandidates: false,
+          actor: importer,
+        });
+        if (
+          result.status === "identical" &&
+          record.source.kind === "question"
+        ) {
+          const existing = await existingQuestionVersion(
+            ctx,
+            record.source.value.questionId,
+            record.source.value.version,
+          );
+          if (
+            !existing ||
+            !(await questionVersionAdoptable(ctx, run, existing))
+          )
+            result = { ...result, status: "conflict" as const };
+        }
         results.push({
           ordinal: record.descriptor.ordinal,
-          ...(await inspectSource(ctx, record.source, pin, {
-            duplicateCandidates: false,
-            actor: importer,
-          })),
+          ...result,
         });
       } catch (error) {
         const data = error instanceof ConvexError ? error.data : null;
@@ -338,6 +355,65 @@ export const stage = internalMutation({
 });
 
 /**
+ * Whether this run may reuse or republish an identical question version.
+ * Preflight and apply must agree: an identical version that this run cannot
+ * adopt is a conflict, not a reusable entry.
+ */
+async function questionVersionAdoptable(
+  ctx: Pick<QueryCtx, "db">,
+  run: Doc<"questionImportRuns">,
+  version: Doc<"questionVersions">,
+) {
+  if (version.state === "published") {
+    const approval = version.approvalDecisionId
+      ? await ctx.db.get("questionReviews", version.approvalDecisionId)
+      : null;
+    return Boolean(
+      version.bootstrapRunId === run._id &&
+      approval?.kind === "bootstrap_acceptance" &&
+      approval.importRunId === run._id &&
+      approval.planChecksum === run.planChecksum,
+    );
+  }
+  if (version.state === "archived") {
+    const previous = version.bootstrapRunId
+      ? await ctx.db.get("questionImportRuns", version.bootstrapRunId)
+      : null;
+    return Boolean(
+      previous &&
+      previous.mode === "bootstrap" &&
+      previous.state === "rolled_back" &&
+      version.archivedByBootstrapRunId === previous._id,
+    );
+  }
+  if (version.state !== "draft") return false;
+  const question = await ctx.db.get("questions", version.questionId);
+  return Boolean(
+    version.creatorId === run.ownerId &&
+    question?.contributorId === run.ownerId,
+  );
+}
+
+/** Load the exact existing question version for a portable source identity. */
+async function existingQuestionVersion(
+  ctx: Pick<QueryCtx, "db">,
+  questionId: string,
+  version: number,
+) {
+  const question = await ctx.db
+    .query("questions")
+    .withIndex("by_questionId", (q) => q.eq("questionId", questionId))
+    .unique();
+  if (!question) return null;
+  return ctx.db
+    .query("questionVersions")
+    .withIndex("by_questionId_and_version", (q) =>
+      q.eq("questionId", question._id).eq("version", version),
+    )
+    .unique();
+}
+
+/**
  * Move one exact question version to published under this bootstrap run.
  * A version archived by a fully rolled-back bootstrap may be accepted again;
  * all other lifecycle states fail closed.
@@ -353,31 +429,10 @@ async function acceptAndPublishQuestion(
 ) {
   let version = await ctx.db.get("questionVersions", questionVersionId);
   if (!version) fail("QUESTION_NOT_FOUND");
-  if (version.state === "published") {
-    const approval = version.approvalDecisionId
-      ? await ctx.db.get("questionReviews", version.approvalDecisionId)
-      : null;
-    if (
-      version.bootstrapRunId !== run._id ||
-      !approval ||
-      approval.kind !== "bootstrap_acceptance" ||
-      approval.importRunId !== run._id ||
-      approval.planChecksum !== run.planChecksum
-    )
-      fail("CONTENT_CONFLICT");
-    return;
-  }
+  if (!(await questionVersionAdoptable(ctx, run, version)))
+    fail("CONTENT_CONFLICT");
+  if (version.state === "published") return;
   if (version.state === "archived") {
-    const previous = version.bootstrapRunId
-      ? await ctx.db.get("questionImportRuns", version.bootstrapRunId)
-      : null;
-    if (
-      !previous ||
-      previous.mode !== "bootstrap" ||
-      previous.state !== "rolled_back" ||
-      version.archivedByBootstrapRunId !== previous._id
-    )
-      fail("CONTENT_CONFLICT");
     const revision = version.workflowRevision;
     await ctx.db.patch("questionVersions", version._id, {
       state: "pending_review",
@@ -396,13 +451,6 @@ async function acceptAndPublishQuestion(
     if (!version) fail("QUESTION_NOT_FOUND");
   } else {
     if (version.state !== "draft") fail("CONTENT_CONFLICT");
-    const question = await ctx.db.get("questions", version.questionId);
-    if (
-      version.creatorId !== importer._id ||
-      !question ||
-      question.contributorId !== importer._id
-    )
-      fail("CONTENT_CONFLICT");
     if (version.bootstrapRunId !== run._id)
       await ctx.db.patch("questionVersions", version._id, {
         bootstrapRunId: run._id,
