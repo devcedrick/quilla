@@ -1,6 +1,6 @@
 import type { Infer } from "convex/values";
 import type { QueryCtx, MutationCtx } from "../_generated/server";
-import type { Id } from "../_generated/dataModel";
+import type { Doc, Id } from "../_generated/dataModel";
 import { requireAdmin } from "./auth";
 import {
   requireImportTarget,
@@ -9,6 +9,7 @@ import {
   validateDescriptor,
   manifestPin,
 } from "./questionImportProtocol";
+import { importLeaseMs } from "../../lib/question-import-contract.mjs";
 import { questionWorkflowError as fail } from "./questionWorkflow";
 import { digest, canonical, validateQuestion } from "./questionContent";
 import { validateAssetMetadata } from "./questionAssetMetadata";
@@ -30,7 +31,12 @@ export async function ownedRun(
   const actor = await requireAdmin(ctx);
   requireImportTarget(args.target);
   const run = await ctx.db.get("questionImportRuns", args.runId);
-  if (!run || run.ownerId !== actor._id || run.target !== args.target)
+  if (
+    !run ||
+    run.mode === "bootstrap" ||
+    run.ownerId !== actor._id ||
+    run.target !== args.target
+  )
     fail("IMPORT_RUN_FORBIDDEN");
   return run;
 }
@@ -107,6 +113,94 @@ export async function matchSource(source: SourceRecord, d: Descriptor) {
     (await digest(source.value)) !== d.sourceChecksum
   )
     fail("IMPORT_SOURCE_CHANGED");
+}
+/**
+ * Persist an immutable ordered inventory for a run whose lease was already
+ * fenced by the caller. Returns the previous and resulting staged counts so the
+ * caller can append an actor-appropriate audit event.
+ */
+export async function stageDescriptors(
+  ctx: MutationCtx,
+  run: Doc<"questionImportRuns">,
+  entries: Descriptor[],
+  codes: { notPreparing: string; order: string } = {
+    notPreparing: "IMPORT_NOT_PREPARING",
+    order: "IMPORT_ORDER",
+  },
+) {
+  if (run.state === "running") {
+    // A lost response after the final staging batch is an idempotent replay;
+    // new or changed descriptors still fail closed.
+    for (const d of entries) {
+      const prior = await entryAt(ctx, run._id, d.ordinal);
+      if (
+        !prior ||
+        (await digest(receiptDescriptor(prior))) !== (await digest(d))
+      )
+        fail(codes.notPreparing);
+    }
+    return { before: run.staged, after: run.staged, chain: run.chain };
+  }
+  if (run.state !== "preparing") fail(codes.notPreparing);
+  let chain = run.chain;
+  let staged = run.staged;
+  const counts = run.stagedCounts.map((c) => ({ ...c }));
+  for (const d of entries) {
+    validateDescriptor(d);
+    if (!run.manifests.some((p) => p.family === d.family))
+      fail("INVALID_IMPORT_ENTRY");
+    const prior = await entryAt(ctx, run._id, d.ordinal);
+    if (prior) {
+      if ((await digest(receiptDescriptor(prior))) !== (await digest(d)))
+        fail("IMPORT_SOURCE_CHANGED");
+      continue;
+    }
+    if (d.ordinal !== staged || staged >= run.expected) fail(codes.order);
+    const previous = staged ? await entryAt(ctx, run._id, staged - 1) : null;
+    const rank = { asset: 0, reference: 1, question: 2 };
+    if (previous && rank[previous.kind] > rank[d.kind]) fail(codes.order);
+    const duplicate = await ctx.db
+      .query("questionImportEntries")
+      .withIndex("by_runId_and_kind_and_sourceId_and_version", (q) =>
+        q
+          .eq("runId", run._id)
+          .eq("kind", d.kind)
+          .eq("sourceId", d.sourceId)
+          .eq("version", d.version),
+      )
+      .unique();
+    if (duplicate) fail("IMPORT_DUPLICATE_ID");
+    const count = counts.find((c) => c.family === d.family)!;
+    const field =
+      d.kind === "question"
+        ? "questions"
+        : d.kind === "reference"
+          ? "references"
+          : "assets";
+    count[field]++;
+    if (count[field] > run.manifests.find((p) => p.family === d.family)![field])
+      fail("INVALID_IMPORT_PLAN");
+    await ctx.db.insert("questionImportEntries", {
+      runId: run._id,
+      ...d,
+      state: "pending",
+    });
+    chain = await digest({ chain, entry: d });
+    staged++;
+  }
+  if (staged === run.expected && chain !== run.inventoryHash)
+    fail("INVALID_IMPORT_PLAN");
+  if (staged !== run.staged) {
+    await ctx.db.patch("questionImportRuns", run._id, {
+      chain,
+      staged,
+      stagedCounts: counts,
+      state: staged === run.expected ? "running" : "preparing",
+      leaseUntil: Date.now() + importLeaseMs,
+      updatedAt: Date.now(),
+    });
+  }
+  return { before: run.staged, after: staged, chain };
 }
 /** Resolve canonical asset IDs without exposing private storage identifiers to reports. */
 export async function resolveReference(
@@ -211,6 +305,7 @@ export async function inspectSource(
     resolvedQuestion?: ResolvedQuestion;
     duplicateCandidates?: boolean;
     duplicateScanBudget?: DuplicateScanBudget;
+    actor?: Doc<"users">;
   } = {},
 ) {
   if (source.kind === "asset") {
@@ -226,7 +321,7 @@ export async function inspectSource(
       ([key, value]) =>
         canonical(value) === canonical(existing[key as keyof typeof existing]),
     );
-    const actor = await requireAdmin(ctx);
+    const actor = options.actor ?? (await requireAdmin(ctx));
     return {
       status: !matches
         ? ("conflict" as const)

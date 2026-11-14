@@ -1,7 +1,8 @@
 import type { Infer } from "convex/values";
 import type { MutationCtx } from "../_generated/server";
+import type { Doc } from "../_generated/dataModel";
 import { requireAdmin } from "./auth";
-import { appendAdminAudit } from "./audit";
+import { appendActorAudit } from "./audit";
 import {
   bounded,
   digest,
@@ -73,9 +74,14 @@ export async function createReferenceDraft(
     version: number;
     content: Infer<typeof referenceContent>;
   },
-  idempotent = true,
+  options: {
+    actor?: Doc<"users">;
+    idempotent?: boolean;
+  } = {},
 ) {
-  const actor = await requireAdmin(ctx);
+  const idempotent = options.idempotent ?? true;
+  const actor = options.actor ?? (await requireAdmin(ctx));
+  if (actor.role !== "admin" && actor.role !== "system") fail("FORBIDDEN");
   validateReferenceInput(input);
   for (const block of input.content.blocks) {
     if (block.type === "image") {
@@ -117,7 +123,7 @@ export async function createReferenceDraft(
     creatorId: actor._id,
     createdAt: Date.now(),
   });
-  await appendAdminAudit(ctx, {
+  await appendActorAudit(ctx, actor, {
     entityType: "question_reference",
     entityId: id,
     action: "create_version",

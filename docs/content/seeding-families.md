@@ -47,7 +47,10 @@ General contributor self-review restrictions and backend authorization remain
 unchanged. [ADR 0017](../ADR/0017-independent-question-review-policy.md) resolves
 #31 with one independent active-admin approval per version and no bootstrap
 self-approval exception. A manifest, sign-off file or audit report cannot grant
-publication authority.
+publication authority. The separate developer bootstrap in
+[ADR 0022](../ADR/0022-one-time-seed-bootstrap-publication.md) uses non-login system
+identities for this exact corpus only; it does not let a contributor, admin or
+maintainer approve their own question.
 
 Family 01's content breakdown is an inventory, not a new per-exam concept quota
 or an additional fixed concept allocation for later seed families:

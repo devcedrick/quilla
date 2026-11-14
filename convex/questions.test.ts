@@ -416,6 +416,86 @@ describe("question lifecycle", () => {
       await t.run((ctx) => ctx.db.query("questionReviews").take(10)),
     ).toHaveLength(1);
   });
+  it("reports per-version bulk results and enforces batch bounds and authorization", async () => {
+    const { t, author, reviewer, editor, client, taxonomy, versionId } =
+      await setup();
+    const learner = client("learner");
+    const create = async (suffix: string) =>
+      author.mutation(api.questions.createDraft, {
+        questionId: `bulk-${suffix}`,
+        content: { ...content, stem: `${content.stem} (${suffix})` },
+        taxonomyVersionId: taxonomy,
+      });
+    const second = await create("second");
+    const third = await create("third");
+    const all = [versionId, second, third];
+    const items = (ids: typeof all, revisions = ids.map(() => 1)) =>
+      ids.map((questionVersionId, index) => ({
+        questionVersionId,
+        expectedWorkflowRevision: revisions[index],
+      }));
+    await expect(
+      t.mutation(api.questions.bulkSubmitForReview, { items: [] }),
+    ).rejects.toMatchObject({ data: { code: "UNAUTHENTICATED" } });
+    await expect(
+      learner.mutation(api.questions.bulkSubmitForReview, { items: [] }),
+    ).rejects.toMatchObject({ data: { code: "FORBIDDEN" } });
+    await expect(
+      learner.mutation(api.questions.bulkSubmitForReview, {
+        items: items(all),
+      }),
+    ).rejects.toMatchObject({ data: { code: "FORBIDDEN" } });
+    const editorResult = await editor.mutation(
+      api.questions.bulkSubmitForReview,
+      { items: items([versionId]) },
+    );
+    expect(editorResult).toEqual([
+      { questionVersionId: versionId, code: "FORBIDDEN" },
+    ]);
+    const twelve = Array.from({ length: 11 }, () => versionId);
+    await expect(
+      author.mutation(api.questions.bulkSubmitForReview, {
+        items: items(twelve),
+      }),
+    ).rejects.toMatchObject({ data: { code: "INVALID_BATCH" } });
+    const submitted = await author.mutation(api.questions.bulkSubmitForReview, {
+      items: items(all, [1, 1, 2]),
+    });
+    expect(submitted).toEqual([
+      { questionVersionId: versionId, workflowRevision: 2 },
+      { questionVersionId: second, workflowRevision: 2 },
+      { questionVersionId: third, code: "STALE_REVISION" },
+    ]);
+    expect(
+      (await t.run((ctx) => ctx.db.get("questionVersions", third)))?.state,
+    ).toBe("draft");
+    await reviewer.mutation(api.questions.reviewVersion, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 2,
+      ...review,
+    });
+    const published = await author.mutation(api.questions.bulkPublishVersions, {
+      items: items([versionId, second], [3, 2]),
+    });
+    expect(published).toEqual([
+      { questionVersionId: versionId, workflowRevision: 4 },
+      { questionVersionId: second, code: "VALIDATION_FAILED" },
+    ]);
+    const archived = await reviewer.mutation(
+      api.questions.bulkArchiveVersions,
+      { items: items([versionId, second], [4, 2]) },
+    );
+    expect(archived).toEqual([
+      { questionVersionId: versionId, workflowRevision: 5 },
+      { questionVersionId: second, code: "INVALID_TRANSITION" },
+    ]);
+    expect(
+      await t.run((ctx) => ctx.db.get("questionVersions", versionId)),
+    ).toMatchObject({ state: "archived", workflowRevision: 5 });
+    expect(
+      (await t.run((ctx) => ctx.db.get("questionVersions", second)))?.state,
+    ).toBe("pending_review");
+  });
   it("rejects self-review, stale actions, missing approval and failing quality criteria", async () => {
     const { author, reviewer, versionId } = await setup();
     await expect(

@@ -1,5 +1,6 @@
 import { ConvexError, v } from "convex/values";
 import type { MutationCtx } from "../_generated/server";
+import type { Doc, Id } from "../_generated/dataModel";
 import { requireAdmin } from "./auth";
 
 export const auditEventFields = {
@@ -20,6 +21,14 @@ type AuditEvent = {
   action: string;
   before: Snapshot;
   after: Snapshot;
+};
+type PreparedAudit = {
+  actorId: Id<"users">;
+  entityType: string;
+  entityId: string;
+  action: string;
+  beforeJson: string | null;
+  afterJson: string | null;
 };
 
 /** Create a sanitized validation error without exposing snapshot contents. */
@@ -65,19 +74,81 @@ function serialize(snapshot: Snapshot): string | null {
   }
 }
 
-/** Call inside the domain mutation; pass only explicitly allowlisted snapshots. */
-export async function appendAdminAudit(ctx: MutationCtx, event: AuditEvent) {
-  const actor = await requireAdmin(ctx);
+/** Validate and serialize an audit event without writing it. */
+function prepareAudit(actorId: Id<"users">, event: AuditEvent): PreparedAudit {
   validateAuditIdentifier(event.entityType, 100);
   validateAuditIdentifier(event.entityId, 256);
   validateAuditIdentifier(event.action, 100);
-  return await ctx.db.insert("auditEvents", {
-    actorId: actor._id,
+  return {
+    actorId,
     entityType: event.entityType,
     entityId: event.entityId,
     action: event.action,
     beforeJson: serialize(event.before),
     afterJson: serialize(event.after),
+  };
+}
+
+/** Insert an event that was validated before its related state change. */
+export async function insertPreparedAudit(
+  ctx: MutationCtx,
+  prepared: PreparedAudit,
+) {
+  return await ctx.db.insert("auditEvents", {
+    ...prepared,
     occurredAt: Date.now(),
   });
+}
+
+/** Call inside the domain mutation; pass only explicitly allowlisted snapshots. */
+async function insertAudit(
+  ctx: MutationCtx,
+  actorId: Id<"users">,
+  event: AuditEvent,
+) {
+  return await insertPreparedAudit(ctx, prepareAudit(actorId, event));
+}
+
+/** Authorize and validate an audit event before its state change is written. */
+export async function prepareAdminAudit(ctx: MutationCtx, event: AuditEvent) {
+  const actor = await requireAdmin(ctx);
+  return prepareAudit(actor._id, event);
+}
+
+/** Attribute an event to an already-authorized admin or system actor. */
+export async function appendActorAudit(
+  ctx: MutationCtx,
+  actor: Doc<"users">,
+  event: AuditEvent,
+) {
+  if (
+    actor.status !== "active" ||
+    (actor.role !== "admin" && actor.role !== "system")
+  )
+    throw new ConvexError({
+      code: "FORBIDDEN",
+      message: "This actor cannot write audit events.",
+    });
+  return insertAudit(ctx, actor._id, event);
+}
+
+/** Call inside an authorized domain mutation; the actor is resolved from identity. */
+export async function appendAdminAudit(ctx: MutationCtx, event: AuditEvent) {
+  const actor = await requireAdmin(ctx);
+  return insertAudit(ctx, actor._id, event);
+}
+
+/** Internal bootstrap path only: attribute an event to a non-login system actor. */
+export async function appendSystemAudit(
+  ctx: MutationCtx,
+  actorId: Id<"users">,
+  event: AuditEvent,
+) {
+  const actor = await ctx.db.get("users", actorId);
+  if (!actor || actor.role !== "system" || actor.status !== "active")
+    throw new ConvexError({
+      code: "BOOTSTRAP_SYSTEM_ACTOR_REQUIRED",
+      message: "System audit attribution is unavailable.",
+    });
+  return insertAudit(ctx, actorId, event);
 }

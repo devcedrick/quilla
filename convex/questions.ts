@@ -3,12 +3,7 @@ import {
   paginationOptsValidator,
   paginationResultValidator,
 } from "convex/server";
-import {
-  mutation,
-  query,
-  type MutationCtx,
-  type QueryCtx,
-} from "./_generated/server";
+import { mutation, query, type QueryCtx } from "./_generated/server";
 import type { Id } from "./_generated/dataModel";
 import schema from "./schema";
 import { requireAdmin } from "./lib/auth";
@@ -22,40 +17,23 @@ import {
 } from "./lib/questionContent";
 import {
   nextQuestionState,
-  assertIndependentReviewer,
   questionState,
+  assertIndependentReviewer,
   questionWorkflowError as fail,
 } from "./lib/questionWorkflow";
+import {
+  workflowArgs,
+  loadWorkflow,
+  changeWorkflow,
+  safeWorkflowFailure,
+} from "./lib/questionLifecycle";
+import { bulkModerationBatchSize } from "../lib/question-import-contract.mjs";
 
 const contentArgs = {
   content: questionContent,
   taxonomyVersionId: v.id("taxonomyVersions"),
   referenceVersionId: v.optional(v.id("questionReferenceVersions")),
 };
-const workflowArgs = {
-  questionVersionId: v.id("questionVersions"),
-  expectedWorkflowRevision: v.number(),
-};
-/** Authorize an admin and load the exact question version at its expected workflow revision. */
-async function load(
-  ctx: MutationCtx,
-  args: {
-    questionVersionId: Id<"questionVersions">;
-    expectedWorkflowRevision: number;
-  },
-) {
-  const actor = await requireAdmin(ctx);
-  const version = await ctx.db.get("questionVersions", args.questionVersionId);
-  if (!version) fail("QUESTION_NOT_FOUND");
-  if (
-    !Number.isSafeInteger(args.expectedWorkflowRevision) ||
-    args.expectedWorkflowRevision !== version.workflowRevision
-  )
-    fail("STALE_REVISION");
-  const question = await ctx.db.get("questions", version.questionId);
-  if (!question) fail("QUESTION_NOT_FOUND");
-  return { actor, version, question };
-}
 /** Find bounded duplicate candidates while excluding all versions of this canonical question. */
 async function candidates(
   ctx: Pick<QueryCtx, "db">,
@@ -99,30 +77,6 @@ async function candidates(
     fingerprint: await digest(versions),
     overflow: rows.length > 50,
   };
-}
-/** Atomically transition workflow state and append its admin audit event. */
-async function change(
-  ctx: MutationCtx,
-  version: Awaited<ReturnType<typeof load>>["version"],
-  action: Parameters<typeof nextQuestionState>[3],
-  reason?: string,
-) {
-  const next = nextQuestionState(
-    version.state,
-    version.workflowRevision,
-    version.workflowRevision,
-    action,
-    reason,
-  );
-  await ctx.db.patch("questionVersions", version._id, next);
-  await appendAdminAudit(ctx, {
-    entityType: "question_version",
-    entityId: version._id,
-    action,
-    before: { state: version.state, revision: version.workflowRevision },
-    after: { state: next.state, revision: next.workflowRevision },
-  });
-  return next.workflowRevision;
 }
 /** Create an attributed canonical question and its initial immutable draft. */
 export const createDraft = mutation({
@@ -238,7 +192,7 @@ export const submitForReview = mutation({
   args: workflowArgs,
   returns: v.number(),
   handler: async (ctx, args) => {
-    const { actor, version, question } = await load(ctx, args);
+    const { actor, version, question } = await loadWorkflow(ctx, args);
     if (actor._id !== question.contributorId && actor._id !== version.creatorId)
       fail("FORBIDDEN");
     await validateQuestion(
@@ -247,7 +201,7 @@ export const submitForReview = mutation({
       version.taxonomyVersionId,
       version.referenceVersionId,
     );
-    return change(ctx, version, "submit");
+    return changeWorkflow(ctx, version, "submit");
   },
 });
 const disposition = v.union(
@@ -273,7 +227,7 @@ export const reviewVersion = mutation({
   },
   returns: v.number(),
   handler: async (ctx, args) => {
-    const { actor, version, question } = await load(ctx, args);
+    const { actor, version, question } = await loadWorkflow(ctx, args);
     assertIndependentReviewer(
       actor._id,
       question.contributorId,
@@ -333,60 +287,68 @@ export const reviewVersion = mutation({
       await ctx.db.patch("questionVersions", version._id, {
         approvalDecisionId: reviewId,
       });
-    return change(ctx, version, args.decision, args.reason);
+    return changeWorkflow(ctx, version, args.decision, args.reason);
   },
 });
+/** Recheck and publish one approved version inside the caller's transaction. */
+async function publishOne(
+  ctx: Parameters<typeof changeWorkflow>[0],
+  version: Awaited<ReturnType<typeof loadWorkflow>>["version"],
+  question: Awaited<ReturnType<typeof loadWorkflow>>["question"],
+) {
+  const approval = version.approvalDecisionId
+    ? await ctx.db.get("questionReviews", version.approvalDecisionId)
+    : null;
+  if (
+    !approval ||
+    approval.questionVersionId !== version._id ||
+    approval.decision !== "approve" ||
+    approval.score !== 5
+  )
+    fail("VALIDATION_FAILED");
+  assertIndependentReviewer(
+    approval.reviewerId,
+    question.contributorId,
+    version.creatorId,
+  );
+  const hashes = await validateQuestion(
+    ctx,
+    version.content,
+    version.taxonomyVersionId,
+    version.referenceVersionId,
+  );
+  if (hashes.contentHash !== version.contentHash) fail("CONTENT_CONFLICT");
+  const duplicate = await candidates(ctx, version);
+  if (duplicate.fingerprint !== approval.candidateFingerprint) {
+    const latest = await ctx.db
+      .query("questionReviews")
+      .withIndex("by_questionVersionId", (q) =>
+        q.eq("questionVersionId", version._id),
+      )
+      .order("desc")
+      .first();
+    if (
+      !latest ||
+      latest.kind !== "duplicate_recheck" ||
+      latest.candidateFingerprint !== duplicate.fingerprint ||
+      latest.duplicateDisposition === "unresolved"
+    )
+      fail("DUPLICATE_RECHECK_REQUIRED");
+    assertIndependentReviewer(
+      latest.reviewerId,
+      question.contributorId,
+      version.creatorId,
+    );
+  }
+  return changeWorkflow(ctx, version, "publish");
+}
 /** Publish only after rechecking approval, quality, duplicates and immutable content integrity. */
 export const publishVersion = mutation({
   args: workflowArgs,
   returns: v.number(),
   handler: async (ctx, args) => {
-    const { version, question } = await load(ctx, args);
-    const approval = version.approvalDecisionId
-      ? await ctx.db.get("questionReviews", version.approvalDecisionId)
-      : null;
-    if (
-      !approval ||
-      approval.questionVersionId !== version._id ||
-      approval.decision !== "approve" ||
-      approval.score !== 5
-    )
-      fail("VALIDATION_FAILED");
-    assertIndependentReviewer(
-      approval.reviewerId,
-      question.contributorId,
-      version.creatorId,
-    );
-    const hashes = await validateQuestion(
-      ctx,
-      version.content,
-      version.taxonomyVersionId,
-      version.referenceVersionId,
-    );
-    if (hashes.contentHash !== version.contentHash) fail("CONTENT_CONFLICT");
-    const duplicate = await candidates(ctx, version);
-    if (duplicate.fingerprint !== approval.candidateFingerprint) {
-      const latest = await ctx.db
-        .query("questionReviews")
-        .withIndex("by_questionVersionId", (q) =>
-          q.eq("questionVersionId", version._id),
-        )
-        .order("desc")
-        .first();
-      if (
-        !latest ||
-        latest.kind !== "duplicate_recheck" ||
-        latest.candidateFingerprint !== duplicate.fingerprint ||
-        latest.duplicateDisposition === "unresolved"
-      )
-        fail("DUPLICATE_RECHECK_REQUIRED");
-      assertIndependentReviewer(
-        latest.reviewerId,
-        question.contributorId,
-        version.creatorId,
-      );
-    }
-    return change(ctx, version, "publish");
+    const { version, question } = await loadWorkflow(ctx, args);
+    return publishOne(ctx, version, question);
   },
 });
 /** Record an independent recheck of the current duplicate candidate fingerprint. */
@@ -399,7 +361,7 @@ export const reviewDuplicateCandidates = mutation({
   },
   returns: v.number(),
   handler: async (ctx, args) => {
-    const { actor, version, question } = await load(ctx, args);
+    const { actor, version, question } = await loadWorkflow(ctx, args);
     assertIndependentReviewer(
       actor._id,
       question.contributorId,
@@ -450,7 +412,95 @@ export const archiveVersion = mutation({
   args: workflowArgs,
   returns: v.number(),
   handler: async (ctx, args) =>
-    change(ctx, (await load(ctx, args)).version, "archive"),
+    changeWorkflow(ctx, (await loadWorkflow(ctx, args)).version, "archive"),
+});
+const bulkResult = v.array(
+  v.object({
+    questionVersionId: v.id("questionVersions"),
+    workflowRevision: v.optional(v.number()),
+    code: v.optional(v.string()),
+  }),
+);
+/** Run each item in its own error boundary after one authorization check. */
+async function runBulk(
+  ctx: Parameters<typeof changeWorkflow>[0],
+  items: Array<{
+    questionVersionId: Id<"questionVersions">;
+    expectedWorkflowRevision: number;
+  }>,
+  operation: (
+    ctx: Parameters<typeof changeWorkflow>[0],
+    actor: Awaited<ReturnType<typeof requireAdmin>>,
+    item: (typeof items)[number],
+  ) => Promise<number>,
+) {
+  const actor = await requireAdmin(ctx);
+  if (!items.length || items.length > bulkModerationBatchSize)
+    fail("INVALID_BATCH");
+  const results: Array<{
+    questionVersionId: Id<"questionVersions">;
+    workflowRevision?: number;
+    code?: string;
+  }> = [];
+  for (const item of items) {
+    try {
+      results.push({
+        questionVersionId: item.questionVersionId,
+        workflowRevision: await operation(ctx, actor, item),
+      });
+    } catch (error) {
+      const code = safeWorkflowFailure(error);
+      // Unexpected failures must abort the transaction rather than commit an
+      // item whose audit event or invariant could not be completed.
+      if (code === "OPERATION_FAILED") throw error;
+      results.push({
+        questionVersionId: item.questionVersionId,
+        code,
+      });
+    }
+  }
+  return results;
+}
+/** Submit up to ten drafts and report each item's independent outcome. */
+export const bulkSubmitForReview = mutation({
+  args: { items: v.array(v.object(workflowArgs)) },
+  returns: bulkResult,
+  handler: async (ctx, args) =>
+    runBulk(ctx, args.items, async (ctx, actor, item) => {
+      const { version, question } = await loadWorkflow(ctx, item, actor);
+      if (
+        actor._id !== question.contributorId &&
+        actor._id !== version.creatorId
+      )
+        fail("FORBIDDEN");
+      await validateQuestion(
+        ctx,
+        version.content,
+        version.taxonomyVersionId,
+        version.referenceVersionId,
+      );
+      return changeWorkflow(ctx, version, "submit");
+    }),
+});
+/** Publish up to ten approved versions with the same per-version checks. */
+export const bulkPublishVersions = mutation({
+  args: { items: v.array(v.object(workflowArgs)) },
+  returns: bulkResult,
+  handler: async (ctx, args) =>
+    runBulk(ctx, args.items, async (ctx, actor, item) => {
+      const { version, question } = await loadWorkflow(ctx, item, actor);
+      return publishOne(ctx, version, question);
+    }),
+});
+/** Archive up to ten approved or published versions without deleting history. */
+export const bulkArchiveVersions = mutation({
+  args: { items: v.array(v.object(workflowArgs)) },
+  returns: bulkResult,
+  handler: async (ctx, args) =>
+    runBulk(ctx, args.items, async (ctx, actor, item) => {
+      const { version } = await loadWorkflow(ctx, item, actor);
+      return changeWorkflow(ctx, version, "archive");
+    }),
 });
 /** Return full admin review context with bounded review and duplicate histories. */
 export const getAdminVersion = query({

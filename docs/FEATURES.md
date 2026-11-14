@@ -329,7 +329,9 @@ Under [ADR 0013](ADR/0013-seeding-families-and-pooled-exam-selection.md), a seed
 
 [ADR 0016](ADR/0016-seven-family-scope-and-deferred-audit.md) records the seven-family decision and the maintainer's deferral of the supplemental exhaustive audit. Per-family authoring reviews and structural validation support the initial offline delivery; they do not establish clean exhaustive-audit acceptance. Automated verification, AI editorial review, maintainer batch acceptance against an exact revision/checksum, and empirical calibration are distinct. AI review is not human inspection; difficulty and distractor discrimination remain unmeasured until learner data exists. Known findings remain tracked in [#98](https://github.com/devcedrick/quilla/issues/98).
 
-Offline delivery and acceptance grant no import or publication permissions. [ADR 0017](ADR/0017-independent-question-review-policy.md) resolves #31 with one independent active-admin approval per question version and no initial-maintainer self-approval exception. No manifest or sign-off file supplies authorization.
+Offline delivery and acceptance alone grant no import or publication permissions. [ADR 0017](ADR/0017-independent-question-review-policy.md) resolves #31 with one independent active-admin approval per question version and no self-approval. No manifest or sign-off file supplies authorization.
+
+[ADR 0022](ADR/0022-one-time-seed-bootstrap-publication.md) defines one separately authorized, developer-only bootstrap exception for this exact corpus; it has not been executed. The operator runs a repository CLI against an approved target using Convex CLI credentials or a deploy key. Two non-login `system` identities import, record a plan-level `bootstrap_acceptance` and publish each question as its batch lands; no active admin or human approver is required. The target registry ships empty, `SEED_BOOTSTRAP_ENABLED=true` is required only during the bootstrap window, and adding a target is a separate reviewed change. Rollback archives versions and never deletes history. This exception does not lower the review requirement for later questions, does not replace the deferred audit in #98, and does not by itself authorize a deployment or live write.
 
 Each mock randomly selects eligible published versions from all seed families combined, subject to the exam blueprint, without a single-family or equal-family quota. Professional retains 20 General, 50 Verbal, 40 Numerical, and 40 Analytical items (150 total); Subprofessional retains 20 General, 50 Verbal, 35 Numerical, and 40 Clerical items (145 total). The new pooled selection contract uses `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`, with `cse-taxonomy-2027-v2`. Historical v1/v2 policies and attempts are preserved. Runtime and validator adoption remain pending.
 
@@ -692,8 +694,29 @@ no live import, deployment or publication is included. The
 [operator runbook](content/question-import-runbook.md) describes future authorized
 use and recovery. Import validation does not replace the deferred editorial audit.
 
+[ADR 0022](ADR/0022-one-time-seed-bootstrap-publication.md) records the local #96
+developer bootstrap: a one-time acceptance of the exact 1,890-question corpus
+through two non-login system identities, frozen plan and inventory checksums,
+serve-as-landed publication, restartable batches and archive-only rollback. The
+policy decision is tracked in
+[#104](https://github.com/devcedrick/quilla/issues/104). It is a bounded bootstrap
+exception, not a general publication shortcut, and no live run has occurred. Live
+development and production execution are separately approved operational steps. The
+same change adds the #34 backend bulk submit, publish and archive mutations with
+per-item results and batch bounds; bulk editorial review and approval are
+intentionally excluded. The admin workspace and Playwright journeys remain blocked
+on #33.
+
 ### Edge cases
 
+- A second bootstrap run is attempted for the same target.
+- The bootstrap plan, inventory checksum or per-family counts drift from the frozen corpus.
+- A bootstrap lease expires, a batch response is lost, or the operator stops mid-run.
+- A deterministic source mismatch or target conflict occurs mid-run.
+- Bootstrap rollback is requested while the run is still active or after a partial rollback.
+- A fully rolled-back run is retried and its archived versions are reactivated.
+- The bootstrap window is disabled while a run is active.
+- A system identity attempts to log in or use the public admin API.
 - An edit occurs while the question is part of an in-progress attempt.
 - Two admins attempt conflicting moderation actions.
 - A bulk action includes items the admin cannot transition.
@@ -716,6 +739,9 @@ use and recovery. Import validation does not replace the deferred editorial audi
 - Editing material content creates an incremented immutable version; attempts retain their served snapshot.
 - Pre-publish checks validate options, answer, explanation, taxonomy, level alignment, sourcing, quality score, and duplicate risk.
 - Bulk actions validate each item and report partial failures without bypassing permissions.
+- The one-time developer bootstrap imports, accepts and publishes the exact 1,890-question corpus in restartable batches; versions become servable as they land.
+- Bootstrap runs are fenced by a lease and generation, support pause/resume, and roll back by archiving rather than deleting.
+- Bootstrap plan, inventory, target-registry and window checks fail closed before any content write.
 - Every mutation records actor, action, entity, before state, after state, and time.
 
 ## 16. Admin blueprints and reference data

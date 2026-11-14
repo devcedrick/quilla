@@ -36,7 +36,7 @@ export const createReferenceVersion = mutation({
         version: args.expectedLatestVersion + 1,
         content: args.content,
       },
-      false,
+      { idempotent: false },
     );
   },
 });

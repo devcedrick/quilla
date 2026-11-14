@@ -38,7 +38,9 @@ sealed taxonomy or matching content: target comparison is reported as not checke
    deployment. Verify its deployment type through trusted Convex administration;
    a URL or client-supplied `dev` label alone does not prove its type.
 2. Review a registry change binding an operator target name to that exact URL in
-   `lib/question-import-contract.mjs`. Never register production. Separately set
+   `lib/question-import-contract.mjs`. The registry ships empty and no production
+   target is registered by default. A production target requires its own reviewed
+   registry change and fresh explicit approval under ADR 0022. Separately set
    `QUESTION_BANK_IMPORT_ENABLED=true` only on that development backend. The guard
    compares the registered URL against its system `CONVEX_CLOUD_URL`.
 3. Provision an active Quilla admin and install/seal the matching v2 taxonomy
@@ -141,6 +143,60 @@ Completed drafts remain after partial failure. A crash between storing an image
 blob and binding it can leave a private orphan blob; inventory such blobs only
 through a separately authorized reconciliation operation. No automatic sweep or
 hard deletion of question/reference/history records is provided.
+
+## One-time developer bootstrap — separate approval required
+
+Issue #96 adds a developer-only bootstrap for the initial 1,890-question bank.
+Import through the ordinary #95 path still creates drafts only; this bootstrap
+instead imports, accepts and publishes the exact reviewed corpus through internal
+Convex functions and two non-login system identities. It needs no Clerk account,
+active admin or human approver. [ADR 0022](../ADR/0022-one-time-seed-bootstrap-publication.md),
+policy issue [#104](https://github.com/devcedrick/quilla/issues/104) and
+[the development rehearsal](development-import-rehearsal.md) define the exception:
+exactly 1,890 questions (seven families at 270), 265 references and 59 images.
+
+Run this against a development target first. A production bootstrap is permitted
+only after a separately reviewed target registry change and fresh explicit approval
+for that exact production deployment, and must use `--prod --confirm-production`.
+The CLI rejects the `--deployment prod` alias, but that guard covers only the alias:
+when `CONVEX_DEPLOY_KEY` is set and no deployment flag is passed, the CLI does not
+require `--prod --confirm-production`. Never point a production deploy key at this
+command without that approval. The bootstrap requires the same reviewed target
+registry as the importer, plus:
+
+- `SEED_BOOTSTRAP_ENABLED=true` on that exact backend during the bootstrap window;
+- a sealed `cse-taxonomy-2027-v2` taxonomy;
+- deployment credentials for the Convex CLI `run` command: a Convex CLI login or
+  `CONVEX_DEPLOY_KEY`, selected with `--deployment <name>`, `--prod
+--confirm-production`, or the environment variable;
+- the reviewed plan checksum
+  `71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38`.
+
+```powershell
+# Offline plan check; no writes.
+node scripts/bootstrap-question-bank.mjs
+node scripts/bootstrap-question-bank.mjs --json
+
+# Read-only status.
+node scripts/bootstrap-question-bank.mjs --status --target <approved-target> --deployment <development-name> --run <run-id> --json
+
+# Import, accept and publish in restartable batches.
+node scripts/bootstrap-question-bank.mjs --apply --target <approved-target> --deployment <development-name> --expect-plan <plan-checksum> --checkpoint <private-checkpoint-path> --json
+
+# Recovery.
+node scripts/bootstrap-question-bank.mjs --pause --target <approved-target> --deployment <development-name> --run <run-id>
+node scripts/bootstrap-question-bank.mjs --rollback --target <approved-target> --deployment <development-name> --run <run-id> --reason <incident-reference>
+```
+
+The CLI reuses the exact offline validated records, uploads the 59 images through the
+protected Convex storage path, and retries transient transport or lease failures
+against the server checkpoint. A live lease is refused; a paused or expired run
+resumes with a new generation. Published versions become servable as their batches
+land; there is no global all-or-nothing gate. Pause releases the lease without losing
+progress. Rollback archives bootstrap-published versions and always preserves
+questions, reviews and history; a partial rollback leaves the run paused and cannot
+be resumed. A fully rolled-back run may be retried as a fresh run. Do not renumber,
+replace content, bypass the frozen plan or delete records to force completion.
 
 ## Acceptance boundary
 

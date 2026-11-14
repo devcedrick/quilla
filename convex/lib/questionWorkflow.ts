@@ -45,6 +45,23 @@ export const questionReview = v.union(
     kind: v.literal("duplicate_recheck"),
     decision: v.literal("duplicate_recheck"),
   }),
+  v.object({
+    questionVersionId: v.id("questionVersions"),
+    reviewerId: v.id("users"),
+    expectedRevision: v.number(),
+    resultingRevision: v.number(),
+    reason: v.string(),
+    kind: v.literal("bootstrap_acceptance"),
+    decision: v.literal("accept"),
+    rubric: v.literal("seed-bootstrap-v1"),
+    score: v.number(),
+    assessment: v.array(
+      v.object({ passed: v.boolean(), evidence: v.string() }),
+    ),
+    importRunId: v.id("questionImportRuns"),
+    planChecksum: v.string(),
+    decidedAt: v.number(),
+  }),
 );
 type Transition =
   "submit" | "approve" | "needs_revision" | "reject" | "publish" | "archive";

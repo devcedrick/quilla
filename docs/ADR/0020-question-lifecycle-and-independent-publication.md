@@ -1,9 +1,9 @@
 # ADR 0020: Version Question Content and Gate Publication Independently
 
-- **Status:** Accepted design; local implementation, not deployed
+- **Status:** Accepted design; local implementation, not deployed; seed bootstrap clarified by ADR 0022
 - **Date:** 2026-11-07
 - **Decision owner:** Quilla maintainer
-- **Related:** #32, #31, #24, #29 and #95
+- **Related:** #32, #31, #24, #29, #95, #96 and ADR 0022
 
 The maintainer approved the [question lifecycle proposal](../content/question-lifecycle-implementation-proposal.md),
 including its five-criterion editorial quality rubric. Canonical questions retain
@@ -39,3 +39,16 @@ Authentication/roles are unchanged. No deployment, live import or publication is
 part of local verification. Typed in-memory test references avoid manual
 generated-binding edits; normal supported API generation and live schema
 validation require a later authorized Convex workflow.
+
+## Seed bootstrap boundary
+
+[ADR 0022](0022-one-time-seed-bootstrap-publication.md) adds a distinct developer-only
+bootstrap for the exact initial corpus. It uses two non-login system identities and
+internal Convex functions rather than an active admin or ordinary lifecycle caller.
+Versions are published as their batches land, so serving is not gated on all 1,890
+being present at once. `bootstrapRunId` is attribution only; ordinary archive and
+serving rules still apply to those versions. Ordinary publication does not treat
+`bootstrap_acceptance` as a normal approval, so reactivation after rollback uses the
+bootstrap path. Rollback archives bootstrap-published versions and never hard-deletes
+them. These additions do not weaken the ordinary lifecycle or change the human review
+requirements for any other content.
