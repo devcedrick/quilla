@@ -71,6 +71,8 @@ Add `convex/blueprints.ts`, supported by `convex/lib/blueprints.ts`:
 
 - `createDraft({ blueprintId, level, taxonomyVersionId })`: active admin only;
   require a unique stable identifier and a sealed taxonomy, then create revision 1.
+  The duplicate check tolerates pre-existing duplicate rows and concurrent
+  attempts by reporting `DUPLICATE_IDENTITY` instead of a raw index error.
 - `saveConfiguration({ blueprintVersionId, expectedRevision, configuration })`:
   active admin only; draft-only, normalize, validate, hash under the current
   format version, persist the content hash and format version, and increment the
@@ -120,7 +122,9 @@ mutable current policy.
 Concurrency uses expected revisions for draft saves, activation and archival, and
 Convex serializes the per-level pointer update. A stale revision, non-draft
 version, invalid configuration, incomplete draft, archived taxonomy or mismatched
-content hash fails closed without a partial write.
+content hash fails closed without a partial write. Reading an active pointer also
+verifies that the pointed version is active and belongs to the requested level, so
+a corrupted cross-level pointer fails closed.
 
 ## Initial fixture and tests
 
@@ -141,8 +145,10 @@ guideline now that the regenerated bindings include the blueprint module. Cover:
 - Admin create/save/activate/archive/read and indexed pagination.
 - Anonymous, missing-profile, nonadmin and suspended-admin callers on every
   public function.
-- Stale revisions, duplicate identities, missing configuration, hash tampering,
-  non-draft mutation, inactive snapshot creation and unsupported stored formats.
+- Stale revisions, duplicate identities (including pre-existing duplicates and
+  concurrent drafts), missing configuration, hash tampering, non-draft mutation,
+  inactive snapshot creation and unsupported stored formats.
+- Cross-level active-pointer corruption rejected on read and snapshot creation.
 - Persisted format versions drive activation verification and snapshot labelling,
   including a legacy format 1 version that still activates and snapshots while
   the current save format is 2, and identity binding that rejects a repointed
