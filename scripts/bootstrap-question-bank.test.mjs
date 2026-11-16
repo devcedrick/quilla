@@ -6,6 +6,7 @@ import {
   bootstrapErrorCode,
   bootstrapSummary,
   commandBatches,
+  installTaxonomy,
   isTransientBootstrapError,
   parseBootstrapArgs,
   readBootstrapRun,
@@ -14,9 +15,12 @@ import {
   rollbackBootstrap,
   runConvex,
   selectDeployment,
+  taxonomySummary,
   verifyBootstrapPlan,
   verifyFrozenBootstrapPlan,
+  verifyTaxonomy,
 } from "./bootstrap-question-bank.mjs";
+import { seedTaxonomyPolicy } from "../lib/question-import-contract.mjs";
 
 const policy = {
   families: 2,
@@ -396,8 +400,70 @@ describe("operator arguments", () => {
   it("needs no deployment for the offline dry run", () => {
     expect(requiresDeployment({})).toBe(false);
     expect(requiresDeployment({ "--json": true })).toBe(false);
-    for (const mode of ["--apply", "--status", "--pause", "--rollback"])
+    for (const mode of [
+      "--apply",
+      "--status",
+      "--pause",
+      "--rollback",
+      "--install-taxonomy",
+      "--verify-taxonomy",
+    ])
       expect(requiresDeployment({ [mode]: true })).toBe(true);
+  });
+  it("parses taxonomy installation and verification modes", () => {
+    for (const mode of ["--install-taxonomy", "--verify-taxonomy"])
+      expect(
+        parseBootstrapArgs([
+          mode,
+          "--target",
+          "quilla-dev",
+          "--deployment",
+          "development",
+        ]),
+      ).toMatchObject({ [mode]: true, "--target": "quilla-dev" });
+    expect(
+      parseBootstrapArgs([
+        "--install-taxonomy",
+        "--prod",
+        "--confirm-production",
+        "--target",
+        "quilla-dev",
+      ]),
+    ).toMatchObject({ "--install-taxonomy": true, "--prod": true });
+    for (const args of [
+      ["--install-taxonomy"],
+      ["--install-taxonomy", "--verify-taxonomy", "--target", "quilla-dev"],
+      [
+        "--install-taxonomy",
+        "--status",
+        "--target",
+        "quilla-dev",
+        "--run",
+        "run-1",
+      ],
+      [
+        "--install-taxonomy",
+        "--target",
+        "quilla-dev",
+        "--expect-plan",
+        planChecksum,
+      ],
+      ["--install-taxonomy", "--target", "quilla-dev", "--run", "run-1"],
+      ["--install-taxonomy", "--target", "quilla-dev", "--resume-run", "run-1"],
+      [
+        "--install-taxonomy",
+        "--target",
+        "quilla-dev",
+        "--checkpoint",
+        "checkpoint.json",
+      ],
+      ["--install-taxonomy", "--target", "quilla-dev", "--reason", "x"],
+      ["--install-taxonomy", "--prod", "--target", "quilla-dev"],
+      ["--install-taxonomy", "--deployment", "prod", "--target", "quilla-dev"],
+    ])
+      expect(() => parseBootstrapArgs(args)).toThrow(
+        "BOOTSTRAP_INVALID_ARGUMENTS",
+      );
   });
 });
 
@@ -418,6 +484,73 @@ describe("operator summary", () => {
     });
     expect(rolledBack).toContain("1890 bootstrap-published versions archived");
     expect(rolledBack).not.toContain("0 questions");
+  });
+  it("reports taxonomy installation with an explicit write boundary", () => {
+    const counts = {
+      level: 2,
+      difficulty: 3,
+      language: 2,
+      subject: 5,
+      subtopic: 9,
+      concept: 12,
+      total: 33,
+    };
+    const base = {
+      target: "quilla-dev",
+      taxonomyId: "cse-taxonomy-2027-v2",
+      counts,
+      digest: seedTaxonomyPolicy.digest,
+    };
+    const absent = taxonomySummary({
+      ...base,
+      mode: "taxonomy-verify",
+      present: false,
+      expectedDigest: seedTaxonomyPolicy.digest,
+      expectedCounts: counts,
+    });
+    expect(absent).toContain("is not installed");
+    expect(absent).toContain("No writes performed.");
+    const installed = taxonomySummary({
+      ...base,
+      mode: "taxonomy-install",
+      present: true,
+      created: true,
+      state: "sealed",
+      revision: 2,
+    });
+    expect(installed).toContain("Installed and sealed atomically");
+    expect(installed).toContain("33 (2 levels");
+    expect(installed).toContain(
+      "No question, reference, or asset writes occurred.",
+    );
+    const rerun = taxonomySummary({
+      ...base,
+      mode: "taxonomy-install",
+      present: true,
+      created: false,
+      state: "sealed",
+      revision: 2,
+    });
+    expect(rerun).toContain("Already installed");
+    const matched = taxonomySummary({
+      ...base,
+      mode: "taxonomy-verify",
+      present: true,
+      state: "sealed",
+      revision: 2,
+      matchesExpected: true,
+    });
+    expect(matched).toContain("matches the reviewed sealed catalog");
+    expect(matched).toContain("No writes performed.");
+    const mismatched = taxonomySummary({
+      ...base,
+      mode: "taxonomy-verify",
+      present: true,
+      state: "sealed",
+      revision: 2,
+      matchesExpected: false,
+    });
+    expect(mismatched).toContain("does not match the reviewed sealed catalog");
   });
 });
 
@@ -493,6 +626,8 @@ describe("convex transport", () => {
       "SELF_REVIEW",
       "QUESTION_NOT_FOUND",
       "INVALID_AUDIT_DATA",
+      "TAXONOMY_CATALOG_MISMATCH",
+      "TAXONOMY_VERSION_CONFLICT",
     ]) {
       try {
         runConvex(
@@ -543,6 +678,62 @@ describe("convex transport", () => {
         },
       ),
     ).toThrow("ASSET_NOT_FOUND");
+  });
+});
+
+describe("taxonomy installation transport", () => {
+  it("sends the pinned digest to the internal installer", async () => {
+    const client = {
+      mutation: vi.fn(async () => ({
+        state: "sealed",
+        revision: 2,
+        created: true,
+      })),
+    };
+    await expect(
+      installTaxonomy(client, "quilla-dev", { sleep: async () => {} }),
+    ).resolves.toMatchObject({ state: "sealed", created: true });
+    expect(client.mutation).toHaveBeenCalledWith("install", {
+      target: "quilla-dev",
+      catalogDigest: seedTaxonomyPolicy.digest,
+    });
+  });
+  it("retries a transient installer failure", async () => {
+    let attempts = 0;
+    const client = {
+      mutation: vi.fn(async () => {
+        attempts++;
+        if (attempts === 1)
+          throw Object.assign(new Error("busy"), { code: "BOOTSTRAP_BUSY" });
+        return { state: "sealed", created: false };
+      }),
+    };
+    await expect(
+      installTaxonomy(client, "quilla-dev", { sleep: async () => {} }),
+    ).resolves.toMatchObject({ created: false });
+    expect(attempts).toBe(2);
+  });
+  it("reads verification through the internal query", async () => {
+    const client = {
+      query: vi.fn(async () => ({ present: false })),
+    };
+    await expect(verifyTaxonomy(client, "quilla-dev")).resolves.toEqual({
+      present: false,
+    });
+    expect(client.query).toHaveBeenCalledWith("verify", {
+      target: "quilla-dev",
+    });
+  });
+  it("rejects a missing target before invoking the deployment", async () => {
+    const client = { mutation: vi.fn(), query: vi.fn() };
+    await expect(installTaxonomy(client, "")).rejects.toMatchObject({
+      code: "BOOTSTRAP_INVALID_ARGUMENTS",
+    });
+    await expect(verifyTaxonomy(client, "")).rejects.toMatchObject({
+      code: "BOOTSTRAP_INVALID_ARGUMENTS",
+    });
+    expect(client.mutation).not.toHaveBeenCalled();
+    expect(client.query).not.toHaveBeenCalled();
   });
 });
 

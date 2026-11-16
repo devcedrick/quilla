@@ -331,7 +331,7 @@ Under [ADR 0013](ADR/0013-seeding-families-and-pooled-exam-selection.md), a seed
 
 Offline delivery and acceptance alone grant no import or publication permissions. [ADR 0017](ADR/0017-independent-question-review-policy.md) resolves #31 with one independent active-admin approval per question version and no self-approval. No manifest or sign-off file supplies authorization.
 
-[ADR 0022](ADR/0022-one-time-seed-bootstrap-publication.md) defines one separately authorized, developer-only bootstrap exception for this exact corpus; it has not been executed. The operator runs a repository CLI against an approved target using Convex CLI credentials or a deploy key. Two non-login `system` identities import, record a plan-level `bootstrap_acceptance` and publish each question as its batch lands; no active admin or human approver is required. The target registry ships empty, `SEED_BOOTSTRAP_ENABLED=true` is required only during the bootstrap window, and adding a target is a separate reviewed change. Rollback archives versions and never deletes history. This exception does not lower the review requirement for later questions, does not replace the deferred audit in #98, and does not by itself authorize a deployment or live write.
+[ADR 0022](ADR/0022-one-time-seed-bootstrap-publication.md) defines one separately authorized, developer-only bootstrap exception for this exact corpus; it has not been executed. The operator runs a repository CLI against an approved target using Convex CLI credentials or a deploy key. Two non-login `system` identities import, record a plan-level `bootstrap_acceptance` and publish each question as its batch lands; no active admin or human approver is required. The target registry contains only the reviewed `quilla-dev` development target; production remains unregistered. `SEED_BOOTSTRAP_ENABLED=true` is required only during the bootstrap window, and adding another target is a separate reviewed change. A separate internal installer, authorized by the same target and window guards plus a pinned catalog digest, installs and seals `cse-taxonomy-2027-v2`; it is implemented locally and has not been executed. Rollback archives versions and never deletes history. This exception does not lower the review requirement for later questions, does not replace the deferred audit in #98, and does not by itself authorize a deployment or live write.
 
 Each mock randomly selects eligible published versions from all seed families combined, subject to the exam blueprint, without a single-family or equal-family quota. Professional retains 20 General, 50 Verbal, 40 Numerical, and 40 Analytical items (150 total); Subprofessional retains 20 General, 50 Verbal, 35 Numerical, and 40 Clerical items (145 total). The new pooled selection contract uses `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`, with `cse-taxonomy-2027-v2`. Historical v1/v2 policies and attempts are preserved. Runtime and validator adoption remain pending.
 
@@ -763,9 +763,14 @@ active-admin management APIs and transactional audit logging. Sealed catalogs ar
 immutable; new consumers must resolve exact sealed, nonarchived identities and
 validate the subject/subtopic/concept path and level applicability. Archived
 catalogs retain historical resolution. [ADR 0019](ADR/0019-versioned-taxonomy-management.md)
-records the design. Live initialization, deployment, blueprint activation and
-question/import adoption remain separate work; no taxonomy has been installed
-by this local implementation.
+records the design. [ADR 0026](ADR/0026-development-seed-target-and-sealed-taxonomy-installation.md)
+adds an internal installer that atomically installs and seals the frozen
+`cse-taxonomy-2027-v2` catalog under the reviewed target and bootstrap-window
+guards. The installer writes taxonomy and audit records plus one non-login system
+identity; it does not provision admins or write questions, references or assets.
+It is implemented and tested locally, but no taxonomy has been installed on a
+deployment, and live initialization, deployment, blueprint activation and
+question/import adoption remain separate work.
 
 The local #30 implementation adds versioned blueprint drafts, pure configuration
 validation, atomic activation with a per-level active pointer, and insert-only

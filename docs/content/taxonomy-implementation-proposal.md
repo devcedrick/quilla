@@ -9,6 +9,12 @@ initialization. The current approved seed contract is `cse-taxonomy-2027-v2`;
 `scripts/question-bank-policy.mjs` also retains a separate historical v1 policy.
 Neither that legacy policy nor accepted ADRs will be rewritten.
 
+[ADR 0026](../ADR/0026-development-seed-target-and-sealed-taxonomy-installation.md)
+adds a separate internal installer for the frozen v2 catalog under the reviewed
+development target and bootstrap window. It is implemented and tested locally but
+has not been executed against a deployment; it does not replace the admin
+management APIs described here or constitute taxonomy content approval.
+
 ## Proposed storage
 
 Add two tables to the existing Convex schema:

@@ -33,9 +33,10 @@ Public `questionImports` endpoints serve the operator CLI: `preflight`, `begin`,
 user from Clerk; run access additionally requires its original owner. Arguments
 and returns are validated. Internal upload lookup/completion are not public APIs.
 
-The shared approved development-target registry is empty. All import endpoints
-fail closed unless a reviewed target matches the backend's `CONVEX_CLOUD_URL`
-and `QUESTION_BANK_IMPORT_ENABLED` is exactly `true`. The CLI resolves URLs only
+The shared approved development-target registry contains only the reviewed
+`quilla-dev` development target as of #107; production remains unregistered. All
+import endpoints fail closed unless a reviewed target matches the backend's
+`CONVEX_CLOUD_URL` and `QUESTION_BANK_IMPORT_ENABLED` is exactly `true`. The CLI resolves URLs only
 from that registry. No `.env.local` loading, deployment-key impersonation, new
 sign-in flow, or environment changes are included. The guard follows existing
 server `process.env` access; generated files remain untouched. Typed generated

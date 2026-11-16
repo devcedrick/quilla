@@ -54,6 +54,20 @@ const foundation = {
   difficulty: ["easy", "medium", "hard"],
   language: ["english", "filipino"],
 };
+/** Project entry fields into a stable, bounded audit snapshot. */
+export function taxonomyEntryValue(row: TaxonomyEntry) {
+  // Explicit projection prevents database metadata or caller extras entering snapshots.
+  return {
+    kind: row.kind,
+    key: row.key,
+    label: row.label,
+    archived: row.archived,
+    ...("levels" in row ? { levels: [...row.levels].sort() } : {}),
+    ...("subjectKey" in row ? { subjectKey: row.subjectKey } : {}),
+    ...(row.kind === "concept" ? { subtopicKey: row.subtopicKey } : {}),
+  };
+}
+
 /** Reject a taxonomy operation with a stable domain error code. */
 export function taxonomyError(code: string): never {
   throw new ConvexError({
