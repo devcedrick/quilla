@@ -9,13 +9,9 @@
  */
 
 import type * as audit from "../audit.js";
-import type * as blueprints from "../blueprints.js";
 import type * as learning from "../learning.js";
 import type * as lib_audit from "../lib/audit.js";
 import type * as lib_auth from "../lib/auth.js";
-import type * as lib_blueprintFixture from "../lib/blueprintFixture.js";
-import type * as lib_blueprintValidation from "../lib/blueprintValidation.js";
-import type * as lib_blueprints from "../lib/blueprints.js";
 import type * as lib_learning from "../lib/learning.js";
 import type * as lib_preparation from "../lib/preparation.js";
 import type * as lib_questionAssetMetadata from "../lib/questionAssetMetadata.js";
@@ -55,13 +51,9 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   audit: typeof audit;
-  blueprints: typeof blueprints;
   learning: typeof learning;
   "lib/audit": typeof lib_audit;
   "lib/auth": typeof lib_auth;
-  "lib/blueprintFixture": typeof lib_blueprintFixture;
-  "lib/blueprintValidation": typeof lib_blueprintValidation;
-  "lib/blueprints": typeof lib_blueprints;
   "lib/learning": typeof lib_learning;
   "lib/preparation": typeof lib_preparation;
   "lib/questionAssetMetadata": typeof lib_questionAssetMetadata;
