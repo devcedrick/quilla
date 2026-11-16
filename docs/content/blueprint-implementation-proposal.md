@@ -123,8 +123,10 @@ Concurrency uses expected revisions for draft saves, activation and archival, an
 Convex serializes the per-level pointer update. A stale revision, non-draft
 version, invalid configuration, incomplete draft, archived taxonomy or mismatched
 content hash fails closed without a partial write. Reading an active pointer also
-verifies that the pointed version is active and belongs to the requested level, so
-a corrupted cross-level pointer fails closed.
+verifies that the pointed version is active, belongs to the requested level and
+has its configuration, hash and format version; duplicate pointers for one level
+also fail closed. Activation reuses that validated pointer lookup before
+archiving, so a corrupted pointer cannot archive another level's active version.
 
 ## Initial fixture and tests
 
@@ -148,7 +150,10 @@ guideline now that the regenerated bindings include the blueprint module. Cover:
 - Stale revisions, duplicate identities (including pre-existing duplicates and
   concurrent drafts), missing configuration, hash tampering, non-draft mutation,
   inactive snapshot creation and unsupported stored formats.
-- Cross-level active-pointer corruption rejected on read and snapshot creation.
+- Cross-level active-pointer corruption rejected on read, snapshot creation and
+  activation without changing either level.
+- Duplicate active pointers rejected deterministically instead of raising a raw
+  multiple-documents error.
 - Persisted format versions drive activation verification and snapshot labelling,
   including a legacy format 1 version that still activates and snapshots while
   the current save format is 2, and identity binding that rejects a repointed
