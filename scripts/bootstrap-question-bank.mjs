@@ -10,6 +10,7 @@ import {
   bootstrapStageBatchSize,
   isKnownFailureCode,
   seedBootstrapPolicy,
+  seedTaxonomyPolicy,
   safeBootstrapFailure,
 } from "../lib/question-import-contract.mjs";
 
@@ -206,6 +207,8 @@ export function parseBootstrapArgs(args) {
     "--status",
     "--pause",
     "--rollback",
+    "--install-taxonomy",
+    "--verify-taxonomy",
     "--prod",
     "--confirm-production",
   ];
@@ -232,9 +235,14 @@ export function parseBootstrapArgs(args) {
       flags[name] = args[++index];
     else throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   }
-  const modes = ["--apply", "--status", "--pause", "--rollback"].filter(
-    (name) => flags[name],
-  );
+  const modes = [
+    "--apply",
+    "--status",
+    "--pause",
+    "--rollback",
+    "--install-taxonomy",
+    "--verify-taxonomy",
+  ].filter((name) => flags[name]);
   if (modes.length > 1) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   if (flags["--prod"] && flags["--deployment"])
     throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
@@ -253,6 +261,17 @@ export function parseBootstrapArgs(args) {
   }
   if (!flags["--target"])
     throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+  if (flags["--install-taxonomy"] || flags["--verify-taxonomy"]) {
+    if (
+      flags["--expect-plan"] ||
+      flags["--run"] ||
+      flags["--resume-run"] ||
+      flags["--checkpoint"] ||
+      flags["--reason"]
+    )
+      throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+    return flags;
+  }
   if (flags["--apply"]) {
     if (!flags["--expect-plan"] || flags["--run"] || flags["--reason"])
       throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
@@ -276,7 +295,9 @@ export function requiresDeployment(flags) {
     flags["--apply"] ||
     flags["--status"] ||
     flags["--pause"] ||
-    flags["--rollback"],
+    flags["--rollback"] ||
+    flags["--install-taxonomy"] ||
+    flags["--verify-taxonomy"],
   );
 }
 
@@ -377,6 +398,33 @@ function bootstrapClient(flags, runner = runConvex) {
     mutation: (name, args) => runner(`seedBootstrap:${name}`, args, flags),
     action: (name, args) => runner(`seedBootstrap:${name}`, args, flags),
   };
+}
+
+/** Build the internal-only taxonomy installation and verification client. */
+function taxonomyClient(flags, runner = runConvex) {
+  return {
+    query: (name, args) => runner(`taxonomyBootstrap:${name}`, args, flags),
+    mutation: (name, args) => runner(`taxonomyBootstrap:${name}`, args, flags),
+  };
+}
+
+/** Install and seal the pinned catalog; an exact rerun is a verified no-op. */
+export async function installTaxonomy(client, target, { sleep } = {}) {
+  if (!target) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+  return withBootstrapRetry(
+    () =>
+      client.mutation("install", {
+        target,
+        catalogDigest: seedTaxonomyPolicy.digest,
+      }),
+    { sleep },
+  );
+}
+
+/** Read installed taxonomy evidence without requiring the write window. */
+export async function verifyTaxonomy(client, target) {
+  if (!target) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+  return withBootstrapRetry(() => client.query("verify", { target }));
 }
 
 /** Upload exact image bytes through a short-lived Convex storage URL. */
@@ -751,6 +799,36 @@ export function bootstrapSummary(result) {
   return `${result.mode}: ${result.questions ?? result.counts?.questions ?? 0} questions, ${result.references ?? result.counts?.references ?? 0} references, ${result.assets ?? result.counts?.assets ?? 0} images\nPlan checksum: ${result.planChecksum ?? "not-applicable"}\n${result.state ? `Bootstrap run: ${result.runId}; ${result.state}` : "No writes performed."}\nBootstrap acceptance is not independent editorial review; exam readiness not evaluated.`;
 }
 
+/** Print taxonomy installation evidence with an explicit write boundary. */
+export function taxonomySummary(result) {
+  const digest = result.digest ?? result.expectedDigest;
+  if (result.present === false)
+    return `taxonomy: ${result.taxonomyId} is not installed on ${result.target}.\nExpected ${result.expectedCounts.total} entries; digest ${digest}.\nNo writes performed.`;
+  const counts = result.counts;
+  const lines = [
+    `taxonomy: ${result.taxonomyId} is ${result.state} at revision ${result.revision} on ${result.target}.`,
+    `Entries: ${counts.total} (${counts.level} levels, ${counts.difficulty} difficulties, ${counts.language} languages, ${counts.subject} subjects, ${counts.subtopic} subtopics, ${counts.concept} concepts).`,
+    `${result.mode === "taxonomy-install" ? "Digest" : "Expected digest"}: ${digest}.`,
+  ];
+  if (result.mode === "taxonomy-install") {
+    lines.push(
+      result.created
+        ? "Installed and sealed atomically; taxonomy and audit records only, plus the non-login installer identity."
+        : "Already installed with the exact sealed catalog; no writes performed.",
+      "No question, reference, or asset writes occurred.",
+    );
+  } else {
+    lines.push(
+      result.matchesExpected
+        ? "Stored catalog matches the reviewed sealed catalog."
+        : "Stored catalog does not match the reviewed sealed catalog.",
+      "No writes performed.",
+    );
+  }
+  lines.push("Taxonomy installation is not editorial or content approval.");
+  return lines.join("\n");
+}
+
 /** Print only allowlisted error codes; transport errors may contain credentials. */
 export function bootstrapErrorCode(error) {
   const code = error?.data?.code ?? error?.code ?? error?.message;
@@ -761,11 +839,16 @@ if (
   process.argv[1] &&
   path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
+  let taxonomyMode = false;
   try {
     const flags = parseBootstrapArgs(process.argv.slice(2));
+    taxonomyMode = Boolean(
+      flags["--install-taxonomy"] || flags["--verify-taxonomy"],
+    );
     const remote = requiresDeployment(flags);
     if (remote) selectDeployment(flags);
     const client = remote ? bootstrapClient(flags) : null;
+    const taxonomy = remote ? taxonomyClient(flags) : null;
     let result;
     if (flags["--status"]) {
       const status = await readBootstrapStatus(
@@ -777,6 +860,18 @@ if (
         mode: "status",
         run: status.run,
         entryCount: status.entries.length,
+      };
+    } else if (flags["--verify-taxonomy"]) {
+      result = {
+        ...(await verifyTaxonomy(taxonomy, flags["--target"])),
+        mode: "taxonomy-verify",
+        target: flags["--target"],
+      };
+    } else if (flags["--install-taxonomy"]) {
+      result = {
+        ...(await installTaxonomy(taxonomy, flags["--target"])),
+        mode: "taxonomy-install",
+        target: flags["--target"],
       };
     } else if (flags["--pause"]) {
       const run = await pauseBootstrap(
@@ -808,6 +903,11 @@ if (
     }
     if (flags["--json"] || result.mode === "status")
       console.log(JSON.stringify(result));
+    else if (
+      result.mode === "taxonomy-install" ||
+      result.mode === "taxonomy-verify"
+    )
+      console.log(taxonomySummary(result));
     else console.log(bootstrapSummary(result));
   } catch (error) {
     console.error(
@@ -815,8 +915,9 @@ if (
         error: bootstrapErrorCode(error),
         conflicts: error.conflicts ?? [],
         checkpoint: error.recovery ?? null,
-        recovery:
-          "Stop; inspect bootstrap status, pause an active run, and resume only with the same pinned plan. Roll back with a new plan after a full archive.",
+        recovery: taxonomyMode
+          ? "No taxonomy rows are written by a rejected install. Re-run verification; an existing mismatched version requires separate review."
+          : "Stop; inspect bootstrap status, pause an active run, and resume only with the same pinned plan. Roll back with a new plan after a full archive.",
       }),
     );
     process.exitCode = 1;
