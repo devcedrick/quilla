@@ -29,6 +29,7 @@ import type * as lib_questionWorkflow from "../lib/questionWorkflow.js";
 import type * as lib_seedBootstrapFixture from "../lib/seedBootstrapFixture.js";
 import type * as lib_seedBootstrapProtocol from "../lib/seedBootstrapProtocol.js";
 import type * as lib_taxonomy from "../lib/taxonomy.js";
+import type * as lib_taxonomyBootstrap from "../lib/taxonomyBootstrap.js";
 import type * as lib_taxonomyCatalog from "../lib/taxonomyCatalog.js";
 import type * as lib_userAccess from "../lib/userAccess.js";
 import type * as questionAssetActions from "../questionAssetActions.js";
@@ -39,6 +40,7 @@ import type * as questionReferences from "../questionReferences.js";
 import type * as questions from "../questions.js";
 import type * as referenceData from "../referenceData.js";
 import type * as seedBootstrap from "../seedBootstrap.js";
+import type * as taxonomyBootstrap from "../taxonomyBootstrap.js";
 import type * as users from "../users.js";
 
 import type {
@@ -69,6 +71,7 @@ declare const fullApi: ApiFromModules<{
   "lib/seedBootstrapFixture": typeof lib_seedBootstrapFixture;
   "lib/seedBootstrapProtocol": typeof lib_seedBootstrapProtocol;
   "lib/taxonomy": typeof lib_taxonomy;
+  "lib/taxonomyBootstrap": typeof lib_taxonomyBootstrap;
   "lib/taxonomyCatalog": typeof lib_taxonomyCatalog;
   "lib/userAccess": typeof lib_userAccess;
   questionAssetActions: typeof questionAssetActions;
@@ -79,6 +82,7 @@ declare const fullApi: ApiFromModules<{
   questions: typeof questions;
   referenceData: typeof referenceData;
   seedBootstrap: typeof seedBootstrap;
+  taxonomyBootstrap: typeof taxonomyBootstrap;
   users: typeof users;
 }>;
 

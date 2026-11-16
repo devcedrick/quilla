@@ -12,10 +12,14 @@ empirical calibration report.
 
 - The rehearsal uses deterministic synthetic fixtures; the CLI policy test uses the
   real offline plan.
-- No import target is registered; `approvedImportTargets` remains empty.
-- No Clerk account, admin user, credential or deploy key was used, and no Convex
-  database, storage or audit write occurred.
-- No production or development deployment was changed.
+- Only the reviewed `quilla-dev` development target is registered; production
+  remains unregistered. The internal sealed-taxonomy installer is implemented and
+  tested locally.
+- The rehearsal and tests used no Clerk account or admin user. Regenerating Convex
+  bindings read the local development deployment selection; it did not finalize a
+  push or write a database, storage or audit record.
+- No production or development deployment was changed; the taxonomy has not been
+  installed on any deployment.
 - The deferred supplemental audit in
   [#98](https://github.com/devcedrick/quilla/issues/98) remains open.
 
@@ -61,6 +65,13 @@ Both are non-login users with role `system`. `requireActiveUser`,
 `ensureCurrentUser` and `currentAccess` reject them, so they cannot enter the
 learner or admin application. The backend creates them idempotently on first use;
 no client-supplied identity is trusted.
+
+The sealed taxonomy is installed by a third non-login identity,
+`system:seed-taxonomy-installer`, through an internal mutation restricted to the
+reviewed target registry, the exact backend `CONVEX_CLOUD_URL`, an enabled
+`SEED_BOOTSTRAP_ENABLED` window and a digest-pinned catalog. It installs and seals
+the 33-entry `cse-taxonomy-2027-v2` catalog atomically and creates no admin. See
+[ADR 0026](../ADR/0026-development-seed-target-and-sealed-taxonomy-installation.md).
 
 The bootstrap reuses `questionReviews` but writes a distinct review kind:
 `bootstrap_acceptance`, decision `accept`, rubric `seed-bootstrap-v1`, carrying the
@@ -120,6 +131,12 @@ mutations: per-item success/failure results, stale revisions, missing approval,
 invalid transitions, nonadmin denial and batch bounds. It does not add bulk
 editorial review or approval.
 
+`convex/taxonomyBootstrap.test.ts` covers the #107 installer: the pinned digest and
+counts, atomic install and seal, system audit attribution, idempotent reruns, target
+and window guards, mismatched or draft version conflicts, non-login system identity,
+read-only verification before and after installation, and the absence of question,
+reference or asset writes.
+
 `scripts/bootstrap-question-bank.test.mjs` covers plan verification against both
 frozen checksums, batching, bounded status reads, deployment selection (including
 rejection of the unconfirmed `--deployment prod` alias), transient retries, replayed
@@ -130,32 +147,38 @@ frozen 7 × 270 policy.
 
 ## Future authorized rehearsal commands
 
-The CLI is inert by default. It does not load `.env.local`, and no target name is
-registered. After separate approval of an exact development deployment, taxonomy
-installation and registry change, the operator selects the deployment with
-`--deployment <name>`, `--prod --confirm-production`, or `CONVEX_DEPLOY_KEY`.
+The CLI is inert by default. It does not load `.env.local`. Only the reviewed
+`quilla-dev` target is registered; production remains unregistered. After separate
+approval of the exact development deployment and completion of the taxonomy
+installation, the operator selects the deployment with `--deployment <name>`,
+`--prod --confirm-production`, or `CONVEX_DEPLOY_KEY`.
 
 ```powershell
 # Offline: validates the real corpus and prints the plan checksum. No writes.
 node scripts/bootstrap-question-bank.mjs
 node scripts/bootstrap-question-bank.mjs --json
 
+# Taxonomy verification and installation (internal; operator credentials or deploy key).
+node scripts/bootstrap-question-bank.mjs --verify-taxonomy --target quilla-dev --deployment <development-name> --json
+node scripts/bootstrap-question-bank.mjs --install-taxonomy --target quilla-dev --deployment <development-name> --json
+
 # Read-only status after a separately authorized run exists.
-node scripts/bootstrap-question-bank.mjs --status --target <approved-target> --deployment <development-name> --run <run-id> --json
+node scripts/bootstrap-question-bank.mjs --status --target quilla-dev --deployment <development-name> --run <run-id> --json
 
 # Import, accept and publish the exact plan with deployment credentials.
-node scripts/bootstrap-question-bank.mjs --apply --target <approved-target> --deployment <development-name> --expect-plan 71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38 --checkpoint <private-checkpoint-path> --json
+node scripts/bootstrap-question-bank.mjs --apply --target quilla-dev --deployment <development-name> --expect-plan 71636e194e0e88c443478243a8f3a38276a111c0aaec813b08c9447689e29f38 --checkpoint <private-checkpoint-path> --json
 
 # Recovery.
-node scripts/bootstrap-question-bank.mjs --pause --target <approved-target> --deployment <development-name> --run <run-id>
-node scripts/bootstrap-question-bank.mjs --rollback --target <approved-target> --deployment <development-name> --run <run-id> --reason <incident-reference>
+node scripts/bootstrap-question-bank.mjs --pause --target quilla-dev --deployment <development-name> --run <run-id>
+node scripts/bootstrap-question-bank.mjs --rollback --target quilla-dev --deployment <development-name> --run <run-id> --reason <incident-reference>
 ```
 
 Required backend values on the exact target deployment:
 
-- `SEED_BOOTSTRAP_ENABLED=true` during the bootstrap window;
+- `SEED_BOOTSTRAP_ENABLED=true` during the bootstrap and taxonomy-installation
+  window;
 - the target registry entry and `CONVEX_CLOUD_URL` must match;
-- the v2 taxonomy must already be installed and sealed.
+- the v2 taxonomy must be installed and sealed before the bootstrap begins.
 
 The ordinary draft importer's `QUESTION_BANK_IMPORT_ENABLED` guard is not used by the
 bootstrap. The checkpoint contains only target, plan and run identities; it contains
@@ -166,13 +189,16 @@ no credentials, tokens or content.
 The live development and production runs remain blocked until all of the following
 are separately approved and completed:
 
-1. Exact deployment approval and target registry registration.
-2. Matching taxonomy installation and sealing.
+1. Fresh approval for the exact development deployment and deployment of the merged
+   code. The `quilla-dev` target name and URL are registered, but registration is
+   not deployment approval.
+2. Live installation and sealing of the matching taxonomy under the guarded window.
 3. A completed, reviewed offline plan matching both frozen checksums.
 4. Explicit approval to enable `SEED_BOOTSTRAP_ENABLED` on that deployment for the
    bootstrap window.
-5. For production, fresh explicit approval of the exact production deployment and
-   its `--prod --confirm-production` invocation.
+5. For production, fresh explicit approval of the exact production deployment, a
+   separate target registry change and the `--prod --confirm-production`
+   invocation.
 
 The #34 admin UI and Playwright journeys remain blocked because the #33 admin
 workspace does not yet exist. The bulk backend is available without a UI. This work

@@ -206,7 +206,7 @@ describe("offline import planning", () => {
     );
   });
 
-  it("requires explicit write intent, refuses unknown flags and keeps the target registry disabled", () => {
+  it("requires explicit write intent, refuses unknown flags and registers only the reviewed development target", () => {
     expect(parseImportArgs([])).toEqual({});
     expect(parseImportArgs(["--json"])).toEqual({ "--json": true });
     for (const args of [
@@ -223,7 +223,11 @@ describe("offline import planning", () => {
         "--apply"
       ],
     ).toBe(true);
-    expect(approvedImportTargets).toEqual({});
+    expect(approvedImportTargets).toEqual({
+      "quilla-dev": "https://perceptive-dodo-136.ap-southeast-2.convex.cloud",
+    });
+    expect(approvedImportTargets).not.toHaveProperty("prod");
+    expect(approvedImportTargets).not.toHaveProperty("production");
     expect(() => importClient("prod", "secret")).toThrow(
       "IMPORT_TARGET_NOT_APPROVED",
     );
