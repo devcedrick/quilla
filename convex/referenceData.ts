@@ -13,6 +13,7 @@ import {
   identifier,
   loadCatalog,
   taxonomyEntry,
+  taxonomyEntryValue,
   taxonomyKind,
   taxonomyState,
   taxonomyError,
@@ -44,19 +45,6 @@ async function editable(
 function page(size: number) {
   if (!Number.isInteger(size) || size < 1 || size > 100)
     taxonomyError("INVALID_PAGE_SIZE");
-}
-/** Project entry fields into a stable, bounded audit snapshot. */
-function entryValue(row: TaxonomyEntry) {
-  // Explicit projection prevents database metadata or caller extras entering snapshots.
-  return {
-    kind: row.kind,
-    key: row.key,
-    label: row.label,
-    archived: row.archived,
-    ...("levels" in row ? { levels: [...row.levels].sort() } : {}),
-    ...("subjectKey" in row ? { subjectKey: row.subjectKey } : {}),
-    ...(row.kind === "concept" ? { subtopicKey: row.subtopicKey } : {}),
-  };
 }
 
 /** Create a unique admin-authored draft taxonomy and its audit event. */
@@ -111,7 +99,8 @@ export const upsertEntry = mutation({
     validateCatalog(candidates);
     if (
       old &&
-      JSON.stringify(entryValue(old)) === JSON.stringify(entryValue(args.entry))
+      JSON.stringify(taxonomyEntryValue(old)) ===
+        JSON.stringify(taxonomyEntryValue(args.entry))
     )
       return version.revision;
     if (old)
@@ -132,8 +121,8 @@ export const upsertEntry = mutation({
       entityType: "taxonomy_entry",
       entityId: `${version.taxonomyId}:${args.entry.kind}:${args.entry.key}`,
       action: "upsert",
-      before: old ? entryValue(old) : null,
-      after: entryValue(args.entry),
+      before: old ? taxonomyEntryValue(old) : null,
+      after: taxonomyEntryValue(args.entry),
     });
     return version.revision + 1;
   },
@@ -169,8 +158,8 @@ export const archiveEntry = mutation({
       entityType: "taxonomy_entry",
       entityId: `${version.taxonomyId}:${old.kind}:${old.key}`,
       action: "archive",
-      before: entryValue(old),
-      after: entryValue({ ...old, archived: true }),
+      before: taxonomyEntryValue(old),
+      after: taxonomyEntryValue({ ...old, archived: true }),
     });
     return version.revision + 1;
   },
