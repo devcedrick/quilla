@@ -42,7 +42,11 @@ by save and activation:
   extension/permitted modules. Professional rejects Clerical; Subprofessional
   rejects Analytical and the Professional Numerical extension.
 - Cell counts are positive integers; duplicate module/subject/difficulty cells
-  are rejected.
+  are rejected, and the configuration must contain exactly the approved
+  subject/module difficulty cells from
+  `docs/exams/cse-taxonomy-and-blueprints.md`. Redistributing counts between
+  subjects is rejected even when subject, module and aggregate difficulty totals
+  still match.
 - Difficulty percentages must be integers and exactly equal the level's approved
   30/50/20 mix. Each aggregate difficulty count must fall within the floor and
   ceiling of its target, so Subprofessional may use 43/73/29 against 30/50/20.
@@ -126,8 +130,9 @@ Tests use convex-test with synthetic users, the `convexTest(schema, modules)`
 helper and generated `api` references. `blueprints.test.ts` follows that
 guideline now that the regenerated bindings include the blueprint module. Cover:
 
-- Every validation rule, including totals, module/level eligibility, difficulty
-  rounding, language exactness, concept coverage, timing, passing and bounds.
+- Every validation rule, including totals, module/level eligibility, exact
+  subject/module difficulty cells, difficulty rounding, language exactness,
+  concept coverage, timing, passing and bounds.
 - Fixture parity with the documented v3 contract and offline seed policy.
 - Admin create/save/activate/archive/read and indexed pagination.
 - Anonymous, missing-profile, nonadmin and suspended-admin callers on every
