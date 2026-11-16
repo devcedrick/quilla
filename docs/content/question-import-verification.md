@@ -80,8 +80,10 @@ read concurrency and bounded status traversal.
   blob; the documented recovery boundary requires separately authorized storage
   reconciliation. This cannot publish or approve content.
 
-The development-target registry remains empty and the import switch was not set.
-No credentials, live data, question-bank source edits, deployments, imports or
-publication were involved. The maintainer subsequently authorized commits, a push
+At the time of this #95 verification, the development-target registry was empty
+and the import switch was not set. #107 later registered only the reviewed
+`quilla-dev` target and added the internal taxonomy installer; no import has been
+run. No credentials, live data, question-bank source edits, deployments, imports or
+publication were involved in this verification. The maintainer subsequently authorized commits, a push
 and a new issue-linked PR. The preexisting audit stash was preserved. See the
 [runbook](question-import-runbook.md) for future authorized use.

@@ -1,8 +1,10 @@
 # Question-bank draft import: dry run and recovery
 
-Issue #95 implements the importer locally. **No development target is approved or
-enabled by this change.** The commands below describe future authorized use;
-deployment, catalog installation and actual imports require separate approval.
+Issue #95 implements the importer locally. Issue #107 registers only the reviewed
+`quilla-dev` development target and implements an internal taxonomy installer.
+**No deployment, taxonomy installation or import has been executed by this change.**
+The commands below describe authorized use; each exact target still requires fresh
+approval and deployment credentials.
 
 ## Offline inspection — no credentials required
 
@@ -38,13 +40,16 @@ sealed taxonomy or matching content: target comparison is reported as not checke
    deployment. Verify its deployment type through trusted Convex administration;
    a URL or client-supplied `dev` label alone does not prove its type.
 2. Review a registry change binding an operator target name to that exact URL in
-   `lib/question-import-contract.mjs`. The registry ships empty and no production
-   target is registered by default. A production target requires its own reviewed
-   registry change and fresh explicit approval under ADR 0022. Separately set
-   `QUESTION_BANK_IMPORT_ENABLED=true` only on that development backend. The guard
-   compares the registered URL against its system `CONVEX_CLOUD_URL`.
-3. Provision an active Quilla admin and install/seal the matching v2 taxonomy
-   through authorized operations. The importer never creates unknown taxonomy.
+   `lib/question-import-contract.mjs`. The registry contains only the reviewed
+   `quilla-dev` development target; no production target is registered. A
+   production target requires its own reviewed registry change and fresh explicit
+   approval under ADR 0022. Separately set `QUESTION_BANK_IMPORT_ENABLED=true` only
+   on that development backend. The guard compares the registered URL against its
+   system `CONVEX_CLOUD_URL`.
+3. Provision an active Quilla admin for the ordinary importer. The importer never
+   creates unknown taxonomy. The one-time taxonomy installer and bootstrap do not
+   provision admins and do not require one; install and seal the matching v2
+   taxonomy through the guarded internal path below.
 4. Sign in to the matching development Quilla app. Obtain a short-lived token from
    that signed-in Clerk session with `getToken()`, using its configured Convex
    audience (or the `convex` JWT template when that is how the Clerk instance is
@@ -67,7 +72,8 @@ Remove-Item Env:QUESTION_BANK_IMPORT_TOKEN
 
 ## Read-only target comparison
 
-Replace `approved-dev` with the separately reviewed target name:
+Replace `approved-dev` with the separately reviewed target name (`quilla-dev` for
+the registered development target):
 
 ```powershell
 node scripts/import-question-bank.mjs --check-target --target approved-dev --json
@@ -144,6 +150,52 @@ blob and binding it can leave a private orphan blob; inventory such blobs only
 through a separately authorized reconciliation operation. No automatic sweep or
 hard deletion of question/reference/history records is provided.
 
+## Install and verify the sealed v2 taxonomy
+
+The ordinary admin taxonomy APIs still require an active admin and cannot be used
+before initial-admin provisioning exists. Issue #107 instead adds an internal,
+operator-only installer invoked with deployment admin credentials or a deploy key:
+
+```powershell
+# Read-only; works before installation and after the bootstrap window closes.
+node scripts/bootstrap-question-bank.mjs --verify-taxonomy --target quilla-dev --deployment <development-name> --json
+
+# Install and seal the frozen catalog.
+node scripts/bootstrap-question-bank.mjs --install-taxonomy --target quilla-dev --deployment <development-name> --json
+```
+
+Both modes require `--target quilla-dev` and the same deployment selection as the
+bootstrap (`--deployment <name>`, `--prod --confirm-production`, or
+`CONVEX_DEPLOY_KEY`). They reject `--expect-plan`, `--run`, `--resume-run`,
+`--checkpoint`, `--reason` and combination with another mode. Selecting production
+with `--prod --confirm-production` while passing `--target quilla-dev` fails closed:
+production is not a registered target.
+
+The installer accepts only the reviewed target registry entry whose URL equals the
+backend's system `CONVEX_CLOUD_URL`. Installation additionally requires
+`SEED_BOOTSTRAP_ENABLED=true` on that exact backend. It validates the frozen
+`cse-taxonomy-2027-v2` catalog and requires:
+
+- 33 entries: 2 levels, 3 difficulties, 2 languages, 5 subjects, 9 subtopics and
+  12 concepts;
+- digest `95a53420395e5df7408fbaa159fb441330f9d851daa121d6b4b847be6bcff76f`.
+
+Installation and sealing happen in one transaction. The installer creates the
+non-login `system:seed-taxonomy-installer` identity on first use, inserts the
+version and all entries, records `seed_install` and `sealed` audit events, and moves
+the version to `sealed` revision 2. A rerun against the exact sealed catalog returns
+`created: false` without duplicate rows or audit events. A draft, archived or
+content-mismatched version fails closed with `TAXONOMY_VERSION_CONFLICT`; a
+target, URL or window failure reports `BOOTSTRAP_TARGET_DISABLED`; a digest or
+catalog mismatch reports `TAXONOMY_CATALOG_MISMATCH`.
+
+Verification is read-only, requires only the target registry (not the window), and
+reports the version ID, state, revision, counts, archived-entry count and whether
+the stored content exactly matches the reviewed sealed catalog. Installation writes
+only taxonomy and audit records plus the non-login installer identity on first use;
+it does not write questions, references or assets, and it does not provision an
+admin. Installing the catalog is not editorial or content approval.
+
 ## One-time developer bootstrap — separate approval required
 
 Issue #96 adds a developer-only bootstrap for the initial 1,890-question bank.
@@ -165,7 +217,8 @@ command without that approval. The bootstrap requires the same reviewed target
 registry as the importer, plus:
 
 - `SEED_BOOTSTRAP_ENABLED=true` on that exact backend during the bootstrap window;
-- a sealed `cse-taxonomy-2027-v2` taxonomy;
+- a sealed `cse-taxonomy-2027-v2` taxonomy (install it with the guarded
+  `--install-taxonomy` path above);
 - deployment credentials for the Convex CLI `run` command: a Convex CLI login or
   `CONVEX_DEPLOY_KEY`, selected with `--deployment <name>`, `--prod
 --confirm-production`, or the environment variable;

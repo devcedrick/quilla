@@ -1,9 +1,9 @@
 # Seed bootstrap rehearsal verification
 
 This record accompanies the local #96 implementation. It documents commands run on
-the `feat/s19-5-seed-publication-rehearsal` branch and their results. Nothing here
-was executed against a Convex deployment, and no live content, storage or audit
-write occurred.
+the `feat/s19-5-seed-publication-rehearsal` branch and their results. Nothing in
+that #96 rehearsal was executed against a Convex deployment, and no live content,
+storage or audit write occurred.
 
 ## Environment
 
@@ -102,9 +102,9 @@ transport message.
 
 - **End-to-end tests:** skipped because this change adds no UI or user journey.
   The #33 admin workspace does not exist yet, so the #34 admin UI remains blocked.
-- **Live rehearsal:** not attempted. It remains blocked pending explicit approval
-  of an exact development deployment, target registry registration, taxonomy
-  installation and sealing, and the bootstrap window.
+- **Live rehearsal:** not attempted. The `quilla-dev` target is now registered
+  (#107), but the live rehearsal still requires explicit approval of that exact
+  deployment, taxonomy installation and sealing, and the bootstrap window.
 - **Production bootstrap:** not attempted. It requires fresh explicit approval of
   the exact production deployment and its confirmation flag.
 - **Deployment, migration or production Convex commands:** none. No production
@@ -117,3 +117,68 @@ fixtures, mocked policy constants and mocked function transport. It does not
 establish editorial correctness, empirical item calibration, CSC alignment or
 pooled exam readiness, and it does not replace the deferred supplemental audit in
 #98.
+
+## S19.8a taxonomy installer verification (2026-11-16)
+
+Issue #107 adds the reviewed `quilla-dev` target and the internal sealed-taxonomy
+installer. These commands were run on the `feat/s19-8a-seed-target-taxonomy`
+branch. Regenerating bindings ran `npx convex codegen`, which contacted the
+configured development deployment to analyze functions and generate types. The
+CLI did not finalize a push: no function was deployed, no schema or database
+record changed, and no live taxonomy installation occurred.
+
+- Platform: Windows, PowerShell
+- Node.js: `22.14.0`
+
+| Command             | Result                                                                            |
+| ------------------- | --------------------------------------------------------------------------------- |
+| `npm run lint`      | Passed, no warnings or errors                                                     |
+| `npm run typecheck` | Passed, no diagnostics                                                            |
+| `npm run test:unit` | Passed: 47 files, 651 tests                                                       |
+| `npm run knip`      | Passed, no unused files, exports or dependencies                                  |
+| `npm run build`     | Passed; only the pre-existing Turbopack warning about an out-of-repo package-lock |
+| `git diff --check`  | Passed, no whitespace errors                                                      |
+
+The files most directly affected by this change were also run separately: six
+files and 130 tests passed.
+
+| File                                       | Tests | Result |
+| ------------------------------------------ | ----- | ------ |
+| `convex/taxonomyBootstrap.test.ts`         | 15    | Passed |
+| `convex/seedBootstrap.test.ts`             | 22    | Passed |
+| `convex/questionImports.test.ts`           | 29    | Passed |
+| `convex/referenceData.test.ts`             | 10    | Passed |
+| `scripts/bootstrap-question-bank.test.mjs` | 41    | Passed |
+| `scripts/import-question-bank.test.mjs`    | 13    | Passed |
+
+`convex/taxonomyBootstrap.test.ts` proves:
+
+- the frozen catalog digest matches both the backend and Node canonical hashes;
+- the exact counts are 2 levels, 3 difficulties, 2 languages, 5 subjects,
+  9 subtopics, 12 concepts and 33 entries;
+- installation atomically creates a sealed revision-2 version, 33 entries and
+  `seed_install` plus `sealed` audit events attributed to the non-login installer;
+- an exact rerun returns `created: false` without new rows or audit events;
+- unknown targets, URL mismatch, a closed window, a wrong digest, a draft version
+  and a mismatched sealed version all fail before writing an installer identity,
+  taxonomy entry or audit event;
+- the installer takes no actor argument and system identities cannot log in;
+- verification is read-only, reports absence, works with the window closed, and
+  detects archived or mismatched content;
+- question, reference, asset and import tables remain untouched.
+
+The CLI tests cover both new modes, their flag conflicts, production confirmation,
+the pinned digest transport and sanitized retries. The importer registry test now
+asserts that only `quilla-dev` is registered and production is absent.
+
+### Not run
+
+- **Live installation or deployment:** not attempted. It requires fresh approval
+  for the exact `quilla-dev` deployment, deployment of the merged code and an
+  approved `SEED_BOOTSTRAP_ENABLED` window.
+- **Question-bank bootstrap:** not attempted; #106 remains blocked until the live
+  taxonomy is installed and verified.
+- **Production registration or installation:** not attempted and not authorized.
+- **End-to-end tests:** not applicable; this change adds no UI or user journey.
+- **Editorial or content approval:** not established. Installing the frozen catalog
+  is not taxonomy content approval or the deferred #98 audit.
