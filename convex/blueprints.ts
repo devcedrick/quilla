@@ -124,6 +124,10 @@ export const saveConfiguration = mutation({
       version.level,
       version.taxonomyVersionId,
       configuration,
+      {
+        blueprintVersionId: version._id,
+        blueprintId: version.blueprintId,
+      },
     );
     if (
       version.configuration &&
@@ -188,6 +192,10 @@ export const activateVersion = mutation({
       version.taxonomyVersionId,
       configuration,
       storedHash,
+      {
+        blueprintVersionId: version._id,
+        blueprintId: version.blueprintId,
+      },
     );
 
     const now = Date.now();

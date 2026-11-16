@@ -10,6 +10,7 @@ import {
   validateBlueprintIdentifier,
   type BlueprintConfiguration,
 } from "./blueprintValidation";
+import { digest } from "./questionContent";
 import { initialV2Catalog } from "./taxonomyCatalog";
 
 function expectCode(operation: () => unknown, code: string) {
@@ -545,6 +546,10 @@ describe("blueprint validation", () => {
 
   it("hashes normalized configurations and binds format, level and taxonomy", async () => {
     const base = professional.configuration;
+    const identity = {
+      blueprintVersionId: "blueprint-version",
+      blueprintId: "cse-professional-2027-v3",
+    };
     const reordered = clone(base);
     reordered.cells.reverse();
     reordered.languages.reverse();
@@ -557,6 +562,7 @@ describe("blueprint validation", () => {
       "professional",
       "taxonomy-version",
       base,
+      identity,
     );
     expect(
       await blueprintContentHash(
@@ -564,6 +570,7 @@ describe("blueprint validation", () => {
         "professional",
         "taxonomy-version",
         reordered,
+        identity,
       ),
     ).toBe(hash);
 
@@ -575,6 +582,7 @@ describe("blueprint validation", () => {
         "professional",
         "taxonomy-version",
         changed,
+        identity,
       ),
     ).not.toBe(hash);
     expect(
@@ -583,6 +591,7 @@ describe("blueprint validation", () => {
         "subprofessional",
         "taxonomy-version",
         base,
+        identity,
       ),
     ).not.toBe(hash);
     expect(
@@ -591,15 +600,68 @@ describe("blueprint validation", () => {
         "professional",
         "other-taxonomy-version",
         base,
+        identity,
       ),
     ).not.toBe(hash);
+  });
+
+  it("dispatches hashing by stored format and binds blueprint identity", async () => {
+    const base = professional.configuration;
+    const identity = {
+      blueprintVersionId: "version-one",
+      blueprintId: "cse-professional-2027-v3",
+    };
+    const legacy = await blueprintContentHash(
+      1,
+      "professional",
+      "taxonomy-version",
+      base,
+      identity,
+    );
+    expect(legacy).toBe(
+      await digest({
+        formatVersion: 1,
+        level: "professional",
+        taxonomyVersionId: "taxonomy-version",
+        configuration: normalizeBlueprintConfiguration(base),
+      }),
+    );
     expect(
-      await blueprintContentHash(
-        blueprintConfigurationFormatVersion + 1,
+      await blueprintContentHash(1, "professional", "taxonomy-version", base, {
+        blueprintVersionId: "version-two",
+        blueprintId: "cse-professional-2028-v4",
+      }),
+    ).toBe(legacy);
+
+    const current = await blueprintContentHash(
+      2,
+      "professional",
+      "taxonomy-version",
+      base,
+      identity,
+    );
+    expect(current).not.toBe(legacy);
+    expect(
+      await blueprintContentHash(2, "professional", "taxonomy-version", base, {
+        ...identity,
+        blueprintVersionId: "version-two",
+      }),
+    ).not.toBe(current);
+    expect(
+      await blueprintContentHash(2, "professional", "taxonomy-version", base, {
+        ...identity,
+        blueprintId: "cse-professional-2028-v4",
+      }),
+    ).not.toBe(current);
+
+    await expect(
+      blueprintContentHash(
+        99,
         "professional",
         "taxonomy-version",
         base,
+        identity,
       ),
-    ).not.toBe(hash);
+    ).rejects.toMatchObject({ data: { code: "UNSUPPORTED_FORMAT_VERSION" } });
   });
 });

@@ -203,7 +203,8 @@ const maxConfigurationBytes = 8 * 1024;
 const maxCells = 32;
 const maxLanguages = 32;
 const maxConcepts = 32;
-export const blueprintConfigurationFormatVersion = 1;
+/** Current persisted format; format 1 remains verifiable as a legacy format. */
+export const blueprintConfigurationFormatVersion = 2;
 
 /**
  * Validate one configuration against its level policy and sealed taxonomy.
@@ -536,17 +537,43 @@ export function normalizeBlueprintConfiguration(
   };
 }
 
-/** Hash the exact format, level, taxonomy version and normalized configuration. */
+/** Identity bound into a blueprint hash from format 2 onward. */
+export type BlueprintHashIdentity = {
+  blueprintVersionId: string;
+  blueprintId: string;
+};
+
+/**
+ * Hash a normalized configuration under its stored format. Format 1 is the
+ * frozen legacy payload and ignores identity; format 2 also binds the exact
+ * blueprint version and stable identifier so a snapshot cannot be repointed.
+ */
 export async function blueprintContentHash(
   formatVersion: number,
   level: BlueprintLevel,
   taxonomyVersionId: string,
   configuration: BlueprintConfiguration,
+  identity: BlueprintHashIdentity,
 ) {
-  return await digest({
-    formatVersion,
-    level,
-    taxonomyVersionId,
-    configuration: normalizeBlueprintConfiguration(configuration),
-  });
+  const normalized = normalizeBlueprintConfiguration(configuration);
+  switch (formatVersion) {
+    case 1:
+      return await digest({
+        formatVersion,
+        level,
+        taxonomyVersionId,
+        configuration: normalized,
+      });
+    case 2:
+      return await digest({
+        formatVersion,
+        level,
+        taxonomyVersionId,
+        blueprintVersionId: identity.blueprintVersionId,
+        blueprintId: identity.blueprintId,
+        configuration: normalized,
+      });
+    default:
+      blueprintError("UNSUPPORTED_FORMAT_VERSION");
+  }
 }

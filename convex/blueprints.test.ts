@@ -141,7 +141,7 @@ describe("blueprints", () => {
     });
     expect(version!.configuration).toEqual(normalized);
     expect(version!.contentHash).toMatch(/^[a-f0-9]{64}$/);
-    expect(version!.configurationFormatVersion).toBe(1);
+    expect(version!.configurationFormatVersion).toBe(2);
 
     expect(
       await admin.query(api.blueprints.getActive, {
@@ -166,14 +166,14 @@ describe("blueprints", () => {
     expect(JSON.parse(save.afterJson!)).toEqual({
       revision: 2,
       contentHash: version!.contentHash,
-      configurationFormatVersion: 1,
+      configurationFormatVersion: 2,
       configuration: normalized,
     });
     const activation = events.find((event) => event.action === "activate")!;
     expect(JSON.parse(activation.afterJson!)).toEqual({
       state: "active",
       revision: activeRevision,
-      configurationFormatVersion: 1,
+      configurationFormatVersion: 2,
       previousActiveVersionId: null,
     });
 
@@ -200,12 +200,16 @@ describe("blueprints", () => {
       "professional",
       taxonomy.id,
     );
-    const storedFormatVersion = 2;
+    const storedFormatVersion = 1;
     const storedHash = await blueprintContentHash(
       storedFormatVersion,
       "professional",
       taxonomy.id,
       fixture("professional").configuration,
+      {
+        blueprintVersionId: id,
+        blueprintId: fixture("professional").blueprintId,
+      },
     );
     await t.run((ctx) =>
       ctx.db.patch("blueprintVersions", id, {
@@ -262,6 +266,81 @@ describe("blueprints", () => {
     });
   });
 
+  it("rejects unsupported stored configuration formats", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const { id, revision } = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+    );
+    await t.run((ctx) =>
+      ctx.db.patch("blueprintVersions", id, {
+        configurationFormatVersion: 99,
+      }),
+    );
+    await expect(activate(admin, id, revision)).rejects.toMatchObject({
+      data: { code: "UNSUPPORTED_FORMAT_VERSION" },
+    });
+    expect(
+      await admin.query(api.blueprints.getVersion, {
+        blueprintVersionId: id,
+      }),
+    ).toMatchObject({ state: "draft", revision });
+    expect(
+      await admin.query(api.blueprints.getActive, { level: "professional" }),
+    ).toBeNull();
+  });
+
+  it("treats an unchanged normalized save as a no-op", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const { id, revision } = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+    );
+    const before = await t.run((ctx) => ctx.db.get("blueprintVersions", id));
+    const saveEventsBefore = (await auditEvents(t, id)).filter(
+      (event) => event.action === "save",
+    );
+    expect(saveEventsBefore).toHaveLength(1);
+
+    const reordered = structuredClone(fixture("professional").configuration);
+    reordered.cells.reverse();
+    reordered.languages.reverse();
+    reordered.concepts.reverse();
+    expect(
+      await admin.mutation(api.blueprints.saveConfiguration, {
+        blueprintVersionId: id,
+        expectedRevision: revision,
+        configuration: reordered,
+      }),
+    ).toBe(revision);
+
+    expect(await t.run((ctx) => ctx.db.get("blueprintVersions", id))).toEqual(
+      before,
+    );
+    expect(
+      (await auditEvents(t, id)).filter((event) => event.action === "save"),
+    ).toHaveLength(1);
+  });
+
+  it("binds snapshots to the exact blueprint identity", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const active = await saveDraft(admin, "professional", taxonomy.id);
+    await activate(admin, active.id, active.revision);
+    await t.run((ctx) =>
+      ctx.db.patch("blueprintVersions", active.id, {
+        blueprintId: "cse-professional-2028-v4",
+      }),
+    );
+    await expect(
+      t.run((ctx) => createBlueprintSnapshot(ctx, "professional")),
+    ).rejects.toMatchObject({ data: { code: "CONTENT_HASH_MISMATCH" } });
+  });
+
   it("supersedes the prior active version and never mutates snapshots", async () => {
     const { admin, t } = await setup();
     const taxonomy = await sealedTaxonomy(admin);
@@ -278,7 +357,7 @@ describe("blueprints", () => {
       blueprintVersionId: first.id,
       blueprintId: "cse-professional-2027-v3",
       taxonomyVersionId: taxonomy.id,
-      configurationFormatVersion: 1,
+      configurationFormatVersion: 2,
     });
     expect(firstRow!.configuration).toEqual(
       normalizeBlueprintConfiguration(fixture("professional").configuration),

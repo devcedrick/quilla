@@ -136,6 +136,7 @@ export default defineSchema({
     taxonomyVersionId: v.id("taxonomyVersions"),
     configuration: v.optional(blueprintConfiguration),
     contentHash: v.optional(v.string()),
+    // Hashed under this stored format; format 1 is legacy, format 2 binds identity.
     configurationFormatVersion: v.optional(v.number()),
     createdBy: v.id("users"),
     createdAt: v.number(),

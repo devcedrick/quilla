@@ -5,6 +5,7 @@ import {
   blueprintContentHash,
   blueprintError,
   type BlueprintConfiguration,
+  type BlueprintHashIdentity,
   type BlueprintLevel,
 } from "./blueprintValidation";
 
@@ -64,6 +65,7 @@ export async function verifyBlueprintContentHash(
   taxonomyVersionId: Id<"taxonomyVersions">,
   configuration: BlueprintConfiguration,
   contentHash: string,
+  identity: BlueprintHashIdentity,
 ) {
   if (
     (await blueprintContentHash(
@@ -71,6 +73,7 @@ export async function verifyBlueprintContentHash(
       level,
       taxonomyVersionId,
       configuration,
+      identity,
     )) !== contentHash
   )
     blueprintError("CONTENT_HASH_MISMATCH");
@@ -92,6 +95,10 @@ export async function createBlueprintSnapshot(
     active.version.taxonomyVersionId,
     active.configuration,
     active.contentHash,
+    {
+      blueprintVersionId: active.version._id,
+      blueprintId: active.version.blueprintId,
+    },
   );
   return await ctx.db.insert("blueprintSnapshots", {
     level,
