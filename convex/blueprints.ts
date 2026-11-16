@@ -201,24 +201,16 @@ export const activateVersion = mutation({
     );
 
     const now = Date.now();
-    const previous = await ctx.db
-      .query("activeBlueprints")
-      .withIndex("by_level", (q) => q.eq("level", version.level))
-      .unique();
+    const previous = await loadActiveBlueprint(ctx, version.level);
     if (previous) {
-      const superseded = await ctx.db.get(
-        "blueprintVersions",
-        previous.blueprintVersionId,
-      );
-      if (!superseded || superseded.state !== "active")
-        blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
+      const superseded = previous.version;
       await ctx.db.patch("blueprintVersions", superseded._id, {
         state: "archived",
         revision: superseded.revision + 1,
         updatedAt: now,
         archivedAt: now,
       });
-      await ctx.db.patch("activeBlueprints", previous._id, {
+      await ctx.db.patch("activeBlueprints", previous.pointer._id, {
         blueprintVersionId: version._id,
         activatedBy: actor._id,
         activatedAt: now,
@@ -266,7 +258,7 @@ export const activateVersion = mutation({
         state: "active",
         revision: version.revision + 1,
         configurationFormatVersion: storedFormatVersion,
-        previousActiveVersionId: previous?.blueprintVersionId ?? null,
+        previousActiveVersionId: previous?.version._id ?? null,
       },
     });
     return version.revision + 1;

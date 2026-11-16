@@ -29,10 +29,12 @@ export async function loadActiveBlueprint(
   ctx: DatabaseReader,
   level: BlueprintLevel,
 ) {
-  const pointer = await ctx.db
+  const pointers = await ctx.db
     .query("activeBlueprints")
     .withIndex("by_level", (q) => q.eq("level", level))
-    .unique();
+    .take(2);
+  if (pointers.length > 1) blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
+  const pointer = pointers[0] ?? null;
   if (!pointer) return null;
   const version = await ctx.db.get(
     "blueprintVersions",

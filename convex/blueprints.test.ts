@@ -699,6 +699,74 @@ describe("blueprints", () => {
     ).rejects.toMatchObject({
       data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
     });
+
+    const replacement = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+      "cse-professional-2028-v4",
+    );
+    await expect(
+      activate(admin, replacement.id, replacement.revision),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    expect(
+      await admin.query(api.blueprints.getVersion, {
+        blueprintVersionId: replacement.id,
+      }),
+    ).toMatchObject({ state: "draft", revision: replacement.revision });
+    expect(
+      await admin.query(api.blueprints.getActive, {
+        level: "subprofessional",
+      }),
+    ).toMatchObject({ _id: subprofessional.id, state: "active" });
+  });
+
+  it("rejects duplicate active pointers without a raw index error", async () => {
+    const { admin, t, adminId } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const active = await saveDraft(admin, "professional", taxonomy.id);
+    await activate(admin, active.id, active.revision);
+    await t.run((ctx) =>
+      ctx.db.insert("activeBlueprints", {
+        level: "professional",
+        blueprintVersionId: active.id,
+        activatedBy: adminId,
+        activatedAt: Date.now(),
+      }),
+    );
+
+    await expect(
+      admin.query(api.blueprints.getActive, { level: "professional" }),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    await expect(
+      t.run((ctx) => createBlueprintSnapshot(ctx, "professional")),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+
+    const replacement = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+      "cse-professional-2028-v4",
+    );
+    await expect(
+      activate(admin, replacement.id, replacement.revision),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    expect(
+      await t.run((ctx) =>
+        ctx.db
+          .query("activeBlueprints")
+          .withIndex("by_level", (q) => q.eq("level", "professional"))
+          .take(2),
+      ),
+    ).toHaveLength(2);
   });
 
   it("rejects duplicate draft identities without a raw index error", async () => {
