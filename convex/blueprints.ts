@@ -73,12 +73,14 @@ export const createDraft = mutation({
     const actor = await requireAdmin(ctx);
     validateBlueprintIdentifier(args.blueprintId);
     if (
-      await ctx.db
-        .query("blueprintVersions")
-        .withIndex("by_blueprintId", (q) =>
-          q.eq("blueprintId", args.blueprintId),
-        )
-        .unique()
+      (
+        await ctx.db
+          .query("blueprintVersions")
+          .withIndex("by_blueprintId", (q) =>
+            q.eq("blueprintId", args.blueprintId),
+          )
+          .take(1)
+      ).length > 0
     )
       blueprintError("DUPLICATE_IDENTITY");
     await loadSealedTaxonomy(ctx, args.taxonomyVersionId);

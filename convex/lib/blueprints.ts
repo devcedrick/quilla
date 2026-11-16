@@ -44,11 +44,12 @@ export async function loadActiveBlueprint(
   if (
     !version ||
     version.state !== "active" ||
+    version.level !== level ||
     !configuration ||
     !contentHash ||
     configurationFormatVersion === undefined
   )
-    blueprintError("BLUEPRINT_NOT_ACTIVE");
+    blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
   return {
     pointer,
     version,

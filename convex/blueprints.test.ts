@@ -667,6 +667,76 @@ describe("blueprints", () => {
     ).toMatchObject({ _id: active[0]._id });
   });
 
+  it("rejects an active pointer that resolves to another level", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const professional = await saveDraft(admin, "professional", taxonomy.id);
+    await activate(admin, professional.id, professional.revision);
+    const subprofessional = await saveDraft(
+      admin,
+      "subprofessional",
+      taxonomy.id,
+    );
+    await activate(admin, subprofessional.id, subprofessional.revision);
+    await t.run(async (ctx) => {
+      const pointer = await ctx.db
+        .query("activeBlueprints")
+        .withIndex("by_level", (q) => q.eq("level", "professional"))
+        .unique();
+      if (!pointer) throw new Error("Missing professional pointer");
+      await ctx.db.patch("activeBlueprints", pointer._id, {
+        blueprintVersionId: subprofessional.id,
+      });
+    });
+
+    await expect(
+      admin.query(api.blueprints.getActive, { level: "professional" }),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    await expect(
+      t.run((ctx) => createBlueprintSnapshot(ctx, "professional")),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+  });
+
+  it("rejects duplicate draft identities without a raw index error", async () => {
+    const { admin, t, adminId } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    await t.run(async (ctx) => {
+      for (let index = 0; index < 2; index += 1)
+        await ctx.db.insert("blueprintVersions", {
+          blueprintId: "duplicate-draft",
+          level: "professional",
+          state: "draft",
+          revision: 1,
+          taxonomyVersionId: taxonomy.id,
+          createdBy: adminId,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+    });
+    await expect(
+      createDraft(admin, "professional", taxonomy.id, "duplicate-draft"),
+    ).rejects.toMatchObject({ data: { code: "DUPLICATE_IDENTITY" } });
+  });
+
+  it("rejects concurrent duplicate drafts", async () => {
+    const { admin } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const decisions = await Promise.allSettled([
+      createDraft(admin, "professional", taxonomy.id),
+      createDraft(admin, "professional", taxonomy.id),
+    ]);
+    expect(
+      decisions.filter((decision) => decision.status === "fulfilled"),
+    ).toHaveLength(1);
+    expect(
+      decisions.find((decision) => decision.status === "rejected"),
+    ).toMatchObject({ reason: { data: { code: "DUPLICATE_IDENTITY" } } });
+  });
+
   it("keeps active snapshots usable after taxonomy archival but blocks new use", async () => {
     const { admin, t } = await setup();
     const taxonomy = await sealedTaxonomy(admin);
