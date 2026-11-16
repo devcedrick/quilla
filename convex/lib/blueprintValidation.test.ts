@@ -225,7 +225,7 @@ describe("blueprint validation", () => {
     );
   });
 
-  it("rejects invalid difficulty mixes and aggregate counts", () => {
+  it("rejects invalid difficulty mixes, aggregate counts, and cells", () => {
     const incomplete = clone(professional.configuration);
     incomplete.difficultyMix = { easy: 30, medium: 50, hard: 19 };
     expectCode(
@@ -286,6 +286,31 @@ describe("blueprint validation", () => {
           counts,
         ),
       "INVALID_DIFFICULTY_TOTAL",
+    );
+
+    const redistributed = clone(professional.configuration);
+    const cell = (subjectId: string, difficulty: "easy" | "medium") => {
+      const found = redistributed.cells.find(
+        (candidate) =>
+          candidate.module === "shared-core" &&
+          candidate.subjectId === subjectId &&
+          candidate.difficulty === difficulty,
+      );
+      if (!found) throw new Error("Fixture lacks difficulty cells");
+      return found;
+    };
+    cell("general_information", "easy").count += 5;
+    cell("general_information", "medium").count -= 5;
+    cell("verbal_ability", "easy").count -= 5;
+    cell("verbal_ability", "medium").count += 5;
+    expectCode(
+      () =>
+        validateBlueprintConfiguration(
+          "professional",
+          initialV2Catalog,
+          redistributed,
+        ),
+      "INVALID_DIFFICULTY_CELL",
     );
   });
 

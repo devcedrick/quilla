@@ -85,9 +85,17 @@ const moduleLevels: Record<BlueprintModule, readonly BlueprintLevel[]> = {
 type LanguageTotals = Partial<
   Record<BlueprintSubject, Partial<Record<BlueprintLanguage, number>>>
 >;
+type DifficultyCell = readonly [
+  BlueprintModule,
+  BlueprintSubject,
+  number,
+  number,
+  number,
+];
 type LevelPolicy = {
   scoredItems: number;
   difficultyMix: Record<BlueprintDifficulty, number>;
+  difficultyCells: readonly DifficultyCell[];
   subjectTotals: Record<BlueprintSubject, number>;
   moduleTotals: Record<BlueprintModule, number>;
   languageTotals: LanguageTotals;
@@ -107,6 +115,13 @@ export const blueprintPolicy: Record<BlueprintLevel, LevelPolicy> = {
   professional: {
     scoredItems: 150,
     difficultyMix: { easy: 30, medium: 50, hard: 20 },
+    difficultyCells: [
+      ["shared-core", "general_information", 6, 10, 4],
+      ["shared-core", "verbal_ability", 15, 25, 10],
+      ["shared-core", "numerical_ability", 10, 18, 7],
+      ["professional-numerical", "numerical_ability", 2, 2, 1],
+      ["analytical", "analytical_ability", 12, 20, 8],
+    ],
     subjectTotals: {
       general_information: 20,
       verbal_ability: 50,
@@ -135,6 +150,12 @@ export const blueprintPolicy: Record<BlueprintLevel, LevelPolicy> = {
   subprofessional: {
     scoredItems: 145,
     difficultyMix: { easy: 30, medium: 50, hard: 20 },
+    difficultyCells: [
+      ["shared-core", "general_information", 6, 10, 4],
+      ["shared-core", "verbal_ability", 15, 25, 10],
+      ["shared-core", "numerical_ability", 10, 18, 7],
+      ["clerical", "clerical_ability", 12, 20, 8],
+    ],
     subjectTotals: {
       general_information: 20,
       verbal_ability: 50,
@@ -222,6 +243,7 @@ export function validateBlueprintConfiguration(
     blueprintError("INVALID_CELLS");
 
   const cellKeys = new Set<string>();
+  const cellCounts = new Map<string, number>();
   const subjectCounts = new Map<BlueprintSubject, number>();
   const moduleCounts = new Map<BlueprintModule, number>();
   const difficultyCounts: Record<BlueprintDifficulty, number> = {
@@ -240,6 +262,7 @@ export function validateBlueprintConfiguration(
     const identity = `${cell.module}:${subject}:${cell.difficulty}`;
     if (cellKeys.has(identity)) blueprintError("DUPLICATE_IDENTITY");
     cellKeys.add(identity);
+    cellCounts.set(identity, cell.count);
     subjectCounts.set(subject, (subjectCounts.get(subject) ?? 0) + cell.count);
     moduleCounts.set(
       cell.module,
@@ -295,6 +318,29 @@ export function validateBlueprintConfiguration(
     if (actual < Math.floor(target) || actual > Math.ceil(target))
       blueprintError("INVALID_DIFFICULTY_TOTAL");
   }
+
+  const expectedCellKeys = new Set<string>();
+  for (const [
+    module,
+    subjectId,
+    easy,
+    medium,
+    hard,
+  ] of policy.difficultyCells) {
+    const expectedByDifficulty: Array<[BlueprintDifficulty, number]> = [
+      ["easy", easy],
+      ["medium", medium],
+      ["hard", hard],
+    ];
+    for (const [difficulty, count] of expectedByDifficulty) {
+      const identity = `${module}:${subjectId}:${difficulty}`;
+      expectedCellKeys.add(identity);
+      if (cellCounts.get(identity) !== count)
+        blueprintError("INVALID_DIFFICULTY_CELL");
+    }
+  }
+  if (cellCounts.size !== expectedCellKeys.size)
+    blueprintError("INVALID_DIFFICULTY_CELL");
 
   if (
     !Array.isArray(configuration.languages) ||
