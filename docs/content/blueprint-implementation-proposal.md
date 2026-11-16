@@ -72,9 +72,10 @@ Add `convex/blueprints.ts`, supported by `convex/lib/blueprints.ts`:
 - `createDraft({ blueprintId, level, taxonomyVersionId })`: active admin only;
   require a unique stable identifier and a sealed taxonomy, then create revision 1.
 - `saveConfiguration({ blueprintVersionId, expectedRevision, configuration })`:
-  active admin only; draft-only, normalize, validate, persist the content hash
-  and its configuration format version, and increment the revision atomically. An
-  unchanged normalized save is a validated no-op without a duplicate audit event.
+  active admin only; draft-only, normalize, validate, hash under the current
+  format version, persist the content hash and format version, and increment the
+  revision atomically. An unchanged normalized save is a validated no-op without
+  a duplicate audit event.
 - `activateVersion({ blueprintVersionId, expectedRevision })`: active admin only;
   revalidate the stored configuration against the sealed taxonomy, verify its
   content hash, freeze the draft, supersede the previous active version for that
@@ -104,14 +105,17 @@ Archived versions retain their exact configuration for history.
 
 Snapshots are insert-only copies. They capture the exact blueprint version,
 taxonomy version, format version, configuration and content hash. Each blueprint
-version stores the format version it was hashed under; activation and snapshot
-creation verify and label with that stored value rather than current code. This
-keeps history verifiable across future format-version increments. Superseding the
-active blueprint never changes an existing snapshot. Active blueprints remain
-usable for new snapshots if their taxonomy is later archived, because the pinned
-configuration is self-describing; creating a new draft or activation requires a
-sealed taxonomy. Historical snapshots never resolve through mutable current
-policy.
+version stores the format version it was hashed under, and hashing dispatches on
+that stored value: format 1 is the frozen legacy payload, while format 2 also
+binds the exact `blueprintVersionId` and stable `blueprintId`. Activation and
+snapshot creation verify and label with the stored format, and unsupported stored
+formats fail closed with `UNSUPPORTED_FORMAT_VERSION`. The current save format is
+2; format 1 remains verifiable so previously hashed versions keep working.
+Superseding the active blueprint never changes an existing snapshot. Active
+blueprints remain usable for new snapshots if their taxonomy is later archived,
+because the pinned configuration is self-describing; creating a new draft or
+activation requires a sealed taxonomy. Historical snapshots never resolve through
+mutable current policy.
 
 Concurrency uses expected revisions for draft saves, activation and archival, and
 Convex serializes the per-level pointer update. A stale revision, non-draft
@@ -138,9 +142,13 @@ guideline now that the regenerated bindings include the blueprint module. Cover:
 - Anonymous, missing-profile, nonadmin and suspended-admin callers on every
   public function.
 - Stale revisions, duplicate identities, missing configuration, hash tampering,
-  non-draft mutation and inactive snapshot creation.
+  non-draft mutation, inactive snapshot creation and unsupported stored formats.
 - Persisted format versions drive activation verification and snapshot labelling,
-  including a stored version that differs from the current code constant.
+  including a legacy format 1 version that still activates and snapshots while
+  the current save format is 2, and identity binding that rejects a repointed
+  snapshot hash.
+- An unchanged normalized save returns the same revision without changing the
+  stored document, `updatedAt` or save audit history.
 - Supersession per level, pointer isolation between levels, snapshot immutability
   after replacement, and unusability of archived taxonomies for new versions.
 - Exact actor attribution and transactional audit behavior.
