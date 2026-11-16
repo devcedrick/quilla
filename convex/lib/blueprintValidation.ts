@@ -272,7 +272,12 @@ export function validateBlueprintConfiguration(
 
   for (const difficulty of difficultyKeys) {
     const percent = configuration.difficultyMix[difficulty];
-    if (!Number.isInteger(percent) || percent < 0 || percent > 100)
+    if (
+      !Number.isInteger(percent) ||
+      percent < 0 ||
+      percent > 100 ||
+      percent !== policy.difficultyMix[difficulty]
+    )
       blueprintError("INVALID_DIFFICULTY_MIX");
   }
   if (
@@ -487,12 +492,13 @@ export function normalizeBlueprintConfiguration(
 
 /** Hash the exact format, level, taxonomy version and normalized configuration. */
 export async function blueprintContentHash(
+  formatVersion: number,
   level: BlueprintLevel,
   taxonomyVersionId: string,
   configuration: BlueprintConfiguration,
 ) {
   return await digest({
-    formatVersion: blueprintConfigurationFormatVersion,
+    formatVersion,
     level,
     taxonomyVersionId,
     configuration: normalizeBlueprintConfiguration(configuration),

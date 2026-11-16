@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { seedPolicy } from "../../scripts/question-bank-policy.mjs";
 import { initialV3Blueprints } from "./blueprintFixture";
 import {
+  blueprintConfigurationFormatVersion,
   blueprintContentHash,
   blueprintPolicy,
   normalizeBlueprintConfiguration,
@@ -249,8 +250,34 @@ describe("blueprint validation", () => {
       "INVALID_DIFFICULTY_MIX",
     );
 
+    const policyMismatch = clone(professional.configuration);
+    policyMismatch.difficultyMix = { easy: 40, medium: 40, hard: 20 };
+    expectCode(
+      () =>
+        validateBlueprintConfiguration(
+          "professional",
+          initialV2Catalog,
+          policyMismatch,
+        ),
+      "INVALID_DIFFICULTY_MIX",
+    );
+
     const counts = clone(professional.configuration);
-    counts.difficultyMix = { easy: 31, medium: 49, hard: 20 };
+    const easy = counts.cells.find(
+      (cell) =>
+        cell.module === "shared-core" &&
+        cell.subjectId === "general_information" &&
+        cell.difficulty === "easy",
+    );
+    const medium = counts.cells.find(
+      (cell) =>
+        cell.module === "shared-core" &&
+        cell.subjectId === "general_information" &&
+        cell.difficulty === "medium",
+    );
+    if (!easy || !medium) throw new Error("Fixture lacks difficulty cells");
+    easy.count += 1;
+    medium.count -= 1;
     expectCode(
       () =>
         validateBlueprintConfiguration(
@@ -491,7 +518,7 @@ describe("blueprint validation", () => {
     }
   });
 
-  it("hashes normalized configurations and binds level and taxonomy", async () => {
+  it("hashes normalized configurations and binds format, level and taxonomy", async () => {
     const base = professional.configuration;
     const reordered = clone(base);
     reordered.cells.reverse();
@@ -501,26 +528,51 @@ describe("blueprint validation", () => {
       normalizeBlueprintConfiguration(base),
     );
     const hash = await blueprintContentHash(
+      blueprintConfigurationFormatVersion,
       "professional",
       "taxonomy-version",
       base,
     );
     expect(
-      await blueprintContentHash("professional", "taxonomy-version", reordered),
+      await blueprintContentHash(
+        blueprintConfigurationFormatVersion,
+        "professional",
+        "taxonomy-version",
+        reordered,
+      ),
     ).toBe(hash);
 
     const changed = clone(base);
     changed.concepts[0] = { ...changed.concepts[0], minimum: 2 };
     expect(
-      await blueprintContentHash("professional", "taxonomy-version", changed),
-    ).not.toBe(hash);
-    expect(
-      await blueprintContentHash("subprofessional", "taxonomy-version", base),
+      await blueprintContentHash(
+        blueprintConfigurationFormatVersion,
+        "professional",
+        "taxonomy-version",
+        changed,
+      ),
     ).not.toBe(hash);
     expect(
       await blueprintContentHash(
+        blueprintConfigurationFormatVersion,
+        "subprofessional",
+        "taxonomy-version",
+        base,
+      ),
+    ).not.toBe(hash);
+    expect(
+      await blueprintContentHash(
+        blueprintConfigurationFormatVersion,
         "professional",
         "other-taxonomy-version",
+        base,
+      ),
+    ).not.toBe(hash);
+    expect(
+      await blueprintContentHash(
+        blueprintConfigurationFormatVersion + 1,
+        "professional",
+        "taxonomy-version",
         base,
       ),
     ).not.toBe(hash);

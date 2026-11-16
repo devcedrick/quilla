@@ -1,26 +1,25 @@
 // @vitest-environment edge-runtime
-import { defineTestApp } from "convex-test";
+/// <reference types="vite/client" />
+import { convexTest } from "convex-test";
 import { describe, expect, it } from "vitest";
+import { api } from "./_generated/api";
 import type { Id } from "./_generated/dataModel";
 import * as blueprints from "./blueprints";
-import * as referenceData from "./referenceData";
 import schema from "./schema";
 import { initialV3Blueprints } from "./lib/blueprintFixture";
 import {
+  blueprintContentHash,
   normalizeBlueprintConfiguration,
   type BlueprintLevel,
 } from "./lib/blueprintValidation";
 import { createBlueprintSnapshot } from "./lib/blueprints";
 import { initialV2Catalog } from "./lib/taxonomyCatalog";
 
-const { api, createTest } = defineTestApp({ schema }).defineModules({
-  blueprints,
-  referenceData,
-});
+const modules = import.meta.glob(["./**/*.ts", "!./**/*.test.ts"]);
 const opts = { numItems: 100, cursor: null };
 
 async function setup() {
-  const t = createTest();
+  const t = convexTest(schema, modules);
   const identity = { issuer: "https://test", subject: "admin" };
   const adminId = await t.run((ctx) =>
     ctx.db.insert("users", {
@@ -142,6 +141,7 @@ describe("blueprints", () => {
     });
     expect(version!.configuration).toEqual(normalized);
     expect(version!.contentHash).toMatch(/^[a-f0-9]{64}$/);
+    expect(version!.configurationFormatVersion).toBe(1);
 
     expect(
       await admin.query(api.blueprints.getActive, {
@@ -166,12 +166,14 @@ describe("blueprints", () => {
     expect(JSON.parse(save.afterJson!)).toEqual({
       revision: 2,
       contentHash: version!.contentHash,
+      configurationFormatVersion: 1,
       configuration: normalized,
     });
     const activation = events.find((event) => event.action === "activate")!;
     expect(JSON.parse(activation.afterJson!)).toEqual({
       state: "active",
       revision: activeRevision,
+      configurationFormatVersion: 1,
       previousActiveVersionId: null,
     });
 
@@ -188,6 +190,76 @@ describe("blueprints", () => {
         expectedRevision: activeRevision,
       }),
     ).rejects.toMatchObject({ data: { code: "IMMUTABLE_BLUEPRINT" } });
+  });
+
+  it("uses the persisted format version for activation and snapshots", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const { id, revision } = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+    );
+    const storedFormatVersion = 2;
+    const storedHash = await blueprintContentHash(
+      storedFormatVersion,
+      "professional",
+      taxonomy.id,
+      fixture("professional").configuration,
+    );
+    await t.run((ctx) =>
+      ctx.db.patch("blueprintVersions", id, {
+        configurationFormatVersion: storedFormatVersion,
+        contentHash: storedHash,
+      }),
+    );
+
+    const activeRevision = await activate(admin, id, revision);
+    expect(activeRevision).toBe(revision + 1);
+    const snapshotId = await t.run((ctx) =>
+      createBlueprintSnapshot(ctx, "professional"),
+    );
+    expect(
+      await t.run((ctx) => ctx.db.get("blueprintSnapshots", snapshotId)),
+    ).toMatchObject({
+      blueprintVersionId: id,
+      configurationFormatVersion: storedFormatVersion,
+      contentHash: storedHash,
+    });
+
+    const activation = (await auditEvents(t, id)).find(
+      (event) => event.action === "activate",
+    )!;
+    expect(JSON.parse(activation.beforeJson!)).toEqual({
+      state: "draft",
+      revision,
+      contentHash: storedHash,
+      configurationFormatVersion: storedFormatVersion,
+    });
+    expect(JSON.parse(activation.afterJson!)).toEqual({
+      state: "active",
+      revision: activeRevision,
+      configurationFormatVersion: storedFormatVersion,
+      previousActiveVersionId: null,
+    });
+  });
+
+  it("requires a persisted format version before activation", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const { id, revision } = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+    );
+    await t.run((ctx) =>
+      ctx.db.patch("blueprintVersions", id, {
+        configurationFormatVersion: undefined,
+      }),
+    );
+    await expect(activate(admin, id, revision)).rejects.toMatchObject({
+      data: { code: "INCOMPLETE_BLUEPRINT" },
+    });
   });
 
   it("supersedes the prior active version and never mutates snapshots", async () => {

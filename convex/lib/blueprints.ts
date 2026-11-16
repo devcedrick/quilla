@@ -2,7 +2,6 @@ import type { MutationCtx, QueryCtx } from "../_generated/server";
 import type { Id } from "../_generated/dataModel";
 import { loadCatalog, validateCatalog } from "./taxonomy";
 import {
-  blueprintConfigurationFormatVersion,
   blueprintContentHash,
   blueprintError,
   type BlueprintConfiguration,
@@ -40,21 +39,39 @@ export async function loadActiveBlueprint(
   );
   const configuration = version?.configuration;
   const contentHash = version?.contentHash;
-  if (!version || version.state !== "active" || !configuration || !contentHash)
+  const configurationFormatVersion = version?.configurationFormatVersion;
+  if (
+    !version ||
+    version.state !== "active" ||
+    !configuration ||
+    !contentHash ||
+    configurationFormatVersion === undefined
+  )
     blueprintError("BLUEPRINT_NOT_ACTIVE");
-  return { pointer, version, configuration, contentHash };
+  return {
+    pointer,
+    version,
+    configuration,
+    contentHash,
+    configurationFormatVersion,
+  };
 }
 
 /** Recompute the configuration hash and compare it to the stored integrity value. */
 export async function verifyBlueprintContentHash(
+  formatVersion: number,
   level: BlueprintLevel,
   taxonomyVersionId: Id<"taxonomyVersions">,
   configuration: BlueprintConfiguration,
   contentHash: string,
 ) {
   if (
-    (await blueprintContentHash(level, taxonomyVersionId, configuration)) !==
-    contentHash
+    (await blueprintContentHash(
+      formatVersion,
+      level,
+      taxonomyVersionId,
+      configuration,
+    )) !== contentHash
   )
     blueprintError("CONTENT_HASH_MISMATCH");
 }
@@ -70,6 +87,7 @@ export async function createBlueprintSnapshot(
   const active = await loadActiveBlueprint(ctx, level);
   if (!active) blueprintError("BLUEPRINT_NOT_ACTIVE");
   await verifyBlueprintContentHash(
+    active.configurationFormatVersion,
     level,
     active.version.taxonomyVersionId,
     active.configuration,
@@ -80,7 +98,7 @@ export async function createBlueprintSnapshot(
     blueprintVersionId: active.version._id,
     blueprintId: active.version.blueprintId,
     taxonomyVersionId: active.version.taxonomyVersionId,
-    configurationFormatVersion: blueprintConfigurationFormatVersion,
+    configurationFormatVersion: active.configurationFormatVersion,
     configuration: active.configuration,
     contentHash: active.contentHash,
     createdAt: Date.now(),

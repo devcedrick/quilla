@@ -12,6 +12,7 @@ import { examLevel } from "./lib/preparation";
 import { canonical } from "./lib/questionContent";
 import {
   blueprintConfiguration,
+  blueprintConfigurationFormatVersion,
   blueprintContentHash,
   blueprintError,
   blueprintState,
@@ -119,12 +120,15 @@ export const saveConfiguration = mutation({
     const taxonomy = await loadSealedTaxonomy(ctx, version.taxonomyVersionId);
     validateBlueprintConfiguration(version.level, taxonomy.rows, configuration);
     const contentHash = await blueprintContentHash(
+      blueprintConfigurationFormatVersion,
       version.level,
       version.taxonomyVersionId,
       configuration,
     );
     if (
       version.configuration &&
+      version.configurationFormatVersion ===
+        blueprintConfigurationFormatVersion &&
       version.contentHash === contentHash &&
       canonical(version.configuration) === canonical(configuration)
     )
@@ -132,6 +136,7 @@ export const saveConfiguration = mutation({
     await ctx.db.patch("blueprintVersions", version._id, {
       configuration,
       contentHash,
+      configurationFormatVersion: blueprintConfigurationFormatVersion,
       revision: version.revision + 1,
       updatedAt: Date.now(),
     });
@@ -143,12 +148,15 @@ export const saveConfiguration = mutation({
         ? {
             revision: version.revision,
             contentHash: version.contentHash ?? null,
+            configurationFormatVersion:
+              version.configurationFormatVersion ?? null,
             configuration: version.configuration,
           }
         : null,
       after: {
         revision: version.revision + 1,
         contentHash,
+        configurationFormatVersion: blueprintConfigurationFormatVersion,
         configuration,
       },
     });
@@ -163,13 +171,19 @@ export const activateVersion = mutation({
   handler: async (ctx, args) => {
     const actor = await requireAdmin(ctx);
     const version = await editable(ctx, args);
-    if (!version.configuration || !version.contentHash)
+    if (
+      !version.configuration ||
+      !version.contentHash ||
+      version.configurationFormatVersion === undefined
+    )
       blueprintError("INCOMPLETE_BLUEPRINT");
     const configuration: BlueprintConfiguration = version.configuration;
     const storedHash = version.contentHash;
+    const storedFormatVersion = version.configurationFormatVersion;
     const taxonomy = await loadSealedTaxonomy(ctx, version.taxonomyVersionId);
     validateBlueprintConfiguration(version.level, taxonomy.rows, configuration);
     await verifyBlueprintContentHash(
+      storedFormatVersion,
       version.level,
       version.taxonomyVersionId,
       configuration,
@@ -236,10 +250,12 @@ export const activateVersion = mutation({
         state: "draft",
         revision: version.revision,
         contentHash: storedHash,
+        configurationFormatVersion: storedFormatVersion,
       },
       after: {
         state: "active",
         revision: version.revision + 1,
+        configurationFormatVersion: storedFormatVersion,
         previousActiveVersionId: previous?.blueprintVersionId ?? null,
       },
     });
