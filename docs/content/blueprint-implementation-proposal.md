@@ -12,11 +12,11 @@ run a coverage dry run, install reference data, or activate a live blueprint.
 
 Add three tables to the existing Convex schema:
 
-| Table                | Fields and indexes                                                                                                                                                                                                                                                                                                                                                                              |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `blueprintVersions`  | Unique `blueprintId`; `level`; lifecycle `state` (`draft`, `active`, `archived`); integer `revision`; pinned `taxonomyVersionId`; optional full `configuration`; optional `contentHash`; creator/updater/activation/archival metadata and timestamps. Indexes for exact identity, level/state/created ordering, level/created ordering, state/created ordering and global created ordering.     |
-| `activeBlueprints`   | One per-level pointer: `level` (unique in practice), `blueprintVersionId`, activating admin and timestamp. Index `by_level`.                                                                                                                                                                                                                                                                    |
-| `blueprintSnapshots` | Immutable copy of the exact active configuration: `level`, source `blueprintVersionId` and `blueprintId`, `taxonomyVersionId`, configuration format version, full `configuration`, `contentHash` and creation time. Indexes `by_blueprintVersionId` and `by_level_and_createdAt`. No update or delete API is exposed. Later attempts link to this row; #30 does not add an attempt foreign key. |
+| Table                | Fields and indexes                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `blueprintVersions`  | Unique `blueprintId`; `level`; lifecycle `state` (`draft`, `active`, `archived`); integer `revision`; pinned `taxonomyVersionId`; optional full `configuration`; optional `contentHash`; stored configuration format version; creator/updater/activation/archival metadata and timestamps. Indexes for exact identity, level/state/created ordering, level/created ordering, state/created ordering and global created ordering. |
+| `activeBlueprints`   | One per-level pointer: `level` (unique in practice), `blueprintVersionId`, activating admin and timestamp. Index `by_level`.                                                                                                                                                                                                                                                                                                     |
+| `blueprintSnapshots` | Immutable copy of the exact active configuration: `level`, source `blueprintVersionId` and `blueprintId`, `taxonomyVersionId`, configuration format version, full `configuration`, `contentHash` and creation time. Indexes `by_blueprintVersionId` and `by_level_and_createdAt`. No update or delete API is exposed. Later attempts link to this row; #30 does not add an attempt foreign key.                                  |
 
 A blueprint configuration contains the complete self-describing contract:
 
@@ -43,9 +43,9 @@ by save and activation:
   rejects Analytical and the Professional Numerical extension.
 - Cell counts are positive integers; duplicate module/subject/difficulty cells
   are rejected.
-- Difficulty percentages are integers summing to 100. Each aggregate difficulty
-  count must fall within the floor and ceiling of its target, so Subprofessional
-  may use 43/73/29 against 30/50/20.
+- Difficulty percentages must be integers and exactly equal the level's approved
+  30/50/20 mix. Each aggregate difficulty count must fall within the floor and
+  ceiling of its target, so Subprofessional may use 43/73/29 against 30/50/20.
 - Every subject total must be covered by exact language totals. Verbal Ability is
   25 English and 25 Filipino; all other subjects are English only.
 - Every nonarchived concept applicable to the level must appear exactly once with
@@ -68,9 +68,9 @@ Add `convex/blueprints.ts`, supported by `convex/lib/blueprints.ts`:
 - `createDraft({ blueprintId, level, taxonomyVersionId })`: active admin only;
   require a unique stable identifier and a sealed taxonomy, then create revision 1.
 - `saveConfiguration({ blueprintVersionId, expectedRevision, configuration })`:
-  active admin only; draft-only, normalize, validate, persist the content hash and
-  increment the revision atomically. An unchanged normalized save is a validated
-  no-op without a duplicate audit event.
+  active admin only; draft-only, normalize, validate, persist the content hash
+  and its configuration format version, and increment the revision atomically. An
+  unchanged normalized save is a validated no-op without a duplicate audit event.
 - `activateVersion({ blueprintVersionId, expectedRevision })`: active admin only;
   revalidate the stored configuration against the sealed taxonomy, verify its
   content hash, freeze the draft, supersede the previous active version for that
@@ -99,7 +99,10 @@ directly; a replacement version must be activated, which archives the predecesso
 Archived versions retain their exact configuration for history.
 
 Snapshots are insert-only copies. They capture the exact blueprint version,
-taxonomy version, format version, configuration and content hash. Superseding the
+taxonomy version, format version, configuration and content hash. Each blueprint
+version stores the format version it was hashed under; activation and snapshot
+creation verify and label with that stored value rather than current code. This
+keeps history verifiable across future format-version increments. Superseding the
 active blueprint never changes an existing snapshot. Active blueprints remain
 usable for new snapshots if their taxonomy is later archived, because the pinned
 configuration is self-describing; creating a new draft or activation requires a
@@ -119,8 +122,9 @@ Professional 150 items (45/75/30), 168 minutes, 120 passing; Subprofessional
 and retain a separate `blueprintId` per version. No installation or activation is
 included.
 
-Tests use convex-test with synthetic users and typed in-memory API references.
-Cover:
+Tests use convex-test with synthetic users, the `convexTest(schema, modules)`
+helper and generated `api` references. `blueprints.test.ts` follows that
+guideline now that the regenerated bindings include the blueprint module. Cover:
 
 - Every validation rule, including totals, module/level eligibility, difficulty
   rounding, language exactness, concept coverage, timing, passing and bounds.
@@ -130,6 +134,8 @@ Cover:
   public function.
 - Stale revisions, duplicate identities, missing configuration, hash tampering,
   non-draft mutation and inactive snapshot creation.
+- Persisted format versions drive activation verification and snapshot labelling,
+  including a stored version that differs from the current code constant.
 - Supersession per level, pointer isolation between levels, snapshot immutability
   after replacement, and unusability of archived taxonomies for new versions.
 - Exact actor attribution and transactional audit behavior.
@@ -158,5 +164,5 @@ and whitespace checks passed.
 The production build compiled, typechecked and generated all pages successfully.
 E2E was skipped because no browser journey changed. No deployment, live
 catalog/blueprint activation or hand-edited generated bindings were involved.
-Normal supported API generation and live schema validation remain deferred until
-authorized.
+Normal supported API generation is included in this change; live schema
+validation and deployment remain deferred until authorized.
