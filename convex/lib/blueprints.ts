@@ -35,27 +35,28 @@ export async function loadActiveBlueprint(
     .take(2);
   if (pointers.length > 1) blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
   const pointer = pointers[0] ?? null;
+  const activeVersions = await ctx.db
+    .query("blueprintVersions")
+    .withIndex("by_level_and_state_and_createdAt", (q) =>
+      q.eq("level", level).eq("state", "active"),
+    )
+    .take(2);
   if (!pointer) {
-    const orphaned = await ctx.db
-      .query("blueprintVersions")
-      .withIndex("by_level_and_state_and_createdAt", (q) =>
-        q.eq("level", level).eq("state", "active"),
-      )
-      .take(1);
-    if (orphaned.length > 0) blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
+    if (activeVersions.length > 0)
+      blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
     return null;
   }
-  const version = await ctx.db.get(
-    "blueprintVersions",
-    pointer.blueprintVersionId,
-  );
-  const configuration = version?.configuration;
-  const contentHash = version?.contentHash;
-  const configurationFormatVersion = version?.configurationFormatVersion;
+  const version = activeVersions[0];
   if (
+    activeVersions.length !== 1 ||
     !version ||
-    version.state !== "active" ||
-    version.level !== level ||
+    version._id !== pointer.blueprintVersionId
+  )
+    blueprintError("ACTIVE_BLUEPRINT_INCONSISTENT");
+  const configuration = version.configuration;
+  const contentHash = version.contentHash;
+  const configurationFormatVersion = version.configurationFormatVersion;
+  if (
     !configuration ||
     !contentHash ||
     configurationFormatVersion === undefined

@@ -769,6 +769,74 @@ describe("blueprints", () => {
     ).toHaveLength(2);
   });
 
+  it("rejects extra active versions alongside an active pointer", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const active = await saveDraft(admin, "professional", taxonomy.id);
+    await activate(admin, active.id, active.revision);
+    const extra = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+      "cse-professional-2028-v4",
+    );
+    await t.run((ctx) =>
+      ctx.db.patch("blueprintVersions", extra.id, { state: "active" }),
+    );
+
+    await expect(
+      admin.query(api.blueprints.getActive, { level: "professional" }),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    await expect(
+      t.run((ctx) => createBlueprintSnapshot(ctx, "professional")),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+
+    const replacement = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+      "cse-professional-2028-v5",
+    );
+    await expect(
+      activate(admin, replacement.id, replacement.revision),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    expect(
+      await admin.query(api.blueprints.getVersion, {
+        blueprintVersionId: replacement.id,
+      }),
+    ).toMatchObject({ state: "draft", revision: replacement.revision });
+
+    const activeVersions = await t.run((ctx) =>
+      ctx.db
+        .query("blueprintVersions")
+        .withIndex("by_level_and_state_and_createdAt", (q) =>
+          q.eq("level", "professional").eq("state", "active"),
+        )
+        .collect(),
+    );
+    expect(activeVersions).toHaveLength(2);
+    expect(new Set(activeVersions.map((version) => version._id))).toEqual(
+      new Set([active.id, extra.id]),
+    );
+    expect(
+      await t.run((ctx) =>
+        ctx.db
+          .query("activeBlueprints")
+          .withIndex("by_level", (q) => q.eq("level", "professional"))
+          .collect(),
+      ),
+    ).toMatchObject([{ blueprintVersionId: active.id }]);
+    expect(
+      await t.run((ctx) => ctx.db.query("blueprintSnapshots").collect()),
+    ).toHaveLength(0);
+  });
+
   it("rejects orphaned active versions when the pointer is missing", async () => {
     const { admin, t } = await setup();
     const taxonomy = await sealedTaxonomy(admin);
