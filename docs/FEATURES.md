@@ -772,6 +772,18 @@ It is implemented and tested locally, but no taxonomy has been installed on a
 deployment, and live initialization, deployment, blueprint activation and
 question/import adoption remain separate work.
 
+The local #30 implementation adds versioned blueprint drafts, pure configuration
+validation, atomic activation with a per-level active pointer, and insert-only
+attempt snapshots. A version carries its complete configuration and pins a sealed
+taxonomy; activation supersedes the prior active version and every real admin
+mutation is audited transactionally. The approved v3 configurations exist as an
+offline fixture only. No coverage dry run, exam generation, attempts table, live
+activation, deployment or migration is included; those remain #35, #54 and
+separately authorized work.
+[ADR 0025](ADR/0025-versioned-blueprint-activation-and-attempt-snapshots.md)
+records the design. Existing snapshots remain usable if the taxonomy is later
+archived; new drafts and activations require a sealed taxonomy.
+
 ### User story
 
 As an admin, I want to manage levels, subjects, subtopics, concepts, and exam blueprints so generated assessments are valid and content gaps are visible.

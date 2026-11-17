@@ -11,6 +11,10 @@ import {
 } from "./lib/questionContent";
 import { questionState, questionReview } from "./lib/questionWorkflow";
 import { runFields, entryFields } from "./lib/questionImportProtocol";
+import {
+  blueprintConfiguration,
+  blueprintState,
+} from "./lib/blueprintValidation";
 
 export default defineSchema({
   questionImportRuns: defineTable(runFields)
@@ -122,6 +126,50 @@ export default defineSchema({
       "entityId",
       "occurredAt",
     ]),
+  // Immutable once active: replacements archive the predecessor and create a
+  // new version instead of editing a served configuration.
+  blueprintVersions: defineTable({
+    blueprintId: v.string(),
+    level: examLevel,
+    state: blueprintState,
+    revision: v.number(),
+    taxonomyVersionId: v.id("taxonomyVersions"),
+    configuration: v.optional(blueprintConfiguration),
+    contentHash: v.optional(v.string()),
+    // Hashed under this stored format; format 1 is legacy, format 2 binds identity.
+    configurationFormatVersion: v.optional(v.number()),
+    createdBy: v.id("users"),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+    activatedBy: v.optional(v.id("users")),
+    activatedAt: v.optional(v.number()),
+    archivedAt: v.optional(v.number()),
+  })
+    .index("by_blueprintId", ["blueprintId"])
+    .index("by_level_and_state_and_createdAt", ["level", "state", "createdAt"])
+    .index("by_level_and_createdAt", ["level", "createdAt"])
+    .index("by_state_and_createdAt", ["state", "createdAt"])
+    .index("by_createdAt", ["createdAt"]),
+  // One current blueprint per level.
+  activeBlueprints: defineTable({
+    level: examLevel,
+    blueprintVersionId: v.id("blueprintVersions"),
+    activatedBy: v.id("users"),
+    activatedAt: v.number(),
+  }).index("by_level", ["level"]),
+  // Insert-only copies consumed by attempts; never updated or deleted.
+  blueprintSnapshots: defineTable({
+    level: examLevel,
+    blueprintVersionId: v.id("blueprintVersions"),
+    blueprintId: v.string(),
+    taxonomyVersionId: v.id("taxonomyVersions"),
+    configurationFormatVersion: v.number(),
+    configuration: blueprintConfiguration,
+    contentHash: v.string(),
+    createdAt: v.number(),
+  })
+    .index("by_blueprintVersionId", ["blueprintVersionId"])
+    .index("by_level_and_createdAt", ["level", "createdAt"]),
   users: defineTable({
     tokenIdentifier: v.string(),
     role: userRole,
