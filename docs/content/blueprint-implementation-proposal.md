@@ -125,8 +125,10 @@ version, invalid configuration, incomplete draft, archived taxonomy or mismatche
 content hash fails closed without a partial write. Reading an active pointer also
 verifies that the pointed version is active, belongs to the requested level and
 has its configuration, hash and format version; duplicate pointers for one level
-also fail closed. Activation reuses that validated pointer lookup before
-archiving, so a corrupted pointer cannot archive another level's active version.
+also fail closed. A missing pointer with an active version for that level fails
+closed rather than letting activation create a second active blueprint. Activation
+reuses that validated pointer lookup before archiving, so a corrupted pointer
+cannot archive another level's active version.
 
 ## Initial fixture and tests
 
@@ -154,6 +156,8 @@ guideline now that the regenerated bindings include the blueprint module. Cover:
   activation without changing either level.
 - Duplicate active pointers rejected deterministically instead of raising a raw
   multiple-documents error.
+- A lost active pointer with an orphaned active version rejected on read,
+  snapshot creation and activation without creating a second active version.
 - Persisted format versions drive activation verification and snapshot labelling,
   including a legacy format 1 version that still activates and snapshots while
   the current save format is 2, and identity binding that rejects a repointed
