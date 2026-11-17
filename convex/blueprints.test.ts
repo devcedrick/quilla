@@ -769,6 +769,67 @@ describe("blueprints", () => {
     ).toHaveLength(2);
   });
 
+  it("rejects orphaned active versions when the pointer is missing", async () => {
+    const { admin, t } = await setup();
+    const taxonomy = await sealedTaxonomy(admin);
+    const active = await saveDraft(admin, "professional", taxonomy.id);
+    await activate(admin, active.id, active.revision);
+    await t.run(async (ctx) => {
+      const pointer = await ctx.db
+        .query("activeBlueprints")
+        .withIndex("by_level", (q) => q.eq("level", "professional"))
+        .unique();
+      if (!pointer) throw new Error("Missing professional pointer");
+      await ctx.db.delete("activeBlueprints", pointer._id);
+    });
+
+    await expect(
+      admin.query(api.blueprints.getActive, { level: "professional" }),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    await expect(
+      t.run((ctx) => createBlueprintSnapshot(ctx, "professional")),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+
+    const replacement = await saveDraft(
+      admin,
+      "professional",
+      taxonomy.id,
+      "cse-professional-2028-v4",
+    );
+    await expect(
+      activate(admin, replacement.id, replacement.revision),
+    ).rejects.toMatchObject({
+      data: { code: "ACTIVE_BLUEPRINT_INCONSISTENT" },
+    });
+    expect(
+      await admin.query(api.blueprints.getVersion, {
+        blueprintVersionId: replacement.id,
+      }),
+    ).toMatchObject({ state: "draft", revision: replacement.revision });
+    expect(
+      await t.run((ctx) =>
+        ctx.db
+          .query("activeBlueprints")
+          .withIndex("by_level", (q) => q.eq("level", "professional"))
+          .collect(),
+      ),
+    ).toHaveLength(0);
+    expect(
+      await t.run((ctx) =>
+        ctx.db
+          .query("blueprintVersions")
+          .withIndex("by_level_and_state_and_createdAt", (q) =>
+            q.eq("level", "professional").eq("state", "active"),
+          )
+          .collect(),
+      ),
+    ).toHaveLength(1);
+  });
+
   it("rejects duplicate draft identities without a raw index error", async () => {
     const { admin, t, adminId } = await setup();
     const taxonomy = await sealedTaxonomy(admin);
