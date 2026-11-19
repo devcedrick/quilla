@@ -12,19 +12,15 @@ import { examLevel } from "./lib/preparation";
 import { canonical } from "./lib/questionContent";
 import {
   blueprintConfiguration,
-  blueprintConfigurationFormatVersion,
-  blueprintContentHash,
   blueprintError,
   blueprintState,
-  normalizeBlueprintConfiguration,
-  validateBlueprintConfiguration,
   validateBlueprintIdentifier,
-  type BlueprintConfiguration,
 } from "./lib/blueprintValidation";
 import {
+  activateBlueprintVersion,
   loadActiveBlueprint,
   loadSealedTaxonomy,
-  verifyBlueprintContentHash,
+  prepareBlueprintConfiguration,
 } from "./lib/blueprints";
 
 const expected = {
@@ -118,31 +114,21 @@ export const saveConfiguration = mutation({
   returns: v.number(),
   handler: async (ctx, args) => {
     const version = await editable(ctx, args);
-    const configuration = normalizeBlueprintConfiguration(args.configuration);
-    const taxonomy = await loadSealedTaxonomy(ctx, version.taxonomyVersionId);
-    validateBlueprintConfiguration(version.level, taxonomy.rows, configuration);
-    const contentHash = await blueprintContentHash(
-      blueprintConfigurationFormatVersion,
-      version.level,
-      version.taxonomyVersionId,
-      configuration,
-      {
-        blueprintVersionId: version._id,
-        blueprintId: version.blueprintId,
-      },
+    const prepared = await prepareBlueprintConfiguration(
+      ctx,
+      version,
+      args.configuration,
     );
     if (
       version.configuration &&
       version.configurationFormatVersion ===
-        blueprintConfigurationFormatVersion &&
-      version.contentHash === contentHash &&
-      canonical(version.configuration) === canonical(configuration)
+        prepared.configurationFormatVersion &&
+      version.contentHash === prepared.contentHash &&
+      canonical(version.configuration) === canonical(prepared.configuration)
     )
       return version.revision;
     await ctx.db.patch("blueprintVersions", version._id, {
-      configuration,
-      contentHash,
-      configurationFormatVersion: blueprintConfigurationFormatVersion,
+      ...prepared,
       revision: version.revision + 1,
       updatedAt: Date.now(),
     });
@@ -161,9 +147,9 @@ export const saveConfiguration = mutation({
         : null,
       after: {
         revision: version.revision + 1,
-        contentHash,
-        configurationFormatVersion: blueprintConfigurationFormatVersion,
-        configuration,
+        contentHash: prepared.contentHash,
+        configurationFormatVersion: prepared.configurationFormatVersion,
+        configuration: prepared.configuration,
       },
     });
     return version.revision + 1;
@@ -177,91 +163,8 @@ export const activateVersion = mutation({
   handler: async (ctx, args) => {
     const actor = await requireAdmin(ctx);
     const version = await editable(ctx, args);
-    if (
-      !version.configuration ||
-      !version.contentHash ||
-      version.configurationFormatVersion === undefined
-    )
-      blueprintError("INCOMPLETE_BLUEPRINT");
-    const configuration: BlueprintConfiguration = version.configuration;
-    const storedHash = version.contentHash;
-    const storedFormatVersion = version.configurationFormatVersion;
-    const taxonomy = await loadSealedTaxonomy(ctx, version.taxonomyVersionId);
-    validateBlueprintConfiguration(version.level, taxonomy.rows, configuration);
-    await verifyBlueprintContentHash(
-      storedFormatVersion,
-      version.level,
-      version.taxonomyVersionId,
-      configuration,
-      storedHash,
-      {
-        blueprintVersionId: version._id,
-        blueprintId: version.blueprintId,
-      },
-    );
-
-    const now = Date.now();
-    const previous = await loadActiveBlueprint(ctx, version.level);
-    if (previous) {
-      const superseded = previous.version;
-      await ctx.db.patch("blueprintVersions", superseded._id, {
-        state: "archived",
-        revision: superseded.revision + 1,
-        updatedAt: now,
-        archivedAt: now,
-      });
-      await ctx.db.patch("activeBlueprints", previous.pointer._id, {
-        blueprintVersionId: version._id,
-        activatedBy: actor._id,
-        activatedAt: now,
-      });
-      await appendAdminAudit(ctx, {
-        entityType: "blueprint_version",
-        entityId: superseded._id,
-        action: "supersede",
-        before: {
-          state: "active",
-          revision: superseded.revision,
-        },
-        after: {
-          state: "archived",
-          revision: superseded.revision + 1,
-          supersededBy: version._id,
-        },
-      });
-    } else {
-      await ctx.db.insert("activeBlueprints", {
-        level: version.level,
-        blueprintVersionId: version._id,
-        activatedBy: actor._id,
-        activatedAt: now,
-      });
-    }
-    await ctx.db.patch("blueprintVersions", version._id, {
-      state: "active",
-      revision: version.revision + 1,
-      updatedAt: now,
-      activatedBy: actor._id,
-      activatedAt: now,
-    });
-    await appendAdminAudit(ctx, {
-      entityType: "blueprint_version",
-      entityId: version._id,
-      action: "activate",
-      before: {
-        state: "draft",
-        revision: version.revision,
-        contentHash: storedHash,
-        configurationFormatVersion: storedFormatVersion,
-      },
-      after: {
-        state: "active",
-        revision: version.revision + 1,
-        configurationFormatVersion: storedFormatVersion,
-        previousActiveVersionId: previous?.version._id ?? null,
-      },
-    });
-    return version.revision + 1;
+    const activation = await activateBlueprintVersion(ctx, version, actor);
+    return activation.revision;
   },
 });
 

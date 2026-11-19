@@ -1,9 +1,13 @@
 import type { MutationCtx, QueryCtx } from "../_generated/server";
-import type { Id } from "../_generated/dataModel";
+import type { Doc, Id } from "../_generated/dataModel";
+import { appendActorAudit } from "./audit";
 import { loadCatalog, validateCatalog } from "./taxonomy";
 import {
+  blueprintConfigurationFormatVersion,
   blueprintContentHash,
   blueprintError,
+  normalizeBlueprintConfiguration,
+  validateBlueprintConfiguration,
   type BlueprintConfiguration,
   type BlueprintHashIdentity,
   type BlueprintLevel,
@@ -90,6 +94,136 @@ export async function verifyBlueprintContentHash(
     )) !== contentHash
   )
     blueprintError("CONTENT_HASH_MISMATCH");
+}
+
+/**
+ * Normalize, validate and hash one configuration for its exact version.
+ * The admin save path and the internal seed installer share this helper so
+ * validation and hashing can never diverge between them.
+ */
+export async function prepareBlueprintConfiguration(
+  ctx: DatabaseReader,
+  version: Doc<"blueprintVersions">,
+  configuration: BlueprintConfiguration,
+) {
+  const normalized = normalizeBlueprintConfiguration(configuration);
+  const taxonomy = await loadSealedTaxonomy(ctx, version.taxonomyVersionId);
+  validateBlueprintConfiguration(version.level, taxonomy.rows, normalized);
+  const contentHash = await blueprintContentHash(
+    blueprintConfigurationFormatVersion,
+    version.level,
+    version.taxonomyVersionId,
+    normalized,
+    {
+      blueprintVersionId: version._id,
+      blueprintId: version.blueprintId,
+    },
+  );
+  return {
+    configuration: normalized,
+    contentHash,
+    configurationFormatVersion: blueprintConfigurationFormatVersion,
+  };
+}
+
+/**
+ * Revalidate one stored configuration, freeze it active, and atomically move
+ * the per-level pointer. A prior active version is archived with its
+ * configuration and hash untouched; nothing is deleted.
+ */
+export async function activateBlueprintVersion(
+  ctx: MutationCtx,
+  version: Doc<"blueprintVersions">,
+  actor: Doc<"users">,
+) {
+  if (
+    !version.configuration ||
+    !version.contentHash ||
+    version.configurationFormatVersion === undefined
+  )
+    blueprintError("INCOMPLETE_BLUEPRINT");
+  const configuration: BlueprintConfiguration = version.configuration;
+  const storedHash = version.contentHash;
+  const storedFormatVersion = version.configurationFormatVersion;
+  const taxonomy = await loadSealedTaxonomy(ctx, version.taxonomyVersionId);
+  validateBlueprintConfiguration(version.level, taxonomy.rows, configuration);
+  await verifyBlueprintContentHash(
+    storedFormatVersion,
+    version.level,
+    version.taxonomyVersionId,
+    configuration,
+    storedHash,
+    {
+      blueprintVersionId: version._id,
+      blueprintId: version.blueprintId,
+    },
+  );
+
+  const now = Date.now();
+  const previous = await loadActiveBlueprint(ctx, version.level);
+  if (previous) {
+    const superseded = previous.version;
+    await ctx.db.patch("blueprintVersions", superseded._id, {
+      state: "archived",
+      revision: superseded.revision + 1,
+      updatedAt: now,
+      archivedAt: now,
+    });
+    await ctx.db.patch("activeBlueprints", previous.pointer._id, {
+      blueprintVersionId: version._id,
+      activatedBy: actor._id,
+      activatedAt: now,
+    });
+    await appendActorAudit(ctx, actor, {
+      entityType: "blueprint_version",
+      entityId: superseded._id,
+      action: "supersede",
+      before: {
+        state: "active",
+        revision: superseded.revision,
+      },
+      after: {
+        state: "archived",
+        revision: superseded.revision + 1,
+        supersededBy: version._id,
+      },
+    });
+  } else {
+    await ctx.db.insert("activeBlueprints", {
+      level: version.level,
+      blueprintVersionId: version._id,
+      activatedBy: actor._id,
+      activatedAt: now,
+    });
+  }
+  await ctx.db.patch("blueprintVersions", version._id, {
+    state: "active",
+    revision: version.revision + 1,
+    updatedAt: now,
+    activatedBy: actor._id,
+    activatedAt: now,
+  });
+  await appendActorAudit(ctx, actor, {
+    entityType: "blueprint_version",
+    entityId: version._id,
+    action: "activate",
+    before: {
+      state: "draft",
+      revision: version.revision,
+      contentHash: storedHash,
+      configurationFormatVersion: storedFormatVersion,
+    },
+    after: {
+      state: "active",
+      revision: version.revision + 1,
+      configurationFormatVersion: storedFormatVersion,
+      previousActiveVersionId: previous?.version._id ?? null,
+    },
+  });
+  return {
+    revision: version.revision + 1,
+    previousActiveVersionId: previous?.version._id ?? null,
+  };
 }
 
 /**
