@@ -3,9 +3,11 @@ import os from "node:os";
 import { describe, it, expect, vi } from "vitest";
 import {
   applyBootstrap,
+  blueprintSummary,
   bootstrapErrorCode,
   bootstrapSummary,
   commandBatches,
+  installBlueprints,
   installTaxonomy,
   isTransientBootstrapError,
   parseBootstrapArgs,
@@ -16,11 +18,16 @@ import {
   runConvex,
   selectDeployment,
   taxonomySummary,
+  verifyBlueprints,
   verifyBootstrapPlan,
   verifyFrozenBootstrapPlan,
   verifyTaxonomy,
 } from "./bootstrap-question-bank.mjs";
-import { seedTaxonomyPolicy } from "../lib/question-import-contract.mjs";
+import {
+  approvedImportTargets,
+  seedBlueprintPolicy,
+  seedTaxonomyPolicy,
+} from "../lib/question-import-contract.mjs";
 
 const policy = {
   families: 2,
@@ -407,6 +414,8 @@ describe("operator arguments", () => {
       "--rollback",
       "--install-taxonomy",
       "--verify-taxonomy",
+      "--install-blueprints",
+      "--verify-blueprints",
     ])
       expect(requiresDeployment({ [mode]: true })).toBe(true);
   });
@@ -460,6 +469,74 @@ describe("operator arguments", () => {
       ["--install-taxonomy", "--target", "quilla-dev", "--reason", "x"],
       ["--install-taxonomy", "--prod", "--target", "quilla-dev"],
       ["--install-taxonomy", "--deployment", "prod", "--target", "quilla-dev"],
+    ])
+      expect(() => parseBootstrapArgs(args)).toThrow(
+        "BOOTSTRAP_INVALID_ARGUMENTS",
+      );
+  });
+  it("parses blueprint installation and verification modes", () => {
+    for (const mode of ["--install-blueprints", "--verify-blueprints"])
+      expect(
+        parseBootstrapArgs([
+          mode,
+          "--target",
+          "quilla-dev",
+          "--deployment",
+          "development",
+        ]),
+      ).toMatchObject({ [mode]: true, "--target": "quilla-dev" });
+    expect(
+      parseBootstrapArgs([
+        "--verify-blueprints",
+        "--prod",
+        "--confirm-production",
+        "--target",
+        "quilla-dev",
+      ]),
+    ).toMatchObject({ "--verify-blueprints": true, "--prod": true });
+    for (const args of [
+      ["--install-blueprints"],
+      ["--install-blueprints", "--verify-blueprints", "--target", "quilla-dev"],
+      ["--install-blueprints", "--install-taxonomy", "--target", "quilla-dev"],
+      [
+        "--verify-blueprints",
+        "--status",
+        "--target",
+        "quilla-dev",
+        "--run",
+        "run-1",
+      ],
+      [
+        "--install-blueprints",
+        "--target",
+        "quilla-dev",
+        "--expect-plan",
+        planChecksum,
+      ],
+      ["--install-blueprints", "--target", "quilla-dev", "--run", "run-1"],
+      [
+        "--install-blueprints",
+        "--target",
+        "quilla-dev",
+        "--resume-run",
+        "run-1",
+      ],
+      [
+        "--install-blueprints",
+        "--target",
+        "quilla-dev",
+        "--checkpoint",
+        "checkpoint.json",
+      ],
+      ["--install-blueprints", "--target", "quilla-dev", "--reason", "x"],
+      ["--install-blueprints", "--prod", "--target", "quilla-dev"],
+      [
+        "--install-blueprints",
+        "--deployment",
+        "prod",
+        "--target",
+        "quilla-dev",
+      ],
     ])
       expect(() => parseBootstrapArgs(args)).toThrow(
         "BOOTSTRAP_INVALID_ARGUMENTS",
@@ -552,6 +629,114 @@ describe("operator summary", () => {
     });
     expect(mismatched).toContain("does not match the reviewed sealed catalog");
   });
+  it("reports blueprint installation, rerun, and verification with the boundary", () => {
+    const counts = {
+      scoredItems: 150,
+      durationMinutes: 168,
+      passingScore: 120,
+      cells: 15,
+      languages: 5,
+      concepts: 9,
+    };
+    const installedLevel = {
+      blueprintId: "cse-professional-2027-v3",
+      level: "professional",
+      blueprintVersionId: "version-1",
+      revision: 3,
+      state: "active",
+      configurationHash: "a".repeat(64),
+      counts,
+      supersededVersionId: null,
+    };
+    const installed = blueprintSummary({
+      mode: "blueprint-install",
+      target: "quilla-dev",
+      created: true,
+      taxonomyVersionId: "taxonomy-1",
+      fixtureDigest: seedBlueprintPolicy.digest,
+      levels: [installedLevel],
+    });
+    expect(installed).toContain(
+      "installed and activated 1 approved v3 blueprints",
+    );
+    expect(installed).toContain("revision 3");
+    expect(installed).toContain("150 items/168 min/120 passing");
+    expect(installed).toContain(
+      "No questions, references, assets, taxonomy entries, or attempt snapshots were written.",
+    );
+    expect(installed).toContain("not content approval");
+    const rerun = blueprintSummary({
+      mode: "blueprint-install",
+      target: "quilla-dev",
+      created: false,
+      taxonomyVersionId: "taxonomy-1",
+      fixtureDigest: seedBlueprintPolicy.digest,
+      levels: [installedLevel],
+    });
+    expect(rerun).toContain("already active");
+    expect(rerun).toContain("no writes performed");
+
+    const verifiedLevel = {
+      level: "professional",
+      expectedBlueprintId: "cse-professional-2027-v3",
+      present: true,
+      versionIds: ["version-1"],
+      duplicateVersions: false,
+      state: "active",
+      revision: 3,
+      active: true,
+      sealed: true,
+      configurationFormatVersion: 2,
+      contentHash: "a".repeat(64),
+      hashMatches: true,
+      configurationMatches: true,
+      taxonomyMatches: true,
+      counts,
+      expectedCounts: counts,
+      pointerVersionId: "version-1",
+      pointerConsistent: true,
+      systemAttributed: true,
+      matchesExpected: true,
+    };
+    const verified = blueprintSummary({
+      mode: "blueprint-verify",
+      target: "quilla-dev",
+      matchesExpected: true,
+      taxonomyId: "cse-taxonomy-2027-v2",
+      taxonomyVersionId: "taxonomy-1",
+      taxonomyMatchesExpected: true,
+      fixtureDigestMatches: true,
+      levels: [verifiedLevel],
+    });
+    expect(verified).toContain("match the reviewed v3 fixture");
+    expect(verified).toContain("state=active");
+    expect(verified).toContain("sealed=true");
+    expect(verified).toContain("No writes performed.");
+    expect(verified).toContain("not content approval");
+
+    const mismatched = blueprintSummary({
+      mode: "blueprint-verify",
+      target: "quilla-dev",
+      matchesExpected: false,
+      taxonomyId: "cse-taxonomy-2027-v2",
+      taxonomyVersionId: "taxonomy-1",
+      taxonomyMatchesExpected: true,
+      fixtureDigestMatches: false,
+      levels: [
+        {
+          ...verifiedLevel,
+          contentHash: "b".repeat(64),
+          sealed: false,
+          hashMatches: false,
+          matchesExpected: false,
+        },
+      ],
+    });
+    expect(mismatched).toContain("do not match the reviewed v3 fixture");
+    expect(mismatched).toContain(
+      "Deployed fixture digest does not match the pinned digest.",
+    );
+  });
 });
 
 describe("convex transport", () => {
@@ -628,6 +813,10 @@ describe("convex transport", () => {
       "INVALID_AUDIT_DATA",
       "TAXONOMY_CATALOG_MISMATCH",
       "TAXONOMY_VERSION_CONFLICT",
+      "BLUEPRINT_FIXTURE_MISMATCH",
+      "BLUEPRINT_TAXONOMY_MISMATCH",
+      "BLUEPRINT_VERSION_CONFLICT",
+      "ACTIVE_BLUEPRINT_INCONSISTENT",
     ]) {
       try {
         runConvex(
@@ -730,6 +919,94 @@ describe("taxonomy installation transport", () => {
       code: "BOOTSTRAP_INVALID_ARGUMENTS",
     });
     await expect(verifyTaxonomy(client, "")).rejects.toMatchObject({
+      code: "BOOTSTRAP_INVALID_ARGUMENTS",
+    });
+    expect(client.mutation).not.toHaveBeenCalled();
+    expect(client.query).not.toHaveBeenCalled();
+  });
+});
+
+describe("blueprint installation transport", () => {
+  it("keeps production unregistered", () => {
+    expect(approvedImportTargets).toEqual({
+      "quilla-dev": "https://perceptive-dodo-136.ap-southeast-2.convex.cloud",
+    });
+  });
+  it("sends the pinned fixture digest to the internal installer", async () => {
+    const client = {
+      mutation: vi.fn(async () => ({
+        created: true,
+        levels: [],
+      })),
+    };
+    await expect(
+      installBlueprints(client, "quilla-dev", { sleep: async () => {} }),
+    ).resolves.toMatchObject({ created: true });
+    expect(client.mutation).toHaveBeenCalledWith("install", {
+      target: "quilla-dev",
+      fixtureDigest: seedBlueprintPolicy.digest,
+    });
+  });
+  it("retries a transient installer failure", async () => {
+    let attempts = 0;
+    const client = {
+      mutation: vi.fn(async () => {
+        attempts++;
+        if (attempts === 1)
+          throw Object.assign(new Error("busy"), { code: "BOOTSTRAP_BUSY" });
+        return { created: false };
+      }),
+    };
+    await expect(
+      installBlueprints(client, "quilla-dev", { sleep: async () => {} }),
+    ).resolves.toMatchObject({ created: false });
+    expect(attempts).toBe(2);
+  });
+  it("reads verification through the internal query", async () => {
+    const client = {
+      query: vi.fn(async () => ({
+        expectedFixtureDigest: seedBlueprintPolicy.digest,
+        fixtureDigestMatches: true,
+        matchesExpected: true,
+      })),
+    };
+    await expect(verifyBlueprints(client, "quilla-dev")).resolves.toMatchObject(
+      { matchesExpected: true },
+    );
+    expect(client.query).toHaveBeenCalledWith("verify", {
+      target: "quilla-dev",
+    });
+  });
+  it("rejects deployed fixture-digest skew", async () => {
+    await expect(
+      verifyBlueprints(
+        {
+          query: async () => ({
+            expectedFixtureDigest: "f".repeat(64),
+            fixtureDigestMatches: true,
+          }),
+        },
+        "quilla-dev",
+      ),
+    ).rejects.toMatchObject({ code: "BLUEPRINT_FIXTURE_MISMATCH" });
+    await expect(
+      verifyBlueprints(
+        {
+          query: async () => ({
+            expectedFixtureDigest: seedBlueprintPolicy.digest,
+            fixtureDigestMatches: false,
+          }),
+        },
+        "quilla-dev",
+      ),
+    ).rejects.toMatchObject({ code: "BLUEPRINT_FIXTURE_MISMATCH" });
+  });
+  it("rejects a missing target before invoking the deployment", async () => {
+    const client = { mutation: vi.fn(), query: vi.fn() };
+    await expect(installBlueprints(client, "")).rejects.toMatchObject({
+      code: "BOOTSTRAP_INVALID_ARGUMENTS",
+    });
+    await expect(verifyBlueprints(client, "")).rejects.toMatchObject({
       code: "BOOTSTRAP_INVALID_ARGUMENTS",
     });
     expect(client.mutation).not.toHaveBeenCalled();
