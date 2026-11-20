@@ -13,6 +13,7 @@ import {
 } from "./questionContent";
 import { validateAssetId } from "./questionAssetMetadata";
 import { questionWorkflowError as fail } from "./questionWorkflow";
+import { buildReferenceScopeFields } from "./questionSearchProjection";
 
 type ReferenceContentInput = Omit<Infer<typeof referenceContent>, "blocks"> & {
   blocks: Array<
@@ -119,6 +120,7 @@ export async function createReferenceDraft(
     fail("CONTENT_CONFLICT");
   const id = await ctx.db.insert("questionReferenceVersions", {
     ...input,
+    ...buildReferenceScopeFields(input.content),
     contentHash,
     creatorId: actor._id,
     createdAt: Date.now(),

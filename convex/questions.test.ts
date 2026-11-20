@@ -11,6 +11,7 @@ import { initialV2Catalog } from "./lib/taxonomyCatalog";
 import type { QuestionContent } from "./lib/questionContent";
 import { importQuestionDraft } from "./lib/questionImports";
 import { createReferenceDraft } from "./lib/questionReferenceDrafts";
+import { buildQuestionSearchProjection } from "./lib/questionSearchProjection";
 import { loadPublishedQuestion } from "./lib/questionServing";
 const { api, createTest } = defineTestApp({ schema }).defineModules({
   questions,
@@ -135,6 +136,11 @@ describe("question lifecycle", () => {
             createdAt: 0,
             state: "draft",
             workflowRevision: 1,
+            ...buildQuestionSearchProjection(
+              content,
+              `overflow-${i}`,
+              original.contributorId,
+            ),
           });
         }
       });
@@ -684,6 +690,21 @@ describe("question lifecycle", () => {
             paginationOpts: { numItems: 1, cursor: null },
           }),
         () =>
+          caller.query(api.questions.listAdminQuestionVersions, {
+            questionId: version.questionId,
+          }),
+        () => caller.query(api.questions.listAdminAuthoringOptions, {}),
+        () =>
+          caller.query(api.questionReferences.listAdminOptions, {
+            family: 1,
+            module: "shared-core",
+            language: "english",
+          }),
+        () =>
+          caller.query(api.questionReferences.getAdminPreview, {
+            referenceVersionId: "not-an-id",
+          }),
+        () =>
           caller.mutation(api.questionReferences.createReferenceVersion, {
             referenceId: "denied",
             expectedLatestVersion: 0,
@@ -832,5 +853,287 @@ describe("question lifecycle", () => {
         bytes,
       }),
     ).rejects.toThrow();
+  });
+});
+describe("admin question bank queries", () => {
+  async function bankFixture() {
+    const base = await setup();
+    const q2 = await base.author.mutation(api.questions.createDraft, {
+      questionId: "q2-verbal",
+      content: {
+        ...content,
+        family: 2,
+        subjectId: "verbal_ability",
+        subtopicId: "vocabulary",
+        conceptId: "vocabulary_questions",
+        difficulty: "hard",
+        stem: "Which word means plentiful?",
+        choices: [
+          { choiceId: "a", text: "Ample" },
+          { choiceId: "b", text: "Narrow" },
+        ],
+        explanation: "Ample means plentiful in this context.",
+        provenance: {
+          kind: "licensed",
+          author: "fixture two",
+          assistance: "test only",
+          sources: ["Fixture licence"],
+        },
+      },
+      taxonomyVersionId: base.taxonomy,
+    });
+    const q3 = await base.reviewer.mutation(api.questions.createDraft, {
+      questionId: "q3-reviewer",
+      content: {
+        ...content,
+        family: 3,
+        stem: "What is 4 + 4?",
+        choices: [
+          { choiceId: "a", text: "8" },
+          { choiceId: "b", text: "9" },
+        ],
+        explanation: "Four plus four is eight.",
+      },
+      taxonomyVersionId: base.taxonomy,
+    });
+    const users = await base.t.run(async (ctx) => ({
+      author: (await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|author"),
+        )
+        .unique())!,
+      reviewer: (await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|reviewer"),
+        )
+        .unique())!,
+    }));
+    return { ...base, q2, q3, users };
+  }
+  it("combines every required filter and rejects invalid values", async () => {
+    const { reviewer, users } = await bankFixture();
+    const page = await reviewer.query(api.questions.listAdminVersions, {
+      state: "draft",
+      family: 1,
+      module: "shared-core",
+      subjectId: "numerical_ability",
+      subtopicId: "numerical_reasoning",
+      conceptId: "numerical_reasoning",
+      difficulty: "easy",
+      language: "english",
+      level: "subprofessional",
+      origin: "synthetic",
+      contributorId: users.author._id,
+      questionId: "q1",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(page.page.map((version) => version.canonicalQuestionId)).toEqual([
+      "q1",
+    ]);
+    expect(page.isDone).toBe(true);
+    const byContributor = await reviewer.query(
+      api.questions.listAdminVersions,
+      {
+        contributorId: users.reviewer._id,
+        paginationOpts: { numItems: 10, cursor: null },
+      },
+    );
+    expect(
+      byContributor.page.map((version) => version.canonicalQuestionId),
+    ).toEqual(["q3-reviewer"]);
+    const byCanonicalId = await reviewer.query(
+      api.questions.listAdminVersions,
+      {
+        questionId: "q2-verbal",
+        paginationOpts: { numItems: 10, cursor: null },
+      },
+    );
+    expect(
+      byCanonicalId.page.map((version) => version.canonicalQuestionId),
+    ).toEqual(["q2-verbal"]);
+    const noMatch = await reviewer.query(api.questions.listAdminVersions, {
+      state: "published",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(noMatch.page).toHaveLength(0);
+    for (const invalid of [
+      { family: 0 },
+      { subjectId: "Not A Key" },
+      { questionId: "x".repeat(101) },
+      { contributorId: "not-an-id" },
+    ])
+      await expect(
+        reviewer.query(api.questions.listAdminVersions, {
+          ...invalid,
+          paginationOpts: { numItems: 10, cursor: null },
+        }),
+      ).rejects.toMatchObject({ data: { code: "VALIDATION_FAILED" } });
+    await expect(
+      reviewer.query(api.questions.listAdminVersions, {
+        paginationOpts: { numItems: 0, cursor: null },
+      }),
+    ).rejects.toMatchObject({ data: { code: "INVALID_PAGE_SIZE" } });
+  });
+  it("searches the admin projection while applying index filters", async () => {
+    const { author, reviewer } = await bankFixture();
+    const found = await reviewer.query(api.questions.listAdminVersions, {
+      search: "plentiful",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(found.page.map((version) => version.canonicalQuestionId)).toEqual([
+      "q2-verbal",
+    ]);
+    const excluded = await author.query(api.questions.listAdminVersions, {
+      search: "plentiful",
+      origin: "synthetic",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(excluded.page).toHaveLength(0);
+    const stem = await reviewer.query(api.questions.listAdminVersions, {
+      search: "eight",
+      difficulty: "easy",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(stem.page.map((version) => version.canonicalQuestionId)).toEqual([
+      "q3-reviewer",
+    ]);
+  });
+  it("returns immutable version history and authoring options", async () => {
+    const { t, author, reviewer, taxonomy, versionId } = await setup();
+    const version = (await t.run((ctx) =>
+      ctx.db.get("questionVersions", versionId),
+    ))!;
+    const question = (await t.run((ctx) =>
+      ctx.db.get("questions", version.questionId),
+    ))!;
+    const revisionId = await author.mutation(api.questions.createRevision, {
+      questionId: question._id,
+      expectedCanonicalRevision: question.revision,
+      content: {
+        ...content,
+        stem: "What is 3 + 3?",
+        choices: [
+          { choiceId: "a", text: "6" },
+          { choiceId: "b", text: "7" },
+        ],
+        explanation: "Three plus three is six.",
+      },
+      taxonomyVersionId: taxonomy,
+    });
+    const history = await reviewer.query(
+      api.questions.listAdminQuestionVersions,
+      { questionId: question._id },
+    );
+    expect(history!.versions.map((item) => item._id)).toEqual([
+      revisionId,
+      version._id,
+    ]);
+    expect(history!.versions.map((item) => item.version)).toEqual([2, 1]);
+    expect(history!.versions[0].contributorId).toBe(question.contributorId);
+    expect(history!.overflow).toBe(false);
+    const context = await reviewer.query(api.questions.getAdminVersion, {
+      questionVersionId: revisionId,
+    });
+    expect(context!.taxonomy?._id).toBe(taxonomy);
+    expect(
+      await reviewer.query(api.questions.getAdminVersion, {
+        questionVersionId: "not-a-version",
+      }),
+    ).toBeNull();
+    const options = await reviewer.query(
+      api.questions.listAdminAuthoringOptions,
+      {},
+    );
+    expect(options.selected?._id).toBe(taxonomy);
+    expect(options.catalogs.map((catalog) => catalog._id)).toEqual([taxonomy]);
+    expect(options.entries.length).toBeGreaterThan(0);
+    const draftTaxonomy = await t.run(async (ctx) =>
+      ctx.db.insert("taxonomyVersions", {
+        taxonomyId: "cse-taxonomy-draft",
+        state: "draft",
+        revision: 1,
+        createdBy: question.contributorId,
+        createdAt: 0,
+        updatedAt: 0,
+      }),
+    );
+    await expect(
+      reviewer.query(api.questions.listAdminAuthoringOptions, {
+        taxonomyVersionId: draftTaxonomy,
+      }),
+    ).rejects.toMatchObject({ data: { code: "TAXONOMY_UNAVAILABLE" } });
+  });
+  it("deduplicates scoped reference options and verifies preview integrity", async () => {
+    const { t, author, reviewer } = await setup();
+    const reference = {
+      family: 1,
+      module: "shared-core" as const,
+      language: "english" as const,
+      title: "Passage v1",
+      provenance: content.provenance,
+      blocks: [{ type: "text" as const, text: "First passage" }],
+    };
+    await author.mutation(api.questionReferences.createReferenceVersion, {
+      referenceId: "passage",
+      expectedLatestVersion: 0,
+      content: reference,
+    });
+    const latest = await author.mutation(
+      api.questionReferences.createReferenceVersion,
+      {
+        referenceId: "passage",
+        expectedLatestVersion: 1,
+        content: { ...reference, title: "Passage v2" },
+      },
+    );
+    await author.mutation(api.questionReferences.createReferenceVersion, {
+      referenceId: "other-module",
+      expectedLatestVersion: 0,
+      content: {
+        ...reference,
+        module: "professional-numerical",
+        title: "Numerical reference",
+      },
+    });
+    await author.mutation(api.questionReferences.createReferenceVersion, {
+      referenceId: "other-family",
+      expectedLatestVersion: 0,
+      content: { ...reference, family: 2, title: "Other family" },
+    });
+    const options = await reviewer.query(
+      api.questionReferences.listAdminOptions,
+      { family: 1, module: "shared-core", language: "english" },
+    );
+    expect(options.overflow).toBe(false);
+    expect(options.options).toHaveLength(1);
+    expect(options.options[0]).toMatchObject({
+      referenceVersionId: latest,
+      referenceId: "passage",
+      version: 2,
+      title: "Passage v2",
+    });
+    const preview = await reviewer.query(
+      api.questionReferences.getAdminPreview,
+      { referenceVersionId: latest },
+    );
+    expect(preview!.reference.content.title).toBe("Passage v2");
+    expect(preview!.assets).toEqual([]);
+    expect(
+      await reviewer.query(api.questionReferences.getAdminPreview, {
+        referenceVersionId: "not-a-reference",
+      }),
+    ).toBeNull();
+    await t.run((ctx) =>
+      ctx.db.patch("questionReferenceVersions", latest, {
+        contentHash: "0".repeat(64),
+      }),
+    );
+    await expect(
+      reviewer.query(api.questionReferences.getAdminPreview, {
+        referenceVersionId: latest,
+      }),
+    ).rejects.toMatchObject({ data: { code: "CONTENT_CONFLICT" } });
   });
 });
