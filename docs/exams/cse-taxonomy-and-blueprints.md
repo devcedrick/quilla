@@ -233,7 +233,7 @@ the initial blueprint. No EDQ items, time or responses are part of that
 configuration. A future EDQ-enabled configuration requires a new immutable
 blueprint version and may use only the `unscored` mode; EDQ responses never
 contribute to the score, passing reference, mastery or readiness. A `scored` EDQ
-mode is invalid. [ADR 0027](../ADR/0027-attempt-lifecycle-and-questionnaire-policy.md)
+mode is invalid. [ADR 0029](../ADR/0029-attempt-lifecycle-and-questionnaire-policy.md)
 defines the lifecycle and unscored guarantee.
 
 ### Difficulty cells
@@ -340,7 +340,7 @@ cycle, reviewer, and outcome.
 - Changes to Quilla-authored allocations, difficulty cells, coverage gates,
   shortage behavior, or EDQ policy also require a new blueprint version and an
   architecture decision when they materially alter this policy; questionnaire
-  modes follow [ADR 0027](../ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
+  modes follow [ADR 0029](../ADR/0029-attempt-lifecycle-and-questionnaire-policy.md).
 - Official facts and Quilla-authored policy fields must remain distinguishable
   in documentation and future storage contracts.
 

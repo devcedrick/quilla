@@ -195,7 +195,7 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - Each subject receives at least three items, or the diagnostic is blocked with an actionable coverage warning.
 - The target difficulty mix is approximately 50% easy, 35% medium, and 15% hard.
 - Progress is autosaved and submission is idempotent.
-- The diagnostic follows the shared timed-attempt lifecycle: it has a fixed server deadline, is resumable only before that deadline, and is never paused or extended. [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md) defines the transitions.
+- The diagnostic follows the shared timed-attempt lifecycle: it has a fixed server deadline, is resumable only before that deadline, and is never paused or extended. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the transitions.
 - An expired diagnostic with saved answers counts as submitted; only answered items create mastery evidence, and unanswered items remain untested. A zero-answer expiry is abandoned and does not satisfy the completion gate.
 - Diagnostic completion is tracked per learner and level. Shared mastery or a submitted diagnostic for the other level does not satisfy this requirement.
 - Submission unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
@@ -359,14 +359,14 @@ Activation requires integration of the seven initial 270-question seed families 
 - At the deadline, the server idempotently finalizes the attempt. Only answers committed before the deadline count; an answer write racing the deadline cannot add time. A repeated submission, scheduled finalizer or race returns the same terminal result.
 - An attempt with saved answers becomes `expired`: saved answers are scored, unanswered items count as incorrect, and the result is read-only. A learner submission before the deadline becomes `submitted` under the same scoring rules.
 - An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt.
-- Terminal attempts cannot accept answers, be resumed, be extended or return to `in_progress`. [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md) defines the full contract.
+- Terminal attempts cannot accept answers, be resumed, be extended or return to `in_progress`. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the full contract.
 
 ### Attempt retention and deletion
 
 - `submitted`, `expired` and `abandoned` attempts and their immutable question and blueprint snapshots are retained for the life of the account. The initial release has no time-based purge and no archive that hides them from history.
 - Learners have no control to delete an attempt, and admins cannot hard-delete an attempt or rewrite its result. This includes zero-answer `abandoned` records.
 - Account deletion or anonymization is a separate approved workflow. It may remove or de-identify the learner's identity and personal data, but it must not rewrite historical attempt results or delete shared question, reference or blueprint versions.
-- Any future purge or archival policy requires a new architecture decision and must not silently delete records under [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
+- Any future purge or archival policy requires a new architecture decision and must not silently delete records under [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md).
 
 ### Questionnaire policy
 
@@ -451,7 +451,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - `submitted` and `expired` attempts remain discoverable in the learner's attempt history and can be reopened for review any number of times for the life of the account.
 - `expired` attempts expose the same review content and scores as `submitted` attempts.
 - `abandoned` attempts remain in history with their terminal state but expose no review content, score, or answer key.
-- Learners and admins cannot delete an attempt or rewrite its result. Account deletion follows the separate de-identification workflow in [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
+- Learners and admins cannot delete an attempt or rewrite its result. Account deletion follows the separate de-identification workflow in [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md).
 - History identifies each attempt's original level and preserves its served snapshots across preference changes; the current preference does not hide attempts from the other level.
 - Review is accessible only to the attempt owner or an authorized admin, including on later visits.
 - Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
