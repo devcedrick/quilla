@@ -177,6 +177,7 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - The question bank cannot supply at least three valid items for every subject.
 - A concept has no published questions and cannot be measured.
 - The learner loses connectivity or closes the browser during the diagnostic.
+- The learner returns after the diagnostic deadline or saves no answers before it expires.
 - The learner changes levels after completing a diagnostic.
 - The assessment times out with unanswered questions.
 - A served question is edited after the assessment starts.
@@ -194,6 +195,8 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - Each subject receives at least three items, or the diagnostic is blocked with an actionable coverage warning.
 - The target difficulty mix is approximately 50% easy, 35% medium, and 15% hard.
 - Progress is autosaved and submission is idempotent.
+- The diagnostic follows the shared timed-attempt lifecycle: it has a fixed server deadline, is resumable only before that deadline, and is never paused or extended. [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md) defines the transitions.
+- An expired diagnostic with saved answers counts as submitted; only answered items create mastery evidence, and unanswered items remain untested. A zero-answer expiry is abandoned and does not satisfy the completion gate.
 - Diagnostic completion is tracked per learner and level. Shared mastery or a submitted diagnostic for the other level does not satisfy this requirement.
 - Submission unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
 - Submission creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. Retaking a diagnostic preserves prior evidence, and submission retries cannot double-count it.
@@ -349,10 +352,21 @@ Activation requires integration of the seven initial 270-question seed families 
 
 [ADR 0012](ADR/0012-clerical-alphabetizing-and-spelling.md) adds Alphabetizing (`alphabetizing`) and groups Spelling (`spelling`) under Clerical Operations (`clerical_operations`). Both are English and Subprofessional only. Spelling retains its identity and historical classifications. The general Clerical Operations concept remains; the minimum applies to all three per generated Subprofessional exam under ADR 0013, without changing the 40-item exam total or 12/20/8 cells. No additional fixed concept quota is selected. Validator and pooled selection support remain pending.
 
+### Attempt lifecycle and abandonment
+
+- A mock starts with an immutable blueprint snapshot and a fixed server deadline. Disconnecting, closing the browser, losing connectivity, switching devices, suspension, or a level-preference change never pauses or extends the deadline.
+- A learner can resume before the deadline from any authorized device with the same served questions, choice order, saved answers and deadline. No attempt is persisted before the learner starts it.
+- At the deadline, the server idempotently finalizes the attempt. Only answers committed before the deadline count; an answer write racing the deadline cannot add time. A repeated submission, scheduled finalizer or race returns the same terminal result.
+- An attempt with saved answers becomes `expired`: saved answers are scored, unanswered items count as incorrect, and the result is read-only. A learner submission before the deadline becomes `submitted` under the same scoring rules.
+- An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt.
+- Terminal attempts cannot accept answers, be resumed, be extended or return to `in_progress`. [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md) defines the full contract.
+
 ### Edge cases
 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.
 - Connectivity is lost, the tab closes, or the browser crashes during the exam.
+- The learner returns before, at, or after the deadline.
+- The deadline passes with no saved answers, or the learner attempts an empty submission.
 - The timer expires while an answer write is in flight.
 - The same submission reaches the server more than once.
 - A question is edited or archived while the attempt is active.
@@ -374,10 +388,12 @@ Activation requires integration of the seven initial 270-question seed families 
 - Professional exams exclude Clerical Ability; Subprofessional exams exclude Analytical Ability.
 - Subject distribution, difficulty mix, randomization, time limit, and passing reference come from an immutable blueprint snapshot.
 - Choice display and scoring follow section 3's shared assessment choice-order policy; saved choice order is part of the served item snapshot.
-- The server is authoritative for timing and auto-submits expired attempts.
-- Progress is autosaved and can survive a browser interruption without extending the deadline.
+- The server is authoritative for timing and idempotently finalizes expired attempts. Only answers committed before the deadline are scored.
+- Each attempt starts with a fixed server deadline and is resumable only while that deadline has not passed; interruption, suspension or a preference change never pauses or extends it.
+- Progress is autosaved and survives browser interruption on any authorized device without extending the deadline.
+- An attempt with saved answers becomes `expired` and is scored; unanswered scored items count as incorrect and the result is read-only.
+- An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned` with no result or evidence and does not count as a completed mock.
 - Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
-- Unanswered scored items count as incorrect.
 - Results show overall score, pass/fail against the blueprint reference, and subject and concept breakdowns.
 
 ## 8. Post-exam review and history
