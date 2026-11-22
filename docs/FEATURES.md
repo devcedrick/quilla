@@ -340,7 +340,7 @@ Each mock randomly selects eligible published versions from all seed families co
 
 Storage is independently owned by each seed family under `content/question-bank/family-NN/`, with its own `manifest.json`, separate topic files in `content/`, and shared material in `references/`, including images in `references/assets/`. There is no globally appended question file. [ADR 0015](ADR/0015-per-family-content-and-reference-banks.md) records this layout; it does not change pooled cross-family exam selection. Offline seed validation is implemented; pooled runtime selection and exam-feasibility validation remain pending.
 
-The initial mocks exclude the unscored 20-item Examinee Descriptive Questionnaire. Professional mocks use a 168-minute limit and a 120-of-150 passing reference; Subprofessional mocks use 141 minutes and a 116-of-145 passing reference. These are Quilla preparation policies derived from the official structure, not claims about CSC's rating methodology or guarantees of eligibility.
+The initial mocks use the `excluded` questionnaire mode, so they contain none of the 20-item Examinee Descriptive Questionnaire. Professional mocks use a 168-minute limit and a 120-of-150 passing reference; Subprofessional mocks use 141 minutes and a 116-of-145 passing reference. These are Quilla preparation policies derived from the official structure, not claims about CSC's rating methodology or guarantees of eligibility.
 
 Each generated exam targets a 30/50/20 easy/medium/hard mix using fixed subject, language, and difficulty cells. Verbal contains 25 English and 25 Filipino items. Every applicable concept appears at least once per generated exam. A canonical question has one seed-family origin, but may appear in different attempts across eligible levels; it cannot appear twice inside one attempt. Different exams need not be disjoint. New seeding still targets honest difficulty proportions, but family completion is separate from pooled exam feasibility and never justifies inflated labels.
 
@@ -368,6 +368,16 @@ Activation requires integration of the seven initial 270-question seed families 
 - Account deletion or anonymization is a separate approved workflow. It may remove or de-identify the learner's identity and personal data, but it must not rewrite historical attempt results or delete shared question, reference or blueprint versions.
 - Any future purge or archival policy requires a new architecture decision and must not silently delete records under [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
 
+### Questionnaire policy
+
+- Initial blueprints, diagnostics and mocks use the `excluded` questionnaire mode: they contain no Examinee Descriptive Questionnaire (EDQ) items, time allocation or responses. The immutable blueprint and attempt snapshots record the mode explicitly, and an absent value is not a mode.
+- The only permitted future mode is `unscored`. Enabling it requires a new immutable blueprint version with an explicit configuration; it cannot modify an existing blueprint or historical attempt.
+- Questionnaire items are optional and skippable. They are not question-bank questions, have no correct answer, concept, difficulty, subject allocation or eligibility rule, and are stored as a separate response type rather than mixed with scored answers.
+- Questionnaire responses never affect the score, passing reference, pass/fail result, mastery, readiness, streaks, question analytics or adaptive recommendations. Unanswered questionnaire items are not incorrect answers.
+- A `scored` questionnaire mode is invalid. Blueprint validation and scoring must reject or fail closed on any attempt to treat questionnaire content as scored.
+- A future questionnaire-enabled blueprint defines its own timing explicitly and must not reduce scored-section time by reusing a limit that assumed the questionnaire was absent.
+- Questionnaire content and responses are personal data. Their purpose, access, retention and deletion require a separate privacy review before collection begins.
+
 ### Edge cases
 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.
@@ -384,6 +394,7 @@ Activation requires integration of the seven initial 270-question seed families 
 
 - Pausing a full mock exam.
 - Deleting or purging exam history in the initial release.
+- Scoring questionnaire responses or including them in an exam result.
 - Showing correctness or explanations before submission.
 - Substituting invalid subjects across exam levels.
 - Claiming affiliation with or reproducing an official CSC examination.
@@ -401,6 +412,8 @@ Activation requires integration of the seven initial 270-question seed families 
 - Progress is autosaved and survives browser interruption on any authorized device without extending the deadline.
 - An attempt with saved answers becomes `expired` and is scored; unanswered scored items count as incorrect and the result is read-only.
 - An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned` with no result or evidence and does not count as a completed mock.
+- Each mock records its questionnaire mode in the immutable snapshot; initial mocks record `excluded`.
+- Questionnaire content never contributes to a score, passing reference, pass/fail result, mastery, readiness, streak or analytics calculation, and a `scored` mode is rejected.
 - Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
 - Results show overall score, pass/fail against the blueprint reference, and subject and concept breakdowns.
 
@@ -929,6 +942,7 @@ These requirements apply to every feature above:
 - **Auditability:** log every admin mutation with durable actor and entity identifiers.
 - **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted, expired, abandoned, and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context. Terminal attempts and their snapshots are retained for the life of the account; no time-based purge, learner delete, or admin hard delete applies. Account deletion is a separate de-identification workflow that must not rewrite historical results.
 - **Content integrity:** never serve unpublished, archived, or policy-excluded questions.
+- **Questionnaire integrity:** keep questionnaire items and responses separate from scored content; allow only the `excluded` and `unscored` modes, and never let questionnaire responses influence scores, mastery, readiness, streaks, or recommendations.
 - **Level integrity:** never serve Clerical Ability to Professional exams or Analytical Ability to Subprofessional exams.
 - **Level context:** the profile preference supplies defaults; each attempt owns its immutable level; diagnostic completion belongs to a learner and level; mastery evidence belongs to a learner and canonical concept, with provenance retained. Apply [ADR 0003](ADR/0003-exam-level-selection-policy.md) consistently across learning features.
 - **Language:** use English for the initial interface while allowing English and Filipino question content.
