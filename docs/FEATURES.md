@@ -361,6 +361,13 @@ Activation requires integration of the seven initial 270-question seed families 
 - An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt.
 - Terminal attempts cannot accept answers, be resumed, be extended or return to `in_progress`. [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md) defines the full contract.
 
+### Attempt retention and deletion
+
+- `submitted`, `expired` and `abandoned` attempts and their immutable question and blueprint snapshots are retained for the life of the account. The initial release has no time-based purge and no archive that hides them from history.
+- Learners have no control to delete an attempt, and admins cannot hard-delete an attempt or rewrite its result. This includes zero-answer `abandoned` records.
+- Account deletion or anonymization is a separate approved workflow. It may remove or de-identify the learner's identity and personal data, but it must not rewrite historical attempt results or delete shared question, reference or blueprint versions.
+- Any future purge or archival policy requires a new architecture decision and must not silently delete records under [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
+
 ### Edge cases
 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.
@@ -376,6 +383,7 @@ Activation requires integration of the seven initial 270-question seed families 
 ### Non-goals
 
 - Pausing a full mock exam.
+- Deleting or purging exam history in the initial release.
 - Showing correctness or explanations before submission.
 - Substituting invalid subjects across exam levels.
 - Claiming affiliation with or reproducing an official CSC examination.
@@ -413,6 +421,8 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - The learner did not answer a question.
 - A flagged-for-later action is repeated.
 - The learner returns to a submitted attempt long after completing it.
+- The learner opens an attempt that expired with saved answers or was abandoned with none.
+- The learner asks to delete a historical attempt.
 - The learner tries to open another user's attempt.
 
 ### Non-goals
@@ -425,7 +435,10 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 
 ### Definition of done
 
-- Submitted attempts remain discoverable in the learner's attempt history and can be reopened for review any number of times whenever the learner chooses while the historical attempt is retained.
+- `submitted` and `expired` attempts remain discoverable in the learner's attempt history and can be reopened for review any number of times for the life of the account.
+- `expired` attempts expose the same review content and scores as `submitted` attempts.
+- `abandoned` attempts remain in history with their terminal state but expose no review content, score, or answer key.
+- Learners and admins cannot delete an attempt or rewrite its result. Account deletion follows the separate de-identification workflow in [ADR 0027](ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
 - History identifies each attempt's original level and preserves its served snapshots across preference changes; the current preference does not hide attempts from the other level.
 - Review is accessible only to the attempt owner or an authorized admin, including on later visits.
 - Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
@@ -466,7 +479,7 @@ As a learner, I want short, explainable guidance whenever I am ready to study so
 
 ### Definition of done
 
-- Guidance is available for a requested level only after the learner submits that level's diagnostic and is regenerated on demand or after relevant learning activity. The dashboard defaults to the preferred level and clearly identifies the level being viewed.
+- Guidance is available for a requested level only after the learner submits that level's diagnostic, where a diagnostic that expired with saved answers counts as submitted, and is regenerated on demand or after relevant learning activity. The dashboard defaults to the preferred level and clearly identifies the level being viewed.
 - Guidance uses the requested level's coverage and blueprint and applicable shared concept evidence. Changing preference selects a different level context without deleting prior evidence or bypassing that level's diagnostic gate.
 - Guidance considers adaptive review priorities, low mastery, blueprint weight, the learner's available time, and an optional target exam date.
 - Guidance without a target date remains balanced and does not impose an artificial calendar.
@@ -487,6 +500,7 @@ As a learner, I want an explainable readiness score with a confidence range and 
 ### Edge cases
 
 - The diagnostic is incomplete.
+- The diagnostic expired with saved answers, or was abandoned with none.
 - There are too few attempts for a confident estimate.
 - Recent mock performance conflicts with longer-term mastery.
 - One heavily weighted subject is much weaker than the others.
@@ -502,8 +516,9 @@ As a learner, I want an explainable readiness score with a confidence range and 
 
 ### Definition of done
 
-- Readiness is unavailable for a requested level until the learner submits that level's diagnostic, even when shared mastery or another level's diagnostic exists.
+- Readiness is unavailable for a requested level until the learner submits that level's diagnostic, even when shared mastery or another level's diagnostic exists. A diagnostic that expired with saved answers counts as submitted; an abandoned one does not.
 - The score uses the requested level's coverage and blueprint and combines applicable concept mastery (including genuinely shared evidence), recent mock performance from that same level, and demonstrated recall in eligible learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
+- Only finalized attempts with evidence contribute: `submitted` and `expired` attempts contribute their scored answers, while `abandoned` attempts contribute nothing.
 - The view includes a confidence range, subject breakdown, weakest concepts, and plain-language explanation.
 - Low evidence produces visibly low confidence.
 - The score is computed from source data; any cache is invalidated by relevant updates.
@@ -522,7 +537,8 @@ As a learner, I want to see study consistency and mastery progress so I can reco
 ### Edge cases
 
 - Activity occurs around midnight or after a timezone change.
-- Answers are saved but the attempt is never submitted.
+- Answers are saved but the attempt expires or is abandoned before it is finalized.
+- An attempt is abandoned with no saved answers.
 - A learner completes several activities on one day.
 - Mastery falls after previously reaching a higher state.
 - A learner has no activity or insufficient mastery data.
@@ -536,7 +552,7 @@ As a learner, I want to see study consistency and mastery progress so I can reco
 
 ### Definition of done
 
-- A streak day requires at least one submitted answer.
+- A streak day requires at least one answer saved in a finalized `submitted` or `expired` attempt. An `abandoned` attempt never creates streak evidence.
 - Multiple qualifying activities on one local date count once.
 - Streak calculation uses a documented effective timezone.
 - Subject progress is derived from applicable concept mastery and indicates confidence or missing coverage.
@@ -911,7 +927,7 @@ These requirements apply to every feature above:
 - **Security:** authorize every backend operation, validate every public input, rate-limit abuse-prone workflows, and follow OWASP guidance.
 - **Privacy:** comply with the Philippine Data Privacy Act, minimize personal data, and support appropriate export and deletion requests.
 - **Auditability:** log every admin mutation with durable actor and entity identifiers.
-- **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context.
+- **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted, expired, abandoned, and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context. Terminal attempts and their snapshots are retained for the life of the account; no time-based purge, learner delete, or admin hard delete applies. Account deletion is a separate de-identification workflow that must not rewrite historical results.
 - **Content integrity:** never serve unpublished, archived, or policy-excluded questions.
 - **Level integrity:** never serve Clerical Ability to Professional exams or Analytical Ability to Subprofessional exams.
 - **Level context:** the profile preference supplies defaults; each attempt owns its immutable level; diagnostic completion belongs to a learner and level; mastery evidence belongs to a learner and canonical concept, with provenance retained. Apply [ADR 0003](ADR/0003-exam-level-selection-policy.md) consistently across learning features.
@@ -924,7 +940,6 @@ The following remain intentionally unresolved and require explicit product decis
 
 - whether contributions are visible before approval;
 - final report threshold and auto-exclusion policy;
-- retention and resume window for abandoned attempts;
 - whether contributor rankings will ever be introduced;
 - minimum sample size for reliable mastery;
 - whether adaptive review recommendations will later include question-level state;
