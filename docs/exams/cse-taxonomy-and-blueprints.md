@@ -228,9 +228,13 @@ Shared-concept evidence still follows
 Every set contains exactly 25 English and 25 Filipino Verbal items. The remaining
 subjects use English in this initial version.
 
-The 20-item Examinee Descriptive Questionnaire (EDQ) is not included. A future
-EDQ-enabled configuration requires a new blueprint version and must keep EDQ
-responses unscored.
+The 20-item Examinee Descriptive Questionnaire (EDQ) uses the `excluded` mode in
+the initial blueprint. No EDQ items, time or responses are part of that
+configuration. A future EDQ-enabled configuration requires a new immutable
+blueprint version and may use only the `unscored` mode; EDQ responses never
+contribute to the score, passing reference, mastery or readiness. A `scored` EDQ
+mode is invalid. [ADR 0027](../ADR/0027-attempt-lifecycle-and-questionnaire-policy.md)
+defines the lifecycle and unscored guarantee.
 
 ### Difficulty cells
 
@@ -249,14 +253,18 @@ and 29 hard items: approximately 29.66%, 50.34%, and 20%.
 
 ### Time limit and passing reference
 
-The official full-session limits include the 20-item EDQ. Because Quilla's
-initial mock excludes it, the product scales the official limits by the scored
+The official full-session limits include the 20-item EDQ. Because the initial
+blueprint excludes it, the product scales the official limits by the scored
 item share and rounds to the nearest whole minute:
 
 | Level           | Calculation             |  Mock limit | Passing reference |
 | --------------- | ----------------------- | ----------: | ----------------: |
 | Professional    | 190 minutes × 150 / 170 | 168 minutes |        120 of 150 |
 | Subprofessional | 160 minutes × 145 / 165 | 141 minutes |        116 of 145 |
+
+This scaling applies only to the initial `excluded` mode. A future unscored EDQ
+blueprint must define its own timing explicitly and must not reduce scored-section
+time by reusing this scaled limit.
 
 The passing reference is 80% of scored mock items. These thresholds support
 practice feedback; they are not a guarantee of eligibility and do not claim to
@@ -331,7 +339,8 @@ cycle, reviewer, and outcome.
   manufacturing a new version.
 - Changes to Quilla-authored allocations, difficulty cells, coverage gates,
   shortage behavior, or EDQ policy also require a new blueprint version and an
-  architecture decision when they materially alter this policy.
+  architecture decision when they materially alter this policy; questionnaire
+  modes follow [ADR 0027](../ADR/0027-attempt-lifecycle-and-questionnaire-policy.md).
 - Official facts and Quilla-authored policy fields must remain distinguishable
   in documentation and future storage contracts.
 
