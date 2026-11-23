@@ -187,7 +187,8 @@ export function pointersConsistent(
 ) {
   if (pointers.length > 1) return false;
   const pointer = pointers[0];
-  if (!pointer) return activeVersions.length === 0;
+  if (!pointer)
+    return expectedVersionId === undefined && activeVersions.length === 0;
   return (
     activeVersions.length === 1 &&
     activeVersions[0]._id === pointer.blueprintVersionId &&

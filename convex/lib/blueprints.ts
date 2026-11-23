@@ -216,6 +216,7 @@ export async function activateBlueprintVersion(
     after: {
       state: "active",
       revision: version.revision + 1,
+      level: version.level,
       configurationFormatVersion: storedFormatVersion,
       previousActiveVersionId: previous?.version._id ?? null,
     },

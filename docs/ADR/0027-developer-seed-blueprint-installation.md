@@ -61,16 +61,19 @@ system audit event, and activates the version through the same shared activation
 helper used by the public admin path. Activation archives any prior active version
 by changing only its state, revision, update time and archive time; its configuration
 and content hash are never mutated. The per-level active pointer moves to the new
-version. All `seed_install`, `activate` and `supersede` audit events are attributed
-to the non-login `system:seed-blueprint-installer` identity. Installing one level
-without the other cannot commit.
+version. All `seed_install`, `activate` and `supersede` audit events carry an audit
+timestamp and are attributed to the non-login
+`system:seed-blueprint-installer` identity; the install event records the
+configuration hash, and each activation event records the level, revision and
+configuration format. Installing one level without the other cannot commit.
 
 An exact rerun is a no-op: it returns `created: false` without new versions,
 pointer changes, users or audit events. The no-op is accepted only when both exact
-versions still hash-verify, match the normalized fixture configuration, are active,
-resolve through a consistent single pointer, and were created and activated by the
-installer identity. Partial presence, duplicate versions, draft or archived exact
-versions, unattributed active versions or a non-installer identity fail
+versions still hash-verify, use the current configuration format, match the
+normalized fixture configuration, are active, resolve through a consistent single
+pointer, and were created and activated by the installer identity. Partial
+presence, duplicate versions, draft or archived exact versions, unattributed active
+versions or a non-installer identity fail
 `BLUEPRINT_VERSION_CONFLICT`. Pointer anomalies fail
 `ACTIVE_BLUEPRINT_INCONSISTENT`. Nothing is hard-deleted or automatically restored.
 
@@ -80,9 +83,11 @@ window closes. It reports the taxonomy version and match state, the pinned and
 resolved fixture digests, and for each level: version IDs, duplicate presence,
 state, revision, active and sealed state, configuration format version, content
 hash, hash match, configuration match, taxonomy match, actual and expected counts,
-pointer state, system attribution and an overall match. "Sealed" for a blueprint
-means active plus hash-verified; no schema state is added. Malformed stored state is
-reported as a mismatch rather than thrown. The query performs no writes.
+pointer state, system attribution and an overall match. The two seed identities
+must use the current configuration format to match, while legacy verification
+remains available for unrelated blueprints. "Sealed" for a blueprint means active
+plus hash-verified; no schema state is added. Malformed stored state is reported as
+a mismatch rather than thrown. The query performs no writes.
 
 Extract the configuration preparation and activation logic into shared helpers in
 `convex/lib/blueprints.ts`, reused by the public admin path and the installer. This
@@ -94,7 +99,8 @@ Extend `scripts/bootstrap-question-bank.mjs` with `--install-blueprints` and
 selection as the bootstrap, reuse existing retries, sanitized failure handling and
 JSON output, and reject plan, run, checkpoint and reason flags. The installer passes
 the pinned digest from the shared contract. Verification rejects a deployed
-fixture-digest skew rather than reporting a false match.
+fixture-digest skew rather than reporting a false match, and its sanitized JSON
+failure report retains both the expected and deployed digests.
 
 ## Rejected alternatives
 

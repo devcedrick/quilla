@@ -27,6 +27,7 @@ class BootstrapError extends Error {
     this.transient = options.transient ?? false;
     this.conflicts = options.conflicts;
     this.recovery = options.recovery;
+    this.details = options.details;
   }
 }
 
@@ -468,9 +469,15 @@ export async function verifyBlueprints(client, target) {
   );
   if (
     result?.expectedFixtureDigest !== seedBlueprintPolicy.digest ||
+    result?.deployedFixtureDigest !== seedBlueprintPolicy.digest ||
     result?.fixtureDigestMatches === false
   )
-    throw new BootstrapError("BLUEPRINT_FIXTURE_MISMATCH");
+    throw new BootstrapError("BLUEPRINT_FIXTURE_MISMATCH", {
+      details: {
+        expectedFixtureDigest: result?.expectedFixtureDigest ?? null,
+        deployedFixtureDigest: result?.deployedFixtureDigest ?? null,
+      },
+    });
   return result;
 }
 
@@ -899,7 +906,7 @@ export function blueprintSummary(result) {
           `${level.blueprintId} (${level.level}): ${level.blueprintVersionId} at revision ${level.revision}, ${level.state}; hash ${level.configurationHash}; ${blueprintCountText(level.counts)}${level.supersededVersionId ? `; superseded ${level.supersededVersionId}` : ""}.`,
         );
       lines.push(
-        "Installed and activated atomically; blueprint versions and audit records only, plus the non-login installer identity.",
+        "Installed and activated atomically; blueprint versions, per-level active pointers, and audit records only, plus the non-login installer identity.",
       );
       lines.push(
         "No questions, references, assets, taxonomy entries, or attempt snapshots were written.",
@@ -921,7 +928,10 @@ export function blueprintSummary(result) {
       `Taxonomy ${result.taxonomyId}: ${result.taxonomyMatchesExpected ? "sealed and matching" : "missing or not matching"}${result.taxonomyVersionId ? ` (${result.taxonomyVersionId})` : ""}.`,
     );
     if (!result.fixtureDigestMatches)
-      lines.push("Deployed fixture digest does not match the pinned digest.");
+      lines.push(
+        "Deployed fixture digest does not match the pinned digest.",
+        `Expected fixture digest: ${result.expectedFixtureDigest ?? "unavailable"}. Deployed fixture digest: ${result.deployedFixtureDigest ?? "unavailable"}.`,
+      );
     for (const level of levels) {
       const state = level.present
         ? `version ${level.versionIds.join(", ")} state=${level.state} revision=${level.revision} active=${level.active} sealed=${level.sealed} hash=${level.contentHash}`
@@ -944,6 +954,24 @@ export function blueprintSummary(result) {
 export function bootstrapErrorCode(error) {
   const code = error?.data?.code ?? error?.code ?? error?.message;
   return safeBootstrapFailure(code);
+}
+
+/** Build the sanitized failure report, retaining explicit digest evidence. */
+export function bootstrapFailureReport(
+  error,
+  { taxonomyMode = false, blueprintMode = false } = {},
+) {
+  return {
+    error: bootstrapErrorCode(error),
+    conflicts: error.conflicts ?? [],
+    checkpoint: error.recovery ?? null,
+    details: error.details ?? null,
+    recovery: taxonomyMode
+      ? "No taxonomy rows are written by a rejected install. Re-run verification; an existing mismatched version requires separate review."
+      : blueprintMode
+        ? "Check and install the sealed taxonomy first; an existing conflicting blueprint version requires separate review. Never delete or overwrite blueprint history."
+        : "Stop; inspect bootstrap status, pause an active run, and resume only with the same pinned plan. Roll back with a new plan after a full archive.",
+  };
 }
 
 if (
@@ -1044,16 +1072,9 @@ if (
     else console.log(bootstrapSummary(result));
   } catch (error) {
     console.error(
-      JSON.stringify({
-        error: bootstrapErrorCode(error),
-        conflicts: error.conflicts ?? [],
-        checkpoint: error.recovery ?? null,
-        recovery: taxonomyMode
-          ? "No taxonomy rows are written by a rejected install. Re-run verification; an existing mismatched version requires separate review."
-          : blueprintMode
-            ? "Check and install the sealed taxonomy first; an existing conflicting blueprint version requires separate review. Never delete or overwrite blueprint history."
-            : "Stop; inspect bootstrap status, pause an active run, and resume only with the same pinned plan. Roll back with a new plan after a full archive.",
-      }),
+      JSON.stringify(
+        bootstrapFailureReport(error, { taxonomyMode, blueprintMode }),
+      ),
     );
     process.exitCode = 1;
   }

@@ -5,6 +5,7 @@ import {
   applyBootstrap,
   blueprintSummary,
   bootstrapErrorCode,
+  bootstrapFailureReport,
   bootstrapSummary,
   commandBatches,
   installBlueprints,
@@ -661,6 +662,7 @@ describe("operator summary", () => {
     );
     expect(installed).toContain("revision 3");
     expect(installed).toContain("150 items/168 min/120 passing");
+    expect(installed).toContain("per-level active pointers");
     expect(installed).toContain(
       "No questions, references, assets, taxonomy entries, or attempt snapshots were written.",
     );
@@ -705,6 +707,8 @@ describe("operator summary", () => {
       taxonomyId: "cse-taxonomy-2027-v2",
       taxonomyVersionId: "taxonomy-1",
       taxonomyMatchesExpected: true,
+      expectedFixtureDigest: seedBlueprintPolicy.digest,
+      deployedFixtureDigest: seedBlueprintPolicy.digest,
       fixtureDigestMatches: true,
       levels: [verifiedLevel],
     });
@@ -721,6 +725,8 @@ describe("operator summary", () => {
       taxonomyId: "cse-taxonomy-2027-v2",
       taxonomyVersionId: "taxonomy-1",
       taxonomyMatchesExpected: true,
+      expectedFixtureDigest: seedBlueprintPolicy.digest,
+      deployedFixtureDigest: "e".repeat(64),
       fixtureDigestMatches: false,
       levels: [
         {
@@ -735,6 +741,9 @@ describe("operator summary", () => {
     expect(mismatched).toContain("do not match the reviewed v3 fixture");
     expect(mismatched).toContain(
       "Deployed fixture digest does not match the pinned digest.",
+    );
+    expect(mismatched).toContain(
+      `Expected fixture digest: ${seedBlueprintPolicy.digest}. Deployed fixture digest: ${"e".repeat(64)}.`,
     );
   });
 });
@@ -966,6 +975,7 @@ describe("blueprint installation transport", () => {
     const client = {
       query: vi.fn(async () => ({
         expectedFixtureDigest: seedBlueprintPolicy.digest,
+        deployedFixtureDigest: seedBlueprintPolicy.digest,
         fixtureDigestMatches: true,
         matchesExpected: true,
       })),
@@ -1000,6 +1010,40 @@ describe("blueprint installation transport", () => {
         "quilla-dev",
       ),
     ).rejects.toMatchObject({ code: "BLUEPRINT_FIXTURE_MISMATCH" });
+  });
+  it("retains both fixture digests in the sanitized failure report", async () => {
+    const deployedFixtureDigest = "e".repeat(64);
+    let failure;
+    try {
+      await verifyBlueprints(
+        {
+          query: async () => ({
+            expectedFixtureDigest: seedBlueprintPolicy.digest,
+            deployedFixtureDigest,
+            fixtureDigestMatches: false,
+          }),
+        },
+        "quilla-dev",
+      );
+    } catch (error) {
+      failure = error;
+    }
+    expect(failure).toMatchObject({
+      code: "BLUEPRINT_FIXTURE_MISMATCH",
+      details: {
+        expectedFixtureDigest: seedBlueprintPolicy.digest,
+        deployedFixtureDigest,
+      },
+    });
+    expect(
+      bootstrapFailureReport(failure, { blueprintMode: true }),
+    ).toMatchObject({
+      error: "BLUEPRINT_FIXTURE_MISMATCH",
+      details: {
+        expectedFixtureDigest: seedBlueprintPolicy.digest,
+        deployedFixtureDigest,
+      },
+    });
   });
   it("rejects a missing target before invoking the deployment", async () => {
     const client = { mutation: vi.fn(), query: vi.fn() };

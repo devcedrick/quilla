@@ -1,12 +1,10 @@
 // @vitest-environment edge-runtime
-import { defineTestApp } from "convex-test";
+/// <reference types="vite/client" />
+import { convexTest } from "convex-test";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { api, internal } from "./_generated/api";
 import schema from "./schema";
 import * as blueprintBootstrap from "./blueprintBootstrap";
-import * as blueprints from "./blueprints";
-import * as taxonomyBootstrap from "./taxonomyBootstrap";
-import * as referenceData from "./referenceData";
-import * as usersModule from "./users";
 import {
   importDigest,
   seedBlueprintPolicy,
@@ -36,13 +34,8 @@ vi.mock("../lib/question-import-contract.mjs", async (original) => {
   };
 });
 
-const { api, internal, createTest } = defineTestApp({ schema }).defineModules({
-  blueprintBootstrap,
-  blueprints,
-  taxonomyBootstrap,
-  referenceData,
-  users: usersModule,
-});
+const modules = import.meta.glob(["./**/*.ts", "!./**/*.test.ts"]);
+const createTest = () => convexTest(schema, modules);
 
 const expectedCounts: Record<
   string,
@@ -113,6 +106,16 @@ async function addAdmin(t: ReturnType<typeof createTest>) {
   );
 }
 
+async function addInstaller(t: ReturnType<typeof createTest>) {
+  return await t.run((ctx) =>
+    ctx.db.insert("users", {
+      tokenIdentifier: systemBlueprintInstallerIdentifier,
+      role: "system",
+      status: "active",
+    }),
+  );
+}
+
 async function installerUser(t: ReturnType<typeof createTest>) {
   return await t.run((ctx) =>
     ctx.db
@@ -124,18 +127,22 @@ async function installerUser(t: ReturnType<typeof createTest>) {
   );
 }
 
+/**
+ * Bound every fixture-table count. Taking the expected maximum plus one keeps
+ * unexpected writes detectable without loading an unbounded table.
+ */
 async function counts(t: ReturnType<typeof createTest>) {
   return await t.run(async (ctx) => ({
-    users: (await ctx.db.query("users").collect()).length,
-    versions: (await ctx.db.query("blueprintVersions").collect()).length,
-    pointers: (await ctx.db.query("activeBlueprints").collect()).length,
-    audits: (await ctx.db.query("auditEvents").collect()).length,
-    snapshots: (await ctx.db.query("blueprintSnapshots").collect()).length,
-    questions: (await ctx.db.query("questions").collect()).length,
-    questionVersions: (await ctx.db.query("questionVersions").collect()).length,
-    references: (await ctx.db.query("questionReferenceVersions").collect())
+    users: (await ctx.db.query("users").take(4)).length,
+    versions: (await ctx.db.query("blueprintVersions").take(5)).length,
+    pointers: (await ctx.db.query("activeBlueprints").take(3)).length,
+    audits: (await ctx.db.query("auditEvents").take(9)).length,
+    snapshots: (await ctx.db.query("blueprintSnapshots").take(1)).length,
+    questions: (await ctx.db.query("questions").take(1)).length,
+    questionVersions: (await ctx.db.query("questionVersions").take(1)).length,
+    references: (await ctx.db.query("questionReferenceVersions").take(1))
       .length,
-    assets: (await ctx.db.query("questionAssets").collect()).length,
+    assets: (await ctx.db.query("questionAssets").take(1)).length,
   }));
 }
 
@@ -346,6 +353,9 @@ describe("guarded v3 blueprint installation", () => {
       expect(audits.every((event) => event.actorId === installer!._id)).toBe(
         true,
       );
+      expect(
+        audits.every((event) => typeof event.occurredAt === "number"),
+      ).toBe(true);
       const seed = audits.find((event) => event.action === "seed_install")!;
       expect(JSON.parse(seed.afterJson!)).toEqual({
         blueprintId: level.blueprintId,
@@ -355,6 +365,14 @@ describe("guarded v3 blueprint installation", () => {
         counts: expectedCounts[level.blueprintId],
       });
       expect(JSON.parse(seed.afterJson!)).not.toHaveProperty("configuration");
+      const activation = audits.find((event) => event.action === "activate")!;
+      expect(JSON.parse(activation.afterJson!)).toEqual({
+        state: "active",
+        revision: 3,
+        level: level.level,
+        configurationFormatVersion: 2,
+        previousActiveVersionId: null,
+      });
     }
     expect(await installerUser(t)).toMatchObject({
       tokenIdentifier: systemBlueprintInstallerIdentifier,
@@ -596,19 +614,19 @@ describe("installation guards", () => {
     for (const state of ["draft", "archived"] as const) {
       const t = createTest();
       const taxonomy = await installTaxonomy(t);
-      const admin = await addAdmin(t);
+      const installer = await addInstaller(t);
       await t.run(async (ctx) => {
-        const now = Date.now();
-        await ctx.db.insert("blueprintVersions", {
-          blueprintId: "cse-professional-2027-v3",
-          level: "professional",
-          state,
-          revision: 1,
-          taxonomyVersionId: taxonomy.taxonomyVersionId,
-          createdBy: admin,
-          createdAt: now,
-          updatedAt: now,
-        });
+        for (const candidate of initialV3Blueprints)
+          await ctx.db.insert("blueprintVersions", {
+            blueprintId: candidate.blueprintId,
+            level: candidate.level,
+            state,
+            revision: 1,
+            taxonomyVersionId: taxonomy.taxonomyVersionId,
+            createdBy: installer,
+            createdAt: 0,
+            updatedAt: 0,
+          });
       });
       const before = await counts(t);
       await expect(install(t)).rejects.toThrow("BLUEPRINT_VERSION_CONFLICT");
@@ -633,27 +651,41 @@ describe("installation guards", () => {
     const duplicate = createTest();
     const duplicateTaxonomy = await installTaxonomy(duplicate);
     const duplicateAdmin = await addAdmin(duplicate);
-    for (let index = 0; index < 2; index++)
-      await duplicate.run((ctx) =>
-        ctx.db.insert("blueprintVersions", {
-          blueprintId: "cse-professional-2027-v3",
-          level: "professional",
+    await duplicate.run(async (ctx) => {
+      for (const [index, candidate] of initialV3Blueprints.entries())
+        await ctx.db.insert("blueprintVersions", {
+          blueprintId: candidate.blueprintId,
+          level: candidate.level,
           state: "draft",
           revision: 1,
           taxonomyVersionId: duplicateTaxonomy.taxonomyVersionId,
           createdBy: duplicateAdmin,
           createdAt: index,
           updatedAt: index,
-        }),
-      );
+        });
+      const [professional] = initialV3Blueprints;
+      await ctx.db.insert("blueprintVersions", {
+        blueprintId: professional.blueprintId,
+        level: professional.level,
+        state: "draft",
+        revision: 1,
+        taxonomyVersionId: duplicateTaxonomy.taxonomyVersionId,
+        createdBy: duplicateAdmin,
+        createdAt: 2,
+        updatedAt: 2,
+      });
+    });
+    const duplicateBefore = await counts(duplicate);
     await expect(install(duplicate)).rejects.toThrow(
       "BLUEPRINT_VERSION_CONFLICT",
     );
+    expect(await counts(duplicate)).toEqual(duplicateBefore);
   });
 
   it("rejects unattributed active versions that otherwise look installed", async () => {
     const t = createTest();
     const taxonomy = await installTaxonomy(t);
+    await addInstaller(t);
     const admin = await addAdmin(t);
     await addActiveVersion(t, {
       blueprintId: "cse-professional-2027-v3",
@@ -670,6 +702,54 @@ describe("installation guards", () => {
     const before = await counts(t);
     await expect(install(t)).rejects.toThrow("BLUEPRINT_VERSION_CONFLICT");
     expect(await counts(t)).toEqual(before);
+  });
+
+  it("rejects rerun versions whose configuration or hash no longer matches", async () => {
+    const configuration = createTest();
+    await installTaxonomy(configuration);
+    const configurationInstall = await install(configuration);
+    const professional = configurationInstall.levels[0];
+    const stored = await configuration.run((ctx) =>
+      ctx.db.get("blueprintVersions", professional.blueprintVersionId),
+    );
+    const foreign = normalizeBlueprintConfiguration(
+      fixture("cse-subprofessional-2027-v3").configuration,
+    );
+    const foreignHash = await blueprintContentHash(
+      2,
+      stored!.level,
+      stored!.taxonomyVersionId,
+      foreign,
+      {
+        blueprintVersionId: stored!._id,
+        blueprintId: stored!.blueprintId,
+      },
+    );
+    await configuration.run((ctx) =>
+      ctx.db.patch("blueprintVersions", professional.blueprintVersionId, {
+        configuration: foreign,
+        contentHash: foreignHash,
+      }),
+    );
+    const configurationBefore = await counts(configuration);
+    await expect(install(configuration)).rejects.toThrow(
+      "BLUEPRINT_VERSION_CONFLICT",
+    );
+    expect(await counts(configuration)).toEqual(configurationBefore);
+
+    const hash = createTest();
+    await installTaxonomy(hash);
+    const hashInstall = await install(hash);
+    await hash.run((ctx) =>
+      ctx.db.patch(
+        "blueprintVersions",
+        hashInstall.levels[0].blueprintVersionId,
+        { contentHash: "f".repeat(64) },
+      ),
+    );
+    const hashBefore = await counts(hash);
+    await expect(install(hash)).rejects.toThrow("BLUEPRINT_VERSION_CONFLICT");
+    expect(await counts(hash)).toEqual(hashBefore);
   });
 
   it("rejects pointer anomalies before any write", async () => {
@@ -738,6 +818,7 @@ describe("read-only blueprint verification", () => {
       taxonomySealed: false,
       taxonomyMatchesExpected: false,
       expectedFixtureDigest: seedBlueprintPolicy.digest,
+      deployedFixtureDigest: seedBlueprintPolicy.digest,
       fixtureDigestMatches: true,
       matchesExpected: false,
     });
@@ -783,6 +864,8 @@ describe("read-only blueprint verification", () => {
       taxonomyVersionId: taxonomy.taxonomyVersionId,
       taxonomySealed: true,
       taxonomyMatchesExpected: true,
+      expectedFixtureDigest: seedBlueprintPolicy.digest,
+      deployedFixtureDigest: seedBlueprintPolicy.digest,
       fixtureDigestMatches: true,
       matchesExpected: true,
     });
@@ -863,7 +946,73 @@ describe("read-only blueprint verification", () => {
     });
   });
 
-  it("reports missing or duplicate pointers and foreign active versions", async () => {
+  it("requires the current configuration format for rerun and verification", async () => {
+    const t = createTest();
+    await installTaxonomy(t);
+    const installed = await install(t);
+    const professional = installed.levels[0];
+    const version = await t.run((ctx) =>
+      ctx.db.get("blueprintVersions", professional.blueprintVersionId),
+    );
+    const legacyHash = await blueprintContentHash(
+      1,
+      version!.level,
+      version!.taxonomyVersionId,
+      version!.configuration!,
+      {
+        blueprintVersionId: version!._id,
+        blueprintId: version!.blueprintId,
+      },
+    );
+    await t.run((ctx) =>
+      ctx.db.patch("blueprintVersions", professional.blueprintVersionId, {
+        configurationFormatVersion: 1,
+        contentHash: legacyHash,
+      }),
+    );
+    const level = (await verify(t)).levels[0];
+    expect(level).toMatchObject({
+      configurationFormatVersion: 1,
+      hashMatches: true,
+      active: true,
+      sealed: true,
+      matchesExpected: false,
+    });
+    const before = await counts(t);
+    await expect(install(t)).rejects.toThrow("BLUEPRINT_VERSION_CONFLICT");
+    expect(await counts(t)).toEqual(before);
+  });
+
+  it("reports a missing pointer for a present draft or archived version", async () => {
+    const t = createTest();
+    await installTaxonomy(t);
+    const installed = await install(t);
+    await t.run(async (ctx) => {
+      const pointer = await ctx.db
+        .query("activeBlueprints")
+        .withIndex("by_level", (q) => q.eq("level", "professional"))
+        .unique();
+      await ctx.db.delete("activeBlueprints", pointer!._id);
+    });
+    for (const state of ["draft", "archived"] as const) {
+      await t.run((ctx) =>
+        ctx.db.patch(
+          "blueprintVersions",
+          installed.levels[0].blueprintVersionId,
+          { state },
+        ),
+      );
+      expect((await verify(t)).levels[0]).toMatchObject({
+        present: true,
+        state,
+        pointerVersionId: null,
+        pointerConsistent: false,
+        matchesExpected: false,
+      });
+    }
+  });
+
+  it("reports missing or duplicate pointers", async () => {
     const t = createTest();
     await installTaxonomy(t);
     const installed = await install(t);
@@ -900,6 +1049,35 @@ describe("read-only blueprint verification", () => {
     );
     level = (await verify(t)).levels[0];
     expect(level).toMatchObject({
+      pointerConsistent: false,
+      matchesExpected: false,
+    });
+  });
+
+  it("reports a foreign active version alongside the expected pointer", async () => {
+    const t = createTest();
+    const taxonomy = await installTaxonomy(t);
+    const installed = await install(t);
+    const installer = await installerUser(t);
+    await t.run(async (ctx) => {
+      const now = Date.now();
+      await ctx.db.insert("blueprintVersions", {
+        blueprintId: "cse-professional-2026-v2",
+        level: "professional",
+        state: "active",
+        revision: 3,
+        taxonomyVersionId: taxonomy.taxonomyVersionId,
+        createdBy: installer!._id,
+        createdAt: now,
+        updatedAt: now,
+        activatedBy: installer!._id,
+        activatedAt: now,
+      });
+    });
+    const level = (await verify(t)).levels[0];
+    expect(level).toMatchObject({
+      versionIds: [installed.levels[0].blueprintVersionId],
+      pointerVersionId: installed.levels[0].blueprintVersionId,
       pointerConsistent: false,
       matchesExpected: false,
     });

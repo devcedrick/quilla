@@ -2,7 +2,10 @@ import { v } from "convex/values";
 import { internalMutation, internalQuery } from "./_generated/server";
 import { appendSystemAudit } from "./lib/audit";
 import { examLevel } from "./lib/preparation";
-import { blueprintState } from "./lib/blueprintValidation";
+import {
+  blueprintConfigurationFormatVersion,
+  blueprintState,
+} from "./lib/blueprintValidation";
 import {
   activateBlueprintVersion,
   prepareBlueprintConfiguration,
@@ -91,6 +94,7 @@ const verifyResult = v.object({
   taxonomySealed: v.boolean(),
   taxonomyMatchesExpected: v.boolean(),
   expectedFixtureDigest: v.string(),
+  deployedFixtureDigest: v.string(),
   fixtureDigestMatches: v.boolean(),
   levels: v.array(levelVerify),
   matchesExpected: v.boolean(),
@@ -145,7 +149,8 @@ export const install = internalMutation({
 
     if (present.every(Boolean)) {
       // A rerun is a no-op only when both exact versions were created and
-      // activated by the non-login installer and still hash-verify.
+      // activated by the non-login installer, use the current format, and
+      // still hash-verify.
       if (states.some((state) => state.versions.length > 1))
         fail("BLUEPRINT_VERSION_CONFLICT");
       const installer = await loadBlueprintInstaller(ctx);
@@ -164,7 +169,8 @@ export const install = internalMutation({
           version.taxonomyVersionId !== taxonomy.version._id ||
           !version.configuration ||
           !version.contentHash ||
-          version.configurationFormatVersion === undefined ||
+          version.configurationFormatVersion !==
+            blueprintConfigurationFormatVersion ||
           !pointersConsistent(
             state.pointers,
             state.activeVersions,
@@ -291,8 +297,9 @@ export const verify = internalQuery({
   returns: verifyResult,
   handler: async (ctx, { target }) => {
     requireKnownBootstrapTarget(target);
+    const deployedFixtureDigest = await seedBlueprintFixtureDigest();
     const fixtureDigestMatches =
-      (await seedBlueprintFixtureDigest()) === seedBlueprintPolicy.digest;
+      deployedFixtureDigest === seedBlueprintPolicy.digest;
 
     const taxonomyVersions = await ctx.db
       .query("taxonomyVersions")
@@ -384,6 +391,8 @@ export const verify = internalQuery({
           configurationMatches &&
           pointerConsistent &&
           systemAttributed &&
+          version?.configurationFormatVersion ===
+            blueprintConfigurationFormatVersion &&
           version?.level === expected.level,
       });
     }
@@ -395,6 +404,7 @@ export const verify = internalQuery({
       taxonomySealed,
       taxonomyMatchesExpected,
       expectedFixtureDigest: seedBlueprintPolicy.digest,
+      deployedFixtureDigest,
       fixtureDigestMatches,
       levels,
       matchesExpected:

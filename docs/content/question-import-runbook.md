@@ -236,18 +236,21 @@ version is pinned to the sealed taxonomy, validation and hashing reuse the admin
 blueprint helpers, and activation moves the per-level pointer. A prior active
 version is archived by state and revision only; its configuration and content hash
 are never changed and it is never deleted. `seed_install`, `activate` and
-`supersede` audit events are attributed to the non-login
-`system:seed-blueprint-installer` identity. The installer writes only blueprint
+`supersede` audit events carry an audit timestamp and are attributed to the
+non-login `system:seed-blueprint-installer` identity; install events record the
+configuration hash, and activation events record the level, revision and
+configuration format. The installer writes only blueprint
 versions, active pointers, audit records and, on first use, that identity. It writes
 no questions, references, assets, taxonomy entries or attempt snapshots.
 
 An exact rerun is a no-op: it reports `created: false` and adds no version, pointer
 change, identity or audit event. The no-op requires both exact versions to remain
-active and hash-verified, to match the fixture configuration, to resolve through one
-consistent pointer per level, and to have been created and activated by the
-installer identity. Do not delete, overwrite or renumber a conflicting version to
-make a rerun pass; a partial install, duplicate version, draft or archived exact
-version, unattributed active version or foreign pointer requires separate review.
+active, hash-verified and stored with the current configuration format, to match the
+fixture configuration, to resolve through one consistent pointer per level, and to
+have been created and activated by the installer identity. Do not delete, overwrite
+or renumber a conflicting version to make a rerun pass; a partial install, duplicate
+version, draft or archived exact version, unattributed active version or foreign
+pointer requires separate review.
 
 Stable failure codes:
 
@@ -270,10 +273,13 @@ writes. It reports the taxonomy match, the pinned and deployed fixture digests, 
 per level: version IDs, duplicate presence, state, revision, active and sealed
 state, configuration format version, content hash, hash/configuration/taxonomy
 matches, actual and expected counts, pointer consistency, system attribution and an
-overall match. "Sealed" here means active plus hash-verified; there is no separate
-blueprint schema state. Verification remains available after the window closes.
-Installing blueprints is not content approval, question publication, exam
-readiness or completion of #98.
+overall match. The two seed identities must use the current configuration format to
+match; legacy verification remains available for unrelated blueprints. A deployed
+fixture-digest mismatch keeps both the expected and deployed digests in the
+sanitized JSON failure report. "Sealed" here means active plus hash-verified; there
+is no separate blueprint schema state. Verification remains available after the
+window closes. Installing blueprints is not content approval, question publication,
+exam readiness or completion of #98.
 
 ## One-time developer bootstrap — separate approval required
 
