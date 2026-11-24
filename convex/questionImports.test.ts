@@ -8,6 +8,7 @@ import * as questionImportActions from "./questionImportActions";
 import * as questionAssets from "./questionAssets";
 import { initialV2Catalog } from "./lib/taxonomyCatalog";
 import { canonical, digest } from "./lib/questionContent";
+import { buildQuestionSearchProjection } from "./lib/questionSearchProjection";
 import { inspectSource } from "./lib/questionImportState";
 import type { SourceRecord, Descriptor } from "./lib/questionImportProtocol";
 import { importChainStart } from "../lib/question-import-contract.mjs";
@@ -266,6 +267,11 @@ describe("guarded question import", () => {
           createdAt: version,
           state: "draft",
           workflowRevision: 1,
+          ...buildQuestionSearchProjection(
+            content,
+            "fixture-question",
+            owner!._id,
+          ),
         });
       const otherId = await ctx.db.insert("questions", {
         questionId: "fixture-question-copy",
@@ -286,6 +292,11 @@ describe("guarded question import", () => {
         createdAt: 0,
         state: "draft",
         workflowRevision: 1,
+        ...buildQuestionSearchProjection(
+          content,
+          "fixture-question-copy",
+          owner!._id,
+        ),
       });
     });
     const next = await plan([
@@ -1715,6 +1726,11 @@ describe("guarded question import", () => {
           createdAt: 0,
           state: "draft",
           workflowRevision: 1,
+          ...buildQuestionSearchProjection(
+            versionContent,
+            `budget-${i}`,
+            admin!._id,
+          ),
         });
       }
       return inspectSource(ctx, source, p.manifests[0], {

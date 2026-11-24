@@ -10,6 +10,10 @@ import {
   provenance,
 } from "./lib/questionContent";
 import { questionState, questionReview } from "./lib/questionWorkflow";
+import {
+  questionSearchProjectionSchemaFields,
+  referenceScopeSchemaFields,
+} from "./lib/questionSearchProjection";
 import { runFields, entryFields } from "./lib/questionImportProtocol";
 import {
   blueprintConfiguration,
@@ -54,6 +58,9 @@ export default defineSchema({
     approvalDecisionId: v.optional(v.id("questionReviews")),
     bootstrapRunId: v.optional(v.id("questionImportRuns")),
     archivedByBootstrapRunId: v.optional(v.id("questionImportRuns")),
+    // Staged rollout: these stay optional until an approved backfill has
+    // populated every existing row. New inserts always write the full builder.
+    ...questionSearchProjectionSchemaFields,
   })
     .index("by_questionId_and_version", ["questionId", "version"])
     .index("by_state", ["state"])
@@ -62,7 +69,48 @@ export default defineSchema({
       "contentFingerprint",
       "questionId",
     ])
-    .index("by_bootstrapRunId_and_state", ["bootstrapRunId", "state"]),
+    .index("by_bootstrapRunId_and_state", ["bootstrapRunId", "state"])
+    .index("by_createdAt", ["createdAt"])
+    .index("by_state_and_createdAt", ["state", "createdAt"])
+    .index("by_family_and_createdAt", ["family", "createdAt"])
+    .index("by_module_and_createdAt", ["module", "createdAt"])
+    .index("by_subjectId_and_createdAt", ["subjectId", "createdAt"])
+    .index("by_subtopicId_and_createdAt", ["subtopicId", "createdAt"])
+    .index("by_conceptId_and_createdAt", ["conceptId", "createdAt"])
+    .index("by_difficulty_and_createdAt", ["difficulty", "createdAt"])
+    .index("by_language_and_createdAt", ["language", "createdAt"])
+    .index("by_origin_and_createdAt", ["origin", "createdAt"])
+    .index("by_professionalEligible_and_createdAt", [
+      "professionalEligible",
+      "createdAt",
+    ])
+    .index("by_subprofessionalEligible_and_createdAt", [
+      "subprofessionalEligible",
+      "createdAt",
+    ])
+    .index("by_contributorId_and_createdAt", ["contributorId", "createdAt"])
+    .index("by_canonicalQuestionId_and_createdAt", [
+      "canonicalQuestionId",
+      "createdAt",
+    ])
+    .searchIndex("by_searchText", {
+      searchField: "searchText",
+      filterFields: [
+        "state",
+        "family",
+        "module",
+        "subjectId",
+        "subtopicId",
+        "conceptId",
+        "difficulty",
+        "language",
+        "origin",
+        "contributorId",
+        "canonicalQuestionId",
+        "professionalEligible",
+        "subprofessionalEligible",
+      ],
+    }),
   questionReviews: defineTable(questionReview)
     .index("by_questionVersionId", ["questionVersionId"])
     .index("by_reviewerId", ["reviewerId"]),
@@ -73,7 +121,15 @@ export default defineSchema({
     contentHash: v.string(),
     creatorId: v.id("users"),
     createdAt: v.number(),
-  }).index("by_referenceId_and_version", ["referenceId", "version"]),
+    ...referenceScopeSchemaFields,
+  })
+    .index("by_referenceId_and_version", ["referenceId", "version"])
+    .index("by_scope_and_createdAt", [
+      "family",
+      "module",
+      "language",
+      "createdAt",
+    ]),
   questionAssets: defineTable({
     assetId: v.string(),
     sha256: v.string(),
@@ -103,7 +159,8 @@ export default defineSchema({
     updatedAt: v.number(),
   })
     .index("by_taxonomyId", ["taxonomyId"])
-    .index("by_state", ["state"]),
+    .index("by_state", ["state"])
+    .index("by_state_and_createdAt", ["state", "createdAt"]),
   taxonomyEntries: defineTable(
     v.union(
       ...taxonomyEntry.members.map((member) =>

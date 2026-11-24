@@ -30,6 +30,7 @@ import type * as lib_questionImportState from "../lib/questionImportState.js";
 import type * as lib_questionImports from "../lib/questionImports.js";
 import type * as lib_questionLifecycle from "../lib/questionLifecycle.js";
 import type * as lib_questionReferenceDrafts from "../lib/questionReferenceDrafts.js";
+import type * as lib_questionSearchProjection from "../lib/questionSearchProjection.js";
 import type * as lib_questionServing from "../lib/questionServing.js";
 import type * as lib_questionWorkflow from "../lib/questionWorkflow.js";
 import type * as lib_seedBootstrapFixture from "../lib/seedBootstrapFixture.js";
@@ -78,6 +79,7 @@ declare const fullApi: ApiFromModules<{
   "lib/questionImports": typeof lib_questionImports;
   "lib/questionLifecycle": typeof lib_questionLifecycle;
   "lib/questionReferenceDrafts": typeof lib_questionReferenceDrafts;
+  "lib/questionSearchProjection": typeof lib_questionSearchProjection;
   "lib/questionServing": typeof lib_questionServing;
   "lib/questionWorkflow": typeof lib_questionWorkflow;
   "lib/seedBootstrapFixture": typeof lib_seedBootstrapFixture;

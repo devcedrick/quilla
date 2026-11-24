@@ -683,8 +683,9 @@ publication validation. [ADR 0020](ADR/0020-question-lifecycle-and-independent-p
 records the local #32 implementation: immutable question/reference versions,
 revision-checked admin lifecycle APIs, a five-criterion editorial quality gate,
 duplicate adjudication and protected asset verification. These APIs are not
-deployed; no live content has been imported or published. Admin UI, ordinary
-contribution submission and learner assessment serving remain separate work.
+deployed; no live content has been imported or published. Ordinary contribution
+submission and learner assessment serving remain separate work; the local admin
+workspace is recorded below.
 
 [ADR 0021](ADR/0021-guarded-restartable-draft-import.md) records the local #95
 importer: offline zero-write planning, explicit development-target preflight,
@@ -704,8 +705,29 @@ exception, not a general publication shortcut, and no live run has occurred. Liv
 development and production execution are separately approved operational steps. The
 same change adds the #34 backend bulk submit, publish and archive mutations with
 per-item results and batch bounds; bulk editorial review and approval are
-intentionally excluded. The admin workspace and Playwright journeys remain blocked
-on #33.
+intentionally excluded. The admin workspace is implemented locally by #33;
+authenticated admin Playwright journeys remain blocked on #25.
+
+[ADR 0028](ADR/0028-admin-question-bank-search-projection.md) records the local
+#33 admin workspace. `/admin/questions` combines indexed filters for state,
+family, module, subject, subtopic, concept, difficulty, language, level, origin,
+contributor and canonical question ID with full-text search over an immutable
+schema-backed projection. New versions receive the projection when inserted;
+it is excluded from content hashes, and legacy rows stay readable while their
+projection fields remain optional. Correct filtering of legacy rows needs the
+internal batched backfill, which has not run. The workspace also lets an admin
+create an initial draft or an immutable revision, choose a sealed taxonomy and
+an existing compatible reference version, inspect exact content, hashes,
+review history and immutable version history, and invoke only the lifecycle
+actions currently allowed. The backend independently enforces every
+authorization, revision, independence, rubric and duplicate rule. `/admin`
+redirects active admins to the question bank; active non-admins and unknown
+admin paths return not found, while signed-out, missing-profile, inactive and
+suspended access states show the account access shell. Reports and flags
+filters remain deferred to #40 and #41;
+contributor filtering uses opaque user IDs until #25, and authenticated admin
+Playwright journeys remain blocked on #25. No deployment, live backfill or
+production use is included.
 
 ### Edge cases
 

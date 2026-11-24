@@ -1,4 +1,4 @@
-import { v } from "convex/values";
+import { v, type Infer } from "convex/values";
 import {
   paginationOptsValidator,
   paginationResultValidator,
@@ -14,7 +14,10 @@ import {
   positive,
   text,
   digest,
+  level,
+  provenance,
 } from "./lib/questionContent";
+import { loadCatalog } from "./lib/taxonomy";
 import {
   nextQuestionState,
   questionState,
@@ -27,6 +30,7 @@ import {
   changeWorkflow,
   safeWorkflowFailure,
 } from "./lib/questionLifecycle";
+import { buildQuestionSearchProjection } from "./lib/questionSearchProjection";
 import { bulkModerationBatchSize } from "../lib/question-import-contract.mjs";
 
 const contentArgs = {
@@ -120,6 +124,11 @@ export const createDraft = mutation({
       createdAt: Date.now(),
       state: "draft",
       workflowRevision: 1,
+      ...buildQuestionSearchProjection(
+        args.content,
+        args.questionId,
+        actor._id,
+      ),
     });
     await appendAdminAudit(ctx, {
       entityType: "question_version",
@@ -172,6 +181,11 @@ export const createRevision = mutation({
       createdAt: Date.now(),
       state: "draft",
       workflowRevision: 1,
+      ...buildQuestionSearchProjection(
+        args.content,
+        question.questionId,
+        question.contributorId,
+      ),
     });
     await ctx.db.patch("questions", question._id, {
       latestVersion: version,
@@ -224,6 +238,8 @@ export const reviewVersion = mutation({
     ),
     duplicateDisposition: disposition,
     duplicateEvidence: v.string(),
+    /** Captured when the reviewer opened the decision, not the latest render. */
+    candidateSetFingerprint: v.string(),
   },
   returns: v.number(),
   handler: async (ctx, args) => {
@@ -247,6 +263,7 @@ export const reviewVersion = mutation({
     )
       fail("VALIDATION_FAILED");
     text(args.duplicateEvidence);
+    text(args.candidateSetFingerprint);
     const duplicate = await candidates(
       ctx,
       version,
@@ -266,6 +283,9 @@ export const reviewVersion = mutation({
           args.duplicateDisposition !== "adjudicated_distinct")
       )
         fail("VALIDATION_FAILED");
+      // Approval evidence belongs to the candidate set the reviewer saw.
+      if (duplicate.fingerprint !== args.candidateSetFingerprint)
+        fail("STALE_REVISION");
     }
     const reviewId = await ctx.db.insert("questionReviews", {
       questionVersionId: version._id,
@@ -502,14 +522,188 @@ export const bulkArchiveVersions = mutation({
       return changeWorkflow(ctx, version, "archive");
     }),
 });
+const adminVersionFilters = v.object({
+  state: v.optional(questionState),
+  family: v.optional(v.number()),
+  module: v.optional(questionContent.fields.module),
+  subjectId: v.optional(v.string()),
+  subtopicId: v.optional(v.string()),
+  conceptId: v.optional(v.string()),
+  difficulty: v.optional(questionContent.fields.difficulty),
+  language: v.optional(questionContent.fields.language),
+  level: v.optional(level),
+  origin: v.optional(provenance.fields.kind),
+  contributorId: v.optional(v.string()),
+  questionId: v.optional(v.string()),
+  search: v.optional(v.string()),
+});
+type AdminVersionFilters = Infer<typeof adminVersionFilters>;
+type NormalizedAdminVersionFilters = Omit<
+  AdminVersionFilters,
+  "contributorId" | "search"
+> & {
+  contributorId?: Id<"users">;
+  search?: string;
+};
+
+/** Validate every public filter before it reaches an index or query builder. */
+function validateAdminVersionFilters(
+  ctx: QueryCtx,
+  input: AdminVersionFilters,
+): NormalizedAdminVersionFilters {
+  if (input.family !== undefined) positive(input.family);
+  for (const key of ["subjectId", "subtopicId", "conceptId"] as const) {
+    const value = input[key];
+    if (
+      value !== undefined &&
+      (value.length > 100 || !/^[a-z][a-z0-9_]*$/.test(value))
+    )
+      fail("VALIDATION_FAILED");
+  }
+  if (input.questionId !== undefined) {
+    text(input.questionId);
+    if (input.questionId.length > 100) fail("VALIDATION_FAILED");
+  }
+  let contributorId: Id<"users"> | undefined;
+  if (input.contributorId !== undefined) {
+    contributorId =
+      ctx.db.normalizeId("users", input.contributorId) ?? undefined;
+    if (!contributorId) fail("VALIDATION_FAILED");
+  }
+  const search = input.search?.trim() || undefined;
+  if (search && search.length > 100) fail("VALIDATION_FAILED");
+  return { ...input, contributorId, search };
+}
+
+/** Choose one selective index, then apply remaining equality predicates. */
+function versionBaseQuery(ctx: QueryCtx, args: NormalizedAdminVersionFilters) {
+  const table = ctx.db.query("questionVersions");
+  if (args.questionId)
+    return table
+      .withIndex("by_canonicalQuestionId_and_createdAt", (q) =>
+        q.eq("canonicalQuestionId", args.questionId!),
+      )
+      .order("desc");
+  if (args.contributorId)
+    return table
+      .withIndex("by_contributorId_and_createdAt", (q) =>
+        q.eq("contributorId", args.contributorId!),
+      )
+      .order("desc");
+  if (args.state)
+    return table
+      .withIndex("by_state_and_createdAt", (q) => q.eq("state", args.state!))
+      .order("desc");
+  if (args.conceptId)
+    return table
+      .withIndex("by_conceptId_and_createdAt", (q) =>
+        q.eq("conceptId", args.conceptId!),
+      )
+      .order("desc");
+  if (args.subtopicId)
+    return table
+      .withIndex("by_subtopicId_and_createdAt", (q) =>
+        q.eq("subtopicId", args.subtopicId!),
+      )
+      .order("desc");
+  if (args.subjectId)
+    return table
+      .withIndex("by_subjectId_and_createdAt", (q) =>
+        q.eq("subjectId", args.subjectId!),
+      )
+      .order("desc");
+  if (args.module)
+    return table
+      .withIndex("by_module_and_createdAt", (q) => q.eq("module", args.module!))
+      .order("desc");
+  if (args.origin)
+    return table
+      .withIndex("by_origin_and_createdAt", (q) => q.eq("origin", args.origin!))
+      .order("desc");
+  if (args.level === "professional")
+    return table
+      .withIndex("by_professionalEligible_and_createdAt", (q) =>
+        q.eq("professionalEligible", true),
+      )
+      .order("desc");
+  if (args.level === "subprofessional")
+    return table
+      .withIndex("by_subprofessionalEligible_and_createdAt", (q) =>
+        q.eq("subprofessionalEligible", true),
+      )
+      .order("desc");
+  if (args.family !== undefined)
+    return table
+      .withIndex("by_family_and_createdAt", (q) => q.eq("family", args.family!))
+      .order("desc");
+  if (args.difficulty)
+    return table
+      .withIndex("by_difficulty_and_createdAt", (q) =>
+        q.eq("difficulty", args.difficulty!),
+      )
+      .order("desc");
+  if (args.language)
+    return table
+      .withIndex("by_language_and_createdAt", (q) =>
+        q.eq("language", args.language!),
+      )
+      .order("desc");
+  return table.withIndex("by_createdAt").order("desc");
+}
+
+function applyAdminVersionFilters(
+  query: ReturnType<typeof versionBaseQuery>,
+  args: NormalizedAdminVersionFilters,
+) {
+  let result = query;
+  if (args.state)
+    result = result.filter((q) => q.eq(q.field("state"), args.state!));
+  if (args.family !== undefined)
+    result = result.filter((q) => q.eq(q.field("family"), args.family!));
+  if (args.module)
+    result = result.filter((q) => q.eq(q.field("module"), args.module!));
+  if (args.subjectId)
+    result = result.filter((q) => q.eq(q.field("subjectId"), args.subjectId!));
+  if (args.subtopicId)
+    result = result.filter((q) =>
+      q.eq(q.field("subtopicId"), args.subtopicId!),
+    );
+  if (args.conceptId)
+    result = result.filter((q) => q.eq(q.field("conceptId"), args.conceptId!));
+  if (args.difficulty)
+    result = result.filter((q) =>
+      q.eq(q.field("difficulty"), args.difficulty!),
+    );
+  if (args.language)
+    result = result.filter((q) => q.eq(q.field("language"), args.language!));
+  if (args.origin)
+    result = result.filter((q) => q.eq(q.field("origin"), args.origin!));
+  if (args.contributorId)
+    result = result.filter((q) =>
+      q.eq(q.field("contributorId"), args.contributorId!),
+    );
+  if (args.questionId)
+    result = result.filter((q) =>
+      q.eq(q.field("canonicalQuestionId"), args.questionId!),
+    );
+  if (args.level === "professional")
+    result = result.filter((q) => q.eq(q.field("professionalEligible"), true));
+  if (args.level === "subprofessional")
+    result = result.filter((q) =>
+      q.eq(q.field("subprofessionalEligible"), true),
+    );
+  return result;
+}
+
 /** Return full admin review context with bounded review and duplicate histories. */
 export const getAdminVersion = query({
-  args: { questionVersionId: v.id("questionVersions") },
+  args: { questionVersionId: v.string() },
   returns: v.union(
     v.null(),
     v.object({
       version: schema.doc("questionVersions"),
       question: schema.doc("questions"),
+      taxonomy: v.union(v.null(), schema.doc("taxonomyVersions")),
       reference: v.union(v.null(), schema.doc("questionReferenceVersions")),
       reviews: v.array(schema.doc("questionReviews")),
       reviewOverflow: v.boolean(),
@@ -522,39 +716,128 @@ export const getAdminVersion = query({
   ),
   handler: async (ctx, args) => {
     await requireAdmin(ctx);
-    const version = await ctx.db.get(
+    const questionVersionId = ctx.db.normalizeId(
       "questionVersions",
       args.questionVersionId,
     );
+    if (!questionVersionId) return null;
+    const version = await ctx.db.get("questionVersions", questionVersionId);
     if (!version) return null;
     const question = await ctx.db.get("questions", version.questionId);
     if (!question) fail("QUESTION_NOT_FOUND");
-    const reviews = await ctx.db
+    const recentReviews = await ctx.db
       .query("questionReviews")
       .withIndex("by_questionVersionId", (q) =>
         q.eq("questionVersionId", version._id),
       )
       .order("desc")
       .take(51);
+    const reviews = recentReviews.slice(0, 50);
+    // The duplicate-recheck UI depends on the designated approval even when
+    // more than 50 decisions pushed it outside the bounded history window.
+    if (
+      version.approvalDecisionId &&
+      !reviews.some((review) => review._id === version.approvalDecisionId)
+    ) {
+      const approvalReview = await ctx.db.get(
+        "questionReviews",
+        version.approvalDecisionId,
+      );
+      if (approvalReview) reviews.push(approvalReview);
+    }
     return {
       version,
       question,
+      taxonomy: await ctx.db.get("taxonomyVersions", version.taxonomyVersionId),
       reference: version.referenceVersionId
         ? await ctx.db.get(
             "questionReferenceVersions",
             version.referenceVersionId,
           )
         : null,
-      reviews: reviews.slice(0, 50),
-      reviewOverflow: reviews.length > 50,
+      reviews,
+      reviewOverflow: recentReviews.length > 50,
       duplicates: await candidates(ctx, version, true),
     };
   },
 });
-/** Return an indexed page of question versions to an active admin. */
+/**
+ * Search accepts at most eight equality filters. Spend them on the most
+ * selective values, then enforce every filter again with a predicate so no
+ * requested constraint is silently dropped.
+ */
+const maxSearchEqualityFilters = 8;
+function adminSearchQuery(
+  ctx: QueryCtx,
+  filters: NormalizedAdminVersionFilters,
+) {
+  return ctx.db
+    .query("questionVersions")
+    .withSearchIndex("by_searchText", (q) => {
+      let result = q.search("searchText", filters.search!);
+      let slots = maxSearchEqualityFilters;
+      const takeSlot = () => {
+        if (slots === 0) return false;
+        slots -= 1;
+        return true;
+      };
+      if (filters.questionId && takeSlot())
+        result = result.eq("canonicalQuestionId", filters.questionId);
+      if (filters.contributorId && takeSlot())
+        result = result.eq("contributorId", filters.contributorId);
+      if (filters.state && takeSlot())
+        result = result.eq("state", filters.state);
+      if (filters.conceptId && takeSlot())
+        result = result.eq("conceptId", filters.conceptId);
+      if (filters.subtopicId && takeSlot())
+        result = result.eq("subtopicId", filters.subtopicId);
+      if (filters.subjectId && takeSlot())
+        result = result.eq("subjectId", filters.subjectId);
+      if (filters.module && takeSlot())
+        result = result.eq("module", filters.module);
+      if (filters.family !== undefined && takeSlot())
+        result = result.eq("family", filters.family);
+      if (filters.difficulty && takeSlot())
+        result = result.eq("difficulty", filters.difficulty);
+      if (filters.origin && takeSlot())
+        result = result.eq("origin", filters.origin);
+      if (filters.language && takeSlot())
+        result = result.eq("language", filters.language);
+      if (filters.level === "professional" && takeSlot())
+        result = result.eq("professionalEligible", true);
+      if (filters.level === "subprofessional" && takeSlot())
+        result = result.eq("subprofessionalEligible", true);
+      return result;
+    });
+}
+
+/** Bound rows and bytes read so rare filters cannot scan a whole transaction. */
+function boundedPagination<
+  T extends {
+    numItems: number;
+    maximumRowsRead?: number;
+    maximumBytesRead?: number;
+  },
+>(options: T) {
+  const rowCap = Math.min(10_000, Math.max(1_000, options.numItems * 100));
+  const byteCap = 8 * 1024 * 1024;
+  return {
+    ...options,
+    maximumRowsRead:
+      options.maximumRowsRead === undefined
+        ? rowCap
+        : Math.min(options.maximumRowsRead, rowCap),
+    maximumBytesRead:
+      options.maximumBytesRead === undefined
+        ? byteCap
+        : Math.min(options.maximumBytesRead, byteCap),
+  };
+}
+
+/** Return an indexed page of question versions with combined admin filters. */
 export const listAdminVersions = query({
   args: {
-    state: v.optional(questionState),
+    ...adminVersionFilters.fields,
     paginationOpts: paginationOptsValidator,
   },
   returns: paginationResultValidator(schema.doc("questionVersions")),
@@ -566,11 +849,79 @@ export const listAdminVersions = query({
       args.paginationOpts.numItems > 100
     )
       fail("INVALID_PAGE_SIZE");
-    return ctx.db
+    const filters = validateAdminVersionFilters(ctx, args);
+    const paginationOpts = boundedPagination(args.paginationOpts);
+    if (filters.search) {
+      const search = adminSearchQuery(ctx, filters);
+      // Search-index filters are not enough on their own: enforce every
+      // requested predicate after retrieval and preserve cursor pagination.
+      return applyAdminVersionFilters(search, filters).paginate(paginationOpts);
+    }
+    return applyAdminVersionFilters(
+      versionBaseQuery(ctx, filters),
+      filters,
+    ).paginate(paginationOpts);
+  },
+});
+/** Return every immutable version of one canonical question, newest first. */
+export const listAdminQuestionVersions = query({
+  args: { questionId: v.id("questions") },
+  returns: v.union(
+    v.null(),
+    v.object({
+      question: schema.doc("questions"),
+      versions: v.array(schema.doc("questionVersions")),
+      overflow: v.boolean(),
+    }),
+  ),
+  handler: async (ctx, args) => {
+    await requireAdmin(ctx);
+    const question = await ctx.db.get("questions", args.questionId);
+    if (!question) return null;
+    const versions = await ctx.db
       .query("questionVersions")
-      .withIndex("by_state", (q) =>
-        args.state ? q.eq("state", args.state) : q,
+      .withIndex("by_questionId_and_version", (q) =>
+        q.eq("questionId", args.questionId),
       )
-      .paginate(args.paginationOpts);
+      .order("desc")
+      .take(101);
+    return {
+      question,
+      versions: versions.slice(0, 100),
+      overflow: versions.length > 100,
+    };
+  },
+});
+/** Return sealed catalog choices and entries for the authoring form. */
+export const listAdminAuthoringOptions = query({
+  args: { taxonomyVersionId: v.optional(v.id("taxonomyVersions")) },
+  returns: v.object({
+    catalogs: v.array(schema.doc("taxonomyVersions")),
+    selected: v.union(v.null(), schema.doc("taxonomyVersions")),
+    entries: v.array(schema.doc("taxonomyEntries")),
+  }),
+  handler: async (ctx, args) => {
+    await requireAdmin(ctx);
+    const sealed = await ctx.db
+      .query("taxonomyVersions")
+      .withIndex("by_state_and_createdAt", (q) => q.eq("state", "sealed"))
+      .order("desc")
+      .take(50);
+    const catalogs = sealed.slice(0, 20);
+    let selected = null;
+    if (args.taxonomyVersionId) {
+      selected = await ctx.db.get("taxonomyVersions", args.taxonomyVersionId);
+      if (!selected || selected.state !== "sealed")
+        fail("TAXONOMY_UNAVAILABLE");
+      if (!catalogs.some((catalog) => catalog._id === selected!._id))
+        catalogs.unshift(selected);
+    } else {
+      selected = catalogs[0] ?? null;
+    }
+    return {
+      catalogs,
+      selected,
+      entries: selected ? await loadCatalog(ctx, selected._id) : [],
+    };
   },
 });
