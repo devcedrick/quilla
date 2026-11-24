@@ -116,8 +116,8 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 - Onboarding persists Professional or Subprofessional as the learner's changeable preferred level and an optional valid target exam date. Learners with no saved preference must complete level selection.
 - First-time users are directed to the diagnostic for their chosen level.
 - The preferred level supplies future attempt defaults and the default dashboard context. Each new attempt shows its selected level for explicit confirmation before starting; selecting another level for one attempt does not change the preference.
-- Learners can change their preference after onboarding. The change explains that history and mastery are retained and that the newly preferred level requires its own submitted diagnostic to unlock guidance and readiness; the optional target date is preserved.
-- Personalized study guidance and readiness are unavailable for a level until that learner submits a diagnostic for that level. Returning to a previously assessed level retains its diagnostic eligibility.
+- Learners can change their preference after onboarding. The change explains that history and mastery are retained and that the newly preferred level requires its own diagnostic finalized with saved answers to unlock guidance and readiness; the optional target date is preserved.
+- Personalized study guidance and readiness are unavailable for a level until that learner finalizes a diagnostic with saved answers for that level. Returning to a previously assessed level retains its diagnostic eligibility.
 - Changing preference never changes an active attempt's level, served questions, blueprint snapshot, saved answers, or deadline; resume and submission use the attempt's stored context.
 - [ADR 0003](ADR/0003-exam-level-selection-policy.md) defines the level-selection policy and transitions.
 - Backend authorization is enforced independently of client-side routing.
@@ -198,8 +198,8 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - The diagnostic follows the shared timed-attempt lifecycle: it has a fixed server deadline, is resumable only before that deadline, and is never paused or extended. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the transitions.
 - An expired diagnostic with saved answers counts as submitted; only answered items create mastery evidence, and unanswered items remain untested. A zero-answer expiry is abandoned and does not satisfy the completion gate.
 - Diagnostic completion is tracked per learner and level using the finalized-attempt rule above. Shared mastery or the other level's diagnostic does not satisfy this requirement.
-- Submission unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
-- Finalization creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. Retaking a diagnostic preserves prior evidence, and finalization retries cannot double-count it.
+- Submission, or deadline-driven expiry with saved answers, unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
+- A diagnostic finalized as `submitted`, or as `expired` with saved answers, creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. An `abandoned` diagnostic creates no mastery, readiness, streak or guidance evidence. Retaking a diagnostic preserves prior evidence, and finalization retries cannot double-count it.
 - Untested concepts are clearly marked, and content gaps are visible to admins.
 - Results present a mastery overview without pass/fail wording.
 
@@ -397,7 +397,7 @@ Activation requires integration of the seven initial 270-question seed families 
 - Pausing a full mock exam.
 - Deleting or purging exam history in the initial release.
 - Scoring questionnaire responses or including them in an exam result.
-- Showing correctness or explanations before submission.
+- Showing correctness or explanations before the attempt is finalized.
 - Substituting invalid subjects across exam levels.
 - Claiming affiliation with or reproducing an official CSC examination.
 - Using the mock score as the sole readiness measure.
@@ -442,8 +442,8 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 
 ### Non-goals
 
-- Revealing answers before an attempt is submitted.
-- Treating review as a one-time results screen that is available only immediately after submission.
+- Revealing answers before an attempt is finalized.
+- Treating review as a one-time results screen that is available only immediately after finalization.
 - Reconstructing review content from the latest question version.
 - Allowing review actions to change the submitted score.
 - Making distractor rationales mandatory when they were not available in the served version.
@@ -531,7 +531,7 @@ As a learner, I want an explainable readiness score with a confidence range and 
 
 ### Definition of done
 
-- Readiness is unavailable for a requested level until the learner submits that level's diagnostic, even when shared mastery or another level's diagnostic exists. A diagnostic that expired with saved answers counts as submitted; an abandoned one does not.
+- Readiness is unavailable for a requested level until the learner finalizes that level's diagnostic with saved answers, even when shared mastery or another level's diagnostic exists. A diagnostic that expired with saved answers counts as submitted; an abandoned one does not.
 - The score uses the requested level's coverage and blueprint and combines applicable concept mastery (including genuinely shared evidence), recent mock performance from that same level, and demonstrated recall in eligible learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
 - Only finalized attempts contribute attempt evidence: `submitted` and `expired` attempts contribute their scored answers, while `abandoned` attempts contribute nothing. Completed adaptive-practice and review-session answers remain governed by their own evidence rules.
 - The view includes a confidence range, subject breakdown, weakest concepts, and plain-language explanation.
