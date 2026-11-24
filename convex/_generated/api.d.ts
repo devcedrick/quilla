@@ -9,10 +9,12 @@
  */
 
 import type * as audit from "../audit.js";
+import type * as blueprintBootstrap from "../blueprintBootstrap.js";
 import type * as blueprints from "../blueprints.js";
 import type * as learning from "../learning.js";
 import type * as lib_audit from "../lib/audit.js";
 import type * as lib_auth from "../lib/auth.js";
+import type * as lib_blueprintBootstrap from "../lib/blueprintBootstrap.js";
 import type * as lib_blueprintFixture from "../lib/blueprintFixture.js";
 import type * as lib_blueprintValidation from "../lib/blueprintValidation.js";
 import type * as lib_blueprints from "../lib/blueprints.js";
@@ -56,10 +58,12 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   audit: typeof audit;
+  blueprintBootstrap: typeof blueprintBootstrap;
   blueprints: typeof blueprints;
   learning: typeof learning;
   "lib/audit": typeof lib_audit;
   "lib/auth": typeof lib_auth;
+  "lib/blueprintBootstrap": typeof lib_blueprintBootstrap;
   "lib/blueprintFixture": typeof lib_blueprintFixture;
   "lib/blueprintValidation": typeof lib_blueprintValidation;
   "lib/blueprints": typeof lib_blueprints;

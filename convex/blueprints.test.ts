@@ -173,6 +173,7 @@ describe("blueprints", () => {
     expect(JSON.parse(activation.afterJson!)).toEqual({
       state: "active",
       revision: activeRevision,
+      level: "professional",
       configurationFormatVersion: 2,
       previousActiveVersionId: null,
     });
@@ -243,6 +244,7 @@ describe("blueprints", () => {
     expect(JSON.parse(activation.afterJson!)).toEqual({
       state: "active",
       revision: activeRevision,
+      level: "professional",
       configurationFormatVersion: storedFormatVersion,
       previousActiveVersionId: null,
     });

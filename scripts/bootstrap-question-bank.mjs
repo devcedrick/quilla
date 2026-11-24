@@ -9,6 +9,7 @@ import {
   bootstrapPlanChecksum,
   bootstrapStageBatchSize,
   isKnownFailureCode,
+  seedBlueprintPolicy,
   seedBootstrapPolicy,
   seedTaxonomyPolicy,
   safeBootstrapFailure,
@@ -26,6 +27,7 @@ class BootstrapError extends Error {
     this.transient = options.transient ?? false;
     this.conflicts = options.conflicts;
     this.recovery = options.recovery;
+    this.details = options.details;
   }
 }
 
@@ -209,6 +211,8 @@ export function parseBootstrapArgs(args) {
     "--rollback",
     "--install-taxonomy",
     "--verify-taxonomy",
+    "--install-blueprints",
+    "--verify-blueprints",
     "--prod",
     "--confirm-production",
   ];
@@ -242,6 +246,8 @@ export function parseBootstrapArgs(args) {
     "--rollback",
     "--install-taxonomy",
     "--verify-taxonomy",
+    "--install-blueprints",
+    "--verify-blueprints",
   ].filter((name) => flags[name]);
   if (modes.length > 1) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   if (flags["--prod"] && flags["--deployment"])
@@ -261,7 +267,12 @@ export function parseBootstrapArgs(args) {
   }
   if (!flags["--target"])
     throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
-  if (flags["--install-taxonomy"] || flags["--verify-taxonomy"]) {
+  if (
+    flags["--install-taxonomy"] ||
+    flags["--verify-taxonomy"] ||
+    flags["--install-blueprints"] ||
+    flags["--verify-blueprints"]
+  ) {
     if (
       flags["--expect-plan"] ||
       flags["--run"] ||
@@ -297,7 +308,9 @@ export function requiresDeployment(flags) {
     flags["--pause"] ||
     flags["--rollback"] ||
     flags["--install-taxonomy"] ||
-    flags["--verify-taxonomy"],
+    flags["--verify-taxonomy"] ||
+    flags["--install-blueprints"] ||
+    flags["--verify-blueprints"],
   );
 }
 
@@ -408,6 +421,14 @@ function taxonomyClient(flags, runner = runConvex) {
   };
 }
 
+/** Build the internal-only blueprint installation and verification client. */
+function blueprintClient(flags, runner = runConvex) {
+  return {
+    query: (name, args) => runner(`blueprintBootstrap:${name}`, args, flags),
+    mutation: (name, args) => runner(`blueprintBootstrap:${name}`, args, flags),
+  };
+}
+
 /** Install and seal the pinned catalog; an exact rerun is a verified no-op. */
 export async function installTaxonomy(client, target, { sleep } = {}) {
   if (!target) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
@@ -425,6 +446,39 @@ export async function installTaxonomy(client, target, { sleep } = {}) {
 export async function verifyTaxonomy(client, target) {
   if (!target) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
   return withBootstrapRetry(() => client.query("verify", { target }));
+}
+
+/** Install and activate the pinned v3 blueprints; an exact rerun is a no-op. */
+export async function installBlueprints(client, target, { sleep } = {}) {
+  if (!target) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+  return withBootstrapRetry(
+    () =>
+      client.mutation("install", {
+        target,
+        fixtureDigest: seedBlueprintPolicy.digest,
+      }),
+    { sleep },
+  );
+}
+
+/** Read read-only blueprint evidence and reject deployed fixture-digest skew. */
+export async function verifyBlueprints(client, target) {
+  if (!target) throw new BootstrapError("BOOTSTRAP_INVALID_ARGUMENTS");
+  const result = await withBootstrapRetry(() =>
+    client.query("verify", { target }),
+  );
+  if (
+    result?.expectedFixtureDigest !== seedBlueprintPolicy.digest ||
+    result?.deployedFixtureDigest !== seedBlueprintPolicy.digest ||
+    result?.fixtureDigestMatches === false
+  )
+    throw new BootstrapError("BLUEPRINT_FIXTURE_MISMATCH", {
+      details: {
+        expectedFixtureDigest: result?.expectedFixtureDigest ?? null,
+        deployedFixtureDigest: result?.deployedFixtureDigest ?? null,
+      },
+    });
+  return result;
 }
 
 /** Upload exact image bytes through a short-lived Convex storage URL. */
@@ -829,10 +883,95 @@ export function taxonomySummary(result) {
   return lines.join("\n");
 }
 
+/** Render one blueprint configuration summary without dumping its rows. */
+function blueprintCountText(counts) {
+  if (!counts) return "counts unavailable";
+  return `${counts.scoredItems} items/${counts.durationMinutes} min/${counts.passingScore} passing, ${counts.cells} cells, ${counts.languages} language totals, ${counts.concepts} concepts`;
+}
+
+/** Print blueprint installation or verification evidence with its boundary. */
+export function blueprintSummary(result) {
+  const levels = Array.isArray(result.levels) ? result.levels : [];
+  const lines = [];
+  if (result.mode === "blueprint-install") {
+    if (result.created) {
+      lines.push(
+        `blueprints: installed and activated ${levels.length} approved v3 blueprints on ${result.target}.`,
+      );
+      lines.push(
+        `Taxonomy version: ${result.taxonomyVersionId}. Fixture digest: ${result.fixtureDigest}.`,
+      );
+      for (const level of levels)
+        lines.push(
+          `${level.blueprintId} (${level.level}): ${level.blueprintVersionId} at revision ${level.revision}, ${level.state}; hash ${level.configurationHash}; ${blueprintCountText(level.counts)}${level.supersededVersionId ? `; superseded ${level.supersededVersionId}` : ""}.`,
+        );
+      lines.push(
+        "Installed and activated atomically; blueprint versions, per-level active pointers, and audit records only, plus the non-login installer identity.",
+      );
+      lines.push(
+        "No questions, references, assets, taxonomy entries, or attempt snapshots were written.",
+      );
+    } else {
+      lines.push(
+        `blueprints: both approved v3 blueprints are already active on ${result.target}; no writes performed.`,
+      );
+      for (const level of levels)
+        lines.push(
+          `${level.blueprintId} (${level.level}): ${level.blueprintVersionId} at revision ${level.revision}; hash ${level.configurationHash}; ${blueprintCountText(level.counts)}.`,
+        );
+    }
+  } else {
+    lines.push(
+      `blueprints: ${result.matchesExpected ? "stored versions match the reviewed v3 fixture" : "stored versions do not match the reviewed v3 fixture"} on ${result.target}.`,
+    );
+    lines.push(
+      `Taxonomy ${result.taxonomyId}: ${result.taxonomyMatchesExpected ? "sealed and matching" : "missing or not matching"}${result.taxonomyVersionId ? ` (${result.taxonomyVersionId})` : ""}.`,
+    );
+    if (!result.fixtureDigestMatches)
+      lines.push(
+        "Deployed fixture digest does not match the pinned digest.",
+        `Expected fixture digest: ${result.expectedFixtureDigest ?? "unavailable"}. Deployed fixture digest: ${result.deployedFixtureDigest ?? "unavailable"}.`,
+      );
+    for (const level of levels) {
+      const state = level.present
+        ? `version ${level.versionIds.join(", ")} state=${level.state} revision=${level.revision} active=${level.active} sealed=${level.sealed} hash=${level.contentHash}`
+        : "not installed";
+      lines.push(
+        `${level.expectedBlueprintId} (${level.level}): ${state}; ${level.matchesExpected ? "matches expected" : "does not match expected"}.`,
+      );
+      if (level.counts)
+        lines.push(`  counts: ${blueprintCountText(level.counts)}.`);
+    }
+    lines.push("No writes performed.");
+  }
+  lines.push(
+    "Blueprint installation is not content approval, publication, exam readiness, or completion of #98.",
+  );
+  return lines.join("\n");
+}
+
 /** Print only allowlisted error codes; transport errors may contain credentials. */
 export function bootstrapErrorCode(error) {
   const code = error?.data?.code ?? error?.code ?? error?.message;
   return safeBootstrapFailure(code);
+}
+
+/** Build the sanitized failure report, retaining explicit digest evidence. */
+export function bootstrapFailureReport(
+  error,
+  { taxonomyMode = false, blueprintMode = false } = {},
+) {
+  return {
+    error: bootstrapErrorCode(error),
+    conflicts: error.conflicts ?? [],
+    checkpoint: error.recovery ?? null,
+    details: error.details ?? null,
+    recovery: taxonomyMode
+      ? "No taxonomy rows are written by a rejected install. Re-run verification; an existing mismatched version requires separate review."
+      : blueprintMode
+        ? "Check and install the sealed taxonomy first; an existing conflicting blueprint version requires separate review. Never delete or overwrite blueprint history."
+        : "Stop; inspect bootstrap status, pause an active run, and resume only with the same pinned plan. Roll back with a new plan after a full archive.",
+  };
 }
 
 if (
@@ -840,15 +979,20 @@ if (
   path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
 ) {
   let taxonomyMode = false;
+  let blueprintMode = false;
   try {
     const flags = parseBootstrapArgs(process.argv.slice(2));
     taxonomyMode = Boolean(
       flags["--install-taxonomy"] || flags["--verify-taxonomy"],
     );
+    blueprintMode = Boolean(
+      flags["--install-blueprints"] || flags["--verify-blueprints"],
+    );
     const remote = requiresDeployment(flags);
     if (remote) selectDeployment(flags);
     const client = remote ? bootstrapClient(flags) : null;
     const taxonomy = remote ? taxonomyClient(flags) : null;
+    const blueprints = remote ? blueprintClient(flags) : null;
     let result;
     if (flags["--status"]) {
       const status = await readBootstrapStatus(
@@ -871,6 +1015,18 @@ if (
       result = {
         ...(await installTaxonomy(taxonomy, flags["--target"])),
         mode: "taxonomy-install",
+        target: flags["--target"],
+      };
+    } else if (flags["--verify-blueprints"]) {
+      result = {
+        ...(await verifyBlueprints(blueprints, flags["--target"])),
+        mode: "blueprint-verify",
+        target: flags["--target"],
+      };
+    } else if (flags["--install-blueprints"]) {
+      result = {
+        ...(await installBlueprints(blueprints, flags["--target"])),
+        mode: "blueprint-install",
         target: flags["--target"],
       };
     } else if (flags["--pause"]) {
@@ -908,17 +1064,17 @@ if (
       result.mode === "taxonomy-verify"
     )
       console.log(taxonomySummary(result));
+    else if (
+      result.mode === "blueprint-install" ||
+      result.mode === "blueprint-verify"
+    )
+      console.log(blueprintSummary(result));
     else console.log(bootstrapSummary(result));
   } catch (error) {
     console.error(
-      JSON.stringify({
-        error: bootstrapErrorCode(error),
-        conflicts: error.conflicts ?? [],
-        checkpoint: error.recovery ?? null,
-        recovery: taxonomyMode
-          ? "No taxonomy rows are written by a rejected install. Re-run verification; an existing mismatched version requires separate review."
-          : "Stop; inspect bootstrap status, pause an active run, and resume only with the same pinned plan. Roll back with a new plan after a full archive.",
-      }),
+      JSON.stringify(
+        bootstrapFailureReport(error, { taxonomyMode, blueprintMode }),
+      ),
     );
     process.exitCode = 1;
   }
