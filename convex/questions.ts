@@ -238,6 +238,8 @@ export const reviewVersion = mutation({
     ),
     duplicateDisposition: disposition,
     duplicateEvidence: v.string(),
+    /** Captured when the reviewer opened the decision, not the latest render. */
+    candidateSetFingerprint: v.string(),
   },
   returns: v.number(),
   handler: async (ctx, args) => {
@@ -261,6 +263,7 @@ export const reviewVersion = mutation({
     )
       fail("VALIDATION_FAILED");
     text(args.duplicateEvidence);
+    text(args.candidateSetFingerprint);
     const duplicate = await candidates(
       ctx,
       version,
@@ -280,6 +283,9 @@ export const reviewVersion = mutation({
           args.duplicateDisposition !== "adjudicated_distinct")
       )
         fail("VALIDATION_FAILED");
+      // Approval evidence belongs to the candidate set the reviewer saw.
+      if (duplicate.fingerprint !== args.candidateSetFingerprint)
+        fail("STALE_REVISION");
     }
     const reviewId = await ctx.db.insert("questionReviews", {
       questionVersionId: version._id,
@@ -606,6 +612,26 @@ function versionBaseQuery(ctx: QueryCtx, args: NormalizedAdminVersionFilters) {
         q.eq("subjectId", args.subjectId!),
       )
       .order("desc");
+  if (args.module)
+    return table
+      .withIndex("by_module_and_createdAt", (q) => q.eq("module", args.module!))
+      .order("desc");
+  if (args.origin)
+    return table
+      .withIndex("by_origin_and_createdAt", (q) => q.eq("origin", args.origin!))
+      .order("desc");
+  if (args.level === "professional")
+    return table
+      .withIndex("by_professionalEligible_and_createdAt", (q) =>
+        q.eq("professionalEligible", true),
+      )
+      .order("desc");
+  if (args.level === "subprofessional")
+    return table
+      .withIndex("by_subprofessionalEligible_and_createdAt", (q) =>
+        q.eq("subprofessionalEligible", true),
+      )
+      .order("desc");
   if (args.family !== undefined)
     return table
       .withIndex("by_family_and_createdAt", (q) => q.eq("family", args.family!))
@@ -722,6 +748,65 @@ export const getAdminVersion = query({
     };
   },
 });
+/**
+ * Search accepts at most eight equality filters. Spend them on the most
+ * selective values, then enforce every filter again with a predicate so no
+ * requested constraint is silently dropped.
+ */
+const maxSearchEqualityFilters = 8;
+function adminSearchQuery(
+  ctx: QueryCtx,
+  filters: NormalizedAdminVersionFilters,
+) {
+  return ctx.db
+    .query("questionVersions")
+    .withSearchIndex("by_searchText", (q) => {
+      let result = q.search("searchText", filters.search!);
+      let slots = maxSearchEqualityFilters;
+      const takeSlot = () => {
+        if (slots === 0) return false;
+        slots -= 1;
+        return true;
+      };
+      if (filters.questionId && takeSlot())
+        result = result.eq("canonicalQuestionId", filters.questionId);
+      if (filters.contributorId && takeSlot())
+        result = result.eq("contributorId", filters.contributorId);
+      if (filters.state && takeSlot())
+        result = result.eq("state", filters.state);
+      if (filters.conceptId && takeSlot())
+        result = result.eq("conceptId", filters.conceptId);
+      if (filters.subtopicId && takeSlot())
+        result = result.eq("subtopicId", filters.subtopicId);
+      if (filters.subjectId && takeSlot())
+        result = result.eq("subjectId", filters.subjectId);
+      if (filters.module && takeSlot())
+        result = result.eq("module", filters.module);
+      if (filters.family !== undefined && takeSlot())
+        result = result.eq("family", filters.family);
+      if (filters.difficulty && takeSlot())
+        result = result.eq("difficulty", filters.difficulty);
+      if (filters.origin && takeSlot())
+        result = result.eq("origin", filters.origin);
+      if (filters.language && takeSlot())
+        result = result.eq("language", filters.language);
+      if (filters.level === "professional" && takeSlot())
+        result = result.eq("professionalEligible", true);
+      if (filters.level === "subprofessional" && takeSlot())
+        result = result.eq("subprofessionalEligible", true);
+      return result;
+    });
+}
+
+/** Bound rows and bytes read so rare filters cannot scan a whole transaction. */
+function boundedPagination<T extends { numItems: number }>(options: T) {
+  return {
+    ...options,
+    maximumRowsRead: Math.min(10_000, Math.max(1_000, options.numItems * 100)),
+    maximumBytesRead: 8 * 1024 * 1024,
+  };
+}
+
 /** Return an indexed page of question versions with combined admin filters. */
 export const listAdminVersions = query({
   args: {
@@ -738,42 +823,17 @@ export const listAdminVersions = query({
     )
       fail("INVALID_PAGE_SIZE");
     const filters = validateAdminVersionFilters(ctx, args);
+    const paginationOpts = boundedPagination(args.paginationOpts);
     if (filters.search) {
-      const search = ctx.db
-        .query("questionVersions")
-        .withSearchIndex("by_searchText", (q) => {
-          let result = q.search("searchText", filters.search!);
-          if (filters.state) result = result.eq("state", filters.state);
-          if (filters.family !== undefined)
-            result = result.eq("family", filters.family);
-          if (filters.module) result = result.eq("module", filters.module);
-          if (filters.subjectId)
-            result = result.eq("subjectId", filters.subjectId);
-          if (filters.subtopicId)
-            result = result.eq("subtopicId", filters.subtopicId);
-          if (filters.conceptId)
-            result = result.eq("conceptId", filters.conceptId);
-          if (filters.difficulty)
-            result = result.eq("difficulty", filters.difficulty);
-          if (filters.language)
-            result = result.eq("language", filters.language);
-          if (filters.origin) result = result.eq("origin", filters.origin);
-          if (filters.contributorId)
-            result = result.eq("contributorId", filters.contributorId);
-          if (filters.questionId)
-            result = result.eq("canonicalQuestionId", filters.questionId);
-          if (filters.level === "professional")
-            result = result.eq("professionalEligible", true);
-          if (filters.level === "subprofessional")
-            result = result.eq("subprofessionalEligible", true);
-          return result;
-        });
-      return search.paginate(args.paginationOpts);
+      const search = adminSearchQuery(ctx, filters);
+      // Search-index filters are not enough on their own: enforce every
+      // requested predicate after retrieval and preserve cursor pagination.
+      return applyAdminVersionFilters(search, filters).paginate(paginationOpts);
     }
     return applyAdminVersionFilters(
       versionBaseQuery(ctx, filters),
       filters,
-    ).paginate(args.paginationOpts);
+    ).paginate(paginationOpts);
   },
 });
 /** Return every immutable version of one canonical question, newest first. */
@@ -817,11 +877,10 @@ export const listAdminAuthoringOptions = query({
     await requireAdmin(ctx);
     const sealed = await ctx.db
       .query("taxonomyVersions")
-      .withIndex("by_state", (q) => q.eq("state", "sealed"))
+      .withIndex("by_state_and_createdAt", (q) => q.eq("state", "sealed"))
+      .order("desc")
       .take(50);
-    const catalogs = sealed
-      .sort((a, b) => b.createdAt - a.createdAt)
-      .slice(0, 20);
+    const catalogs = sealed.slice(0, 20);
     let selected = null;
     if (args.taxonomyVersionId) {
       selected = await ctx.db.get("taxonomyVersions", args.taxonomyVersionId);

@@ -74,10 +74,12 @@ export const listAdminOptions = query({
           .eq("language", args.language),
       )
       .order("desc")
-      .take(257);
+      // Reference content is bounded at 128 KiB. 101 full rows stay below the
+      // 16 MiB transaction limit even before deduplication.
+      .take(101);
     const seen = new Set<string>();
     const options = [];
-    let overflow = rows.length > 256;
+    let overflow = rows.length > 100;
     for (const row of rows) {
       if (seen.has(row.referenceId)) continue;
       seen.add(row.referenceId);

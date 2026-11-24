@@ -30,6 +30,31 @@ export const questionSearchProjection = {
   subprofessionalEligible: v.boolean(),
 };
 
+/**
+ * Staged schema form. Existing rows predate the projection, so the fields stay
+ * optional until an approved backfill has populated every row. New writes still
+ * use the required builder above.
+ */
+export const questionSearchProjectionSchemaFields = {
+  canonicalQuestionId: v.optional(questionSearchProjection.canonicalQuestionId),
+  contributorId: v.optional(questionSearchProjection.contributorId),
+  searchText: v.optional(questionSearchProjection.searchText),
+  family: v.optional(questionSearchProjection.family),
+  module: v.optional(questionSearchProjection.module),
+  subjectId: v.optional(questionSearchProjection.subjectId),
+  subtopicId: v.optional(questionSearchProjection.subtopicId),
+  conceptId: v.optional(questionSearchProjection.conceptId),
+  difficulty: v.optional(questionSearchProjection.difficulty),
+  language: v.optional(questionSearchProjection.language),
+  origin: v.optional(questionSearchProjection.origin),
+  professionalEligible: v.optional(
+    questionSearchProjection.professionalEligible,
+  ),
+  subprofessionalEligible: v.optional(
+    questionSearchProjection.subprofessionalEligible,
+  ),
+};
+
 /** Derive the projection from already-validated immutable content. */
 export function buildQuestionSearchProjection(
   content: QuestionContent,
@@ -65,6 +90,13 @@ export const referenceScopeFields = {
   family: v.number(),
   module: moduleId,
   language,
+};
+
+/** Staged schema form for reference rows that predate the scope projection. */
+export const referenceScopeSchemaFields = {
+  family: v.optional(referenceScopeFields.family),
+  module: v.optional(referenceScopeFields.module),
+  language: v.optional(referenceScopeFields.language),
 };
 
 export function buildReferenceScopeFields(
