@@ -1,10 +1,11 @@
 # Question-bank draft import: dry run and recovery
 
 Issue #95 implements the importer locally. Issue #107 registers only the reviewed
-`quilla-dev` development target and implements an internal taxonomy installer.
-**No deployment, taxonomy installation or import has been executed by this change.**
-The commands below describe authorized use; each exact target still requires fresh
-approval and deployment credentials.
+`quilla-dev` development target and implements an internal taxonomy installer. Issue
+#111 adds an internal installer for the approved v3 blueprints. **No deployment,
+taxonomy installation, blueprint installation/activation or import has been executed
+by this change.** The commands below describe authorized use; each exact target still
+requires fresh approval and deployment credentials.
 
 ## Offline inspection — no credentials required
 
@@ -47,9 +48,11 @@ sealed taxonomy or matching content: target comparison is reported as not checke
    on that development backend. The guard compares the registered URL against its
    system `CONVEX_CLOUD_URL`.
 3. Provision an active Quilla admin for the ordinary importer. The importer never
-   creates unknown taxonomy. The one-time taxonomy installer and bootstrap do not
-   provision admins and do not require one; install and seal the matching v2
-   taxonomy through the guarded internal path below.
+   creates unknown taxonomy. The one-time taxonomy and blueprint installers and the
+   bootstrap do not provision admins and do not require one; install and seal the
+   matching v2 taxonomy, then install and activate the v3 blueprints, through the
+   guarded internal paths below. The question-bank bootstrap under #106 follows both
+   installations.
 4. Sign in to the matching development Quilla app. Obtain a short-lived token from
    that signed-in Clerk session with `getToken()`, using its configured Convex
    audience (or the `convex` JWT template when that is how the Clerk instance is
@@ -195,6 +198,88 @@ the stored content exactly matches the reviewed sealed catalog. Installation wri
 only taxonomy and audit records plus the non-login installer identity on first use;
 it does not write questions, references or assets, and it does not provision an
 admin. Installing the catalog is not editorial or content approval.
+
+## Install and activate the approved v3 blueprints
+
+Issue #111 adds an internal, operator-only installer for
+`cse-professional-2027-v3` and `cse-subprofessional-2027-v3`. Run the taxonomy
+section above first; blueprint installation requires the exact sealed
+`cse-taxonomy-2027-v2` version and fails closed without it.
+
+```powershell
+# Read-only; works before installation and after the bootstrap window closes.
+node scripts/bootstrap-question-bank.mjs --verify-blueprints --target quilla-dev --deployment <development-name> --json
+
+# Install and activate both levels atomically.
+node scripts/bootstrap-question-bank.mjs --install-blueprints --target quilla-dev --deployment <development-name> --json
+```
+
+Both modes require `--target quilla-dev` and the same deployment selection as the
+bootstrap (`--deployment <name>`, `--prod --confirm-production`, or
+`CONVEX_DEPLOY_KEY`). They reject `--expect-plan`, `--run`, `--resume-run`,
+`--checkpoint`, `--reason` and combination with another mode. Selecting production
+while passing `--target quilla-dev` fails closed because production is not a
+registered target.
+
+Installation additionally requires `SEED_BOOTSTRAP_ENABLED=true` on the exact
+backend and a fixture digest equal to the reviewed pin
+`c75b6540dd31a929a810078b2cab54b7f5cff327daacc8c31d58a2022eb4ce69`. The installer
+accepts only these exact identities:
+
+| Blueprint                     | Level           | Items | Minutes | Passing | Cells | Language totals | Concepts |
+| ----------------------------- | --------------- | ----- | ------- | ------- | ----- | --------------- | -------- |
+| `cse-professional-2027-v3`    | Professional    | 150   | 168     | 120     | 15    | 5               | 9        |
+| `cse-subprofessional-2027-v3` | Subprofessional | 145   | 141     | 116     | 12    | 5               | 10       |
+
+Installation and activation happen in one transaction for both levels. Each new
+version is pinned to the sealed taxonomy, validation and hashing reuse the admin
+blueprint helpers, and activation moves the per-level pointer. A prior active
+version is archived by state and revision only; its configuration and content hash
+are never changed and it is never deleted. `seed_install`, `activate` and
+`supersede` audit events carry an audit timestamp and are attributed to the
+non-login `system:seed-blueprint-installer` identity; install events record the
+configuration hash, and activation events record the level, revision and
+configuration format. The installer writes only blueprint
+versions, active pointers, audit records and, on first use, that identity. It writes
+no questions, references, assets, taxonomy entries or attempt snapshots.
+
+An exact rerun is a no-op: it reports `created: false` and adds no version, pointer
+change, identity or audit event. The no-op requires both exact versions to remain
+active, hash-verified and stored with the current configuration format, to match the
+fixture configuration, to resolve through one consistent pointer per level, and to
+have been created and activated by the installer identity. Do not delete, overwrite
+or renumber a conflicting version to make a rerun pass; a partial install, duplicate
+version, draft or archived exact version, unattributed active version or foreign
+pointer requires separate review.
+
+Stable failure codes:
+
+- `BOOTSTRAP_TARGET_DISABLED`: wrong or missing target, URL mismatch or closed
+  bootstrap window.
+- `BLUEPRINT_FIXTURE_MISMATCH`: supplied or deployed fixture digest differs from the
+  reviewed pin, or the fixture itself drifted.
+- `BLUEPRINT_TAXONOMY_MISMATCH`: the exact sealed taxonomy is missing, duplicated or
+  does not match the frozen catalog.
+- `BLUEPRINT_VERSION_CONFLICT`: partial, duplicate, draft, archived, unattributed or
+  otherwise conflicting exact version.
+- `ACTIVE_BLUEPRINT_INCONSISTENT`: missing, duplicate or unresolvable active pointer,
+  or a prior active version with incomplete stored configuration.
+
+Every rejection fails before writes, so no identity or partial blueprint is left
+behind.
+
+Verification is read-only, requires only the target registry, and performs no
+writes. It reports the taxonomy match, the pinned and deployed fixture digests, and
+per level: version IDs, duplicate presence, state, revision, active and sealed
+state, configuration format version, content hash, hash/configuration/taxonomy
+matches, actual and expected counts, pointer consistency, system attribution and an
+overall match. The two seed identities must use the current configuration format to
+match; legacy verification remains available for unrelated blueprints. A deployed
+fixture-digest mismatch keeps both the expected and deployed digests in the
+sanitized JSON failure report. "Sealed" here means active plus hash-verified; there
+is no separate blueprint schema state. Verification remains available after the
+window closes. Installing blueprints is not content approval, question publication,
+exam readiness or completion of #98.
 
 ## One-time developer bootstrap — separate approval required
 

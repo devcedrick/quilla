@@ -182,3 +182,87 @@ asserts that only `quilla-dev` is registered and production is absent.
 - **End-to-end tests:** not applicable; this change adds no UI or user journey.
 - **Editorial or content approval:** not established. Installing the frozen catalog
   is not taxonomy content approval or the deferred #98 audit.
+
+## S19.8b blueprint installer verification (2026-11-22)
+
+Issue #111 adds the guarded internal installer for the approved v3 blueprints. These
+commands were run on the `feat/s19-8b-blueprint-installation` branch, based on
+`origin/main` revision `48c852d`. No deployment, live installation, activation or
+database write occurred. Regenerating bindings ran `npx convex codegen`, which
+contacted the configured development deployment to analyze functions and generate
+types. The Convex CLI documents code generation as read-only and states that it does
+not modify the code running on the deployment; no function was deployed, no schema
+or database record changed, and no live blueprint or taxonomy installation occurred.
+
+- Platform: Windows, PowerShell
+- Node.js: `22.14.0`
+
+| Command             | Result                                                                            |
+| ------------------- | --------------------------------------------------------------------------------- |
+| `npm run lint`      | Passed, no warnings or errors                                                     |
+| `npm run typecheck` | Passed, no diagnostics                                                            |
+| `npm run test:unit` | Passed: 48 files, 694 tests                                                       |
+| `npm run knip`      | Passed, no unused files, exports or dependencies                                  |
+| `npm run build`     | Passed; only the pre-existing Turbopack warning about an out-of-repo package-lock |
+| `git diff --check`  | Passed, no whitespace errors                                                      |
+
+The files most directly affected by this change were also run separately: four
+files and 108 tests passed.
+
+| File                                       | Tests | Result |
+| ------------------------------------------ | ----- | ------ |
+| `convex/blueprintBootstrap.test.ts`        | 22    | Passed |
+| `convex/blueprints.test.ts`                | 21    | Passed |
+| `convex/taxonomyBootstrap.test.ts`         | 15    | Passed |
+| `scripts/bootstrap-question-bank.test.mjs` | 50    | Passed |
+
+`convex/blueprintBootstrap.test.ts` proves:
+
+- the pinned fixture digest matches both the backend and Node canonical hashes, and
+  the exact identities, levels and per-level counts are pinned;
+- both levels install and activate atomically at revision 3, with configuration
+  hashes, per-level pointers, `seed_install` and `activate` audit events, and the
+  non-login `system:seed-blueprint-installer` identity; activation events record
+  the level, revision and configuration format, and every event carries an audit
+  timestamp;
+- a prior active version is archived with revision 4 and an installer-attributed
+  `supersede` event, while its configuration and content hash are unchanged;
+- an exact rerun returns `created: false` with no new users, versions, pointers,
+  audit events or timestamp changes, and rejects rows stored under a legacy
+  configuration format even when their legacy hash recomputes;
+- no question, question-version, reference, asset, taxonomy-entry or snapshot rows
+  are written;
+- wrong target, URL mismatch, closed window, wrong or malformed digest, missing,
+  draft, archived, mismatched or duplicate taxonomy all fail before writing;
+- partial presence, both-level draft or archived exact versions, both-level
+  duplicate versions, unattributed active versions, configuration or hash drift and
+  pointer anomalies fail without changing stored state;
+- verification is read-only, works with the window closed, reports absence, reports
+  both the expected and deployed fixture digests, and reports hashes, counts,
+  pointer consistency, system attribution and per-level matches after installation;
+- tampered hashes, archived state, legacy-format rows, duplicate versions, missing or
+  duplicate pointers, missing pointers for present draft or archived versions and
+  foreign active versions report `matchesExpected: false` rather than throwing;
+- the installer takes no actor argument and exposes only internal functions.
+
+`convex/blueprints.test.ts` retains the behavior-preserving coverage for the shared
+`prepareBlueprintConfiguration` and `activateBlueprintVersion` helpers used by both
+the public admin path and the installer. The CLI tests cover both new modes, their
+flag conflicts, deployment selection, the pinned digest transport, retry behavior,
+sanitized summaries and deployed fixture-digest skew, including retaining both
+digests in the JSON failure report. The successful-install summary names the
+per-level active pointers. The registry test asserts that only `quilla-dev` is
+registered and production is absent.
+
+### Not run
+
+- **Live installation or deployment:** not attempted. It requires fresh approval for
+  the exact `quilla-dev` deployment, deployment of the merged code, a verified
+  sealed taxonomy and an approved `SEED_BOOTSTRAP_ENABLED` window.
+- **Question-bank bootstrap:** not attempted; #106 remains blocked until the live
+  taxonomy and blueprints are installed and verified.
+- **Production registration or installation:** not attempted and not authorized.
+- **End-to-end tests:** not applicable; this change adds no UI or user journey.
+- **Editorial or content approval:** not established. Installing and activating
+  blueprints is not question-bank publication, exam readiness or the deferred #98
+  audit.
