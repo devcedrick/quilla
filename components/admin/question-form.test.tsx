@@ -10,6 +10,7 @@ const mocks = vi.hoisted(() => ({
   createRevision: vi.fn(),
   push: vi.fn(),
   taxonomyQueries: [] as unknown[],
+  referenceOverflow: false,
 }));
 
 const taxonomy = {
@@ -75,7 +76,7 @@ vi.mock("convex/react", () => ({
       return taxonomy;
     }
     if (name === "questionReferences:listAdminOptions")
-      return { options: [], overflow: false };
+      return { options: [], overflow: mocks.referenceOverflow };
     return undefined;
   },
 }));
@@ -195,6 +196,7 @@ describe("admin question form", () => {
     Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
     vi.clearAllMocks();
     mocks.taxonomyQueries.length = 0;
+    mocks.referenceOverflow = false;
     vi.stubGlobal("requestAnimationFrame", (callback: () => void) =>
       callback(),
     );
@@ -297,5 +299,13 @@ describe("admin question form", () => {
     expect(host("admin-choice-0").props["aria-label"]).toBe("Choice B");
     act(() => add().props.onClick());
     expect(host("admin-choice-2").props["aria-label"]).toBe("Choice A");
+  });
+  it("explains the bounded reference scan instead of claiming 100 results", async () => {
+    mocks.referenceOverflow = true;
+    await renderForm();
+    const markup = JSON.stringify(view.toJSON());
+    expect(markup).toContain("Only the newest 101 reference versions");
+    expect(markup).toContain("older distinct reference may not appear");
+    expect(markup).not.toContain("Only the first 100 compatible references");
   });
 });

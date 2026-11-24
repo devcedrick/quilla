@@ -849,7 +849,9 @@ export function QuestionForm({
         )}
         {references?.overflow && (
           <p role="status" className="text-xs text-muted-foreground">
-            Only the first 100 compatible references are shown.
+            Only the newest 101 reference versions in this scope are scanned, so
+            an older distinct reference may not appear even when fewer than 100
+            are listed. Narrow the family, module, or language to reach it.
           </p>
         )}
         <ReferencePreview referenceVersionId={referenceVersionId} />

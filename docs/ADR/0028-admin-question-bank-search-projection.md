@@ -96,12 +96,15 @@ unbounded range.
 For reference selection, duplicate only the immutable reference scope
 (`family`, `module`, `language`) onto `questionReferenceVersions` and add
 `by_scope_and_createdAt`. These fields are also optional until the staged
-backfill runs. The admin picker reads at most 101 scoped rows, returns the
-newest version of each compatible reference, and stops at 100 options with an
-explicit overflow flag. One extra row is enough to detect overflow while
-staying below the transaction limit for bounded reference content. The preview
-query resolves one exact version, rechecks its content hash and returns storage
-URLs only for verified assets.
+backfill runs. The admin picker is a bounded scan, not a complete enumeration:
+it reads at most 101 scoped rows, returns the newest version of each reference
+it sees, and stops at 100 options. When newer versions of one reference fill the
+window, an older distinct compatible reference is not selectable. The picker
+reports that the scan reached its cap so an admin can narrow the scope instead
+of mistaking a truncated list for the complete set. One extra row detects the
+cap while staying below the transaction limit for bounded reference content.
+The preview query resolves one exact version, rechecks its content hash and
+returns storage URLs only for verified assets.
 
 Add admin-only queries that each call `requireAdmin(ctx)` before reading:
 `listAdminVersions`, `getAdminVersion`, `listAdminQuestionVersions`,

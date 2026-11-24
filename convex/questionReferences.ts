@@ -74,11 +74,14 @@ export const listAdminOptions = query({
           .eq("language", args.language),
       )
       .order("desc")
-      // Reference content is bounded at 128 KiB. 101 full rows stay below the
-      // 16 MiB transaction limit even before deduplication.
+      // The scan is bounded to the newest 101 rows. Reference content is
+      // bounded at 128 KiB, so this stays below the 16 MiB transaction limit.
+      // Older distinct references beyond this window are not selectable.
       .take(101);
     const seen = new Set<string>();
     const options = [];
+    // True when the scan reached its row or option cap, not necessarily when
+    // 100 distinct references were omitted.
     let overflow = rows.length > 100;
     for (const row of rows) {
       if (seen.has(row.referenceId)) continue;
