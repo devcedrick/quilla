@@ -712,15 +712,19 @@ authenticated admin Playwright journeys remain blocked on #25.
 #33 admin workspace. `/admin/questions` combines indexed filters for state,
 family, module, subject, subtopic, concept, difficulty, language, level, origin,
 contributor and canonical question ID with full-text search over an immutable
-schema-backed projection. The projection is written only when a version is
-inserted and is excluded from content hashes. The workspace also lets an admin
+schema-backed projection. New versions receive the projection when inserted;
+it is excluded from content hashes, and legacy rows stay readable while their
+projection fields remain optional. Correct filtering of legacy rows needs the
+internal batched backfill, which has not run. The workspace also lets an admin
 create an initial draft or an immutable revision, choose a sealed taxonomy and
 an existing compatible reference version, inspect exact content, hashes,
 review history and immutable version history, and invoke only the lifecycle
 actions currently allowed. The backend independently enforces every
 authorization, revision, independence, rubric and duplicate rule. `/admin`
-redirects active admins to the question bank and returns not found to every
-other account. Reports and flags filters remain deferred to #40 and #41;
+redirects active admins to the question bank; active non-admins and unknown
+admin paths return not found, while signed-out, missing-profile, inactive and
+suspended access states show the account access shell. Reports and flags
+filters remain deferred to #40 and #41;
 contributor filtering uses opaque user IDs until #25, and authenticated admin
 Playwright journeys remain blocked on #25. No deployment, live backfill or
 production use is included.

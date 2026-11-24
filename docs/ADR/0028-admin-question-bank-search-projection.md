@@ -15,12 +15,15 @@ and workflow state on each version, but it exposed only a state-filtered
 version list and did not provide authoring catalog options or reference
 previews.
 
-Convex indexes operate on declared top-level fields. Most filter values lived
-inside immutable `content`, so they could not be indexed directly. Client-side
-filtering would scan an unbounded table and could not support a stable
-paginated workspace. Deriving the values at read time would prevent use of an
-index entirely. Patching existing version rows during migration would also blur
-the separation between authored content, its content hash and derived metadata.
+Convex can index dot-separated nested fields, so some content values could be
+indexed in place. That alone cannot support this workspace: full-text search
+combines the stem, choices, explanation and provenance author into one search
+field; level eligibility is derived from an array; and canonical question and
+contributor identities live on another table. Client-side filtering would scan
+an unbounded table and could not support a stable paginated workspace. Deriving
+the values at read time would prevent use of an index entirely. Patching
+existing version rows during migration would also blur the separation between
+authored content, its content hash and derived metadata.
 
 Reports and flags do not exist yet (#40 and #41), and initial-admin
 provisioning is still tracked by #25. The workspace therefore cannot depend on
@@ -52,34 +55,53 @@ and provenance author. The level booleans derive from
 stable identities from `questions` so filters do not require a second read or
 an unbounded join.
 
-The projection is written only at insert time in every authoring path:
+New versions receive the projection at insert time in every authoring path:
 `createDraft`, `createRevision`, `importQuestionDraft` and the bootstrap
-importer. It is never patched. It is not part of `contentHash` or
-`contentFingerprint`; those hashes must continue to identify authored content,
-taxonomy identity and reference identity alone. A projection builder in
+importer. It is not part of `contentHash` or `contentFingerprint`; those hashes
+must continue to identify authored content, taxonomy identity and reference
+identity alone. A projection builder in
 `convex/lib/questionSearchProjection.ts` is the single source for its values.
 
-Add indexes for bounded admin access:
+Existing rows predate the projection, so the schema fields are optional during
+the staged rollout. `convex/adminQuestionBankBackfill.ts` contains internal,
+cursor-based batches for question projections and reference scopes. It is not
+scheduled or invoked by the application, and it must not run against a
+deployment until a separate migration is approved. A later change can make the
+fields required after that backfill completes.
+
+Add indexes for bounded admin access. These index only declared top-level
+projection fields, never nested `content`:
 
 - `by_createdAt`
 - `by_state_and_createdAt`, `by_family_and_createdAt`,
-  `by_subjectId_and_createdAt`, `by_subtopicId_and_createdAt`,
-  `by_conceptId_and_createdAt`, `by_difficulty_and_createdAt`,
-  `by_language_and_createdAt`, `by_contributorId_and_createdAt` and
+  `by_module_and_createdAt`, `by_subjectId_and_createdAt`,
+  `by_subtopicId_and_createdAt`, `by_conceptId_and_createdAt`,
+  `by_difficulty_and_createdAt`, `by_language_and_createdAt`,
+  `by_origin_and_createdAt`, `by_professionalEligible_and_createdAt`,
+  `by_subprofessionalEligible_and_createdAt`,
+  `by_contributorId_and_createdAt` and
   `by_canonicalQuestionId_and_createdAt`
+- `taxonomyVersions.by_state_and_createdAt` for the newest sealed catalogs
 - search index `by_searchText` with the same equality fields as filter fields,
   including the level booleans and origin
 
-At most one selective index drives a query; the remaining equality predicates
-are applied to that result. Combined filters therefore preserve bounded reads
-while remaining fully composable.
+At most one selective index drives a non-search query; the remaining equality
+predicates are applied to that result. Combined filters therefore preserve
+bounded reads while remaining fully composable. A search query accepts at most
+eight equality filters, so it spends those slots on the most selective values
+and re-applies every requested predicate after retrieval. Search and non-search
+pagination both cap rows and bytes read so an uncommon filter cannot scan an
+unbounded range.
 
 For reference selection, duplicate only the immutable reference scope
 (`family`, `module`, `language`) onto `questionReferenceVersions` and add
-`by_scope_and_createdAt`. The admin picker returns the newest version of each
-compatible reference, bounded to 100 options with an explicit overflow flag.
-The preview query resolves one exact version, rechecks its content hash and
-returns storage URLs only for verified assets.
+`by_scope_and_createdAt`. These fields are also optional until the staged
+backfill runs. The admin picker reads at most 101 scoped rows, returns the
+newest version of each compatible reference, and stops at 100 options with an
+explicit overflow flag. One extra row is enough to detect overflow while
+staying below the transaction limit for bounded reference content. The preview
+query resolves one exact version, rechecks its content hash and returns storage
+URLs only for verified assets.
 
 Add admin-only queries that each call `requireAdmin(ctx)` before reading:
 `listAdminVersions`, `getAdminVersion`, `listAdminQuestionVersions`,
@@ -101,11 +123,12 @@ Build the local workspace under `/admin/questions`:
 The UI never acts as authorization. Every action still runs the backend
 transition, revision, independence, rubric and duplicate checks.
 
-`/admin` redirects active admins to `/admin/questions` and returns not found to
-every other account, including unknown admin paths. Playwright coverage is
-limited to signed-out and non-admin access until #25 provides a supported admin
-provisioning path; component and backend tests cover filters, forms and
-lifecycle actions.
+`/admin` redirects active admins to `/admin/questions`. Active non-admins and
+unknown admin paths return not found. Signed-out, missing-profile, inactive and
+suspended access states use the existing account access shell rather than
+leaking whether an admin route exists. Playwright coverage is limited to those
+access states until #25 provides a supported admin provisioning path; component
+and backend tests cover filters, forms and lifecycle actions.
 
 ## Consequences
 
@@ -114,10 +137,10 @@ lifecycle actions.
 - The projection duplicates some content-derived values. Every insert path
   must use the shared builder; a future authoring path that forgets it will
   fail tests rather than silently producing incomplete rows.
-- Existing deployed versions would need a separately reviewed backfill before
-  this schema can serve them. The current local assumption is that no live
-  question versions exist, so no backfill, migration or deployment is
-  included.
+- Legacy rows remain readable because the projection and reference scope are
+  optional. Correct filtering of legacy rows requires the internal backfill,
+  which remains unexecuted. Deployment, live backfill and making the fields
+  required each need separate approval.
 - Reports and flags remain deferred to #40 and #41. Contributor filtering uses
   opaque user IDs until #25 supplies an admin account workflow.
 - Reference authoring and reference version creation remain outside this
@@ -129,8 +152,10 @@ lifecycle actions.
   unnecessary data exposure.
 - **Read-time derivation without stored fields:** cannot use a Convex index or
   search index.
-- **Indexing nested content:** Convex indexes require declared top-level
-  fields.
+- **Relying only on nested content indexes:** Convex supports nested paths, but
+  they cannot provide the combined search text, derived level eligibility or
+  duplicated identities, and they would bind admin queries to the content
+  shape.
 - **Patching existing versions:** violates immutable version history and
   obscures content-hash meaning.
 - **Hiding unauthorized actions only in the UI:** backend authorization and
