@@ -98,13 +98,15 @@ source of truth.
 - Learners have no delete control for attempts. Admins cannot hard-delete attempts
   or rewrite their results. Historical questions, versions and snapshots remain
   protected by the existing no-hard-delete rules.
-- Account deletion or anonymization is a separate approved workflow under
-  [ADR 0006](0006-application-profiles-and-authorization.md). It may remove or
-  de-identify the learner's identity and personal data, but retained attempt
-  records and shared question, reference and blueprint versions remain, and
-  historical results are never rewritten. `abandoned` records are not an implicit
-  exception to historical integrity. "Life of the account" therefore includes
-  de-identified retention after account deletion.
+- Account deletion or anonymization is a separate workflow that
+  [ADR 0006](0006-application-profiles-and-authorization.md) requires to be
+  designed and approved before it exists; this ADR does not approve or design it.
+  When that workflow exists, it may remove or de-identify the learner's identity
+  and personal data, but retained attempt records and shared question, reference
+  and blueprint versions remain, and historical results are never rewritten.
+  `abandoned` records are not an implicit exception to historical integrity.
+  "Life of the account" therefore includes de-identified retention after account
+  deletion.
 - A future retention change, including any purge or archival policy, requires a new
   ADR. It must not silently delete records under this policy.
 

@@ -366,7 +366,7 @@ Activation requires integration of the seven initial 270-question seed families 
 
 - `submitted`, `expired` and `abandoned` attempts and their immutable question and blueprint snapshots are retained for the life of the account and are not deleted by account deletion. The initial release has no time-based purge and no archive that hides them from history.
 - Learners have no control to delete an attempt, and admins cannot hard-delete an attempt or rewrite its result. This includes zero-answer `abandoned` records.
-- Account deletion or anonymization is a separate approved workflow under [ADR 0006](ADR/0006-application-profiles-and-authorization.md). It may remove or de-identify the learner's identity and personal data, but retained attempt records and shared question, reference and blueprint versions remain, and historical results are never rewritten. "Life of the account" therefore includes de-identified retention after account deletion.
+- Account deletion or anonymization is a separate workflow that [ADR 0006](ADR/0006-application-profiles-and-authorization.md) requires to be designed and approved before it exists. When that workflow exists, it may remove or de-identify the learner's identity and personal data, but retained attempt records and shared question, reference and blueprint versions remain, and historical results are never rewritten. "Life of the account" therefore includes de-identified retention after account deletion.
 - Any future purge or archival policy requires a new architecture decision and must not silently delete records under [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md).
 
 ### Questionnaire policy
@@ -452,7 +452,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - `submitted` and `expired` attempts remain discoverable in the learner's attempt history and can be reopened for review any number of times for the life of the account.
 - `expired` attempts expose the same review content and scores as `submitted` attempts.
 - `abandoned` attempts remain in history with their terminal state but expose no review content, score, or answer key.
-- Learners and admins cannot delete an attempt or rewrite its result. Account deletion follows the separate de-identification workflow in [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md).
+- Learners and admins cannot delete an attempt or rewrite its result. Account deletion is not a way to remove an attempt: it follows a separate de-identification workflow that [ADR 0006](ADR/0006-application-profiles-and-authorization.md) requires to be designed and approved, and that workflow does not exist yet.
 - History identifies each attempt's original level and preserves its served snapshots across preference changes; the current preference does not hide attempts from the other level.
 - Review is accessible only to the attempt owner or an authorized admin, including on later visits.
 - Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
