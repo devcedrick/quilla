@@ -318,9 +318,11 @@ describe("admin moderation actions", () => {
     await render(versionFor("pending_review"));
     await click("Review this version");
     const focus = vi.fn();
-    vi.spyOn(document, "getElementById").mockReturnValue({
-      focus,
-    } as unknown as HTMLElement);
+    vi.spyOn(document, "getElementById").mockImplementation((id: string) =>
+      id === "moderation-form-error"
+        ? ({ focus } as unknown as HTMLElement)
+        : null,
+    );
     const frames: FrameRequestCallback[] = [];
     vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => {
       frames.push(callback);
@@ -328,6 +330,9 @@ describe("admin moderation actions", () => {
     });
     await submitReview();
     expect(mocks.review).not.toHaveBeenCalled();
+    expect(
+      view.root.findByProps({ id: "moderation-form-error" }),
+    ).toBeDefined();
     expect(JSON.stringify(view.toJSON())).toContain(
       "Correct the highlighted fields before recording the decision.",
     );
@@ -335,13 +340,22 @@ describe("admin moderation actions", () => {
     act(() => frames[0](0));
     expect(focus).toHaveBeenCalledTimes(1);
   });
-  it("binds approval evidence to the candidate set captured when the form opened", async () => {
+  it("clears scan-specific review input when the candidate set changes", async () => {
     mocks.access = activeAdmin("user-a");
     const first = { ...duplicates, fingerprint: "1".repeat(64) };
     const second = { ...duplicates, fingerprint: "2".repeat(64) };
     await render(versionFor("pending_review"), first);
     await click("Review this version");
+    fill("duplicate-evidence", "Evidence for the first scan.");
     await rerender(versionFor("pending_review"), second);
+    expect(JSON.stringify(view.toJSON())).toContain(
+      "The duplicate candidate set changed.",
+    );
+    expect(
+      view.root
+        .findAllByProps({ id: "duplicate-evidence" })
+        .find((node) => typeof node.type === "string")?.props.value,
+    ).toBe("");
     for (let index = 0; index < 5; index++)
       fill(`assessment-evidence-${index}`, `Evidence ${index + 1}`);
     for (let index = 0; index < 5; index++) {
@@ -350,24 +364,63 @@ describe("admin moderation actions", () => {
         .filter((input) => input.props.type === "checkbox")[index];
       act(() => checkbox.props.onChange({ target: { checked: true } }));
     }
-    fill("duplicate-evidence", "No candidates were found.");
+    fill("duplicate-evidence", "Evidence for the second scan.");
     await submitReview();
     expect(mocks.review).toHaveBeenCalledWith(
       expect.objectContaining({
-        candidateSetFingerprint: first.fingerprint,
+        candidateSetFingerprint: second.fingerprint,
         duplicateDisposition: "none_found",
+        duplicateEvidence: "Evidence for the second scan.",
       }),
     );
   });
+  it("preserves review input when the fingerprint is unchanged", async () => {
+    mocks.access = activeAdmin("user-a");
+    await render(versionFor("pending_review"), duplicates);
+    await click("Review this version");
+    fill("duplicate-evidence", "Evidence for the current scan.");
+    await click("Close review form");
+    await click("Review this version");
+    expect(
+      view.root
+        .findAllByProps({ id: "duplicate-evidence" })
+        .find((node) => typeof node.type === "string")?.props.value,
+    ).toBe("Evidence for the current scan.");
+  });
+  it("does not reuse review evidence after the scan changes while closed", async () => {
+    mocks.access = activeAdmin("user-a");
+    const first = { ...duplicates, fingerprint: "1".repeat(64) };
+    const second = { ...duplicates, fingerprint: "2".repeat(64) };
+    await render(versionFor("pending_review"), first);
+    await click("Review this version");
+    fill("duplicate-evidence", "Evidence for the first scan.");
+    await click("Close review form");
+    await rerender(versionFor("pending_review"), second);
+    await click("Review this version");
+    expect(
+      view.root
+        .findAllByProps({ id: "duplicate-evidence" })
+        .find((node) => typeof node.type === "string")?.props.value,
+    ).toBe("");
+  });
   it("blocks publish and recheck on overflow while keeping archive available", async () => {
     mocks.access = activeAdmin("user-a");
-    await render(versionFor("approved"), { ...duplicates, overflow: true });
+    const approved = versionFor("approved", {
+      approvalDecisionId: "review-1" as Id<"questionReviews">,
+    });
+    const changed = { ...duplicates, fingerprint: "2".repeat(64) };
+    const reviews = [approvalReview("1".repeat(64))];
+    await render(approved, { ...changed, overflow: true }, reviews);
     expect(findButton("Publish version")).toBeUndefined();
     expect(findButton("Record duplicate recheck")).toBeUndefined();
     expect(findButton("Archive version")).toBeDefined();
     expect(JSON.stringify(view.toJSON())).toContain(
       "Publication and duplicate recheck are blocked because the candidate scan overflowed.",
     );
+    await rerender(approved, changed, reviews);
+    expect(findButton("Publish version")).toBeDefined();
+    expect(findButton("Record duplicate recheck")).toBeDefined();
+    expect(findButton("Archive version")).toBeDefined();
   });
   it("offers only the dispositions the current scan can record", async () => {
     mocks.access = activeAdmin("user-a");
@@ -404,7 +457,7 @@ describe("admin moderation actions", () => {
       .findAllByType("option");
     expect(options.map((option) => option.props.value)).toEqual(["none_found"]);
   });
-  it("binds recheck evidence to the candidate set captured when the form opened", async () => {
+  it("clears recheck evidence when the candidate set changes", async () => {
     mocks.access = activeAdmin("user-a");
     const first = {
       ids: ["question-2" as Id<"questions">],
@@ -415,17 +468,59 @@ describe("admin moderation actions", () => {
     const approved = versionFor("approved", {
       approvalDecisionId: "review-1" as Id<"questionReviews">,
     });
-    await render(approved, first, [approvalReview("0".repeat(64))]);
+    const reviews = [approvalReview("0".repeat(64))];
+    await render(approved, first, reviews);
     await click("Record duplicate recheck");
-    await rerender(approved, second, [approvalReview("0".repeat(64))]);
-    fill("recheck-evidence", "Reviewed the candidate against this version.");
+    fill("recheck-evidence", "Evidence for the first scan.");
+    await rerender(approved, second, reviews);
+    expect(JSON.stringify(view.toJSON())).toContain(
+      "The duplicate candidate set changed.",
+    );
+    expect(
+      view.root
+        .findAllByProps({ id: "recheck-evidence" })
+        .find((node) => typeof node.type === "string")?.props.value,
+    ).toBe("");
+    fill("recheck-evidence", "Evidence for the second scan.");
     await submitForm();
     expect(mocks.recheck).toHaveBeenCalledWith(
       expect.objectContaining({
-        candidateSetFingerprint: first.fingerprint,
+        candidateSetFingerprint: second.fingerprint,
         disposition: "adjudicated_distinct",
+        evidence: "Evidence for the second scan.",
       }),
     );
+  });
+  it("preserves recheck evidence for the same scan and drops it after a change", async () => {
+    mocks.access = activeAdmin("user-a");
+    const first = {
+      ids: ["question-2" as Id<"questions">],
+      fingerprint: "1".repeat(64),
+      overflow: false,
+    };
+    const second = { ...first, fingerprint: "2".repeat(64) };
+    const approved = versionFor("approved", {
+      approvalDecisionId: "review-1" as Id<"questionReviews">,
+    });
+    const reviews = [approvalReview("0".repeat(64))];
+    await render(approved, first, reviews);
+    await click("Record duplicate recheck");
+    fill("recheck-evidence", "Draft for the first scan.");
+    await click("Cancel");
+    await click("Record duplicate recheck");
+    expect(
+      view.root
+        .findAllByProps({ id: "recheck-evidence" })
+        .find((node) => typeof node.type === "string")?.props.value,
+    ).toBe("Draft for the first scan.");
+    await click("Cancel");
+    await rerender(approved, second, reviews);
+    await click("Record duplicate recheck");
+    expect(
+      view.root
+        .findAllByProps({ id: "recheck-evidence" })
+        .find((node) => typeof node.type === "string")?.props.value,
+    ).toBe("");
   });
   it("clears stale field and summary errors as the admin corrects them", async () => {
     mocks.access = activeAdmin("user-a");
@@ -455,6 +550,58 @@ describe("admin moderation actions", () => {
       expect.objectContaining({
         decision: "reject",
         reason: "The explanation needs a source.",
+      }),
+    );
+  });
+  it("keeps the duplicate blocker until its inputs change", async () => {
+    mocks.access = activeAdmin("user-a");
+    const withCandidate = {
+      ids: ["question-2" as Id<"questions">],
+      fingerprint: "2".repeat(64),
+      overflow: false,
+    };
+    await render(versionFor("pending_review"), withCandidate);
+    await click("Review this version");
+    for (let index = 0; index < 5; index++)
+      fill(`assessment-evidence-${index}`, `Evidence ${index + 1}`);
+    for (let index = 0; index < 5; index++) {
+      const checkbox = view.root
+        .findAllByType("input")
+        .filter((input) => input.props.type === "checkbox")[index];
+      act(() => checkbox.props.onChange({ target: { checked: true } }));
+    }
+    fill("duplicate-evidence", "Candidate reviewed.");
+    await submitReview();
+    expect(mocks.review).not.toHaveBeenCalled();
+    const blocker = "Unresolved duplicate risk blocks approval.";
+    expect(JSON.stringify(view.toJSON())).toContain(blocker);
+    fill("moderation-reason", "Optional note.");
+    expect(JSON.stringify(view.toJSON())).toContain(blocker);
+    fill("assessment-evidence-0", "Updated evidence.");
+    expect(JSON.stringify(view.toJSON())).toContain(blocker);
+    const checkbox = view.root
+      .findAllByType("input")
+      .filter((input) => input.props.type === "checkbox")[0];
+    act(() => checkbox.props.onChange({ target: { checked: false } }));
+    expect(JSON.stringify(view.toJSON())).toContain(blocker);
+    act(() => checkbox.props.onChange({ target: { checked: true } }));
+    expect(JSON.stringify(view.toJSON())).toContain(blocker);
+    fill("duplicate-evidence", "Updated duplicate evidence.");
+    expect(JSON.stringify(view.toJSON())).toContain(blocker);
+    const disposition = view.root
+      .findAllByProps({ id: "duplicate-disposition" })
+      .find((node) => typeof node.type === "string")!;
+    act(() =>
+      disposition.props.onChange({
+        target: { value: "adjudicated_distinct" },
+      }),
+    );
+    expect(JSON.stringify(view.toJSON())).not.toContain(blocker);
+    await submitReview();
+    expect(mocks.review).toHaveBeenCalledWith(
+      expect.objectContaining({
+        duplicateDisposition: "adjudicated_distinct",
+        duplicateEvidence: "Updated duplicate evidence.",
       }),
     );
   });

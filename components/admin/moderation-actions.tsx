@@ -65,6 +65,7 @@ export function ModerationActions({
     );
   const [recheckEvidence, setRecheckEvidence] = useState("");
   const [recheckError, setRecheckError] = useState<string | null>(null);
+  const [scanNotice, setScanNotice] = useState<string | null>(null);
   // Capture the candidate set when a decision starts; a later render must not
   // silently bind old evidence to a new fingerprint.
   const [reviewFingerprint, setReviewFingerprint] = useState(
@@ -73,6 +74,31 @@ export function ModerationActions({
   const [recheckFingerprint, setRecheckFingerprint] = useState(
     duplicates.fingerprint,
   );
+  const [seenFingerprint, setSeenFingerprint] = useState(
+    duplicates.fingerprint,
+  );
+
+  // A reactive candidate scan can change while a decision form is open. Clear
+  // every scan-specific input in the same render so evidence written for one
+  // candidate set can never be submitted against another. Guarding the update
+  // on the previous fingerprint keeps same-set retries and reopens intact.
+  if (seenFingerprint !== duplicates.fingerprint) {
+    setSeenFingerprint(duplicates.fingerprint);
+    setReviewFingerprint(duplicates.fingerprint);
+    setRecheckFingerprint(duplicates.fingerprint);
+    setDisposition(duplicates.ids.length ? "unresolved" : "none_found");
+    setRecheckDisposition(
+      duplicates.ids.length ? "adjudicated_distinct" : "none_found",
+    );
+    setDuplicateEvidence("");
+    setRecheckEvidence("");
+    setFormErrors({});
+    setRecheckError(null);
+    if (reviewOpen || recheckOpen)
+      setScanNotice(
+        "The duplicate candidate set changed. Duplicate evidence was cleared; review the current candidates again.",
+      );
+  }
 
   const hasCandidates = duplicates.ids.length > 0;
   const recheckOptions: DuplicateDisposition[] = hasCandidates
@@ -110,6 +136,21 @@ export function ModerationActions({
     approvalFingerprint !== undefined &&
     approvalFingerprint !== duplicates.fingerprint &&
     !matchingRecheck;
+
+  /** The duplicate blocker depends only on the decision and disposition. */
+  function duplicateBlocker(
+    nextDecision: Decision,
+    nextDisposition: DuplicateDisposition,
+  ) {
+    if (nextDecision !== "approve") return undefined;
+    if (duplicates.overflow)
+      return "Approval is blocked because the duplicate candidate scan overflowed. Reduce the duplicate set first.";
+    if (nextDisposition === "unresolved")
+      return "Unresolved duplicate risk blocks approval.";
+    if (duplicates.ids.length && nextDisposition !== "adjudicated_distinct")
+      return "Approval requires the duplicate candidates to be adjudicated as distinct.";
+    return undefined;
+  }
 
   async function run(
     name: string,
@@ -152,12 +193,26 @@ export function ModerationActions({
     setFormErrors((current) => {
       const updated = { ...current };
       delete updated.reason;
-      delete updated.form;
       if (next !== "approve") {
         for (const key of Object.keys(updated)) {
           if (key.startsWith("pass-")) delete updated[key];
         }
       }
+      const blocker = duplicateBlocker(next, disposition);
+      if (blocker) updated.form = blocker;
+      else delete updated.form;
+      return updated;
+    });
+  }
+
+  function changeDisposition(next: DuplicateDisposition) {
+    setDisposition(next);
+    setFormErrors((current) => {
+      if (!("form" in current)) return current;
+      const updated = { ...current };
+      const blocker = duplicateBlocker(decision, next);
+      if (blocker) updated.form = blocker;
+      else delete updated.form;
       return updated;
     });
   }
@@ -177,19 +232,10 @@ export function ModerationActions({
       nextErrors.reason = "A nonblank reason is required.";
     if (!duplicateEvidence.trim())
       nextErrors.duplicateEvidence = "Duplicate evidence is required.";
-    if (decision === "approve" && duplicates.overflow)
-      nextErrors.form =
-        "Approval is blocked because the duplicate candidate scan overflowed. Reduce the duplicate set first.";
-    if (decision === "approve" && disposition === "unresolved")
-      nextErrors.form = "Unresolved duplicate risk blocks approval.";
-    if (
-      decision === "approve" &&
-      duplicates.ids.length &&
-      disposition !== "adjudicated_distinct"
-    )
-      nextErrors.form =
-        "Approval requires the duplicate candidates to be adjudicated as distinct.";
+    const blocker = duplicateBlocker(decision, disposition);
+    if (blocker) nextErrors.form = blocker;
     setFormErrors(nextErrors);
+    setScanNotice(null);
     if (Object.keys(nextErrors).length) {
       requestAnimationFrame(() =>
         document.getElementById("moderation-form-error")?.focus(),
@@ -237,6 +283,12 @@ export function ModerationActions({
   async function submitRecheck(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (pending) return;
+    if (recheckFingerprint !== duplicates.fingerprint) {
+      setRecheckError(
+        "The duplicate candidate set changed. Re-enter evidence for the current set.",
+      );
+      return;
+    }
     if (!recheckEvidence.trim()) {
       setRecheckError("Evidence is required.");
       return;
@@ -245,6 +297,7 @@ export function ModerationActions({
     setError(null);
     setNotice(null);
     setRecheckError(null);
+    setScanNotice(null);
     try {
       await recheck({
         questionVersionId: version._id,
@@ -254,6 +307,7 @@ export function ModerationActions({
         evidence: recheckEvidence.trim(),
       });
       setRecheckOpen(false);
+      setRecheckEvidence("");
       setNotice("Independent duplicate recheck recorded.");
     } catch (caught) {
       setError(
@@ -301,6 +355,14 @@ export function ModerationActions({
           {notice}
         </p>
       )}
+      {scanNotice && (
+        <p
+          role="status"
+          className="rounded-xl border border-accent bg-accent/10 p-3 text-sm"
+        >
+          {scanNotice}
+        </p>
+      )}
       <div className="flex flex-wrap gap-3">
         {version.state === "draft" &&
           (canSubmit ? (
@@ -330,7 +392,17 @@ export function ModerationActions({
             <AdminButton
               variant={reviewOpen ? "secondary" : "primary"}
               onClick={() => {
-                if (!reviewOpen) setReviewFingerprint(duplicates.fingerprint);
+                if (!reviewOpen) {
+                  if (reviewFingerprint !== duplicates.fingerprint) {
+                    setDisposition(
+                      duplicates.ids.length ? "unresolved" : "none_found",
+                    );
+                    setDuplicateEvidence("");
+                    setFormErrors({});
+                  }
+                  setReviewFingerprint(duplicates.fingerprint);
+                  setScanNotice(null);
+                }
                 setReviewOpen((open) => !open);
               }}
             >
@@ -502,9 +574,14 @@ export function ModerationActions({
                   variant="secondary"
                   disabled={Boolean(pending)}
                   onClick={() => {
+                    if (recheckFingerprint !== duplicates.fingerprint) {
+                      setRecheckEvidence("");
+                      setRecheckError(null);
+                    }
                     setRecheckFingerprint(duplicates.fingerprint);
                     setRecheckDisposition(recheckOptions[0] ?? "none_found");
                     setRecheckError(null);
+                    setScanNotice(null);
                     setRecheckOpen(true);
                   }}
                 >
@@ -567,7 +644,7 @@ export function ModerationActions({
               disabled={Boolean(pending)}
               onChange={(event) => {
                 setReason(event.target.value);
-                clearFormErrors("reason", "form");
+                clearFormErrors("reason");
               }}
               aria-required={decision !== "approve"}
               aria-invalid={Boolean(formErrors.reason)}
@@ -605,7 +682,7 @@ export function ModerationActions({
                             : assessment,
                         ),
                       );
-                      clearFormErrors(`pass-${index}`, "form");
+                      clearFormErrors(`pass-${index}`);
                     }}
                     aria-invalid={Boolean(formErrors[`pass-${index}`])}
                     className="mt-1 size-4 shrink-0 accent-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
@@ -684,10 +761,9 @@ export function ModerationActions({
                 id="duplicate-disposition"
                 value={disposition}
                 disabled={Boolean(pending)}
-                onChange={(event) => {
-                  setDisposition(event.target.value as DuplicateDisposition);
-                  clearFormErrors("form");
-                }}
+                onChange={(event) =>
+                  changeDisposition(event.target.value as DuplicateDisposition)
+                }
                 className={adminControlClass}
               >
                 {Object.entries(dispositionLabels).map(([value, label]) => (
@@ -710,7 +786,7 @@ export function ModerationActions({
                 disabled={Boolean(pending)}
                 onChange={(event) => {
                   setDuplicateEvidence(event.target.value);
-                  clearFormErrors("duplicateEvidence", "form");
+                  clearFormErrors("duplicateEvidence");
                 }}
                 aria-required="true"
                 aria-invalid={Boolean(formErrors.duplicateEvidence)}
