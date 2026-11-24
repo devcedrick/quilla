@@ -128,6 +128,11 @@ source of truth.
 - EDQ responses never affect the score, passing reference, pass/fail result,
   mastery, readiness, streaks, question analytics or adaptive recommendations.
   Unanswered EDQ items are not incorrect answers.
+- For the lifecycle, submission and scoring rules above, "saved answer" and
+  "mock items" mean scored answers and scored items only. EDQ responses never
+  count toward submission eligibility, the expiry-versus-abandonment decision,
+  scoring or completion evidence, so an attempt with only EDQ responses is
+  treated as having zero saved answers.
 - A `scored` questionnaire mode is invalid. Blueprint validation and scoring must
   reject or fail closed on any attempt to treat questionnaire content as scored.
 - A future EDQ-enabled blueprint must define its own timing explicitly. EDQ time
