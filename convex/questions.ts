@@ -725,13 +725,26 @@ export const getAdminVersion = query({
     if (!version) return null;
     const question = await ctx.db.get("questions", version.questionId);
     if (!question) fail("QUESTION_NOT_FOUND");
-    const reviews = await ctx.db
+    const recentReviews = await ctx.db
       .query("questionReviews")
       .withIndex("by_questionVersionId", (q) =>
         q.eq("questionVersionId", version._id),
       )
       .order("desc")
       .take(51);
+    const reviews = recentReviews.slice(0, 50);
+    // The duplicate-recheck UI depends on the designated approval even when
+    // more than 50 decisions pushed it outside the bounded history window.
+    if (
+      version.approvalDecisionId &&
+      !reviews.some((review) => review._id === version.approvalDecisionId)
+    ) {
+      const approvalReview = await ctx.db.get(
+        "questionReviews",
+        version.approvalDecisionId,
+      );
+      if (approvalReview) reviews.push(approvalReview);
+    }
     return {
       version,
       question,
@@ -742,8 +755,8 @@ export const getAdminVersion = query({
             version.referenceVersionId,
           )
         : null,
-      reviews: reviews.slice(0, 50),
-      reviewOverflow: reviews.length > 50,
+      reviews,
+      reviewOverflow: recentReviews.length > 50,
       duplicates: await candidates(ctx, version, true),
     };
   },
@@ -799,11 +812,25 @@ function adminSearchQuery(
 }
 
 /** Bound rows and bytes read so rare filters cannot scan a whole transaction. */
-function boundedPagination<T extends { numItems: number }>(options: T) {
+function boundedPagination<
+  T extends {
+    numItems: number;
+    maximumRowsRead?: number;
+    maximumBytesRead?: number;
+  },
+>(options: T) {
+  const rowCap = Math.min(10_000, Math.max(1_000, options.numItems * 100));
+  const byteCap = 8 * 1024 * 1024;
   return {
     ...options,
-    maximumRowsRead: Math.min(10_000, Math.max(1_000, options.numItems * 100)),
-    maximumBytesRead: 8 * 1024 * 1024,
+    maximumRowsRead:
+      options.maximumRowsRead === undefined
+        ? rowCap
+        : Math.min(options.maximumRowsRead, rowCap),
+    maximumBytesRead:
+      options.maximumBytesRead === undefined
+        ? byteCap
+        : Math.min(options.maximumBytesRead, byteCap),
   };
 }
 

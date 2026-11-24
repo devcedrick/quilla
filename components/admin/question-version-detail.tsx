@@ -144,7 +144,8 @@ function ReviewHistory({
       )}
       {overflow && (
         <p role="status" className="text-xs text-muted-foreground">
-          Review history is truncated to the latest 50 decisions.
+          Review history is truncated to the latest 50 decisions; the designated
+          approval is always included.
         </p>
       )}
     </section>

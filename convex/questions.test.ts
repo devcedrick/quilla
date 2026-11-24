@@ -651,6 +651,47 @@ describe("question lifecycle", () => {
       expectedWorkflowRevision: 4,
     });
   });
+  it("includes the designated approval when the review window overflows", async () => {
+    const { t, author, reviewer, versionId } = await setup();
+    await author.mutation(api.questions.submitForReview, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 1,
+    });
+    await reviewer.mutation(api.questions.reviewVersion, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 2,
+      ...review,
+    });
+    const version = (await t.run((ctx) =>
+      ctx.db.get("questionVersions", versionId),
+    ))!;
+    if (!version.approvalDecisionId) throw new Error("Missing approval");
+    await t.run(async (ctx) => {
+      for (let index = 0; index < 51; index++)
+        await ctx.db.insert("questionReviews", {
+          questionVersionId: versionId,
+          reviewerId: version.creatorId,
+          kind: "duplicate_recheck",
+          decision: "duplicate_recheck",
+          expectedRevision: 3,
+          resultingRevision: 4,
+          reason: `Independent recheck ${index}`,
+          rubric: "editorial-quality-v1",
+          duplicateDisposition: "none_found",
+          duplicateEvidence: `Recheck evidence ${index}`,
+          candidateFingerprint: emptyCandidateFingerprint,
+          decidedAt: 10 + index,
+        });
+    });
+    const context = (await reviewer.query(api.questions.getAdminVersion, {
+      questionVersionId: versionId,
+    }))!;
+    expect(context.reviewOverflow).toBe(true);
+    expect(context.reviews).toHaveLength(51);
+    expect(
+      context.reviews.some((item) => item._id === version.approvalDecisionId),
+    ).toBe(true);
+  });
   it("blocks unauthenticated, nonadmin and suspended reads/writes", async () => {
     const { t, client, versionId, taxonomy } = await setup();
     const version = await t.run((ctx) =>
@@ -1002,6 +1043,24 @@ describe("admin question bank queries", () => {
         paginationOpts: { numItems: 0, cursor: null },
       }),
     ).rejects.toMatchObject({ data: { code: "INVALID_PAGE_SIZE" } });
+  });
+  it("honors stricter caller pagination read limits", async () => {
+    const { reviewer } = await bankFixture();
+    const rowsLimited = await reviewer.query(api.questions.listAdminVersions, {
+      paginationOpts: { numItems: 10, cursor: null, maximumRowsRead: 1 },
+    });
+    expect(rowsLimited.page).toHaveLength(1);
+    expect(rowsLimited.isDone).toBe(false);
+    const bytesLimited = await reviewer.query(api.questions.listAdminVersions, {
+      paginationOpts: { numItems: 10, cursor: null, maximumBytesRead: 1 },
+    });
+    expect(bytesLimited.page).toHaveLength(1);
+    expect(bytesLimited.isDone).toBe(false);
+    const full = await reviewer.query(api.questions.listAdminVersions, {
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(full.page).toHaveLength(3);
+    expect(full.isDone).toBe(true);
   });
   it("searches the admin projection while applying index filters", async () => {
     const { author, reviewer } = await bankFixture();
