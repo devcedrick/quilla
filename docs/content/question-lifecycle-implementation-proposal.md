@@ -110,8 +110,9 @@ question; historical attempts keep their originally served IDs and choice order.
 
 Do not create an anonymous question endpoint or learner preview API here. Later
 assessment code receives trusted content-selection helpers with answer-free
-projections; answers/explanations require the owning submitted attempt's separate
-authorized review path in #59. Admin reads do not double as learner APIs.
+projections; answers/explanations require the owning finalized attempt's separate
+authorized review path in #59 (a `submitted` or `expired` attempt). Admin reads do
+not double as learner APIs.
 
 ## Approved quality-score rule
 
