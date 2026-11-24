@@ -65,6 +65,11 @@ source of truth.
   they race.
 - A confirmation or preview screen is not an attempt. Quilla does not persist an
   attempt until the learner starts it.
+- A learner has at most one `in_progress` attempt for the same assessment and
+  stored level. A new attempt of that assessment and level is rejected while one
+  is `in_progress`; the learner must resume it or wait for its deadline. This
+  applies to diagnostics and mocks and closes the otherwise-available restart
+  path after questions have been served.
 
 ### Submission, expiry and abandonment
 
@@ -163,13 +168,15 @@ source of truth.
   cells and totals; derive the deadline from the immutable configuration; create no
   attempt before start.
 - **S07.3 / #55:** enforce the server deadline, late-write rejection, empty-submission
-  rejection, idempotent finalization, the four lifecycle states, zero-answer
-  abandonment, unanswered mock scoring and diagnostic-only answered-item mastery.
-- **S07.4 / #56:** display server-derived time, block resume after expiry, show
-  expired and abandoned states honestly, and never expose answer keys during an
-  active attempt.
+  rejection, single-active-attempt rejection, idempotent finalization, the four
+  lifecycle states, zero-answer abandonment, unanswered mock scoring and
+  diagnostic-only answered-item mastery.
+- **S07.4 / #56:** display server-derived time, block resume after expiry, block a
+  duplicate active attempt, show expired and abandoned states honestly, and never
+  expose answer keys during an active attempt.
 - **S03.1 / #57:** apply the same lifecycle to diagnostics, including partial
-  expiry, zero-answer abandonment, completion-gate behavior and retakes.
+  expiry, zero-answer abandonment, single-active-attempt behavior, completion-gate
+  behavior and retakes.
 - Schema field names may differ, but the state semantics, terminal immutability,
   submission reason, timestamps and snapshot requirements are fixed by this ADR.
 
@@ -179,6 +186,7 @@ source of truth.
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Learner disconnects or closes the tab before the deadline | Resume later with the same answers, choice order, snapshots and deadline. The clock keeps running.                                    |
 | Learner returns on another device before the deadline     | Resume the same attempt. No second attempt or deadline is created.                                                                    |
+| Learner starts another attempt while one is in progress   | Reject the new attempt; the existing attempt remains resumable until its deadline.                                                    |
 | Learner returns after the deadline                        | No resume and no answer writes. Any access finalizes the attempt and shows the terminal result or abandoned state.                    |
 | Deadline passes with saved answers                        | Finalize as `expired`; score saved answers; unanswered mock items are incorrect; a diagnostic counts with answered-item mastery only. |
 | Deadline passes with zero saved answers                   | Finalize as `abandoned`; no score, evidence, unlock or review; allow a new attempt.                                                   |

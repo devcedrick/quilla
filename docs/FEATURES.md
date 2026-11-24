@@ -356,6 +356,7 @@ Activation requires integration of the seven initial 270-question seed families 
 
 - A mock starts with an immutable blueprint snapshot and a fixed server deadline. Disconnecting, closing the browser, losing connectivity, switching devices, suspension, or a level-preference change never pauses or extends the deadline.
 - A learner can resume before the deadline from any authorized device with the same served questions, choice order, saved answers and deadline. No attempt is persisted before the learner starts it.
+- A learner can have at most one `in_progress` attempt for the same assessment and stored level. Starting another is rejected until that attempt is finalized; the learner resumes it or waits for its deadline. This prevents drawing a replacement attempt after seeing served questions.
 - At the deadline, the server idempotently finalizes the attempt. Only answers committed before the deadline count; an answer write racing the deadline cannot add time. A repeated submission, scheduled finalizer or race returns the same terminal result.
 - An attempt with saved answers becomes `expired`: saved answers are scored, unanswered items count as incorrect, and the result is read-only. A learner submission before the deadline becomes `submitted` under the same scoring rules.
 - A submission with no saved answers is rejected and leaves the attempt `in_progress`; an empty submission cannot cancel an attempt before its deadline.
