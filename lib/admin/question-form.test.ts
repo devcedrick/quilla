@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   buildQuestionContent,
   firstAuthoringField,
+  nextUnusedChoiceId,
   validateAuthoringDraft,
   type AuthoringDraft,
 } from "./question-form";
@@ -28,6 +29,24 @@ const validDraft: AuthoringDraft = {
   sourcesText: "",
   referenceVersionId: "",
 };
+
+describe("admin question choice identifiers", () => {
+  it("allocates the next letter and reuses a removed gap", () => {
+    expect(nextUnusedChoiceId([])).toBe("a");
+    expect(
+      nextUnusedChoiceId([
+        { choiceId: "a", text: "5" },
+        { choiceId: "c", text: "7" },
+      ]),
+    ).toBe("b");
+    expect(
+      nextUnusedChoiceId([
+        { choiceId: "a", text: "5" },
+        { choiceId: "b", text: "6" },
+      ]),
+    ).toBe("c");
+  });
+});
 
 describe("admin question authoring validation", () => {
   it("accepts a complete draft without errors", () => {

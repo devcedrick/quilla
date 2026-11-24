@@ -9,14 +9,18 @@ const mocks = vi.hoisted(() => ({
   context: undefined as unknown,
   history: undefined as unknown,
   preview: undefined as unknown,
+  previewArgs: undefined as unknown,
 }));
 
 vi.mock("convex/react", () => ({
-  useQuery: (ref: Parameters<typeof getFunctionName>[0]) => {
+  useQuery: (ref: Parameters<typeof getFunctionName>[0], args?: unknown) => {
     const name = getFunctionName(ref);
     if (name === "questions:getAdminVersion") return mocks.context;
     if (name === "questions:listAdminQuestionVersions") return mocks.history;
-    if (name === "questionReferences:getAdminPreview") return mocks.preview;
+    if (name === "questionReferences:getAdminPreview") {
+      mocks.previewArgs = args;
+      return mocks.preview;
+    }
     if (name === "users:currentAccess")
       return { status: "active", userId: "user-a", role: "admin" };
     return undefined;
@@ -232,6 +236,7 @@ describe("admin question version detail", () => {
     });
     mocks.preview = { reference, assets: [] };
     await render();
+    expect(mocks.previewArgs).toEqual({ referenceVersionId: "ref-1" });
     const markup = JSON.stringify(view.toJSON());
     expect(markup).toContain("Shared reference");
     expect(markup).toContain("Read this passage.");

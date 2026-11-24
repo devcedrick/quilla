@@ -113,20 +113,71 @@ const duplicates = {
   overflow: false,
 };
 
+function approvalReview(fingerprint: string): Doc<"questionReviews"> {
+  return {
+    _id: "review-1" as Id<"questionReviews">,
+    _creationTime: 2,
+    questionVersionId: "version-1" as Id<"questionVersions">,
+    reviewerId: "user-a" as Id<"users">,
+    expectedRevision: 2,
+    resultingRevision: 3,
+    reason: "",
+    rubric: "editorial-quality-v1",
+    duplicateDisposition: "none_found",
+    duplicateEvidence: "No duplicates at approval time",
+    candidateFingerprint: fingerprint,
+    decidedAt: 2,
+    kind: "review",
+    decision: "approve",
+    assessment: Array.from({ length: 5 }, () => ({
+      passed: true,
+      evidence: "Independently verified",
+    })),
+    score: 5,
+  };
+}
+
 let view: ReactTestRenderer;
+function element(
+  version: Doc<"questionVersions">,
+  duplicateState: typeof duplicates,
+  reviews: Doc<"questionReviews">[],
+) {
+  return (
+    <ModerationActions
+      version={version}
+      question={question}
+      reviews={reviews}
+      duplicates={duplicateState}
+    />
+  );
+}
 async function render(
   version: Doc<"questionVersions">,
   duplicateState: typeof duplicates = duplicates,
+  reviews: Doc<"questionReviews">[] = [],
 ) {
   await act(async () => {
-    view = create(
-      <ModerationActions
-        version={version}
-        question={question}
-        reviews={[]}
-        duplicates={duplicateState}
-      />,
-    );
+    view = create(element(version, duplicateState, reviews));
+  });
+}
+async function rerender(
+  version: Doc<"questionVersions">,
+  duplicateState: typeof duplicates,
+  reviews: Doc<"questionReviews">[] = [],
+) {
+  await act(async () => {
+    view.update(element(version, duplicateState, reviews));
+  });
+}
+function findButton(label: string) {
+  return view.root
+    .findAllByType("button")
+    .find((candidate) => candidate.props.children === label);
+}
+async function submitForm() {
+  await act(async () => {
+    view.root.findByType("form").props.onSubmit({ preventDefault() {} });
   });
 }
 async function click(label: string) {
@@ -168,6 +219,7 @@ describe("admin moderation actions", () => {
   });
   afterEach(async () => {
     if (view) await act(async () => view.unmount());
+    vi.restoreAllMocks();
     vi.unstubAllGlobals();
   });
   it("lets the contributor submit an exact draft revision", async () => {
@@ -206,6 +258,7 @@ describe("admin moderation actions", () => {
       })),
       duplicateDisposition: "none_found",
       duplicateEvidence: "No duplicate candidates were found.",
+      candidateSetFingerprint: duplicates.fingerprint,
     });
     expect(JSON.stringify(view.toJSON())).toContain("Rejection recorded.");
   });
@@ -249,23 +302,182 @@ describe("admin moderation actions", () => {
       questionVersionId: "version-1",
       expectedWorkflowRevision: 1,
     });
-    await act(async () =>
-      view.update(
-        <ModerationActions
-          version={versionFor("archived")}
-          question={question}
-          reviews={[]}
-          duplicates={duplicates}
-        />,
-      ),
-    );
+    await rerender(versionFor("archived"), duplicates);
     expect(JSON.stringify(view.toJSON())).toContain(
       "No further lifecycle action is available for this version.",
     );
-    expect(
-      view.root
-        .findAllByType("button")
-        .some((button) => button.props.children === "Publish version"),
-    ).toBe(false);
+    for (const label of ["Publish version", "Archive version"])
+      expect(
+        view.root
+          .findAllByType("button")
+          .some((candidate) => candidate.props.children === label),
+      ).toBe(false);
+  });
+  it("focuses the summary when only field errors block a review", async () => {
+    mocks.access = activeAdmin("user-a");
+    await render(versionFor("pending_review"));
+    await click("Review this version");
+    const focus = vi.fn();
+    vi.spyOn(document, "getElementById").mockReturnValue({
+      focus,
+    } as unknown as HTMLElement);
+    const frames: FrameRequestCallback[] = [];
+    vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => {
+      frames.push(callback);
+      return 0;
+    });
+    await submitReview();
+    expect(mocks.review).not.toHaveBeenCalled();
+    expect(JSON.stringify(view.toJSON())).toContain(
+      "Correct the highlighted fields before recording the decision.",
+    );
+    expect(frames).toHaveLength(1);
+    act(() => frames[0](0));
+    expect(focus).toHaveBeenCalledTimes(1);
+  });
+  it("binds approval evidence to the candidate set captured when the form opened", async () => {
+    mocks.access = activeAdmin("user-a");
+    const first = { ...duplicates, fingerprint: "1".repeat(64) };
+    const second = { ...duplicates, fingerprint: "2".repeat(64) };
+    await render(versionFor("pending_review"), first);
+    await click("Review this version");
+    await rerender(versionFor("pending_review"), second);
+    for (let index = 0; index < 5; index++)
+      fill(`assessment-evidence-${index}`, `Evidence ${index + 1}`);
+    for (let index = 0; index < 5; index++) {
+      const checkbox = view.root
+        .findAllByType("input")
+        .filter((input) => input.props.type === "checkbox")[index];
+      act(() => checkbox.props.onChange({ target: { checked: true } }));
+    }
+    fill("duplicate-evidence", "No candidates were found.");
+    await submitReview();
+    expect(mocks.review).toHaveBeenCalledWith(
+      expect.objectContaining({
+        candidateSetFingerprint: first.fingerprint,
+        duplicateDisposition: "none_found",
+      }),
+    );
+  });
+  it("blocks publish and recheck on overflow while keeping archive available", async () => {
+    mocks.access = activeAdmin("user-a");
+    await render(versionFor("approved"), { ...duplicates, overflow: true });
+    expect(findButton("Publish version")).toBeUndefined();
+    expect(findButton("Record duplicate recheck")).toBeUndefined();
+    expect(findButton("Archive version")).toBeDefined();
+    expect(JSON.stringify(view.toJSON())).toContain(
+      "Publication and duplicate recheck are blocked because the candidate scan overflowed.",
+    );
+  });
+  it("offers only the dispositions the current scan can record", async () => {
+    mocks.access = activeAdmin("user-a");
+    const withCandidate = {
+      ids: ["question-2" as Id<"questions">],
+      fingerprint: "2".repeat(64),
+      overflow: false,
+    };
+    await render(
+      versionFor("approved", {
+        approvalDecisionId: "review-1" as Id<"questionReviews">,
+      }),
+      withCandidate,
+      [approvalReview("1".repeat(64))],
+    );
+    await click("Record duplicate recheck");
+    let options = view.root
+      .findAllByProps({ id: "recheck-disposition" })
+      .find((node) => typeof node.type === "string")!
+      .findAllByType("option");
+    expect(options.map((option) => option.props.value)).toEqual([
+      "adjudicated_distinct",
+    ]);
+    await rerender(
+      versionFor("approved", {
+        approvalDecisionId: "review-1" as Id<"questionReviews">,
+      }),
+      { ...withCandidate, ids: [] },
+      [approvalReview("1".repeat(64))],
+    );
+    options = view.root
+      .findAllByProps({ id: "recheck-disposition" })
+      .find((node) => typeof node.type === "string")!
+      .findAllByType("option");
+    expect(options.map((option) => option.props.value)).toEqual(["none_found"]);
+  });
+  it("binds recheck evidence to the candidate set captured when the form opened", async () => {
+    mocks.access = activeAdmin("user-a");
+    const first = {
+      ids: ["question-2" as Id<"questions">],
+      fingerprint: "1".repeat(64),
+      overflow: false,
+    };
+    const second = { ...first, fingerprint: "2".repeat(64) };
+    const approved = versionFor("approved", {
+      approvalDecisionId: "review-1" as Id<"questionReviews">,
+    });
+    await render(approved, first, [approvalReview("0".repeat(64))]);
+    await click("Record duplicate recheck");
+    await rerender(approved, second, [approvalReview("0".repeat(64))]);
+    fill("recheck-evidence", "Reviewed the candidate against this version.");
+    await submitForm();
+    expect(mocks.recheck).toHaveBeenCalledWith(
+      expect.objectContaining({
+        candidateSetFingerprint: first.fingerprint,
+        disposition: "adjudicated_distinct",
+      }),
+    );
+  });
+  it("clears stale field and summary errors as the admin corrects them", async () => {
+    mocks.access = activeAdmin("user-a");
+    await render(versionFor("pending_review"));
+    await click("Review this version");
+    const reject = view.root.findByProps({
+      name: "moderation-decision",
+      value: "reject",
+    });
+    act(() => reject.props.onChange());
+    for (let index = 0; index < 5; index++)
+      fill(`assessment-evidence-${index}`, `Evidence ${index + 1}`);
+    fill("duplicate-evidence", "No duplicate candidates were found.");
+    await submitReview();
+    expect(mocks.review).not.toHaveBeenCalled();
+    expect(JSON.stringify(view.toJSON())).toContain(
+      "A nonblank reason is required.",
+    );
+    fill("moderation-reason", "The explanation needs a source.");
+    const markup = JSON.stringify(view.toJSON());
+    expect(markup).not.toContain("A nonblank reason is required.");
+    expect(markup).not.toContain(
+      "Correct the highlighted fields before recording the decision.",
+    );
+    await submitReview();
+    expect(mocks.review).toHaveBeenCalledWith(
+      expect.objectContaining({
+        decision: "reject",
+        reason: "The explanation needs a source.",
+      }),
+    );
+  });
+  it("clears a recheck error when the evidence changes", async () => {
+    mocks.access = activeAdmin("user-a");
+    const withCandidate = {
+      ids: ["question-2" as Id<"questions">],
+      fingerprint: "2".repeat(64),
+      overflow: false,
+    };
+    await render(
+      versionFor("approved", {
+        approvalDecisionId: "review-1" as Id<"questionReviews">,
+      }),
+      withCandidate,
+      [approvalReview("1".repeat(64))],
+    );
+    await click("Record duplicate recheck");
+    await submitForm();
+    expect(JSON.stringify(view.toJSON())).toContain("Evidence is required.");
+    fill("recheck-evidence", "Reviewed the exact candidate.");
+    expect(JSON.stringify(view.toJSON())).not.toContain(
+      "Evidence is required.",
+    );
   });
 });

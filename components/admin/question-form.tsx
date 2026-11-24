@@ -10,7 +10,7 @@ import { adminErrorMessage } from "@/lib/admin/errors";
 import {
   buildQuestionContent,
   firstAuthoringField,
-  nextChoiceId,
+  nextUnusedChoiceId,
   validateAuthoringDraft,
   type AuthoringChoice,
   type AuthoringDraft,
@@ -104,12 +104,22 @@ export function QuestionForm({
   const createRevision = useMutation(api.questions.createRevision);
   const router = useRouter();
 
+  // Once the source catalog stops being sealed, stop querying it immediately
+  // but keep any different sealed catalog the user picked for recovery.
+  const sourceTaxonomyVersionId = initial?.version.taxonomyVersionId;
+  const sourceCatalogSelected =
+    Boolean(sourceTaxonomyVersionId) &&
+    taxonomyVersionId === sourceTaxonomyVersionId;
+  const usableTaxonomyVersionId =
+    !sourceTaxonomySealed && sourceCatalogSelected ? "" : taxonomyVersionId;
   const taxonomy = useQuery(
     api.questions.listAdminAuthoringOptions,
-    taxonomyVersionId ? { taxonomyVersionId } : {},
+    usableTaxonomyVersionId
+      ? { taxonomyVersionId: usableTaxonomyVersionId }
+      : {},
   );
   const activeTaxonomyId =
-    taxonomyVersionId || taxonomy?.selected?._id || ("" as const);
+    usableTaxonomyVersionId || taxonomy?.selected?._id || ("" as const);
   const entries = taxonomy?.entries ?? [];
   const allowedSubjects = moduleSubjectKeys(module);
   const subjects = entries.filter(
@@ -174,7 +184,9 @@ export function QuestionForm({
 
   function addChoice() {
     if (choices.length >= 6) return;
-    const id = nextChoiceId(choices.length);
+    // Reuse the lowest free letter so removing and re-adding never duplicates
+    // a choice ID that the correct answer still points at.
+    const id = nextUnusedChoiceId(choices);
     setChoices((current) => [...current, { choiceId: id, text: "" }]);
   }
 

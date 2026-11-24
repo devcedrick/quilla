@@ -65,6 +65,24 @@ export function ModerationActions({
     );
   const [recheckEvidence, setRecheckEvidence] = useState("");
   const [recheckError, setRecheckError] = useState<string | null>(null);
+  // Capture the candidate set when a decision starts; a later render must not
+  // silently bind old evidence to a new fingerprint.
+  const [reviewFingerprint, setReviewFingerprint] = useState(
+    duplicates.fingerprint,
+  );
+  const [recheckFingerprint, setRecheckFingerprint] = useState(
+    duplicates.fingerprint,
+  );
+
+  const hasCandidates = duplicates.ids.length > 0;
+  const recheckOptions: DuplicateDisposition[] = hasCandidates
+    ? ["adjudicated_distinct"]
+    : ["none_found"];
+  // The scan can change while the form is open. Derive a valid fallback instead
+  // of writing state from an effect, and keep the submitted value consistent.
+  const recheckValue = recheckOptions.includes(recheckDisposition)
+    ? recheckDisposition
+    : (recheckOptions[0] ?? "none_found");
 
   const currentUserId = access?.status === "active" ? access.userId : undefined;
   const independent =
@@ -116,6 +134,34 @@ export function ModerationActions({
     }
   }
 
+  function clearFormErrors(...keys: string[]) {
+    setFormErrors((current) => {
+      let changed = false;
+      const next = { ...current };
+      for (const key of keys) {
+        if (!(key in next)) continue;
+        delete next[key];
+        changed = true;
+      }
+      return changed ? next : current;
+    });
+  }
+
+  function changeDecision(next: Decision) {
+    setDecision(next);
+    setFormErrors((current) => {
+      const updated = { ...current };
+      delete updated.reason;
+      delete updated.form;
+      if (next !== "approve") {
+        for (const key of Object.keys(updated)) {
+          if (key.startsWith("pass-")) delete updated[key];
+        }
+      }
+      return updated;
+    });
+  }
+
   async function submitReview(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (pending) return;
@@ -165,6 +211,7 @@ export function ModerationActions({
         })),
         duplicateDisposition: disposition,
         duplicateEvidence: duplicateEvidence.trim(),
+        candidateSetFingerprint: reviewFingerprint,
       });
       setReviewOpen(false);
       setNotice(
@@ -202,16 +249,12 @@ export function ModerationActions({
       await recheck({
         questionVersionId: version._id,
         expectedWorkflowRevision: version.workflowRevision,
-        candidateSetFingerprint: duplicates.fingerprint,
-        disposition: recheckDisposition,
+        candidateSetFingerprint: recheckFingerprint,
+        disposition: recheckValue,
         evidence: recheckEvidence.trim(),
       });
       setRecheckOpen(false);
-      setNotice(
-        recheckDisposition === "unresolved"
-          ? "Duplicate recheck recorded as unresolved; publication remains blocked."
-          : "Independent duplicate recheck recorded.",
-      );
+      setNotice("Independent duplicate recheck recorded.");
     } catch (caught) {
       setError(
         adminErrorMessage(
@@ -286,7 +329,10 @@ export function ModerationActions({
           (independent ? (
             <AdminButton
               variant={reviewOpen ? "secondary" : "primary"}
-              onClick={() => setReviewOpen((open) => !open)}
+              onClick={() => {
+                if (!reviewOpen) setReviewFingerprint(duplicates.fingerprint);
+                setReviewOpen((open) => !open);
+              }}
             >
               {reviewOpen ? "Close review form" : "Review this version"}
             </AdminButton>
@@ -298,22 +344,24 @@ export function ModerationActions({
           ))}
         {version.state === "approved" && (
           <>
-            <AdminButton
-              disabled={Boolean(pending) || duplicatesChanged}
-              onClick={() =>
-                run(
-                  "publish",
-                  () =>
-                    publish({
-                      questionVersionId: version._id,
-                      expectedWorkflowRevision: version.workflowRevision,
-                    }),
-                  "Version published. Earlier versions remain unchanged.",
-                )
-              }
-            >
-              {pending === "publish" ? "Publishing…" : "Publish version"}
-            </AdminButton>
+            {!duplicates.overflow && (
+              <AdminButton
+                disabled={Boolean(pending) || duplicatesChanged}
+                onClick={() =>
+                  run(
+                    "publish",
+                    () =>
+                      publish({
+                        questionVersionId: version._id,
+                        expectedWorkflowRevision: version.workflowRevision,
+                      }),
+                    "Version published. Earlier versions remain unchanged.",
+                  )
+                }
+              >
+                {pending === "publish" ? "Publishing…" : "Publish version"}
+              </AdminButton>
+            )}
             <AdminButton
               variant="danger"
               disabled={Boolean(pending)}
@@ -359,93 +407,117 @@ export function ModerationActions({
           </p>
         )}
       </div>
-      {version.state === "approved" && duplicatesChanged && (
-        <div className="space-y-3 rounded-xl border border-accent bg-accent/10 p-4">
-          <p role="alert" className="text-sm">
-            The duplicate candidate set changed after approval. Publishing is
-            blocked until a different active admin records a duplicate recheck
-            for fingerprint{" "}
-            <code className="break-all">{duplicates.fingerprint}</code>.
-          </p>
-          {independent ? (
-            recheckOpen ? (
-              <form onSubmit={submitRecheck} noValidate className="space-y-3">
-                <AdminField
-                  id="recheck-disposition"
-                  label="Recheck disposition"
-                  required
-                >
-                  <select
-                    id="recheck-disposition"
-                    value={recheckDisposition}
-                    disabled={Boolean(pending)}
-                    onChange={(event) =>
-                      setRecheckDisposition(
-                        event.target.value as DuplicateDisposition,
-                      )
-                    }
-                    className={adminControlClass}
-                  >
-                    {Object.entries(dispositionLabels).map(([value, label]) => (
-                      <option key={value} value={value}>
-                        {label}
-                      </option>
-                    ))}
-                  </select>
-                </AdminField>
-                <AdminField
-                  id="recheck-evidence"
-                  label="Recheck evidence"
-                  required
-                  error={recheckError ?? undefined}
-                >
-                  <textarea
-                    id="recheck-evidence"
-                    rows={3}
-                    value={recheckEvidence}
-                    disabled={Boolean(pending)}
-                    onChange={(event) => setRecheckEvidence(event.target.value)}
-                    aria-required="true"
-                    aria-invalid={Boolean(recheckError)}
-                    aria-describedby={adminDescribedBy(
-                      "recheck-evidence",
-                      undefined,
-                      recheckError ?? undefined,
-                    )}
-                    className={adminControlClass}
-                  />
-                </AdminField>
-                <div className="flex flex-wrap gap-3">
-                  <AdminButton type="submit" disabled={Boolean(pending)}>
-                    {pending === "recheck"
-                      ? "Recording…"
-                      : "Record duplicate recheck"}
-                  </AdminButton>
-                  <AdminButton
-                    variant="secondary"
-                    disabled={Boolean(pending)}
-                    onClick={() => setRecheckOpen(false)}
-                  >
-                    Cancel
-                  </AdminButton>
-                </div>
-              </form>
-            ) : (
-              <AdminButton
-                variant="secondary"
-                disabled={Boolean(pending)}
-                onClick={() => setRecheckOpen(true)}
-              >
-                Record duplicate recheck
-              </AdminButton>
-            )
-          ) : (
-            <p className="text-sm">
-              A different active admin must record the duplicate recheck.
-            </p>
-          )}
-        </div>
+      {version.state === "approved" && duplicates.overflow && (
+        <p
+          role="alert"
+          className="rounded-xl border border-destructive p-4 text-sm"
+        >
+          Publication and duplicate recheck are blocked because the candidate
+          scan overflowed. Reduce the duplicate set first; archive remains
+          available.
+        </p>
       )}
+      {version.state === "approved" &&
+        duplicatesChanged &&
+        !duplicates.overflow && (
+          <div className="space-y-3 rounded-xl border border-accent bg-accent/10 p-4">
+            <p role="alert" className="text-sm">
+              The duplicate candidate set changed after approval. Publishing is
+              blocked until a different active admin records a duplicate recheck
+              for fingerprint{" "}
+              <code className="break-all">{duplicates.fingerprint}</code>.
+            </p>
+            {independent ? (
+              recheckOpen ? (
+                <form onSubmit={submitRecheck} noValidate className="space-y-3">
+                  <AdminField
+                    id="recheck-disposition"
+                    label="Recheck disposition"
+                    required
+                  >
+                    <select
+                      id="recheck-disposition"
+                      value={recheckValue}
+                      disabled={Boolean(pending)}
+                      onChange={(event) => {
+                        setRecheckDisposition(
+                          event.target.value as DuplicateDisposition,
+                        );
+                        setRecheckError(null);
+                      }}
+                      className={adminControlClass}
+                    >
+                      {recheckOptions.map((value) => (
+                        <option key={value} value={value}>
+                          {dispositionLabels[value]}
+                        </option>
+                      ))}
+                    </select>
+                  </AdminField>
+                  <AdminField
+                    id="recheck-evidence"
+                    label="Recheck evidence"
+                    required
+                    error={recheckError ?? undefined}
+                  >
+                    <textarea
+                      id="recheck-evidence"
+                      rows={3}
+                      value={recheckEvidence}
+                      disabled={Boolean(pending)}
+                      onChange={(event) => {
+                        setRecheckEvidence(event.target.value);
+                        setRecheckError(null);
+                      }}
+                      aria-required="true"
+                      aria-invalid={Boolean(recheckError)}
+                      aria-describedby={adminDescribedBy(
+                        "recheck-evidence",
+                        undefined,
+                        recheckError ?? undefined,
+                      )}
+                      className={adminControlClass}
+                    />
+                  </AdminField>
+                  <div className="flex flex-wrap gap-3">
+                    <AdminButton type="submit" disabled={Boolean(pending)}>
+                      {pending === "recheck"
+                        ? "Recording…"
+                        : "Record duplicate recheck"}
+                    </AdminButton>
+                    <AdminButton
+                      variant="secondary"
+                      disabled={Boolean(pending)}
+                      onClick={() => {
+                        setRecheckOpen(false);
+                        setRecheckError(null);
+                      }}
+                    >
+                      Cancel
+                    </AdminButton>
+                  </div>
+                </form>
+              ) : (
+                <AdminButton
+                  variant="secondary"
+                  disabled={Boolean(pending)}
+                  onClick={() => {
+                    setRecheckFingerprint(duplicates.fingerprint);
+                    setRecheckDisposition(recheckOptions[0] ?? "none_found");
+                    setRecheckError(null);
+                    setRecheckOpen(true);
+                  }}
+                >
+                  Record duplicate recheck
+                </AdminButton>
+              )
+            ) : (
+              <p className="text-sm">
+                A different active admin must record the duplicate recheck.
+              </p>
+            )}
+          </div>
+        )}
       {version.state === "pending_review" && reviewOpen && independent && (
         <form
           onSubmit={submitReview}
@@ -471,7 +543,7 @@ export function ModerationActions({
                   value={value}
                   checked={decision === value}
                   disabled={Boolean(pending)}
-                  onChange={() => setDecision(value)}
+                  onChange={() => changeDecision(value)}
                   className="size-4 accent-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
                 />
                 <span className="text-sm font-bold">{label}</span>
@@ -493,7 +565,10 @@ export function ModerationActions({
               rows={3}
               value={reason}
               disabled={Boolean(pending)}
-              onChange={(event) => setReason(event.target.value)}
+              onChange={(event) => {
+                setReason(event.target.value);
+                clearFormErrors("reason", "form");
+              }}
               aria-required={decision !== "approve"}
               aria-invalid={Boolean(formErrors.reason)}
               aria-describedby={adminDescribedBy(
@@ -522,15 +597,16 @@ export function ModerationActions({
                     type="checkbox"
                     checked={assessments[index].passed}
                     disabled={Boolean(pending)}
-                    onChange={(event) =>
+                    onChange={(event) => {
                       setAssessments((current) =>
                         current.map((assessment, assessmentIndex) =>
                           assessmentIndex === index
                             ? { ...assessment, passed: event.target.checked }
                             : assessment,
                         ),
-                      )
-                    }
+                      );
+                      clearFormErrors(`pass-${index}`, "form");
+                    }}
                     aria-invalid={Boolean(formErrors[`pass-${index}`])}
                     className="mt-1 size-4 shrink-0 accent-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
                   />
@@ -554,15 +630,16 @@ export function ModerationActions({
                   rows={2}
                   value={assessments[index].evidence}
                   disabled={Boolean(pending)}
-                  onChange={(event) =>
+                  onChange={(event) => {
                     setAssessments((current) =>
                       current.map((assessment, assessmentIndex) =>
                         assessmentIndex === index
                           ? { ...assessment, evidence: event.target.value }
                           : assessment,
                       ),
-                    )
-                  }
+                    );
+                    clearFormErrors(`evidence-${index}`);
+                  }}
                   aria-required="true"
                   aria-invalid={Boolean(formErrors[`evidence-${index}`])}
                   className={adminControlClass}
@@ -607,9 +684,10 @@ export function ModerationActions({
                 id="duplicate-disposition"
                 value={disposition}
                 disabled={Boolean(pending)}
-                onChange={(event) =>
-                  setDisposition(event.target.value as DuplicateDisposition)
-                }
+                onChange={(event) => {
+                  setDisposition(event.target.value as DuplicateDisposition);
+                  clearFormErrors("form");
+                }}
                 className={adminControlClass}
               >
                 {Object.entries(dispositionLabels).map(([value, label]) => (
@@ -630,7 +708,10 @@ export function ModerationActions({
                 rows={3}
                 value={duplicateEvidence}
                 disabled={Boolean(pending)}
-                onChange={(event) => setDuplicateEvidence(event.target.value)}
+                onChange={(event) => {
+                  setDuplicateEvidence(event.target.value);
+                  clearFormErrors("duplicateEvidence", "form");
+                }}
                 aria-required="true"
                 aria-invalid={Boolean(formErrors.duplicateEvidence)}
                 aria-describedby={adminDescribedBy(
@@ -642,14 +723,15 @@ export function ModerationActions({
               />
             </AdminField>
           </fieldset>
-          {formErrors.form && (
+          {Object.keys(formErrors).length > 0 && (
             <p
               id="moderation-form-error"
               role="alert"
               tabIndex={-1}
               className="rounded-xl border border-destructive p-3 text-sm"
             >
-              {formErrors.form}
+              {formErrors.form ??
+                "Correct the highlighted fields before recording the decision."}
             </p>
           )}
           <AdminButton type="submit" disabled={Boolean(pending)}>

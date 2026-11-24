@@ -9,6 +9,7 @@ const mocks = vi.hoisted(() => ({
   createDraft: vi.fn(),
   createRevision: vi.fn(),
   push: vi.fn(),
+  taxonomyQueries: [] as unknown[],
 }));
 
 const taxonomy = {
@@ -16,6 +17,12 @@ const taxonomy = {
     {
       _id: "tax-1",
       taxonomyId: "cse-taxonomy-2027-v2",
+      revision: 1,
+      state: "sealed",
+    },
+    {
+      _id: "tax-2",
+      taxonomyId: "cse-taxonomy-2028-v1",
       revision: 1,
       state: "sealed",
     },
@@ -61,9 +68,12 @@ vi.mock("convex/react", () => ({
     if (name === "questions:createRevision") return mocks.createRevision;
     return vi.fn();
   },
-  useQuery: (ref: Parameters<typeof getFunctionName>[0]) => {
+  useQuery: (ref: Parameters<typeof getFunctionName>[0], args?: unknown) => {
     const name = getFunctionName(ref);
-    if (name === "questions:listAdminAuthoringOptions") return taxonomy;
+    if (name === "questions:listAdminAuthoringOptions") {
+      mocks.taxonomyQueries.push(args);
+      return taxonomy;
+    }
     if (name === "questionReferences:listAdminOptions")
       return { options: [], overflow: false };
     return undefined;
@@ -184,6 +194,7 @@ describe("admin question form", () => {
   beforeEach(() => {
     Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
     vi.clearAllMocks();
+    mocks.taxonomyQueries.length = 0;
     vi.stubGlobal("requestAnimationFrame", (callback: () => void) =>
       callback(),
     );
@@ -253,13 +264,38 @@ describe("admin question form", () => {
     expect(JSON.stringify(view.toJSON())).toContain(
       "The source version's taxonomy catalog is no longer sealed.",
     );
-    expect(host("admin-taxonomy").props.value).toBe("tax-1");
+    expect(mocks.taxonomyQueries.at(-1)).toEqual({});
+    expect(mocks.taxonomyQueries).not.toContainEqual({
+      taxonomyVersionId: "tax-1",
+    });
+    act(() =>
+      host("admin-taxonomy").props.onChange({ target: { value: "tax-2" } }),
+    );
+    expect(mocks.taxonomyQueries.at(-1)).toEqual({
+      taxonomyVersionId: "tax-2",
+    });
     await submit();
     expect(mocks.createRevision).toHaveBeenCalledWith({
       questionId: "question-1",
       expectedCanonicalRevision: 1,
       content,
-      taxonomyVersionId: "tax-1",
+      taxonomyVersionId: "tax-2",
     });
+  });
+  it("reuses the lowest free choice ID after a removal", async () => {
+    await renderForm();
+    const add = () =>
+      view.root
+        .findAllByType("button")
+        .find((candidate) => candidate.props.children === "Add choice")!;
+    act(() => add().props.onClick());
+    expect(host("admin-choice-2").props["aria-label"]).toBe("Choice C");
+    const removeA = view.root
+      .findAllByType("button")
+      .find((candidate) => candidate.props["aria-label"] === "Remove choice A");
+    act(() => removeA!.props.onClick());
+    expect(host("admin-choice-0").props["aria-label"]).toBe("Choice B");
+    act(() => add().props.onClick());
+    expect(host("admin-choice-2").props["aria-label"]).toBe("Choice A");
   });
 });

@@ -6,6 +6,7 @@ const mocks = vi.hoisted(() => ({
   paginated: vi.fn(),
   loadMore: vi.fn(),
   status: "Exhausted" as "Exhausted" | "CanLoadMore",
+  fail: false,
 }));
 
 vi.mock("convex/react", () => ({
@@ -24,6 +25,7 @@ vi.mock("convex/react", () => ({
   }),
   usePaginatedQuery: (...args: unknown[]) => {
     mocks.paginated(...args);
+    if (mocks.fail) throw new Error("simulated query failure");
     return {
       results: [],
       status: mocks.status,
@@ -75,12 +77,14 @@ describe("admin question bank filters", () => {
     Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
     vi.clearAllMocks();
     mocks.status = "Exhausted";
+    mocks.fail = false;
     vi.stubGlobal("requestAnimationFrame", (callback: () => void) =>
       callback(),
     );
   });
   afterEach(() => {
     renderer?.unmount();
+    vi.restoreAllMocks();
     vi.unstubAllGlobals();
   });
   it("applies every control as one combined paginated query", () => {
@@ -139,5 +143,32 @@ describe("admin question bank filters", () => {
     });
     act(() => loadMore.props.onClick());
     expect(mocks.loadMore).toHaveBeenCalledWith(20);
+  });
+  it("does not claim no matches while more pages remain", () => {
+    mocks.status = "CanLoadMore";
+    render();
+    const markup = JSON.stringify(renderer.toJSON());
+    expect(markup).toContain("No matches on this page yet");
+    expect(markup).not.toContain("No question versions match these filters");
+  });
+  it("keeps the filter form mounted when the results query fails", () => {
+    vi.spyOn(console, "error").mockImplementation(() => undefined);
+    mocks.fail = true;
+    render();
+    expect(
+      renderer.root.findByProps({ "aria-label": "Question bank filters" }),
+    ).toBeDefined();
+    expect(JSON.stringify(renderer.toJSON())).toContain(
+      "We could not load the requested admin data.",
+    );
+    mocks.fail = false;
+    const retry = renderer.root
+      .findAllByType("button")
+      .find((candidate) => candidate.props.children === "Try again");
+    expect(retry).toBeDefined();
+    act(() => retry!.props.onClick());
+    expect(JSON.stringify(renderer.toJSON())).toContain(
+      "No question versions match",
+    );
   });
 });

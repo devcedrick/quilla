@@ -182,8 +182,18 @@ export function buildQuestionContent(draft: AuthoringDraft): QuestionContent {
   };
 }
 
-export function nextChoiceId(index: number) {
+function nextChoiceId(index: number) {
   return String.fromCharCode(97 + index);
+}
+
+/** Pick the first letter not already used after a choice was removed. */
+export function nextUnusedChoiceId(choices: readonly AuthoringChoice[]) {
+  const used = new Set(choices.map((choice) => choice.choiceId));
+  for (let index = 0; index < 26; index++) {
+    const id = nextChoiceId(index);
+    if (!used.has(id)) return id;
+  }
+  return nextChoiceId(choices.length);
 }
 
 export function firstAuthoringField(errors: AuthoringErrors) {
