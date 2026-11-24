@@ -197,9 +197,9 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - Progress is autosaved and submission is idempotent.
 - The diagnostic follows the shared timed-attempt lifecycle: it has a fixed server deadline, is resumable only before that deadline, and is never paused or extended. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the transitions.
 - An expired diagnostic with saved answers counts as submitted; only answered items create mastery evidence, and unanswered items remain untested. A zero-answer expiry is abandoned and does not satisfy the completion gate.
-- Diagnostic completion is tracked per learner and level. Shared mastery or a submitted diagnostic for the other level does not satisfy this requirement.
+- Diagnostic completion is tracked per learner and level using the finalized-attempt rule above. Shared mastery or the other level's diagnostic does not satisfy this requirement.
 - Submission unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
-- Submission creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. Retaking a diagnostic preserves prior evidence, and submission retries cannot double-count it.
+- Finalization creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. Retaking a diagnostic preserves prior evidence, and finalization retries cannot double-count it.
 - Untested concepts are clearly marked, and content gaps are visible to admins.
 - Results present a mastery overview without pass/fail wording.
 
@@ -231,7 +231,7 @@ As a learner, I want my performance tracked by concept so I can understand exact
 
 ### Definition of done
 
-- Only submitted answers update mastery.
+- Only server-committed answers in eligible activities update mastery. For timed attempts, answers in both `submitted` and `expired` attempts count; `abandoned` attempts never update mastery.
 - Every update retains the originating attempt, its level, and the question version and canonical concept served during the attempt.
 - Mastery evidence belongs to the learner and canonical concept. Evidence for the same concept genuinely shared by both levels is reused across levels; distinct concepts, including level-specific concepts, remain separate.
 - Changing preferred level or submitting another diagnostic never deletes or resets prior mastery evidence. Shared evidence does not unlock another level's diagnostic-dependent features.
@@ -358,14 +358,15 @@ Activation requires integration of the seven initial 270-question seed families 
 - A learner can resume before the deadline from any authorized device with the same served questions, choice order, saved answers and deadline. No attempt is persisted before the learner starts it.
 - At the deadline, the server idempotently finalizes the attempt. Only answers committed before the deadline count; an answer write racing the deadline cannot add time. A repeated submission, scheduled finalizer or race returns the same terminal result.
 - An attempt with saved answers becomes `expired`: saved answers are scored, unanswered items count as incorrect, and the result is read-only. A learner submission before the deadline becomes `submitted` under the same scoring rules.
-- An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt.
+- A submission with no saved answers is rejected and leaves the attempt `in_progress`; an empty submission cannot cancel an attempt before its deadline.
+- An attempt with no saved answers at the deadline becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt after the deadline.
 - Terminal attempts cannot accept answers, be resumed, be extended or return to `in_progress`. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the full contract.
 
 ### Attempt retention and deletion
 
-- `submitted`, `expired` and `abandoned` attempts and their immutable question and blueprint snapshots are retained for the life of the account. The initial release has no time-based purge and no archive that hides them from history.
+- `submitted`, `expired` and `abandoned` attempts and their immutable question and blueprint snapshots are retained for the life of the account and are not deleted by account deletion. The initial release has no time-based purge and no archive that hides them from history.
 - Learners have no control to delete an attempt, and admins cannot hard-delete an attempt or rewrite its result. This includes zero-answer `abandoned` records.
-- Account deletion or anonymization is a separate approved workflow. It may remove or de-identify the learner's identity and personal data, but it must not rewrite historical attempt results or delete shared question, reference or blueprint versions.
+- Account deletion or anonymization is a separate approved workflow under [ADR 0006](ADR/0006-application-profiles-and-authorization.md). It may remove or de-identify the learner's identity and personal data, but retained attempt records and shared question, reference and blueprint versions remain, and historical results are never rewritten. "Life of the account" therefore includes de-identified retention after account deletion.
 - Any future purge or archival policy requires a new architecture decision and must not silently delete records under [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md).
 
 ### Questionnaire policy
@@ -383,7 +384,7 @@ Activation requires integration of the seven initial 270-question seed families 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.
 - Connectivity is lost, the tab closes, or the browser crashes during the exam.
 - The learner returns before, at, or after the deadline.
-- The deadline passes with no saved answers, or the learner attempts an empty submission.
+- The deadline passes with no saved answers, or the learner attempts to submit with none.
 - The timer expires while an answer write is in flight.
 - The same submission reaches the server more than once.
 - A question is edited or archived while the attempt is active.
@@ -411,7 +412,7 @@ Activation requires integration of the seven initial 270-question seed families 
 - Each attempt starts with a fixed server deadline and is resumable only while that deadline has not passed; interruption, suspension or a preference change never pauses or extends it.
 - Progress is autosaved and survives browser interruption on any authorized device without extending the deadline.
 - An attempt with saved answers becomes `expired` and is scored; unanswered scored items count as incorrect and the result is read-only.
-- An attempt with no saved answers at the deadline, or an empty submission, becomes `abandoned` with no result or evidence and does not count as a completed mock.
+- An attempt with no saved answers at the deadline becomes `abandoned` with no result or evidence and does not count as a completed mock; an empty submission is rejected and does not end the attempt early.
 - Each mock records its questionnaire mode in the immutable snapshot; initial mocks record `excluded`.
 - Questionnaire content never contributes to a score, passing reference, pass/fail result, mastery, readiness, streak or analytics calculation, and a `scored` mode is rejected.
 - Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
@@ -455,8 +456,8 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - History identifies each attempt's original level and preserves its served snapshots across preference changes; the current preference does not hide attempts from the other level.
 - Review is accessible only to the attempt owner or an authorized admin, including on later visits.
 - Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
-- Leaving and reopening a review preserves the same submitted result and does not consume or invalidate review access.
-- Viewing a historical review does not update mastery or adaptive recommendation state; only newly submitted answers from a separate eligible activity can do so.
+- Leaving and reopening a review preserves the same finalized result and does not consume or invalidate review access.
+- Viewing a historical review does not update mastery or adaptive recommendation state; only answers committed in a separate eligible activity can do so.
 - Every item uses the exact served question-version snapshot.
 - Review preserves the original displayed choice order and answer-letter mapping under section 3's shared assessment choice-order policy.
 - Review shows the learner's answer, correct answer, explanation, concept, and source citation where applicable.
@@ -531,7 +532,7 @@ As a learner, I want an explainable readiness score with a confidence range and 
 
 - Readiness is unavailable for a requested level until the learner submits that level's diagnostic, even when shared mastery or another level's diagnostic exists. A diagnostic that expired with saved answers counts as submitted; an abandoned one does not.
 - The score uses the requested level's coverage and blueprint and combines applicable concept mastery (including genuinely shared evidence), recent mock performance from that same level, and demonstrated recall in eligible learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
-- Only finalized attempts with evidence contribute: `submitted` and `expired` attempts contribute their scored answers, while `abandoned` attempts contribute nothing.
+- Only finalized attempts contribute attempt evidence: `submitted` and `expired` attempts contribute their scored answers, while `abandoned` attempts contribute nothing. Completed adaptive-practice and review-session answers remain governed by their own evidence rules.
 - The view includes a confidence range, subject breakdown, weakest concepts, and plain-language explanation.
 - Low evidence produces visibly low confidence.
 - The score is computed from source data; any cache is invalidated by relevant updates.
@@ -550,7 +551,7 @@ As a learner, I want to see study consistency and mastery progress so I can reco
 ### Edge cases
 
 - Activity occurs around midnight or after a timezone change.
-- Answers are saved but the attempt expires or is abandoned before it is finalized.
+- Answers are saved but the attempt expires before the learner finalizes it.
 - An attempt is abandoned with no saved answers.
 - A learner completes several activities on one day.
 - Mastery falls after previously reaching a higher state.
@@ -559,13 +560,13 @@ As a learner, I want to see study consistency and mastery progress so I can reco
 ### Non-goals
 
 - Speed-based or public leaderboards.
-- Rewarding empty logins or unsubmitted answers.
+- Rewarding empty logins or answers in unfinalized attempts.
 - Hiding regressions in mastery.
 - Turning streak loss into a blocker for learning.
 
 ### Definition of done
 
-- A streak day requires at least one answer saved in a finalized `submitted` or `expired` attempt. An `abandoned` attempt never creates streak evidence.
+- A streak day requires at least one answer committed in a completed activity: a finalized `submitted` or `expired` attempt, or a completed untimed adaptive-practice or review session. An `abandoned` attempt never creates streak evidence.
 - Multiple qualifying activities on one local date count once.
 - Streak calculation uses a documented effective timezone.
 - Subject progress is derived from applicable concept mastery and indicates confidence or missing coverage.
@@ -940,7 +941,7 @@ These requirements apply to every feature above:
 - **Security:** authorize every backend operation, validate every public input, rate-limit abuse-prone workflows, and follow OWASP guidance.
 - **Privacy:** comply with the Philippine Data Privacy Act, minimize personal data, and support appropriate export and deletion requests.
 - **Auditability:** log every admin mutation with durable actor and entity identifiers.
-- **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted, expired, abandoned, and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context. Terminal attempts and their snapshots are retained for the life of the account; no time-based purge, learner delete, or admin hard delete applies. Account deletion is a separate de-identification workflow that must not rewrite historical results.
+- **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted, expired, abandoned, and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context. Terminal attempts and their snapshots are retained for the life of the account, including after account deletion in de-identified form under [ADR 0006](ADR/0006-application-profiles-and-authorization.md); no time-based purge, learner delete, or admin hard delete applies, and historical results are never rewritten.
 - **Content integrity:** never serve unpublished, archived, or policy-excluded questions.
 - **Questionnaire integrity:** keep questionnaire items and responses separate from scored content; allow only the `excluded` and `unscored` modes, and never let questionnaire responses influence scores, mastery, readiness, streaks, or recommendations.
 - **Level integrity:** never serve Clerical Ability to Professional exams or Analytical Ability to Subprofessional exams.

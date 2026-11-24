@@ -4,7 +4,7 @@
 - **Date:** 2026-11-20
 - **Decision owners:** Quilla maintainers
 - **Related issues:** [S07.1 / #53](https://github.com/devcedrick/quilla/issues/53), blocks [S07.2 / #54](https://github.com/devcedrick/quilla/issues/54), parent [#7](https://github.com/devcedrick/quilla/issues/7)
-- **Builds on:** [ADR 0003](0003-exam-level-selection-policy.md), [ADR 0010](0010-assessment-choice-order-and-scoring.md) and [ADR 0025](0025-versioned-blueprint-activation-and-attempt-snapshots.md)
+- **Builds on:** [ADR 0003](0003-exam-level-selection-policy.md), [ADR 0006](0006-application-profiles-and-authorization.md), [ADR 0010](0010-assessment-choice-order-and-scoring.md) and [ADR 0025](0025-versioned-blueprint-activation-and-attempt-snapshots.md)
 
 ## Context
 
@@ -35,12 +35,12 @@ inherit mock finalization rules.
 
 ### Lifecycle states
 
-| State         | Entered when                                                                                              | Resume or answer?                                | Result and evidence                                                                                                                              |
-| ------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `in_progress` | The learner starts an assessment and the server stores the immutable configuration and absolute deadline. | Yes, until the server deadline, from any device. | Saved answers only. No mastery, readiness, streak or diagnostic-completion evidence exists before finalization.                                  |
-| `submitted`   | The learner submits before the deadline with at least one saved answer.                                   | No. The result is immutable.                     | The attempt is scored. Unanswered mock items are incorrect; diagnostic mastery comes only from answered items.                                   |
-| `expired`     | The deadline passes with at least one saved answer, and the server finalizes the attempt.                 | No. The result is read-only.                     | The attempt is scored automatically under the same rules as `submitted`. A diagnostic with saved answers counts as submitted.                    |
-| `abandoned`   | The deadline passes, or an empty submission is attempted, with zero saved answers.                        | No. No review content exists.                    | No score, mastery, readiness, streak, diagnostic completion or guidance unlock. The record is retained, and the learner may start a new attempt. |
+| State         | Entered when                                                                                              | Resume or answer?                                | Result and evidence                                                                                                                                                 |
+| ------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `in_progress` | The learner starts an assessment and the server stores the immutable configuration and absolute deadline. | Yes, until the server deadline, from any device. | Saved answers only. No mastery, readiness, streak or diagnostic-completion evidence exists before finalization.                                                     |
+| `submitted`   | The learner submits before the deadline with at least one saved answer.                                   | No. The result is immutable.                     | The attempt is scored. Unanswered mock items are incorrect; diagnostic mastery comes only from answered items.                                                      |
+| `expired`     | The deadline passes with at least one saved answer, and the server finalizes the attempt.                 | No. The result is read-only.                     | The attempt is scored automatically under the same rules as `submitted`. A diagnostic with saved answers counts as submitted.                                       |
+| `abandoned`   | The deadline passes with zero saved answers.                                                              | No. No review content exists.                    | No score, mastery, readiness, streak, diagnostic completion or guidance unlock. The record is retained, and the learner may start a new attempt after the deadline. |
 
 The persisted status may lag behind server time. No operation may treat an
 over-deadline attempt as `in_progress`; reading, answering or submitting after the
@@ -68,8 +68,11 @@ source of truth.
 
 ### Submission, expiry and abandonment
 
-- A learner submission requires at least one saved answer. An empty submission is
-  not a valid completion and finalizes as `abandoned`.
+- A learner submission requires at least one saved answer. A submission with zero
+  saved answers is rejected without changing the attempt, which remains
+  `in_progress` until its deadline. An empty submission is therefore never a
+  pre-deadline cancel and cannot be used to draw a replacement attempt after
+  seeing served questions.
 - At the deadline, an attempt with saved answers finalizes as `expired`. Saved
   answers are scored; mock items without an answer count as incorrect. For the
   diagnostic, only answered items create mastery evidence, unanswered items remain
@@ -78,6 +81,8 @@ source of truth.
 - An attempt with zero saved answers at the deadline finalizes as `abandoned`. It
   creates no score, mastery, readiness, streak or diagnostic-completion evidence,
   does not unlock guidance or readiness, and does not block a new attempt.
+- An attempt cannot reach `abandoned` before its deadline. Abandonment is always a
+  deadline-driven terminal state.
 - Finalization is idempotent. A repeated submission, scheduled finalizer or race
   returns the same terminal result and cannot double-score or double-count
   evidence. The first terminal transition wins.
@@ -88,15 +93,18 @@ source of truth.
 
 - Terminal attempts, including `submitted`, `expired` and `abandoned`, and their
   immutable question and blueprint snapshots are retained for the life of the
-  account. The initial release has no time-based purge.
+  account and are not deleted by account deletion. The initial release has no
+  time-based purge.
 - Learners have no delete control for attempts. Admins cannot hard-delete attempts
   or rewrite their results. Historical questions, versions and snapshots remain
   protected by the existing no-hard-delete rules.
-- Account deletion or anonymization is a separate approved workflow. It may remove
-  or de-identify the learner's identity and personal data, but it must not rewrite
-  historical attempt results or delete shared question, reference or blueprint
-  versions. It also must not treat `abandoned` records as an implicit exception to
-  historical integrity.
+- Account deletion or anonymization is a separate approved workflow under
+  [ADR 0006](0006-application-profiles-and-authorization.md). It may remove or
+  de-identify the learner's identity and personal data, but retained attempt
+  records and shared question, reference and blueprint versions remain, and
+  historical results are never rewritten. `abandoned` records are not an implicit
+  exception to historical integrity. "Life of the account" therefore includes
+  de-identified retention after account deletion.
 - A future retention change, including any purge or archival policy, requires a new
   ADR. It must not silently delete records under this policy.
 
@@ -105,6 +113,11 @@ source of truth.
 - Initial blueprints, diagnostics and mocks use the `excluded` questionnaire mode.
   They contain no EDQ items, time allocation or responses. The immutable blueprint
   and attempt snapshots record the mode explicitly; an absent value is not a mode.
+- This extends
+  [ADR 0025](0025-versioned-blueprint-activation-and-attempt-snapshots.md)'s
+  blueprint configuration and snapshot contract: the questionnaire mode is a
+  required validated field with no implicit default, and validation rejects a
+  missing or `scored` value.
 - The only permitted future mode is `unscored`, and enabling it requires a new
   immutable blueprint version with an explicit configuration format. It cannot
   modify an existing blueprint or historical attempt.
@@ -123,14 +136,28 @@ source of truth.
 - EDQ content and responses are personal data. Their purpose, access, retention and
   deletion require a separate privacy review before collection begins.
 
+### Relationship to accepted ADRs
+
+- [ADR 0003](0003-exam-level-selection-policy.md) and
+  [ADR 0007](0007-preparation-preferences-and-onboarding.md) describe the
+  diagnostic gate as requiring a `submitted` attempt. For that gate, this ADR
+  supersedes the submitted-only wording: a diagnostic that expires with saved
+  answers counts as submitted. No other level, evidence-sharing or routing rule
+  changes.
+- This ADR resolves the "retention and resume window for abandoned attempts" item
+  that ADR 0003 leaves open. Abandonment is deadline-driven, and terminal attempts
+  are retained as described above.
+- Accepted ADRs keep their original decision text; their headers and inline
+  amendment notes point here rather than rewriting history.
+
 ### Downstream contract
 
 - **S07.2 / #54:** snapshot the questionnaire mode; keep EDQ items outside scored
   cells and totals; derive the deadline from the immutable configuration; create no
   attempt before start.
-- **S07.3 / #55:** enforce the server deadline, late-write rejection, idempotent
-  finalization, the four lifecycle states, zero-answer abandonment, unanswered
-  mock scoring and diagnostic-only answered-item mastery.
+- **S07.3 / #55:** enforce the server deadline, late-write rejection, empty-submission
+  rejection, idempotent finalization, the four lifecycle states, zero-answer
+  abandonment, unanswered mock scoring and diagnostic-only answered-item mastery.
 - **S07.4 / #56:** display server-derived time, block resume after expiry, show
   expired and abandoned states honestly, and never expose answer keys during an
   active attempt.
@@ -148,7 +175,7 @@ source of truth.
 | Learner returns after the deadline                        | No resume and no answer writes. Any access finalizes the attempt and shows the terminal result or abandoned state.                    |
 | Deadline passes with saved answers                        | Finalize as `expired`; score saved answers; unanswered mock items are incorrect; a diagnostic counts with answered-item mastery only. |
 | Deadline passes with zero saved answers                   | Finalize as `abandoned`; no score, evidence, unlock or review; allow a new attempt.                                                   |
-| Learner submits with no saved answers                     | Treat as `abandoned`, not as a completed assessment.                                                                                  |
+| Learner submits with no saved answers                     | Reject the submission; the attempt stays `in_progress` until the deadline and then finalizes as `abandoned`.                          |
 | Manual submission and scheduled finalization race         | Both return one terminal result; no double scoring or evidence.                                                                       |
 | Answer write races the deadline                           | Only a server-committed pre-deadline answer counts; no grace period.                                                                  |
 | Learner is suspended with an attempt in progress          | Access is blocked, but the deadline is unchanged and finalization still follows this policy.                                          |
@@ -168,8 +195,10 @@ The cost is that abandoned zero-answer attempts remain stored and that a learner
 who starts a mock cannot discard it before the deadline without an explicit policy
 change. That is acceptable for the initial release: the start confirmation is the
 guard against accidental starts, and a zero-answer attempt has no learning effect.
-If UX testing later shows a need for a pre-answer cancel action, it can be added
-without changing the deadline, retention or evidence rules.
+An empty submission is rejected rather than treated as a cancel, so the learner
+cannot restart after viewing the served questions. If UX testing later shows a need
+for a pre-answer cancel action, it can be added without changing the deadline,
+retention or evidence rules.
 
 The EDQ remains excluded until there is a concrete product need, content source,
 privacy decision and blueprint version. This avoids collecting demographic data
