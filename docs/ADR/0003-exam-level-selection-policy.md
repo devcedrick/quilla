@@ -68,6 +68,6 @@ Mastery sharing depends on canonical concept identity, not matching labels or br
 
 S02.4 must apply this policy to onboarding and feature gates; later attempt and learning work must preserve these contracts. This decision resolves the level-policy dependency only; it does not resolve S02.4's other prerequisites.
 
-The weighting of questions applicable to both levels, final mastery formula and minimum reliable sample size, adaptive review tuning, and retention and resume window for abandoned attempts remain open product decisions in FEATURES. **Amended by [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md):** that list is now shorter. The retention and resume window for abandoned attempts is no longer open; ADR 0029 resolves it and FEATURES no longer lists it. The other items remain open. This ADR defines no new expiry, reset, weighting, or retake requirement for them.
+At the time of this decision, the weighting of questions applicable to both levels, final mastery formula and minimum reliable sample size, adaptive review tuning, and retention and resume window for abandoned attempts remained open product decisions in FEATURES. **Amended by [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md):** ADR 0029 resolves the retention and resume window for abandoned attempts, and FEATURES no longer lists it; the other items remain open. This ADR defines no new expiry, reset, weighting, or retake requirement for them.
 
 Changes to this accepted policy require a new ADR rather than rewriting this decision.

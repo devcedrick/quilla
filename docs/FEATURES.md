@@ -86,7 +86,7 @@ Learners need a secure account so Quilla can preserve their exam level, progress
 - Initial setup is a guided three-step flow: choose a level, optionally set or skip a target date, then review and confirm. It has no preselected level, retains draft choices when going back, and saves only on final confirmation. Returning learners use a matching guided preference editor with saved choices, final level-change acknowledgement when needed, and Cancel without saving. Setup continues to a protected diagnostic introduction for the saved preference. The introduction states assessments are not available and offers no Start control. The dashboard and diagnostic introduction share a wider account overview with meaningful navigation, saved preferences, diagnostic next steps, and truthful locked-feature messaging without fabricated progress.
 - Target dates are `YYYY-MM-DD` civil dates, validated server-side against today in Asia/Manila (today allowed). Omitted updates preserve the date, explicit clearing removes it, and newly supplied dates reject past/impossible values. An unchanged saved date may remain after passing and does not undo onboarding.
 - Own-preference reads/writes require an active application profile. Level changes explain and acknowledge retained history/progress and the per-level diagnostic prerequisite. They change future defaults only, never identity, role, suspension, prior evidence, or active/historical attempt context.
-- Guidance/readiness gates currently fail closed for both levels because no authoritative submitted-attempt evidence exists yet. #57 must connect the evidence reader and access query to actual per-level submissions; no completion flag, test unlock endpoint, or synthetic assessment store is introduced. Positive unlocking, assessment delivery, and study-specific landing actions remain future work. [ADR 0007](ADR/0007-preparation-preferences-and-onboarding.md) records these boundaries.
+- Guidance/readiness gates currently fail closed for both levels because no authoritative finalized-diagnostic evidence exists yet. #57 must connect the evidence reader and access query to per-level diagnostics finalized with scored answers (`submitted`, or `expired` with scored answers); no completion flag, test unlock endpoint, or synthetic assessment store is introduced. Positive unlocking, assessment delivery, and study-specific landing actions remain future work. [ADR 0007](ADR/0007-preparation-preferences-and-onboarding.md) records these boundaries.
 
 ### User story
 
@@ -99,7 +99,7 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 - A suspended account attempts to start an exam or submit content.
 - A user's session expires during a saved activity.
 - An admin is also a learner and must retain one identity with role-aware access.
-- Personalized features are requested for a level whose diagnostic is incomplete, even though the other level has a submitted diagnostic.
+- Personalized features are requested for a level whose diagnostic is incomplete, even though the other level has a finalized diagnostic.
 - The learner changes preferred level while a diagnostic or mock exam is active.
 
 ### Non-goals
@@ -116,8 +116,8 @@ As a new learner, I want to create an account, choose my CSE level, and optional
 - Onboarding persists Professional or Subprofessional as the learner's changeable preferred level and an optional valid target exam date. Learners with no saved preference must complete level selection.
 - First-time users are directed to the diagnostic for their chosen level.
 - The preferred level supplies future attempt defaults and the default dashboard context. Each new attempt shows its selected level for explicit confirmation before starting; selecting another level for one attempt does not change the preference.
-- Learners can change their preference after onboarding. The change explains that history and mastery are retained and that the newly preferred level requires its own diagnostic finalized with saved answers to unlock guidance and readiness; the optional target date is preserved.
-- Personalized study guidance and readiness are unavailable for a level until that learner finalizes a diagnostic with saved answers for that level. Returning to a previously assessed level retains its diagnostic eligibility.
+- Learners can change their preference after onboarding. The change explains that history and mastery are retained and that the newly preferred level requires its own diagnostic finalized with scored answers to unlock guidance and readiness; the optional target date is preserved.
+- Personalized study guidance and readiness are unavailable for a level until that learner finalizes a diagnostic with scored answers for that level. Returning to a previously assessed level retains its diagnostic eligibility.
 - Changing preference never changes an active attempt's level, served questions, blueprint snapshot, saved answers, or deadline; resume and submission use the attempt's stored context.
 - [ADR 0003](ADR/0003-exam-level-selection-policy.md) defines the level-selection policy and transitions.
 - Backend authorization is enforced independently of client-side routing.
@@ -194,12 +194,12 @@ As a learner starting Quilla, I want an assessment across my exam coverage so I 
 - The diagnostic serves 30–50 published questions across every subject for the selected level.
 - Each subject receives at least three items, or the diagnostic is blocked with an actionable coverage warning.
 - The target difficulty mix is approximately 50% easy, 35% medium, and 15% hard.
-- Progress is autosaved and submission is idempotent.
+- Progress is autosaved and submission or deadline finalization is idempotent.
 - The diagnostic follows the shared timed-attempt lifecycle: it has a fixed server deadline, is resumable only before that deadline, and is never paused or extended. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the transitions.
-- An expired diagnostic with saved answers counts as submitted; only answered items create mastery evidence, and unanswered items remain untested. A zero-answer expiry is abandoned and does not satisfy the completion gate.
+- An expired diagnostic with at least one scored answer counts as submitted; only answered scored items create mastery evidence, and unanswered items remain untested. An expiry with no scored answers is abandoned and does not satisfy the completion gate.
 - Diagnostic completion is tracked per learner and level using the finalized-attempt rule above. Shared mastery or the other level's diagnostic does not satisfy this requirement.
-- Submission, or deadline-driven expiry with saved answers, unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
-- A diagnostic finalized as `submitted`, or as `expired` with saved answers, creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. An `abandoned` diagnostic creates no mastery, readiness, streak or guidance evidence. Retaking a diagnostic preserves prior evidence, and finalization retries cannot double-count it.
+- Submission, or deadline-driven expiry with scored answers, unlocks guidance and readiness for the attempt's stored level, even if the learner has changed their preference during the attempt.
+- A diagnostic finalized as `submitted`, or as `expired` with scored answers, creates or updates mastery evidence for tested concepts without erasing prior evidence, initializes or updates adaptive review priorities, and generates personalized study guidance for the assessed level. An `abandoned` diagnostic creates no mastery, readiness, streak or guidance evidence. Retaking a diagnostic preserves prior evidence, and finalization retries cannot double-count it.
 - Untested concepts are clearly marked, and content gaps are visible to admins.
 - Results present a mastery overview without pass/fail wording.
 
@@ -356,11 +356,11 @@ Activation requires integration of the seven initial 270-question seed families 
 
 - A mock starts with an immutable blueprint snapshot and a fixed server deadline. Disconnecting, closing the browser, losing connectivity, switching devices, suspension, or a level-preference change never pauses or extends the deadline.
 - A learner can resume before the deadline from any authorized device with the same served questions, choice order, saved answers and deadline. No attempt is persisted before the learner starts it.
-- A learner can have at most one `in_progress` attempt for the same assessment and stored level. Starting another is rejected until that attempt is finalized; the learner resumes it or waits for its deadline. This prevents drawing a replacement attempt after seeing served questions.
+- A learner can have at most one `in_progress` attempt for the same assessment and stored level. Starting another is rejected until that attempt is finalized; the learner resumes it or waits for its deadline. This prevents a second concurrent attempt after questions have been served. Once an attempt is finalized, a later start is a retake under the existing retake rules; an early submission is scored and retained and is not a way to discard the attempt.
 - At the deadline, the server idempotently finalizes the attempt. Only answers committed before the deadline count; an answer write racing the deadline cannot add time. A repeated submission, scheduled finalizer or race returns the same terminal result.
-- An attempt with saved answers becomes `expired`: saved answers are scored, unanswered items count as incorrect, and the result is read-only. A learner submission before the deadline becomes `submitted` under the same scoring rules.
-- A submission with no saved answers is rejected and leaves the attempt `in_progress`; an empty submission cannot cancel an attempt before its deadline.
-- An attempt with no saved answers at the deadline becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt after the deadline.
+- An attempt with at least one scored answer becomes `expired`: the saved answers are scored, unanswered scored items count as incorrect, and the result is read-only. A learner submission before the deadline becomes `submitted` under the same scoring rules.
+- A submission with no scored answers is rejected and leaves the attempt `in_progress`; an empty submission cannot cancel an attempt before its deadline.
+- An attempt with no scored answers at the deadline becomes `abandoned`: it has no score, mastery, readiness or streak evidence and does not count as a completed attempt. The learner may start a new attempt after the deadline.
 - Terminal attempts cannot accept answers, be resumed, be extended or return to `in_progress`. [ADR 0029](ADR/0029-attempt-lifecycle-and-questionnaire-policy.md) defines the full contract.
 
 ### Attempt retention and deletion
@@ -375,7 +375,8 @@ Activation requires integration of the seven initial 270-question seed families 
 - Initial blueprints, diagnostics and mocks use the `excluded` questionnaire mode: they contain no Examinee Descriptive Questionnaire (EDQ) items, time allocation or responses. The immutable blueprint and attempt snapshots record the mode explicitly, and an absent value is not a mode.
 - The only permitted future mode is `unscored`. Enabling it requires a new immutable blueprint version with an explicit configuration; it cannot modify an existing blueprint or historical attempt.
 - Questionnaire items are optional and skippable. They are not question-bank questions, have no correct answer, concept, difficulty, subject allocation or eligibility rule, and are stored as a separate response type rather than mixed with scored answers.
-- Questionnaire responses never affect the score, passing reference, pass/fail result, mastery, readiness, streaks, question analytics or adaptive recommendations. Unanswered questionnaire items are not incorrect answers.
+- Questionnaire responses never affect the score, passing reference, pass/fail result, diagnostic completion, guidance unlock, mastery, readiness, streaks, question analytics or adaptive recommendations. Unanswered questionnaire items are not incorrect answers.
+- For the attempt lifecycle and evidence rules in this document, "saved answer" and "unanswered item" mean a saved answer and an item in the scored section only. Questionnaire responses never count toward submission eligibility, the expiry-versus-abandonment decision, diagnostic completion, scoring or completion evidence, so an attempt with only questionnaire responses is treated as having no scored answers.
 - A `scored` questionnaire mode is invalid. Blueprint validation and scoring must reject or fail closed on any attempt to treat questionnaire content as scored.
 - A future questionnaire-enabled blueprint defines its own timing explicitly and must not reduce scored-section time by reusing a limit that assumed the questionnaire was absent.
 - Questionnaire content and responses are personal data. Their purpose, access, retention and deletion require a separate privacy review before collection begins.
@@ -385,7 +386,7 @@ Activation requires integration of the seven initial 270-question seed families 
 - A subject-by-difficulty blueprint cell has insufficient eligible questions.
 - Connectivity is lost, the tab closes, or the browser crashes during the exam.
 - The learner returns before, at, or after the deadline.
-- The deadline passes with no saved answers, or the learner attempts to submit with none.
+- The deadline passes with no scored answers, or the learner attempts to submit with none.
 - The timer expires while an answer write is in flight.
 - The same submission reaches the server more than once.
 - A question is edited or archived while the attempt is active.
@@ -412,8 +413,8 @@ Activation requires integration of the seven initial 270-question seed families 
 - The server is authoritative for timing and idempotently finalizes expired attempts. Only answers committed before the deadline are scored.
 - Each attempt starts with a fixed server deadline and is resumable only while that deadline has not passed; interruption, suspension or a preference change never pauses or extends it.
 - Progress is autosaved and survives browser interruption on any authorized device without extending the deadline.
-- An attempt with saved answers becomes `expired` and is scored; unanswered scored items count as incorrect and the result is read-only.
-- An attempt with no saved answers at the deadline becomes `abandoned` with no result or evidence and does not count as a completed mock; an empty submission is rejected and does not end the attempt early.
+- An attempt with at least one scored answer becomes `expired` and is scored; unanswered scored items count as incorrect and the result is read-only.
+- An attempt with no scored answers at the deadline becomes `abandoned` with no result or evidence and does not count as a completed mock; an empty submission is rejected and does not end the attempt early.
 - Each mock records its questionnaire mode in the immutable snapshot; initial mocks record `excluded`.
 - Questionnaire content never contributes to a score, passing reference, pass/fail result, mastery, readiness, streak or analytics calculation, and a `scored` mode is rejected.
 - Difficulty may be relaxed only within the same subject using the active blueprint's ordered fallback; level, subject, language, and concept requirements remain fixed, and unresolved coverage gaps block start with an actionable message.
@@ -435,8 +436,8 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - A source citation or distractor rationale is unavailable.
 - The learner did not answer a question.
 - A flagged-for-later action is repeated.
-- The learner returns to a submitted attempt long after completing it.
-- The learner opens an attempt that expired with saved answers or was abandoned with none.
+- The learner returns to a finalized attempt long after completing it.
+- The learner opens an attempt that expired with scored answers or was abandoned with none.
 - The learner asks to delete a historical attempt.
 - The learner tries to open another user's attempt.
 
@@ -445,7 +446,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - Revealing answers before an attempt is finalized.
 - Treating review as a one-time results screen that is available only immediately after finalization.
 - Reconstructing review content from the latest question version.
-- Allowing review actions to change the submitted score.
+- Allowing review actions to change the finalized score.
 - Making distractor rationales mandatory when they were not available in the served version.
 
 ### Definition of done
@@ -456,7 +457,7 @@ As a learner who completed an exam, I want to review the exact questions I saw, 
 - Learners and admins cannot delete an attempt or rewrite its result. Account deletion is not a way to remove an attempt: it follows a separate de-identification workflow that [ADR 0006](ADR/0006-application-profiles-and-authorization.md) requires to be designed and approved, and that workflow does not exist yet.
 - History identifies each attempt's original level and preserves its served snapshots across preference changes; the current preference does not hide attempts from the other level.
 - Review is accessible only to the attempt owner or an authorized admin, including on later visits.
-- Review access does not depend on entering from the immediate submission result and does not expire after the first opening.
+- Review access does not depend on entering from the immediate finalization result and does not expire after the first opening.
 - Leaving and reopening a review preserves the same finalized result and does not consume or invalidate review access.
 - Viewing a historical review does not update mastery or adaptive recommendation state; only answers committed in a separate eligible activity can do so.
 - Every item uses the exact served question-version snapshot.
@@ -494,7 +495,7 @@ As a learner, I want short, explainable guidance whenever I am ready to study so
 
 ### Definition of done
 
-- Guidance is available for a requested level only after the learner submits that level's diagnostic, where a diagnostic that expired with saved answers counts as submitted, and is regenerated on demand or after relevant learning activity. The dashboard defaults to the preferred level and clearly identifies the level being viewed.
+- Guidance is available for a requested level only after the learner submits that level's diagnostic, where a diagnostic that expired with scored answers counts as submitted, and is regenerated on demand or after relevant learning activity. The dashboard defaults to the preferred level and clearly identifies the level being viewed.
 - Guidance uses the requested level's coverage and blueprint and applicable shared concept evidence. Changing preference selects a different level context without deleting prior evidence or bypassing that level's diagnostic gate.
 - Guidance considers adaptive review priorities, low mastery, blueprint weight, the learner's available time, and an optional target exam date.
 - Guidance without a target date remains balanced and does not impose an artificial calendar.
@@ -515,12 +516,12 @@ As a learner, I want an explainable readiness score with a confidence range and 
 ### Edge cases
 
 - The diagnostic is incomplete.
-- The diagnostic expired with saved answers, or was abandoned with none.
+- The diagnostic expired with scored answers, or was abandoned with none.
 - There are too few attempts for a confident estimate.
 - Recent mock performance conflicts with longer-term mastery.
 - One heavily weighted subject is much weaker than the others.
 - A level or blueprint changes after prior study.
-- Cached readiness data becomes stale after a submission.
+- Cached readiness data becomes stale after a finalization.
 
 ### Non-goals
 
@@ -531,7 +532,7 @@ As a learner, I want an explainable readiness score with a confidence range and 
 
 ### Definition of done
 
-- Readiness is unavailable for a requested level until the learner finalizes that level's diagnostic with saved answers, even when shared mastery or another level's diagnostic exists. A diagnostic that expired with saved answers counts as submitted; an abandoned one does not.
+- Readiness is unavailable for a requested level until the learner finalizes that level's diagnostic with scored answers, even when shared mastery or another level's diagnostic exists. A diagnostic that expired with scored answers counts as submitted; an abandoned one does not.
 - The score uses the requested level's coverage and blueprint and combines applicable concept mastery (including genuinely shared evidence), recent mock performance from that same level, and demonstrated recall in eligible learner-initiated review sessions; adherence to recommended dates or frequency is not scored.
 - Only finalized attempts contribute attempt evidence: `submitted` and `expired` attempts contribute their scored answers, while `abandoned` attempts contribute nothing. Completed adaptive-practice and review-session answers remain governed by their own evidence rules.
 - The view includes a confidence range, subject breakdown, weakest concepts, and plain-language explanation.
@@ -553,7 +554,7 @@ As a learner, I want to see study consistency and mastery progress so I can reco
 
 - Activity occurs around midnight or after a timezone change.
 - Answers are saved but the attempt expires before the learner finalizes it.
-- An attempt is abandoned with no saved answers.
+- An attempt is abandoned with no scored answers.
 - A learner completes several activities on one day.
 - Mastery falls after previously reaching a higher state.
 - A learner has no activity or insufficient mastery data.
@@ -944,7 +945,7 @@ These requirements apply to every feature above:
 - **Auditability:** log every admin mutation with durable actor and entity identifiers.
 - **Historical integrity:** preserve the immutable level and question and blueprint versions used by submitted, expired, abandoned, and in-progress attempts. Preference changes do not alter their saved answers, deadlines, or resume and submission context. Terminal attempts and their snapshots are retained for the life of the account, including after account deletion in de-identified form under [ADR 0006](ADR/0006-application-profiles-and-authorization.md); no time-based purge, learner delete, or admin hard delete applies, and historical results are never rewritten.
 - **Content integrity:** never serve unpublished, archived, or policy-excluded questions.
-- **Questionnaire integrity:** keep questionnaire items and responses separate from scored content; allow only the `excluded` and `unscored` modes, and never let questionnaire responses influence scores, mastery, readiness, streaks, or recommendations.
+- **Questionnaire integrity:** keep questionnaire items and responses separate from scored content; allow only the `excluded` and `unscored` modes, and never let questionnaire responses influence the attempt lifecycle, diagnostic completion, scores, mastery, readiness, streaks, or recommendations.
 - **Level integrity:** never serve Clerical Ability to Professional exams or Analytical Ability to Subprofessional exams.
 - **Level context:** the profile preference supplies defaults; each attempt owns its immutable level; diagnostic completion belongs to a learner and level; mastery evidence belongs to a learner and canonical concept, with provenance retained. Apply [ADR 0003](ADR/0003-exam-level-selection-policy.md) consistently across learning features.
 - **Language:** use English for the initial interface while allowing English and Filipino question content.
