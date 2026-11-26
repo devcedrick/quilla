@@ -356,7 +356,7 @@ export function PreparationForm({
               <p className="text-sm leading-relaxed">
                 Changing your preferred level affects future defaults only. Your
                 progress and history are kept. Guidance and readiness for each
-                level require that level’s submitted diagnostic.
+                level require that level’s completed diagnostic.
               </p>
               <label className="flex min-h-11 gap-3 items-start">
                 <input

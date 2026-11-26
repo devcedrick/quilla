@@ -111,7 +111,7 @@ function LearningLock({
     >
       {!access
         ? "Checking learning access…"
-        : "Personalized guidance and readiness are locked until you submit a diagnostic for this level."}
+        : "Personalized guidance and readiness are locked until you complete a diagnostic for this level."}
     </p>
   );
 }
