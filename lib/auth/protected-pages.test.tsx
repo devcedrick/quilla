@@ -59,10 +59,12 @@ describe("protected resource server rendering", () => {
       await PreparationResource({ kind: "dashboard" }),
     );
   }
-  async function admin() {
-    const render = AdminPage().props.children
-      .type as () => Promise<ReactElement>;
-    return render();
+  async function admin(path?: string[]) {
+    const params = Promise.resolve({ path });
+    const render = AdminPage({ params }).props.children.type as (props: {
+      params: Promise<{ path?: string[] }>;
+    }) => Promise<ReactElement>;
+    return render({ params });
   }
   it.each(["missing_profile", "suspended"])(
     "excludes dashboard payload for %s profiles",
@@ -111,15 +113,28 @@ describe("protected resource server rendering", () => {
     mocks.access.mockRejectedValue(new Error("Unavailable"));
     await expect(dashboard()).rejects.toThrow("Unavailable");
   });
-  it.each(["user", "admin"])(
-    "keeps admin functionality unavailable to %s",
-    async (role) => {
-      mocks.access.mockResolvedValue({
-        clerkUserId: "clerk-a",
-        access: { status: "active", userId: "profile-a", role },
-      });
-      await expect(admin()).rejects.toThrow("NEXT_NOT_FOUND");
-      expect(mocks.access).toHaveBeenCalledWith("/admin");
-    },
-  );
+  it("denies admin functionality to non-admin users", async () => {
+    mocks.access.mockResolvedValue({
+      clerkUserId: "clerk-a",
+      access: { status: "active", userId: "profile-a", role: "user" },
+    });
+    await expect(admin()).rejects.toThrow("NEXT_NOT_FOUND");
+    expect(mocks.access).toHaveBeenCalledWith("/admin");
+  });
+  it("redirects active admins from the admin landing page to the question bank", async () => {
+    mocks.access.mockResolvedValue({
+      clerkUserId: "clerk-a",
+      access: { status: "active", userId: "profile-a", role: "admin" },
+    });
+    await expect(admin()).rejects.toThrow("NEXT_REDIRECT:/admin/questions");
+    expect(mocks.access).toHaveBeenCalledWith("/admin");
+  });
+  it("returns not found for unknown admin paths", async () => {
+    mocks.access.mockResolvedValue({
+      clerkUserId: "clerk-a",
+      access: { status: "active", userId: "profile-a", role: "admin" },
+    });
+    await expect(admin(["unknown"])).rejects.toThrow("NEXT_NOT_FOUND");
+    expect(mocks.access).toHaveBeenCalledWith("/admin/unknown");
+  });
 });

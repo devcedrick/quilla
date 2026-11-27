@@ -6,17 +6,20 @@ import * as questions from "./questions";
 import * as questionReferences from "./questionReferences";
 import * as questionAssets from "./questionAssets";
 import * as questionAssetActions from "./questionAssetActions";
+import * as adminQuestionBankBackfill from "./adminQuestionBankBackfill";
 import schema from "./schema";
 import { initialV2Catalog } from "./lib/taxonomyCatalog";
 import type { QuestionContent } from "./lib/questionContent";
 import { importQuestionDraft } from "./lib/questionImports";
 import { createReferenceDraft } from "./lib/questionReferenceDrafts";
+import { buildQuestionSearchProjection } from "./lib/questionSearchProjection";
 import { loadPublishedQuestion } from "./lib/questionServing";
-const { api, createTest } = defineTestApp({ schema }).defineModules({
+const { api, internal, createTest } = defineTestApp({ schema }).defineModules({
   questions,
   questionReferences,
   questionAssets,
   questionAssetActions,
+  adminQuestionBankBackfill,
 });
 const content: QuestionContent = {
   family: 1,
@@ -41,6 +44,10 @@ const content: QuestionContent = {
     sources: [],
   },
 };
+// digest([]) with the production canonical serializer: the fingerprint of an
+// empty duplicate candidate set.
+const emptyCandidateFingerprint =
+  "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945";
 const review = {
   decision: "approve" as const,
   reason: "",
@@ -50,6 +57,7 @@ const review = {
   })),
   duplicateDisposition: "none_found" as const,
   duplicateEvidence: "No matching canonical question",
+  candidateSetFingerprint: emptyCandidateFingerprint,
 };
 /** Create isolated actors, a sealed taxonomy and an attributed draft question. */
 async function setup() {
@@ -135,6 +143,11 @@ describe("question lifecycle", () => {
             createdAt: 0,
             state: "draft",
             workflowRevision: 1,
+            ...buildQuestionSearchProjection(
+              content,
+              `overflow-${i}`,
+              original.contributorId ?? original.creatorId,
+            ),
           });
         }
       });
@@ -549,6 +562,26 @@ describe("question lifecycle", () => {
     ]);
     expect(result.filter((r) => r.status === "fulfilled")).toHaveLength(1);
   });
+  it("rejects approval bound to a stale candidate fingerprint", async () => {
+    const { author, reviewer, versionId } = await setup();
+    await author.mutation(api.questions.submitForReview, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 1,
+    });
+    await expect(
+      reviewer.mutation(api.questions.reviewVersion, {
+        questionVersionId: versionId,
+        expectedWorkflowRevision: 2,
+        ...review,
+        candidateSetFingerprint: "0".repeat(64),
+      }),
+    ).rejects.toMatchObject({ data: { code: "STALE_REVISION" } });
+    await reviewer.mutation(api.questions.reviewVersion, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 2,
+      ...review,
+    });
+  });
   it("creates immutable corrections and excludes the material editor from review", async () => {
     const { t, author, reviewer, editor, versionId, taxonomy } = await setup();
     const original = await t.run((ctx) =>
@@ -618,6 +651,47 @@ describe("question lifecycle", () => {
       expectedWorkflowRevision: 4,
     });
   });
+  it("includes the designated approval when the review window overflows", async () => {
+    const { t, author, reviewer, versionId } = await setup();
+    await author.mutation(api.questions.submitForReview, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 1,
+    });
+    await reviewer.mutation(api.questions.reviewVersion, {
+      questionVersionId: versionId,
+      expectedWorkflowRevision: 2,
+      ...review,
+    });
+    const version = (await t.run((ctx) =>
+      ctx.db.get("questionVersions", versionId),
+    ))!;
+    if (!version.approvalDecisionId) throw new Error("Missing approval");
+    await t.run(async (ctx) => {
+      for (let index = 0; index < 51; index++)
+        await ctx.db.insert("questionReviews", {
+          questionVersionId: versionId,
+          reviewerId: version.creatorId,
+          kind: "duplicate_recheck",
+          decision: "duplicate_recheck",
+          expectedRevision: 3,
+          resultingRevision: 4,
+          reason: `Independent recheck ${index}`,
+          rubric: "editorial-quality-v1",
+          duplicateDisposition: "none_found",
+          duplicateEvidence: `Recheck evidence ${index}`,
+          candidateFingerprint: emptyCandidateFingerprint,
+          decidedAt: 10 + index,
+        });
+    });
+    const context = (await reviewer.query(api.questions.getAdminVersion, {
+      questionVersionId: versionId,
+    }))!;
+    expect(context.reviewOverflow).toBe(true);
+    expect(context.reviews).toHaveLength(51);
+    expect(
+      context.reviews.some((item) => item._id === version.approvalDecisionId),
+    ).toBe(true);
+  });
   it("blocks unauthenticated, nonadmin and suspended reads/writes", async () => {
     const { t, client, versionId, taxonomy } = await setup();
     const version = await t.run((ctx) =>
@@ -682,6 +756,21 @@ describe("question lifecycle", () => {
         () =>
           caller.query(api.questions.listAdminVersions, {
             paginationOpts: { numItems: 1, cursor: null },
+          }),
+        () =>
+          caller.query(api.questions.listAdminQuestionVersions, {
+            questionId: version.questionId,
+          }),
+        () => caller.query(api.questions.listAdminAuthoringOptions, {}),
+        () =>
+          caller.query(api.questionReferences.listAdminOptions, {
+            family: 1,
+            module: "shared-core",
+            language: "english",
+          }),
+        () =>
+          caller.query(api.questionReferences.getAdminPreview, {
+            referenceVersionId: "not-an-id",
           }),
         () =>
           caller.mutation(api.questionReferences.createReferenceVersion, {
@@ -832,5 +921,542 @@ describe("question lifecycle", () => {
         bytes,
       }),
     ).rejects.toThrow();
+  });
+});
+describe("admin question bank queries", () => {
+  async function bankFixture() {
+    const base = await setup();
+    const q2 = await base.author.mutation(api.questions.createDraft, {
+      questionId: "q2-verbal",
+      content: {
+        ...content,
+        family: 2,
+        subjectId: "verbal_ability",
+        subtopicId: "vocabulary",
+        conceptId: "vocabulary_questions",
+        difficulty: "hard",
+        stem: "Which word means plentiful?",
+        choices: [
+          { choiceId: "a", text: "Ample" },
+          { choiceId: "b", text: "Narrow" },
+        ],
+        explanation: "Ample means plentiful in this context.",
+        provenance: {
+          kind: "licensed",
+          author: "fixture two",
+          assistance: "test only",
+          sources: ["Fixture licence"],
+        },
+      },
+      taxonomyVersionId: base.taxonomy,
+    });
+    const q3 = await base.reviewer.mutation(api.questions.createDraft, {
+      questionId: "q3-reviewer",
+      content: {
+        ...content,
+        family: 3,
+        stem: "What is 4 + 4?",
+        choices: [
+          { choiceId: "a", text: "8" },
+          { choiceId: "b", text: "9" },
+        ],
+        explanation: "Four plus four is eight.",
+      },
+      taxonomyVersionId: base.taxonomy,
+    });
+    const users = await base.t.run(async (ctx) => ({
+      author: (await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|author"),
+        )
+        .unique())!,
+      reviewer: (await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) =>
+          q.eq("tokenIdentifier", "https://test|reviewer"),
+        )
+        .unique())!,
+    }));
+    return { ...base, q2, q3, users };
+  }
+  it("combines every required filter and rejects invalid values", async () => {
+    const { reviewer, users } = await bankFixture();
+    const page = await reviewer.query(api.questions.listAdminVersions, {
+      state: "draft",
+      family: 1,
+      module: "shared-core",
+      subjectId: "numerical_ability",
+      subtopicId: "numerical_reasoning",
+      conceptId: "numerical_reasoning",
+      difficulty: "easy",
+      language: "english",
+      level: "subprofessional",
+      origin: "synthetic",
+      contributorId: users.author._id,
+      questionId: "q1",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(page.page.map((version) => version.canonicalQuestionId)).toEqual([
+      "q1",
+    ]);
+    expect(page.isDone).toBe(true);
+    const byContributor = await reviewer.query(
+      api.questions.listAdminVersions,
+      {
+        contributorId: users.reviewer._id,
+        paginationOpts: { numItems: 10, cursor: null },
+      },
+    );
+    expect(
+      byContributor.page.map((version) => version.canonicalQuestionId),
+    ).toEqual(["q3-reviewer"]);
+    const byCanonicalId = await reviewer.query(
+      api.questions.listAdminVersions,
+      {
+        questionId: "q2-verbal",
+        paginationOpts: { numItems: 10, cursor: null },
+      },
+    );
+    expect(
+      byCanonicalId.page.map((version) => version.canonicalQuestionId),
+    ).toEqual(["q2-verbal"]);
+    const noMatch = await reviewer.query(api.questions.listAdminVersions, {
+      state: "published",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(noMatch.page).toHaveLength(0);
+    for (const invalid of [
+      { family: 0 },
+      { subjectId: "Not A Key" },
+      { questionId: "x".repeat(101) },
+      { contributorId: "not-an-id" },
+    ])
+      await expect(
+        reviewer.query(api.questions.listAdminVersions, {
+          ...invalid,
+          paginationOpts: { numItems: 10, cursor: null },
+        }),
+      ).rejects.toMatchObject({ data: { code: "VALIDATION_FAILED" } });
+    await expect(
+      reviewer.query(api.questions.listAdminVersions, {
+        paginationOpts: { numItems: 0, cursor: null },
+      }),
+    ).rejects.toMatchObject({ data: { code: "INVALID_PAGE_SIZE" } });
+  });
+  it("honors stricter caller pagination read limits", async () => {
+    const { reviewer } = await bankFixture();
+    const rowsLimited = await reviewer.query(api.questions.listAdminVersions, {
+      paginationOpts: { numItems: 10, cursor: null, maximumRowsRead: 1 },
+    });
+    expect(rowsLimited.page).toHaveLength(1);
+    expect(rowsLimited.isDone).toBe(false);
+    const bytesLimited = await reviewer.query(api.questions.listAdminVersions, {
+      paginationOpts: { numItems: 10, cursor: null, maximumBytesRead: 1 },
+    });
+    expect(bytesLimited.page).toHaveLength(1);
+    expect(bytesLimited.isDone).toBe(false);
+    const full = await reviewer.query(api.questions.listAdminVersions, {
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(full.page).toHaveLength(3);
+    expect(full.isDone).toBe(true);
+  });
+  it("searches the admin projection while applying index filters", async () => {
+    const { author, reviewer } = await bankFixture();
+    const found = await reviewer.query(api.questions.listAdminVersions, {
+      search: "plentiful",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(found.page.map((version) => version.canonicalQuestionId)).toEqual([
+      "q2-verbal",
+    ]);
+    const excluded = await author.query(api.questions.listAdminVersions, {
+      search: "plentiful",
+      origin: "synthetic",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(excluded.page).toHaveLength(0);
+    const stem = await reviewer.query(api.questions.listAdminVersions, {
+      search: "eight",
+      difficulty: "easy",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(stem.page.map((version) => version.canonicalQuestionId)).toEqual([
+      "q3-reviewer",
+    ]);
+  });
+  it("still enforces filters beyond the search index's eight slots", async () => {
+    const { reviewer, users } = await bankFixture();
+    const base = {
+      search: "plentiful",
+      questionId: "q2-verbal",
+      contributorId: users.author._id,
+      state: "draft" as const,
+      conceptId: "vocabulary_questions",
+      subtopicId: "vocabulary",
+      subjectId: "verbal_ability",
+      module: "shared-core" as const,
+      family: 2,
+      paginationOpts: { numItems: 10, cursor: null },
+    };
+    const matching = await reviewer.query(api.questions.listAdminVersions, {
+      ...base,
+      difficulty: "hard",
+      language: "english",
+      origin: "licensed",
+      level: "professional",
+    });
+    expect(matching.page.map((version) => version.canonicalQuestionId)).toEqual(
+      ["q2-verbal"],
+    );
+    // Difficulty dropped out of the eight search-index equality slots, so only
+    // the post-retrieval predicate can reject this row.
+    const rejected = await reviewer.query(api.questions.listAdminVersions, {
+      ...base,
+      difficulty: "easy",
+      language: "english",
+      origin: "licensed",
+      level: "professional",
+    });
+    expect(rejected.page).toHaveLength(0);
+  });
+  it("filters by origin alone through its index", async () => {
+    const { reviewer } = await bankFixture();
+    const licensed = await reviewer.query(api.questions.listAdminVersions, {
+      origin: "licensed",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(licensed.page.map((version) => version.canonicalQuestionId)).toEqual(
+      ["q2-verbal"],
+    );
+    const original = await reviewer.query(api.questions.listAdminVersions, {
+      origin: "original",
+      paginationOpts: { numItems: 10, cursor: null },
+    });
+    expect(original.page).toHaveLength(0);
+  });
+  it("lists the newest sealed catalogs first and excludes drafts", async () => {
+    const { t, reviewer } = await setup();
+    const createdBy = (await t.run((ctx) => ctx.db.query("users").first()))!
+      ._id;
+    await t.run(async (ctx) => {
+      for (let index = 0; index < 25; index++)
+        await ctx.db.insert("taxonomyVersions", {
+          taxonomyId: `sealed-catalog-${index}`,
+          state: "sealed",
+          revision: 1,
+          createdBy,
+          createdAt: index + 1,
+          updatedAt: index + 1,
+        });
+      await ctx.db.insert("taxonomyVersions", {
+        taxonomyId: "newest-draft-catalog",
+        state: "draft",
+        revision: 1,
+        createdBy,
+        createdAt: 1_000,
+        updatedAt: 1_000,
+      });
+    });
+    const options = await reviewer.query(
+      api.questions.listAdminAuthoringOptions,
+      {},
+    );
+    expect(options.catalogs).toHaveLength(20);
+    expect(options.catalogs[0].taxonomyId).toBe("sealed-catalog-24");
+    expect(options.catalogs.at(-1)?.taxonomyId).toBe("sealed-catalog-5");
+    expect(
+      options.catalogs.every((catalog) => catalog.state === "sealed"),
+    ).toBe(true);
+    expect(options.selected?._id).toBe(options.catalogs[0]._id);
+  });
+  it("reports reference overflow after reading 101 scoped rows", async () => {
+    const { t, reviewer } = await setup();
+    const creatorId = (await t.run((ctx) => ctx.db.query("users").first()))!
+      ._id;
+    await t.run(async (ctx) => {
+      for (let index = 0; index < 101; index++)
+        await ctx.db.insert("questionReferenceVersions", {
+          referenceId: `passage-${index}`,
+          version: 1,
+          content: {
+            family: 1,
+            module: "shared-core",
+            language: "english",
+            title: `Passage ${index}`,
+            provenance: content.provenance,
+            blocks: [{ type: "text", text: `Passage body ${index}` }],
+          },
+          contentHash: "0".repeat(64),
+          creatorId,
+          createdAt: index,
+          family: 1,
+          module: "shared-core",
+          language: "english",
+        });
+    });
+    const options = await reviewer.query(
+      api.questionReferences.listAdminOptions,
+      { family: 1, module: "shared-core", language: "english" },
+    );
+    expect(options.overflow).toBe(true);
+    expect(options.options).toHaveLength(100);
+    expect(options.options[0].title).toBe("Passage 100");
+    expect(options.options.at(-1)?.title).toBe("Passage 1");
+  });
+  it("returns immutable version history and authoring options", async () => {
+    const { t, author, reviewer, taxonomy, versionId } = await setup();
+    const version = (await t.run((ctx) =>
+      ctx.db.get("questionVersions", versionId),
+    ))!;
+    const question = (await t.run((ctx) =>
+      ctx.db.get("questions", version.questionId),
+    ))!;
+    const revisionId = await author.mutation(api.questions.createRevision, {
+      questionId: question._id,
+      expectedCanonicalRevision: question.revision,
+      content: {
+        ...content,
+        stem: "What is 3 + 3?",
+        choices: [
+          { choiceId: "a", text: "6" },
+          { choiceId: "b", text: "7" },
+        ],
+        explanation: "Three plus three is six.",
+      },
+      taxonomyVersionId: taxonomy,
+    });
+    const history = await reviewer.query(
+      api.questions.listAdminQuestionVersions,
+      { questionId: question._id },
+    );
+    expect(history!.versions.map((item) => item._id)).toEqual([
+      revisionId,
+      version._id,
+    ]);
+    expect(history!.versions.map((item) => item.version)).toEqual([2, 1]);
+    expect(history!.versions[0].contributorId).toBe(question.contributorId);
+    expect(history!.overflow).toBe(false);
+    const context = await reviewer.query(api.questions.getAdminVersion, {
+      questionVersionId: revisionId,
+    });
+    expect(context!.taxonomy?._id).toBe(taxonomy);
+    expect(
+      await reviewer.query(api.questions.getAdminVersion, {
+        questionVersionId: "not-a-version",
+      }),
+    ).toBeNull();
+    const options = await reviewer.query(
+      api.questions.listAdminAuthoringOptions,
+      {},
+    );
+    expect(options.selected?._id).toBe(taxonomy);
+    expect(options.catalogs.map((catalog) => catalog._id)).toEqual([taxonomy]);
+    expect(options.entries.length).toBeGreaterThan(0);
+    const draftTaxonomy = await t.run(async (ctx) =>
+      ctx.db.insert("taxonomyVersions", {
+        taxonomyId: "cse-taxonomy-draft",
+        state: "draft",
+        revision: 1,
+        createdBy: question.contributorId,
+        createdAt: 0,
+        updatedAt: 0,
+      }),
+    );
+    await expect(
+      reviewer.query(api.questions.listAdminAuthoringOptions, {
+        taxonomyVersionId: draftTaxonomy,
+      }),
+    ).rejects.toMatchObject({ data: { code: "TAXONOMY_UNAVAILABLE" } });
+  });
+  it("deduplicates scoped reference options and verifies preview integrity", async () => {
+    const { t, author, reviewer } = await setup();
+    const reference = {
+      family: 1,
+      module: "shared-core" as const,
+      language: "english" as const,
+      title: "Passage v1",
+      provenance: content.provenance,
+      blocks: [{ type: "text" as const, text: "First passage" }],
+    };
+    await author.mutation(api.questionReferences.createReferenceVersion, {
+      referenceId: "passage",
+      expectedLatestVersion: 0,
+      content: reference,
+    });
+    const latest = await author.mutation(
+      api.questionReferences.createReferenceVersion,
+      {
+        referenceId: "passage",
+        expectedLatestVersion: 1,
+        content: { ...reference, title: "Passage v2" },
+      },
+    );
+    await author.mutation(api.questionReferences.createReferenceVersion, {
+      referenceId: "other-module",
+      expectedLatestVersion: 0,
+      content: {
+        ...reference,
+        module: "professional-numerical",
+        title: "Numerical reference",
+      },
+    });
+    await author.mutation(api.questionReferences.createReferenceVersion, {
+      referenceId: "other-family",
+      expectedLatestVersion: 0,
+      content: { ...reference, family: 2, title: "Other family" },
+    });
+    const options = await reviewer.query(
+      api.questionReferences.listAdminOptions,
+      { family: 1, module: "shared-core", language: "english" },
+    );
+    expect(options.overflow).toBe(false);
+    expect(options.options).toHaveLength(1);
+    expect(options.options[0]).toMatchObject({
+      referenceVersionId: latest,
+      referenceId: "passage",
+      version: 2,
+      title: "Passage v2",
+    });
+    const preview = await reviewer.query(
+      api.questionReferences.getAdminPreview,
+      { referenceVersionId: latest },
+    );
+    expect(preview!.reference.content.title).toBe("Passage v2");
+    expect(preview!.assets).toEqual([]);
+    expect(
+      await reviewer.query(api.questionReferences.getAdminPreview, {
+        referenceVersionId: "not-a-reference",
+      }),
+    ).toBeNull();
+    await t.run((ctx) =>
+      ctx.db.patch("questionReferenceVersions", latest, {
+        contentHash: "0".repeat(64),
+      }),
+    );
+    await expect(
+      reviewer.query(api.questionReferences.getAdminPreview, {
+        referenceVersionId: latest,
+      }),
+    ).rejects.toMatchObject({ data: { code: "CONTENT_CONFLICT" } });
+  });
+});
+
+describe("admin question bank projection backfill", () => {
+  it("backfills legacy versions and reference scopes in idempotent batches", async () => {
+    const t = createTest();
+    const ids = await t.run(async (ctx) => {
+      const user = await ctx.db.insert("users", {
+        tokenIdentifier: "https://test|backfill",
+        role: "admin",
+        status: "active",
+      });
+      const taxonomy = await ctx.db.insert("taxonomyVersions", {
+        taxonomyId: "cse-taxonomy-2027-v2",
+        state: "sealed",
+        revision: 1,
+        createdBy: user,
+        createdAt: 0,
+        updatedAt: 0,
+      });
+      const versions = [];
+      for (const questionId of ["legacy-a", "legacy-b"]) {
+        const question = await ctx.db.insert("questions", {
+          questionId,
+          contributorId: user,
+          family: 1,
+          latestVersion: 1,
+          revision: 1,
+          createdAt: 0,
+        });
+        versions.push(
+          await ctx.db.insert("questionVersions", {
+            questionId: question,
+            version: 1,
+            content,
+            contentHash: "a".repeat(64),
+            contentFingerprint: "b".repeat(64),
+            taxonomyVersionId: taxonomy,
+            creatorId: user,
+            createdAt: 0,
+            state: "draft",
+            workflowRevision: 1,
+          }),
+        );
+      }
+      for (const referenceId of ["legacy-reference-a", "legacy-reference-b"])
+        await ctx.db.insert("questionReferenceVersions", {
+          referenceId,
+          version: 1,
+          content: {
+            family: 1,
+            module: "shared-core",
+            language: "english",
+            title: referenceId,
+            provenance: content.provenance,
+            blocks: [{ type: "text", text: referenceId }],
+          },
+          contentHash: "c".repeat(64),
+          creatorId: user,
+          createdAt: 0,
+        });
+      return { user, versions };
+    });
+    const first = await t.mutation(
+      internal.adminQuestionBankBackfill.backfillQuestionSearchProjection,
+      { cursor: null, batchSize: 1 },
+    );
+    expect(first).toMatchObject({ scanned: 1, updated: 1, isDone: false });
+    const second = await t.mutation(
+      internal.adminQuestionBankBackfill.backfillQuestionSearchProjection,
+      { cursor: first.continueCursor, batchSize: 1 },
+    );
+    expect(second).toMatchObject({ scanned: 1, updated: 1, isDone: true });
+    const repeated = await t.mutation(
+      internal.adminQuestionBankBackfill.backfillQuestionSearchProjection,
+      { cursor: null, batchSize: 10 },
+    );
+    expect(repeated.updated).toBe(0);
+    const stored = await t.run((ctx) =>
+      ctx.db.get("questionVersions", ids.versions[0]),
+    );
+    expect(stored).toMatchObject(
+      buildQuestionSearchProjection(content, "legacy-a", ids.user),
+    );
+    const referenceFirst = await t.mutation(
+      internal.adminQuestionBankBackfill.backfillReferenceScope,
+      { cursor: null, batchSize: 1 },
+    );
+    expect(referenceFirst).toMatchObject({
+      scanned: 1,
+      updated: 1,
+      isDone: false,
+    });
+    const referenceSecond = await t.mutation(
+      internal.adminQuestionBankBackfill.backfillReferenceScope,
+      { cursor: referenceFirst.continueCursor, batchSize: 1 },
+    );
+    expect(referenceSecond).toMatchObject({
+      scanned: 1,
+      updated: 1,
+      isDone: true,
+    });
+    const references = await t.run((ctx) =>
+      ctx.db.query("questionReferenceVersions").take(10),
+    );
+    for (const reference of references)
+      expect(reference).toMatchObject({
+        family: 1,
+        module: "shared-core",
+        language: "english",
+      });
+    for (const batchSize of [0, 101])
+      await expect(
+        t.mutation(
+          internal.adminQuestionBankBackfill.backfillQuestionSearchProjection,
+          { cursor: null, batchSize },
+        ),
+      ).rejects.toMatchObject({ data: { code: "VALIDATION_FAILED" } });
   });
 });

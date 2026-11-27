@@ -9,6 +9,7 @@ import {
   text,
 } from "./questionContent";
 import { questionWorkflowError as fail } from "./questionWorkflow";
+import { buildQuestionSearchProjection } from "./questionSearchProjection";
 
 /** Trusted integration only: callers provide validated source metadata, never authority.
  * `validatedHashes` may only be supplied by `resolveQuestion` for the same input. */
@@ -93,6 +94,11 @@ export async function importQuestionDraft(
     createdAt: Date.now(),
     state: "draft",
     workflowRevision: 1,
+    ...buildQuestionSearchProjection(
+      input.content,
+      question.questionId,
+      question.contributorId,
+    ),
     ...(options.bootstrapRunId
       ? { bootstrapRunId: options.bootstrapRunId }
       : {}),

@@ -334,7 +334,7 @@ Under [ADR 0013](ADR/0013-seeding-families-and-pooled-exam-selection.md), a seed
 
 Offline delivery and acceptance alone grant no import or publication permissions. [ADR 0017](ADR/0017-independent-question-review-policy.md) resolves #31 with one independent active-admin approval per question version and no self-approval. No manifest or sign-off file supplies authorization.
 
-[ADR 0022](ADR/0022-one-time-seed-bootstrap-publication.md) defines one separately authorized, developer-only bootstrap exception for this exact corpus; it has not been executed. The operator runs a repository CLI against an approved target using Convex CLI credentials or a deploy key. Two non-login `system` identities import, record a plan-level `bootstrap_acceptance` and publish each question as its batch lands; no active admin or human approver is required. The target registry contains only the reviewed `quilla-dev` development target; production remains unregistered. `SEED_BOOTSTRAP_ENABLED=true` is required only during the bootstrap window, and adding another target is a separate reviewed change. A separate internal installer, authorized by the same target and window guards plus a pinned catalog digest, installs and seals `cse-taxonomy-2027-v2`; it is implemented locally and has not been executed. Rollback archives versions and never deletes history. This exception does not lower the review requirement for later questions, does not replace the deferred audit in #98, and does not by itself authorize a deployment or live write.
+[ADR 0022](ADR/0022-one-time-seed-bootstrap-publication.md) defines one separately authorized, developer-only bootstrap exception for this exact corpus; it has not been executed. The operator runs a repository CLI against an approved target using Convex CLI credentials or a deploy key. Two non-login `system` identities import, record a plan-level `bootstrap_acceptance` and publish each question as its batch lands; no active admin or human approver is required. The target registry contains only the reviewed `quilla-dev` development target; production remains unregistered. `SEED_BOOTSTRAP_ENABLED=true` is required only during the bootstrap window, and adding another target is a separate reviewed change. Separate internal installers, authorized by the same target and window guards plus pinned catalog and fixture digests, install and seal `cse-taxonomy-2027-v2` and install and activate the approved v3 blueprints; both are implemented locally and neither has been executed. Rollback archives versions and never deletes history. This exception does not lower the review requirement for later questions, does not replace the deferred audit in #98, and does not by itself authorize a deployment or live write.
 
 Each mock randomly selects eligible published versions from all seed families combined, subject to the exam blueprint, without a single-family or equal-family quota. Professional retains 20 General, 50 Verbal, 40 Numerical, and 40 Analytical items (150 total); Subprofessional retains 20 General, 50 Verbal, 35 Numerical, and 40 Clerical items (145 total). The new pooled selection contract uses `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`, with `cse-taxonomy-2027-v2`. Historical v1/v2 policies and attempts are preserved. Runtime and validator adoption remain pending.
 
@@ -731,8 +731,9 @@ publication validation. [ADR 0020](ADR/0020-question-lifecycle-and-independent-p
 records the local #32 implementation: immutable question/reference versions,
 revision-checked admin lifecycle APIs, a five-criterion editorial quality gate,
 duplicate adjudication and protected asset verification. These APIs are not
-deployed; no live content has been imported or published. Admin UI, ordinary
-contribution submission and learner assessment serving remain separate work.
+deployed; no live content has been imported or published. Ordinary contribution
+submission and learner assessment serving remain separate work; the local admin
+workspace is recorded below.
 
 [ADR 0021](ADR/0021-guarded-restartable-draft-import.md) records the local #95
 importer: offline zero-write planning, explicit development-target preflight,
@@ -752,8 +753,29 @@ exception, not a general publication shortcut, and no live run has occurred. Liv
 development and production execution are separately approved operational steps. The
 same change adds the #34 backend bulk submit, publish and archive mutations with
 per-item results and batch bounds; bulk editorial review and approval are
-intentionally excluded. The admin workspace and Playwright journeys remain blocked
-on #33.
+intentionally excluded. The admin workspace is implemented locally by #33;
+authenticated admin Playwright journeys remain blocked on #25.
+
+[ADR 0028](ADR/0028-admin-question-bank-search-projection.md) records the local
+#33 admin workspace. `/admin/questions` combines indexed filters for state,
+family, module, subject, subtopic, concept, difficulty, language, level, origin,
+contributor and canonical question ID with full-text search over an immutable
+schema-backed projection. New versions receive the projection when inserted;
+it is excluded from content hashes, and legacy rows stay readable while their
+projection fields remain optional. Correct filtering of legacy rows needs the
+internal batched backfill, which has not run. The workspace also lets an admin
+create an initial draft or an immutable revision, choose a sealed taxonomy and
+an existing compatible reference version, inspect exact content, hashes,
+review history and immutable version history, and invoke only the lifecycle
+actions currently allowed. The backend independently enforces every
+authorization, revision, independence, rubric and duplicate rule. `/admin`
+redirects active admins to the question bank; active non-admins and unknown
+admin paths return not found, while signed-out, missing-profile, inactive and
+suspended access states show the account access shell. Reports and flags
+filters remain deferred to #40 and #41;
+contributor filtering uses opaque user IDs until #25, and authenticated admin
+Playwright journeys remain blocked on #25. No deployment, live backfill or
+production use is included.
 
 ### Edge cases
 
@@ -824,12 +846,21 @@ The local #30 implementation adds versioned blueprint drafts, pure configuration
 validation, atomic activation with a per-level active pointer, and insert-only
 attempt snapshots. A version carries its complete configuration and pins a sealed
 taxonomy; activation supersedes the prior active version and every real admin
-mutation is audited transactionally. The approved v3 configurations exist as an
-offline fixture only. No coverage dry run, exam generation, attempts table, live
-activation, deployment or migration is included; those remain #35, #54 and
-separately authorized work.
+mutation is audited transactionally. The approved v3 configurations also exist as
+an offline fixture. The local #111 implementation adds an internal installer that
+atomically installs and activates both levels against the exact sealed v2 taxonomy,
+reuses the admin validation and activation helpers, archives any prior active
+version without changing its stored configuration or hash, and attributes audit
+events to the non-login `system:seed-blueprint-installer` identity. It is
+implemented and tested locally but has not been deployed or executed. Installing
+and activating blueprints is not content approval, question publication, exam
+readiness or completion of #98. No coverage dry run, exam generation, attempts
+table, live activation, deployment or migration is included; those remain #35, #54
+and separately authorized work.
 [ADR 0025](ADR/0025-versioned-blueprint-activation-and-attempt-snapshots.md)
-records the design. Existing snapshots remain usable if the taxonomy is later
+records the versioned blueprint design and
+[ADR 0027](ADR/0027-developer-seed-blueprint-installation.md) records the guarded
+seed installation. Existing snapshots remain usable if the taxonomy is later
 archived; new drafts and activations require a sealed taxonomy.
 
 ### User story
