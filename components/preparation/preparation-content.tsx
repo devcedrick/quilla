@@ -104,6 +104,10 @@ function LearningLock({
   level: NonNullable<PreparationPreferences["preferredLevel"]>;
 }) {
   const access = useQuery(api.learning.currentAccess, { level });
+  const denied =
+    access?.status === "onboarding_required" ||
+    access?.status === "diagnostic_required";
+  if (access && !denied) return null;
   return (
     <p
       role="status"

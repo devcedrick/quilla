@@ -19,6 +19,8 @@ const mocks = vi.hoisted(() => ({
     PreparationPreferences | undefined,
   queryError: false,
   access: undefined as CurrentAccess | undefined,
+  learningAccess: undefined as
+    { status: string; level: "professional" | "subprofessional" } | undefined,
 }));
 vi.mock("convex/react", () => ({
   useMutation: () => mocks.save,
@@ -28,6 +30,8 @@ vi.mock("convex/react", () => ({
   }),
   useQuery: (ref: Parameters<typeof getFunctionName>[0]) => {
     if (getFunctionName(ref) === "users:currentAccess") return mocks.access;
+    if (getFunctionName(ref) === "learning:currentAccess")
+      return mocks.learningAccess;
     if (mocks.queryError) throw new Error("provider unavailable");
     return getFunctionName(ref).startsWith("users:")
       ? mocks.preferences
@@ -102,6 +106,10 @@ beforeEach(() => {
     status: "active",
     userId: "profile-a" as Id<"users">,
     role: "user",
+  };
+  mocks.learningAccess = {
+    status: "diagnostic_required",
+    level: "professional",
   };
   mocks.save.mockResolvedValue({
     preferredLevel: "professional",
@@ -441,5 +449,31 @@ describe("reactive preparation routing", () => {
     expect(
       view.root.findAllByType("button").map((button) => button.props.children),
     ).not.toContain("Start");
+  });
+  it("renders the learning lock only when access is denied", async () => {
+    mocks.preferences = {
+      preferredLevel: "professional",
+      targetExamDate: null,
+    };
+    const tree = () => (
+      <PreparationContent
+        kind="dashboard"
+        initialPreferences={{
+          preferredLevel: "professional",
+          targetExamDate: null,
+        }}
+      />
+    );
+    await act(async () => {
+      view = create(tree());
+    });
+    expect(JSON.stringify(view.toJSON())).toContain(
+      "locked until you complete a diagnostic",
+    );
+    mocks.learningAccess = { status: "granted", level: "professional" };
+    await act(async () => view.update(tree()));
+    expect(JSON.stringify(view.toJSON())).not.toContain(
+      "locked until you complete a diagnostic",
+    );
   });
 });
