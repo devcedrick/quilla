@@ -35,12 +35,12 @@ inherit mock finalization rules.
 
 ### Lifecycle states
 
-| State         | Entered when                                                                                              | Resume or answer?                                | Result and evidence                                                                                                                                                 |
-| ------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `in_progress` | The learner starts an assessment and the server stores the immutable configuration and absolute deadline. | Yes, until the server deadline, from any device. | Saved scored answers only. No mastery, readiness, streak or diagnostic-completion evidence exists before finalization.                                              |
-| `submitted`   | The learner submits before the deadline with at least one scored answer.                                  | No. The result is immutable.                     | The attempt is scored. Unanswered mock items are incorrect; diagnostic mastery comes only from answered items.                                                      |
-| `expired`     | The deadline passes with at least one scored answer, and the server finalizes the attempt.                | No. The result is read-only.                     | The attempt is scored automatically under the same rules as `submitted`. A diagnostic with scored answers counts as submitted.                                      |
-| `abandoned`   | The deadline passes with zero scored answers.                                                             | No. No review content exists.                    | No score, mastery, readiness, streak, diagnostic completion or guidance unlock. The record is retained, and the learner may start a new attempt after the deadline. |
+| State         | Entered when                                                                                              | Resume or answer?                                                 | Result and evidence                                                                                                                                                 |
+| ------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `in_progress` | The learner starts an assessment and the server stores the immutable configuration and absolute deadline. | Yes, until the server deadline, from any device.                  | Saved scored answers only. No mastery, readiness, streak or diagnostic-completion evidence exists before finalization.                                              |
+| `submitted`   | The learner submits before the deadline with at least one scored answer.                                  | No. The result is immutable.                                      | The attempt is scored. Unanswered mock items are incorrect; diagnostic mastery comes only from answered items.                                                      |
+| `expired`     | The deadline passes with at least one scored answer, and the server finalizes the attempt.                | No. The result is read-only.                                      | The attempt is scored automatically under the same rules as `submitted`. A diagnostic with scored answers counts as submitted.                                      |
+| `abandoned`   | The deadline passes with zero scored answers.                                                             | No. No review content is exposed. Retained snapshots stay hidden. | No score, mastery, readiness, streak, diagnostic completion or guidance unlock. The record is retained, and the learner may start a new attempt after the deadline. |
 
 The persisted status may lag behind server time. No operation may treat an
 over-deadline attempt as `in_progress`; reading, answering or submitting after the
@@ -213,6 +213,13 @@ source of truth.
 - **S08.1 / #59:** list retained `submitted` and `expired` attempts for the owner
   with review access, show `abandoned` attempts in history without review content,
   return immutable snapshots, and never update mastery or readiness on read.
+- Where an open issue's acceptance criteria predate this ADR, this contract governs
+  and the issue must be updated before implementation. In particular, #55's
+  "Auto-submit expired attempts" means server finalization to `expired`, not a
+  `submitted` result; #56 must keep correctness hidden until finalization,
+  including expiry; #59 must cover `expired` review and `abandoned` history; and
+  #54 must include the required questionnaire mode. Older issue wording does not
+  override this ADR.
 - Schema field names may differ, but the state semantics, terminal immutability,
   submission reason, timestamps and snapshot requirements are fixed by this ADR.
 
