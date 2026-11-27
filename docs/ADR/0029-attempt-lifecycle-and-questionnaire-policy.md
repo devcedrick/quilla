@@ -79,7 +79,12 @@ source of truth.
   scored answers is rejected without changing the attempt, which remains
   `in_progress` until its deadline. An empty submission is therefore never a
   pre-deadline cancel and cannot be used to draw a replacement attempt after
-  seeing served questions.
+  seeing served questions. A submission with a scored answer is a finalized,
+  scored attempt rather than a discard. Because this ADR sets no retake cooldown or
+  minimum-answer threshold, a learner can start another attempt after such a
+  submission; the empty-submission rule closes only the zero-answer cancel path.
+  This ADR accepts that residual question-harvesting risk; a cooldown or threshold
+  would be a separate policy decision.
 - At the deadline, an attempt with scored answers finalizes as `expired`. Scored
   answers are evaluated; mock items without an answer count as incorrect. For the
   diagnostic, only answered items create mastery evidence, unanswered items remain
@@ -135,16 +140,18 @@ source of truth.
   immutable blueprint version with an explicit configuration format. It cannot
   modify an existing blueprint or historical attempt.
 - The current format-2 configuration and both `cse-*-2027-v3` offline fixtures
-  predate this decision and do not carry the field. Because those versions are
-  offline fixtures with no live installation or activation, the migration updates
-  their fixture configurations in place to record `excluded`, adds the field to
-  the new configuration format's validator, and re-pins the seed-blueprint
-  fixture digest through the separately reviewed pin required by ADR 0027.
-  Existing installed format-1 and format-2 versions remain verifiable under their
-  stored format. Until that migration lands, no code may treat an absent mode as
-  `unscored` or serve questionnaire content. A questionnaire-mode change after a
-  version is installed requires a new immutable blueprint version, not a fixture
-  edit.
+  predate this decision and do not carry the field. The migration updates those
+  fixture configurations in place to record `excluded`, adds the field to the new
+  configuration format's validator, and re-pins the seed-blueprint fixture digest
+  through the separately reviewed pin required by ADR 0027. Because ADR 0027's
+  installer can install those fixtures independently, S07.2 / #54 must land
+  before any v3 installation or activation; no v3 version may be installed
+  without the mode. An installed format-2 version remains verifiable under its
+  stored format and is never edited in place; if one exists, adding the mode
+  requires a new immutable blueprint version. Until the migration lands, no code
+  may treat an absent mode as `unscored` or serve questionnaire content. A
+  questionnaire-mode change after a version is installed requires a new immutable
+  blueprint version, not a fixture edit.
 - EDQ items are optional and skippable. They are not question-bank questions and
   have no correct answer, concept, difficulty, subject allocation or eligibility
   rule. They are stored as a separate response type, never mixed with scored
@@ -182,11 +189,12 @@ source of truth.
 ### Downstream contract
 
 - **S07.2 / #54:** introduce the next configuration format with the required
-  questionnaire mode, update both v3 offline fixtures to `excluded`, and re-pin
-  the seed-blueprint fixture digest under ADR 0027 while keeping format-1 and
-  format-2 verification for existing versions. Snapshot the questionnaire mode;
-  keep EDQ items outside scored cells and totals; derive the deadline from the
-  immutable configuration; create no attempt before start.
+  questionnaire mode, update both v3 offline fixtures to `excluded`, re-pin the
+  seed-blueprint fixture digest under ADR 0027, and land before any v3 installation
+  or activation while keeping format-1 and format-2 verification for existing
+  versions. Snapshot the questionnaire mode; keep EDQ items outside scored cells
+  and totals; derive the deadline from the immutable configuration; create no
+  attempt before start.
 - **S07.3 / #55:** enforce the server deadline, late-write rejection, empty-submission
   rejection, single-active-attempt rejection, idempotent finalization, the four
   lifecycle states, zero-answer abandonment, unanswered mock scoring and
@@ -196,7 +204,12 @@ source of truth.
   expose answer keys during an active attempt.
 - **S03.1 / #57:** apply the same lifecycle to diagnostics, including partial
   expiry, zero-answer abandonment, single-active-attempt behavior, completion-gate
-  behavior and retakes.
+  behavior and retakes. Extend the learning-access result with a granted state; the
+  preparation lock renders only denied statuses and must keep locked and granted
+  coverage.
+- **S08.1 / #59:** list retained `submitted` and `expired` attempts for the owner
+  with review access, show `abandoned` attempts in history without review content,
+  return immutable snapshots, and never update mastery or readiness on read.
 - Schema field names may differ, but the state semantics, terminal immutability,
   submission reason, timestamps and snapshot requirements are fixed by this ADR.
 
@@ -233,8 +246,12 @@ change. That is acceptable for the initial release: the start confirmation is th
 guard against accidental starts, and a zero-answer attempt has no learning effect.
 An empty submission is rejected rather than treated as a cancel, so it cannot be
 used to discard the attempt and draw a replacement after viewing the served
-questions. If UX testing later shows a need for a pre-answer cancel action, it can
-be added without changing the deadline, retention or evidence rules.
+questions. This closes only the zero-answer path: a learner can submit one scored
+answer and later retake, which is a scored retake rather than a discard, and this
+ADR accepts the residual risk of a fresh served set. A cooldown or minimum-answer
+rule would be a separate policy decision. If UX testing later shows a need for a
+pre-answer cancel action, it can be added without changing the deadline, retention
+or evidence rules.
 
 The EDQ remains excluded until there is a concrete product need, content source,
 privacy decision and blueprint version. This avoids collecting demographic data
