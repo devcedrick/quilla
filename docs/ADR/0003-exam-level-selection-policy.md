@@ -29,7 +29,7 @@ Before a preference change is confirmed, explain that progress and history remai
 - **Derived views:** Guidance and readiness use the requested level's coverage and blueprint, applicable shared mastery, and, where mock performance is used, only that level's mock results. Relevant submissions refresh affected derived views, including both levels when shared evidence changes, while respecting each diagnostic gate.
 - **History and eligibility:** Attempts remain discoverable with their original level and snapshots across preference changes. Professional attempts exclude Clerical Ability; Subprofessional attempts exclude Analytical Ability. Shared concept evidence never makes an otherwise ineligible question eligible.
 
-**Amendment (ADR 0029):** For the diagnostic gate above, the transitions table below, and the two-diagnostic consequence in Consequences, a diagnostic that expires with scored answers counts as submitted, and an `abandoned` attempt remains visible in history with its terminal state and served snapshots but exposes no score or review content. No other level, evidence-sharing or routing rule changes.
+**Amendment (ADR 0029):** For the diagnostic gate above, the transitions table below, and the two-diagnostic consequence in Consequences, a diagnostic that expires with scored answers counts as submitted, and an `abandoned` attempt remains visible in history with only its terminal state and non-content metadata, while its served snapshots are retained but hidden and it exposes no score or review content. No other level, evidence-sharing or routing rule changes.
 
 These contracts guide later schema and API work; this issue introduces no runtime API, schema, migration, or UI implementation.
 
