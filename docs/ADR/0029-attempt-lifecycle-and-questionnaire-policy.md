@@ -100,20 +100,24 @@ source of truth.
 
 - Terminal attempts, including `submitted`, `expired` and `abandoned`, and their
   immutable question and blueprint snapshots are retained for the life of the
-  account and are not deleted by account deletion. The initial release has no
-  time-based purge.
+  account. The initial release has no time-based purge. Account deletion follows
+  the de-identification-or-deletion rule below; a retained record is kept only in
+  de-identified form.
 - Learners have no delete control for attempts. Admins cannot hard-delete attempts
   or rewrite their results. Historical questions, versions and snapshots remain
   protected by the existing no-hard-delete rules.
 - Account deletion or anonymization is a separate workflow that
   [ADR 0006](0006-application-profiles-and-authorization.md) requires to be
   designed and approved before it exists; this ADR does not approve or design it.
-  When that workflow exists, it may remove or de-identify the learner's identity
-  and personal data, but retained attempt records and shared question, reference
-  and blueprint versions remain, and historical results are never rewritten.
-  `abandoned` records are not an implicit exception to historical integrity.
-  "Life of the account" therefore includes de-identified retention after account
-  deletion.
+  That workflow must honor applicable export and erasure requests. It must remove
+  or irreversibly de-identify all personal data in attempt records, including
+  questionnaire responses and any free text, so retained records no longer
+  identify or are reasonably linkable to the learner. A record that cannot be
+  de-identified to that standard must be deleted. De-identified scored answers,
+  results and shared question, reference and blueprint versions may remain for
+  historical integrity, and historical results are never rewritten. `abandoned`
+  records are not an implicit exception to these rules. "Life of the account"
+  therefore includes de-identified retention after account deletion.
 - A future retention change, including any purge or archival policy, requires a new
   ADR. It must not silently delete records under this policy.
 
@@ -166,7 +170,7 @@ source of truth.
 - [ADR 0003](0003-exam-level-selection-policy.md) and
   [ADR 0007](0007-preparation-preferences-and-onboarding.md) describe the
   diagnostic gate as requiring a `submitted` attempt. For that gate, this ADR
-  supersedes the submitted-only wording: a diagnostic that expires with saved
+  supersedes the submitted-only wording: a diagnostic that expires with scored
   answers counts as submitted. No other level, evidence-sharing or routing rule
   changes.
 - This ADR resolves the "retention and resume window for abandoned attempts" item
@@ -211,7 +215,7 @@ source of truth.
 | Manual submission and scheduled finalization race         | Both return one terminal result; no double scoring or evidence.                                                                                                                   |
 | Answer write races the deadline                           | Only a server-committed pre-deadline answer counts; no grace period.                                                                                                              |
 | Learner is suspended with an attempt in progress          | Access is blocked, but the deadline is unchanged and finalization still follows this policy.                                                                                      |
-| Learner requests deletion of an attempt                   | No learner delete control and no admin hard delete. Account deletion would follow the separate de-identification workflow, which is not yet designed or approved.                 |
+| Learner requests deletion of an attempt                   | No learner delete control or admin hard delete. Account deletion follows the separate de-identification-or-deletion workflow, which is not yet designed or approved.              |
 | Future blueprint enables the EDQ                          | Require a new immutable version, `unscored` mode, separate responses and explicit timing; never affect score, mastery or readiness.                                               |
 | Historical attempt predates an EDQ-enabled blueprint      | Keep its recorded `excluded` mode and immutable result; do not add questionnaire content retroactively.                                                                           |
 

@@ -4,7 +4,7 @@
 - **Date:** 2026-10-20
 - **Decision owners:** Quilla maintainers
 - **Related issues:** [S02.1 / #20](https://github.com/devcedrick/quilla/issues/20), [S02.4 / #23](https://github.com/devcedrick/quilla/issues/23)
-- **Amended by:** [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md) resolves the abandoned-attempt retention and resume policy and makes a diagnostic that expires with saved answers satisfy the completion gate.
+- **Amended by:** [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md) resolves the abandoned-attempt retention and resume policy and makes a diagnostic that expires with scored answers satisfy the completion gate.
 
 ## Context
 
@@ -29,7 +29,7 @@ Before a preference change is confirmed, explain that progress and history remai
 - **Derived views:** Guidance and readiness use the requested level's coverage and blueprint, applicable shared mastery, and, where mock performance is used, only that level's mock results. Relevant submissions refresh affected derived views, including both levels when shared evidence changes, while respecting each diagnostic gate.
 - **History and eligibility:** Attempts remain discoverable with their original level and snapshots across preference changes. Professional attempts exclude Clerical Ability; Subprofessional attempts exclude Analytical Ability. Shared concept evidence never makes an otherwise ineligible question eligible.
 
-**Amendment (ADR 0029):** For the diagnostic gate above, a diagnostic that expires with saved answers counts as submitted. No other level, evidence-sharing or routing rule changes.
+**Amendment (ADR 0029):** For the diagnostic gate above, a diagnostic that expires with scored answers counts as submitted. No other level, evidence-sharing or routing rule changes.
 
 These contracts guide later schema and API work; this issue introduces no runtime API, schema, migration, or UI implementation.
 
