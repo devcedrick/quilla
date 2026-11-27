@@ -142,7 +142,8 @@ source of truth.
 - The current format-2 configuration and both `cse-*-2027-v3` offline fixtures
   predate this decision and do not carry the field. The migration updates those
   fixture configurations in place to record `excluded`, adds the field to the new
-  configuration format's validator, and re-pins the seed-blueprint fixture digest
+  configuration format's validator and to the canonical normalized configuration
+  that `blueprintContentHash` hashes, and re-pins the seed-blueprint fixture digest
   through the separately reviewed pin required by ADR 0027. Because ADR 0027's
   installer can install those fixtures independently, S07.2 / #54 must land
   before any v3 installation or activation; no v3 version may be installed
@@ -189,11 +190,12 @@ source of truth.
 ### Downstream contract
 
 - **S07.2 / #54:** introduce the next configuration format with the required
-  questionnaire mode, update both v3 offline fixtures to `excluded`, re-pin the
-  seed-blueprint fixture digest under ADR 0027, and land before any v3 installation
-  or activation while keeping format-1 and format-2 verification for existing
-  versions. Snapshot the questionnaire mode; keep EDQ items outside scored cells
-  and totals; derive the deadline from the immutable configuration; create no
+  questionnaire mode, include that mode in the canonical normalized configuration
+  and `blueprintContentHash`, update both v3 offline fixtures to `excluded`, re-pin
+  the seed-blueprint fixture digest under ADR 0027, and land before any v3
+  installation or activation while keeping format-1 and format-2 verification for
+  existing versions. Snapshot the questionnaire mode; keep EDQ items outside scored
+  cells and totals; derive the deadline from the immutable configuration; create no
   attempt before start.
 - **S07.3 / #55:** enforce the server deadline, late-write rejection, empty-submission
   rejection, single-active-attempt rejection, idempotent finalization, the four
@@ -204,9 +206,10 @@ source of truth.
   expose answer keys during an active attempt.
 - **S03.1 / #57:** apply the same lifecycle to diagnostics, including partial
   expiry, zero-answer abandonment, single-active-attempt behavior, completion-gate
-  behavior and retakes. Extend the learning-access result with a granted state; the
-  preparation lock renders only denied statuses and must keep locked and granted
-  coverage.
+  behavior and retakes. Extend the learning-access result with a granted state. When
+  it does, update the preparation lock to render its message and `LockKeyhole` icon
+  only for denied statuses, and cover both locked and granted cases against the real
+  result union.
 - **S08.1 / #59:** list retained `submitted` and `expired` attempts for the owner
   with review access, show `abandoned` attempts in history without review content,
   return immutable snapshots, and never update mastery or readiness on read.
@@ -215,22 +218,23 @@ source of truth.
 
 ## Scenarios
 
-| Scenario                                                  | Expected behavior                                                                                                                                                                 |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Learner disconnects or closes the tab before the deadline | Resume later with the same answers, choice order, snapshots and deadline. The clock keeps running.                                                                                |
-| Learner returns on another device before the deadline     | Resume the same attempt. No second attempt or deadline is created.                                                                                                                |
-| Learner starts another attempt while one is in progress   | Reject the new attempt; the existing attempt remains resumable until its deadline.                                                                                                |
-| Learner returns after the deadline                        | No resume and no answer writes. Any access finalizes the attempt and shows the terminal result or abandoned state.                                                                |
-| Deadline passes with scored answers                       | Finalize as `expired`; evaluate scored answers; unanswered mock items are incorrect; a diagnostic counts with answered-item mastery only.                                         |
-| Deadline passes with zero scored answers                  | Finalize as `abandoned`; no score, evidence, unlock or review; allow a new attempt.                                                                                               |
-| Learner submits with no scored answers                    | Reject the submission; the attempt stays `in_progress`. At the deadline, finalize as `abandoned` if it still has no scored answers, or as `expired` if scored answers were saved. |
-| Learner submits early and starts another attempt          | Allowed as a retake after the first attempt is finalized and scored; no second concurrent attempt exists.                                                                         |
-| Manual submission and scheduled finalization race         | Both return one terminal result; no double scoring or evidence.                                                                                                                   |
-| Answer write races the deadline                           | Only a server-committed pre-deadline answer counts; no grace period.                                                                                                              |
-| Learner is suspended with an attempt in progress          | Access is blocked, but the deadline is unchanged and finalization still follows this policy.                                                                                      |
-| Learner requests deletion of an attempt                   | No learner delete control or admin hard delete. Account deletion follows the separate de-identification-or-deletion workflow, which is not yet designed or approved.              |
-| Future blueprint enables the EDQ                          | Require a new immutable version, `unscored` mode, separate responses and explicit timing; never affect score, mastery or readiness.                                               |
-| Historical attempt predates an EDQ-enabled blueprint      | Keep its recorded `excluded` mode and immutable result; do not add questionnaire content retroactively.                                                                           |
+| Scenario                                                   | Expected behavior                                                                                                                                                                 |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Learner disconnects or closes the tab before the deadline  | Resume later with the same answers, choice order, snapshots and deadline. The clock keeps running.                                                                                |
+| Learner returns on another device before the deadline      | Resume the same attempt. No second attempt or deadline is created.                                                                                                                |
+| Learner starts another attempt while one is in progress    | Reject the new attempt; the existing attempt remains resumable until its deadline.                                                                                                |
+| Learner returns after the deadline                         | No resume and no answer writes. Any access finalizes the attempt and shows the terminal result or abandoned state.                                                                |
+| Deadline passes with scored answers                        | Finalize as `expired`; evaluate scored answers; unanswered mock items are incorrect; a diagnostic counts with answered-item mastery only.                                         |
+| Deadline passes with zero scored answers                   | Finalize as `abandoned`; no score, evidence, unlock or review; allow a new attempt.                                                                                               |
+| Learner submits with no scored answers before the deadline | Reject the submission; the attempt stays `in_progress`. At the deadline, finalize as `abandoned` if it still has no scored answers, or as `expired` if scored answers were saved. |
+| Learner submits after the deadline                         | Finalize first: `expired` if scored answers exist, otherwise `abandoned`. A post-deadline submission never leaves the attempt `in_progress`.                                      |
+| Learner submits early and starts another attempt           | Allowed as a retake after the first attempt is finalized and scored; no second concurrent attempt exists.                                                                         |
+| Manual submission and scheduled finalization race          | Both return one terminal result; no double scoring or evidence.                                                                                                                   |
+| Answer write races the deadline                            | Only a server-committed pre-deadline answer counts; no grace period.                                                                                                              |
+| Learner is suspended with an attempt in progress           | Access is blocked, but the deadline is unchanged and finalization still follows this policy.                                                                                      |
+| Learner requests deletion of an attempt                    | No learner delete control or admin hard delete. Account deletion follows the separate de-identification-or-deletion workflow, which is not yet designed or approved.              |
+| Future blueprint enables the EDQ                           | Require a new immutable version, `unscored` mode, separate responses and explicit timing; never affect score, mastery or readiness.                                               |
+| Historical attempt predates an EDQ-enabled blueprint       | Keep its recorded `excluded` mode and immutable result; do not add questionnaire content retroactively.                                                                           |
 
 ## Consequences
 

@@ -16,6 +16,8 @@ Dates are civil calendar dates, not timestamps. Validate newly supplied dates ag
 
 Initial onboarding explicitly selects a level with no default selection. Later level changes require a UI acknowledgement explaining future defaults, retained history/progress, and each level's independent submitted-diagnostic prerequisite. Saving preferences changes only those preference fields; it does not reset evidence or alter existing attempts. Attempt defaults are not immutable attempt context.
 
+**Amended by [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md):** For this prerequisite and the #57 contract below, a diagnostic that expires with scored answers counts as submitted; the level-change acknowledgement and the access query must not be implemented as requiring an actual submission.
+
 ## Account routing and reactive behavior
 
 Keep successful authentication and landing actions pointed at `/dashboard`. Protected resource components perform authenticated, uncached authorization and preference reads behind Suspense. Incomplete active learners are redirected to `/onboarding`; missing profiles use existing client bootstrap and refresh, never a Server Component mutation. Suspended callers receive the existing notice rather than an onboarding/sign-in loop. Completed learners revisiting onboarding return to the dashboard.
@@ -28,7 +30,7 @@ The reactive application boundary remains authoritative for hiding unresolved, s
 
 No submitted-attempt store exists in S02.4. The typed diagnostic guard therefore fails closed; both levels' guidance/readiness remain locked. Do not add a completion flag, unlock endpoint, mock submission, or assessment table to demonstrate an unlock.
 
-[#57](https://github.com/devcedrick/quilla/issues/57) must replace the conservative evidence reader and update the access query to use authoritative, indexed submitted attempts for the caller and requested level, where a diagnostic that expires with scored answers counts as submitted under [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md). It must cover positive eligibility and retain prior-level eligibility without allowing shared mastery or another level's diagnostic to bypass the gate. Each future guidance/readiness function must independently enforce the backend guard. This ADR does not claim those views, attempts, or successful unlocking are implemented.
+[#57](https://github.com/devcedrick/quilla/issues/57) must replace the conservative evidence reader and update the access query to use authoritative, indexed submitted attempts for the caller and requested level. It must cover positive eligibility and retain prior-level eligibility without allowing shared mastery or another level's diagnostic to bypass the gate. Each future guidance/readiness function must independently enforce the backend guard. This ADR does not claim those views, attempts, or successful unlocking are implemented.
 
 ## Alternatives and consequences
 
