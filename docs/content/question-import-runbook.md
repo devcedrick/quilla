@@ -50,9 +50,9 @@ sealed taxonomy or matching content: target comparison is reported as not checke
 3. Provision an active Quilla admin for the ordinary importer. The importer never
    creates unknown taxonomy. The one-time taxonomy and blueprint installers and the
    bootstrap do not provision admins and do not require one; install and seal the
-   matching v2 taxonomy, then install and activate the v3 blueprints, through the
-   guarded internal paths below. The question-bank bootstrap under #106 follows both
-   installations.
+   matching v2 taxonomy, then (only after #54 lands with the required questionnaire
+   mode) install and activate the v3 blueprints through the guarded internal paths
+   below. The question-bank bootstrap under #106 follows both installations.
 4. Sign in to the matching development Quilla app. Obtain a short-lived token from
    that signed-in Clerk session with `getToken()`, using its configured Convex
    audience (or the `convex` JWT template when that is how the Clerk instance is
@@ -200,6 +200,11 @@ it does not write questions, references or assets, and it does not provision an
 admin. Installing the catalog is not editorial or content approval.
 
 ## Install and activate the approved v3 blueprints
+
+> **Blocked until #54:** Do not run `--install-blueprints` against the current
+> format-2 v3 fixtures. ADR 0029 requires #54 to add the `excluded` questionnaire
+> mode to the canonical configuration and re-pin the fixture digest before any v3
+> installation or activation. The digest below is the pre-#54 pin and will change.
 
 Issue #111 adds an internal, operator-only installer for
 `cse-professional-2027-v3` and `cse-subprofessional-2027-v3`. Run the taxonomy
