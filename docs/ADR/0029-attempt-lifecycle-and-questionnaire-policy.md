@@ -144,8 +144,10 @@ source of truth.
 - The current format-2 configuration and both `cse-*-2027-v3` offline fixtures
   predate this decision and do not carry the field. The migration updates those
   fixture configurations in place to record `excluded`, adds the field to the new
-  configuration format's validator and to the canonical normalized configuration
-  that `blueprintContentHash` hashes, and re-pins the seed-blueprint fixture digest
+  configuration format's validator and to that format's canonical normalized
+  configuration, so `blueprintContentHash` includes it only for the new format while
+  format-1 and format-2 normalization and digests stay frozen, and re-pins the
+  seed-blueprint fixture digest
   through the separately reviewed pin required by ADR 0027. Because ADR 0027's
   installer can install those fixtures independently, S07.2 / #54 must land
   before any v3 installation or activation; no v3 version may be installed
@@ -192,11 +194,13 @@ source of truth.
 ### Downstream contract
 
 - **S07.2 / #54:** introduce the next configuration format with the required
-  questionnaire mode, include that mode in the canonical normalized configuration
-  and `blueprintContentHash`, update both v3 offline fixtures to `excluded`, re-pin
-  the seed-blueprint fixture digest under ADR 0027, and land before any v3
-  installation or activation while keeping format-1 and format-2 verification for
-  existing versions. Snapshot the questionnaire mode; keep EDQ items outside scored
+  questionnaire mode, include that mode in the new format's canonical normalized
+  configuration and `blueprintContentHash` through a format-scoped normalization
+  branch, keep format-1 and format-2 normalization and digests unchanged with
+  regression tests for their existing digests, update both v3 offline fixtures to
+  `excluded`, re-pin the seed-blueprint fixture digest under ADR 0027, and land
+  before any v3 installation or activation while keeping format-1 and format-2
+  verification for existing versions. Snapshot the questionnaire mode; keep EDQ items outside scored
   cells and totals; derive the deadline from the immutable configuration; create no
   attempt before start.
 - **S07.3 / #55:** enforce the server deadline, late-write rejection, empty-submission

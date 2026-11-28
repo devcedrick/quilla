@@ -17,9 +17,10 @@ minimums. It also pins one sealed taxonomy version. Display labels are never
 identities.
 
 **Amendment (ADR 0029):** The configuration contract above now includes a required
-questionnaire mode (`excluded` initially), hashed as part of the canonical
-normalized configuration. Snapshots record the mode explicitly; existing format-1
-and format-2 snapshots keep their stored format and are not rewritten.
+questionnaire mode (`excluded` initially), hashed as part of the new format's
+canonical normalized configuration. Format-1 and format-2 normalization and digests
+stay frozen. Snapshots record the mode explicitly; existing format-1 and format-2
+snapshots keep their stored format and are not rewritten.
 
 Validate configuration identically on save and activation. Require the documented
 subject and module totals, the Professional/Clerical and Subprofessional/Analytical
