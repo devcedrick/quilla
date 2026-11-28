@@ -31,6 +31,12 @@ A blueprint configuration contains the complete self-describing contract:
 Collection sizes are bounded: at most 32 cells, 32 language totals and 32 concept
 requirements, with the normalized configuration capped at 8 KiB.
 
+> **Amended by [ADR 0029](../ADR/0029-attempt-lifecycle-and-questionnaire-policy.md):**
+> New configuration versions must include a required questionnaire mode (`excluded`
+> initially) in the canonical normalized configuration and `blueprintContentHash`.
+> The field list and validation matrix above predate that requirement; #54 adds it.
+> Existing format-1 and format-2 versions and snapshots keep their stored format.
+
 ## Validation
 
 `convex/lib/blueprintValidation.ts` is a pure validation matrix used identically

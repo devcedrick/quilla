@@ -109,8 +109,10 @@ source of truth.
   the de-identification-or-deletion rule below; a retained record is kept only in
   de-identified form.
 - Learners have no delete control for attempts. Admins cannot hard-delete attempts
-  or rewrite their results. Historical questions, versions and snapshots remain
-  protected by the existing no-hard-delete rules.
+  or rewrite their results. The account-deletion workflow below is the only
+  deletion path, and it must delete records it cannot irreversibly de-identify.
+  Historical questions, versions and shared snapshots remain protected by the
+  existing no-hard-delete rules.
 - Account deletion or anonymization is a separate workflow that
   [ADR 0006](0006-application-profiles-and-authorization.md) requires to be
   designed and approved before it exists; this ADR does not approve or design it.
