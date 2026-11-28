@@ -4,6 +4,7 @@
 - **Date:** 2026-11-15
 - **Decision owner:** Quilla maintainer
 - **Related:** #30, #16, #35, #54
+- **Amended by:** [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md) requires a required questionnaire mode in the canonical normalized configuration and content hash for new versions.
 
 The maintainer approved the
 [concrete blueprint proposal](../content/blueprint-implementation-proposal.md).
@@ -14,6 +15,12 @@ self-describing configuration: scored items, scaled duration, passing reference,
 difficulty mix, subject/module/difficulty cells, exact language totals and concept
 minimums. It also pins one sealed taxonomy version. Display labels are never
 identities.
+
+**Amendment (ADR 0029):** The configuration contract above now includes a required
+questionnaire mode (`excluded` initially), hashed as part of the new format's
+canonical normalized configuration. Format-1 and format-2 normalization and digests
+stay frozen. Snapshots record the mode explicitly; existing format-1 and format-2
+snapshots keep their stored format and are not rewritten.
 
 Validate configuration identically on save and activation. Require the documented
 subject and module totals, the Professional/Clerical and Subprofessional/Analytical

@@ -4,6 +4,7 @@
 - Date: 2026-10-30
 - Issue: [S02.4 / #23](https://github.com/devcedrick/quilla/issues/23)
 - Builds on: ADR 0003 (level policy), ADR 0006 (application authorization)
+- Amended by: [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md) (a diagnostic that expires with scored answers counts as submitted for the guidance and readiness gate)
 
 ## Decision
 
@@ -14,6 +15,8 @@ Only active callers may read or save their own preparation preferences. Derive o
 Dates are civil calendar dates, not timestamps. Validate newly supplied dates against the mutation server's current **Asia/Manila** date; today is valid. Reject malformed/impossible/past dates. Omission preserves the saved date, including an expired date; `null` clears it; a string is newly validated. A passed date does not undo onboarding. Identical retries are harmless; concurrent saves use the last successful supplied values without clearing omitted fields.
 
 Initial onboarding explicitly selects a level with no default selection. Later level changes require a UI acknowledgement explaining future defaults, retained history/progress, and each level's independent submitted-diagnostic prerequisite. Saving preferences changes only those preference fields; it does not reset evidence or alter existing attempts. Attempt defaults are not immutable attempt context.
+
+**Amended by [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md):** For this prerequisite and the #57 contract below, a diagnostic that expires with scored answers counts as submitted; the level-change acknowledgement and the access query must not be implemented as requiring an actual submission.
 
 ## Account routing and reactive behavior
 

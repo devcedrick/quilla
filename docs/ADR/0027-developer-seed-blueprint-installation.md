@@ -4,6 +4,7 @@
 - **Date:** 2026-11-19
 - **Decision owner:** Quilla maintainer
 - **Related:** #111, #110, #108, #107, #106, #98; ADRs 0025 and 0026
+- **Amended by:** [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md) requires #54 to land before any v3 installation or activation and requires the questionnaire mode in the canonical configuration; do not run the follow-up below against the format-2 v3 fixtures until #54 lands.
 
 ## Context
 
@@ -139,6 +140,10 @@ failure report retains both the expected and deployed digests.
   a separately approved action on the exact target.
 
 ## Follow-up after merge
+
+> **Amendment (ADR 0029):** Do not install or activate the v3 fixtures until #54
+> lands with the required questionnaire mode. The steps below otherwise remain
+> current.
 
 1. Obtain fresh approval for the exact `quilla-dev` deployment and deploy the merged
    code.

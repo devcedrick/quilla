@@ -90,9 +90,9 @@ Quilla is a web-based learning platform for people preparing for the Philippine 
 - Only eligible published question versions may be served in assessments.
 - Historical attempts must retain the exact question and blueprint versions originally served.
 - A contributor, including an admin contributor, must never review their own question.
-- Personalized plans and readiness remain locked until the diagnostic is submitted.
+- Personalized plans and readiness remain locked until the diagnostic is finalized with scored answers: `submitted`, or `expired` with at least one scored answer ([ADR 0029](docs/ADR/0029-attempt-lifecycle-and-questionnaire-policy.md)).
 - Admin mutations must be auditable.
-- Questions and historical attempts must not be hard-deleted.
+- Questions must not be hard-deleted. Historical attempts must not be hard-deleted, except that the account-deletion workflow must delete attempt records it cannot irreversibly de-identify ([ADR 0029](docs/ADR/0029-attempt-lifecycle-and-questionnaire-policy.md)).
 - Quilla must not host leaked or actual Civil Service Examination questions.
 - The product must display its non-affiliation with the Philippine Civil Service Commission.
 

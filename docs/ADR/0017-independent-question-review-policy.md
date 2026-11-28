@@ -4,6 +4,7 @@
 - **Date:** 2026-11-06
 - **Decision owner:** Quilla maintainer
 - **Related:** #31, #32, #95, #96 and ADRs 0016, 0022
+- **Amended by:** [ADR 0029](0029-attempt-lifecycle-and-questionnaire-policy.md) scopes the no-hard-delete invariant to retained records and excepts the account-deletion workflow.
 
 ## Context and decision
 
@@ -72,6 +73,11 @@ history. Publication requires its own authorization, current eligible lifecycle
 state, version-specific approval and complete quality checks. Historical approval
 records do not prove current content validation or grant arbitrary publication.
 No question or attempt history is hard-deleted.
+
+**Amendment (ADR 0029):** This invariant continues to prohibit admin, learner and
+routine deletion, and question history remains protected. The account-deletion
+workflow is the only exception: it must delete attempt records that cannot be
+irreversibly de-identified, as described in ADR 0029.
 
 ## Verification and consequences
 
